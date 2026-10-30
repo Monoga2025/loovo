@@ -1,6 +1,6 @@
 # landings
 
-Lead-capture landing pages, one folder per niche (for example `contadores/`). Visitors arrive from the content funnel and leave a WhatsApp contact; the lead data is then sent to the CRM in `../servicios/omni-sales-crm/`, never stored here.
+Lead-capture landing pages, one folder per niche (for example `contadores/`). Visitors arrive from the content funnel and leave a WhatsApp contact; the lead data is then sent to the CRM in [omni-sales-crm](https://github.com/Monoga2025/omni-sales-crm), never stored here.
 
 ## What is in this repository
 

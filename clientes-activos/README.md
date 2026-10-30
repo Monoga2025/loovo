@@ -13,4 +13,4 @@ No real client folder is included in this snapshot. Client identities are anonym
 
 - The sales pipeline in `../ventas/state.json` moves a clinic here once its deposit is received.
 - The detailed technical protocol is in `../ventas/flujo_maestro_reactivacion_loovo.md`.
-- Each delivered clinic uses the CRM in `../servicios/omni-sales-crm/`.
+- Each delivered clinic uses the CRM in [omni-sales-crm](https://github.com/Monoga2025/omni-sales-crm).

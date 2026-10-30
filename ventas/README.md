@@ -31,7 +31,7 @@ All clinic names, doctors, phone numbers and e-mail addresses in this snapshot a
 4. Book a call and present the service order.
 5. On deposit, update `state.json` and create the client folder in `../clientes-activos/`.
 
-The CRM used for live demos is in `../servicios/omni-sales-crm/`.
+The CRM used for live demos is in [omni-sales-crm](https://github.com/Monoga2025/omni-sales-crm).
 
 ## Conventions
 

@@ -6,7 +6,7 @@ The product layer of Loovo: code, automation flows and product documentation. No
 
 | Folder | What it is | README |
 |---|---|---|
-| `omni-sales-crm/` | Omnichannel inbox with an AI sales agent, Kanban pipeline, flow builder, follow-up sequences and analytics. One deployment per client. | [README](omni-sales-crm/README.md) |
+| [`omni-sales-crm`](https://github.com/Monoga2025/omni-sales-crm) (own repo) | Omnichannel inbox with an AI sales agent, Kanban pipeline, flow builder, follow-up sequences and analytics. One deployment per client. | [README](https://github.com/Monoga2025/omni-sales-crm) |
 | `Agentes de IA/` | n8n workflows promised in videos, starting with the accountant niche (D1, D2, D3). | [README](Agentes%20de%20IA/README.md) |
 | `ERP IA/` | Placeholder folder, currently empty. | none |
 

@@ -30,7 +30,7 @@ A "Day X of 42" series that runs toward the Luque Business Summit (Bucaramanga, 
 
 ## Connections
 
-- `Maquina de redes/` produces the videos that point to `../servicios/omni-sales-crm/` and to the landing pages in `../landings/`.
+- `Maquina de redes/` produces the videos that point to [omni-sales-crm](https://github.com/Monoga2025/omni-sales-crm) and to the landing pages in `../landings/`.
 - Claims made on air must match `00_Serie/hechos.md`; anything not verified is presented as "coming soon", not as done.
 
 ## Not included

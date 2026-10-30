@@ -12,4 +12,4 @@ Operations script for the hosted CRM. `purgar_no_clinicas.ps1` (PowerShell) dele
 
 - It is destructive. Read the script first and confirm the allow-list.
 - It needs hosting access and credentials from your own environment. Nothing in this repository provides them, and no value is stored here.
-- Connections: it targets the CRM in `../../servicios/omni-sales-crm/` and relies on the clinic list in `../state.json`.
+- Connections: it targets the CRM in [omni-sales-crm](https://github.com/Monoga2025/omni-sales-crm) and relies on the clinic list in `../state.json`.

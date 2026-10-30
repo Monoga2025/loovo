@@ -16,7 +16,7 @@ A clinic loses most of its leads in the first hours. A patient writes on Instagr
 
 ## The solution
 
-- **An omnichannel inbox with an AI sales agent** (`servicios/omni-sales-crm/`). The agent answers prices and conditions only from the clinic's knowledge base. Deterministic guards rewrite a draft or hand it to a human when it invents amounts, schedules, payment links or guarantees.
+- **An omnichannel inbox with an AI sales agent** ([omni-sales-crm](https://github.com/Monoga2025/omni-sales-crm)). The agent answers prices and conditions only from the clinic's knowledge base. Deterministic guards rewrite a draft or hand it to a human when it invents amounts, schedules, payment links or guarantees.
 - **Manual-send by design.** The AI drafts; a person sends. Follow-up sequences show up in a "Today" view and nothing leaves the system on its own.
 - **Accountant niche flows** (`servicios/Agentes de IA/`): three n8n workflows for Colombian tax questions, invoice extraction and bank reconciliation.
 - **A content machine** (`Maquina de redes/`) that turns daily recordings into short videos, covers and captions.
@@ -44,7 +44,7 @@ flowchart LR
 | Folder | What it is | README |
 |---|---|---|
 | `servicios/` | Product code: the CRM and the n8n flows | [servicios/README.md](servicios/README.md) |
-| `servicios/omni-sales-crm/` | Omnichannel CRM with an AI agent, pipeline and sequences | [README](servicios/omni-sales-crm/README.md) |
+| [`omni-sales-crm`](https://github.com/Monoga2025/omni-sales-crm) | Omnichannel CRM with an AI agent, pipeline and sequences | [README](https://github.com/Monoga2025/omni-sales-crm) |
 | `servicios/Agentes de IA/` | n8n workflows for the accountant niche | [README](servicios/Agentes%20de%20IA/README.md) |
 | `ventas/` | Sales operation: pipeline state, scripts, offers | [README](ventas/README.md) |
 | `ventas/agentes/` | Prompt files for the sales agents | [README](ventas/agentes/README.md) |
@@ -67,7 +67,7 @@ TypeScript, Hono on Node, `node:sqlite`, React 19, Vite, Tailwind 4, React Flow,
 
 Honest status, module by module:
 
-- 🟡 **CRM (`servicios/omni-sales-crm`)**: the web chat widget and the inbox are covered by the test suite. WhatsApp, Messenger and Instagram paths are covered by tests with simulated APIs and are **not yet validated with live credentials**.
+- 🟡 **CRM ([omni-sales-crm](https://github.com/Monoga2025/omni-sales-crm))**: the web chat widget and the inbox are covered by the test suite. WhatsApp, Messenger and Instagram paths are covered by tests with simulated APIs and are **not yet validated with live credentials**.
 - 🟡 **Accountant flows (`servicios/Agentes de IA`)**: the Node code of the flow nodes is tested with fictional data. The three JSON workflows **have not been imported or run in n8n yet**.
 - 🟡 **Content machine**: day-by-day render and edit tooling exists; publishing is manual and no end-to-end automated release is in place.
 - 🟡 **Sales operation**: outreach is manual; the pipeline is a working document, not a measured conversion funnel.
@@ -75,7 +75,8 @@ Honest status, module by module:
 ## How to run the CRM
 
 ```bash
-cd servicios/omni-sales-crm
+git clone https://github.com/Monoga2025/omni-sales-crm
+cd omni-sales-crm
 npm install
 npm run build
 ADMIN_PASSWORD=change-me npm start      # http://localhost:3000
