@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Dia 3 de 42 · IA MONOGA</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0B0B0F; }
+      #base, #person { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 35%; }
+      #base { z-index: 0; } #person { z-index: 2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="56.600000" data-width="1080" data-height="1920">
+      <!-- Footage sin audio: la mezcla (voz + música + SFX) se hace con ffmpeg. base_ext = corte + 1,6 s congelado para el cierre -->
+      <video id="base" class="clip" src="assets/base_ext.mp4" data-start="0" data-duration="56.600000"
+             data-track-index="0" muted playsinline></video>
+      <!-- LAYER:behind -->
+      <div id="behind" data-composition-id="behind" data-composition-src="compositions/behind.html"
+           data-start="0" data-duration="56.600000" data-track-index="1" data-width="1080" data-height="1920"
+           style="position: absolute; inset: 0; z-index: 1"></div>
+      <!-- /LAYER:behind -->
+      <!-- LAYER:front -->
+      <div id="overlays" data-composition-id="overlays" data-composition-src="compositions/overlays.html"
+           data-start="0" data-duration="56.600000" data-track-index="3" data-width="1080" data-height="1920"
+           style="position: absolute; inset: 0; z-index: 3"></div>
+      <div id="graphics" data-composition-id="graphics" data-composition-src="compositions/graphics.html"
+           data-start="0" data-duration="56.600000" data-track-index="4" data-width="1080" data-height="1920"
+           style="position: absolute; inset: 0; z-index: 4"></div>
+      <div id="ring" style="position:absolute;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:3px solid #C6FF3D;z-index:9;opacity:0"></div>
+      <div id="dot" style="position:absolute;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;z-index:9;opacity:0;
+           background:radial-gradient(circle at 35% 30%,#f2ffc8 0%,#C6FF3D 50%,#8fc417 100%);box-shadow:0 0 26px 6px rgba(198,255,61,.7),0 0 0 4px rgba(47,91,255,.9),0 8px 14px rgba(0,0,0,.45)"></div>
+      <!-- /LAYER:front -->
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const V = "#base, #person";
+      // Footage de celular a 576 px escalado: zooms suaves (máx. 1,16) para no ablandar más la imagen
+      const land = (t, from) => tl.fromTo(V, { scale: from, filter: "blur(10px)" },
+        { scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, t);
+      const push = (t0, t1, to) => tl.to(V, { scale: to, duration: t1 - t0, ease: "none" }, t0);
+      const punch = (t, to) => tl.to(V, { scale: to, duration: 0.38, ease: "expo.out" }, t);
+      const whip = (t) => tl.to(V, { scale: "+=0.4", filter: "blur(16px)", duration: 0.22, ease: "power3.in" }, t);
+      const reset = (t) => tl.set(V, { scale: 1, x: 0, filter: "blur(0px)" }, t);
+      const shake = (t, a) => [a, -a * 0.8, a * 0.6, -a * 0.4, a * 0.2, 0]
+        .forEach((x, i) => tl.to(V, { x, duration: 0.04, ease: "none" }, t + i * 0.04));
+      gsap.set(V, { scale: 1, x: 0, filter: "blur(0px)" });
+      let cutN = 0;
+      const cutfx = (t) => {
+        const k = cutN++ % 3;
+        if (k === 0) tl.fromTo(V, { filter: "blur(7px) brightness(1.5) contrast(1.3) saturate(1.5)", x: 26 },
+          { filter: "blur(0px) brightness(1) contrast(1) saturate(1)", x: 0, duration: 0.26, ease: "steps(4)", immediateRender: false }, t);
+        else if (k === 1) tl.fromTo(V, { x: 120, filter: "blur(16px)" }, { x: 0, filter: "blur(0px)", duration: 0.22, ease: "power3.out", immediateRender: false }, t);
+        else tl.fromTo(V, { filter: "brightness(2.2) blur(5px)" }, { filter: "brightness(1) blur(0px)", duration: 0.24, ease: "power2.out", immediateRender: false }, t);
+      };
+
+      // 0–6.89 gancho: Día 3 de 42 · salí cansadísimo de la universidad
+      push(0, 0.95, 1.04); punch(0.99, 1.12); shake(1.0, 9); push(1.4, 2.3, 1.14);
+      tl.to(V, { scale: 1.02, duration: 0.3, ease: "power3.out" }, 2.35);
+      push(2.7, 3.8, 1.05); punch(3.81, 1.13); shake(3.83, 7); push(4.2, 5.1, 1.15);
+      tl.to(V, { scale: 1.03, duration: 0.3, ease: "power3.out" }, 5.13); push(5.45, 6.4, 1.07); punch(6.41, 1.14);
+      whip(6.66);
+      // 11.84–16.2: terminar el CRM con la IA · queremos integrarle un módulo
+      land(11.84, 1.25); push(12.3, 12.7, 1.04); punch(12.73, 1.13); push(13.1, 14.5, 1.16);
+      tl.to(V, { scale: 1.03, duration: 0.3, ease: "power3.out" }, 14.61); push(14.9, 15.95, 1.1); whip(15.98);
+      // 18.95–21.3: mientras estaba en la universidad
+      land(18.95, 1.25); push(19.4, 20.85, 1.08); punch(20.9, 1.14); whip(21.08);
+      // 24.25–27.4: los tres videos se van a manejar con la skill
+      reset(24.25); cutfx(24.25); push(24.3, 25.2, 1.04); punch(25.23, 1.12); push(25.6, 27.2, 1.15); punch(27.27, 1.2);
+      // 30.72–35.11: el consumo de la IA está pesadísimo · Claude, con Opus
+      land(30.72, 1.25); push(31.2, 32.7, 1.06); punch(32.8, 1.15); shake(32.82, 10); push(33.2, 34.1, 1.17);
+      tl.to(V, { scale: 1.04, duration: 0.25, ease: "power3.out" }, 34.22); punch(34.68, 1.14); whip(34.9);
+      // 37.62–40.4: estoy trabajando en un arnés
+      land(37.62, 1.25); push(38.1, 38.8, 1.05); punch(38.83, 1.14); push(39.2, 40.1, 1.16); whip(40.18);
+      // 44.06–48.9: montar todos los servicios · los proyectos guardados
+      land(44.06, 1.25); push(44.5, 45.6, 1.06); punch(45.65, 1.13); push(46.0, 46.7, 1.15);
+      reset(46.73); cutfx(46.73); push(46.8, 48.0, 1.05); punch(48.03, 1.12); push(48.4, 48.75, 1.14); whip(48.68);
+      // 51.55–55.0: terminar y completar · para mostrar en la feria
+      land(51.55, 1.25); push(52.0, 52.6, 1.05); punch(52.67, 1.11); push(53.0, 53.6, 1.13);
+      tl.to(V, { scale: 1.03, duration: 0.3, ease: "power3.out" }, 53.72); push(54.0, 54.5, 1.06); punch(54.56, 1.14);
+
+      // ---- Foco lima: vive arriba a la derecha y entra en cada escena
+      const HOME = { x: 935, y: 312 };
+      const D = "#dot", R = "#ring";
+      gsap.set([D, R], { x: HOME.x, y: HOME.y, scale: 0, opacity: 0 });
+      const dotTo = (t, x, y, dur, sc = 1, ease = "power3.inOut") => tl.to([D, R], { x, y, scale: sc, duration: dur, ease }, t);
+      const ping = (t, sc = 1) => {
+        tl.fromTo(R, { scale: sc, opacity: 0.9 }, { scale: sc * 3.4, opacity: 0, duration: 0.55, ease: "power2.out", immediateRender: false }, t);
+        tl.fromTo(D, { scale: sc * 1.45 }, { scale: sc, duration: 0.3, ease: "back.out(3)", immediateRender: false }, t);
+      };
+      tl.set([D, R], { x: HOME.x, y: HOME.y }, 0.05);
+      tl.fromTo(D, { scale: 0, opacity: 1 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.4)", immediateRender: false }, 0.05);
+      // S_ade: va en la punta de la barra que se queda a medias
+      dotTo(7.2, 180, 1020, 0.3, 1.1); dotTo(7.6, 560, 1020, 1.4, 1.1, "power2.out"); ping(8.4, 1.1); ping(9.15, 1.1); dotTo(9.35, HOME.x, HOME.y, 0.3, 1);
+      // S_pend: se posa en el reloj
+      dotTo(10.0, 540, 600, 0.45, 1.1); ping(10.8, 1.1); dotTo(11.5, HOME.x, HOME.y, 0.3, 1);
+      // S_dian: cae sobre el total de la factura
+      dotTo(16.6, 684, 753, 0.45, 1.1); ping(17.2, 1.1); ping(18.47, 1.1); dotTo(18.65, HOME.x, HOME.y, 0.3, 1);
+      // S_ed: cabezal del editor
+      dotTo(21.5, 132, 556, 0.25, 1.1); dotTo(21.75, 944, 556, 2.2, 1.1, "none"); dotTo(24.0, HOME.x, HOME.y, 0.25, 1);
+      // S_3v: salta por los tres videos
+      [[250, 860], [540, 860], [830, 860]].forEach(([x, y], i) => { dotTo(27.75 + i * 0.4, x, y - 330, 0.25, 1.1); ping(28.0 + i * 0.4, 1.1); });
+      dotTo(29.55, HOME.x, HOME.y, 0.3, 1);
+      // S_tok: punta del medidor que se llena
+      dotTo(35.3, 105, 930, 0.25, 1.15); dotTo(35.6, 975, 930, 1.4, 1.15, "power2.in"); ping(36.33, 1.15); ping(36.9, 1.15); dotTo(37.3, HOME.x, HOME.y, 0.3, 1);
+      // S_arn: punta de la barra que se encoge
+      dotTo(41.2, 975, 930, 0.3, 1.15); dotTo(41.6, 380, 930, 0.9, 1.15, "expo.inOut"); ping(42.6, 1.15); dotTo(43.7, HOME.x, HOME.y, 0.3, 1);
+      // S_12: recorre los 12 proyectos
+      dotTo(49.6, 540, 1000, 0.3, 1.1); ping(49.73, 1.2); ping(50.3, 1.1); dotTo(51.25, HOME.x, HOME.y, 0.3, 1);
+      // late en las palabras clave de la cabeza hablando
+      [0.99, 1.31, 3.81, 4.57, 6.41, 12.73, 13.49, 15.61, 20.9, 25.23, 27.27, 32.8, 34.22, 34.68, 38.83, 45.65, 48.03, 52.67, 54.56].forEach((t) => ping(t));
+      // cierre en bucle: el foco viaja a la casilla 3 y se apaga
+      dotTo(55.25, 288, 1053, 0.5, 1.35); tl.to(D, { scale: 0, opacity: 0, duration: 0.3, ease: "power2.in" }, 56.2); tl.to(R, { opacity: 0, duration: 0.1 }, 56.2);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

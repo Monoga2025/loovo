@@ -1,0 +1,408 @@
+{
+ "luna": {
+  "archivo": "luna.jpg",
+  "tipo": "foto",
+  "url": "https://images-assets.nasa.gov/image/PIA10569/PIA10569~small.jpg",
+  "pagina": "https://images.nasa.gov/details/PIA10569",
+  "licencia": "NASA, dominio público (no implica respaldo de la NASA)",
+  "titulo": "It Full of Moons!"
+ },
+ "tierra_noche": {
+  "archivo": "tierra_noche.jpg",
+  "tipo": "foto",
+  "url": "https://images-assets.nasa.gov/image/s36-39-014/s36-39-014~medium.jpg",
+  "pagina": "https://images.nasa.gov/details/s36-39-014",
+  "licencia": "NASA, dominio público (no implica respaldo de la NASA)",
+  "titulo": "STS-36 night Earth observation of New York City, New York",
+  "duo": "fotos/tierra_noche_duo.png"
+ },
+ "cohete": {
+  "archivo": "cohete.jpg",
+  "tipo": "foto",
+  "url": "https://images-assets.nasa.gov/image/KSC-20240525-PH-RKL01_0005/KSC-20240525-PH-RKL01_0005~medium.jpg",
+  "pagina": "https://images.nasa.gov/details/KSC-20240525-PH-RKL01_0005",
+  "licencia": "NASA, dominio público (no implica respaldo de la NASA)",
+  "titulo": "Rocket Lab PREFIRE-1 Launch",
+  "duo": "fotos/cohete_duo.png"
+ },
+ "astronauta": {
+  "archivo": "astronauta.jpg",
+  "tipo": "foto",
+  "url": "https://images-assets.nasa.gov/image/jsc2018e087573/jsc2018e087573~medium.jpg",
+  "pagina": "https://images.nasa.gov/details/jsc2018e087573",
+  "licencia": "NASA, dominio público (no implica respaldo de la NASA)",
+  "titulo": "CCP Astronauts Practice Spacewalking"
+ },
+ "satelite": {
+  "archivo": "satelite.jpg",
+  "tipo": "foto",
+  "url": "https://images-assets.nasa.gov/image/PIA18156/PIA18156~small.jpg",
+  "pagina": "https://images.nasa.gov/details/PIA18156",
+  "licencia": "NASA, dominio público (no implica respaldo de la NASA)",
+  "titulo": "Aqua Satellite Orbiting Earth Artist Concept",
+  "duo": "fotos/satelite_duo.png"
+ },
+ "servidores": {
+  "archivo": "servidores.jpg",
+  "tipo": "foto",
+  "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002030/GSFC_20171208_Archive_e002030~medium.jpg",
+  "pagina": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002030",
+  "licencia": "NASA, dominio público (no implica respaldo de la NASA)",
+  "titulo": "Discover Supercomputer 3",
+  "duo": "fotos/servidores_duo.png"
+ },
+ "celular": {
+  "archivo": "celular.jpg",
+  "tipo": "foto",
+  "url": "https://live.staticflickr.com/65535/53097224746_7aae752ef7_b.jpg",
+  "pagina": "https://www.flickr.com/photos/198895458@N04/53097224746",
+  "licencia": "CC0 (Openverse, flickr)",
+  "titulo": "Female Hand Holding Smartphone With Blank Screen",
+  "corte": "fotos/celular_corte.png",
+  "duo": "fotos/celular_duo.png"
+ },
+ "portatil": {
+  "archivo": "portatil.jpg",
+  "tipo": "foto",
+  "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg2MzAxNzUtaW1hZ2Uta3d2dmJnNTQuanBn.jpg",
+  "pagina": "https://www.rawpixel.com/image/5907652/photo-image-background-public-domain-technology",
+  "licencia": "CC0 (Openverse, rawpixel)",
+  "titulo": "Free isolated laptop image",
+  "corte": "fotos/portatil_corte.png",
+  "duo": "fotos/portatil_duo.png"
+ },
+ "taza_cafe": {
+  "archivo": "taza_cafe.jpg",
+  "tipo": "foto",
+  "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJob2FsdXUwMDAwMi1pbWFnZS1rd3Z5anFueS5qcGc.jpg",
+  "pagina": "https://www.rawpixel.com/image/5927628/photo-image-public-domain-free-forks",
+  "licencia": "CC0 (Openverse, rawpixel)",
+  "titulo": "Free cake slices, forks, strawberries"
+ },
+ "reloj_arena": {
+  "archivo": "reloj_arena.jpg",
+  "tipo": "foto",
+  "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAzL2pvYjk1Ny0yMDUteF8xLmpwZw.jpg",
+  "pagina": "https://www.rawpixel.com/image/9779787/image-illustrations-public-domain-circle",
+  "licencia": "CC0 (Openverse, rawpixel)",
+  "titulo": "Hourglass clip art isolated design"
+ },
+ "billete_1957": {
+  "archivo": "billete_1957.jpg",
+  "tipo": "foto",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/1957_one_United_States_dollar_star_note.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "pagina": "https://commons.wikimedia.org/wiki/File:1957_one_United_States_dollar_star_note.jpg",
+  "licencia": "Public domain",
+  "titulo": "File:1957 one United States dollar star note.jpg",
+  "duo": "fotos/billete_1957_duo.png"
+ },
+ "mano_celular": {
+  "archivo": "mano_celular.jpg",
+  "tipo": "foto",
+  "url": "https://live.staticflickr.com/65535/53097224746_7aae752ef7_b.jpg",
+  "pagina": "https://www.flickr.com/photos/198895458@N04/53097224746",
+  "licencia": "CC0 (Openverse, flickr)",
+  "titulo": "Female Hand Holding Smartphone With Blank Screen"
+ },
+ "busto_marmol": {
+  "archivo": "busto_marmol.jpg",
+  "tipo": "foto",
+  "url": "https://live.staticflickr.com/4510/23888726668_a94488ffcf_b.jpg",
+  "pagina": "https://www.flickr.com/photos/150153003@N06/23888726668",
+  "licencia": "PDM (Openverse, flickr)",
+  "titulo": "Giant Head in Desert Park"
+ },
+ "ico_robot-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/robot-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_brain-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/brain-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_alarm-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/alarm-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_calendar-check-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/calendar-check-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_calendar-star-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/calendar-star-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_film-slate-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/film-slate-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_fire-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/fire-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_moon-stars-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/moon-stars-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_bed-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/bed-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_lightning-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/lightning-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_sun-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/sun-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_address-book-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/address-book-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_cpu-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/cpu-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_chat-circle-dots-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/chat-circle-dots-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_plugs-connected-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/plugs-connected-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_lightbulb-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/lightbulb-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_chats-circle-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/chats-circle-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_link-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/link-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_timer-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/timer-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_sparkle-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/sparkle-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_receipt-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/receipt-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_currency-dollar-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/currency-dollar-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_prohibit-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/prohibit-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_user-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/user-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_envelope-simple-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/envelope-simple-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_magnifying-glass-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/magnifying-glass-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_compass-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/compass-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_chats-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/chats-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_rocket-launch-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/rocket-launch-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_chart-line-up-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/chart-line-up-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_hand-pointing-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/hand-pointing-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_cursor-click-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/cursor-click-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_database-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/database-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_graph-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/graph-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_scissors-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/scissors-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_video-camera-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/video-camera-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_trophy-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/trophy-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_handshake-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/handshake-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_storefront-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/storefront-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "ico_infinity-fill": {
+  "tipo": "icono",
+  "archivo": "iconos/infinity-fill.svg",
+  "licencia": "MIT (Phosphor Icons)",
+  "pagina": "https://phosphoricons.com"
+ },
+ "tex_grano": {
+  "tipo": "textura",
+  "archivo": "texturas/grano.png",
+  "licencia": "propia (generada por código)"
+ },
+ "tex_semitono": {
+  "tipo": "textura",
+  "archivo": "texturas/semitono.png",
+  "licencia": "propia (generada por código)"
+ },
+ "tex_aura": {
+  "tipo": "textura",
+  "archivo": "texturas/aura.png",
+  "licencia": "propia (generada por código)"
+ },
+ "forma_flecha_curva": {
+  "tipo": "forma",
+  "archivo": "formas/flecha_curva.svg",
+  "licencia": "propia (dibujada por código)"
+ },
+ "forma_subrayado": {
+  "tipo": "forma",
+  "archivo": "formas/subrayado.svg",
+  "licencia": "propia (dibujada por código)"
+ },
+ "forma_esquinas": {
+  "tipo": "forma",
+  "archivo": "formas/esquinas.svg",
+  "licencia": "propia (dibujada por código)"
+ },
+ "forma_destello": {
+  "tipo": "forma",
+  "archivo": "formas/destello.svg",
+  "licencia": "propia (dibujada por código)"
+ },
+ "forma_rayo": {
+  "tipo": "forma",
+  "archivo": "formas/rayo.svg",
+  "licencia": "propia (dibujada por código)"
+ },
+ "forma_circulo_mano": {
+  "tipo": "forma",
+  "archivo": "formas/circulo_mano.svg",
+  "licencia": "propia (dibujada por código)"
+ },
+ "3d_alarm_clock_01": {
+  "tipo": "3d",
+  "archivo": "3d/alarm_clock_01/alarm_clock_01_1k.gltf",
+  "licencia": "CC0 (Poly Haven)",
+  "pagina": "https://polyhaven.com/a/alarm_clock_01",
+  "autores": "James Ray Cock (modelado), Yann Kervran (rigging)",
+  "nota": "agujas: houd_hand, minute_hand, second_hand (el segundero rojo se recolorea a lima)"
+ }
+}

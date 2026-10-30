@@ -1,0 +1,402 @@
+<template id="graphics-template">
+  <div data-composition-id="graphics" data-width="1080" data-height="1920" data-duration="63.100000">
+    <div id="caps"></div>
+
+    <!-- S_day · Hoy es el día número 2 de 42 (3.10–5.05) -->
+    <div id="sday" class="scene cream">
+      <div class="tile" id="sday-tile" style="left:735px;top:300px;width:220px;height:220px"><img src="assets/ico/calendar-check-fill_r.svg"></div>
+      <div id="sday-hoy" class="ln tl" style="top: 400px; font-size: 66px">hoy es el</div>
+      <div id="sday-dia" class="ln th dk" style="top: 520px; font-size: 330px">día <span class="red" id="sday-2">2</span></div>
+      <div id="sday-de" class="ln tl" style="top: 900px; font-size: 92px">de 42</div>
+      <div id="segs"></div>
+    </div>
+
+    <!-- S_emp · este edita los videos, no cobra, no duerme (10.55–13.45) -->
+    <div id="semp" class="scene dark">
+      <div class="glow"></div>
+      <img class="bill" id="bill1" src="assets/note_red.png" style="left:-120px;top:1180px;width:520px">
+      <img class="bill" id="bill2" src="assets/note_red.png" style="left:690px;top:1420px;width:470px">
+      <img class="bill" id="bill3" src="assets/note_red.png" style="left:760px;top:120px;width:380px">
+      <div class="tile" id="semp-bot" style="left:395px;top:130px;width:290px;height:290px"><img src="assets/ico/robot-fill_r.svg"></div>
+      <div class="tile sm" id="semp-money" style="left:885px;top:740px;width:110px;height:110px"><img src="assets/ico/currency-dollar-fill_r.svg"></div>
+      <div class="tile sm" id="semp-zzz" style="left:25px;top:975px;width:110px;height:110px"><img src="assets/ico/moon-stars-fill_r.svg"></div>
+      <div id="semp-a" class="ln wh" style="top: 540px"><span class="tl" style="font-size:62px">este edita los</span> <span class="th" style="font-size:104px">videos</span></div>
+      <div id="semp-b" class="ln wh" style="top: 690px"><span class="tl" style="font-size:96px">no</span> <span class="th red glowtxt" style="font-size:200px">cobra</span></div>
+      <div id="semp-c" class="ln wh" style="top: 930px"><span class="tl" style="font-size:96px">no</span> <span class="th red glowtxt" style="font-size:200px">duerme</span></div>
+    </div>
+
+    <!-- S_7 · un video de 7 minutos a un video de 38 segundos (14.45–16.8) -->
+    <div id="s7" class="scene cream">
+      <svg class="full" viewBox="0 0 1080 1920">
+        <path id="s7-arrow" d="M540,690 C540,760 540,800 540,860" pathLength="1" fill="none" stroke="#CFCAC2"
+              stroke-width="34" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1" />
+      </svg>
+      <div class="tile" id="s7-clock" style="left:450px;top:190px;width:180px;height:180px"><img src="assets/ico/timer-fill_r.svg"></div>
+      <div id="s7-pre" class="ln tl" style="top: 395px; font-size: 62px">un video de</div>
+      <div id="s7-7wrap" class="ln th dk" style="top: 470px; font-size: 200px"><span id="s7-7">7 minutos<i id="s7-strike"></i></span></div>
+      <div id="s7-38" class="ln th red glowtxt" style="top: 810px; font-size: 440px">38</div>
+      <div class="tile sm" id="s7-spark" style="left:835px;top:840px;width:120px;height:120px"><img src="assets/ico/sparkle-fill_r.svg"></div>
+      <div id="s7-seg" class="ln tl" style="top: 1250px; font-size: 100px">segundos</div>
+    </div>
+
+    <!-- S_chat · un chat pegado en la plataforma que no hace nada (34.10–37.10) -->
+    <div id="schat" class="scene cream">
+      <div id="win">
+        <div id="win-bar"><i></i><i></i><i></i><b>CRM</b></div>
+        <div class="gr" style="top: 120px; width: 520px"></div>
+        <div class="gr" style="top: 180px; width: 640px"></div>
+        <div class="gr" style="top: 240px; width: 400px"></div>
+        <div class="gr" style="top: 300px; width: 580px"></div>
+        <div class="gr" style="top: 360px; width: 460px"></div>
+      </div>
+      <div id="bubble"><img src="assets/ico/chat-circle-dots-fill_r.svg" style="width:62px;height:62px;vertical-align:middle;margin-right:12px">chat</div>
+      <div class="tile sm" id="schat-zzz" style="left:830px;top:1130px;width:120px;height:120px"><img src="assets/ico/prohibit-fill_r.svg"></div>
+      <div id="schat-a" class="ln tl" style="top: 1165px; font-size: 74px">no hace</div>
+      <div id="schat-b" class="ln th red glowtxt" style="top: 1255px; font-size: 106px">absolutamente nada</div>
+    </div>
+
+    <!-- S_conn · conectado por dentro de la plataforma (38.65–41.45) -->
+    <div id="sconn" class="scene dark">
+      <div class="glow low"></div>
+      <div id="lattice"></div>
+      <div class="tile" id="sconn-plug" style="left:445px;top:280px;width:190px;height:190px"><img src="assets/ico/plugs-connected-fill_r.svg"></div>
+      <div id="sconn-a" class="ln tl wh" style="top: 545px; font-size: 62px">este CRM está</div>
+      <div id="sconn-b" class="ln th red glowtxt" style="top: 640px; font-size: 205px">conectado</div>
+      <div id="sconn-c" class="ln th wh" style="top: 900px; font-size: 140px">por dentro</div>
+      <div id="sconn-d" class="ln tl wh" style="top: 1070px; font-size: 64px">de la plataforma</div>
+    </div>
+
+    <!-- S_card · puede leer… (41.50–46.25) -->
+    <div id="scard" class="scene cream">
+      <svg class="full" viewBox="0 0 1080 1920">
+        <path id="scard-arc" d="M-80,420 C420,380 980,760 900,1250 C860,1520 520,1700 300,2050" pathLength="1"
+              fill="none" stroke="#CFCAC2" stroke-width="70" stroke-linecap="round"
+              stroke-dasharray="1" stroke-dashoffset="1" />
+      </svg>
+      <div id="card">
+        <div id="pin"></div>
+        <div id="card-title"><span class="tl">puede</span> <span class="th">leer</span></div>
+        <div id="card-rule"></div>
+        <div class="row" id="r1"><img class="ico3" src="assets/ico/user-fill_w.svg">cada cliente</div>
+        <div class="row" id="r2"><img class="ico3" src="assets/ico/envelope-simple-fill_w.svg">cada correo</div>
+        <div class="row" id="r3"><img class="ico3" src="assets/ico/magnifying-glass-fill_w.svg">qué hace</div>
+        <div class="row" id="r4"><img class="ico3" src="assets/ico/compass-fill_w.svg">en qué etapas está</div>
+        <div class="row" id="r5"><img class="ico3" src="assets/ico/chats-fill_w.svg">cómo le gusta que le hablen</div>
+      </div>
+    </div>
+
+    <!-- S_dian · conectar a la DIAN: facturas electrónicas (53.55–55.75) -->
+    <div id="sdian" class="scene dark">
+      <div class="glow"></div>
+      <div class="tile" id="sdian-inv" style="left:420px;top:230px;width:240px;height:240px"><img src="assets/ico/receipt-fill_r.svg"></div>
+      <div id="sdian-a" class="ln tl wh" style="top: 560px; font-size: 66px">conectar a la</div>
+      <div id="sdian-b" class="ln th red glowtxt" style="top: 640px; font-size: 400px">DIAN</div>
+      <div id="sdian-c" class="ln wh" style="top: 1070px"><span class="tl" style="font-size:70px">facturas</span> <span class="th" style="font-size:110px">electrónicas</span></div>
+    </div>
+
+    <!-- S_d3 · esto lo vamos a ver en el día 3 (55.90–57.40) -->
+    <div id="sd3" class="scene cream">
+      <div class="tile" id="sd3-cal" style="left:420px;top:240px;width:230px;height:230px"><img src="assets/ico/calendar-fill_r.svg"></div>
+      <div id="sd3-a" class="ln tl" style="top: 470px; font-size: 68px">esto lo vamos a ver en el</div>
+      <div id="sd3-b" class="ln th dk" style="top: 600px; font-size: 380px">día <span class="red" id="sd3-3">3</span></div>
+    </div>
+
+    <style>
+      @font-face { font-family: "Anton"; font-style: normal; font-weight: 400; src: url("assets/fonts/anton-latin-400.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: "Anton"; font-style: normal; font-weight: 400; src: url("assets/fonts/anton-latin-ext-400.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+      [data-composition-id="graphics"] {
+        background: transparent; font-family: "Montserrat", sans-serif; overflow: hidden;
+        --red: #e3120b; --cream: #f2eee8; --dark: #141414; --gray: #8a8784;
+      }
+      .scene { position: absolute; inset: 0; z-index: 10; visibility: hidden; overflow: hidden; }
+      .dark { background: #070707; }
+      .cream { background-color: var(--cream);
+        background-image: linear-gradient(rgba(0,0,0,.035) 2px, transparent 2px), linear-gradient(90deg, rgba(0,0,0,.035) 2px, transparent 2px);
+        background-size: 72px 72px; }
+      .full { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .glow { position: absolute; left: 50%; top: 46%; width: 1300px; height: 1300px; transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba(227,18,11,.28) 0%, rgba(227,18,11,.08) 38%, transparent 66%); }
+      .glow.low { top: 62%; }
+
+      /* Tipografía de la referencia: cursiva fina (conectores) + condensada pesada en mayúsculas (palabra clave) */
+      .tl { font-family: "Montserrat", sans-serif; font-weight: 300; font-style: italic; letter-spacing: -0.01em; }
+      .th { font-family: "Anton", sans-serif; font-weight: 400; font-style: italic; text-transform: uppercase; letter-spacing: 0.012em; }
+      .ln { position: absolute; left: 0; width: 100%; text-align: center; line-height: 1; color: var(--dark); white-space: nowrap; }
+      .ln.wh, .wh { color: #fff; }
+      .ln.dk { color: var(--dark); }
+      .red { color: var(--red); }
+      .glowtxt { text-shadow: 0 0 40px rgba(227,18,11,.75), 0 0 90px rgba(227,18,11,.45); }
+
+      /* Mosaicos de icono (vector Phosphor, MIT): blanco con borde y resplandor rojo, como la referencia */
+      .tile { position: absolute; border-radius: 26%; background: linear-gradient(150deg, #ffffff 0%, #ecebe8 100%);
+        border: 4px solid var(--red); display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 26px 44px rgba(0,0,0,.35), 0 0 40px rgba(227,18,11,.5), inset 0 -8px 0 rgba(0,0,0,.05); }
+      .tile img { width: 58%; height: 58%; display: block; }
+      .bill { position: absolute; opacity: .5; border-radius: 10px; filter: drop-shadow(0 24px 30px rgba(0,0,0,.6)); }
+
+      #segs { position: absolute; left: 153px; top: 1090px; width: 774px; display: grid; grid-template-columns: repeat(14, 46px); gap: 10px; }
+      #segs div { height: 46px; border-radius: 10px; background: #dcd7cf; }
+
+      #s7-7 { position: relative; display: inline-block; }
+      #s7-strike { display: block; position: absolute; left: -12px; right: -12px; top: 84px; height: 16px; background: var(--red); border-radius: 8px; transform-origin: 0 50%; }
+
+      #win { position: absolute; left: 150px; top: 330px; width: 780px; height: 620px; background: #fff; border-radius: 22px;
+        box-shadow: 0 40px 80px rgba(0,0,0,.2); overflow: hidden; }
+      #win-bar { height: 70px; background: #ececec; display: flex; align-items: center; padding: 0 26px; gap: 12px; }
+      #win-bar i { width: 18px; height: 18px; border-radius: 50%; background: #c9c9c9; display: block; }
+      #win-bar b { margin-left: 24px; font-size: 34px; font-weight: 700; color: var(--dark); }
+      #win .gr { position: absolute; left: 50px; height: 26px; border-radius: 13px; background: #e4e1dc; }
+      #bubble { position: absolute; left: 630px; top: 790px; padding: 20px 40px; border-radius: 40px; background: #fff;
+        font-size: 54px; font-weight: 700; color: var(--dark); box-shadow: 0 22px 44px rgba(0,0,0,.25), 0 0 0 8px rgba(227,18,11,.2); white-space: nowrap; }
+
+      #lattice { position: absolute; left: 50%; top: 50%; width: 900px; height: 1300px; transform: translate(-50%, -50%);
+        display: grid; grid-template-columns: repeat(7, 1fr); gap: 18px; opacity: .9; }
+      #lattice div { border: 2px solid #232323; border-radius: 14px; background: #0e0e0e; }
+
+      #card { position: absolute; left: 120px; top: 380px; width: 840px; height: 820px; background: linear-gradient(180deg, #9d9b98, #8b8986);
+        border-radius: 8px; box-shadow: 0 40px 70px rgba(0,0,0,.28); transform-origin: 50% 0%; padding: 64px 50px 0; }
+      #pin { position: absolute; left: 50%; top: -26px; width: 52px; height: 52px; margin-left: -26px; border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #ff6a5c, #c40d06 70%); box-shadow: 0 8px 14px rgba(0,0,0,.35); }
+      #card-title { color: #fff; line-height: 1; white-space: nowrap; }
+      #card-title .tl { font-size: 70px; } #card-title .th { font-size: 112px; }
+      #card-rule { height: 6px; background: rgba(255,255,255,.85); margin: 22px 0 30px; transform-origin: 0 50%; }
+      .row { display: flex; align-items: center; gap: 18px; color: #fff; white-space: nowrap; font-size: 41px; font-weight: 500; letter-spacing: -0.01em; height: 98px; }
+      .row .ico3 { flex: none; width: 56px; height: 56px; }
+
+      #caps { position: absolute; inset: 0; z-index: 5; }
+      .cap { position: absolute; left: 90px; width: 900px; top: 1160px; text-align: center; visibility: hidden; line-height: 1; }
+      .cap .w { display: inline-block; margin: 0 0.14em; color: #fff; font-family: "Montserrat", sans-serif; font-style: italic; font-weight: 500;
+        font-size: 70px; letter-spacing: -0.01em; text-shadow: 0 0 20px rgba(0,0,0,.9), 0 0 6px rgba(0,0,0,.85), 0 3px 10px rgba(0,0,0,.6); }
+      .cap .w.kw { color: var(--red); font-family: "Anton", sans-serif; font-weight: 400; text-transform: uppercase; font-size: 132px;
+        letter-spacing: 0.012em; line-height: .95; text-shadow: 0 0 22px rgba(255,255,255,.95), 0 0 8px rgba(255,255,255,.9); }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      /*CAPS*/
+      const CAPS = [
+        {"a": 0.0, "b": 0.82, "w": [["ayer", 0.0], ["contraté", 0.3], ["a", 0.7]]},
+        {"a": 0.82, "b": 1.06, "w": [["alguien", 0.82]]},
+        {"a": 1.06, "b": 1.6, "w": [["no", 1.06], ["le", 1.22], ["pago", 1.36, 1]]},
+        {"a": 1.6, "b": 2.22, "w": [["y", 1.6], ["trabaja", 1.82, 1], ["hasta", 2.06]]},
+        {"a": 2.22, "b": 2.64, "w": [["las", 2.22], ["3", 2.4], ["de", 2.56]]},
+        {"a": 2.64, "b": 3.18, "w": [["la", 2.64], ["mañana", 2.8, 1]]},
+        {"a": 5.12, "b": 5.88, "w": [["hasta", 5.12], ["llegar", 5.48], ["al", 5.72]]},
+        {"a": 5.88, "b": 6.14, "w": [["evento", 5.88, 1]]},
+        {"a": 6.14, "b": 7.6, "w": [["mostrando", 6.14], ["cómo", 6.64], ["construyo", 7.04]]},
+        {"a": 7.6, "b": 8.18, "w": [["mi", 7.6], ["agencia", 7.78, 1], ["de", 8.04]]},
+        {"a": 8.18, "b": 8.96, "w": [["inteligencia", 8.18, 1], ["artificial", 8.46, 1]]},
+        {"a": 8.96, "b": 9.06, "w": [["te", 8.96], ["voy", 9.0], ["a", 9.06]]},
+        {"a": 9.06, "b": 9.74, "w": [["mostrar", 9.06], ["uno", 9.46], ["de", 9.72]]},
+        {"a": 9.74, "b": 10.76, "w": [["mis", 9.74], ["dos", 9.94], ["empleados", 10.1]]},
+        {"a": 13.7, "b": 14.2, "w": [["me", 13.7], ["pasó", 13.96], ["un", 14.06]]},
+        {"a": 14.2, "b": 14.5, "w": [["video", 14.2], ["de", 14.32]]},
+        {"a": 16.82, "b": 17.7, "w": [["con", 16.82], ["este", 17.12], ["estilo", 17.32]]},
+        {"a": 17.7, "b": 18.12, "w": [["la", 17.7], ["verdad", 17.78], ["a", 17.98]]},
+        {"a": 18.12, "b": 18.42, "w": [["este", 18.12], ["sí", 18.18], ["lo", 18.24]]},
+        {"a": 18.42, "b": 19.18, "w": [["exploto", 18.42, 1], ["durante", 18.72], ["toda", 19.0]]},
+        {"a": 19.18, "b": 19.9, "w": [["la", 19.18], ["noche", 19.34], ["porque", 19.56]]},
+        {"a": 19.9, "b": 20.38, "w": [["me", 19.9], ["edita", 20.08], ["los", 20.22]]},
+        {"a": 20.38, "b": 21.24, "w": [["videos", 20.38], ["mientras", 20.66], ["estoy", 21.0]]},
+        {"a": 21.24, "b": 21.7, "w": [["durmiendo", 21.24, 1]]},
+        {"a": 21.7, "b": 22.42, "w": [["el", 21.7], ["segundo", 21.9], ["también", 22.14]]},
+        {"a": 22.42, "b": 23.44, "w": [["lo", 22.42], ["sobreexplotó", 22.64, 1]]},
+        {"a": 23.44, "b": 24.22, "w": [["pero", 23.44], ["él", 23.86], ["sí", 24.12]]},
+        {"a": 24.22, "b": 24.66, "w": [["trabaja", 24.22, 1], ["en", 24.46], ["el", 24.56]]},
+        {"a": 24.66, "b": 25.26, "w": [["día", 24.66], ["porque", 24.82], ["está", 25.08]]},
+        {"a": 25.26, "b": 26.06, "w": [["conectado", 25.26], ["a", 25.76], ["mi", 25.9]]},
+        {"a": 26.06, "b": 26.5, "w": [["CRM", 26.06, 1]]},
+        {"a": 26.5, "b": 26.94, "w": [["les", 26.5], ["voy", 26.72], ["a", 26.9]]},
+        {"a": 26.94, "b": 27.9, "w": [["mostrar", 26.94], ["cómo", 27.3], ["funciona", 27.58]]},
+        {"a": 27.9, "b": 28.98, "w": [["un", 27.9], ["CRM", 28.16, 1], ["real", 28.58, 1]]},
+        {"a": 28.98, "b": 30.0, "w": [["con", 28.98], ["inteligencia", 29.26, 1], ["artificial", 29.66, 1]]},
+        {"a": 30.0, "b": 31.06, "w": [["integrada", 30.0, 1]]},
+        {"a": 31.06, "b": 32.2, "w": [["normalmente", 31.06], ["los", 31.5], ["CRMs", 31.7]]},
+        {"a": 32.2, "b": 32.8, "w": [["que", 32.2], ["están", 32.32], ["vendiendo", 32.48]]},
+        {"a": 32.8, "b": 33.76, "w": [["con", 32.8], ["inteligencia", 32.96, 1], ["artificial", 33.3, 1]]},
+        {"a": 33.76, "b": 34.14, "w": [["es", 33.76]]},
+        {"a": 37.26, "b": 37.94, "w": [["en", 37.26], ["cambio", 37.4], ["este", 37.64]]},
+        {"a": 37.94, "b": 38.7, "w": [["CRM", 37.94, 1]]},
+        {"a": 46.32, "b": 46.76, "w": [["es", 46.32], ["como", 46.46], ["si", 46.62]]},
+        {"a": 46.76, "b": 47.5, "w": [["hubiera", 46.76], ["nacido", 46.96, 1], ["una", 47.28]]},
+        {"a": 47.5, "b": 48.94, "w": [["inteligencia", 47.5, 1], ["artificial", 47.88, 1], ["que", 48.48]]},
+        {"a": 48.94, "b": 49.66, "w": [["ya", 48.94], ["hubiera", 49.08], ["nacido", 49.3, 1]]},
+        {"a": 49.66, "b": 50.52, "w": [["con", 49.66], ["un", 49.84], ["CRM", 50.0, 1]]},
+        {"a": 50.52, "b": 50.96, "w": [["y", 50.52], ["si", 50.64], ["un", 50.78]]},
+        {"a": 50.96, "b": 51.64, "w": [["CRM", 50.96, 1], ["es", 51.36], ["bueno", 51.52]]},
+        {"a": 51.64, "b": 52.62, "w": [["con", 51.64], ["inteligencia", 51.8, 1], ["artificial", 52.14, 1]]},
+        {"a": 52.62, "b": 53.2, "w": [["ahora", 52.62], ["lo", 52.92], ["vamos", 53.06]]},
+        {"a": 53.2, "b": 53.56, "w": [["a", 53.2], ["conectar", 53.34]]},
+        {"a": 55.78, "b": 56.04, "w": [["pero", 55.78]]},
+        {"a": 57.46, "b": 57.98, "w": [["de", 57.46], ["momento", 57.58], ["quiero", 57.8]]},
+        {"a": 57.98, "b": 58.56, "w": [["que", 57.98], ["me", 58.12], ["digas", 58.26]]},
+        {"a": 58.56, "b": 59.14, "w": [["qué", 58.56], ["tipo", 58.74], ["de", 58.98]]},
+        {"a": 59.14, "b": 59.8, "w": [["empleado", 59.14, 1], ["te", 59.34], ["gustaría", 59.5]]},
+        {"a": 59.8, "b": 60.92, "w": [["esclavizar", 59.8, 1], ["durante", 60.36], ["toda", 60.78]]},
+        {"a": 60.92, "b": 61.72, "w": [["la", 60.92], ["noche", 61.08], ["y", 61.34]]},
+        {"a": 61.72, "b": 62.24, "w": [["durante", 61.72], ["todos", 61.88], ["los", 62.08]]},
+        {"a": 62.24, "b": 62.7, "w": [["días", 62.24]]},
+      ];
+      /*END CAPS*/
+
+      const capsEl = document.getElementById("caps");
+      CAPS.forEach((c, i) => {
+        const d = document.createElement("div");
+        d.className = "cap"; d.id = "cap" + i;
+        c.w.forEach(([txt, , kw], j) => {
+          const s = document.createElement("span");
+          s.className = "w" + (kw ? " kw" : ""); s.id = `cap${i}w${j}`; s.textContent = txt;
+          d.appendChild(s);
+        });
+        capsEl.appendChild(d);
+      });
+      const lat = document.getElementById("lattice");
+      for (let i = 0; i < 70; i++) lat.appendChild(document.createElement("div"));
+      const segs = document.getElementById("segs");
+      for (let i = 0; i < 42; i++) { const s = document.createElement("div"); if (i < 2) s.id = "seg" + i; segs.appendChild(s); }
+
+      gsap.set("#s7-strike", { scaleX: 0 });
+      gsap.set(".tile, .bill", { opacity: 0 });
+      const tl = gsap.timeline({ paused: true });
+      const show = (s, t) => tl.set(s, { visibility: "visible" }, t);
+      const hide = (s, t) => tl.set(s, { visibility: "hidden" }, t);
+      const blurIn = (s, t, x = {}) => tl.fromTo(s, { opacity: 0, y: 26, scale: 0.92, filter: "blur(14px)" },
+        { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 0.32, ease: "power3.out", ...x }, t);
+      const slam = (s, t, from = 1.5) => tl.fromTo(s, { opacity: 0, scale: from, filter: "blur(10px)" },
+        { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.34, ease: "expo.out" }, t);
+      const flipIn = (s, t) => tl.fromTo(s, { rotationY: -85, transformPerspective: 1400, transformOrigin: "0% 50%", opacity: 0 },
+        { rotationY: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false }, t - 0.04);
+      const flipOut = (s, t) => tl.to(s, { rotationY: 85, transformPerspective: 1400, transformOrigin: "100% 50%", opacity: 0, duration: 0.3, ease: "power3.in" }, t);
+      const pop3d = (s, t, rz = 0, dir = 1) => tl.fromTo(s, { scale: 0, rotationZ: rz * 3, rotationY: -160 * dir, transformPerspective: 800, opacity: 0 },
+        { scale: 1, rotationZ: rz, rotationY: 0, opacity: 1, duration: 0.6, ease: "back.out(1.8)", immediateRender: false }, t);
+      const iris = (s, t) => tl.to(s, { clipPath: "circle(0% at 50% 42%)", duration: 0.3, ease: "power3.in" }, t);
+      const drift = (s, t, dur, dx, dy, rot) => tl.fromTo(s, { x: 0, y: 0, rotationZ: rot[0] }, { x: dx, y: dy, rotationZ: rot[1], duration: dur, ease: "none", immediateRender: false }, t);
+
+      // Subtítulos
+      CAPS.forEach((c, i) => {
+        show("#cap" + i, c.a);
+        c.w.forEach(([, t, kw], j) => {
+          const s = `#cap${i}w${j}`;
+          if (kw) tl.fromTo(s, { opacity: 0, scale: 1.5, filter: "blur(12px)" },
+            { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.3, ease: "back.out(2)" }, t);
+          else blurIn(s, t, { duration: 0.24 });
+        });
+        tl.to("#cap" + i, { opacity: 0, y: -24, filter: "blur(8px)", duration: 0.14, ease: "power2.in" }, c.b - 0.14);
+        hide("#cap" + i, c.b);
+      });
+
+      // ---- S_day 3.10–5.05
+      show("#sday", 3.1);
+      flipIn("#sday", 3.12);
+      blurIn("#sday-hoy", 3.14);
+      slam("#sday-dia", 3.42, 1.6);
+      pop3d("#sday-tile", 3.5, 8);
+      tl.fromTo("#sday-2", { scale: 1 }, { scale: 1.12, duration: 0.2, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, 3.88);
+      blurIn("#sday-de", 4.12);
+      tl.fromTo("#segs div", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2)",
+        stagger: { each: 0.012, from: "start" } }, 4.18);
+      tl.to("#seg0", { backgroundColor: "#e3120b", duration: 0.2 }, 4.5);
+      tl.to("#seg1", { backgroundColor: "#e3120b", duration: 0.2 }, 4.7);
+      flipOut("#sday", 4.75);
+      hide("#sday", 5.05);
+
+      // ---- S_emp 10.55–13.45
+      gsap.set("#semp", { clipPath: "circle(150% at 50% 42%)" });
+      show("#semp", 10.55);
+      tl.fromTo("#semp", { scale: 1.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.32, ease: "expo.out", immediateRender: false }, 10.55);
+      tl.fromTo("#bill1, #bill2, #bill3", { opacity: 0, scale: 0.7 }, { opacity: 0.5, scale: 1, duration: 0.5, ease: "power3.out", stagger: 0.12, immediateRender: false }, 10.7);
+      drift("#bill1", 10.7, 2.7, 60, -70, [-18, -10]); drift("#bill2", 10.7, 2.7, -70, -60, [14, 8]); drift("#bill3", 10.7, 2.7, -50, 70, [10, 18]);
+      blurIn("#semp-a", 10.62);
+      pop3d("#semp-bot", 10.7, 0);
+      tl.to("#semp-bot", { rotationY: "+=360", transformPerspective: 800, duration: 1.4, ease: "power1.inOut" }, 11.4);
+      slam("#semp-b", 12.0, 1.6);
+      slam("#semp-c", 12.66, 1.6);
+      pop3d("#semp-money", 12.05, 10, -1); pop3d("#semp-zzz", 12.7, -10);
+      tl.to("#semp .glow", { scale: 1.25, opacity: 0.6, duration: 0.25, yoyo: true, repeat: 1 }, 12.0);
+      iris("#semp", 13.15);
+      hide("#semp", 13.45);
+
+      // ---- S_7 14.45–16.80
+      show("#s7", 14.45);
+      flipIn("#s7", 14.47);
+      pop3d("#s7-clock", 14.55, -8); tl.to("#s7-clock", { rotationZ: 18, duration: 0.6, yoyo: true, repeat: 1, ease: "sine.inOut" }, 15.3);
+      blurIn("#s7-pre", 14.5);
+      slam("#s7-7wrap", 14.55, 1.4);
+      tl.to("#s7-strike", { scaleX: 1, duration: 0.3, ease: "power3.out" }, 15.15);
+      tl.fromTo("#s7-arrow", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, 15.35);
+      slam("#s7-38", 15.9, 1.7);
+      pop3d("#s7-spark", 16.05, 10);
+      blurIn("#s7-seg", 16.4);
+      flipOut("#s7", 16.5);
+      hide("#s7", 16.8);
+
+      // ---- S_chat 34.10–37.10
+      show("#schat", 34.1);
+      flipIn("#schat", 34.12);
+      tl.fromTo("#win", { y: -120, opacity: 0, rotationY: -55, rotationX: 18, transformPerspective: 1100 },
+        { y: 0, opacity: 1, rotationY: -14, rotationX: 7, transformPerspective: 1100, duration: 0.7, ease: "back.out(1.4)" }, 34.12);
+      tl.to("#win", { rotationY: 10, rotationX: 4, duration: 2.4, ease: "sine.inOut" }, 34.85);
+      tl.fromTo("#bubble", { scale: 0, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.45, ease: "back.out(2.4)" }, 34.42);
+      tl.to("#bubble", { x: -30, y: -30, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, 34.9);
+      blurIn("#schat-a", 36.1);
+      slam("#schat-b", 36.3, 1.5);
+      pop3d("#schat-zzz", 36.4, 8);
+      flipOut("#schat", 36.8);
+      hide("#schat", 37.1);
+
+      // ---- S_conn 38.65–41.45
+      gsap.set("#sconn", { clipPath: "circle(150% at 50% 42%)" });
+      show("#sconn", 38.65);
+      tl.fromTo("#sconn", { scale: 1.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.32, ease: "expo.out", immediateRender: false }, 38.65);
+      tl.fromTo("#lattice div", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power3.out",
+        stagger: { each: 0.02, from: "center", grid: [10, 7] } }, 38.7);
+      blurIn("#sconn-a", 38.72);
+      pop3d("#sconn-plug", 38.8, -10); tl.to("#sconn-plug", { rotationZ: 10, duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, 39.4);
+      slam("#sconn-b", 38.96, 1.6);
+      blurIn("#sconn-c", 39.9);
+      blurIn("#sconn-d", 40.8);
+      iris("#sconn", 41.15);
+      hide("#sconn", 41.45);
+
+      // ---- S_card 41.50–46.25
+      show("#scard", 41.5);
+      flipIn("#scard", 41.52);
+      tl.fromTo("#scard-arc", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.2, ease: "power2.inOut" }, 41.52);
+      tl.fromTo("#card", { y: -900, rotationX: -50, transformPerspective: 1300 }, { y: 0, rotationX: 0, transformPerspective: 1300, duration: 0.7, ease: "back.out(1.3)" }, 41.52);
+      tl.to("#card", { rotation: 1.2, duration: 1.6, ease: "sine.inOut", yoyo: true, repeat: 2 }, 42.15);
+      tl.fromTo("#card-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, 41.9);
+      blurIn("#card-title", 41.62);
+      blurIn("#r1", 42.38); blurIn("#r2", 43.04); blurIn("#r3", 43.76); blurIn("#r4", 44.36); blurIn("#r5", 45.18);
+      ["r1","r2","r3","r4","r5"].forEach((r, i) => tl.fromTo(`#${r} .ico3`, { scale: 0, rotationY: -180, transformPerspective: 600 },
+        { scale: 1, rotationY: 0, duration: 0.5, ease: "back.out(2)", immediateRender: false }, [42.38, 43.04, 43.76, 44.36, 45.18][i]));
+      flipOut("#scard", 45.95);
+      hide("#scard", 46.25);
+
+      // ---- S_dian 53.55–55.75
+      gsap.set("#sdian", { clipPath: "circle(150% at 50% 42%)" });
+      show("#sdian", 53.55);
+      tl.fromTo("#sdian", { scale: 1.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.32, ease: "expo.out", immediateRender: false }, 53.55);
+      blurIn("#sdian-a", 53.58);
+      pop3d("#sdian-inv", 53.9, 10); tl.to("#sdian-inv", { rotationY: 25, transformPerspective: 800, duration: 0.7, yoyo: true, repeat: 2, ease: "sine.inOut" }, 54.5);
+      slam("#sdian-b", 53.76, 1.7);
+      blurIn("#sdian-c", 54.7);
+      tl.to("#sdian .glow", { scale: 1.25, opacity: 0.6, duration: 0.25, yoyo: true, repeat: 1 }, 53.76);
+      iris("#sdian", 55.45);
+      hide("#sdian", 55.75);
+
+      // ---- S_d3 55.90–57.40
+      show("#sd3", 55.9);
+      flipIn("#sd3", 55.92);
+      blurIn("#sd3-a", 55.95);
+      pop3d("#sd3-cal", 56.1, -8);
+      slam("#sd3-b", 56.7, 1.6);
+      flipOut("#sd3", 57.1);
+      hide("#sd3", 57.4);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["graphics"] = tl;
+    </script>
+  </div>
+</template>

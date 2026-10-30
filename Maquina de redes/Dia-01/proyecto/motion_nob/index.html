@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <title>Dia 1 de 42</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=block" rel="stylesheet">
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body {
+        width: 1080px; height: 1920px; overflow: hidden;
+        background: #070707; font-family: "Inter", sans-serif;
+      }
+      #base {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; z-index: 0;
+        transform-origin: 50% 42%;
+      }
+      #person {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; z-index: 2; transform-origin: 50% 42%;
+      }
+      #pip {
+        position: absolute; left: 75px; top: 1170px; width: 240px; height: 240px;
+        border-radius: 50%; object-fit: cover; object-position: 50% 32%;
+        border: 7px solid #ffffff; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+        z-index: 5; opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-xqq5" id="root" data-composition-id="main" data-start="0" data-duration="38.06" data-width="1080" data-height="1920">
+      <!-- Footage sin audio: la mezcla final (voz + música + SFX) se hace con ffmpeg -->
+      <video data-hf-id="hf-bff8" id="base" class="clip" src="assets/base_graded.mp4" data-start="0" data-duration="38.06" data-track-index="0" muted playsinline></video>
+      <!-- Motion DELANTE del hablante (stickers, chips, trazos) -->
+      <div id="overlays" data-composition-id="overlays" data-composition-src="compositions/overlays.html"
+           data-start="0" data-duration="38.06" data-track-index="3" data-width="1080" data-height="1920"
+           style="position: absolute; inset: 0; z-index: 3"></div>
+      <div data-hf-id="hf-ipsd" id="graphics" data-composition-id="graphics" data-composition-src="compositions/graphics.html" data-start="0" data-duration="38.06" data-track-index="1" data-width="1080" data-height="1920" style="position: absolute; inset: 0; z-index: 4"></div>
+      <!-- PiP del hablante durante los gráficos largos a pantalla completa -->
+      <video data-hf-id="hf-ng9c" id="pip" class="clip" src="assets/pip_graded.mp4" data-start="0" data-duration="38.06" data-track-index="2" muted playsinline></video>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      // Mismo remapeo de tiempos que compositions/graphics.html (plan/timemap.json)
+      const MAP_OLD = [0, 3.89, 7.2, 10.21, 14.78, 18.68, 20.61, 26.11, 32.53, 34.69, 38.14];
+      const MAP_NEW = [0, 3.857, 7.178, 10.178, 14.749, 18.634, 20.557, 26.057, 32.48, 34.634, 38.057];
+      const T = (t) => {
+        let i = 1;
+        while (i < MAP_OLD.length - 1 && t > MAP_OLD[i]) i++;
+        const [a, b, c, d] = [MAP_OLD[i - 1], MAP_OLD[i], MAP_NEW[i - 1], MAP_NEW[i]];
+        return c + ((t - a) * (d - c)) / (b - a);
+      };
+      const root = gsap.timeline({ paused: true });
+      const tl = {
+        to: (s, v, p) => root.to(s, v, T(p)),
+        fromTo: (s, a, b, p) => root.fromTo(s, a, b, T(p)),
+        set: (s, v, p) => root.set(s, v, T(p)),
+      };
+      const V = "#base, #person";
+
+      // Zoom de tendencia: push lento continuo, punch-in con easing expo en
+      // palabras clave y zoom látigo con desenfoque en las transiciones.
+      const land = (t, from) =>
+        tl.fromTo(V, { scale: from, filter: "blur(10px)" },
+          { scale: 1.0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, t);
+      const push = (t0, t1, to) =>
+        tl.to(V, { scale: to, duration: t1 - t0, ease: "none" }, t0);
+      const punch = (t, to) =>
+        tl.to(V, { scale: to, duration: 0.38, ease: "expo.out" }, t);
+      const whip = (t) =>
+        tl.to(V, { scale: "+=0.55", filter: "blur(16px)", duration: 0.22, ease: "power3.in" }, t);
+      const shake = (t, amp) => {
+        const xs = [amp, -amp * 0.8, amp * 0.6, -amp * 0.4, amp * 0.2, 0];
+        xs.forEach((x, i) => tl.to(V, { x, duration: 0.04, ease: "none" }, t + i * 0.04));
+      };
+
+      gsap.set(V, { scale: 1.35, x: 0, filter: "blur(0px)" });
+      // t1 (tras el iris del gancho)
+      land(1.72, 1.4);
+      push(2.2, 3.89, 1.07);
+      // t2
+      tl.set(V, { scale: 1.0 }, 3.89);
+      push(3.89, 4.7, 1.03);
+      punch(4.72, 1.17);
+      shake(5.94, 10);
+      // t3: Lobo ya existe -> látigo hacia el gráfico
+      tl.set(V, { scale: 1.0 }, 7.2);
+      push(7.2, 8.05, 1.06);
+      whip(8.06);
+      // t4
+      land(10.21, 1.3);
+      push(10.7, 11.85, 1.05);
+      punch(11.85, 1.15);
+      whip(12.38);
+      // t6
+      land(20.61, 1.28);
+      push(21.1, 22.95, 1.06);
+      punch(22.97, 1.15);
+      push(23.4, 25.15, 1.18);
+      punch(25.17, 1.28);
+      shake(25.17, 16);
+      shake(25.61, 12);
+      // t7
+      tl.set(V, { scale: 1.0, filter: "blur(0px)" }, 26.11);
+      push(26.11, 27.32, 1.04);
+      punch(27.34, 1.17);
+      whip(28.18);
+      // t9 (tras el iris de "Día 1")
+      land(34.62, 1.25);
+      push(35.1, 38.13, 1.1);
+
+      // PiP: pop con spring solo en las escenas largas a pantalla completa
+      const pipIn = (t) => tl.fromTo("#pip", { opacity: 0, scale: 0 },
+        { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.8)" }, t);
+      const pipOut = (t) => tl.to("#pip", { opacity: 0, scale: 0, duration: 0.2, ease: "power2.in" }, t);
+      gsap.set("#pip", { opacity: 0, scale: 0 });
+      pipIn(15.1); pipOut(20.35);
+      pipIn(28.6); pipOut(32.3);
+
+      window.__timelines["main"] = root;
+    </script>
+  </body>
+</html>

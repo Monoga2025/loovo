@@ -1,0 +1,482 @@
+{
+ "fps": 30,
+ "total": 58.82,
+ "segs": [
+  {
+   "id": "G1a",
+   "a": 60.98,
+   "b": 63.22,
+   "dur": 2.24,
+   "gap": 0.0,
+   "start": 0.0,
+   "end": 2.24,
+   "kind": "mg",
+   "view": {
+    "src": 60.98,
+    "keys": [
+     [
+      0,
+      540,
+      960,
+      1.0
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "Me di cuenta que necesitaba organizar la información de la empresa,"
+  },
+  {
+   "id": "G1b",
+   "a": 63.22,
+   "b": 64.44,
+   "dur": 1.22,
+   "gap": 0.0,
+   "start": 2.24,
+   "end": 3.46,
+   "kind": "cam",
+   "view": {
+    "src": 63.22,
+    "keys": [
+     [
+      0,
+      760,
+      1150,
+      1.14
+     ],
+     [
+      1.3,
+      760,
+      1140,
+      1.19
+     ]
+    ],
+    "look": "cam"
+   },
+   "texto": "no sabía dónde montarlo."
+  },
+  {
+   "id": "G2",
+   "a": 68.98,
+   "b": 71.24,
+   "dur": 2.26,
+   "gap": 0.4,
+   "start": 3.86,
+   "end": 6.12,
+   "kind": "mg",
+   "view": {
+    "src": 68.98,
+    "keys": [
+     [
+      0,
+      540,
+      960,
+      1.0
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "Intenté integrarlo en los mejores ERP,"
+  },
+  {
+   "id": "G3",
+   "a": 73.09,
+   "b": 76.36,
+   "dur": 3.27,
+   "gap": 0.3,
+   "start": 6.42,
+   "end": 9.69,
+   "kind": "mg",
+   "view": {
+    "src": 73.09,
+    "keys": [
+     [
+      0,
+      540,
+      960,
+      1.0
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "pero me di cuenta que entre más instala cosas nuevas, peor funciona."
+  },
+  {
+   "id": "P1",
+   "a": 79.77,
+   "b": 82.94,
+   "dur": 3.17,
+   "gap": 0.45,
+   "start": 10.14,
+   "end": 13.31,
+   "kind": "cam",
+   "view": {
+    "src": 79.77,
+    "keys": [
+     [
+      0,
+      560,
+      1150,
+      1.1
+     ],
+     [
+      3.2,
+      570,
+      1140,
+      1.17
+     ]
+    ],
+    "look": "cam"
+   },
+   "texto": "Como yo manejo Odoo, porque yo fui integrador de Odoo,"
+  },
+  {
+   "id": "P2",
+   "a": 82.96,
+   "b": 85.76,
+   "dur": 2.8,
+   "gap": 0.2,
+   "start": 13.51,
+   "end": 16.31,
+   "kind": "mg",
+   "view": {
+    "src": 82.96,
+    "keys": [
+     [
+      0,
+      540,
+      960,
+      1.0
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "vamos a instalar Odoo para la agencia."
+  },
+  {
+   "id": "P3a",
+   "a": 89.46,
+   "b": 91.19,
+   "dur": 1.73,
+   "gap": 0.35,
+   "start": 16.66,
+   "end": 18.39,
+   "kind": "mg",
+   "view": {
+    "src": 89.46,
+    "keys": [
+     [
+      0,
+      540,
+      960,
+      1.0
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "Vamos a utilizar el módulo de"
+  },
+  {
+   "id": "P3b",
+   "a": 93.4,
+   "b": 99.19,
+   "dur": 5.79,
+   "gap": 0.1,
+   "start": 18.49,
+   "end": 24.28,
+   "kind": "mg",
+   "view": {
+    "src": 93.4,
+    "keys": [
+     [
+      0,
+      540,
+      960,
+      1.0
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "marketing con una vista kanban donde vamos a organizar los guiones."
+  },
+  {
+   "id": "T1a",
+   "a": 477.54,
+   "b": 479.5,
+   "dur": 1.96,
+   "gap": 0.5,
+   "start": 24.78,
+   "end": 26.74,
+   "kind": "mg",
+   "view": {
+    "src": 477.54,
+    "keys": [
+     [
+      0,
+      540,
+      960,
+      1.0
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "¿Saben qué pasa? Que normalmente la gente dice:"
+  },
+  {
+   "id": "T1b",
+   "a": 482.22,
+   "b": 484.05,
+   "dur": 1.83,
+   "gap": 0.2,
+   "start": 26.94,
+   "end": 28.77,
+   "kind": "cam",
+   "view": {
+    "src": 482.22,
+    "keys": [
+     [
+      0,
+      420,
+      1020,
+      1.06
+     ],
+     [
+      1.8,
+      410,
+      1000,
+      1.1
+     ]
+    ],
+    "look": "cam"
+   },
+   "texto": "tengo un CRM para manejar mis clientes,"
+  },
+  {
+   "id": "T1c",
+   "a": 484.46,
+   "b": 487.43,
+   "dur": 2.97,
+   "gap": 0.1,
+   "start": 28.87,
+   "end": 31.84,
+   "kind": "cam",
+   "view": {
+    "src": 484.46,
+    "keys": [
+     [
+      0,
+      410,
+      1000,
+      1.1
+     ],
+     [
+      2.9,
+      420,
+      960,
+      1.15
+     ]
+    ],
+    "look": "cam"
+   },
+   "texto": "tengo un módulo de contabilidad, tengo un módulo de inventario..."
+  },
+  {
+   "id": "T2",
+   "a": 495.9,
+   "b": 498.12,
+   "dur": 2.22,
+   "gap": 0.45,
+   "start": 32.29,
+   "end": 34.51,
+   "kind": "scr",
+   "view": {
+    "src": 499.0,
+    "keys": [
+     [
+      0,
+      560,
+      1000,
+      1.22
+     ],
+     [
+      2.6,
+      520,
+      960,
+      1.36
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "En Odoo se puede manejar absolutamente todo."
+  },
+  {
+   "id": "L1",
+   "a": 510.55,
+   "b": 514.97,
+   "dur": 4.42,
+   "gap": 0.4,
+   "start": 34.91,
+   "end": 39.33,
+   "kind": "mg",
+   "view": {
+    "src": 510.55,
+    "keys": [
+     [
+      0,
+      540,
+      960,
+      1.0
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "Tenemos módulo de contabilidad, tenemos módulo de punto de venta,"
+  },
+  {
+   "id": "L3",
+   "a": 521.58,
+   "b": 524.46,
+   "dur": 2.88,
+   "gap": 0.15,
+   "start": 39.48,
+   "end": 42.36,
+   "kind": "mg",
+   "view": {
+    "src": 521.58,
+    "keys": [
+     [
+      0,
+      540,
+      960,
+      1.0
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "tenemos ventas, tenemos compras."
+  },
+  {
+   "id": "D1",
+   "a": 546.6,
+   "b": 553.41,
+   "dur": 6.81,
+   "gap": 0.45,
+   "start": 42.81,
+   "end": 49.62,
+   "kind": "scr",
+   "view": {
+    "src": 546.9,
+    "keys": [
+     [
+      0,
+      540,
+      700,
+      1.12
+     ],
+     [
+      3.0,
+      560,
+      700,
+      1.25
+     ],
+     [
+      5.5,
+      800,
+      820,
+      1.45
+     ],
+     [
+      7.2,
+      700,
+      780,
+      1.75
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "De las cosas más interesantes que tiene Odoo es que tiene contabilidad compatible con la DIAN, tiene integración con la DIAN."
+  },
+  {
+   "id": "R1",
+   "a": 143.74,
+   "b": 146.66,
+   "dur": 2.92,
+   "gap": 0.45,
+   "start": 50.07,
+   "end": 52.99,
+   "kind": "cam",
+   "view": {
+    "src": 143.74,
+    "keys": [
+     [
+      0,
+      790,
+      1230,
+      1.12
+     ],
+     [
+      2.9,
+      790,
+      1215,
+      1.18
+     ]
+    ],
+    "look": "cam"
+   },
+   "texto": "Estamos montando Odoo dentro de Railway."
+  },
+  {
+   "id": "R2",
+   "a": 675.82,
+   "b": 678.2,
+   "dur": 2.38,
+   "gap": 0.3,
+   "start": 53.29,
+   "end": 55.67,
+   "kind": "scr",
+   "view": {
+    "src": 675.82,
+    "keys": [
+     [
+      0,
+      650,
+      1100,
+      1.32
+     ],
+     [
+      2.4,
+      680,
+      1060,
+      1.52
+     ]
+    ],
+    "look": "scr"
+   },
+   "texto": "Revisamos el despliegue: sale exitoso."
+  },
+  {
+   "id": "PL",
+   "a": null,
+   "b": null,
+   "dur": 2.8,
+   "gap": 0.35,
+   "start": 56.02,
+   "end": 58.82,
+   "kind": "pl",
+   "view": null,
+   "texto": "(placa LOOVO)"
+  }
+ ],
+ "blur": [
+  {
+   "t0": 553.35,
+   "t1": 555.5,
+   "r": [
+    0,
+    760,
+    1080,
+    1440
+   ],
+   "nota": "tablero de contabilidad de odoo.com con montos y facturas de ejemplo (demo del sitio): se tapa por regla"
+  }
+ ]
+}

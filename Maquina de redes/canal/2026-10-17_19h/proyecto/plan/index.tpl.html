@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, height=1920">
+<title>Contadores tres sistemas</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-600.ttf") format("truetype"); }
+@font-face { font-family: "Playfair Display"; font-weight: 700; font-style: italic; src: url("assets/fonts/playfair-display-latin-700-italic.ttf") format("truetype"); }
+* { box-sizing: border-box; margin: 0; padding: 0; border-radius: 0 !important; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #F6F4EF; font-family: "Montserrat", sans-serif; font-weight: 600; }
+.scene { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; visibility: hidden; z-index: 20; }
+.pastel { background: #F6F4EF; }
+.carbon { background: #2A2926; }
+.dots { position: absolute; left: -120px; top: -120px; width: 1320px; height: 2160px;
+  background: radial-gradient(circle at 12px 12px, rgba(170,165,156,.42) 0 1.1px, transparent 1.6px) 0 0/24px 24px; }
+.carbon .dots { background: radial-gradient(circle at 12px 12px, rgba(251,248,241,.13) 0 1.1px, transparent 1.6px) 0 0/24px 24px; }
+.cam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.abs { position: absolute; }
+.w { display: inline-block; white-space: nowrap; }
+.title { position: absolute; left: 0; width: 1080px; text-align: center; color: #2A2926; font-size: 96px; line-height: 1.12; white-space: nowrap; }
+.carbon .title { color: #FBF8F1; }
+.serif { font-family: "Playfair Display", serif; font-style: italic; font-weight: 700; }
+.gold { color: #A88F57; }
+.carbon .gold, .onv .gold { color: #E6D6AE; }
+.lbl { position: absolute; font-family: "Playfair Display", serif; font-style: italic; font-weight: 700; font-size: 84px; color: #A88F57; white-space: nowrap; }
+.carbon .lbl { color: #E6D6AE; }
+.sm { position: absolute; font-size: 56px; color: #8C887F; white-space: nowrap; }
+.carbon .sm { color: #CFC8B8; }
+.kbox { position: absolute; height: 168px; white-space: nowrap; }
+.kbox .bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #2A2926; box-shadow: 0 34px 70px -24px rgba(90,74,44,.34); }
+.kbox .tx { position: relative; padding: 0 44px; line-height: 168px; font-family: "Playfair Display", serif; font-style: italic; font-weight: 700; font-size: 132px; color: #E6D6AE; }
+.kbox .cov { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #2A2926; }
+.kbox .cw { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.kbox .cur { position: absolute; top: 18px; left: -12px; width: 12px; height: 132px; background: #C8B07A; }
+.kbox.light .bg, .kbox.light .cov { background: #FBF8F1; }
+.kbox.light .tx { color: #2A2926; }
+.tile { position: absolute; background: #2A2926; box-shadow: 0 34px 70px -24px rgba(90,74,44,.40); }
+.tile.light { background: #FBF8F1; box-shadow: 0 30px 60px -24px rgba(90,74,44,.30); }
+.ico { position: absolute; left: 22%; top: 22%; width: 56%; height: 56%; background: #E6D6AE;
+  -webkit-mask: var(--i) center/contain no-repeat; mask: var(--i) center/contain no-repeat; }
+.tile.light .ico { background: #2A2926; }
+.goldico { background: #C8B07A !important; }
+.num { position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center; font-family: "Playfair Display", serif; font-style: italic; font-weight: 700; color: #E6D6AE; }
+.tile.light .num { color: #2A2926; }
+svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.dot { position: absolute; width: 30px; height: 30px; background: #C8B07A; border-radius: 50% !important; box-shadow: 0 0 24px rgba(200,176,122,.8); }
+.bubble { position: absolute; height: 74px; background: #FBF8F1; box-shadow: 0 20px 40px -18px rgba(0,0,0,.5); }
+.bubble i { position: absolute; top: 28px; width: 18px; height: 18px; background: #8C887F; border-radius: 50% !important; }
+.row { position: absolute; left: 0; width: 100%; height: 86px; }
+.row .box { position: absolute; left: 34px; top: 18px; width: 50px; height: 50px; border: 6px solid #A88F57; }
+.row .chk { position: absolute; left: 34px; top: 18px; width: 50px; height: 50px; background: #A88F57; }
+.row .chk .ico { left: 10%; top: 10%; width: 80%; height: 80%; background: #FBF8F1; }
+.row .ln { position: absolute; left: 110px; top: 36px; height: 16px; background: #D8D2C4; }
+.cell { position: absolute; width: 104px; height: 96px; background: #FBF8F1; box-shadow: 0 10px 24px -14px rgba(90,74,44,.35); font-size: 40px; color: #8C887F; padding: 10px 0 0 14px; }
+.cell.hot { background: #2A2926; color: #E6D6AE; }
+.bar { position: absolute; width: 90px; background: #C8B07A; bottom: 0; }
+#pov { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; z-index: 10; pointer-events: none; }
+.onv { color: #FBF8F1; text-shadow: 0 2px 6px rgba(20,16,10,.5), 0 6px 26px rgba(20,16,10,.38); }
+#caps { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; z-index: 50; pointer-events: none; }
+.cap { position: absolute; left: 70px; width: 890px; top: 1300px; text-align: center; font-size: 82px; line-height: 1.12; color: #2A2926; visibility: hidden;
+  text-shadow: 0 2px 10px rgba(246,244,239,.9); }
+.cap.dk { color: #FBF8F1; text-shadow: 0 2px 6px rgba(20,16,10,.55), 0 6px 26px rgba(20,16,10,.45); }
+.cap b { font-weight: 600; color: #A88F57; }
+.cap.dk b { color: #E6D6AE; }
+#shade { position: absolute; left: 0; top: 1150px; width: 1080px; height: 770px; z-index: 5; background: linear-gradient(180deg, rgba(20,16,10,0), rgba(20,16,10,.42)); pointer-events: none; }
+#grain { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; z-index: 60; background: url("assets/grano.png"); mix-blend-mode: multiply; opacity: .05; pointer-events: none; }
+#flash { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; z-index: 70; background: #FFFBF2; opacity: 0; pointer-events: none; }
+.lt { position: absolute; height: 150px; background: #2A2926; box-shadow: 0 34px 70px -24px rgba(20,16,10,.5); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1080" data-height="1920">
+
+<video id="vbase" class="clip" src="assets/base.mp4" data-start="0" data-duration="__DUR__" data-track-index="1" muted playsinline style="position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:1"></video>
+<div id="shade"></div>
+
+<!-- capas sobre la persona -->
+<div id="pov">
+  <div id="hook" class="abs" style="left:0;top:300px;width:1080px;height:330px">
+    <div class="title onv" style="top:0;font-size:92px"><span class="w" id="h1">Una</span> <span class="w" id="h2">pregunta</span> <span class="w" id="h3">para los</span></div>
+    <div class="title onv serif" style="top:104px;font-size:170px"><span class="w gold" id="h4">contadores</span></div>
+  </div>
+  <div class="lt" id="lt_ing" style="left:65px;top:1090px;width:760px"><div class="abs" style="left:0;top:0;width:12px;height:150px;background:#C8B07A"></div>
+    <div class="abs" style="left:44px;top:14px;font-size:50px;color:#CFC8B8">ingeniero</div>
+    <div class="abs serif" style="left:44px;top:58px;font-size:76px;color:#E6D6AE">mecatrónico</div></div>
+  <div class="kbox light" id="k_sol" style="left:540px;top:330px"><div class="bg"></div><div class="tx">solucionar</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <div class="kbox" id="k_det" style="left:540px;top:330px"><div class="bg"></div><div class="tx">todo el mundo</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <div class="title onv" id="t3a" style="top:1130px;font-size:92px"><span class="w">el</span> <span class="w serif gold" style="font-size:150px">tercero</span></div>
+  <div class="tile" id="t3n" style="left:850px;top:290px;width:160px;height:160px"><div class="num" style="font-size:130px;line-height:160px">3</div></div>
+  <div id="list" class="abs" style="left:65px;top:1040px;width:900px;height:420px">
+    <div class="abs li" style="left:0;top:0"><div class="tile" style="left:0;top:0;width:110px;height:110px"><div class="ico" style="--i:url(assets/ico/eye-fill.svg)"></div></div><div class="abs onv" style="left:140px;top:12px;font-size:80px">revisas</div></div>
+    <div class="abs li" style="left:0;top:140px"><div class="tile" style="left:0;top:0;width:110px;height:110px"><div class="ico" style="--i:url(assets/ico/pencil-simple-fill.svg)"></div></div><div class="abs onv" style="left:140px;top:12px;font-size:80px">corriges</div></div>
+    <div class="abs li" style="left:0;top:280px"><div class="tile" style="left:0;top:0;width:110px;height:110px;background:#C8B07A"><div class="ico" style="background:#2A2926;--i:url(assets/ico/paper-plane-tilt-fill.svg)"></div></div><div class="abs onv serif" style="left:140px;top:-6px;font-size:110px;color:#E6D6AE">envías</div></div>
+  </div>
+  <div class="kbox" id="k_mas" style="left:540px;top:285px"><div class="bg"></div><div class="tx">más trabajo</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <div class="kbox light" id="k_loovo" style="left:540px;top:285px"><div class="bg"></div><div class="tx" style="font-family:Montserrat;font-style:normal;font-weight:600;font-size:120px;padding:0 60px">Loovo</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <div id="mini" class="abs" style="left:0;top:280px;width:1080px;height:170px">
+    <div class="tile mi" style="left:325px;top:0;width:130px;height:130px"><div class="num" style="font-size:104px;line-height:130px">1</div></div>
+    <div class="tile light mi" style="left:475px;top:0;width:130px;height:130px"><div class="num" style="font-size:104px;line-height:130px">2</div></div>
+    <div class="tile mi" style="left:625px;top:0;width:130px;height:130px"><div class="num" style="font-size:104px;line-height:130px">3</div></div>
+  </div>
+</div>
+
+<!-- S2 ¿cómo hacen para manejar 10, 20 clientes? (pastel) -->
+<div id="s2" class="scene pastel"><div class="dots"></div><div class="cam" id="c2">
+  <div class="title" style="top:290px;font-size:84px"><span class="w" id="q1">¿Cómo</span> <span class="w" id="q2">hacen</span></div><div class="title" style="top:390px;font-size:84px"><span class="w" id="q3">para</span> <span class="w" id="q4">manejar</span></div>
+  <div class="abs" id="wheel" style="left:240px;top:500px;width:600px;height:300px;overflow:hidden">
+    <div class="abs" id="wheelin" style="left:0;top:0;width:600px">
+      <div class="serif" style="height:300px;line-height:300px;text-align:center;font-size:280px;color:#2A2926">10</div>
+      <div class="serif" style="height:300px;line-height:300px;text-align:center;font-size:280px;color:#A88F57">20</div>
+    </div>
+  </div>
+  <div class="lbl" id="l_cli" style="left:0;width:1080px;text-align:center;top:780px">clientes</div>
+  <div id="ppl"></div>
+  <div class="kbox" id="k_loc" style="left:540px;top:1200px"><div class="bg"></div><div class="tx" style="font-size:100px">no volverse locos</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+</div></div>
+
+<!-- S4 rogándole que le entreguen las facturas (carbón) -->
+<div id="s4" class="scene carbon"><div class="dots"></div><div class="cam" id="c4">
+  <div class="kbox light" id="k_rog" style="left:540px;top:300px"><div class="bg"></div><div class="tx">rogándole</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <div class="tile light" id="acc" style="left:120px;top:640px;width:200px;height:200px"><div class="ico" style="--i:url(assets/ico/user-fill.svg)"></div></div>
+  <div class="bubble rb" style="left:360px;top:600px;width:260px"><i style="left:60px"></i><i style="left:120px"></i><i style="left:180px"></i></div>
+  <div class="bubble rb" style="left:360px;top:700px;width:330px"><i style="left:60px"></i><i style="left:120px"></i><i style="left:180px"></i></div>
+  <div class="bubble rb" style="left:360px;top:800px;width:220px"><i style="left:60px"></i><i style="left:120px"></i><i style="left:180px"></i></div>
+  <div class="tile fac" style="left:640px;top:910px;width:150px;height:190px;background:#3A3834"><div class="ico" style="--i:url(assets/ico/file-text-fill.svg)"></div></div>
+  <div class="tile fac" style="left:760px;top:940px;width:150px;height:190px;background:#3A3834"><div class="ico" style="--i:url(assets/ico/file-text-fill.svg)"></div></div>
+  <div class="tile fac" style="left:520px;top:950px;width:150px;height:190px;background:#3A3834"><div class="ico" style="--i:url(assets/ico/file-text-fill.svg)"></div></div>
+  <div class="lbl" id="l_fac" style="left:0;width:1080px;text-align:center;top:1150px;font-size:110px">facturas</div>
+  <div class="abs" id="clk" style="left:160px;top:960px;width:150px;height:150px"><div class="ico goldico" style="left:0;top:0;width:100%;height:100%;--i:url(assets/ico/hourglass-high-fill.svg)"></div></div>
+</div></div>
+
+<!-- S6 tres sistemas (pastel, cámara 2.5D) -->
+<div id="s6" class="scene pastel"><div class="dots"></div><div class="cam" id="c6">
+  <div class="title" style="top:330px;font-size:84px"><span class="w" id="ts1">estos</span> <span class="w" id="ts2">son</span> <span class="w" id="ts3">los</span></div>
+  <div class="kbox" id="k_tres" style="left:540px;top:450px"><div class="bg"></div><div class="tx">tres sistemas</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <svg width="1080" height="1920"><line id="l6" x1="200" y1="900" x2="880" y2="900" stroke="#C8B07A" stroke-width="7" stroke-dasharray="680" stroke-dashoffset="680"/></svg>
+  <div class="tile s6t" id="n1" style="left:110px;top:780px;width:240px;height:240px"><div class="num" style="font-size:190px;line-height:240px">1</div></div>
+  <div class="tile light s6t" id="n2" style="left:420px;top:780px;width:240px;height:240px"><div class="num" style="font-size:190px;line-height:240px">2</div></div>
+  <div class="tile s6t" id="n3" style="left:730px;top:780px;width:240px;height:240px"><div class="num" style="font-size:190px;line-height:240px">3</div></div>
+  <div class="sm" id="l_opt" style="left:0;width:1080px;text-align:center;top:1090px;font-size:64px;color:#2A2926">que les van a <span class="serif gold" style="font-size:96px">optimizar</span></div>
+  <div class="sm" id="l_tra" style="left:0;width:1080px;text-align:center;top:1200px;font-size:64px">el trabajo</div>
+</div></div>
+
+<!-- S7 sistema 1: IA que escribe por WhatsApp (carbón) -->
+<div id="s7" class="scene carbon"><div class="dots"></div><div class="cam" id="c7">
+  <div class="abs" id="big1" style="left:80px;top:300px;width:200px;height:260px"><div class="num serif" style="font-size:260px;line-height:260px;text-align:left;color:#C8B07A">1</div></div>
+  <div class="title" id="t_pri" style="top:330px;left:110px;font-size:84px;text-align:left;width:900px;padding-left:200px">El <span class="serif gold" style="font-size:120px">primero</span></div>
+  <div class="sm" id="t_ima" style="left:310px;top:470px">imagínate eso</div>
+  <div class="tile light" id="ia" style="left:110px;top:720px;width:230px;height:230px"><div class="ico" style="--i:url(assets/ico/cpu-fill.svg)"></div></div>
+  <div class="sm" id="l_ia" style="left:60px;top:970px;font-size:46px;color:#E6D6AE">inteligencia artificial</div>
+  <svg width="1080" height="1920" id="sv7">
+    <line class="l7" x1="340" y1="835" x2="760" y2="640" stroke="#C8B07A" stroke-width="6" stroke-dasharray="470" stroke-dashoffset="470"/>
+    <line class="l7" x1="340" y1="835" x2="760" y2="835" stroke="#C8B07A" stroke-width="6" stroke-dasharray="470" stroke-dashoffset="470"/>
+    <line class="l7" x1="340" y1="835" x2="760" y2="1030" stroke="#C8B07A" stroke-width="6" stroke-dasharray="470" stroke-dashoffset="470"/>
+  </svg>
+  <div class="tile cl7" style="left:760px;top:570px;width:150px;height:150px;background:#3A3834"><div class="ico" style="--i:url(assets/ico/user-fill.svg)"></div></div>
+  <div class="tile cl7" style="left:760px;top:760px;width:150px;height:150px;background:#3A3834"><div class="ico" style="--i:url(assets/ico/user-fill.svg)"></div></div>
+  <div class="tile cl7" style="left:760px;top:950px;width:150px;height:150px;background:#3A3834"><div class="ico" style="--i:url(assets/ico/user-fill.svg)"></div></div>
+  <div class="tile ok7" style="left:880px;top:550px;width:70px;height:70px;background:#C8B07A"><div class="ico" style="background:#2A2926;--i:url(assets/ico/check-bold.svg)"></div></div>
+  <div class="tile ok7" style="left:880px;top:740px;width:70px;height:70px;background:#C8B07A"><div class="ico" style="background:#2A2926;--i:url(assets/ico/check-bold.svg)"></div></div>
+  <div class="tile ok7" style="left:880px;top:930px;width:70px;height:70px;background:#C8B07A"><div class="ico" style="background:#2A2926;--i:url(assets/ico/check-bold.svg)"></div></div>
+  <div class="sm" id="l_cli7" style="left:730px;top:1120px;font-size:46px;color:#E6D6AE">clientes</div>
+  <div class="dot pd7" style="left:325px;top:820px"></div><div class="dot pd7" style="left:325px;top:820px"></div><div class="dot pd7" style="left:325px;top:820px"></div>
+  <div class="abs" id="wa" style="left:420px;top:600px;width:200px;height:200px"><div class="ico goldico" style="left:0;top:0;width:100%;height:100%;--i:url(assets/ico/chat-circle-dots-fill.svg)"></div></div>
+  <div class="lbl" id="l_wa" style="left:400px;top:860px;font-size:72px">WhatsApp</div>
+  <div class="abs" id="docs" style="left:140px;top:600px;width:800px;height:520px;background:#FBF8F1;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)">
+    <div class="abs" style="left:34px;top:30px;font-size:46px;color:#2A2926">documentos <span class="serif gold" style="font-size:64px">que faltan</span></div>
+    <div class="row" style="top:130px"><div class="box"></div><div class="chk"><div class="ico" style="--i:url(assets/ico/check-bold.svg)"></div></div><div class="ln" style="width:520px"></div></div>
+    <div class="row" style="top:220px"><div class="box"></div><div class="chk"><div class="ico" style="--i:url(assets/ico/check-bold.svg)"></div></div><div class="ln" style="width:430px"></div></div>
+    <div class="row" style="top:310px"><div class="box"></div><div class="chk"><div class="ico" style="--i:url(assets/ico/check-bold.svg)"></div></div><div class="ln" style="width:560px"></div></div>
+    <div class="row" style="top:400px"><div class="box"></div><div class="chk"><div class="ico" style="--i:url(assets/ico/check-bold.svg)"></div></div><div class="ln" style="width:380px"></div></div>
+  </div>
+  <div class="kbox light" id="k_todo" style="left:540px;top:1110px"><div class="bg"></div><div class="tx">ya mandó todo</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+</div></div>
+
+<!-- S9 sistema 2: vencimientos + calendario (pastel) -->
+<div id="s9" class="scene pastel"><div class="dots"></div><div class="cam" id="c9">
+  <div class="abs" id="big2" style="left:80px;top:290px;width:200px;height:260px"><div class="num serif" style="font-size:260px;line-height:260px;text-align:left;color:#A88F57">2</div></div>
+  <div class="title" id="t_seg" style="top:330px;left:110px;font-size:84px;text-align:left;width:900px;padding-left:200px">El <span class="serif gold" style="font-size:120px">segundo</span></div>
+  <div class="abs" id="bell" style="left:440px;top:560px;width:200px;height:200px"><div class="ico" style="left:0;top:0;width:100%;height:100%;background:#2A2926;--i:url(assets/ico/bell-ringing-fill.svg)"></div></div>
+  <div class="kbox" id="k_ven" style="left:540px;top:800px"><div class="bg"></div><div class="tx">vencimientos</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <div class="abs" id="cal" style="left:140px;top:560px;width:800px;height:700px">
+    <div class="abs" style="left:0;top:0;width:800px;height:96px;background:#2A2926"><div class="abs" style="left:34px;top:18px;font-size:50px;color:#FBF8F1">calendario</div>
+      <div class="ico" style="left:auto;right:30px;top:16px;width:64px;height:64px;background:#C8B07A;--i:url(assets/ico/calendar-dots-fill.svg)"></div></div>
+    <div id="grid" class="abs" style="left:0;top:116px;width:800px;height:560px"></div>
+  </div>
+  <div class="lbl" id="l_pen" style="left:120px;top:1270px;font-size:80px">pendiente</div>
+  <div class="lbl" id="l_vie" style="left:580px;top:1270px;font-size:80px;color:#2A2926">qué se viene</div>
+</div></div>
+
+<!-- S11 sistema 3: informes que se arman solos (carbón) -->
+<div id="s11" class="scene carbon"><div class="dots"></div><div class="cam" id="c11">
+  <div class="kbox light" id="k_inf" style="left:540px;top:300px"><div class="bg"></div><div class="tx" style="font-size:100px">informes mensuales</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <div class="abs" id="rep" style="left:170px;top:540px;width:740px;height:700px;background:#FBF8F1;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)">
+    <div class="abs rp" style="left:40px;top:36px;width:360px;height:30px;background:#2A2926"></div>
+    <div class="abs rp" style="left:40px;top:84px;width:240px;height:18px;background:#D8D2C4"></div>
+    <div class="abs" id="chart" style="left:40px;top:150px;width:660px;height:300px;border-bottom:5px solid #2A2926">
+      <div class="bar" style="left:20px;height:120px"></div><div class="bar" style="left:140px;height:190px"></div><div class="bar" style="left:260px;height:150px"></div>
+      <div class="bar" style="left:380px;height:240px"></div><div class="bar" style="left:500px;height:280px;background:#2A2926"></div>
+    </div>
+    <div id="nums" class="abs" style="left:40px;top:490px;width:660px;height:190px"></div>
+  </div>
+  <div class="lbl" id="l_sol" style="left:0;width:1080px;text-align:center;top:1270px;font-size:96px">se arman solos</div>
+</div></div>
+
+<!-- S14 comenta uno, dos o tres (pastel) -->
+<div id="s14" class="scene pastel"><div class="dots"></div><div class="cam" id="c14">
+  <div class="abs" id="cm" style="left:450px;top:330px;width:180px;height:180px"><div class="ico" style="left:0;top:0;width:100%;height:100%;background:#A88F57;--i:url(assets/ico/chat-teardrop-dots-fill.svg)"></div></div>
+  <div class="title" id="t_com" style="top:540px;font-size:110px">Comenta</div>
+  <div class="tile cn" style="left:110px;top:760px;width:250px;height:250px"><div class="num" style="font-size:200px;line-height:250px">1</div></div>
+  <div class="tile light cn" style="left:415px;top:760px;width:250px;height:250px"><div class="num" style="font-size:200px;line-height:250px">2</div></div>
+  <div class="tile cn" style="left:720px;top:760px;width:250px;height:250px"><div class="num" style="font-size:200px;line-height:250px">3</div></div>
+</div></div>
+
+<!-- S15 cierre (pastel) -->
+<div id="s15" class="scene pastel"><div class="dots"></div><div class="cam" id="c15">
+  <div class="title" style="top:560px;font-size:84px;color:#8C887F">¿cuál les serviría más?</div>
+  <div class="title serif" id="t_end" style="top:700px;font-size:150px">Comenta</div>
+  <div class="tile ce" style="left:140px;top:930px;width:220px;height:220px"><div class="num" style="font-size:170px;line-height:220px">1</div></div>
+  <div class="tile light ce" style="left:430px;top:930px;width:220px;height:220px"><div class="num" style="font-size:170px;line-height:220px">2</div></div>
+  <div class="tile ce" style="left:720px;top:930px;width:220px;height:220px"><div class="num" style="font-size:170px;line-height:220px">3</div></div>
+  <div class="abs" id="ul_end" style="left:390px;top:1210px;width:300px;height:10px;background:#C8B07A"></div>
+</div></div>
+
+<div id="caps"></div>
+<div id="grain"></div>
+<div id="flash"></div>
+</div>
+
+<script>
+const WORDS = __WORDS__;
+const DUR = __DUR__;
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+window.__timelines["main"] = tl;
+const F = 1 / 30;
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+const on = (txt, after = 0) => { const w = WORDS.find((x) => x[1] >= after && x[0].replace(/[¿?,.]/g, "").toLowerCase() === txt.toLowerCase()); return w ? w[1] : after; };
+
+// ---------- escenas FS (corte duro entre ideas) ----------
+const SC = [["#s2", 2.62, 6.12], ["#s4", 10.08, 12.55], ["#s6", 18.62, 21.88], ["#s7", 21.88, 31.42],
+            ["#s9", 33.80, 42.15], ["#s11", 43.55, 49.45], ["#s14", 56.72, 58.88], ["#s15", 65.25, DUR + 0.1]];
+gsap.set(".scene", { visibility: "hidden" });
+SC.forEach(([id, a, b]) => { tl.set(id, { visibility: "visible" }, a); tl.set(id, { visibility: "hidden" }, b); });
+$$(".cam").forEach((c) => gsap.set(c, { transformPerspective: 1600, transformOrigin: "50% 50%" }));
+SC.forEach(([id, a, b]) => tl.fromTo(id + " .dots", { x: 0, y: 0 }, { x: -60, y: -40, duration: Math.min(b, DUR) - a, ease: "none", immediateRender: false }, a));
+gsap.set("#vbase", { transformOrigin: "50% 41%" });
+
+// ---------- helpers ----------
+const wordIn = (el, t, d = 0.16) => { gsap.set(el, { autoAlpha: 0 }); tl.fromTo(el, { autoAlpha: 0, y: 26, filter: "blur(10px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: d, ease: "power2.out", immediateRender: false }, t - 2 * F); };
+const pop = (el, t, from = 0.4) => { gsap.set(el, { autoAlpha: 0 }); tl.fromTo(el, { autoAlpha: 0, scale: from, filter: "blur(8px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.28, ease: "back.out(1.6)", immediateRender: false }, t); };
+const out = (el, t, d = 0.16) => tl.to(el, { autoAlpha: 0, duration: d, ease: "power2.in" }, t);
+const draw = (el, t, d = 0.4) => tl.to(el, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+const shake = (el, t, a = 14) => [a, -a * .8, a * .55, -a * .35, 0].forEach((x, i) => tl.to(el, { x, duration: 0.04, ease: "none" }, t + i * 0.04));
+function kbox(id, t) {
+  const k = $(id);
+  gsap.set(k, { autoAlpha: 0, xPercent: -50 });
+  gsap.set(k.querySelector(".bg"), { scaleX: 0, transformOrigin: "0% 50%" });
+  gsap.set(k.querySelector(".cov"), { scaleX: 1, transformOrigin: "100% 50%" });
+  const c = k.querySelector(".cur"); const cw = k.querySelector(".cw"); gsap.set(cw, { xPercent: 0 }); gsap.set(c, { x: 12 });
+  const hid = [k.querySelector(".tx"), k.querySelector(".cov")]; gsap.set(hid, { autoAlpha: 0 });
+  const sc = k.closest(".scene");
+  k.querySelector(".cov").style.background = sc ? (sc.classList.contains("carbon") ? "#2A2926" : "#F6F4EF") : (k.classList.contains("light") ? "#FBF8F1" : "#2A2926");
+  if (!sc) k.querySelector(".cov").style.opacity = "1";
+  tl.set(k, { autoAlpha: 1 }, t - 6 * F);
+  tl.set(hid, { autoAlpha: 1 }, t - 2 * F);
+  tl.to(k.querySelector(".bg"), { scaleX: 1, duration: 5 * F, ease: "power3.out" }, t - 2 * F);
+  tl.to(k.querySelector(".cov"), { scaleX: 0, duration: 5 * F, ease: "power3.out" }, t - 2 * F);
+  tl.to(cw, { xPercent: 100, duration: 5 * F, ease: "power3.out" }, t - 2 * F);
+  tl.to(c, { x: 0, duration: 5 * F, ease: "power3.out" }, t - 2 * F);
+  tl.to(c, { autoAlpha: 0, duration: 0.01, repeat: 5, yoyo: true, ease: "none" }, t + 0.2);
+  tl.fromTo(k, { scale: 1.08 }, { scale: 1, duration: 0.4, ease: "expo.out", immediateRender: false }, t - 2 * F);
+}
+const flash = (t) => { tl.to("#flash", { opacity: 1, duration: 3 * F, ease: "power2.in" }, t - 3 * F); tl.to("#flash", { opacity: 0, duration: 4 * F, ease: "sine.out" }, t + 3 * F); };
+// zoom-through: la escena saliente empuja hasta 1,42 con blur; la entrante sale de 1,45 + blur
+const pushOut = (el, t) => tl.to(el, { scale: 1.42, filter: "blur(10px)", duration: 0.32, ease: "power4.in" }, t - 0.32);
+const resetV = (t) => tl.set("#vbase", { scale: 1, filter: "blur(0px)", x: 0, y: 0, rotation: 0 }, t);
+const landBig = (cam, t) => tl.fromTo(cam, { scale: 4, filter: "blur(18px)" }, { scale: 1.05, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, t);
+const landIn = (cam, t) => tl.fromTo(cam, { scale: 1.45, filter: "blur(12px)" }, { scale: 1.0, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, t);
+const baseIn = (t) => tl.fromTo("#vbase", { filter: "blur(6px)" }, { filter: "blur(0px)", duration: 4 * F, ease: "sine.out", immediateRender: false }, t);
+gsap.set("#pov > *", { autoAlpha: 0 });
+
+// ---------- S1 gancho (persona) ----------
+gsap.set("#hook", { autoAlpha: 1 });
+gsap.set("#h1", { autoAlpha: 1 });                     // primera palabra visible en el cuadro 0
+gsap.set("#h2, #h3, #h4", { autoAlpha: 0 });
+wordIn("#h2", on("pregunta")); wordIn("#h3", on("para"));
+tl.fromTo("#h4", { autoAlpha: 0, scale: 0.6, filter: "blur(12px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.3, ease: "expo.out", immediateRender: false }, on("contadores") - 2 * F);
+tl.to("#hook", { y: -20, duration: 2.6, ease: "sine.inOut" }, 0);
+out("#hook", 2.50, 0.1);
+pushOut("#vbase", 2.62);
+
+// ---------- S2 manejar 10, 20 clientes ----------
+landIn("#c2", 2.62);
+["#q1", "#q2", "#q3", "#q4"].forEach((q, i) => wordIn(q, [on("ustedes"), on("hacen"), on("para", 3), on("manejar")][i]));
+gsap.set("#wheel, #l_cli", { autoAlpha: 0 });
+tl.fromTo("#wheel", { autoAlpha: 0, y: 60 }, { autoAlpha: 1, y: 0, duration: 0.25, ease: "expo.out", immediateRender: false }, on("10") - 3 * F);
+tl.to("#wheelin", { y: -300, duration: 0.3, ease: "back.out(1.4)" }, on("20") - 2 * F);
+wordIn("#l_cli", on("clientes"), 0.2);
+const ppl = $("#ppl"); const PP = [];
+for (let r = 0; r < 4; r++) for (let c = 0; c < 5; c++) { const d = document.createElement("div"); d.className = "tile light"; d.style.cssText = `left:${150 + c * 160}px;top:${920 + r * 70}px;width:110px;height:110px`; d.innerHTML = '<div class="ico" style="--i:url(assets/ico/user-fill.svg)"></div>'; ppl.appendChild(d); PP.push(d); }
+PP.forEach((d, i) => { const r = Math.floor(i / 5), c = i % 5; gsap.set(d, { autoAlpha: 0, x: (r % 2) * 40 - 20 });
+  tl.fromTo(d, { autoAlpha: 0, scale: 0.2 }, { autoAlpha: 1, scale: 0.9 - r * 0.08, duration: 0.18, ease: "back.out(2)", immediateRender: false }, (i < 10 ? on("10") : on("20")) + (i % 10) * 0.025); });
+kbox("#k_loc", on("volverse"));
+PP.forEach((d, i) => tl.to(d, { x: (i % 5 - 2) * 90 + ((i * 37) % 60 - 30), y: -260 + ((i * 53) % 420), rotation: (i * 29) % 50 - 25, duration: 0.45, ease: "power3.out" }, on("locos") + (i % 7) * 0.012));
+shake("#c2", on("locos"), 16);
+tl.fromTo("#c2", { rotationX: 0 }, { rotationX: 10, duration: 3.4, ease: "sine.inOut", immediateRender: false }, 2.7);
+// 6,12: invert flash + glitch en post
+
+// ---------- S3 persona: ¿por qué lo pregunto? ----------
+resetV(6.12); baseIn(6.12);
+pushOut("#vbase", 10.08);
+
+// ---------- S4 rogándole / facturas ----------
+landBig("#c4", 10.08);
+kbox("#k_rog", on("rogándole"));
+gsap.set("#acc, .rb, .fac, #l_fac, #clk", { autoAlpha: 0 });
+pop("#acc", 10.15, 0.4);
+$$(".rb").forEach((b, i) => tl.fromTo(b, { autoAlpha: 0, x: -40, scale: 0.7 }, { autoAlpha: 1, x: 0, scale: 1, duration: 0.22, ease: "back.out(1.8)", immediateRender: false }, 10.45 + i * 0.28));
+$$(".rb i").forEach((d, i) => tl.to(d, { y: -10, duration: 0.14, yoyo: true, repeat: 5, ease: "sine.inOut" }, 10.6 + (i % 3) * 0.07 + Math.floor(i / 3) * 0.28));
+$$(".fac").forEach((f, i) => tl.fromTo(f, { autoAlpha: 0, y: -380, rotation: [-14, 10, -6][i] }, { autoAlpha: 1, y: 0, rotation: [-8, 6, -3][i], duration: 0.4, ease: "bounce.out", immediateRender: false }, on("entreguen") + i * 0.09));
+wordIn("#l_fac", on("facturas"), 0.2);
+pop("#clk", 11.25, 0.5);
+tl.to("#clk", { rotation: 180, duration: 0.5, ease: "power2.inOut" }, 11.6);
+tl.fromTo("#c4", { rotationY: -8 }, { rotationY: 6, duration: 2.5, ease: "sine.inOut", immediateRender: false }, 10.1);
+flash(12.55);
+
+// ---------- S5 persona: ingeniero mecatrónico ----------
+resetV(12.55); baseIn(12.55);
+gsap.set("#lt_ing", { autoAlpha: 0 });
+tl.fromTo("#lt_ing", { autoAlpha: 0, x: -120, clipPath: "inset(0 100% 0 0)" }, { autoAlpha: 1, x: 0, clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "expo.out", immediateRender: false }, on("ingeniero") - 2 * F);
+out("#lt_ing", on("amigo") + 0.5, 0.2);
+kbox("#k_sol", on("solucionar"));
+out("#k_sol", 18.30, 0.15);
+tl.to("#vbase", { scale: 1.08, duration: 1.0, ease: "sine.inOut" }, 16.4);
+tl.to("#vbase", { scale: 1.42, filter: "blur(10px)", duration: 0.32, ease: "power4.in" }, 18.30);
+
+// ---------- S6 tres sistemas (aterrizaje escala 4 + 2.5D) ----------
+landBig("#c6", 18.62);
+tl.fromTo("#c6", { rotationX: 18 }, { rotationX: 4, duration: 3.2, ease: "sine.inOut", immediateRender: false }, 18.62);
+["#ts1", "#ts2", "#ts3"].forEach((s, i) => wordIn(s, [on("estos"), on("son", 19), on("los", 19.4)][i]));
+kbox("#k_tres", on("tres"));
+draw("#l6", on("sistemas"), 0.5);
+gsap.set(".s6t, #l_opt, #l_tra", { autoAlpha: 0 });
+$$(".s6t").forEach((s, i) => tl.fromTo(s, { autoAlpha: 0, y: -420, rotationY: 90 }, { autoAlpha: 1, y: 0, rotationY: 0, duration: 0.45, ease: "expo.out", immediateRender: false }, on("sistemas") + i * 0.12));
+wordIn("#l_opt", on("optimizar"), 0.2); wordIn("#l_tra", on("trabajo"), 0.2);
+tl.to("#n1", { scale: 1.12, duration: 0.15, ease: "power2.out" }, 21.4);
+tl.to("#c6", { scale: 3.4, x: 1170, y: -280, filter: "blur(12px)", duration: 0.34, ease: "power4.in" }, 21.88 - 0.34);   // zoom-through al 1
+
+// ---------- S7 sistema 1 ----------
+landIn("#c7", 21.88);
+gsap.set("#big1, #t_pri, #t_ima, #ia, #l_ia, .cl7, .ok7, #l_cli7, .pd7, #wa, #l_wa, #docs, .row .chk", { autoAlpha: 0 });
+tl.fromTo("#big1", { autoAlpha: 0, scale: 2.4, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, on("el", 21.9) - 2 * F);
+wordIn("#t_pri", on("primero"), 0.2);
+wordIn("#t_ima", on("imagínate", 22), 0.2);
+pop("#ia", on("inteligencia"), 0.3); wordIn("#l_ia", on("artificial"), 0.2);
+tl.to("#ia", { scale: 1.08, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 24.8);
+$$(".l7").forEach((l, i) => draw(l, on("escribe") + i * 0.07, 0.35));
+$$(".cl7").forEach((c, i) => tl.fromTo(c, { autoAlpha: 0, x: 200 }, { autoAlpha: 1, x: 0, duration: 0.35, ease: "expo.out", immediateRender: false }, on("clientes", 25) - 0.2 + i * 0.08));
+wordIn("#l_cli7", on("clientes", 25), 0.2);
+$$(".pd7").forEach((d, i) => { tl.set(d, { autoAlpha: 1 }, 25.5 + i * 0.12); tl.fromTo(d, { x: 0, y: 0 }, { x: 420, y: [-195, 0, 195][i], duration: 0.5, ease: "power2.in", immediateRender: false }, 25.5 + i * 0.12); tl.set(d, { autoAlpha: 0 }, 26.02 + i * 0.12); });
+pop("#wa", on("whatsapp") - 0.05, 0.3); wordIn("#l_wa", on("whatsapp"), 0.2);
+tl.to("#wa", { rotation: 8, duration: 0.12, yoyo: true, repeat: 3, ease: "sine.inOut" }, 26.6);
+// "les pida los documentos que faltan": la lista cubre el diagrama
+out("#wa, #l_wa", on("les", 27) - 0.1, 0.12);
+tl.to("#ia, #l_ia, .l7, .cl7, #l_cli7", { opacity: 0.18, duration: 0.25 }, on("les", 27));
+tl.fromTo("#docs", { autoAlpha: 0, y: 260, rotationX: -40 }, { autoAlpha: 1, y: 0, rotationX: 0, duration: 0.5, ease: "expo.out", immediateRender: false }, on("documentos") - 0.25);
+$$(".row .box").forEach((b, i) => tl.fromTo(b, { scale: 1.4 }, { scale: 1, duration: 0.18, ease: "back.out(2)", immediateRender: false }, on("faltan") + i * 0.07));
+// "y diga quién ya mandó todo": la lista se marca y los clientes reciben su check
+$$(".row .chk").forEach((c, i) => tl.fromTo(c, { autoAlpha: 0, scale: 0.2 }, { autoAlpha: 1, scale: 1, duration: 0.18, ease: "back.out(2.2)", immediateRender: false }, on("quién") + i * 0.18));
+tl.to("#docs", { y: -60, scale: 0.86, duration: 0.5, ease: "power2.inOut" }, on("ya", 29.5) - 0.3);
+kbox("#k_todo", on("mandó"));
+tl.fromTo("#c7", { rotationY: 6 }, { rotationY: -6, duration: 9.5, ease: "sine.inOut", immediateRender: false }, 21.9);
+tl.to("#c7", { scale: 1.06, duration: 0.6, ease: "sine.inOut" }, 30.8);
+// 31,42: destello crema -> persona
+flash(31.42);
+
+// ---------- S8 persona: dejas de estar detrás de todo el mundo ----------
+resetV(31.42); baseIn(31.42);
+kbox("#k_det", on("todo", 32.8));
+tl.to("#vbase", { scale: 1.07, duration: 1.8, ease: "sine.inOut" }, 31.5);
+out("#k_det", 33.62, 0.12);
+tl.to("#vbase", { scale: 0.75, filter: "blur(6px)", duration: 4 * F, ease: "power2.in" }, 33.80 - 4 * F);
+
+// ---------- S9 sistema 2: vencimientos / calendario ----------
+landBig("#c9", 33.80);
+gsap.set("#big2, #t_seg, #bell, #cal, #l_pen, #l_vie", { autoAlpha: 0 });
+tl.fromTo("#big2", { autoAlpha: 0, scale: 2.4, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, on("el", 33.8) - 2 * F);
+wordIn("#t_seg", on("segundo"), 0.2);
+pop("#bell", on("avise") - 0.1, 0.3);
+[0, 1, 2, 3, 4, 5].forEach((i) => tl.to("#bell", { rotation: [16, -14, 11, -8, 4, 0][i], duration: 0.07, ease: "none" }, on("avise") + 0.2 + i * 0.07));
+kbox("#k_ven", on("vencimientos"));
+// calendario: aparece en "todos tus clientes", se abre en "abres tu calendario"
+const grid = $("#grid"); const CELLS = [];
+for (let r = 0; r < 5; r++) for (let c = 0; c < 7; c++) { const d = document.createElement("div"); d.className = "cell"; d.style.left = (c * 114) + "px"; d.style.top = (r * 108) + "px"; const dn = r * 7 + c + 1; d.textContent = dn <= 31 ? String(dn) : ""; if (dn > 31) d.style.opacity = "0.45"; grid.appendChild(d); CELLS.push(d); }
+const HOT = [3, 9, 12, 17, 23, 26, 30];
+out("#bell", on("todos", 36) - 0.1, 0.15);
+tl.to("#k_ven", { y: -500, scale: 0.7, duration: 0.5, ease: "expo.inOut" }, on("todos", 36) - 0.1);
+out("#big2, #t_seg", on("todos", 36) - 0.1, 0.2);
+tl.fromTo("#cal", { autoAlpha: 0, rotationX: 70, y: 200 }, { autoAlpha: 1, rotationX: 28, y: 60, duration: 0.6, ease: "expo.out", immediateRender: false }, on("todos", 36));
+CELLS.forEach((d, i) => tl.fromTo(d, { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.15, ease: "power2.out", immediateRender: false }, on("todos", 36) + 0.1 + i * 0.012));
+tl.to("#k_ven", { autoAlpha: 0, duration: 0.2 }, on("abres") - 0.2);
+tl.to("#cal", { rotationX: 0, y: -40, scale: 1.04, duration: 0.7, ease: "expo.inOut" }, on("abres") - 0.15);
+HOT.forEach((k, i) => { tl.to(CELLS[k], { backgroundColor: "#2A2926", color: "#E6D6AE", duration: 0.1 }, on("calendario") + 0.1 + i * 0.08); tl.fromTo(CELLS[k], { scale: 1.25 }, { scale: 1, duration: 0.25, ease: "back.out(2)", immediateRender: false }, on("calendario") + 0.1 + i * 0.08); });
+wordIn("#l_pen", on("pendiente", 40), 0.2);
+HOT.slice(0, 3).forEach((k) => tl.to(CELLS[k], { y: -10, duration: 0.12, yoyo: true, repeat: 1 }, on("pendiente", 40) + 0.05));
+wordIn("#l_vie", on("qué", 41), 0.2);
+HOT.slice(3).forEach((k, i) => tl.to(CELLS[k], { backgroundColor: "#C8B07A", color: "#2A2926", duration: 0.1 }, on("viene") + i * 0.06));
+tl.fromTo("#c9", { rotationY: -5 }, { rotationY: 5, duration: 8.3, ease: "sine.inOut", immediateRender: false }, 33.85);
+tl.to("#c9", { scale: 1.42, filter: "blur(10px)", duration: 0.32, ease: "power4.in" }, 42.15 - 0.32);
+
+// ---------- S10 persona: y el tercero está buenísimo ----------
+resetV(42.15); tl.fromTo("#vbase", { scale: 1.45, filter: "blur(12px)" }, { scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, 42.15);
+tl.fromTo("#t3a", { autoAlpha: 0, y: 30, filter: "blur(10px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.2, ease: "power2.out", immediateRender: false }, on("tercero") - 2 * F);
+gsap.set("#t3a", { autoAlpha: 0 });
+tl.fromTo("#t3n", { autoAlpha: 0, rotationY: 90, scale: 0.5 }, { autoAlpha: 1, rotationY: 0, scale: 1, duration: 0.35, ease: "back.out(1.7)", immediateRender: false }, on("buenísimo") - 0.05);
+gsap.set("#t3n", { autoAlpha: 0, transformPerspective: 800 });
+tl.to("#t3n", { rotation: 10, duration: 0.1, yoyo: true, repeat: 1 }, on("buenísimo") + 0.3);
+tl.to("#vbase", { scale: 1.42, filter: "blur(10px)", duration: 0.3, ease: "power4.in" }, 43.55 - 0.3);
+tl.to("#t3a, #t3n", { scale: 1.6, autoAlpha: 0, duration: 0.3, ease: "power4.in" }, 43.55 - 0.3);
+
+// ---------- S11 informes que se arman solos ----------
+landIn("#c11", 43.55);
+kbox("#k_inf", on("informes"));
+gsap.set("#rep, .rp, #chart .bar, #l_sol", { autoAlpha: 0 });
+tl.fromTo("#rep", { autoAlpha: 0, rotationX: 60, y: 300 }, { autoAlpha: 1, rotationX: 12, y: 0, duration: 0.6, ease: "expo.out", immediateRender: false }, on("prácticamente") - 0.1);
+$$(".rp").forEach((r, i) => tl.fromTo(r, { autoAlpha: 0, x: 400 }, { autoAlpha: 1, x: 0, duration: 0.3, ease: "expo.out", immediateRender: false }, on("armen") + i * 0.1));
+wordIn("#l_sol", on("solos"), 0.2);
+tl.to("#rep", { rotationX: 0, duration: 1.2, ease: "sine.inOut" }, 46.4);
+$$("#chart .bar").forEach((b, i) => { gsap.set(b, { transformOrigin: "50% 100%" }); tl.fromTo(b, { autoAlpha: 1, scaleY: 0 }, { autoAlpha: 1, scaleY: 1, duration: 0.4, ease: "back.out(1.6)", immediateRender: false }, on("gráficas") + i * 0.08); });
+const nums = $("#nums"); const NR = [];
+[[300, 140], [360, 170], [250, 120]].forEach((v, r) => { const d = document.createElement("div"); d.className = "abs"; d.style.cssText = `left:0;top:${r * 62}px;width:660px;height:56px`; d.innerHTML = `<span class="abs" style="left:0;top:20px;width:60px;height:16px;background:#D8D2C4"></span><span class="abs" style="left:90px;top:16px;width:${v[0]}px;height:24px;background:#2A2926"></span><span class="abs" style="right:0;top:16px;width:${v[1]}px;height:24px;background:#C8B07A"></span>`; nums.appendChild(d); NR.push(d); });
+NR.forEach((d, i) => tl.fromTo(d, { autoAlpha: 0, x: [-300, 300, -300][i], filter: "blur(6px)" }, { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.3, ease: "expo.out", immediateRender: false }, on("números") - 0.2 + i * 0.1));
+out("#l_sol", on("números") - 0.3, 0.15);
+tl.to("#rep", { scale: 1.06, duration: 0.6, ease: "sine.inOut" }, 48.6);
+// 49,45: invert flash + glitch en post
+
+// ---------- S12 persona: revisas, corriges, envías ----------
+resetV(49.45); baseIn(49.45);
+gsap.set("#list", { autoAlpha: 1 }); gsap.set(".li", { autoAlpha: 0 });
+const LI = $$(".li");
+[on("revisas"), on("corriges"), on("envías")].forEach((t, i) => tl.fromTo(LI[i], { autoAlpha: 0, x: -80, filter: "blur(8px)" }, { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.25, ease: "expo.out", immediateRender: false }, t - 2 * F));
+tl.to(LI[2], { x: 30, duration: 0.15, yoyo: true, repeat: 1 }, on("envías") + 0.25);
+tl.set("#list", { autoAlpha: 0 }, 53.3);
+tl.to("#vbase", { scale: 1.06, duration: 3.5, ease: "sine.inOut" }, 49.5);
+tl.set("#vbase", { scale: 1 }, 53.3);
+
+// ---------- S13 persona: pregunta en serio ----------
+kbox("#k_mas", on("más", 55.5));
+out("#k_mas", 56.55, 0.12);
+tl.to("#vbase", { scale: 1.10, duration: 1.4, ease: "sine.inOut" }, 55.1);
+tl.to("#vbase", { scale: 0.75, filter: "blur(6px)", duration: 4 * F, ease: "power2.in" }, 56.72 - 4 * F);
+
+// ---------- S14 comenta 1, 2 o 3 ----------
+landBig("#c14", 56.72);
+gsap.set("#cm, #t_com, .cn", { autoAlpha: 0 });
+pop("#cm", 56.74, 0.3); wordIn("#t_com", on("comenta"), 0.2);
+$$(".cn").forEach((c, i) => tl.fromTo(c, { autoAlpha: 0, scale: 0.2, rotationY: 90 }, { autoAlpha: 1, scale: 1, rotationY: 0, duration: 0.3, ease: "back.out(1.8)", immediateRender: false }, [on("uno"), on("dos"), on("tres", 58)][i] - 2 * F));
+tl.fromTo("#c14", { rotationX: 14 }, { rotationX: 0, duration: 2.2, ease: "sine.out", immediateRender: false }, 56.72);
+flash(58.88);
+
+// ---------- S15 persona: construir Loovo / cuál les serviría más ----------
+resetV(58.88); baseIn(58.88);
+kbox("#k_loovo", on("loovo"));
+out("#k_loovo", 61.45, 0.12);
+gsap.set("#mini", { autoAlpha: 1 }); gsap.set(".mi", { autoAlpha: 0 });
+$$(".mi").forEach((m, i) => tl.fromTo(m, { autoAlpha: 0, y: -60 }, { autoAlpha: 1, y: 0, duration: 0.25, ease: "back.out(1.8)", immediateRender: false }, on("cuál") + i * 0.1));
+$$(".mi").forEach((m, i) => tl.to(m, { y: -14, duration: 0.12, yoyo: true, repeat: 1 }, on("serviría") + i * 0.1));
+tl.to(".mi", { autoAlpha: 0, duration: 0.15 }, 63.6);
+tl.to("#vbase", { scale: 1.08, duration: 6, ease: "sine.inOut" }, 59.0);
+flash(65.25);
+
+// ---------- S16 cierre ----------
+gsap.set(".ce, #t_end", { autoAlpha: 0 }); gsap.set("#ul_end", { scaleX: 0, transformOrigin: "0% 50%" });
+wordIn("#t_end", 65.32, 0.25);
+$$(".ce").forEach((c, i) => pop(c, 65.45 + i * 0.1, 0.3));
+tl.to("#ul_end", { scaleX: 1, duration: 0.35, ease: "power3.out" }, 65.75);
+tl.fromTo("#c15", { scale: 1.06 }, { scale: 1, duration: DUR - 65.25, ease: "power2.out", immediateRender: false }, 65.25);
+
+// ---------- subtítulos: tarjetas de 2-4 palabras, enteras al onset - 2 cuadros ----------
+const DARK = [[0, 2.62], [6.12, 10.08], [12.55, 18.62], [31.42, 33.8], [42.15, 43.55], [49.45, 56.72], [58.88, 65.25], [21.88, 31.42], [43.55, 49.45], [10.08, 12.55]];
+const HIDE = [[0, 2.62], [2.62, 6.12], [18.62, 21.88], [42.15, 43.55], [33.8, 34.6], [40.3, 42.15], [45.6, 47.0], [49.45, 53.3], [56.72, 58.88]];
+const KEYS = new Set(["contadores", "clientes", "locos", "facturas", "rogándole", "mecatrónico", "solucionar", "problemas", "sistemas", "tres", "whatsapp", "documentos", "faltan", "todo", "mundo", "vencimientos", "calendario", "pendiente", "informes", "gráficas", "números", "revisas", "envías", "trabajo", "comenta", "loovo", "comentarios", "inteligencia", "artificial"]);
+const clean = (w) => w.replace(/[¿?,.]/g, "").toLowerCase();
+const groups = []; let g = [];
+WORDS.forEach((w, i) => { g.push(w); const n = WORDS[i + 1]; const end = /[,?.]$/.test(w[0]) || g.length >= 3 || (n && n[1] - w[2] > 0.35) || (n && (g.map((x) => x[0]).join(" ") + " " + n[0]).length > 18); if (end || !n) { groups.push(g); g = []; } });
+const caps = $("#caps");
+const CUTS = SC.map((s) => s[1]).concat(SC.map((s) => s[2]));
+groups.forEach((gr, i) => {
+  const t0 = gr[0][1] - 2 * F; const nx = groups[i + 1]; let t1 = Math.min(nx ? nx[0][1] - 2 * F : DUR, gr[gr.length - 1][2] + 0.6);
+  CUTS.forEach((a) => { if (a > t0 + 0.05 && a < t1) t1 = a; });
+  if (HIDE.some(([a, b]) => t0 >= a - 0.05 && t0 < b)) return;
+  const d = document.createElement("div"); d.className = "cap" + (DARK.some(([a, b]) => t0 >= a && t0 < b) ? " dk" : "");
+  d.innerHTML = gr.map((w) => KEYS.has(clean(w[0])) ? "<b>" + w[0] + "</b>" : w[0]).join(" ");
+  caps.appendChild(d);
+  tl.fromTo(d, { visibility: "visible", autoAlpha: 0, filter: "blur(8px)" }, { autoAlpha: 1, filter: "blur(0px)", duration: 2 * F, ease: "none", immediateRender: false }, t0);
+  tl.set(d, { autoAlpha: 0, visibility: "hidden" }, t1);
+});
+// sombra inferior solo sobre la persona
+gsap.set("#shade", { autoAlpha: 1 });
+tl.set({}, {}, DUR);
+</script>
+</body>
+</html>

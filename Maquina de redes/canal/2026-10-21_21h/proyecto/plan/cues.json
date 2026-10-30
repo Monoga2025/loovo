@@ -1,0 +1,96 @@
+{
+ "timeline": "corte (build/clean.mp4), segundos",
+ "metodo": "plan/edl.json (piecewise)",
+ "duration_clean_mp4": 39.64,
+ "junctions_cut": [
+  3.69,
+  5.2,
+  8.85,
+  12.98,
+  17.82,
+  20.71,
+  26.65,
+  29.78,
+  34.74
+ ],
+ "nota": "CORRIGE la versión anterior (cues.v1_incorrecto.json), que se desviaba hasta 0,5 s. Verificado contra una transcripción del audio cortado: error residual <= 0,15 s.",
+ "keywords": [
+  {
+   "w": "9 PM",
+   "src": 23.9,
+   "toma": 1,
+   "cut_t": 2.02,
+   "cut_t_anterior_incorrecto": 2.198
+  },
+  {
+   "w": "RESPUESTA",
+   "src": 26.96,
+   "toma": 2,
+   "cut_t": 4.82,
+   "cut_t_anterior_incorrecto": 4.97
+  },
+  {
+   "w": "PIJAMA",
+   "src": 31.34,
+   "toma": 3,
+   "cut_t": 8.0,
+   "cut_t_anterior_incorrecto": 7.99
+  },
+  {
+   "w": "IA",
+   "src": 51.32,
+   "toma": 4,
+   "cut_t": 10.4,
+   "cut_t_anterior_incorrecto": 10.902
+  },
+  {
+   "w": "PRIMERO",
+   "src": 53.2,
+   "toma": 4,
+   "cut_t": 12.28,
+   "cut_t_anterior_incorrecto": 12.782
+  },
+  {
+   "w": "RETENCIÓN",
+   "src": 85.58,
+   "toma": 5,
+   "cut_t": 14.78,
+   "cut_t_anterior_incorrecto": 15.123
+  },
+  {
+   "w": "VENCE",
+   "src": 88.04,
+   "toma": 5,
+   "cut_t": 17.24,
+   "cut_t_anterior_incorrecto": 17.583
+  },
+  {
+   "w": "IGUAL",
+   "src": 92.54,
+   "toma": 6,
+   "cut_t": 20.49,
+   "cut_t_anterior_incorrecto": 20.348
+  },
+  {
+   "w": "ESTATUTO",
+   "src": 116.96,
+   "toma": 7,
+   "cut_t": 24.15,
+   "cut_t_anterior_incorrecto": 24.371
+  },
+  {
+   "w": "CRITERIO",
+   "src": 124.08,
+   "toma": 9,
+   "cut_t": 30.66,
+   "cut_t_anterior_incorrecto": 30.613
+  },
+  {
+   "w": "COMENTARIOS",
+   "src": 184.76,
+   "toma": 10,
+   "cut_t": 39.25,
+   "cut_t_anterior_incorrecto": 39.257
+  }
+ ]
+}

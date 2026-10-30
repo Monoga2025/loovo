@@ -1,0 +1,6 @@
+< SRC = sys.argv[4] if len(sys.argv) > 4 else "epic.wav"
+> SRC = sys.argv[4] if len(sys.argv) > 4 else "music.wav"
+< w = json.load(open("../build/words_out.json", encoding="utf-8"))
+> w = json.load(open("words_duck_env.json", encoding="utf-8"))
+< voice = lufs("voice_clean48.wav")
+> voice = lufs("voice_clean.wav")

@@ -1,0 +1,431 @@
+[
+  {
+    "id": "destacada_01",
+    "ruta": "destacadas/portadas/destacada_01_la_serie.png",
+    "tamano_original": [
+      941,
+      1672
+    ],
+    "tamano": [
+      1080,
+      1920
+    ],
+    "texto": [
+      "La serie"
+    ],
+    "texto_verificado": true,
+    "caja_texto": [
+      469,
+      1178,
+      611,
+      1206
+    ],
+    "caja_ilustracion": [
+      314.4186046511628,
+      675.0,
+      765.5813953488372,
+      1125.0
+    ],
+    "radio_maximo_ilustracion_cromatica": 285.44876948412303,
+    "tratamiento": "Escala uniforme y traslación; relleno carbón. Ilustración centrada en (540,900); nombre bajo el aro, dentro del círculo solicitado.",
+    "limites": "Círculo geométrico r=330 comprobado para el texto y los píxeles de ilustración de saturación/valor significativos (umbral documentado en script; halo tenue no certificado); el recorte real de Instagram y su legibilidad en celular no están verificados."
+  },
+  {
+    "id": "destacada_02",
+    "ruta": "destacadas/portadas/destacada_02_loovo.png",
+    "tamano_original": [
+      941,
+      1672
+    ],
+    "tamano": [
+      1080,
+      1920
+    ],
+    "texto": [
+      "Loovo"
+    ],
+    "texto_verificado": true,
+    "caja_texto": [
+      484,
+      1178,
+      595,
+      1206
+    ],
+    "caja_ilustracion": [
+      305.0229357798165,
+      675.0,
+      774.9770642201835,
+      1125.0
+    ],
+    "radio_maximo_ilustracion_cromatica": 290.82297020696285,
+    "tratamiento": "Escala uniforme y traslación; relleno carbón. Ilustración centrada en (540,900); nombre bajo el aro, dentro del círculo solicitado.",
+    "limites": "Círculo geométrico r=330 comprobado para el texto y los píxeles de ilustración de saturación/valor significativos (umbral documentado en script; halo tenue no certificado); el recorte real de Instagram y su legibilidad en celular no están verificados."
+  },
+  {
+    "id": "destacada_03",
+    "ruta": "destacadas/portadas/destacada_03_el_editor.png",
+    "tamano_original": [
+      941,
+      1672
+    ],
+    "tamano": [
+      1080,
+      1920
+    ],
+    "texto": [
+      "El editor"
+    ],
+    "texto_verificado": true,
+    "caja_texto": [
+      464,
+      1178,
+      616,
+      1206
+    ],
+    "caja_ilustracion": [
+      319.63075060532685,
+      675.0,
+      760.3692493946731,
+      1125.0
+    ],
+    "radio_maximo_ilustracion_cromatica": 285.56785533389433,
+    "tratamiento": "Escala uniforme y traslación; relleno carbón. Ilustración centrada en (540,900); nombre bajo el aro, dentro del círculo solicitado.",
+    "limites": "Círculo geométrico r=330 comprobado para el texto y los píxeles de ilustración de saturación/valor significativos (umbral documentado en script; halo tenue no certificado); el recorte real de Instagram y su legibilidad en celular no están verificados."
+  },
+  {
+    "id": "destacada_04",
+    "ruta": "destacadas/portadas/destacada_04_crm_local.png",
+    "tamano_original": [
+      941,
+      1672
+    ],
+    "tamano": [
+      1080,
+      1920
+    ],
+    "texto": [
+      "CRM local"
+    ],
+    "texto_verificado": true,
+    "caja_texto": [
+      450,
+      1178,
+      629,
+      1207
+    ],
+    "caja_ilustracion": [
+      328.83601756954613,
+      675.0,
+      751.1639824304539,
+      1125.0
+    ],
+    "radio_maximo_ilustracion_cromatica": 289.01384049903214,
+    "tratamiento": "Escala uniforme y traslación; relleno carbón. Ilustración centrada en (540,900); nombre bajo el aro, dentro del círculo solicitado.",
+    "limites": "Círculo geométrico r=330 comprobado para el texto y los píxeles de ilustración de saturación/valor significativos (umbral documentado en script; halo tenue no certificado); el recorte real de Instagram y su legibilidad en celular no están verificados."
+  },
+  {
+    "id": "destacada_05",
+    "ruta": "destacadas/portadas/destacada_05_sin_humo.png",
+    "tamano_original": [
+      941,
+      1672
+    ],
+    "tamano": [
+      1080,
+      1920
+    ],
+    "texto": [
+      "Sin humo"
+    ],
+    "texto_verificado": true,
+    "caja_texto": [
+      456,
+      1178,
+      624,
+      1207
+    ],
+    "caja_ilustracion": [
+      326.0862262038074,
+      675.0,
+      753.9137737961926,
+      1125.0
+    ],
+    "radio_maximo_ilustracion_cromatica": 285.112258592997,
+    "tratamiento": "Escala uniforme y traslación; relleno carbón. Ilustración centrada en (540,900); nombre bajo el aro, dentro del círculo solicitado.",
+    "limites": "Círculo geométrico r=330 comprobado para el texto y los píxeles de ilustración de saturación/valor significativos (umbral documentado en script; halo tenue no certificado); el recorte real de Instagram y su legibilidad en celular no están verificados."
+  },
+  {
+    "id": "destacada_06",
+    "ruta": "destacadas/portadas/destacada_06_modo_demo.png",
+    "tamano_original": [
+      941,
+      1672
+    ],
+    "tamano": [
+      1080,
+      1920
+    ],
+    "texto": [
+      "Modo demo"
+    ],
+    "texto_verificado": true,
+    "caja_texto": [
+      432,
+      1178,
+      647,
+      1206
+    ],
+    "caja_ilustracion": [
+      295.0,
+      679.6215880893301,
+      785.0,
+      1120.37841191067
+    ],
+    "radio_maximo_ilustracion_cromatica": 288.1423259432741,
+    "tratamiento": "Escala uniforme y traslación; relleno carbón. Ilustración centrada en (540,900); nombre bajo el aro, dentro del círculo solicitado.",
+    "limites": "Círculo geométrico r=330 comprobado para el texto y los píxeles de ilustración de saturación/valor significativos (umbral documentado en script; halo tenue no certificado); el recorte real de Instagram y su legibilidad en celular no están verificados."
+  },
+  {
+    "id": "post_01",
+    "ruta": "posts/final/post_01.png",
+    "tamano_original": [
+      1122,
+      1402
+    ],
+    "tamano": [
+      1080,
+      1350
+    ],
+    "texto": [
+      "42 DÍAS",
+      "para mostrar Loovo",
+      "Día 1: 7 de octubre · Día 42: 17 de noviembre"
+    ],
+    "bloques": [
+      {
+        "original": "42 DÍAS",
+        "lineas": [
+          "42 DÍAS"
+        ],
+        "reconstruido": "42 DÍAS",
+        "cajas": [
+          [
+            90,
+            110,
+            440,
+            198
+          ]
+        ],
+        "fuente": "700",
+        "tamano": 96
+      },
+      {
+        "original": "para mostrar Loovo",
+        "lineas": [
+          "para mostrar Loovo"
+        ],
+        "reconstruido": "para mostrar Loovo",
+        "cajas": [
+          [
+            84,
+            265,
+            498,
+            319
+          ]
+        ],
+        "fuente": "italic",
+        "tamano": 57
+      },
+      {
+        "original": "Día 1: 7 de octubre · Día 42: 17 de noviembre",
+        "lineas": [
+          "Día 1: 7 de octubre · Día 42: 17 de noviembre"
+        ],
+        "reconstruido": "Día 1: 7 de octubre · Día 42: 17 de noviembre",
+        "cajas": [
+          [
+            90,
+            365,
+            809,
+            391
+          ]
+        ],
+        "fuente": "500",
+        "tamano": 34
+      }
+    ],
+    "texto_verificado": true,
+    "clave_lima": "42 DÍAS",
+    "pixeles_foco_recoloreados": 40575,
+    "tratamiento": "Recorte centrado sin deformación; foco lima del fondo pasado a azul en la copia, única palabra clave lima en titular. Texto en zona superior libre; ilustración inferior intacta en forma.",
+    "limites": "Texto cotejado carácter por carácter desde el JSON y cobertura de glifos comprobada; no se usa OCR como prueba independiente ni se ha comprobado en celular."
+  },
+  {
+    "id": "post_02",
+    "ruta": "posts/final/post_02.png",
+    "tamano_original": [
+      1122,
+      1402
+    ],
+    "tamano": [
+      1080,
+      1350
+    ],
+    "texto": [
+      "UN EDITOR CON IA",
+      "Editó el Día 1.",
+      "7 min 37 s de grabación → 38 s de video."
+    ],
+    "bloques": [
+      {
+        "original": "UN EDITOR CON IA",
+        "lineas": [
+          "UN EDITOR CON IA"
+        ],
+        "reconstruido": "UN EDITOR CON IA",
+        "cajas": [
+          [
+            90,
+            110,
+            243,
+            180
+          ],
+          [
+            243.0,
+            110,
+            567.0,
+            181
+          ],
+          [
+            567.0,
+            110,
+            892.0,
+            181
+          ]
+        ],
+        "fuente": "700",
+        "tamano": 96
+      },
+      {
+        "original": "Editó el Día 1.",
+        "lineas": [
+          "Editó el Día 1."
+        ],
+        "reconstruido": "Editó el Día 1.",
+        "cajas": [
+          [
+            87,
+            265,
+            363,
+            309
+          ]
+        ],
+        "fuente": "italic",
+        "tamano": 57
+      },
+      {
+        "original": "7 min 37 s de grabación → 38 s de video.",
+        "lineas": [
+          "7 min 37 s de grabación → 38 s de video."
+        ],
+        "reconstruido": "7 min 37 s de grabación → 38 s de video.",
+        "cajas": [
+          [
+            90,
+            365,
+            759,
+            397
+          ]
+        ],
+        "fuente": "500",
+        "tamano": 34
+      }
+    ],
+    "texto_verificado": true,
+    "clave_lima": "EDITOR",
+    "pixeles_foco_recoloreados": 5375,
+    "tratamiento": "Recorte centrado sin deformación; foco lima del fondo pasado a azul en la copia, única palabra clave lima en titular. Texto en zona superior libre; ilustración inferior intacta en forma.",
+    "limites": "Texto cotejado carácter por carácter desde el JSON y cobertura de glifos comprobada; no se usa OCR como prueba independiente ni se ha comprobado en celular."
+  },
+  {
+    "id": "post_03",
+    "ruta": "posts/final/post_03.png",
+    "tamano_original": [
+      1122,
+      1402
+    ],
+    "tamano": [
+      1080,
+      1350
+    ],
+    "texto": [
+      "LOOVO YA EXISTE",
+      "Es una agencia de inteligencia artificial.",
+      "Esta serie muestra su construcción paso a paso."
+    ],
+    "bloques": [
+      {
+        "original": "LOOVO YA EXISTE",
+        "lineas": [
+          "LOOVO YA EXISTE"
+        ],
+        "reconstruido": "LOOVO YA EXISTE",
+        "cajas": [
+          [
+            90,
+            110,
+            396,
+            181
+          ],
+          [
+            396.0,
+            110,
+            872.0,
+            181
+          ]
+        ],
+        "fuente": "700",
+        "tamano": 96
+      },
+      {
+        "original": "Es una agencia de inteligencia artificial.",
+        "lineas": [
+          "Es una agencia de inteligencia artificial."
+        ],
+        "reconstruido": "Es una agencia de inteligencia artificial.",
+        "cajas": [
+          [
+            87,
+            265,
+            928,
+            321
+          ]
+        ],
+        "fuente": "italic",
+        "tamano": 57
+      },
+      {
+        "original": "Esta serie muestra su construcción paso a paso.",
+        "lineas": [
+          "Esta serie muestra su construcción paso a paso."
+        ],
+        "reconstruido": "Esta serie muestra su construcción paso a paso.",
+        "cajas": [
+          [
+            90,
+            365,
+            894,
+            396
+          ]
+        ],
+        "fuente": "500",
+        "tamano": 34
+      }
+    ],
+    "texto_verificado": true,
+    "clave_lima": "LOOVO",
+    "pixeles_foco_recoloreados": 17843,
+    "tratamiento": "Recorte centrado sin deformación; foco lima del fondo pasado a azul en la copia, única palabra clave lima en titular. Texto en zona superior libre; ilustración inferior intacta en forma.",
+    "limites": "Texto cotejado carácter por carácter desde el JSON y cobertura de glifos comprobada; no se usa OCR como prueba independiente ni se ha comprobado en celular."
+  }
+]

@@ -1,0 +1,77 @@
+<template id="overlays-template">
+  <!-- Mosaicos de marca (lima con icono carbón y anillo azul) y el billete en duotono, a la izquierda de la cara. -->
+  <div data-composition-id="overlays" data-width="1080" data-height="1920" data-duration="63.100000">
+    <div id="stk-layer"></div>
+    <style>
+      [data-composition-id="overlays"] { background: transparent; overflow: hidden; }
+      .stk { position: absolute; left: 62px; visibility: hidden; }
+      .stk .tile { position: absolute; inset: 0; border-radius: 30%; background: #C6FF3D; color: #0B0B0F; display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 24px 44px rgba(0,0,0,.5), 0 0 0 7px rgba(47,91,255,.95); }
+      .stk .tile.alt { background: #0B0B0F; color: #C6FF3D; box-shadow: 0 24px 44px rgba(0,0,0,.5), 0 0 0 5px rgba(198,255,61,.9); }
+      .stk .ic { width: 56%; height: 56%; background: currentColor; -webkit-mask: var(--i) center/contain no-repeat; mask: var(--i) center/contain no-repeat; }
+      .stk img.bill { width: 100%; display: block; border-radius: 8px; filter: drop-shadow(0 22px 26px rgba(0,0,0,.55)); }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      // i = icono Phosphor (assets/ico/<i>.svg); alt = mosaico oscuro con icono lima (alterna para no saturar de lima)
+      const STK = [
+        { t0: 1.30, t1: 2.35, bill: 1, y: 470, w: 340, r: -14 },
+        { t0: 2.42, t1: 3.06, i: "alarm-fill", y: 560, s: 200, r: -8 },
+        { t0: 5.80, t1: 6.60, i: "calendar-star-fill", y: 480, s: 200, r: 8, alt: 1 },
+        { t0: 7.76, t1: 8.95, i: "robot-fill", y: 360, s: 200, r: -8 },
+        { t0: 8.30, t1: 9.40, i: "brain-fill", y: 630, s: 180, r: 10, alt: 1 },
+        { t0: 17.20, t1: 18.20, i: "film-slate-fill", y: 500, s: 200, r: -8 },
+        { t0: 18.40, t1: 19.60, i: "fire-fill", y: 420, s: 200, r: -8, alt: 1 },
+        { t0: 19.45, t1: 20.60, i: "moon-stars-fill", y: 640, s: 180, r: 12 },
+        { t0: 21.20, t1: 21.95, i: "bed-fill", y: 520, s: 200, r: -8, alt: 1 },
+        { t0: 22.80, t1: 23.60, i: "lightning-fill", y: 420, s: 200, r: 10 },
+        { t0: 24.30, t1: 25.40, i: "sun-fill", y: 560, s: 200, r: -6, alt: 1 },
+        { t0: 26.00, t1: 26.50, i: "address-book-fill", y: 480, s: 200, r: 8 },
+        { t0: 28.20, t1: 29.30, i: "address-book-fill", y: 420, s: 200, r: -8, alt: 1 },
+        { t0: 29.25, t1: 30.95, i: "cpu-fill", y: 640, s: 180, r: 10 },
+        { t0: 31.75, t1: 33.20, i: "chat-circle-dots-fill", y: 520, s: 200, r: -10, alt: 1 },
+        { t0: 37.60, t1: 38.60, i: "plugs-connected-fill", y: 480, s: 200, r: -12 },
+        { t0: 46.95, t1: 48.40, i: "robot-fill", y: 520, s: 200, r: -8, alt: 1 },
+        { t0: 49.70, t1: 50.45, i: "address-book-fill", y: 420, s: 200, r: 8 },
+        { t0: 51.50, t1: 52.60, i: "lightbulb-fill", y: 540, s: 200, r: -6, alt: 1 },
+        { t0: 57.90, t1: 58.75, i: "chats-circle-fill", y: 480, s: 200, r: 8 },
+        { t0: 59.80, t1: 60.70, i: "link-fill", y: 380, s: 200, r: -8, alt: 1 },
+        { t0: 60.10, t1: 61.20, i: "moon-fill", y: 630, s: 180, r: 10 },
+        { t0: 61.30, t1: 62.30, i: "sun-fill", y: 520, s: 200, r: -10, alt: 1 },
+      ];
+      const layer = document.getElementById("stk-layer");
+      STK.forEach((k, i) => {
+        const d = document.createElement("div");
+        d.className = "stk"; d.id = "stk" + i;
+        const w = k.bill ? k.w : k.s;
+        d.style.width = w + "px"; d.style.top = k.y + "px";
+        if (k.bill) {
+          d.style.height = Math.round(w * 0.42) + "px";
+          d.innerHTML = `<img class="bill" id="stkimg${i}" src="assets/foto/billete_1957_duo.png">`;
+        } else {
+          d.style.height = k.s + "px";
+          d.innerHTML = `<div class="tile${k.alt ? " alt" : ""}" id="stkimg${i}"><i class="ic" style="--i:url(assets/ico/${k.i}.svg)"></i></div>`;
+        }
+        layer.appendChild(d);
+      });
+      const tl = gsap.timeline({ paused: true });
+      STK.forEach((k, i) => {
+        const w = "#stk" + i, m = "#stkimg" + i;
+        tl.set(w, { visibility: "visible" }, k.t0);
+        tl.fromTo(w, { scale: 0, y: 40, opacity: 0, rotation: k.r * 3 },
+          { scale: 1, y: 0, opacity: 1, rotation: k.r, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, k.t0);
+        tl.fromTo(m, { rotationY: 170, transformPerspective: 700 }, { rotationY: 0, transformPerspective: 700, duration: 0.6, ease: "power3.out", immediateRender: false }, k.t0);
+        const a = k.t0 + 0.55, b = k.t1 - 0.25;
+        if (b > a) {
+          tl.to(w, { y: -16, rotation: k.r - 5, duration: b - a, ease: "sine.inOut" }, a);
+          tl.to(m, { rotationY: -16, transformPerspective: 700, duration: b - a, ease: "sine.inOut" }, a);
+        }
+        tl.to(w, { scale: 0, opacity: 0, duration: 0.22, ease: "power2.in" }, k.t1 - 0.22);
+        tl.to(m, { rotationY: -140, transformPerspective: 700, duration: 0.22, ease: "power2.in" }, k.t1 - 0.22);
+        tl.set(w, { visibility: "hidden" }, k.t1);
+      });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["overlays"] = tl;
+    </script>
+  </div>
+</template>

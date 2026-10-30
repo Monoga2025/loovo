@@ -1,0 +1,35 @@
+{
+  "language": "es",
+  "fonts": {
+    "caption": "Arial Black",
+    "display": "Impact"
+  },
+  "colors": {
+    "text": "#FFFFFF",
+    "accent": "#FFE500",
+    "bg": "#0B0B0B"
+  },
+  "safe_zone": {
+    "top": 270,
+    "bottom": 480,
+    "left": 65,
+    "right": 120
+  },
+  "caption_bottom_y": 1380,
+  "vocab": [
+    "Loovo",
+    "Claude",
+    "Claude Code",
+    "Opus",
+    "ffmpeg",
+    "TikTok",
+    "Reels",
+    "DIAN",
+    "CRM",
+    "factura electrónica",
+    "inteligencia artificial",
+    "Codex",
+    "ChatGPT"
+  ],
+  "logo": null
+}

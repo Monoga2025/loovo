@@ -1,0 +1,13 @@
+Contadores: ¿cómo hacen para manejar 10, 20 clientes
+y no volverse locos?
+
+Siempre detrás de cada cliente, rogándole que entregue las facturas.
+Con un amigo estamos revisando cómo solucionarlo. Estos son los 3 sistemas que estamos empezando a construir en Loovo:
+
+1. Una IA que les escribe a tus clientes por WhatsApp, pide los documentos que faltan y te dice quién ya mandó todo.
+2. Un sistema que te avisa los vencimientos de todos tus clientes: abres tu calendario y sabes qué tienes pendiente y qué se viene.
+3. Informes mensuales que prácticamente se arman solos, con gráficas y números organizados. Tú solo revisas, corriges y envías.
+
+¿Cuál te quita más trabajo? Comenta 1, 2 o 3.
+
+#Contadores #Contabilidad #IA #Automatizacion #Loovo

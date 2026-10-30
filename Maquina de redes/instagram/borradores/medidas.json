@@ -1,0 +1,625 @@
+[
+  {
+    "path": "canal/2026-10-17_17h/entregables/corte1_subagentes_9x16.mp4",
+    "duration": "42.330000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [
+      "canal/2026-10-17_17h/entregables/portada.png",
+      "canal/2026-10-17_17h/entregables/portada_alternativa.png"
+    ],
+    "status": "por decidir",
+    "reason": "NOTAS.md declara afirmaciones del flujo sin hechos.md; elegir un corte, revisar audio, tokens/toques, privacidad y permiso del diagrama ajeno.",
+    "source": "relevo 17-oct cortes 2/3 y NOTAS.md: revisión pendiente.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "canal/2026-10-17_17h/entregables/corte2_fullmotion_9x16.mp4",
+    "duration": "41.950000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [
+      "canal/2026-10-17_17h/entregables/portada.png",
+      "canal/2026-10-17_17h/entregables/portada_alternativa.png"
+    ],
+    "status": "por decidir",
+    "reason": "NOTAS.md declara afirmaciones del flujo sin hechos.md; elegir un corte, revisar audio, tokens/toques, privacidad y permiso del diagrama ajeno.",
+    "source": "relevo 17-oct cortes 2/3 y NOTAS.md: revisión pendiente.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "canal/2026-10-17_17h/entregables/corte3_split_9x16.mp4",
+    "duration": "41.933333",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [
+      "canal/2026-10-17_17h/entregables/portada.png",
+      "canal/2026-10-17_17h/entregables/portada_alternativa.png"
+    ],
+    "status": "por decidir",
+    "reason": "NOTAS.md declara afirmaciones del flujo sin hechos.md; elegir un corte, revisar audio, tokens/toques, privacidad y permiso del diagrama ajeno.",
+    "source": "relevo 17-oct cortes 2/3 y NOTAS.md: revisión pendiente.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "canal/2026-10-17_19h/entregables/contadores_3sistemas_9x16.mp4",
+    "duration": "66.380000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [
+      "canal/2026-10-17_19h/entregables/portada.png",
+      "canal/2026-10-17_19h/entregables/portada_alternativa.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Audio malo (exclusión expresa del pedido y contexto HANDOFF); promesas de tres sistemas D1-D3 no existentes/verificados.",
+    "source": "relevo 20-oct aún pedía revisión; HANDOFF vigente: D1-D3 inactivos, sin E2E; pedido 23-oct excluye ambas ediciones.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "canal/2026-10-17_19h-b/entregables/Contadores_3sistemas_9x16.mp4",
+    "duration": "60.950000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [
+      "canal/2026-10-17_19h-b/entregables/portada.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Audio malo (exclusión expresa del pedido y contexto HANDOFF); promesas de tres sistemas D1-D3 no existentes/verificados.",
+    "source": "relevo 20-oct aún pedía revisión; HANDOFF vigente: D1-D3 inactivos, sin E2E; pedido 23-oct excluye ambas ediciones.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "canal/2026-10-21_11h/entregables/video_9x16.mp4",
+    "duration": "45.460000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [
+      "canal/2026-10-21_11h/entregables/portada.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Rechazado por Monoga; método monoga-videos descartado. No publicar promesas D1-D3.",
+    "source": "HANDOFF: intento previo rechazado, 21-oct.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-01/entregables/Dia1_v4_Reels.mp4",
+    "duration": "38.033333",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-01/entregables/Dia1_v4_Reels.mp4",
+      "Dia-01/entregables/Dia1_v5_Reels.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-01/entregables/Dia1_portada_TikTok_3x4.png"
+    ],
+    "status": "por decidir",
+    "reason": "Elegir v4/v5; portada histórica roja, rehacer con Eléctrico; confirmar TikTok.",
+    "source": "estado.md Día 1: editado, publicación pendiente; relevo 7-oct: elegir v4/v5.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-01/entregables/Dia1_v4_TikTok.mp4",
+    "duration": "38.033333",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-01/entregables/Dia1_v4_Reels.mp4",
+      "Dia-01/entregables/Dia1_v5_Reels.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-01/entregables/Dia1_portada_TikTok_3x4.png"
+    ],
+    "status": "por decidir",
+    "reason": "Elegir v4/v5; portada histórica roja, rehacer con Eléctrico; confirmar TikTok.",
+    "source": "estado.md Día 1: editado, publicación pendiente; relevo 7-oct: elegir v4/v5.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-01/entregables/Dia1_v5_Reels.mp4",
+    "duration": "40.033333",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-01/entregables/Dia1_v4_Reels.mp4",
+      "Dia-01/entregables/Dia1_v5_Reels.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-01/entregables/Dia1_portada_TikTok_3x4.png"
+    ],
+    "status": "por decidir",
+    "reason": "Elegir v4/v5; portada histórica roja, rehacer con Eléctrico; confirmar TikTok.",
+    "source": "estado.md Día 1: editado, publicación pendiente; relevo 7-oct: elegir v4/v5.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-01/entregables/Dia1_v5_TikTok.mp4",
+    "duration": "40.033333",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-01/entregables/Dia1_v4_Reels.mp4",
+      "Dia-01/entregables/Dia1_v5_Reels.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-01/entregables/Dia1_portada_TikTok_3x4.png"
+    ],
+    "status": "por decidir",
+    "reason": "Elegir v4/v5; portada histórica roja, rehacer con Eléctrico; confirmar TikTok.",
+    "source": "estado.md Día 1: editado, publicación pendiente; relevo 7-oct: elegir v4/v5.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_reels_v10.mp4",
+    "duration": "63.100000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "por decidir",
+    "reason": "v10 es referencia vigente; afirmaciones CRM sin E2E y promesa DIAN para mañana: revisar/corregir el video, no solo el caption. Confirmar versión publicada.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_reels_v4.mp4",
+    "duration": "62.333333",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_reels_v5.mp4",
+    "duration": "64.333333",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_reels_v6.mp4",
+    "duration": "63.100000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_reels_v7.mp4",
+    "duration": "63.100000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_reels_v8.mp4",
+    "duration": "63.100000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_reels_v9.mp4",
+    "duration": "63.100000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_tiktok_v10.mp4",
+    "duration": "63.100000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "por decidir",
+    "reason": "v10 es referencia vigente; afirmaciones CRM sin E2E y promesa DIAN para mañana: revisar/corregir el video, no solo el caption. Confirmar versión publicada.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_tiktok_v4.mp4",
+    "duration": "62.333333",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_tiktok_v5.mp4",
+    "duration": "64.333333",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_tiktok_v6.mp4",
+    "duration": "63.100000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_tiktok_v7.mp4",
+    "duration": "63.100000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_tiktok_v8.mp4",
+    "duration": "63.100000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-02/entregables/final_tiktok_v9.mp4",
+    "duration": "63.100000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-02/entregables/final_reels_v10.mp4",
+      "Dia-02/entregables/final_reels_v4.mp4",
+      "Dia-02/entregables/final_reels_v5.mp4",
+      "Dia-02/entregables/final_reels_v6.mp4",
+      "Dia-02/entregables/final_reels_v7.mp4",
+      "Dia-02/entregables/final_reels_v8.mp4",
+      "Dia-02/entregables/final_reels_v9.mp4"
+    ],
+    "caption": true,
+    "covers": [
+      "Dia-02/entregables/Dia2_portada_TikTok_3x4.png"
+    ],
+    "status": "NO republicar",
+    "reason": "Versión anterior sustituida por v10; no duplicar. Mantiene afirmaciones CRM/DIAN pendientes de revisión.",
+    "source": "estado.md: publicado (versión anterior, red no identificada); marcador sin versión; relevo 9-oct: v10.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-03/entregables/Dia3_final_reels.mp4",
+    "duration": "56.600000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-03/entregables/Dia3_final_reels.mp4"
+    ],
+    "caption": true,
+    "covers": [],
+    "status": "por decidir",
+    "reason": "Falta portada; caption.md solo dice Pendiente; revisión de corte sin aprobar. DIAN sigue pendiente.",
+    "source": "estado.md Día 3 y relevo 10-oct: editado, usuario revisa.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-03/entregables/Dia3_final_tiktok.mp4",
+    "duration": "56.600000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [
+      "Dia-03/entregables/Dia3_final_reels.mp4"
+    ],
+    "caption": true,
+    "covers": [],
+    "status": "por decidir",
+    "reason": "Falta portada; caption.md solo dice Pendiente; revisión de corte sin aprobar. DIAN sigue pendiente.",
+    "source": "estado.md Día 3 y relevo 10-oct: editado, usuario revisa.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-04/entregables/Dia4_final_tiktok.mp4",
+    "duration": "85.633333",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [],
+    "status": "por decidir",
+    "reason": "Tema motivacional también en EDL final y numeración Día 4/Día 5 contradictoria; no consta aprobación para publicar.",
+    "source": "estado.md Día 4 y relevo 11/13-oct: entrenos y v1; EDL final con placa Día 5.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-04/entregables/Dia4_final_tiktok_audioPC.mp4",
+    "duration": "85.660000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [],
+    "status": "por decidir",
+    "reason": "Tema motivacional también en EDL final y numeración Día 4/Día 5 contradictoria; no consta aprobación para publicar.",
+    "source": "estado.md Día 4 y relevo 11/13-oct: entrenos y v1; EDL final con placa Día 5.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-04/entregables/Dia4_v1_numero1.mp4",
+    "duration": "90.750000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [],
+    "status": "NO republicar",
+    "reason": "Día 4 v1: motivacional, sin música; exclusión expresa de Monoga.",
+    "source": "estado.md Día 4 y relevo 11/13-oct: entrenos y v1; EDL final con placa Día 5.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-04/entregables/entreno01_ref3_premium.mp4",
+    "duration": "5.900000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [],
+    "status": "NO republicar",
+    "reason": "Entrenamiento de estilo, no episodio final; tema motivacional.",
+    "source": "estado.md Día 4 y relevo 11/13-oct: entrenos y v1; EDL final con placa Día 5.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-04/entregables/entreno02_premium.mp4",
+    "duration": "6.300000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [],
+    "status": "NO republicar",
+    "reason": "Entrenamiento de estilo, no episodio final; tema motivacional.",
+    "source": "estado.md Día 4 y relevo 11/13-oct: entrenos y v1; EDL final con placa Día 5.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-07/entregables/Canal_cerebro.mp4",
+    "duration": "52.430000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [
+      "Dia-07/entregables/Dia7_portada_A_3x4.jpg",
+      "Dia-07/entregables/Dia7_portada_A_9x16.jpg",
+      "Dia-07/entregables/Dia7_portada_B_3x4.jpg",
+      "Dia-07/entregables/Dia7_portada_B_9x16.jpg",
+      "Dia-07/entregables/Dia7_portada_miniatura_200px.jpg",
+      "Dia-07/entregables/Dia7_portada_usuario.png"
+    ],
+    "status": "por decidir",
+    "reason": "NotebookLM/servicios documentados no figuran en hechos.md; revisar privacidad, licencias y afirmaciones antes de decidir.",
+    "source": "estado.md Día 7; relevo 13/14-oct: revisar en celular y elegir portada.",
+    "tiktok": "no confirmado"
+  },
+  {
+    "path": "Dia-07/entregables/Dia7_ventas_ia.mp4",
+    "duration": "52.740000",
+    "width": 1080,
+    "height": 1920,
+    "reels": [],
+    "caption": false,
+    "covers": [
+      "Dia-07/entregables/Dia7_portada_A_3x4.jpg",
+      "Dia-07/entregables/Dia7_portada_A_9x16.jpg",
+      "Dia-07/entregables/Dia7_portada_B_3x4.jpg",
+      "Dia-07/entregables/Dia7_portada_B_9x16.jpg",
+      "Dia-07/entregables/Dia7_portada_miniatura_200px.jpg",
+      "Dia-07/entregables/Dia7_portada_usuario.png"
+    ],
+    "status": "por decidir",
+    "reason": "Afirmaciones de agentes de ventas no están en hechos.md; falta caption y aprobación audiovisual/portada.",
+    "source": "estado.md Día 7; relevo 13/14-oct: revisar en celular y elegir portada.",
+    "tiktok": "no confirmado"
+  }
+]

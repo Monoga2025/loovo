@@ -1,0 +1,9 @@
+Pasé de n8n a Claude Code.
+Un agente orquestador y varios subagentes.
+
+n8n es un flujo: inicia, termina y no hace loop.
+Con Claude Code, el agente principal solo recibe el texto de sus subagentes, sin revisar sus archivos. En mi caso, menos tokens y más rápido.
+
+¿Tú ya trabajas con agentes o todavía con flujos?
+
+#IA #ClaudeCode #n8n #Automatizacion #Loovo

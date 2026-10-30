@@ -1,0 +1,29 @@
+[
+  {
+    "fuente": "space-grotesk-latin-700-normal",
+    "pillow": true,
+    "muestra": "Á É Í Ó Ú Ñ á é í ó ú ñ ¿ ¡ → ·",
+    "glifos_faltantes": [],
+    "glifos_locales_agregados": [
+      "→"
+    ]
+  },
+  {
+    "fuente": "space-grotesk-latin-500-normal",
+    "pillow": true,
+    "muestra": "Á É Í Ó Ú Ñ á é í ó ú ñ ¿ ¡ → ·",
+    "glifos_faltantes": [],
+    "glifos_locales_agregados": [
+      "→"
+    ]
+  },
+  {
+    "fuente": "instrument-serif-latin-400-italic",
+    "pillow": true,
+    "muestra": "Á É Í Ó Ú Ñ á é í ó ú ñ ¿ ¡ → ·",
+    "glifos_faltantes": [],
+    "glifos_locales_agregados": [
+      "→"
+    ]
+  }
+]

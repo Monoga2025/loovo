@@ -1,0 +1,21 @@
+Eres director de arte senior y diseñador de personajes de marca. Usa tu herramienta de generación de imágenes (image generation). No escribas base64 a mano ni dibujes con código: genera las imágenes con la herramienta y guárdalas en esta carpeta.
+
+CONTEXTO
+- "IA MONOGA" es la marca personal de un joven emprendedor colombiano dueño de Loovo, una agencia de inteligencia artificial. Publica la serie de TikTok/Reels "Día X de 42" rumbo a un evento de negocios (Luque Business Summit, Bucaramanga). Público: empresarios.
+- Busca una MASCOTA de marca reconocible. Adjunto dos referencias: (1) la portada que él editó (robot negro con cara-pantalla y ojos verdes a su lado, titular "EMPLEADO (NO LE PAGO)"); (2) una foto de su cara. Úsalas solo como referencia de estilo y del parecido de la persona.
+- Prohibido el color rojo en cualquier elemento (lo asocia con peligro).
+
+QUÉ HACER
+Genera {N} imágenes, UNA por concepto de abajo. Cada imagen es un "brand board" vertical (formato 2:3 o 9:16, alta calidad), fondo y paleta del concepto, con esta composición:
+- Arriba (60 %): la mascota grande, render del estilo indicado, en pose expresiva.
+- Una tira de 3 o 4 expresiones/poses pequeñas de la mascota.
+- Muestras de color: círculos o rectángulos con su código hex escrito debajo, exactamente como se indica.
+- Muestra tipográfica: el nombre de la tipografía y una línea de ejemplo escrita con ese estilo: titular "EMPLEADO" y apoyo "no le pago".
+- Abajo: 3 mini fotogramas verticales (9:16) que muestren el estilo de edición del video, uno de ellos con la persona de la foto junto a la mascota (como una portada de TikTok).
+- El nombre de la mascota bien grande y legible.
+Escribe el texto exactamente como está, con tildes. Poco texto, grande y nítido. Look profesional de estudio de branding (Behance), nada barato.
+
+Guarda cada imagen como concepto_NN.png (NN = número del concepto) en la carpeta actual. Al final lista los archivos guardados.
+
+CONCEPTOS
+{CONCEPTOS}

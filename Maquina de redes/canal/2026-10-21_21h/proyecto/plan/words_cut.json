@@ -1,0 +1,1121 @@
+{
+ "timeline": "corte (build/clean.mp4), segundos",
+ "fuente": "texto de transcript/words.json (corregido); tiempos de una transcripción del audio YA CORTADO cuando hay coincidencia (fuente=asr) y del EDL si no (fuente=edl). Incluye la primera palabra de cada toma.",
+ "duration": 39.64,
+ "words": [
+  {
+   "w": "¿ustedes",
+   "toma": 1,
+   "s": 0.04,
+   "e": 0.38,
+   "fuente": "asr"
+  },
+  {
+   "w": "qué",
+   "toma": 1,
+   "s": 0.38,
+   "e": 0.48,
+   "fuente": "asr"
+  },
+  {
+   "w": "hacen",
+   "toma": 1,
+   "s": 0.48,
+   "e": 0.62,
+   "fuente": "asr"
+  },
+  {
+   "w": "cuando",
+   "toma": 1,
+   "s": 0.62,
+   "e": 0.84,
+   "fuente": "asr"
+  },
+  {
+   "w": "un",
+   "toma": 1,
+   "s": 0.84,
+   "e": 1.08,
+   "fuente": "asr"
+  },
+  {
+   "w": "cliente",
+   "toma": 1,
+   "s": 1.08,
+   "e": 1.34,
+   "fuente": "asr"
+  },
+  {
+   "w": "les",
+   "toma": 1,
+   "s": 1.4,
+   "e": 1.6,
+   "fuente": "edl"
+  },
+  {
+   "w": "escribe",
+   "toma": 1,
+   "s": 1.6,
+   "e": 1.72,
+   "fuente": "edl"
+  },
+  {
+   "w": "a",
+   "toma": 1,
+   "s": 1.72,
+   "e": 1.8,
+   "fuente": "asr"
+  },
+  {
+   "w": "las",
+   "toma": 1,
+   "s": 1.8,
+   "e": 1.94,
+   "fuente": "asr"
+  },
+  {
+   "w": "9",
+   "toma": 1,
+   "s": 1.94,
+   "e": 2.08,
+   "fuente": "asr"
+  },
+  {
+   "w": "de",
+   "toma": 1,
+   "s": 2.08,
+   "e": 2.28,
+   "fuente": "asr"
+  },
+  {
+   "w": "la",
+   "toma": 1,
+   "s": 2.28,
+   "e": 2.36,
+   "fuente": "asr"
+  },
+  {
+   "w": "noche",
+   "toma": 1,
+   "s": 2.36,
+   "e": 2.56,
+   "fuente": "asr"
+  },
+  {
+   "w": "por",
+   "toma": 1,
+   "s": 2.56,
+   "e": 2.8,
+   "fuente": "asr"
+  },
+  {
+   "w": "algo",
+   "toma": 1,
+   "s": 2.8,
+   "e": 2.98,
+   "fuente": "asr"
+  },
+  {
+   "w": "de",
+   "toma": 1,
+   "s": 2.98,
+   "e": 3.1,
+   "fuente": "asr"
+  },
+  {
+   "w": "retención?",
+   "toma": 1,
+   "s": 3.1,
+   "e": 3.54,
+   "fuente": "asr"
+  },
+  {
+   "w": "¿En",
+   "toma": 2,
+   "s": 3.73,
+   "e": 3.81,
+   "fuente": "edl"
+  },
+  {
+   "w": "cuánto",
+   "toma": 2,
+   "s": 3.81,
+   "e": 3.96,
+   "fuente": "edl"
+  },
+  {
+   "w": "se",
+   "toma": 2,
+   "s": 3.96,
+   "e": 4.04,
+   "fuente": "edl"
+  },
+  {
+   "w": "demoran",
+   "toma": 2,
+   "s": 4.04,
+   "e": 4.26,
+   "fuente": "asr"
+  },
+  {
+   "w": "tener",
+   "toma": 2,
+   "s": 4.26,
+   "e": 4.48,
+   "fuente": "asr"
+  },
+  {
+   "w": "esa",
+   "toma": 2,
+   "s": 4.48,
+   "e": 4.72,
+   "fuente": "asr"
+  },
+  {
+   "w": "respuesta?",
+   "toma": 2,
+   "s": 4.72,
+   "e": 4.98,
+   "fuente": "asr"
+  },
+  {
+   "w": "a",
+   "toma": 3,
+   "s": 5.24,
+   "e": 5.32,
+   "fuente": "asr"
+  },
+  {
+   "w": "las",
+   "toma": 3,
+   "s": 5.32,
+   "e": 5.42,
+   "fuente": "asr"
+  },
+  {
+   "w": "9",
+   "toma": 3,
+   "s": 5.42,
+   "e": 5.54,
+   "fuente": "asr"
+  },
+  {
+   "w": "de",
+   "toma": 3,
+   "s": 5.54,
+   "e": 5.66,
+   "fuente": "asr"
+  },
+  {
+   "w": "la",
+   "toma": 3,
+   "s": 5.66,
+   "e": 5.74,
+   "fuente": "asr"
+  },
+  {
+   "w": "noche",
+   "toma": 3,
+   "s": 5.74,
+   "e": 5.92,
+   "fuente": "asr"
+  },
+  {
+   "w": "ya",
+   "toma": 3,
+   "s": 5.92,
+   "e": 6.08,
+   "fuente": "asr"
+  },
+  {
+   "w": "puedes",
+   "toma": 3,
+   "s": 6.08,
+   "e": 6.26,
+   "fuente": "asr"
+  },
+  {
+   "w": "estar",
+   "toma": 3,
+   "s": 6.26,
+   "e": 6.54,
+   "fuente": "asr"
+  },
+  {
+   "w": "acostado,",
+   "toma": 3,
+   "s": 6.54,
+   "e": 7.58,
+   "fuente": "asr"
+  },
+  {
+   "w": "con",
+   "toma": 3,
+   "s": 7.58,
+   "e": 7.84,
+   "fuente": "asr"
+  },
+  {
+   "w": "pijama,",
+   "toma": 3,
+   "s": 7.84,
+   "e": 8.58,
+   "fuente": "asr"
+  },
+  {
+   "w": "Porque",
+   "toma": 4,
+   "s": 8.94,
+   "e": 9.02,
+   "fuente": "asr"
+  },
+  {
+   "w": "en",
+   "toma": 4,
+   "s": 9.02,
+   "e": 9.1,
+   "fuente": "asr"
+  },
+  {
+   "w": "realidad",
+   "toma": 4,
+   "s": 9.1,
+   "e": 9.28,
+   "fuente": "asr"
+  },
+  {
+   "w": "no",
+   "toma": 4,
+   "s": 9.28,
+   "e": 9.5,
+   "fuente": "asr"
+  },
+  {
+   "w": "te",
+   "toma": 4,
+   "s": 9.5,
+   "e": 9.6,
+   "fuente": "asr"
+  },
+  {
+   "w": "van",
+   "toma": 4,
+   "s": 9.6,
+   "e": 9.68,
+   "fuente": "asr"
+  },
+  {
+   "w": "a",
+   "toma": 4,
+   "s": 9.68,
+   "e": 9.78,
+   "fuente": "asr"
+  },
+  {
+   "w": "dejar",
+   "toma": 4,
+   "s": 9.78,
+   "e": 9.92,
+   "fuente": "asr"
+  },
+  {
+   "w": "por",
+   "toma": 4,
+   "s": 9.92,
+   "e": 10.12,
+   "fuente": "asr"
+  },
+  {
+   "w": "la",
+   "toma": 4,
+   "s": 10.12,
+   "e": 10.28,
+   "fuente": "asr"
+  },
+  {
+   "w": "IA,",
+   "toma": 4,
+   "s": 10.4,
+   "e": 10.64,
+   "fuente": "edl"
+  },
+  {
+   "w": "te",
+   "toma": 4,
+   "s": 10.66,
+   "e": 10.74,
+   "fuente": "asr"
+  },
+  {
+   "w": "van",
+   "toma": 4,
+   "s": 10.74,
+   "e": 10.82,
+   "fuente": "asr"
+  },
+  {
+   "w": "a",
+   "toma": 4,
+   "s": 10.82,
+   "e": 10.9,
+   "fuente": "asr"
+  },
+  {
+   "w": "dejar",
+   "toma": 4,
+   "s": 10.9,
+   "e": 11.0,
+   "fuente": "asr"
+  },
+  {
+   "w": "por",
+   "toma": 4,
+   "s": 11.0,
+   "e": 11.14,
+   "fuente": "asr"
+  },
+  {
+   "w": "el",
+   "toma": 4,
+   "s": 11.14,
+   "e": 11.26,
+   "fuente": "asr"
+  },
+  {
+   "w": "contador",
+   "toma": 4,
+   "s": 11.26,
+   "e": 11.64,
+   "fuente": "asr"
+  },
+  {
+   "w": "que",
+   "toma": 4,
+   "s": 11.64,
+   "e": 11.78,
+   "fuente": "asr"
+  },
+  {
+   "w": "contestó",
+   "toma": 4,
+   "s": 11.78,
+   "e": 12.16,
+   "fuente": "asr"
+  },
+  {
+   "w": "primero",
+   "toma": 4,
+   "s": 12.16,
+   "e": 12.46,
+   "fuente": "asr"
+  },
+  {
+   "w": "Y",
+   "toma": 5,
+   "s": 13.02,
+   "e": 13.1,
+   "fuente": "asr"
+  },
+  {
+   "w": "casi",
+   "toma": 5,
+   "s": 13.12,
+   "e": 13.26,
+   "fuente": "edl"
+  },
+  {
+   "w": "siempre",
+   "toma": 5,
+   "s": 13.26,
+   "e": 13.46,
+   "fuente": "asr"
+  },
+  {
+   "w": "es",
+   "toma": 5,
+   "s": 13.46,
+   "e": 13.58,
+   "fuente": "asr"
+  },
+  {
+   "w": "la",
+   "toma": 5,
+   "s": 13.58,
+   "e": 13.68,
+   "fuente": "asr"
+  },
+  {
+   "w": "misma",
+   "toma": 5,
+   "s": 13.68,
+   "e": 13.86,
+   "fuente": "asr"
+  },
+  {
+   "w": "pregunta,",
+   "toma": 5,
+   "s": 13.86,
+   "e": 14.26,
+   "fuente": "asr"
+  },
+  {
+   "w": "¿qué",
+   "toma": 5,
+   "s": 14.56,
+   "e": 14.66,
+   "fuente": "asr"
+  },
+  {
+   "w": "retención,",
+   "toma": 5,
+   "s": 14.76,
+   "e": 15.38,
+   "fuente": "asr"
+  },
+  {
+   "w": "qué",
+   "toma": 5,
+   "s": 15.8,
+   "e": 15.88,
+   "fuente": "asr"
+  },
+  {
+   "w": "IVA,",
+   "toma": 5,
+   "s": 15.98,
+   "e": 16.4,
+   "fuente": "edl"
+  },
+  {
+   "w": "qué",
+   "toma": 5,
+   "s": 16.58,
+   "e": 16.66,
+   "fuente": "asr"
+  },
+  {
+   "w": "cuándo",
+   "toma": 5,
+   "s": 16.66,
+   "e": 16.9,
+   "fuente": "asr"
+  },
+  {
+   "w": "vence?",
+   "toma": 5,
+   "s": 16.9,
+   "e": 17.48,
+   "fuente": "asr"
+  },
+  {
+   "w": "pero",
+   "toma": 6,
+   "s": 17.86,
+   "e": 17.94,
+   "fuente": "asr"
+  },
+  {
+   "w": "tú",
+   "toma": 6,
+   "s": 17.94,
+   "e": 18.3,
+   "fuente": "asr"
+  },
+  {
+   "w": "ya",
+   "toma": 6,
+   "s": 18.3,
+   "e": 18.46,
+   "fuente": "asr"
+  },
+  {
+   "w": "le",
+   "toma": 6,
+   "s": 18.46,
+   "e": 18.54,
+   "fuente": "asr"
+  },
+  {
+   "w": "respondiste",
+   "toma": 6,
+   "s": 18.54,
+   "e": 19.14,
+   "fuente": "asr"
+  },
+  {
+   "w": "y",
+   "toma": 6,
+   "s": 19.14,
+   "e": 19.36,
+   "fuente": "asr"
+  },
+  {
+   "w": "te",
+   "toma": 6,
+   "s": 19.36,
+   "e": 19.48,
+   "fuente": "asr"
+  },
+  {
+   "w": "siguen",
+   "toma": 6,
+   "s": 19.48,
+   "e": 19.88,
+   "fuente": "asr"
+  },
+  {
+   "w": "preguntando",
+   "toma": 6,
+   "s": 19.88,
+   "e": 20.38,
+   "fuente": "asr"
+  },
+  {
+   "w": "igual",
+   "toma": 6,
+   "s": 20.38,
+   "e": 20.58,
+   "fuente": "asr"
+  },
+  {
+   "w": "Con",
+   "toma": 7,
+   "s": 20.75,
+   "e": 20.83,
+   "fuente": "asr"
+  },
+  {
+   "w": "mi",
+   "toma": 7,
+   "s": 20.83,
+   "e": 20.91,
+   "fuente": "asr"
+  },
+  {
+   "w": "compañero",
+   "toma": 7,
+   "s": 20.91,
+   "e": 21.28,
+   "fuente": "asr"
+  },
+  {
+   "w": "de",
+   "toma": 7,
+   "s": 21.28,
+   "e": 21.44,
+   "fuente": "asr"
+  },
+  {
+   "w": "trabajo",
+   "toma": 7,
+   "s": 21.44,
+   "e": 21.8,
+   "fuente": "asr"
+  },
+  {
+   "w": "estamos",
+   "toma": 7,
+   "s": 21.8,
+   "e": 22.12,
+   "fuente": "asr"
+  },
+  {
+   "w": "probando",
+   "toma": 7,
+   "s": 22.12,
+   "e": 22.62,
+   "fuente": "asr"
+  },
+  {
+   "w": "a",
+   "toma": 7,
+   "s": 22.71,
+   "e": 22.79,
+   "fuente": "edl"
+  },
+  {
+   "w": "un",
+   "toma": 7,
+   "s": 22.79,
+   "e": 22.87,
+   "fuente": "asr"
+  },
+  {
+   "w": "agente",
+   "toma": 7,
+   "s": 22.87,
+   "e": 23.22,
+   "fuente": "asr"
+  },
+  {
+   "w": "que",
+   "toma": 7,
+   "s": 23.22,
+   "e": 23.5,
+   "fuente": "asr"
+  },
+  {
+   "w": "se",
+   "toma": 7,
+   "s": 23.5,
+   "e": 23.6,
+   "fuente": "asr"
+  },
+  {
+   "w": "basa",
+   "toma": 7,
+   "s": 23.6,
+   "e": 23.78,
+   "fuente": "asr"
+  },
+  {
+   "w": "en",
+   "toma": 7,
+   "s": 23.78,
+   "e": 23.9,
+   "fuente": "asr"
+  },
+  {
+   "w": "el",
+   "toma": 7,
+   "s": 23.9,
+   "e": 24.02,
+   "fuente": "asr"
+  },
+  {
+   "w": "Estatuto",
+   "toma": 7,
+   "s": 24.02,
+   "e": 24.34,
+   "fuente": "asr"
+  },
+  {
+   "w": "Tributario",
+   "toma": 7,
+   "s": 24.34,
+   "e": 25.04,
+   "fuente": "asr"
+  },
+  {
+   "w": "y",
+   "toma": 7,
+   "s": 25.04,
+   "e": 25.64,
+   "fuente": "asr"
+  },
+  {
+   "w": "adelanta",
+   "toma": 7,
+   "s": 25.64,
+   "e": 25.96,
+   "fuente": "asr"
+  },
+  {
+   "w": "a",
+   "toma": 7,
+   "s": 26.01,
+   "e": 26.09,
+   "fuente": "edl"
+  },
+  {
+   "w": "tu",
+   "toma": 7,
+   "s": 26.09,
+   "e": 26.17,
+   "fuente": "asr"
+  },
+  {
+   "w": "respuesta",
+   "toma": 7,
+   "s": 26.17,
+   "e": 26.42,
+   "fuente": "asr"
+  },
+  {
+   "w": "No",
+   "toma": 8,
+   "s": 26.69,
+   "e": 26.77,
+   "fuente": "edl"
+  },
+  {
+   "w": "es",
+   "toma": 8,
+   "s": 26.77,
+   "e": 26.85,
+   "fuente": "asr"
+  },
+  {
+   "w": "un",
+   "toma": 8,
+   "s": 26.85,
+   "e": 26.93,
+   "fuente": "asr"
+  },
+  {
+   "w": "chatbot",
+   "toma": 8,
+   "s": 26.93,
+   "e": 27.38,
+   "fuente": "asr"
+  },
+  {
+   "w": "que",
+   "toma": 8,
+   "s": 27.38,
+   "e": 27.56,
+   "fuente": "asr"
+  },
+  {
+   "w": "sólo",
+   "toma": 8,
+   "s": 27.56,
+   "e": 27.72,
+   "fuente": "asr"
+  },
+  {
+   "w": "responde",
+   "toma": 8,
+   "s": 27.72,
+   "e": 28.54,
+   "fuente": "asr"
+  },
+  {
+   "w": "y",
+   "toma": 8,
+   "s": 28.54,
+   "e": 28.76,
+   "fuente": "asr"
+  },
+  {
+   "w": "se",
+   "toma": 8,
+   "s": 28.76,
+   "e": 28.84,
+   "fuente": "asr"
+  },
+  {
+   "w": "le",
+   "toma": 8,
+   "s": 28.84,
+   "e": 28.92,
+   "fuente": "asr"
+  },
+  {
+   "w": "envía",
+   "toma": 8,
+   "s": 28.92,
+   "e": 29.08,
+   "fuente": "asr"
+  },
+  {
+   "w": "al",
+   "toma": 8,
+   "s": 29.08,
+   "e": 29.22,
+   "fuente": "asr"
+  },
+  {
+   "w": "cliente",
+   "toma": 8,
+   "s": 29.22,
+   "e": 29.74,
+   "fuente": "asr"
+  },
+  {
+   "w": "No",
+   "toma": 9,
+   "s": 29.82,
+   "e": 30.06,
+   "fuente": "asr"
+  },
+  {
+   "w": "reemplaza",
+   "toma": 9,
+   "s": 30.16,
+   "e": 30.46,
+   "fuente": "edl"
+  },
+  {
+   "w": "tu",
+   "toma": 9,
+   "s": 30.46,
+   "e": 30.6,
+   "fuente": "asr"
+  },
+  {
+   "w": "criterio",
+   "toma": 9,
+   "s": 30.6,
+   "e": 31.2,
+   "fuente": "asr"
+  },
+  {
+   "w": "y",
+   "toma": 9,
+   "s": 31.2,
+   "e": 31.36,
+   "fuente": "asr"
+  },
+  {
+   "w": "tú",
+   "toma": 9,
+   "s": 31.36,
+   "e": 31.48,
+   "fuente": "asr"
+  },
+  {
+   "w": "puedes",
+   "toma": 9,
+   "s": 31.48,
+   "e": 31.74,
+   "fuente": "asr"
+  },
+  {
+   "w": "revisar",
+   "toma": 9,
+   "s": 31.74,
+   "e": 32.42,
+   "fuente": "asr"
+  },
+  {
+   "w": "el",
+   "toma": 9,
+   "s": 32.42,
+   "e": 32.52,
+   "fuente": "asr"
+  },
+  {
+   "w": "mensaje",
+   "toma": 9,
+   "s": 32.52,
+   "e": 33.04,
+   "fuente": "asr"
+  },
+  {
+   "w": "antes",
+   "toma": 9,
+   "s": 33.04,
+   "e": 33.36,
+   "fuente": "asr"
+  },
+  {
+   "w": "de",
+   "toma": 9,
+   "s": 33.36,
+   "e": 33.54,
+   "fuente": "asr"
+  },
+  {
+   "w": "que",
+   "toma": 9,
+   "s": 33.54,
+   "e": 33.62,
+   "fuente": "asr"
+  },
+  {
+   "w": "se",
+   "toma": 9,
+   "s": 33.62,
+   "e": 33.72,
+   "fuente": "asr"
+  },
+  {
+   "w": "le",
+   "toma": 9,
+   "s": 33.72,
+   "e": 33.82,
+   "fuente": "asr"
+  },
+  {
+   "w": "pueda",
+   "toma": 9,
+   "s": 33.82,
+   "e": 33.98,
+   "fuente": "asr"
+  },
+  {
+   "w": "enviar",
+   "toma": 9,
+   "s": 33.98,
+   "e": 34.24,
+   "fuente": "asr"
+  },
+  {
+   "w": "al",
+   "toma": 9,
+   "s": 34.24,
+   "e": 34.34,
+   "fuente": "asr"
+  },
+  {
+   "w": "cliente",
+   "toma": 9,
+   "s": 34.34,
+   "e": 34.74,
+   "fuente": "asr"
+  },
+  {
+   "w": "Quiero",
+   "toma": 10,
+   "s": 34.78,
+   "e": 34.92,
+   "fuente": "asr"
+  },
+  {
+   "w": "saber",
+   "toma": 10,
+   "s": 34.92,
+   "e": 35.14,
+   "fuente": "asr"
+  },
+  {
+   "w": "cuál",
+   "toma": 10,
+   "s": 35.14,
+   "e": 35.34,
+   "fuente": "asr"
+  },
+  {
+   "w": "es",
+   "toma": 10,
+   "s": 35.34,
+   "e": 35.48,
+   "fuente": "asr"
+  },
+  {
+   "w": "la",
+   "toma": 10,
+   "s": 35.48,
+   "e": 35.58,
+   "fuente": "asr"
+  },
+  {
+   "w": "pregunta",
+   "toma": 10,
+   "s": 35.58,
+   "e": 35.96,
+   "fuente": "asr"
+  },
+  {
+   "w": "que",
+   "toma": 10,
+   "s": 35.96,
+   "e": 36.6,
+   "fuente": "asr"
+  },
+  {
+   "w": "más",
+   "toma": 10,
+   "s": 36.6,
+   "e": 36.78,
+   "fuente": "asr"
+  },
+  {
+   "w": "te",
+   "toma": 10,
+   "s": 36.78,
+   "e": 36.94,
+   "fuente": "asr"
+  },
+  {
+   "w": "escriben",
+   "toma": 10,
+   "s": 36.94,
+   "e": 37.24,
+   "fuente": "asr"
+  },
+  {
+   "w": "tus",
+   "toma": 10,
+   "s": 37.24,
+   "e": 37.38,
+   "fuente": "asr"
+  },
+  {
+   "w": "clientes",
+   "toma": 10,
+   "s": 37.38,
+   "e": 37.86,
+   "fuente": "asr"
+  },
+  {
+   "w": "a",
+   "toma": 10,
+   "s": 37.86,
+   "e": 37.96,
+   "fuente": "asr"
+  },
+  {
+   "w": "las",
+   "toma": 10,
+   "s": 37.96,
+   "e": 38.04,
+   "fuente": "asr"
+  },
+  {
+   "w": "9",
+   "toma": 10,
+   "s": 38.04,
+   "e": 38.16,
+   "fuente": "asr"
+  },
+  {
+   "w": "de",
+   "toma": 10,
+   "s": 38.16,
+   "e": 38.26,
+   "fuente": "asr"
+  },
+  {
+   "w": "la",
+   "toma": 10,
+   "s": 38.26,
+   "e": 38.34,
+   "fuente": "asr"
+  },
+  {
+   "w": "noche,",
+   "toma": 10,
+   "s": 38.34,
+   "e": 38.54,
+   "fuente": "asr"
+  },
+  {
+   "w": "déjalo",
+   "toma": 10,
+   "s": 38.73,
+   "e": 38.84,
+   "fuente": "edl"
+  },
+  {
+   "w": "acá",
+   "toma": 10,
+   "s": 38.84,
+   "e": 38.96,
+   "fuente": "asr"
+  },
+  {
+   "w": "en",
+   "toma": 10,
+   "s": 38.96,
+   "e": 39.04,
+   "fuente": "asr"
+  },
+  {
+   "w": "los",
+   "toma": 10,
+   "s": 39.04,
+   "e": 39.12,
+   "fuente": "asr"
+  },
+  {
+   "w": "comentarios",
+   "toma": 10,
+   "s": 39.12,
+   "e": 39.42,
+   "fuente": "asr"
+  }
+ ],
+ "nota_inicio_de_toma": "La primera palabra de cada toma empieza 0,04 s después del inicio del clip (donde arranca la voz medida). Whisper pone el inicio de esas palabras hasta 0,4 s antes, en silencio: no es fiable. Verificado: no se pierde voz en ningún inicio de toma."
+}

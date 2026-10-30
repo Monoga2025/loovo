@@ -1,0 +1,71 @@
+<template id="behind-template">
+  <!--
+    Palabras gigantes DETRÁS del hablante: esta capa va entre el video de fondo
+    (#base) y la silueta recortada (#person) en index.html. Arriba, sobre la
+    pared, donde la cabeza tapa solo una parte de las letras.
+  -->
+  <div data-composition-id="behind" data-width="1080" data-height="1920" data-duration="38.06">
+    <div id="bw"></div>
+    <style>
+      [data-composition-id="behind"] { background: transparent; font-family: "Inter", sans-serif; overflow: hidden; }
+      .bword {
+        position: absolute; left: 0; width: 100%; text-align: center; visibility: hidden;
+        font-weight: 900; letter-spacing: -0.055em; line-height: 0.86; color: #151515;
+        text-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+      }
+      .bword.red { color: #e3120b; text-shadow: 0 8px 40px rgba(227, 18, 11, 0.25); }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      // [texto, aparece (s), desaparece (s), tamaño px, top px, rojo?]
+      // Tiempos en la línea del corte anterior; T() los lleva al corte actual.
+      const WORDS = [
+        ["EVENTO", 2.21, 3.0, 230, 300, 0],
+        ["+2 MIL", 3.03, 3.86, 260, 285, 1],
+        ["¿NI IDEA?", 4.72, 5.9, 185, 315, 0],
+        ["LOOVO", 5.94, 8.05, 270, 280, 1],
+        ["DECIDÍ", 10.63, 11.8, 240, 295, 0],
+        ["NO SE HACE", 11.85, 12.38, 150, 285, 1],
+        ["META", 21.49, 22.9, 300, 270, 1],
+        ["HOY", 22.97, 24.1, 320, 260, 0],
+        ["LOOVO", 24.18, 25.1, 270, 280, 1],
+        ["DIFERENTE", 25.17, 26.08, 160, 278, 0],
+        ["MEJORES", 27.34, 28.1, 175, 275, 1],
+        // en t9 la cabeza llega casi al borde superior (sin pared libre arriba):
+        // ahí no hay palabras detrás para que nada quede ilegible
+      ];
+      const host = document.getElementById("bw");
+      WORDS.forEach(([txt, , , size, top, red], i) => {
+        const d = document.createElement("div");
+        d.className = "bword" + (red ? " red" : "");
+        d.id = "bw" + i;
+        d.innerHTML = txt;
+        d.style.fontSize = size + "px";
+        d.style.top = top + "px";
+        host.appendChild(d);
+      });
+
+      const MAP_OLD = [0, 3.89, 7.2, 10.21, 14.78, 18.68, 20.61, 26.11, 32.53, 34.69, 38.14];
+      const MAP_NEW = [0, 3.857, 7.178, 10.178, 14.749, 18.634, 20.557, 26.057, 32.48, 34.634, 38.057];
+      const T = (t) => {
+        let i = 1;
+        while (i < MAP_OLD.length - 1 && t > MAP_OLD[i]) i++;
+        const [a, b, c, d] = [MAP_OLD[i - 1], MAP_OLD[i], MAP_NEW[i - 1], MAP_NEW[i]];
+        return c + ((t - a) * (d - c)) / (b - a);
+      };
+      const tl = gsap.timeline({ paused: true });
+      WORDS.forEach(([, a, b], i) => {
+        const el = "#bw" + i;
+        tl.set(el, { visibility: "visible" }, T(a));
+        tl.fromTo(el, { opacity: 0, y: 140, scale: 0.9, filter: "blur(18px)" },
+          { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 0.42, ease: "expo.out" }, T(a));
+        // deriva lenta mientras está en pantalla (parallax contra el zoom del video)
+        tl.to(el, { y: -26, duration: Math.max(T(b) - T(a) - 0.6, 0.1), ease: "none" }, T(a) + 0.42);
+        tl.to(el, { opacity: 0, y: -90, filter: "blur(14px)", duration: 0.18, ease: "power2.in" }, T(b) - 0.18);
+        tl.set(el, { visibility: "hidden" }, T(b));
+      });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["behind"] = tl;
+    </script>
+  </div>
+</template>

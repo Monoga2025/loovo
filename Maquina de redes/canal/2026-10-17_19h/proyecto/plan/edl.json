@@ -1,0 +1,239 @@
+{
+ "pieces": [
+  {
+   "seg": "T1",
+   "a": 0.45,
+   "b": 2.95,
+   "o": 0.0,
+   "gap": 0.12
+  },
+  {
+   "seg": "T2",
+   "a": 21.1,
+   "b": 24.3,
+   "o": 2.62,
+   "gap": 0.3
+  },
+  {
+   "seg": "T3",
+   "a": 69.74,
+   "b": 75.54,
+   "o": 6.12,
+   "gap": 0.3
+  },
+  {
+   "seg": "T4",
+   "a": 87.42,
+   "b": 93.62,
+   "o": 12.22,
+   "gap": 0.28
+  },
+  {
+   "seg": "T5",
+   "a": 120.6,
+   "b": 123.58,
+   "o": 18.7,
+   "gap": 0.3
+  },
+  {
+   "seg": "T6",
+   "a": 130.4,
+   "b": 135.675,
+   "o": 21.98,
+   "gap": 0
+  },
+  {
+   "seg": "T6",
+   "a": 136.205,
+   "b": 138.055,
+   "o": 27.255,
+   "gap": 0
+  },
+  {
+   "seg": "T6",
+   "a": 138.245,
+   "b": 140.375,
+   "o": 29.105,
+   "gap": 0
+  },
+  {
+   "seg": "T6",
+   "a": 140.815,
+   "b": 143.1,
+   "o": 31.235,
+   "gap": 0.3
+  },
+  {
+   "seg": "T7",
+   "a": 148.24,
+   "b": 156.24,
+   "o": 33.82,
+   "gap": 0.3
+  },
+  {
+   "seg": "T8",
+   "a": 159.82,
+   "b": 166.98,
+   "o": 42.12,
+   "gap": 0.22
+  },
+  {
+   "seg": "T9",
+   "a": 175.67,
+   "b": 178.8,
+   "o": 49.5,
+   "gap": 0.34
+  },
+  {
+   "seg": "T10",
+   "a": 181.1,
+   "b": 182.94,
+   "o": 52.97,
+   "gap": 0.2
+  },
+  {
+   "seg": "T11",
+   "a": 189.97,
+   "b": 191.48,
+   "o": 55.01,
+   "gap": 0.3
+  },
+  {
+   "seg": "T12",
+   "a": 193.77,
+   "b": 195.82,
+   "o": 56.82,
+   "gap": 0.3
+  },
+  {
+   "seg": "T13",
+   "a": 199.66,
+   "b": 201.68,
+   "o": 59.17,
+   "gap": 0.26
+  },
+  {
+   "seg": "T14",
+   "a": 206.33,
+   "b": 208.16,
+   "o": 61.45,
+   "gap": 0.2
+  },
+  {
+   "seg": "T15",
+   "a": 209.4,
+   "b": 211.1,
+   "o": 63.48,
+   "gap": 0.0
+  }
+ ],
+ "total": 66.38,
+ "aoff": 0.135,
+ "takes": [
+  [
+   "T1",
+   0.45,
+   2.95,
+   0.12,
+   "Parce, yo tengo una pregunta para los contadores"
+  ],
+  [
+   "T2",
+   21.1,
+   24.3,
+   0.3,
+   "ustedes cómo hacen para manejar 10, 20 clientes y no volverse locos"
+  ],
+  [
+   "T3",
+   69.74,
+   75.54,
+   0.3,
+   "Lo digo porque normalmente los contadores están detrás de cada cliente rogándole ... facturas"
+  ],
+  [
+   "T4",
+   87.42,
+   93.62,
+   0.28,
+   "Mira, yo soy ingeniero mecatrónico ... para los contadores"
+  ],
+  [
+   "T5",
+   120.6,
+   123.58,
+   0.3,
+   "Así que estos son los tres sistemas que les van a optimizar el trabajo"
+  ],
+  [
+   "T6",
+   130.4,
+   143.1,
+   0.3,
+   "El primero ... dejas de estar detrás de todo el mundo"
+  ],
+  [
+   "T7",
+   148.24,
+   156.24,
+   0.3,
+   "El segundo ... qué se viene"
+  ],
+  [
+   "T8",
+   159.82,
+   166.98,
+   0.22,
+   "Y el tercero está buenísimo ... organizados"
+  ],
+  [
+   "T9",
+   175.67,
+   178.8,
+   0.34,
+   "Tú solo revisas, corrige si hace falta y envías"
+  ],
+  [
+   "T10",
+   181.1,
+   182.94,
+   0.2,
+   "Y yo les pregunto algo en serio"
+  ],
+  [
+   "T11",
+   189.97,
+   191.48,
+   0.3,
+   "¿A ustedes qué les quita más trabajo?"
+  ],
+  [
+   "T12",
+   193.77,
+   195.82,
+   0.3,
+   "Comenta uno, dos o tres"
+  ],
+  [
+   "T13",
+   199.66,
+   201.68,
+   0.26,
+   "Porque estamos empezando a construir Loovo"
+  ],
+  [
+   "T14",
+   206.33,
+   208.16,
+   0.2,
+   "Y quiero saber cuál les serviría más"
+  ],
+  [
+   "T15",
+   209.4,
+   211.1,
+   0.0,
+   "Estoy pendiente de sus comentarios"
+  ]
+ ]
+}

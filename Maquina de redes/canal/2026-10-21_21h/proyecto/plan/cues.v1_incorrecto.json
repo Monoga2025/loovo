@@ -1,0 +1,85 @@
+{
+ "timeline": "corte (build/clean.mp4), segundos",
+ "duration_clean_mp4": 39.637,
+ "take_offsets_cut_minus_src": {
+  "1": -21.702,
+  "2": -21.99,
+  "3": -23.35,
+  "4": -40.417500000000004,
+  "5": -70.457,
+  "6": -72.1925,
+  "7": -92.589,
+  "8": -92.99799999999999,
+  "9": -93.467,
+  "10": -145.503
+ },
+ "keywords": [
+  {
+   "w": "9 PM",
+   "src": 23.9,
+   "toma": 1,
+   "cut_t": 2.198
+  },
+  {
+   "w": "RESPUESTA",
+   "src": 26.96,
+   "toma": 2,
+   "cut_t": 4.97
+  },
+  {
+   "w": "PIJAMA",
+   "src": 31.34,
+   "toma": 3,
+   "cut_t": 7.99
+  },
+  {
+   "w": "IA",
+   "src": 51.32,
+   "toma": 4,
+   "cut_t": 10.902
+  },
+  {
+   "w": "PRIMERO",
+   "src": 53.2,
+   "toma": 4,
+   "cut_t": 12.782
+  },
+  {
+   "w": "RETENCIÓN",
+   "src": 85.58,
+   "toma": 5,
+   "cut_t": 15.123
+  },
+  {
+   "w": "VENCE",
+   "src": 88.04,
+   "toma": 5,
+   "cut_t": 17.583
+  },
+  {
+   "w": "IGUAL",
+   "src": 92.54,
+   "toma": 6,
+   "cut_t": 20.348
+  },
+  {
+   "w": "ESTATUTO",
+   "src": 116.96,
+   "toma": 7,
+   "cut_t": 24.371
+  },
+  {
+   "w": "CRITERIO",
+   "src": 124.08,
+   "toma": 9,
+   "cut_t": 30.613
+  },
+  {
+   "w": "COMENTARIOS",
+   "src": 184.76,
+   "toma": 10,
+   "cut_t": 39.257
+  }
+ ],
+ "nota": "cut_t = inicio de la palabra en el corte. Whisper infla el final de la última palabra de cada toma; no usar su cut_end. Las palabras RESPUESTA, PIJAMA, PRIMERO y VENCE faltan en build/words_out.json (7 palabras de 159); hay que añadirlas para los subtítulos."
+}

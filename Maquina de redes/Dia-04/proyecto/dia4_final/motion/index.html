@@ -1,0 +1,516 @@
+<!doctype html>
+<!-- Día 4 final · marca personal · estilo Adrià Solà sobre la marca Loovo (blanco pastel + dorado suave + carbón).
+     Generado por scripts/build_html.py desde esta plantilla: los tiempos salen de plan/edl.json y plan/words_tl.json.
+     Reglas: border-radius 0 en todo, sin recortar su silueta, sin fondos dorados, sin verde/lima, texto >= 80 px. -->
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>Dia 4 final</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Playfair"; font-style: italic; font-weight: 400; src: url("assets/fonts/playfair-display-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Playfair"; font-style: italic; font-weight: 700; src: url("assets/fonts/playfair-display-latin-700-italic.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 500; src: url("assets/fonts/montserrat-500.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-600.woff2") format("woff2"); }
+* { box-sizing:border-box; margin:0; padding:0; border-radius:0 !important; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:#F6F4EF; font-family:"Montserrat", sans-serif; }
+.full { position:absolute; left:0; top:0; width:1080px; height:1920px; }
+.sc { overflow:hidden; }
+.dots { background-color:#F6F4EF; background-image:radial-gradient(circle at 12px 12px, rgba(170,165,156,.42) 0, rgba(170,165,156,.42) 1.1px, rgba(170,165,156,0) 1.6px); background-size:24px 24px; }
+.it { font-family:"Playfair", serif; font-style:italic; }
+.ph { position:absolute; object-fit:cover; box-shadow:0 34px 70px -24px rgba(90,74,44,.34), 0 8px 22px rgba(90,74,44,.10); }
+.hair { position:absolute; height:2px; background:#C8B07A; transform-origin:0 50%; }
+.w { display:inline-block; white-space:pre; }
+
+/* ===== entreno02 (bloque 2, aprobado "perfecto") ===== */
+#s1 { z-index:20; } #s1in { transform-origin:50% 55%; }
+#a1 { position:absolute; left:0; top:300px; width:1080px; text-align:center; font-weight:600; font-size:150px; line-height:1; letter-spacing:-4px; color:#2A2926; }
+#a2 { position:absolute; left:0; top:456px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:168px; line-height:1; color:#A88F57; }
+#tile { position:absolute; left:290px; top:820px; width:500px; height:500px; }
+.blk { position:absolute; background:linear-gradient(155deg,#EDE1C2 0%,#D6C293 45%,#C8B07A 100%); box-shadow:0 30px 60px -26px rgba(90,74,44,.35); }
+#bA { left:0; top:0; width:250px; height:250px; }
+#bB { left:250px; top:0; width:250px; height:250px; background:linear-gradient(155deg,#E6D6AE 0%,#C8B07A 100%); }
+#bC { left:0; top:250px; width:500px; height:250px; background:linear-gradient(155deg,#D6C293 0%,#A88F57 100%); }
+#tphoto { left:95px; top:95px; width:310px; height:310px; }
+#h1 { left:90px; top:760px; width:900px; } #h2 { left:90px; top:1380px; width:900px; }
+#f0 { z-index:5; background:#F6F4EF; }
+#f0sq { position:absolute; left:230px; top:660px; width:620px; height:620px; background:#2A2926; transform:rotate(-9deg); filter:blur(5px); }
+#s2 { z-index:19; }
+#photos { position:absolute; left:150px; top:760px; width:780px; height:640px; overflow:hidden; box-shadow:0 40px 80px -30px rgba(90,74,44,.38), 0 8px 24px rgba(90,74,44,.10); }
+#photos img { position:absolute; left:0; top:0; width:780px; height:640px; object-fit:cover; filter:saturate(.82) sepia(.08); }
+#ff { position:absolute; left:120px; top:730px; width:840px; height:700px; }
+#ff b { position:absolute; width:34px; height:34px; background:#C8B07A; }
+#pa { left:760px; top:1330px; width:250px; height:190px; filter:saturate(.8) sepia(.1); }
+#pb { left:70px; top:640px; width:240px; height:180px; filter:saturate(.8) sepia(.1); }
+#c2 { position:absolute; left:0; top:300px; width:1080px; text-align:center; z-index:24; }
+#c2 .k { display:block; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:200px; line-height:1; color:#A88F57; }
+#c2 .r { display:block; margin-top:18px; font-weight:600; font-size:96px; line-height:1; letter-spacing:-2px; color:#2A2926; }
+#c3 { position:absolute; left:0; top:330px; width:1080px; text-align:center; z-index:24; white-space:nowrap; }
+#c3 .n { font-weight:600; font-size:150px; letter-spacing:-4px; color:#2A2926; vertical-align:baseline; }
+#c3 .u { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:270px; line-height:1; color:#A88F57; vertical-align:baseline; display:inline-block; }
+#s3 { z-index:18; }
+#box { left:150px; top:760px; width:780px; height:670px; }
+.ghost { position:absolute; left:150px; top:760px; width:780px; height:670px; object-fit:cover; mix-blend-mode:multiply; }
+#gA { filter:sepia(1) saturate(2.2) hue-rotate(-8deg) brightness(1.05); } #gB { filter:grayscale(1) brightness(.75); }
+#slice { position:absolute; left:0; top:0; width:1080px; height:1920px; clip-path:inset(47% 0 41% 0); }
+#e2cap { position:absolute; left:0; top:1340px; width:1080px; text-align:center; z-index:10; white-space:nowrap;
+  font-weight:600; font-size:86px; line-height:1.1; letter-spacing:-1px; color:#FBF8F1; text-shadow:0 2px 6px rgba(20,16,10,.35), 0 6px 26px rgba(20,16,10,.35); }
+#e2cap .k { color:#E6D6AE; } #e2cap > span { position:absolute; left:0; top:0; width:1080px; }
+#no1 { position:absolute; left:70px; top:250px; width:460px; z-index:13; text-align:left; font-family:"Playfair"; font-style:italic; font-weight:700;
+  font-size:250px; line-height:1; color:#A88F57; white-space:nowrap; transform-origin:50% 50%; text-shadow:0 2px 3px rgba(60,48,26,.18), 0 10px 40px rgba(90,74,44,.28); }
+#no1 sup { font-size:.42em; vertical-align:.95em; margin-left:2px; }
+#e2plate { z-index:12; }
+#plnum { position:absolute; left:0; top:640px; width:1080px; text-align:center; z-index:14; font-weight:600; font-size:96px; letter-spacing:-2px; color:#8C887F; }
+#ph3 { left:240px; top:1290px; width:600px; z-index:14; }
+
+/* ===== persona: sombra inferior y subtítulos ===== */
+#base, #lib { z-index:1; }
+#lib { z-index:2; }
+#shade { z-index:9; background:linear-gradient(180deg, rgba(0,0,0,0) 52%, rgba(30,24,16,.20) 66%, rgba(30,24,16,.22) 76%, rgba(0,0,0,0) 88%); }
+#caps { z-index:10; }
+.cap { position:absolute; left:0; bottom:500px; width:1080px; text-align:center; white-space:nowrap; font-weight:600; font-size:86px; line-height:1.08;
+  letter-spacing:-1px; color:#FBF8F1; text-shadow:0 2px 6px rgba(20,16,10,.38), 0 6px 26px rgba(20,16,10,.38); }
+.cap .ln { display:block; }
+.cap .k { color:#E6D6AE; }
+.cap .s { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:150px; line-height:1; color:#E6D6AE; letter-spacing:0; }
+.cap .x { position:relative; }
+.cap .x i { position:absolute; left:-4%; top:52%; width:108%; height:8px; background:#C8B07A; transform-origin:0 50%; }
+
+/* ===== gancho: título cinético grande sobre la persona ===== */
+.kin { position:absolute; z-index:11; color:#FBF8F1; font-weight:600; letter-spacing:-2px; white-space:nowrap;
+  text-shadow:0 2px 8px rgba(20,16,10,.40), 0 10px 34px rgba(20,16,10,.38); }
+.kin .ln { display:block; }
+.kin .s { font-family:"Playfair"; font-style:italic; font-weight:700; color:#E6D6AE; letter-spacing:0; }
+#gk1, #gk2 { left:0; width:1080px; text-align:center; top:1010px; font-size:100px; line-height:1.12; }
+#gk1 .s, #gk2 .s { font-size:170px; line-height:1.05; }
+
+/* ===== lista de fracasos ===== */
+#fl { position:absolute; left:84px; top:1000px; z-index:11; color:#FBF8F1; font-weight:600; font-size:82px; line-height:92px; letter-spacing:-1.5px;
+  white-space:nowrap; text-shadow:0 2px 6px rgba(20,16,10,.4), 0 8px 28px rgba(20,16,10,.4); }
+#fl .hd { color:#E6D6AE; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:96px; letter-spacing:0; }
+#fl .it2 { position:relative; display:block; }
+#fl .it2 b { display:inline-block; width:22px; height:22px; background:#C8B07A; margin-right:26px; vertical-align:12px; }
+#fl .it2 i { position:absolute; left:40px; top:46px; height:7px; background:#C8B07A; transform-origin:0 50%; }
+
+/* ===== citas de Esencialismo ===== */
+#qp { z-index:30; } #qcam { transform-origin:50% 45%; }
+#qmark { position:absolute; left:70px; top:250px; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:300px; line-height:1; color:#C8B07A; }
+.qt { position:absolute; left:96px; top:470px; width:900px; color:#2A2926; font-family:"Playfair"; font-style:italic; font-weight:400; font-size:84px; line-height:1.22; white-space:nowrap; }
+.qt .ln { display:block; }
+.qt .k { font-weight:700; font-size:118px; line-height:1.05; color:#A88F57; }
+#qattr { position:absolute; left:96px; top:1250px; font-weight:500; font-size:44px; letter-spacing:.5px; color:#8C887F; white-space:nowrap; }
+#qhair { left:96px; top:1220px; width:520px; }
+#qbook { position:absolute; left:96px; top:1330px; font-weight:600; font-size:34px; letter-spacing:6px; color:#A88F57; }
+
+/* ===== títulos sobre la biblioteca 2.5D ===== */
+.lt { position:absolute; z-index:12; left:84px; top:300px; color:#FBF8F1; font-weight:600; font-size:88px; line-height:1.12; letter-spacing:-1.5px; white-space:nowrap;
+  text-shadow:0 2px 8px rgba(10,8,5,.55), 0 10px 40px rgba(10,8,5,.55); transform-origin:456px 660px; }
+.lt .ln { display:block; }
+.lt .s { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:150px; line-height:1.05; color:#E6D6AE; letter-spacing:0; }
+#lt2 { left:0; width:1080px; text-align:center; transform-origin:540px 660px; }
+
+/* ===== motion graphic (Adrià 5:28 en paleta Loovo) ===== */
+#mg { z-index:30; }
+#mgcam { transform-origin:50% 50%; }
+#mgbg { position:absolute; left:-120px; top:-120px; width:1320px; height:2160px; }
+#mgtx { position:absolute; left:84px; top:250px; color:#2A2926; font-weight:600; font-size:84px; line-height:104px; letter-spacing:-2px; white-space:nowrap; }
+#mgtx .ln { display:block; }
+#mgtx .lt3 { color:#8C887F; }
+#kbox { position:relative; display:inline-block; vertical-align:-36px; height:170px; margin-left:10px; }
+#kbg { position:absolute; left:0; top:0; height:170px; width:0; background:#2A2926; box-shadow:0 30px 60px -26px rgba(42,41,38,.45); }
+#kcur { position:absolute; left:0; top:0; width:12px; height:170px; background:#C8B07A; }
+#ktx { position:relative; display:inline-block; width:470px; text-align:center; font-weight:600; font-size:140px; line-height:170px; letter-spacing:-3px; color:#E6D6AE; }
+#shelf { position:absolute; left:0; top:0; width:1080px; height:1920px; }
+.pb { position:absolute; width:230px; height:230px; box-shadow:0 40px 70px -28px rgba(60,48,26,.45), 0 10px 24px rgba(60,48,26,.12); }
+.pb.c { background:#2A2926; } .pb.l { background:#FBF8F1; }
+.pb .ico { position:absolute; left:55px; top:55px; width:120px; height:120px; }
+.pb.c .ico { background:#E6D6AE; } .pb.l .ico { background:#2A2926; }
+.pb .tg { position:absolute; left:0; bottom:-58px; width:230px; text-align:center; font-weight:600; font-size:30px; letter-spacing:3px; color:#8C887F; }
+#mgline { left:84px; top:830px; width:912px; }
+
+/* ===== placa final ===== */
+#pl { z-index:35; }
+#pldia { position:absolute; left:0; top:640px; width:1080px; text-align:center; font-weight:600; font-size:230px; line-height:1; letter-spacing:-8px; color:#2A2926; }
+#plde { position:absolute; left:0; top:900px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:170px; line-height:1; color:#A88F57; }
+#plhair { left:300px; top:1120px; width:480px; }
+#pltag { position:absolute; left:0; top:1170px; width:1080px; text-align:center; font-weight:600; font-size:64px; letter-spacing:-1px; color:#8C887F; }
+
+/* ===== destello crema / grano ===== */
+#leak { z-index:40; background:radial-gradient(ellipse 70% 60% at 18% 40%, rgba(255,251,242,1) 0%, rgba(240,226,190,.85) 35%, rgba(214,194,147,0) 75%); mix-blend-mode:screen; }
+#white { z-index:41; background:#FFFBF2; }
+#grain { position:absolute; left:-200px; top:-200px; width:1480px; height:2320px; z-index:45; background:url("assets/grano.png"); opacity:.05; mix-blend-mode:multiply; pointer-events:none; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="85.66" data-width="1080" data-height="1920">
+
+  <video id="base" class="clip full" src="assets/base.mp4" data-start="0" data-duration="85.66" data-track-index="1" muted playsinline></video>
+  <video id="lib" class="clip full" src="assets/lib.mp4" data-start="45.13" data-duration="6.91" data-track-index="2" muted playsinline></video>
+  <div id="shade" class="full"></div>
+  <div id="caps" class="full"></div>
+
+  <div id="gk1" class="kin"></div>
+  <div id="gk2" class="kin"></div>
+  <div id="fl"></div>
+  <div id="lt1" class="lt"></div>
+  <div id="lt2" class="lt"></div>
+
+  <!-- bloque 2: entreno02 -->
+  <div id="e2cap">
+    <span id="p1">No, él <span class="k">sabe</span></span>
+    <span id="p2">es el <span class="k">número 1</span></span>
+    <span id="p3">y por eso es</span>
+    <span id="p4">el <span class="k">número 1</span></span>
+  </div>
+  <div id="e2plate" class="full dots"></div>
+  <div id="plnum">el número</div>
+  <i class="hair" id="ph3"></i>
+  <div id="no1">N<sup>º</sup>1</div>
+  <div id="s3" class="full sc dots">
+    <div id="s3in" class="full">
+      <img class="ghost" id="gA" src="assets/img/box.jpg" alt="" />
+      <img class="ghost" id="gB" src="assets/img/box.jpg" alt="" />
+      <img class="ph" id="box" src="assets/img/box.jpg" alt="" />
+    </div>
+    <div id="slice"><div class="full dots"><img class="ph" src="assets/img/box.jpg" alt="" style="left:150px;top:760px;width:780px;height:670px;filter:sepia(1) saturate(1.6)" /></div></div>
+  </div>
+  <div id="s2" class="full sc dots">
+    <div id="s2in" class="full">
+      <div id="photos">
+        <img id="q1" src="assets/img/f1.jpg" alt="" /><img id="q2" src="assets/img/f2.jpg" alt="" /><img id="q3" src="assets/img/f3.jpg" alt="" />
+        <img id="q4" src="assets/img/f4.jpg" alt="" /><img id="q5" src="assets/img/f5.jpg" alt="" />
+      </div>
+      <img id="pa" class="ph" src="assets/img/box.jpg" alt="" />
+      <img id="pb" class="ph" src="assets/img/f2.jpg" alt="" />
+    </div>
+    <div id="ff"><b style="left:0;top:0"></b><b style="right:0;top:0"></b><b style="left:0;bottom:0"></b><b style="right:0;bottom:0"></b></div>
+  </div>
+  <div id="c2"><span class="k">¿piensa</span><span class="r">que es el</span></div>
+  <div id="c3"><span class="n">número&nbsp;</span><span class="u" id="u1">1?</span></div>
+  <div id="s1" class="full sc dots">
+    <div id="s1in" class="full">
+      <i class="hair" id="h1"></i><i class="hair" id="h2"></i>
+      <div id="tile"><div class="blk" id="bA"></div><div class="blk" id="bB"></div><div class="blk" id="bC"></div><img class="ph" id="tphoto" src="assets/img/f1.jpg" alt="" /></div>
+      <div id="a1">Cristiano</div>
+      <div id="a2">Ronaldo</div>
+    </div>
+    <div id="f0" class="full"><div id="f0sq"></div></div>
+  </div>
+
+  <!-- citas -->
+  <div id="qp" class="full sc">
+    <div id="qcam" class="full dots">
+      <div id="qmark">&ldquo;</div>
+      <div id="qt1" class="qt"></div>
+      <div id="qt2" class="qt"></div>
+      <i class="hair" id="qhair"></i>
+      <div id="qattr">— Esencialismo, Greg McKeown</div>
+    </div>
+  </div>
+
+  <!-- motion graphic -->
+  <div id="mg" class="full sc">
+    <div id="mgcam" class="full">
+      <div id="mgbg" class="dots"></div>
+      <div id="shelf"></div>
+      <i class="hair" id="mgline"></i>
+      <div id="mgtx"></div>
+    </div>
+  </div>
+
+  <!-- placa final -->
+  <div id="pl" class="full dots">
+    <div id="pldia"></div>
+    <div id="plde"></div>
+    <i class="hair" id="plhair"></i>
+    <div id="pltag">#42DiasLoovo</div>
+  </div>
+
+  <div id="leak" class="full"></div>
+  <div id="white" class="full"></div>
+  <div id="grain"></div>
+</div>
+
+<script>
+// ===== variables fáciles de cambiar =====
+const DIA = 5;            // día por calendario (Día 1 = 7 oct). El 11 oct = Día 5 y él lo dice en cámara.
+const DE = 42;
+// ===== datos generados (EDL + palabras) =====
+const D = {"edl": {"G": {"start": 0.0, "end": 4.18}, "C1": {"start": 4.33, "end": 6.51}, "C2": {"start": 6.51, "end": 9.85}, "CP": {"start": 9.85, "end": 10.63}, "T1": {"start": 10.63, "end": 13.31}, "T2": {"start": 13.31, "end": 24.55}, "T3": {"start": 24.55, "end": 26.55}, "A1": {"start": 26.55, "end": 34.95}, "Q2": {"start": 34.95, "end": 40.11}, "Q1": {"start": 40.41, "end": 45.11}, "GI1": {"start": 45.36, "end": 48.72}, "GI2": {"start": 48.72, "end": 50.1}, "GI3": {"start": 50.1, "end": 51.74}, "PR1": {"start": 51.99, "end": 55.11}, "PR2": {"start": 55.11, "end": 59.67}, "PR3": {"start": 60.12, "end": 61.92}, "CV": {"start": 61.92, "end": 71.38}, "CI1": {"start": 71.38, "end": 77.18}, "CI2": {"start": 77.18, "end": 83.26}, "PL": {"start": 83.26, "end": 85.66}}, "words": {"G": [0.0, 0.14, 0.63, 1.1, 1.87, 2.25, 2.38, 2.59, 2.77, 3.12, 3.3, 3.49, 3.54, 3.59, 3.77, 3.85], "C1": [4.5, 4.93, 5.3, 5.61, 5.72, 5.85, 6.01, 6.23], "C2": [7.03, 7.35, 7.47, 7.75, 7.86, 8.02, 8.2, 8.34, 8.6, 8.72, 8.92, 9.08, 9.28, 9.34, 9.46], "T1": [10.72, 10.84, 11.3, 11.7, 11.89, 12.4, 12.76], "T2": [13.36, 14.42, 14.65, 14.71, 14.86, 15.17, 16.42, 16.79, 18.33, 18.6, 18.78, 19.04, 19.43, 19.54, 21.06, 21.28, 21.47, 21.6, 22.04, 22.12, 23.23, 23.47, 23.71, 23.84, 24.11, 24.33], "T3": [24.62, 24.78, 24.95, 25.32, 25.51, 25.69, 25.9, 26.21, 26.33], "A1": [26.69, 26.89, 26.97, 27.24, 27.38, 27.54, 27.79, 28.96, 29.02, 29.37, 29.47, 29.86, 29.98, 30.59, 30.89, 30.94, 31.19, 32.05, 32.33, 32.72, 33.09, 33.4, 33.64, 33.75, 33.87, 34.19, 34.3, 34.37, 34.66, 34.73], "Q2": [35.17, 35.37, 35.82, 36.1, 36.32, 36.49, 36.82, 36.87, 37.13, 37.82, 38.21, 38.77, 39.32, 39.68, 39.74], "Q1": [40.47, 40.74, 40.86, 41.15, 41.23, 41.91, 42.24, 43.0, 43.45, 43.71, 44.06, 44.18, 44.25, 44.58], "GI1": [45.48, 45.77, 46.0, 46.49, 47.27, 47.8, 47.97, 48.25], "GI2": [48.82, 48.92, 49.35], "GI3": [50.35, 50.62, 50.95, 51.17, 51.33, 51.43], "PR1": [52.18, 52.6, 52.67, 53.16, 53.46, 54.01, 54.46, 54.72], "PR2": [55.26, 56.06, 56.71, 57.38, 57.68, 57.77, 58.96, 59.01, 59.1, 59.17, 59.22, 59.36, 59.43], "PR3": [60.41, 60.55, 60.76, 60.9, 61.08, 61.26, 61.59], "CV": [61.99, 62.13, 62.27, 62.58, 63.15, 63.39, 63.48, 63.59, 63.82, 63.95, 64.04, 64.67, 64.86, 64.92, 65.1, 65.21, 65.68, 65.73, 66.08, 66.17, 66.23, 66.32, 67.39, 67.53, 67.66, 67.73, 68.18, 68.87, 68.97, 70.35, 70.44, 70.54, 70.95, 71.0], "CI1": [71.48, 71.91, 72.34, 72.9, 73.21, 73.36, 73.9, 73.97, 74.27, 74.47, 74.55, 74.64, 75.08, 75.33, 75.68, 75.82, 76.11, 76.25, 76.43, 76.67, 76.78], "CI2": [77.26, 77.42, 77.6, 78.03, 78.52, 79.26, 79.63, 80.01, 80.26, 81.24, 81.46, 81.56, 81.74, 81.88, 82.17, 82.32, 82.57, 82.66, 82.87]}, "total": 85.66, "lib0": 45.13, "libA": 3.69, "libB0": 48.62, "libB": 3.42};
+const S = (id) => D.edl[id].start, EN = (id) => D.edl[id].end;
+const w = (id, i) => D.words[id][i];
+const F = 1 / 30, LEAD = 2 * F;   // títulos: onset de voz - 2 cuadros
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const show = (s, t) => tl.set(s, { autoAlpha: 1 }, t);
+const hide = (s, t) => tl.set(s, { autoAlpha: 0 }, t);
+const inBlur = (s, t, d = 3 * F, px = 14) => tl.fromTo(s, { autoAlpha: 0, filter: `blur(${px}px)` }, { autoAlpha: 1, filter: "blur(0px)", duration: d, ease: "power2.out", immediateRender: false }, t);
+const outBlur = (s, t, d = 3 * F) => tl.to(s, { autoAlpha: 0, filter: "blur(10px)", duration: d, ease: "power1.in" }, t);
+const esc = (x) => x.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+// texto con marcas: *clave* (dorado), ~serif~ (Playfair grande), _tachado_ ; '|' = salto de línea
+function rich(t) {
+  return t.split("|").map((ln) => '<span class="ln">' + esc(ln)
+    .replace(/~([^~]+)~/g, '<span class="s">$1</span>')
+    .replace(/\*([^*]+)\*/g, '<span class="k">$1</span>')
+    .replace(/_([^_]+)_/g, '<span class="x">$1<i></i></span>') + "</span>").join("");
+}
+// ---------- subtítulos por tarjeta (2-4 palabras, fundido + desenfoque 2 cuadros, salida seca) ----------
+let capN = 0;
+function card(text, t0, t1) {
+  const el = document.createElement("div"); el.className = "cap"; el.id = "cap" + (capN++); el.innerHTML = rich(text);
+  document.getElementById("caps").appendChild(el);
+  gsap.set(el, { autoAlpha: 0 });
+  tl.fromTo(el, { autoAlpha: 0, filter: "blur(8px)" }, { autoAlpha: 1, filter: "blur(0px)", duration: 2 * F, ease: "power2.out", immediateRender: false }, t0 - LEAD);
+  el.querySelectorAll(".x i").forEach((i) => { gsap.set(i, { scaleX: 0 }); tl.to(i, { scaleX: 1, duration: 0.22, ease: "power2.out" }, t0 + 0.35); });
+  tl.set(el, { autoAlpha: 0 }, t1 - LEAD);
+  return el;
+}
+// ---------- títulos cinéticos: palabras en su sitio final, entran con desenfoque + subida (serif además escala 0,6->1) ----------
+function kin(box, lines, cls) {
+  const el = document.getElementById(box);
+  el.innerHTML = lines.map((ln) => '<span class="ln">' + ln.map((wd) => `<span class="w${wd.c ? " " + wd.c : ""}">${esc(wd.t)}</span>`).join(" ") + "</span>").join("");
+  const spans = el.querySelectorAll(".w"); let k = 0;
+  lines.forEach((ln) => ln.forEach((wd) => {
+    const sp = spans[k++]; const serif = (wd.c || "").includes("s") || (wd.c || "").includes("k");
+    if (wd.at <= 0.001) { gsap.set(sp, { autoAlpha: 1 }); return; }   // palabra del cuadro 0: ya visible
+    gsap.set(sp, { autoAlpha: 0 });
+    tl.fromTo(sp, { autoAlpha: 0, y: 22, filter: "blur(10px)", scale: serif ? 0.6 : 1 },
+      { autoAlpha: 1, y: 0, filter: "blur(0px)", scale: 1, duration: (serif ? 7 : 5) * F, ease: "power2.out", immediateRender: false }, Math.max(0, wd.at - LEAD));
+  }));
+  return el;
+}
+const W_ = (t, id, i, c) => ({ t, at: w(id, i), c });
+
+// ============ 1. GANCHO (0 - 4,18): persona + título cinético grande; el primer cuadro ya tiene texto ============
+kin("gk1", [[W_("Si", "G", 0), W_("yo", "G", 1), W_("mismo", "G", 2)], [W_("no", "G", 3), W_("creo", "G", 4), W_("que", "G", 5), W_("soy", "G", 6)], [W_("el mejor,", "G", 7, "s")]]);
+tl.to("#gk1", { autoAlpha: 0, y: -40, filter: "blur(12px)", duration: 4 * F, ease: "power1.in" }, w("G", 9) - LEAD - 4 * F);
+kin("gk2", [[W_("¿quién", "G", 9), W_("lo", "G", 10), W_("va", "G", 11)], [W_("a", "G", 12), W_("creer", "G", 13)], [W_("por mí?", "G", 14, "s")]]);
+hide("#gk2", S("C1"));
+show("#shade", 0); hide("#shade", S("C1"));
+
+// ============ 2. PRUEBA: entreno02 desplazado a S("C1") ============
+(function entreno02(T0) {
+  const t2 = gsap.timeline();
+  const sh = (s, t) => t2.set(s, { autoAlpha: 1 }, t), hd = (s, t) => t2.set(s, { autoAlpha: 0 }, t);
+  const ib = (s, t, d = 3 * F, px = 14) => t2.fromTo(s, { autoAlpha: 0, filter: `blur(${px}px)` }, { autoAlpha: 1, filter: "blur(0px)", duration: d, ease: "power2.out", immediateRender: false }, t);
+  const ob = (s, t, d = 3 * F) => t2.to(s, { autoAlpha: 0, filter: "blur(10px)", duration: d, ease: "power1.in" }, t);
+  gsap.set(["#s1", "#s2", "#s3", "#c2", "#c3", "#u1", "#slice", "#gA", "#gB", "#pa", "#pb", "#e2plate", "#plnum", "#no1", "#p1", "#p2", "#p3", "#p4", "#a1", "#a2", "#tphoto"], { autoAlpha: 0 });
+  gsap.set(["#q2", "#q3", "#q4", "#q5"], { autoAlpha: 0 });
+  gsap.set(["#h1", "#h2", "#ph3"], { scaleX: 0 });
+  sh("#s1", 0); hd("#f0", 2 * F);
+  t2.fromTo("#s1in", { scale: 1 }, { scale: 1.035, duration: 0.867, ease: "none" }, 0);
+  t2.to("#h1", { scaleX: 1, duration: 0.35, ease: "power3.out" }, 2 * F);
+  t2.to("#h2", { scaleX: 1, duration: 0.35, ease: "power3.out" }, 4 * F);
+  t2.fromTo("#bA", { x: -150, y: -90, opacity: 0, filter: "blur(18px)" }, { x: 0, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 2 * F);
+  t2.fromTo("#bB", { x: 160, y: -60, opacity: 0, filter: "blur(18px)" }, { x: 0, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 3 * F);
+  t2.fromTo("#bC", { y: 170, opacity: 0, filter: "blur(18px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 4 * F);
+  t2.fromTo("#tphoto", { autoAlpha: 0, scale: 0.7 }, { autoAlpha: 1, scale: 1, duration: 0.2, ease: "back.out(1.8)", immediateRender: false }, 0.24);
+  ib("#a1", 0.10); ib("#a2", 0.32);
+  t2.to("#s1in", { filter: "blur(10px) brightness(1.12)", duration: 2 * F, ease: "none" }, 0.80);
+  hd("#s1", 0.867);
+  sh("#s2", 0.867);
+  t2.fromTo("#white", { autoAlpha: 0.85 }, { autoAlpha: 0, duration: 3 * F, ease: "none", immediateRender: false }, 0.867);
+  t2.fromTo("#s2in", { filter: "blur(14px)" }, { filter: "blur(0px)", duration: 3 * F, ease: "none", immediateRender: false }, 0.867);
+  [["#q1", 0.867], ["#q2", 1.033], ["#q3", 1.133], ["#q4", 1.3], ["#q5", 1.4], ["#q1", 1.567], ["#q2", 1.7], ["#q4", 1.8]].forEach(([p, t], i) => {
+    ["#q1", "#q2", "#q3", "#q4", "#q5"].forEach((q) => { if (q !== p) hd(q, t); });
+    sh(p, t); t2.set("#ff", { scale: i % 2 ? 1.04 : 1 }, t);
+  });
+  sh("#pa", 1.133); hd("#pa", 1.3); sh("#pb", 1.4); hd("#pb", 1.567); sh("#pa", 1.8);
+  t2.fromTo("#photos", { scale: 1 }, { scale: 1.03, duration: 1.2, ease: "none" }, 0.867);
+  ib("#c2", 0.88); ob("#c2", 1.36, 2 * F);
+  ib("#c3", 1.40); ib("#u1", 1.60, 3 * F, 16);
+  t2.fromTo("#u1", { scale: 1.25 }, { scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, 1.60);
+  hd("#s2", 2.067);
+  sh("#s3", 2.067);
+  [[2.067, "invert(1) sepia(.7) saturate(1.3)", true, 24], [2.1, "none", false, -36], [2.133, "invert(1) sepia(.7) saturate(1.3)", true, 0],
+   [2.167, "contrast(1.3)", true, 30], [2.2, "none", false, 0], [2.233, "brightness(1.15)", true, -18], [2.267, "none", false, 0]].forEach(([t, f, split, dx]) => {
+    t2.set("#s3in", { filter: f }, t); t2.set(["#gA", "#gB"], { autoAlpha: split ? 0.75 : 0 }, t);
+    t2.set("#gA", { x: split ? 18 : 0 }, t); t2.set("#gB", { x: split ? -18 : 0 }, t);
+    t2.set("#slice", { autoAlpha: dx ? 1 : 0, x: dx }, t); t2.set("#c3", { x: dx ? -dx * 0.6 : 0 }, t);
+  });
+  t2.fromTo("#box", { scale: 1 }, { scale: 1.04, duration: 0.53, ease: "none" }, 2.067);
+  t2.fromTo("#leak", { autoAlpha: 0, x: -260 }, { autoAlpha: 1, x: 120, duration: 3 * F, ease: "power1.in", immediateRender: false }, 2.50);
+  t2.fromTo("#white", { autoAlpha: 0 }, { autoAlpha: 1, duration: 3 * F, ease: "power1.in", immediateRender: false }, 2.50);
+  hd(["#s3", "#c3"], 2.60);
+  t2.set("#leak", { autoAlpha: 0 }, 2.70);
+  t2.to("#white", { autoAlpha: 0, duration: 4 * F, ease: "sine.out" }, 2.70);
+  t2.fromTo("#base", { filter: "blur(6px) brightness(1.08)" }, { filter: "blur(0px) brightness(1)", duration: 5 * F, ease: "sine.out", immediateRender: false }, 2.66);
+  sh("#shade", 2.62);
+  const cd = (s, a, b) => { ib(s, a, 2 * F, 8); t2.set(s, { autoAlpha: 0 }, b); };
+  cd("#p1", 2.66, 3.30); cd("#p2", 3.32, 4.18); cd("#p3", 4.20, 4.70); cd("#p4", 4.70, 5.36);
+  t2.fromTo("#no1", { autoAlpha: 0, filter: "blur(18px)", y: 24 }, { autoAlpha: 1, filter: "blur(0px)", y: 0, duration: 0.35, ease: "sine.inOut", immediateRender: false }, 4.92);
+  t2.to("#shade", { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" }, 5.36);
+  t2.fromTo("#e2plate", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.34, ease: "sine.inOut", immediateRender: false }, 5.36);
+  t2.to("#no1", { x: 240, y: 620, scale: 1.45, duration: 0.55, ease: "sine.inOut" }, 5.40);
+  ib("#plnum", 5.90, 5 * F, 10);
+  t2.to("#ph3", { scaleX: 1, duration: 0.45, ease: "sine.inOut" }, 5.95);
+  tl.add(t2, T0);
+})(S("C1"));
+
+// ---------- destello crema hacia la persona (corte en el pico) ----------
+function destello(T, hideList) {
+  tl.fromTo("#leak", { autoAlpha: 0, x: -260 }, { autoAlpha: 1, x: 120, duration: 3 * F, ease: "power1.in", immediateRender: false }, T - 3 * F);
+  tl.fromTo("#white", { autoAlpha: 0 }, { autoAlpha: 1, duration: 3 * F, ease: "power1.in", immediateRender: false }, T - 3 * F);
+  if (hideList) hide(hideList, T);
+  tl.set("#leak", { autoAlpha: 0 }, T + 3 * F);
+  tl.to("#white", { autoAlpha: 0, duration: 4 * F, ease: "sine.out" }, T + 3 * F);
+  tl.fromTo("#base", { filter: "blur(6px) brightness(1.08)" }, { filter: "blur(0px) brightness(1)", duration: 5 * F, ease: "sine.out", immediateRender: false }, T + 2 * F);
+}
+gsap.set(["#leak", "#white"], { autoAlpha: 0 });
+
+// ============ 3. TENSIÓN ============
+destello(S("T1"), ["#e2plate", "#plnum", "#ph3", "#no1"]);
+show("#shade", S("T1"));
+card("En realidad siento", w("T1", 0), w("T1", 3));
+card("que tuve", w("T1", 3), w("T1", 5));
+card("muchos *fracasos*", w("T1", 5), S("T2"));
+// lista: aparece cada fracaso al decirlo y se tacha en dorado
+document.getElementById("fl").innerHTML = '<span class="it2 hd" id="flh">Fracasé con:</span>' +
+  [["marketing", 3], ["cámaras de seguridad", 9], ["celulares", 17], ["logos", 23]].map(([t], i) => `<span class="it2" id="fi${i}"><b></b>${t}<i style="width:${[420, 880, 400, 250][i]}px"></i></span>`).join("");
+gsap.set(["#fl", "#flh", "#fi0", "#fi1", "#fi2", "#fi3"], { autoAlpha: 0 }); gsap.set("#fl i", { scaleX: 0 });
+show("#fl", S("T2"));
+tl.fromTo("#flh", { autoAlpha: 0, y: 22, filter: "blur(10px)", scale: .8 }, { autoAlpha: 1, y: 0, filter: "blur(0px)", scale: 1, duration: 6 * F, ease: "power2.out", immediateRender: false }, w("T2", 0) - LEAD);
+[3, 9, 17, 23].forEach((k, i) => {
+  tl.fromTo("#fi" + i, { autoAlpha: 0, y: 22, filter: "blur(10px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 5 * F, ease: "power2.out", immediateRender: false }, w("T2", k) - LEAD);
+  tl.to(`#fi${i} i`, { scaleX: 1, duration: 0.25, ease: "power2.out" }, w("T2", k) + 0.45);
+});
+tl.to("#fl", { autoAlpha: 0, filter: "blur(12px)", duration: 3 * F, ease: "power1.in" }, S("T3") - 3 * F);
+card("y perdí la habilidad", w("T3", 0), w("T3", 4));
+card("de creerme|*el número uno*", w("T3", 4), S("A1"));
+
+// ============ 3b. LIBRO (cámara A) ============
+card("Pero por más que|intento hacerlo bien,", w("A1", 0), w("A1", 7));
+card("no sale, *no funciona.*", w("A1", 7), w("A1", 11));
+card("¿Por qué?", w("A1", 11), w("A1", 13));
+card("porque me quedo|derivando", w("A1", 13), w("A1", 17));
+card("en hacer *10 cosas*", w("A1", 17), w("A1", 21));
+card("en vez de meterle|la ficha", w("A1", 21), w("A1", 27));
+const ultima = card("a ~una sola~", w("A1", 27), S("Q2") + 0.12);
+// zoom-through: el empuje está horneado en la base (power4.in); el texto se va con él
+tl.to(ultima, { scale: 1.35, filter: "blur(6px)", duration: 0.5, ease: "power4.in", transformOrigin: "50% 80%" }, S("Q2") - 0.42);
+tl.to("#base", { filter: "blur(4px)", duration: 6 * F, ease: "power2.in" }, S("Q2") - 6 * F);
+hide("#shade", S("Q2") + 0.1);
+
+// ============ 3c. CITAS DE ESENCIALISMO (su voz leyendo, 2 citas cortas) ============
+gsap.set("#qp", { autoAlpha: 0 }); gsap.set("#qhair", { scaleX: 0 }); gsap.set(["#qattr", "#qmark"], { autoAlpha: 0 });
+tl.fromTo("#qp", { autoAlpha: 0 }, { autoAlpha: 1, duration: 6 * F, ease: "sine.inOut", immediateRender: false }, S("Q2") - 3 * F);
+tl.fromTo("#qcam", { scale: 1.22, filter: "blur(10px)" }, { scale: 1.0, filter: "blur(0px)", duration: 0.6, ease: "expo.out", immediateRender: false }, S("Q2") - 3 * F);
+tl.to("#qcam", { scale: 1.035, duration: EN("Q1") - S("Q2") - 1.2, ease: "sine.inOut" }, S("Q2") + 0.6);
+tl.fromTo("#qmark", { autoAlpha: 0, y: 30, filter: "blur(12px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 8 * F, ease: "power2.out", immediateRender: false }, S("Q2") + 0.05);
+tl.to("#qmark", { y: -26, duration: EN("Q1") - S("Q2"), ease: "sine.inOut" }, S("Q2") + 0.3);   // parallax: la comilla se mueve más
+tl.to("#qhair", { scaleX: 1, duration: 0.5, ease: "sine.inOut" }, S("Q2") + 0.4);
+inBlur("#qattr", S("Q2") + 0.55, 6 * F, 8);
+kin("qt1", [[W_("Su", "Q2", 0), W_("nuevo", "Q2", 1), W_("compromiso", "Q2", 2), W_("de", "Q2", 3)],
+            [W_("hacer", "Q2", 4), W_("solo", "Q2", 5), W_("las", "Q2", 6), W_("cosas", "Q2", 7)],
+            [W_("verdaderamente", "Q2", 8, "k")], [W_("importantes", "Q2", 9, "k")],
+            [W_("y", "Q2", 10), W_("eliminar", "Q2", 11), W_("todo", "Q2", 12), W_("lo", "Q2", 13), W_("demás.", "Q2", 14)]]);
+tl.to("#qt1", { autoAlpha: 0, y: -30, filter: "blur(12px)", duration: 5 * F, ease: "power1.in" }, S("Q1") - 0.2);
+kin("qt2", [[W_("En", "Q1", 0), W_("vez", "Q1", 1), W_("de", "Q1", 2), W_("hacer", "Q1", 3), W_("apenas", "Q1", 4)],
+            [W_("un milímetro", "Q1", 5, "k")], [W_("de", "Q1", 7), W_("progreso", "Q1", 8), W_("en", "Q1", 9)],
+            [W_("un millón", "Q1", 10, "k")], [W_("de", "Q1", 12), W_("direcciones…", "Q1", 13)]]);
+// zoom-through hacia la biblioteca: empuje power4.in + disolvencia 6 cuadros
+tl.to("#qcam", { scale: 1.75, filter: "blur(5px)", duration: 0.75, ease: "power4.in", immediateRender: false }, D.lib0 + 0.2 - 0.75);
+tl.to("#qp", { autoAlpha: 0, duration: 6 * F, ease: "sine.inOut" }, D.lib0 + 0.02);
+
+// ============ 4. GIRO: biblioteca 2.5D (video lib.mp4) + títulos cinéticos ============
+const LIB0 = D.lib0, TA = D.libA, TB0 = D.libB0;   // inicio, duración plano A, inicio plano B
+kin("lt1", [[W_("Vamos", "GI1", 0), W_("a", "GI1", 1), W_("volvernos", "GI1", 2)], [W_("expertos", "GI1", 3), W_("en", "GI1", 4)],
+            [W_("una sola cosa", "GI1", 5, "s")]]);
+gsap.set("#lt1", { autoAlpha: 1 });
+tl.to("#lt1", { x: -40, duration: 2.7, ease: "expo.out" }, LIB0);                       // acompaña el paneo
+tl.to("#lt1", { scale: 1.45, filter: "blur(4px)", duration: 1.15, ease: "power4.in" }, LIB0 + TA - 1.15);
+tl.to("#lt1", { autoAlpha: 0, duration: 6 * F }, TB0 + 0.02);
+kin("lt2", [[W_("para", "GI2", 0), W_("no", "GI2", 1), W_("volvernos", "GI2", 2)], [W_("unos", "GI3", 0), W_("sabios", "GI3", 1, "s")],
+            [W_("que", "GI3", 2), W_("no", "GI3", 3), W_("saben", "GI3", 4), W_("nada.", "GI3", 5)]]);
+gsap.set("#lt2", { autoAlpha: 1 });
+tl.fromTo("#lt2", { scale: 1.0 }, { scale: 0.93, duration: D.libB - 0.7 - 0.92, ease: "power2.inOut", immediateRender: false }, TB0 + 0.7);
+tl.to("#lt2", { scale: 1.3, filter: "blur(4px)", duration: 0.92, ease: "power4.in" }, TB0 + D.libB - 0.92);
+
+// ============ 5. PRUEBA REAL ============
+destello(S("PR1"), ["#lt2", "#lib"]);
+show("#shade", S("PR1"));
+card("Acabo de crear", w("PR1", 0), w("PR1", 3));
+card("un agente", w("PR1", 3), w("PR1", 5));
+card("*editor de video*", w("PR1", 5), S("PR2") + LEAD);
+hide("#shade", S("PR2"));
+// --- motion graphic: entra muy ampliado (x4, desenfocado) y aterriza con expo.out sin rebote ---
+const icons = ["film-slate-fill", "robot-fill", "cpu-fill", "chart-line-up-fill", "chats-fill", "database-fill"];
+const pos = [[425, 1010, 1.12, "c"], [150, 1090, 0.92, "l"], [720, 1080, 0.95, "l"], [250, 1360, 1.0, "c"], [610, 1350, 1.04, "l"], [120, 1600, 0.82, "l"]];
+document.getElementById("shelf").innerHTML = pos.map(([x, y, s, c], i) => `<div class="pb ${c}" id="pb${i}" style="left:${x}px;top:${y}px"><div class="ico" style="-webkit-mask:url(assets/icons/${icons[i]}.svg) center/contain no-repeat;mask:url(assets/icons/${icons[i]}.svg) center/contain no-repeat"></div></div>`).join("");
+document.getElementById("mgtx").innerHTML =
+  '<span class="ln"><span class="w" id="m0">Creo,</span> <span class="w" id="m1">creo,</span> <span class="w" id="m2">creo,</span></span>' +
+  '<span class="ln lt3"><span class="w" id="m3">creo,</span> <span class="w" id="m4">creo,</span> <span class="w" id="m5">creo…</span></span>' +
+  '<span class="ln"><span class="w" id="m6">pero no se lo</span> <span class="w" id="m7">vendo</span></span>' +
+  '<span class="ln"><span class="w" id="m8">a</span><span id="kbox"><span id="kbg"></span><span id="ktx">nadie</span><span id="kcur"></span></span></span>';
+gsap.set("#mg", { autoAlpha: 0 }); gsap.set(["#m0", "#m1", "#m2", "#m3", "#m4", "#m5", "#m6", "#m7", "#m8", "#kcur"], { autoAlpha: 0 });
+gsap.set("#ktx", { clipPath: "inset(0 100% 0 0)" }); gsap.set("#mgline", { scaleX: 0 });
+pos.forEach((p, i) => gsap.set("#pb" + i, { autoAlpha: 0, scale: p[2] }));
+const MG0 = S("PR2");
+show("#mg", MG0);
+tl.fromTo("#mgcam", { scale: 4, filter: "blur(18px)" }, { scale: 1.05, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, MG0);
+tl.to("#mgcam", { scale: 1.0, x: -30, y: -8, duration: S("PR3") - MG0 - 0.5, ease: "sine.inOut" }, MG0 + 0.5);
+tl.to("#mgbg", { x: 18, y: 6, duration: S("PR3") - MG0, ease: "sine.inOut" }, MG0);          // fondo: parallax menor
+tl.to("#shelf", { x: -26, duration: S("PR3") - MG0, ease: "sine.inOut" }, MG0);              // objetos: parallax mayor
+tl.to("#mgline", { scaleX: 1, duration: 0.6, ease: "sine.inOut" }, MG0 + 0.25);
+const mw = (sel, at) => tl.fromTo(sel, { autoAlpha: 0, y: 20, filter: "blur(10px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 4 * F, ease: "power2.out", immediateRender: false }, Math.max(MG0 + 0.12, at - LEAD));
+[0, 1, 2, 3, 4, 5].forEach((i) => {
+  mw("#m" + i, w("PR2", i));
+  tl.fromTo("#pb" + i, { autoAlpha: 0, scale: pos[i][2] * 0.6, y: -40, filter: "blur(12px)" }, { autoAlpha: 1, scale: pos[i][2], y: 0, filter: "blur(0px)", duration: 7 * F, ease: "power3.out", immediateRender: false }, Math.max(MG0 + 0.12, w("PR2", i) - LEAD));
+});
+mw("#m6", w("PR2", 6)); mw("#m7", w("PR2", 10)); mw("#m8", w("PR2", 11));
+// palabra clave en caja carbón: cursor dorado -> caja crece -> texto se revela de izquierda a derecha
+const KT = w("PR2", 12);
+tl.set("#kcur", { autoAlpha: 1 }, KT - 6 * F);
+tl.fromTo("#kbg", { width: 0 }, { width: 470, duration: 5 * F, ease: "power3.out", immediateRender: false }, KT - 4 * F);
+tl.fromTo("#kcur", { x: 0 }, { x: 458, duration: 5 * F, ease: "power3.out", immediateRender: false }, KT - 4 * F);
+tl.fromTo("#ktx", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 5 * F, ease: "power2.out", immediateRender: false }, KT - 3 * F);
+tl.set("#kcur", { autoAlpha: 0 }, KT + 6 * F);
+pos.forEach((p, i) => { if (i) tl.to("#pb" + i, { opacity: 0.45, duration: 0.3, ease: "sine.inOut" }, w("PR2", 6)); });   // "pero no se lo vendo": solo queda el editor
+// salida: el invert flash se aplica en post (scripts/post_fx.py); aquí el corte duro a la persona
+const CUT = S("PR3") + 3 * F;
+hide("#mg", CUT);
+show("#shade", CUT);
+card("y por eso estoy", w("PR3", 0), w("PR3", 4));
+card("haciendo|*redes sociales*", w("PR3", 4), S("CV"));
+
+// ============ 6. CONVICCIÓN ============
+card("y cuando lo logre,", w("CV", 0), w("CV", 4));
+card("todo el mundo|va a decir que", w("CV", 4), w("CV", 11));
+card("esto va a ser|~suerte~", w("CV", 11), w("CV", 16));
+card("y no va a ser|~_suerte_~", w("CV", 16), w("CV", 22));
+card("va a ser demasiado|*esfuerzo,*", w("CV", 22), w("CV", 27));
+card("demasiada|~constancia~", w("CV", 27), w("CV", 29));
+card("eso fueron|*años de trabajo*", w("CV", 29), S("CI1"));
+
+// ============ 7. CIERRE ============
+card("pueden copiarme,", w("CI1", 1), w("CI1", 3));
+card("pueden hacer|exactamente lo mismo", w("CI1", 3), w("CI1", 8));
+card("que voy a hacer,", w("CI1", 8), w("CI1", 12));
+card("todo lo que yo haga", w("CI1", 12), w("CI1", 17));
+card("lo voy a *documentar*", w("CI1", 17), S("CI2"));
+card("Yo estoy aquí|*iterando,*", w("CI2", 0), w("CI2", 4));
+card("*probando*", w("CI2", 4), w("CI2", 5));
+card("y revisando|qué funciona.", w("CI2", 5), w("CI2", 9));
+card("Yo no tengo la razón,", w("CI2", 9), w("CI2", 14));
+card("la razón la tienen", w("CI2", 14), w("CI2", 18));
+card("~ustedes.~", w("CI2", 18), S("PL") + 0.36);
+// placa final
+document.getElementById("pldia").textContent = "DÍA " + DIA;
+document.getElementById("plde").textContent = "de " + DE;
+gsap.set("#pl", { autoAlpha: 0 }); gsap.set(["#pldia", "#plde", "#pltag"], { autoAlpha: 0 }); gsap.set("#plhair", { scaleX: 0 });
+tl.to("#shade", { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" }, S("PL"));
+tl.fromTo("#pl", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, ease: "sine.inOut", immediateRender: false }, S("PL"));
+tl.fromTo("#pldia", { autoAlpha: 0, y: 30, filter: "blur(14px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 8 * F, ease: "power2.out", immediateRender: false }, S("PL") + 0.30);
+tl.fromTo("#plde", { autoAlpha: 0, scale: 0.6, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 9 * F, ease: "power2.out", immediateRender: false }, S("PL") + 0.50);
+tl.to("#plhair", { scaleX: 1, duration: 0.45, ease: "sine.inOut" }, S("PL") + 0.70);
+inBlur("#pltag", S("PL") + 0.85, 6 * F, 10);
+
+// ---------- grano de papel (cada 2 cuadros) ----------
+const NG = Math.ceil(D.total / (2 * F));
+for (let i = 0; i < NG; i++) tl.set("#grain", { x: ((i * 73) % 180) - 90, y: ((i * 131) % 180) - 90 }, i * 2 * F);
+tl.set({}, {}, D.total);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Dia 2 de 42 · IA MONOGA</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0B0B0F; }
+      #base, #person { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 40%; }
+      #base { z-index: 0; } #person { z-index: 2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="63.100000" data-width="1080" data-height="1920">
+      <!-- Footage sin audio: la mezcla (voz + música + SFX) se hace con ffmpeg -->
+      <video id="base" class="clip" src="assets/base_graded.mp4" data-start="0" data-duration="63.100000"
+             data-track-index="0" muted playsinline></video>
+      <!-- LAYER:front -->
+      <div id="overlays" data-composition-id="overlays" data-composition-src="compositions/overlays.html"
+           data-start="0" data-duration="63.100000" data-track-index="3" data-width="1080" data-height="1920"
+           style="position: absolute; inset: 0; z-index: 3"></div>
+      <div id="graphics" data-composition-id="graphics" data-composition-src="compositions/graphics.html"
+           data-start="0" data-duration="63.100000" data-track-index="4" data-width="1080" data-height="1920"
+           style="position: absolute; inset: 0; z-index: 4"></div>
+      <!-- Motivo recurrente: el foco lima (el empleado que no duerme) viaja por todas las escenas (el empleado que no duerme) que viaja por todas las escenas -->
+      <div id="ring" style="position:absolute;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:3px solid #C6FF3D;z-index:9;opacity:0"></div>
+      <div id="dot" style="position:absolute;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;z-index:9;opacity:0;
+           background:radial-gradient(circle at 35% 30%,#f2ffc8 0%,#C6FF3D 50%,#8fc417 100%);box-shadow:0 0 26px 6px rgba(198,255,61,.7),0 0 0 4px rgba(47,91,255,.9),0 8px 14px rgba(0,0,0,.45)"></div>
+      <!-- /LAYER:front -->
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const V = "#base, #person";
+      const land = (t, from) => tl.fromTo(V, { scale: from, filter: "blur(10px)" },
+        { scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, t);
+      const push = (t0, t1, to) => tl.to(V, { scale: to, duration: t1 - t0, ease: "none" }, t0);
+      const punch = (t, to) => tl.to(V, { scale: to, duration: 0.38, ease: "expo.out" }, t);
+      const whip = (t) => tl.to(V, { scale: "+=0.55", filter: "blur(16px)", duration: 0.22, ease: "power3.in" }, t);
+      const reset = (t) => tl.set(V, { scale: 1, x: 0, filter: "blur(0px)" }, t);
+      const shake = (t, a) => [a, -a * 0.8, a * 0.6, -a * 0.4, a * 0.2, 0]
+        .forEach((x, i) => tl.to(V, { x, duration: 0.04, ease: "none" }, t + i * 0.04));
+      gsap.set(V, { scale: 1, x: 0, filter: "blur(0px)" });
+
+      // Efectos de corte (rotan: glitch, látigo lateral, destello). Sin escala: no chocan con los zooms.
+      let cutN = 0;
+      const cutfx = (t) => {
+        const k = cutN++ % 3;
+        if (k === 0) { // glitch
+          tl.fromTo(V, { filter: "blur(7px) brightness(1.5) contrast(1.3) saturate(1.5)", x: 26 },
+            { filter: "blur(0px) brightness(1) contrast(1) saturate(1)", x: 0, duration: 0.26, ease: "steps(4)", immediateRender: false }, t);
+        } else if (k === 1) { // látigo lateral
+          tl.fromTo(V, { x: 120, filter: "blur(16px)" }, { x: 0, filter: "blur(0px)", duration: 0.22, ease: "power3.out", immediateRender: false }, t);
+        } else { // destello
+          tl.fromTo(V, { filter: "brightness(2.4) blur(5px)" }, { filter: "brightness(1) blur(0px)", duration: 0.24, ease: "power2.out", immediateRender: false }, t);
+        }
+      };
+
+      // t1 gancho (0–3.03)
+      push(0, 1.3, 1.04); punch(1.32, 1.15); push(1.75, 2.36, 1.19); punch(2.38, 1.27); shake(2.4, 10);
+      whip(2.86);
+      // t2 final y t3 (5.05–8.87)
+      land(5.05, 1.3); push(5.5, 6.05, 1.04);
+      reset(6.07); cutfx(6.07); push(6.1, 7.7, 1.05); punch(7.74, 1.15); punch(8.16, 1.23); shake(8.18, 8); push(8.6, 8.85, 1.26);
+      // t4 (8.87–10.53)
+      reset(8.87); cutfx(8.87); push(8.9, 10.3, 1.06); whip(10.32);
+      // 13.45–14.45: aterrizaje y látigo hacia "7 minutos"
+      land(13.45, 1.3); push(13.9, 14.2, 1.04); whip(14.22);
+      // t7 final (16.8–17.57) y t8 (17.57–21.63)
+      land(16.8, 1.3); push(17.2, 17.55, 1.05);
+      reset(17.57); cutfx(17.57); push(17.6, 18.3, 1.05); punch(18.4, 1.15); push(18.9, 21.1, 1.2); punch(21.2, 1.28);
+      // t9a (21.63–23.9) y t9b (23.9–26.53)
+      reset(21.63); cutfx(21.63); push(21.65, 22.7, 1.04); punch(22.8, 1.17); push(23.2, 23.85, 1.2);
+      reset(23.9); cutfx(23.9); push(23.9, 25.9, 1.06); punch(26.0, 1.2); shake(26.02, 10);
+      // t10 (26.53–30.6)
+      reset(26.53); cutfx(26.53); push(26.55, 28.1, 1.05); punch(28.14, 1.17); push(28.6, 30.55, 1.22);
+      // t11 hasta el chat (30.6–34.1)
+      reset(30.6); cutfx(30.6); push(30.6, 31.65, 1.04); punch(31.7, 1.15); push(32.1, 33.85, 1.22); whip(33.86);
+      // 37.1–38.65: aterrizaje y látigo hacia "conectado"
+      land(37.1, 1.3); push(37.6, 38.4, 1.04); whip(38.42);
+      // t13 (46.23–50.47)
+      land(46.25, 1.3); push(46.7, 47.4, 1.05); punch(47.5, 1.17); push(47.9, 50.4, 1.22);
+      // t14a (50.47–52.7) y t14b (52.7–55.8)
+      reset(50.47); cutfx(50.47); push(50.5, 51.75, 1.05); punch(51.8, 1.15); push(52.1, 52.65, 1.2);
+      reset(52.7); cutfx(52.7); push(52.7, 53.3, 1.05); whip(53.32);
+      // cierre (57.4–63.1): t15 hasta 58.53 y t16 desde 58.53
+      land(57.4, 1.3); push(57.85, 58.5, 1.05);
+      reset(58.53); cutfx(58.53); push(58.55, 59.75, 1.06); punch(59.8, 1.17); shake(59.82, 10); push(60.2, 62.3, 1.12);
+      tl.to(V, { scale: 1.0, duration: 0.7, ease: "power2.inOut" }, 62.4);
+
+
+      // ---- Motivo del punto rojo: vive en la esquina superior derecha y entra en cada escena ----
+      const HOME = { x: 935, y: 312 };
+      const D = "#dot", R = "#ring";
+      gsap.set([D, R], { x: HOME.x, y: HOME.y, scale: 0, opacity: 0 });
+      const dotTo = (t, x, y, dur, sc = 1, ease = "power3.inOut") => tl.to([D, R], { x, y, scale: sc, duration: dur, ease }, t);
+      const dotPop = (t, x, y, sc = 1) => { tl.set([D, R], { x, y }, t); tl.fromTo(D, { scale: 0, opacity: 1 }, { scale: sc, opacity: 1, duration: 0.4, ease: "back.out(2.4)", immediateRender: false }, t); };
+      const ping = (t, sc = 1) => {
+        tl.fromTo(R, { scale: sc, opacity: 0.9 }, { scale: sc * 3.4, opacity: 0, duration: 0.55, ease: "power2.out", immediateRender: false }, t);
+        tl.fromTo(D, { scale: sc * 1.45 }, { scale: sc, duration: 0.3, ease: "back.out(3)", immediateRender: false }, t);
+      };
+      const dotOff = (t) => tl.to([D, R], { opacity: 0, duration: 0.12 }, t);
+      const dotOn = (t) => tl.set(D, { opacity: 1 }, t);
+      // 0–3.1: aparece como luz de "grabando" y late con cada palabra clave
+      dotPop(0.05, HOME.x, HOME.y);
+      // 3.1–5.05 · Día 2: viaja a la primera de las 42 casillas y se vuelve lima
+      dotTo(3.1, 176, 1023, 1.3, 1.35, "power3.inOut"); dotOff(4.5);
+      dotPop(5.25, HOME.x, HOME.y);
+      // 10.55–13.45 · editor: monta el cabezal de reproducción de la línea de tiempo
+      dotTo(10.7, 132, 556, 0.25, 1.1); dotTo(10.95, 944, 556, 2.35, 1.1, "none"); ping(12.0, 1.1); ping(12.66, 1.1);
+      dotTo(13.3, HOME.x, HOME.y, 0.5, 1);
+      // 14.45–16.8 · 7 min a 38 s: va en la punta de la barra mientras se encoge
+      dotTo(14.7, 975, 792, 0.4, 1.2); dotTo(15.15, 177, 792, 0.75, 1.2, "expo.inOut"); ping(15.9, 1.2); dotTo(16.2, HOME.x, HOME.y, 0.55, 1);
+      // 34.1–37.1 · chat: notificación sobre la burbuja del celular
+      dotTo(34.6, 700, 880, 0.5, 0.95); ping(35.2, 0.95); ping(36.3, 0.95); dotTo(36.75, HOME.x, HOME.y, 0.5, 1);
+      // 38.65–41.45 · conectado: sale de la IA y salta por cada nodo
+      dotTo(39.05, 540, 860, 0.3, 1.2);
+      [[540, 580], [826, 720], [826, 1000], [540, 1140], [254, 1000], [254, 720]].forEach(([x, y], i) => { dotTo(39.4 + i * 0.25, x, y, 0.22, 1.1, "power2.inOut"); });
+      ping(40.95, 1.1); dotTo(41.15, HOME.x, HOME.y, 0.4, 1);
+      // 41.5–46.25 · puede leer: se posa en cada check lima
+      [42.38, 43.04, 43.76, 44.36, 45.18].forEach((t, i) => { dotTo(t + 0.05, 905, 635 + i * 172, 0.3, 1.1); ping(t + 0.35, 1.1); });
+      dotTo(45.9, HOME.x, HOME.y, 0.5, 1);
+      // 53.55–55.75 · DIAN: cae sobre el total de la factura
+      dotTo(53.9, 684, 753, 0.45, 1.1); ping(54.4, 1.1); dotTo(55.45, HOME.x, HOME.y, 0.45, 1);
+      // 55.9–57.4 · Día 3
+      ping(56.75);
+      // late en cada palabra clave de la cabeza hablando
+      [1.36, 1.82, 2.8, 5.88, 7.78, 8.18, 8.46, 18.42, 21.24, 22.64, 24.22, 26.06, 28.16, 28.58, 29.26, 29.66, 30.0, 32.96, 33.3, 37.94, 46.96, 47.5, 47.88, 49.3, 50.0, 50.96, 51.8, 52.14, 59.14, 59.8].forEach((t) => ping(t));
+      // cierre en bucle: el punto se apaga y el video vuelve a empezar con él naciendo
+      tl.to(D, { scale: 0, opacity: 0, duration: 0.35, ease: "power2.in" }, 62.75);
+      tl.to(R, { opacity: 0, duration: 0.1 }, 62.75);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

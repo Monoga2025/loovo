@@ -1,0 +1,6 @@
+Usa la herramienta de generacion de imagenes para crear 2 variantes de una portada vertical 1080x1920 (9:16) para un video de TikTok.
+La imagen adjunta (referencia.png) es la persona real: conserva su cara, peinado, edad y rasgos EXACTAMENTE; no la embellezcas ni la cambies. Ropa: su camiseta beige.
+Estilo: fondo negro casi puro con un resplandor rojo (#E3120B) detras de la persona, un circulo grande tipo iris o aro de luz rojo fino alrededor de la cabeza y una retícula muy sutil en gris oscuro. Iluminacion de cine, contraste alto, aspecto limpio de marca personal tecnologica.
+Composicion: la persona grande, centrada, mirando a camara, de la cintura hacia arriba, ocupando la zona media-baja. Deja LIBRE y despejada (solo fondo oscuro) la franja superior (15 por ciento de alto) y la franja inferior (28 por ciento de alto) para poner texto despues.
+PROHIBIDO: nada de texto, letras, numeros, logos ni marcas de agua en la imagen. Sin otras personas.
+Guarda las dos imagenes en la carpeta de trabajo actual como portada_codex_1.png y portada_codex_2.png. Si no puedes guardarlas ahi, dime la ruta exacta donde quedaron.

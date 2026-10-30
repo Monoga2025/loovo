@@ -1,0 +1,1 @@
+hqdn3d=3:3:6:6,scale=1080:1920:flags=lanczos,eq=contrast=1.06:brightness=0.02:saturation=1.05:gamma=1.04,unsharp=5:5:0.5,vignette=PI/6,setsar=1

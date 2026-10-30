@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "SpaceG"; font-weight: 700; src: url("../fonts/space-grotesk-latin-700-normal.woff2"); }
+  @font-face { font-family: "SpaceG"; font-weight: 500; src: url("../fonts/space-grotesk-latin-500-normal.woff2"); }
+  @font-face { font-family: "InstrSerif"; font-style: italic; src: url("../fonts/instrument-serif-latin-400-italic.woff2"); }
+  @font-face { font-family: "Unbounded"; font-weight: 800; src: url("../fonts/unbounded-latin-800-normal.woff2"); }
+  @font-face { font-family: "ArchivoBlack"; src: url("../fonts/archivo-black-latin-400-normal.woff2"); }
+  @font-face { font-family: "Fraunces"; font-style: italic; src: url("../fonts/fraunces-latin-400-italic.woff2"); }
+  @font-face { font-family: "InterX"; font-weight: 500; src: url("../fonts/inter-latin-500-normal.woff2"); }
+  @font-face { font-family: "InterX"; font-weight: 800; src: url("../fonts/inter-latin-800-normal.woff2"); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1920px; overflow: hidden; position: relative; background: #000; }
+  .abs { position: absolute; }
+  #bg, #person { left: 0; top: 0; width: 1080px; height: 1920px; }
+  #behind { left: 0; width: 1080px; text-align: center; line-height: .82; }
+  #cap { left: 60px; width: 960px; top: 1160px; text-align: center; line-height: 1; }
+  #tile { left: 70px; top: 520px; width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; }
+  #tile img { width: 56%; }
+  #brand { left: 70px; top: 290px; display: flex; gap: 14px; align-items: center; }
+  #brand .chip { padding: 10px 20px; border-radius: 40px; font-size: 30px; }
+  #pal { left: 0; bottom: 0; width: 1080px; height: 330px; display: flex; flex-direction: column; justify-content: center; padding: 0 70px; gap: 22px; }
+  #pal .sw { display: flex; gap: 16px; }
+  #pal .sw div { flex: 1; height: 110px; border-radius: 22px; display: flex; align-items: flex-end; padding: 14px; font: 500 24px "InterX"; }
+  #pal .name { font: 800 44px "InterX"; letter-spacing: -0.02em; }
+</style>
+</head>
+<body>
+  <img id="bg" class="abs" src="bg.png">
+  <div id="behind" class="abs"></div>
+  <img id="person" class="abs" src="person.png">
+  <div id="brand" class="abs"></div>
+  <div id="tile" class="abs"></div>
+  <div id="cap" class="abs"></div>
+  <div id="pal" class="abs"></div>
+<script>
+const D = {
+  A: { name: "A · Eléctrico", pal: [["#0B0B0F","Carbón"],["#2F5BFF","Azul eléctrico"],["#C6FF3D","Lima ácido"],["#F4F2EE","Hueso"]],
+       behind: `<div style="font:700 205px 'SpaceG';color:#C6FF3D;letter-spacing:-0.06em;margin-top:350px">EMPLEADO</div>`,
+       cap: `<span style="font:italic 84px 'InstrSerif';color:#fff;text-shadow:0 0 20px rgba(0,0,0,.8)">trabaja hasta las </span><span style="font:700 112px 'SpaceG';color:#0B0B0F;background:#C6FF3D;padding:0 18px;border-radius:14px;letter-spacing:-0.04em">3 AM</span>`,
+       tile: `background:#C6FF3D;border-radius:30%;box-shadow:0 20px 40px rgba(0,0,0,.45),0 0 0 6px rgba(47,91,255,.9)`,
+       brand: `<span style="font:700 40px 'SpaceG';color:#fff;letter-spacing:-0.03em">IA<span style="color:#C6FF3D">·</span>MONOGA</span><span class="chip" style="background:#2F5BFF;color:#fff;font-family:SpaceG;font-weight:700">DÍA 2/42</span>`,
+       palbg: "#0B0B0F", palfg: "#F4F2EE" },
+  B: { name: "B · Violeta neón", pal: [["#0A0A12","Noche"],["#7B5CFF","Violeta"],["#3DE8FF","Cian"],["#FFFFFF","Blanco"]],
+       behind: `<div style="font:800 128px 'Unbounded';letter-spacing:-0.04em;margin-top:390px;background:linear-gradient(90deg,#7B5CFF,#3DE8FF);-webkit-background-clip:text;color:transparent">EMPLEADO</div>`,
+       cap: `<span style="font:500 70px 'InterX';color:#fff;text-shadow:0 0 20px rgba(0,0,0,.8)">trabaja hasta las </span><span style="font:800 104px 'Unbounded';color:#3DE8FF;text-shadow:0 0 30px rgba(61,232,255,.7)">3 AM</span>`,
+       tile: `background:linear-gradient(145deg,rgba(123,92,255,.95),rgba(61,232,255,.75));border-radius:30%;border:2px solid rgba(255,255,255,.6);box-shadow:0 20px 50px rgba(123,92,255,.6)`,
+       brand: `<span style="font:800 36px 'Unbounded';color:#fff">IA MONOGA</span><span class="chip" style="border:2px solid #3DE8FF;color:#3DE8FF;font-family:Unbounded;font-weight:800">DÍA 2</span>`,
+       palbg: "#0A0A12", palfg: "#fff" },
+  C: { name: "C · Cálido premium", pal: [["#141414","Grafito"],["#FF6A1A","Naranja"],["#F2EEE8","Crema"],["#1C2340","Azul noche"]],
+       behind: `<div style="font:400 172px 'ArchivoBlack';color:#F2EEE8;letter-spacing:-0.05em;margin-top:370px">EMPLEADO</div>`,
+       cap: `<span style="font:italic 84px 'Fraunces';color:#fff;text-shadow:0 0 20px rgba(0,0,0,.8)">trabaja hasta las </span><span style="font:400 108px 'ArchivoBlack';color:#FF6A1A;text-shadow:0 0 18px rgba(0,0,0,.6)">3 AM</span>`,
+       tile: `background:#F2EEE8;border-radius:30%;box-shadow:0 20px 40px rgba(0,0,0,.45),inset 0 0 0 5px #FF6A1A`,
+       brand: `<span style="font:400 38px 'ArchivoBlack';color:#F2EEE8">IA MONOGA</span><span class="chip" style="background:#FF6A1A;color:#141414;font-family:ArchivoBlack">DÍA 2</span>`,
+       palbg: "#1C2340", palfg: "#F2EEE8" },
+};
+const k = new URLSearchParams(location.search).get("d") || "A", d = D[k];
+document.getElementById("behind").innerHTML = d.behind;
+document.getElementById("cap").innerHTML = d.cap;
+document.getElementById("brand").innerHTML = d.brand;
+const t = document.getElementById("tile"); t.style.cssText += d.tile; t.innerHTML = `<img src="ico_${k}.svg">`;
+const p = document.getElementById("pal"); p.style.background = d.palbg; p.style.color = d.palfg;
+p.innerHTML = `<div class="name">${d.name}</div><div class="sw">${d.pal.map(([c,n]) => `<div style="background:${c};color:${["#F4F2EE","#C6FF3D","#FFFFFF","#F2EEE8","#3DE8FF"].includes(c)?"#111":"#fff"};outline:2px solid rgba(255,255,255,.15)">${n}<br>${c}</div>`).join("")}</div>`;
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+TOTAL_REAL=38.14s  CLIPS=10
+AVISO: t5a: no termina en puntuación final (revisar idea completa)
+AVISO: t8: empieza con 'Este' (revisar)
+AVISO: t9: empieza con 'Y' (revisar)
+RESULTADO: OK

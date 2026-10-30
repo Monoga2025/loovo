@@ -1,0 +1,391 @@
+<!doctype html>
+<!-- Canal · "Le hice un cerebro a mi empresa" (NotebookLM, RAG). Showreel de motion sobre la marca Loovo
+     (blanco pastel + puntos + dorado suave + carbón). Prompt del usuario para el motion (literal, §0.1 de monoga-adria):
+     "make a dynamic motion graphics video that shows what an incredible motion designer you are, y muestra la persona hablando
+      solo cuando mire la cámara y cuando genere tensión, like it's your showreel for a résumé. go all out."
+     En esta zona del crudo no mira a cámara: B-roll de su pantalla (cámara 2.5D) + motion. Reglas: border-radius 0, sin fondos dorados,
+     sin verde, frases >= 84 px, claves >= 118 px, etiquetas >= 48 px. Generado por _comun/build_html.py. -->
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>Canal cerebro</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+/*__CSS__*/
+/* H gancho */
+#sH { z-index:20; }
+#hKb { height:250px; } #hKb .tx { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:196px; line-height:240px; width:820px; letter-spacing:0; }
+.nd { position:absolute; width:150px; height:150px; background:#FBF8F1; box-shadow:0 26px 50px -22px rgba(90,74,44,.38), 0 5px 14px rgba(90,74,44,.10); }
+.nd .ico { position:absolute; left:37px; top:37px; width:76px; height:76px; background:#2A2926; }
+.nd.k { background:#2A2926; } .nd.k .ico { background:#E6D6AE; }
+/* F carpeta -> resumen.md -> NotebookLM */
+#sF { z-index:21; }
+.ft { position:absolute; width:150px; height:150px; background:#FBF8F1; box-shadow:0 20px 40px -20px rgba(90,74,44,.4); }
+.ft .ico { position:absolute; left:40px; top:40px; width:70px; height:70px; background:#8C887F; }
+#fScan { position:absolute; left:60px; width:960px; height:6px; background:#C8B07A; box-shadow:0 0 30px 6px rgba(200,176,122,.45); }
+#fDoc { position:absolute; left:200px; top:640px; width:680px; height:760px; background:#FBF8F1; }
+#fDoc .hd { position:absolute; left:0; top:0; width:680px; height:130px; background:#2A2926; }
+#fDoc .hd span { position:absolute; left:44px; top:24px; font-weight:600; font-size:72px; letter-spacing:-2px; color:#FBF8F1; }
+#fDoc .hd b { color:#E6D6AE; font-family:"Playfair"; font-style:italic; font-weight:700; }
+.dl { position:absolute; left:50px; height:24px; background:#2A2926; transform-origin:0 50%; }
+.dl.g { background:#C8B07A; }
+#fNb { position:absolute; left:90px; top:1240px; width:900px; height:200px; background:#2A2926; box-shadow:0 40px 80px -30px rgba(42,41,38,.55); }
+#fNb .ib { position:absolute; left:0; top:0; width:200px; height:200px; background:#C8B07A; }
+#fNb .ib .ico { position:absolute; left:45px; top:45px; width:110px; height:110px; background:#2A2926; }
+#fNb span { position:absolute; left:250px; top:0; line-height:200px; font-weight:600; font-size:96px; letter-spacing:-3px; color:#FBF8F1; }
+/* U fuentes */
+#sU { z-index:22; }
+#uNum { position:absolute; right:70px; top:120px; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:330px; line-height:1; color:#E6D6AE;
+  text-shadow:0 4px 10px rgba(20,16,10,.5), 0 20px 60px rgba(20,16,10,.5); }
+.tagT { position:absolute; left:70px; top:170px; }
+/* M demasiada / RAG */
+#sM { z-index:23; }
+.mt { position:absolute; width:130px; height:160px; background:#FBF8F1; box-shadow:0 18px 36px -16px rgba(90,74,44,.45); }
+.mt i { position:absolute; left:20px; height:12px; background:#D9D3C6; display:block; }
+.mt.k { background:#2A2926; } .mt.k i { background:#6B675F; }
+#mBand { position:absolute; left:0; top:700px; width:1080px; height:470px; background:rgba(246,244,239,.94); box-shadow:0 30px 80px -20px rgba(90,74,44,.30); }
+#rKb { height:240px; } #rKb .tx { font-size:210px; line-height:240px; width:560px; letter-spacing:-4px; }
+/* L studio */
+#sL { z-index:24; }
+.ck { position:absolute; right:36px; top:40px; width:70px; height:70px; background:#A88F57; }
+/* Q pregunta */
+#sQ { z-index:25; }
+#qBox { position:absolute; left:70px; top:700px; width:940px; height:470px; background:#FBF8F1; box-shadow:0 40px 90px -30px rgba(90,74,44,.45), 0 8px 22px rgba(90,74,44,.12); }
+#qBox .hd { position:absolute; left:0; top:0; width:940px; height:100px; background:#2A2926; }
+#qBox .hd span { position:absolute; left:40px; top:20px; font-weight:600; font-size:52px; letter-spacing:3px; color:#E6D6AE; }
+#qTx { position:absolute; left:50px; top:150px; width:840px; font-weight:600; font-size:100px; line-height:1.12; letter-spacing:-3px; color:#2A2926; }
+#qSend { position:absolute; right:40px; bottom:40px; width:110px; height:110px; background:#2A2926; }
+#qSend .ico { position:absolute; left:28px; top:28px; width:54px; height:54px; background:#E6D6AE; }
+/* V servicios */
+#sV { z-index:26; }
+#sU, #sS, #sR { z-index:28; }
+/* E cierre */
+#sE { z-index:27; }
+#eHub { position:absolute; left:400px; top:620px; width:280px; height:280px; background:#2A2926; box-shadow:0 50px 100px -30px rgba(42,41,38,.6); outline:6px solid #C8B07A; outline-offset:16px; }
+#eHub .ico { position:absolute; left:60px; top:60px; width:160px; height:160px; background:#E6D6AE; }
+#eKb { height:200px; } #eKb .tx { font-size:150px; line-height:200px; width:760px; letter-spacing:-5px; }
+/* placa */
+#plL { position:absolute; left:0; top:520px; width:1080px; text-align:center; font-weight:600; font-size:230px; line-height:1; letter-spacing:18px; color:#2A2926; text-indent:18px; }
+#plS { position:absolute; left:0; top:860px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:120px; line-height:1.08; color:#A88F57; }
+#plH { left:300px; top:810px; width:480px; }
+#plT { position:absolute; left:0; top:1170px; width:1080px; text-align:center; font-weight:600; font-size:80px; letter-spacing:-1px; color:#8C887F; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__TOTAL__" data-width="1080" data-height="1920">
+
+  <div id="bgD" class="full dots"></div>
+  <video id="base" class="clip full" src="assets/base.mp4" data-start="0" data-duration="__TOTAL__" data-track-index="1" muted playsinline></video>
+  <div id="shade" class="full"></div>
+
+  <!-- H gancho: "cerebro" visible desde el cuadro 0 -->
+  <div id="sH" class="full sc"><div id="camH" class="full">
+    <div class="bigdots dots" id="hBg"></div>
+    <svg class="lsvg" id="hSvg" width="1080" height="1920"></svg>
+    <div id="hNodes" class="full"></div>
+    <div id="hT1" class="ttl dk f90" style="top:110px"></div>
+    <div class="sub" id="hSub" style="top:600px">NotebookLM</div>
+    <div class="kbw" style="top:700px"><div id="hKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">cerebro</div></div></div>
+    <div id="hT2" class="ttl dk f90" style="top:1050px"></div>
+    <div id="hPrt" class="full"></div>
+  </div></div>
+
+  <!-- F carpeta -> resumen.md -> NotebookLM -->
+  <div id="sF" class="full sc"><div id="camF" class="full">
+    <div class="bigdots dots" id="fBg"></div>
+    <div id="fT" class="ttl dk f90" style="top:180px"></div>
+    <div id="fT2" class="ttl dk f90" style="top:180px"></div>
+    <div id="fAg" class="node o" style="left:455px;top:540px"><div class="ico" style="mask-image:url(assets/icons/robot-fill.svg);-webkit-mask-image:url(assets/icons/robot-fill.svg)"></div></div>
+    <div id="fTiles" class="full"></div>
+    <div id="fScan"></div>
+    <div id="fDoc" class="shadow"><div class="hd"><span>resumen<b>.md</b></span></div><div id="fLines"></div></div>
+    <svg class="lsvg" width="1080" height="1920"><polyline id="fArrow" points="540,1000 540,1225" fill="none" stroke="#C8B07A" stroke-width="8"/></svg>
+    <div id="fNb"><div class="ib"><div class="ico" style="mask-image:url(assets/icons/brain-fill.svg);-webkit-mask-image:url(assets/icons/brain-fill.svg)"></div></div><span>NotebookLM</span></div>
+  </div></div>
+
+  <!-- U fuentes (sobre la pantalla) -->
+  <div id="sU" class="full">
+    <div class="tag tagT" id="uTag">FUENTES</div>
+    <div id="uNum">0</div>
+  </div>
+
+  <!-- M demasiada información -> agente de RAG -->
+  <div id="sM" class="full sc"><div id="camM" class="full">
+    <div class="bigdots dots" id="mBg"></div>
+    <div id="mTiles" class="full"></div>
+    <div id="mBand"></div>
+    <div id="mT" class="ttl dk f100" style="top:760px"></div>
+    <div id="rT" class="ttl dk f90" style="top:110px"></div>
+    <div class="kbw" style="top:400px"><div id="rKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">RAG</div></div></div>
+    <svg class="lsvg" width="1080" height="1920"><polyline id="rLine" points="165,760 165,1250" fill="none" stroke="#C8B07A" stroke-width="8"/></svg>
+    <div id="rRows" class="full"></div>
+  </div></div>
+
+  <!-- S etiqueta sobre Studio -->
+  <div id="sS" class="full"><div class="tag" id="sTag" style="left:70px;top:170px">NOTEBOOKLM · <b>STUDIO</b></div></div>
+
+  <!-- L mapa mental / infografías / tabla -->
+  <div id="sL" class="full sc"><div id="camL" class="full">
+    <div class="bigdots dots" id="lBg"></div>
+    <div id="lT" class="ttl dk f90" style="top:200px"></div>
+    <div id="lRows" class="full"></div>
+    <svg class="lsvg" id="lSvg" width="1080" height="1920"></svg>
+    <div id="lNodes" class="full"></div>
+  </div></div>
+
+  <!-- Q pregunta -->
+  <div id="sQ" class="full sc"><div id="camQ" class="full">
+    <div class="bigdots dots" id="qBg"></div>
+    <div id="qT" class="ttl dk f100" style="top:400px"></div>
+    <div id="qBox"><div class="hd"><span>PREGUNTA</span></div><div id="qTx"></div>
+      <div id="qSend"><div class="ico" style="mask-image:url(assets/icons/rocket-launch-fill.svg);-webkit-mask-image:url(assets/icons/rocket-launch-fill.svg)"></div></div></div>
+  </div></div>
+
+  <!-- R etiqueta sobre la respuesta -->
+  <div id="sR" class="full"><div class="tag" id="rTag" style="left:70px;top:170px">RESPUESTA · <b>NotebookLM</b></div></div>
+
+  <!-- V servicios -->
+  <div id="sV" class="full sc"><div id="camV" class="full">
+    <div class="bigdots dots" id="vBg"></div>
+    <div class="sub" id="vSub" style="top:150px">lo que encontró<br>en mis documentos</div>
+    <div id="vT" class="ttl dk f90" style="top:330px"></div>
+    <div id="vRows" class="full"></div>
+  </div></div>
+
+  <!-- E cierre -->
+  <div id="sE" class="full sc"><div id="camE" class="full">
+    <div class="bigdots dots" id="eBg"></div>
+    <svg class="lsvg" id="eSvg" width="1080" height="1920"></svg>
+    <div id="eOrb" class="full"></div>
+    <div id="eHub"><div class="ico" style="mask-image:url(assets/icons/brain-fill.svg);-webkit-mask-image:url(assets/icons/brain-fill.svg)"></div></div>
+    <div id="eT" class="ttl dk f90" style="top:200px"></div>
+    <div id="eT2" class="ttl dk f90" style="top:1110px"></div>
+    <div class="kbw" style="top:1230px"><div id="eKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">empresa</div></div></div>
+    <div id="ePrt" class="full"></div>
+  </div></div>
+
+  <div id="caps" class="full"></div>
+
+  <!-- placa del canal -->
+  <div id="pl" class="full sc dots">
+    <div id="plL">LOOVO</div>
+    <i class="hair" id="plH"></i>
+    <div id="plS">el cerebro<br>de mi empresa</div>
+    <div id="plT">#Loovo</div>
+  </div>
+
+  <div id="leak" class="full"></div>
+  <div id="white" class="full"></div>
+  <div id="grain"></div>
+</div>
+
+<script>
+//__LIB__
+const ALL = ["#sF", "#sU", "#sM", "#sS", "#sL", "#sQ", "#sR", "#sV", "#sE", "#pl"];
+gsap.set(ALL, { autoAlpha: 0 }); gsap.set(["#leak", "#white", "#shade"], { autoAlpha: 0 });
+
+// ============ H. GANCHO 0 -> cut1: "cerebro" ya está en el cuadro 0 ============
+gsap.set("#sH", { autoAlpha: 1 });
+keyboxOn("#hKb", 820);
+const HN = [["file-text", 70, 520, 0], ["folder", 40, 730, 1], ["database", 70, 940, 0], ["books", 860, 520, 1], ["graph", 890, 730, 0], ["table", 860, 940, 1]];
+$("#hNodes").innerHTML = HN.map(([ic, x, y, k], i) => `<div class="nd${k ? " k" : ""}" id="hn${i}" style="left:${x}px;top:${y}px"><div class="ico" style="${ICON(ic)}"></div></div>`).join("");
+$("#hSvg").innerHTML = HN.map(([, x, y], i) => `<polyline id="hl${i}" points="${x + 75},${y + 75} ${x < 540 ? 230 : 850},${y + 75} 540,825" fill="none" stroke="#C8B07A" stroke-width="5" stroke-linejoin="miter"/>`).join("");
+HN.forEach((n, i) => {
+  const t = 0.05 + i * ((B.h_nb - 0.2) / HN.length);
+  if (i < 2) gsap.set("#hn" + i, { autoAlpha: 1 });   // dos nodos ya en el cuadro 0
+  else tl.fromTo("#hn" + i, { autoAlpha: 0, scale: 0.3, x: (n[1] < 540 ? -1 : 1) * 260, rotation: R(-40, 40), filter: "blur(10px)" }, { autoAlpha: 1, scale: 1, x: 0, rotation: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, t);
+  drawLine("#hl" + i, Math.max(0.02, t + 0.12), 0.45);
+});
+inBlur("#hSub", 0.0, 2 * F, 6); gsap.set("#hSub", { autoAlpha: 1 });
+T("#hT1", ["^vamos a hacer", "una base de", "~conocimientos~"], "H1");
+T("#hT2", ["básicamente", "el cerebro de", "mi ~empresa~"], "H2", { min: S("H2") - 0.1 });
+tl.fromTo("#camH", { scale: 1.05 }, { scale: 1.0, duration: B.h_cer, ease: "sine.out", immediateRender: false }, 0);
+tl.fromTo("#hBg", { y: 0 }, { y: -120, duration: B.cut1, ease: "none", immediateRender: false }, 0);
+tl.fromTo("#hKb", { scale: 1.0 }, { scale: 1.14, duration: 4 * F, ease: "power3.out", yoyo: true, repeat: 1, immediateRender: false }, B.h_cer - 2 * F);
+shake("#camH", B.h_cer, 12, 5);
+burst("#hPrt", 540, 825, 24, B.h_cer, 620);
+tl.to(".nd .ico", { backgroundColor: "#A88F57", duration: 3 * F, stagger: 0.03 }, B.h_cer);
+tl.to("#hT1", { autoAlpha: 0.0, y: -40, filter: "blur(10px)", duration: 4 * F }, B.h_cer - 0.6);
+tl.to("#camH", { scale: 2.8, filter: "blur(16px)", duration: 0.32, ease: "power4.in", transformOrigin: "540px 825px" }, B.cut1 - 0.32);
+hide("#sH", B.cut1);
+
+// ============ C1. pantalla: la carpeta donde tengo todo (2.5D) ============
+show("#shade", B.cut1);
+baseIn(B.cut1, 0.5);
+basePanel(B.c1_car - 0.25, 1.0, { s: 0.80, ry: -9, rx: 5, y: -30 });
+tl.to("#base", { rotationY: 6, rotationX: 3, x: 20, duration: B.f_in - B.c1_car - 1.0, ease: "sine.inOut" }, B.c1_car + 0.75);
+card("Algo bien|*interesante*", S("C1"), B.c1_fue);
+card("fue entrar a la|*carpeta*", B.c1_fue, B.c1_don);
+card("donde tengo|absolutamente|~todo~", B.c1_don, B.f_in + 0.05);
+baseOut(B.f_in, 0.35, 1.5);
+hide("#shade", B.f_in);
+
+// ============ F. carpeta -> resumen.md -> NotebookLM ============
+enterMG("#sF", "#camF", B.f_in, B.u_in);
+T("#fT", ["le dije al ~agente~", "que hiciera", "un *resumen*"], "C2a", { min: B.f_in });
+gsap.set(["#fAg", "#fDoc", "#fNb", "#fScan"], { autoAlpha: 0 });
+tl.fromTo("#fAg", { autoAlpha: 0, scale: 0.3, rotation: -30 }, { autoAlpha: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(1.7)", immediateRender: false }, B.f_age - 0.1);
+const FI = ["folder", "file-text", "folder", "files", "file-text", "folder-open", "database", "file-text", "folder", "article", "file-text", "folder", "files", "table", "folder", "file-text"];
+$("#fTiles").innerHTML = FI.map((ic, i) => `<div class="ft" id="ft${i}" style="left:${105 + (i % 4) * 230}px;top:${790 + Math.floor(i / 4) * 175}px"><div class="ico" style="${ICON(ic)}"></div></div>`).join("");
+gsap.set(".ft", { autoAlpha: 0 });
+FI.forEach((_, i) => tl.fromTo("#ft" + i, { autoAlpha: 0, y: 120, scale: 0.6, filter: "blur(8px)" }, { autoAlpha: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 0.32, ease: "expo.out", immediateRender: false }, B.f_in + 0.15 + i * 0.045));
+gsap.set("#fScan", { top: 780 });
+tl.set("#fScan", { autoAlpha: 1 }, B.f_age + 0.1);
+tl.to("#fScan", { y: 700, duration: B.f_res - B.f_age - 0.1, ease: "none" }, B.f_age + 0.1);
+FI.forEach((_, i) => tl.to(`#ft${i} .ico`, { backgroundColor: "#A88F57", duration: 2 * F }, B.f_age + 0.1 + (Math.floor(i / 4) * 175 / 700) * (B.f_res - B.f_age - 0.1)));
+tl.set("#fScan", { autoAlpha: 0 }, B.f_res);
+// todo se comprime en un solo documento
+FI.forEach((_, i) => tl.to("#ft" + i, { x: 540 - (105 + (i % 4) * 230) - 75, y: 1020 - (790 + Math.floor(i / 4) * 175) - 75, scale: 0.2, rotation: R(-90, 90), autoAlpha: 0, duration: 0.42, ease: "power3.in" }, B.f_res + i * 0.012));
+tl.fromTo("#fDoc", { autoAlpha: 0, scale: 0.2, rotation: 8, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, rotation: 0, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, B.f_res + 0.38);
+const DL = [[520, 0], [440, 0], [580, 1], [360, 0], [500, 0], [420, 1], [540, 0], [300, 0]];
+$("#fLines").innerHTML = DL.map(([w, g], i) => `<i class="dl${g ? " g" : ""}" id="dl${i}" style="top:${180 + i * 66}px;width:${w}px"></i>`).join("");
+gsap.set(".dl", { scaleX: 0 });
+DL.forEach((_, i) => tl.to("#dl" + i, { scaleX: 1, duration: 0.22, ease: "power2.out" }, B.f_res + 0.7 + i * 0.16));
+tl.to("#fT", { autoAlpha: 0, y: -40, filter: "blur(10px)", duration: 4 * F }, B.f2_in - 4 * F);
+tl.to("#fAg", { autoAlpha: 0, y: -80, duration: 4 * F }, B.f2_in - 4 * F);
+T("#fT2", ["me lo entregara", "en formato ~.md~"], "C2b", { min: B.f2_in });
+tl.fromTo("#fDoc .hd b", { color: "#E6D6AE" }, { color: "#C8B07A", duration: 2 * F, yoyo: true, repeat: 3, immediateRender: false }, B.f_md);
+tl.to("#fDoc", { scale: 1.06, duration: 3 * F, yoyo: true, repeat: 1, ease: "power2.out" }, B.f_md);
+// el documento baja hasta NotebookLM
+tl.to("#fDoc", { y: -170, scale: 0.62, duration: 0.5, ease: "expo.inOut" }, B.f_para - 0.2);
+drawLine("#fArrow", B.f_para + 0.25, 0.35);
+tl.fromTo("#fNb", { autoAlpha: 0, y: 200, filter: "blur(16px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, B.f_nb - 0.45);
+tl.to("#fDoc", { y: 420, scale: 0.18, autoAlpha: 0, duration: 0.4, ease: "power3.in" }, B.f_nb + 0.05);
+tl.fromTo("#fNb", { scale: 1 }, { scale: 1.07, duration: 3 * F, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, B.f_nb + 0.42);
+tl.to("#fNb .ib", { backgroundColor: "#E6D6AE", duration: 3 * F }, B.f_nb + 0.42);
+
+// ============ U. pantalla: subimos 5 fuentes ============
+tl.to("#camF", { y: -900, filter: "blur(22px)", duration: 4 * F, ease: "power3.in" }, B.u_in - 4 * F);
+hide("#sF", B.u_in);
+show("#shade", B.u_in); baseIn(B.u_in, 0.55);
+show("#sU", B.u_in);
+gsap.set(["#uTag", "#uNum"], { autoAlpha: 0 });
+tl.fromTo("#uTag", { autoAlpha: 0, x: -200 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: "expo.out", immediateRender: false }, B.u_in + 0.2);
+tl.fromTo("#uNum", { autoAlpha: 0, scale: 1.6, filter: "blur(16px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, B.u_5 - 0.35);
+counter("#uNum", 0, 5, B.u_5 - 0.3, 0.45);
+card("Subimos los|*cinco* elementos", S("C3"), B.u_y);
+card("y ya estamos|creando nuestro|primer ~cerebro~", B.u_y, B.m_in + 0.05);
+tl.to("#uNum", { color: "#C8B07A", duration: 2 * F }, B.u_cer);
+baseOut(B.m_in, 0.35, 1.6);
+hide(["#sU", "#shade"], B.m_in);
+
+// ============ M. demasiada información -> agente de RAG ============
+enterMG("#sM", "#camM", B.m_in, B.s_in);
+const MT = 42; let mh = ""; const MP = [];
+for (let i = 0; i < MT; i++) { const x = R(-40, 980), y = R(80, 1700); MP.push([x, y]); mh += `<div class="mt${i % 5 === 2 ? " k" : ""}" id="mt${i}" style="left:${x}px;top:${y}px"><i style="top:30px;width:90px"></i><i style="top:56px;width:70px"></i><i style="top:82px;width:84px"></i><i style="top:108px;width:50px"></i></div>`; }
+$("#mTiles").innerHTML = mh; gsap.set(".mt", { autoAlpha: 0 }); gsap.set("#mBand", { autoAlpha: 0, scaleY: 0 });
+for (let i = 0; i < MT; i++) tl.fromTo("#mt" + i, { autoAlpha: 0, y: -1200, rotation: R(-60, 60) }, { autoAlpha: 1, y: 0, rotation: R(-25, 25), duration: R(0.35, 0.6), ease: "power2.in", immediateRender: false }, B.m_in + i * 0.022);
+tl.to("#mBand", { autoAlpha: 1, scaleY: 1, duration: 0.3, ease: "expo.out" }, B.m_dem - 0.25);
+T("#mT", ["es ~demasiada~", "información"], "C4", { min: B.m_in });
+shake("#camM", B.m_dem + 0.05, 16, 6);
+// orden: las hojas se alinean abajo; entra RAG
+tl.to(["#mT", "#mBand"], { autoAlpha: 0, filter: "blur(14px)", duration: 4 * F }, B.r_in - 2 * F);
+for (let i = 0; i < MT; i++) tl.to("#mt" + i, { x: 60 + (i % 7) * 140 - MP[i][0], y: 1300 + Math.floor(i / 7) * 30 - MP[i][1], rotation: 0, scale: 0.86, duration: 0.55, ease: "expo.inOut" }, B.r_in + (i % 7) * 0.02);
+T("#rT", ["esto es un", "~agente~ de"], "C5", { min: B.r_in });
+keybox("#rKb", B.r_rag, 560);
+burst("#mTiles", 540, 520, 18, B.r_rag + F, 480);
+const RR = [["question", "Pregunta"], ["magnifying-glass", "Busca en tus docs"], ["chat-centered-text", "Responde"]];
+$("#rRows").innerHTML = RR.map(([ic, tx], i) => `<div class="row" id="rr${i}" style="top:${690 + i * 190}px"><div class="ib"><div class="ico" style="${ICON(ic)}"></div></div><div class="tt">${tx}</div></div>`).join("");
+gsap.set(".row", { autoAlpha: 0 });
+RR.forEach((_, i) => tl.fromTo("#rr" + i, { autoAlpha: 0, x: i % 2 ? -600 : 600, filter: "blur(16px)" }, { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, B.r_rag + 0.35 + i * 0.22));
+gsap.set("#rLine", { autoAlpha: 0 });
+tl.set("#rLine", { autoAlpha: 1 }, B.r_rag + 0.3); drawLine("#rLine", B.r_rag + 0.3, 0.8);
+tl.to("#rr1 .ib", { backgroundColor: "#A88F57", duration: 3 * F, yoyo: true, repeat: 3 }, B.r_mon - 0.1);
+tl.to(".mt", { y: -14, duration: 0.18, yoyo: true, repeat: 1, stagger: 0.008, ease: "power2.out" }, B.r_mon);
+
+// ============ S. pantalla: Studio de NotebookLM ============
+tl.to("#camM", { scale: 1.8, filter: "blur(18px)", duration: 0.3, ease: "power4.in", transformOrigin: "540px 800px" }, B.s_in - 0.3);
+hide("#sM", B.s_in);
+show("#shade", B.s_in); baseIn(B.s_in, 0.5);
+basePanel(B.s_in + 0.6, 1.1, { s: 0.84, ry: 8, rx: 4, y: 20 });
+show("#sS", B.s_in); inBlur("#sTag", B.s_in + 0.3);
+card("Lo importante|es que desde *acá*", S("C6"), B.l_in + 0.05);
+baseOut(B.l_in, 0.3, 1.4);
+hide(["#sS", "#shade"], B.l_in);
+
+// ============ L. mapa mental / infografías / tabla de datos ============
+enterMG("#sL", "#camL", B.l_in, B.q_in);
+T("#lT", ["vamos a tener un", "~mapa mental~"], "C7", { min: B.l_in });
+const LR = [["graph", "Mapa mental", B.l_mapa], ["presentation-chart", "Infografías", B.l_info], ["table", "Tabla de datos", B.l_tabla]];
+$("#lRows").innerHTML = LR.map(([ic, tx], i) => `<div class="row" id="lr${i}" style="top:${600 + i * 190}px"><div class="ib"><div class="ico" style="${ICON(ic)}"></div></div><div class="tt">${tx}</div><div class="ck ico" style="${ICON("seal-check")}"></div></div>`).join("");
+gsap.set("#lRows .row", { autoAlpha: 0 }); gsap.set("#lRows .ck", { autoAlpha: 0 });
+LR.forEach(([, , t], i) => {
+  tl.fromTo("#lr" + i, { autoAlpha: 0, x: 700, rotationY: -50, transformPerspective: 1600, filter: "blur(16px)" }, { autoAlpha: 1, x: 0, rotationY: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, t - 0.12);
+  tl.fromTo(`#lr${i} .ck`, { autoAlpha: 0, scale: 2.4, rotation: -30 }, { autoAlpha: 1, scale: 1, rotation: 0, duration: 4 * F, ease: "power4.in", immediateRender: false }, t + 0.35);
+});
+// mapa mental que se dibuja debajo (cuando lo dice)
+const MM = [[540, 1330], [230, 1230], [850, 1230], [180, 1430], [900, 1430]];
+$("#lSvg").innerHTML = MM.slice(1).map((p, i) => `<polyline id="ml${i}" points="540,1330 ${p[0]},${p[1]}" fill="none" stroke="#C8B07A" stroke-width="6"/>`).join("");
+$("#lNodes").innerHTML = MM.map((p, i) => `<div class="node${i ? "" : " o"}" id="mn${i}" style="left:${p[0] - 60}px;top:${p[1] - 60}px;width:120px;height:120px"><div class="ico" style="left:28px;top:28px;width:64px;height:64px;${ICON(["brain", "folder", "chats", "table", "graph"][i])}"></div></div>`).join("");
+gsap.set("#lNodes .node", { autoAlpha: 0 });
+tl.fromTo("#mn0", { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)", immediateRender: false }, B.l_mapa + 0.2);
+MM.slice(1).forEach((_, i) => { drawLine("#ml" + i, B.l_mapa + 0.3 + i * 0.08, 0.35); tl.fromTo("#mn" + (i + 1), { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)", immediateRender: false }, B.l_mapa + 0.55 + i * 0.08); });
+tl.to("#lT", { autoAlpha: 0, y: -40, filter: "blur(10px)", duration: 4 * F }, B.l_info - 0.3);
+const LT2 = document.createElement("div"); LT2.className = "ttl dk f90"; LT2.id = "lT2"; LT2.style.top = "200px"; $("#camL").appendChild(LT2);
+T("#lT2", ["~infografías~", "y tablas de datos"], "C7", { min: B.l_info - 0.25 });
+
+// ============ Q. "¿qué servicios vendemos?" ============
+whip("#camL", "#sL", "#sQ", "#camQ", B.q_in, 0, 900, B.cut2);
+T("#qT", ["volvemos y", "~preguntamos~"], "C8", { min: B.q_in });
+gsap.set("#qBox", { autoAlpha: 0 });
+tl.fromTo("#qBox", { autoAlpha: 0, y: 300, rotationX: -40, transformPerspective: 1800, filter: "blur(14px)" }, { autoAlpha: 1, y: 0, rotationX: 0, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, B.q_in + 0.25);
+typeText("#qTx", "¿Qué servicios vendemos?", B.q_t0 - 0.15, B.q_t1 - 0.05);
+tl.to("#qT", { y: -120, scale: 0.9, duration: 0.3, ease: "power3.out" }, B.q_t0 - 0.2);
+tl.to("#qSend", { scale: 0.8, duration: 2 * F, yoyo: true, repeat: 1, ease: "power2.out" }, B.q_t1 + 0.05);
+tl.to("#qSend", { backgroundColor: "#A88F57", duration: 2 * F }, B.q_t1 + 0.05);
+tl.to("#camQ", { scale: 1.6, filter: "blur(14px)", duration: 0.3, ease: "power4.in", transformOrigin: "900px 1100px" }, B.cut2 - 0.3);
+hide("#sQ", B.cut2);
+
+// ============ R. pantalla: la respuesta (desenfocada: datos de terceros) ============
+show("#shade", B.cut2); baseIn(B.cut2, 0.45);
+show("#sR", B.cut2); inBlur("#rTag", B.cut2 + 0.15);
+card("Perfecto,|*aquí está.*", S("C10"), B.v_in + 0.05);
+baseOut(B.v_in, 0.3, 1.4);
+hide(["#sR", "#shade"], B.v_in);
+
+// ============ V. servicios en mis documentos ============
+enterMG("#sV", "#camV", B.v_in, B.e_in);
+inBlur("#vSub", B.v_in + 0.1);
+T("#vT", ["servicios", "~empaquetados~", "en documentación", "de venta"], "C11", { min: B.v_in });
+const VR = [["globe-simple", "Soluciones web", B.v_sol], ["robot", "Pilotos de IA", B.v_pil]];
+$("#vRows").innerHTML = VR.map(([ic, tx], i) => `<div class="row" id="vr${i}" style="top:${1010 + i * 190}px"><div class="ib"><div class="ico" style="${ICON(ic)}"></div></div><div class="tt">${tx}</div></div>`).join("");
+gsap.set("#vRows .row", { autoAlpha: 0 });
+tl.to("#vT", { y: -40, scale: 0.92, duration: 0.3, ease: "power3.out" }, B.v_sol - 0.3);
+VR.forEach(([, , t], i) => tl.fromTo("#vr" + i, { autoAlpha: 0, y: 160, scale: 0.9, filter: "blur(14px)" }, { autoAlpha: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, t - 0.12));
+
+// ============ E. cierre: base de datos de toda la empresa ============
+whip("#camV", "#sV", "#sE", "#camE", B.e_in, 1000, 0, B.pl);
+T("#eT", ["ya desde acá tenemos", "una ~base de datos~"], "C13", { min: B.e_in });
+const EO = ["file-text", "folder", "database", "chats", "table", "graph", "books", "article"];
+$("#eOrb").innerHTML = EO.map((ic, i) => { const a = (i / EO.length) * Math.PI * 2, x = 540 + Math.cos(a) * 390 - 75, y = 760 + Math.sin(a) * 250 - 75; return `<div class="nd${i % 3 === 1 ? " k" : ""}" id="eo${i}" style="left:${x}px;top:${y}px"><div class="ico" style="${ICON(ic)}"></div></div>`; }).join("");
+$("#eSvg").innerHTML = EO.map((_, i) => { const a = (i / EO.length) * Math.PI * 2, x = 540 + Math.cos(a) * 390, y = 760 + Math.sin(a) * 250; return `<polyline id="el${i}" points="${x},${y} 540,760" fill="none" stroke="#C8B07A" stroke-width="5"/>`; }).join("");
+gsap.set(["#eHub", ".nd[id^=eo]"], { autoAlpha: 0 });
+tl.fromTo("#eHub", { autoAlpha: 0, scale: 0.2, rotation: 45 }, { autoAlpha: 1, scale: 1, rotation: 0, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, B.e_in + 0.2);
+EO.forEach((_, i) => { tl.fromTo("#eo" + i, { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: "back.out(1.6)", immediateRender: false }, B.e_in + 0.35 + i * 0.05); drawLine("#el" + i, B.e_base - 0.2 + i * 0.04, 0.3); });
+tl.to("#eOrb", { rotation: 14, duration: B.pl - B.e_in, ease: "sine.inOut", transformOrigin: "540px 760px" }, B.e_in);
+EO.forEach((_, i) => tl.to("#eo" + i, { rotation: -14, duration: B.pl - B.e_in, ease: "sine.inOut" }, B.e_in));
+T("#eT2", ["de toda nuestra"], "C13", { min: B.e_toda - 0.3 });
+keybox("#eKb", B.e_emp, 760);
+tl.to(".nd[id^=eo] .ico", { backgroundColor: "#A88F57", duration: 3 * F, stagger: 0.03 }, B.e_emp);
+burst("#ePrt", 540, 760, 24, B.e_emp + F, 600);
+shake("#camE", B.e_emp + 2 * F, 10, 4);
+tl.to("#camE", { scale: 2.2, filter: "blur(10px)", duration: 0.45, ease: "power4.in", transformOrigin: "540px 760px" }, B.pl - 0.45);
+
+// ============ placa del canal ============
+destello(B.pl, ["#sE"]);
+show("#pl", B.pl);
+gsap.set(["#plL", "#plS", "#plT"], { autoAlpha: 0 }); gsap.set("#plH", { scaleX: 0 });
+tl.fromTo("#plL", { autoAlpha: 0, y: 30, scale: 1.12, filter: "blur(14px)" }, { autoAlpha: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 10 * F, ease: "power2.out", immediateRender: false }, B.pl + 0.10);
+tl.to("#plH", { scaleX: 1, duration: 0.45, ease: "sine.inOut" }, B.pl + 0.35);
+tl.fromTo("#plS", { autoAlpha: 0, scale: 0.7, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 9 * F, ease: "power2.out", immediateRender: false }, B.pl + 0.45);
+inBlur("#plT", B.pl + 0.8, 6 * F, 10);
+tl.fromTo("#pl", { scale: 1 }, { scale: 1.03, duration: D.total - B.pl, ease: "sine.out", immediateRender: false }, B.pl);
+
+const NG = Math.ceil(D.total / (2 * F));
+for (let i = 0; i < NG; i++) tl.set("#grain", { x: ((i * 73) % 180) - 90, y: ((i * 131) % 180) - 90 }, i * 2 * F);
+tl.set({}, {}, D.total);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

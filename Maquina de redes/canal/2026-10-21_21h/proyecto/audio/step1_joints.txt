@@ -1,0 +1,10 @@
+junta 1 (1->2) t=3.690s ventanas 20ms previas dB=[-62.9, -72.5, -55.4] voz_activa=False
+junta 2 (2->3) t=5.200s ventanas 20ms previas dB=[-63.2, -53.9, -43.0] voz_activa=False
+junta 3 (3->4) t=8.850s ventanas 20ms previas dB=[-48.3, -62.0, -22.3] voz_activa=True
+junta 4 (4->5) t=12.980s ventanas 20ms previas dB=[-57.0, -74.3, -26.0] voz_activa=True
+junta 5 (5->6) t=17.820s ventanas 20ms previas dB=[-78.4, -66.5, -26.6] voz_activa=True
+junta 6 (6->7) t=20.710s ventanas 20ms previas dB=[-71.0, -72.5, -44.0] voz_activa=False
+junta 7 (7->8) t=26.650s ventanas 20ms previas dB=[-68.4, -66.7, -46.8] voz_activa=False
+junta 8 (8->9) t=29.780s ventanas 20ms previas dB=[-70.9, -78.3, -54.5] voz_activa=False
+junta 9 (9->10) t=34.740s ventanas 20ms previas dB=[-67.1, -73.2, -49.6] voz_activa=False
+juntas con voz activa en los 50 ms previos: 3 de 9 [8.85, 12.98, 17.82]

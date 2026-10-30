@@ -1,0 +1,23 @@
+{
+  "fps": 30,
+  "target_lufs": -17.6,
+  "cues": [
+    {"t": 0.0, "name": "tension_bed", "note": "cama de noticiero, baja"},
+    {"t": 4.0, "name": "crunch", "note": "cristal roto + flash invertido"},
+    {"t": 4.0, "name": "glitch_mixkit_1022", "dur": 0.3, "asset": "monoga-adria/assets/sfx_mixkit_1022_trim.wav"},
+    {"t": 10.0, "name": "whoosh_zoom_through"},
+    {"t": 11.0, "name": "teclas"},
+    {"t": 15.0, "name": "ding_suave"},
+    {"t": 18.0, "name": "mensaje_entrante"},
+    {"t": 21.0, "name": "laser_scan"},
+    {"t": 23.5, "name": "pop_excel"},
+    {"t": 26.0, "name": "data_processing"},
+    {"t": 31.0, "name": "bip_bip_suave"},
+    {"t": 34.0, "name": "invert_flash_glitch"},
+    {"t": 36.0, "name": "ka_ching_d1"},
+    {"t": 39.0, "name": "pop_caricatura_d2"},
+    {"t": 42.0, "name": "clics_ascendentes_d3"},
+    {"t": 42.6, "name": "whoosh_brillo_d3"}
+  ],
+  "nota": "Tiempos de referencia; reajustar al onset real de la voz (onset = voz - 2 cuadros) con words_tl.py."
+}

@@ -1,0 +1,416 @@
+[
+ {
+  "t": 0.99,
+  "type": "hit",
+  "gain": 0.7,
+  "note": "3"
+ },
+ {
+  "t": 1.31,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "42"
+ },
+ {
+  "t": 3.81,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "sticker cama"
+ },
+ {
+  "t": 5.77,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker"
+ },
+ {
+  "t": 6.41,
+  "type": "hit",
+  "gain": 0.5,
+  "note": "cuello"
+ },
+ {
+  "t": 6.66,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 6.87,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "flip A"
+ },
+ {
+  "t": 8.19,
+  "type": "hit",
+  "gain": 0.6,
+  "note": "ADELANTAR"
+ },
+ {
+  "t": 9.05,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "barra atascada"
+ },
+ {
+  "t": 9.32,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "flip out"
+ },
+ {
+  "t": 9.6,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "zoom B"
+ },
+ {
+  "t": 10.77,
+  "type": "hit",
+  "gain": 0.7,
+  "note": "PENDIENTE"
+ },
+ {
+  "t": 11.56,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "sale B"
+ },
+ {
+  "t": 11.84,
+  "type": "whoosh",
+  "gain": 0.4,
+  "note": "aterriza"
+ },
+ {
+  "t": 12.73,
+  "type": "hit",
+  "gain": 0.6,
+  "note": "CRM"
+ },
+ {
+  "t": 13.49,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker IA"
+ },
+ {
+  "t": 15.61,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker"
+ },
+ {
+  "t": 15.98,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 16.18,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "flip C"
+ },
+ {
+  "t": 18.4,
+  "type": "hit",
+  "gain": 0.8,
+  "note": "DIAN"
+ },
+ {
+  "t": 18.55,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "próximamente"
+ },
+ {
+  "t": 18.67,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "sale C"
+ },
+ {
+  "t": 19.9,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker"
+ },
+ {
+  "t": 21.08,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 21.3,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "zoom D"
+ },
+ {
+  "t": 22.28,
+  "type": "hit",
+  "gain": 0.7,
+  "note": "SKILL"
+ },
+ {
+  "t": 23.95,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "flip out"
+ },
+ {
+  "t": 24.25,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "corte glitch"
+ },
+ {
+  "t": 25.23,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "sticker videos"
+ },
+ {
+  "t": 27.27,
+  "type": "hit",
+  "gain": 0.5,
+  "note": "skill"
+ },
+ {
+  "t": 27.38,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "flip E"
+ },
+ {
+  "t": 28.0,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "video 1"
+ },
+ {
+  "t": 28.4,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "video 2"
+ },
+ {
+  "t": 28.71,
+  "type": "hit",
+  "gain": 0.6,
+  "note": "TRES VIDEOS"
+ },
+ {
+  "t": 28.8,
+  "type": "pop",
+  "gain": 0.55,
+  "note": "video 3"
+ },
+ {
+  "t": 29.89,
+  "type": "hit",
+  "gain": 0.9,
+  "note": "ERRORES"
+ },
+ {
+  "t": 30.3,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sacudida"
+ },
+ {
+  "t": 30.7,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "zoom F2"
+ },
+ {
+  "t": 30.72,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "aterriza"
+ },
+ {
+  "t": 31.9,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "IA"
+ },
+ {
+  "t": 32.8,
+  "type": "hit",
+  "gain": 0.6,
+  "note": "PESADÍSIMO"
+ },
+ {
+  "t": 33.3,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "flip F3"
+ },
+ {
+  "t": 34.22,
+  "type": "hit",
+  "gain": 0.6,
+  "note": "Claude"
+ },
+ {
+  "t": 34.68,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "Opus"
+ },
+ {
+  "t": 35.11,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "zoom G"
+ },
+ {
+  "t": 36.33,
+  "type": "hit",
+  "gain": 0.8,
+  "note": "PESADO"
+ },
+ {
+  "t": 37.34,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "flip out"
+ },
+ {
+  "t": 38.83,
+  "type": "hit",
+  "gain": 0.6,
+  "note": "ARNÉS"
+ },
+ {
+  "t": 40.18,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 40.38,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "flip H"
+ },
+ {
+  "t": 41.59,
+  "type": "hit",
+  "gain": 0.6,
+  "note": "TOKENS"
+ },
+ {
+  "t": 42.63,
+  "type": "whoosh",
+  "gain": 0.4,
+  "note": "chip"
+ },
+ {
+  "t": 43.78,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "sale H"
+ },
+ {
+  "t": 45.09,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker"
+ },
+ {
+  "t": 45.65,
+  "type": "hit",
+  "gain": 0.5,
+  "note": "servicios"
+ },
+ {
+  "t": 46.73,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "corte"
+ },
+ {
+  "t": 47.71,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker"
+ },
+ {
+  "t": 48.68,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 48.9,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "zoom I"
+ },
+ {
+  "t": 49.73,
+  "type": "hit",
+  "gain": 0.8,
+  "note": "12"
+ },
+ {
+  "t": 50.5,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "proyectos"
+ },
+ {
+  "t": 51.27,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "flip out"
+ },
+ {
+  "t": 52.67,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker"
+ },
+ {
+  "t": 54.56,
+  "type": "hit",
+  "gain": 0.7,
+  "note": "FERIA"
+ },
+ {
+  "t": 55.0,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "cierre"
+ },
+ {
+  "t": 55.05,
+  "type": "hit",
+  "gain": 0.8,
+  "note": "DÍA 3"
+ },
+ {
+  "t": 55.55,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "casilla 1"
+ },
+ {
+  "t": 55.7,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "casilla 2"
+ },
+ {
+  "t": 55.85,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "casilla 3"
+ }
+]

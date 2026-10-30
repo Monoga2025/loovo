@@ -1,0 +1,440 @@
+[
+ {
+  "t": 1.36,
+  "type": "pop",
+  "gain": 0.7,
+  "note": "pago"
+ },
+ {
+  "t": 2.4,
+  "type": "hit",
+  "gain": 0.6,
+  "note": "3"
+ },
+ {
+  "t": 2.42,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 2.86,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 3.08,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "flip 3D de escena"
+ },
+ {
+  "t": 3.1,
+  "type": "hit",
+  "gain": 0.8,
+  "note": "Día 2"
+ },
+ {
+  "t": 3.42,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "Día 2 slam"
+ },
+ {
+  "t": 4.5,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "seg1"
+ },
+ {
+  "t": 4.7,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "seg2"
+ },
+ {
+  "t": 5.8,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 6.07,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "corte"
+ },
+ {
+  "t": 7.78,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "agencia"
+ },
+ {
+  "t": 8.18,
+  "type": "pop",
+  "gain": 0.7,
+  "note": "inteligencia"
+ },
+ {
+  "t": 8.3,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 8.87,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "corte"
+ },
+ {
+  "t": 10.32,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 10.55,
+  "type": "hit",
+  "gain": 0.8,
+  "note": "escena empleado"
+ },
+ {
+  "t": 12.0,
+  "type": "hit",
+  "gain": 0.9,
+  "note": "no cobra"
+ },
+ {
+  "t": 12.66,
+  "type": "hit",
+  "gain": 0.9,
+  "note": "no duerme"
+ },
+ {
+  "t": 14.22,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 14.45,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "flip 3D de escena"
+ },
+ {
+  "t": 14.5,
+  "type": "hit",
+  "gain": 0.8,
+  "note": "7 minutos"
+ },
+ {
+  "t": 15.15,
+  "type": "swish",
+  "gain": 0.7,
+  "note": "tachado"
+ },
+ {
+  "t": 15.9,
+  "type": "hit",
+  "gain": 1.0,
+  "note": "38"
+ },
+ {
+  "t": 17.2,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 17.57,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "corte"
+ },
+ {
+  "t": 18.42,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "exploto"
+ },
+ {
+  "t": 19.45,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 21.24,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "durmiendo"
+ },
+ {
+  "t": 21.63,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "corte"
+ },
+ {
+  "t": 22.82,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "sobreexplotó"
+ },
+ {
+  "t": 23.9,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "corte"
+ },
+ {
+  "t": 24.3,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 26.0,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 26.06,
+  "type": "hit",
+  "gain": 0.7,
+  "note": "CRM"
+ },
+ {
+  "t": 26.53,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "corte"
+ },
+ {
+  "t": 28.16,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "CRM real"
+ },
+ {
+  "t": 29.25,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 30.6,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "corte"
+ },
+ {
+  "t": 31.75,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 33.86,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 34.1,
+  "type": "hit",
+  "gain": 0.7,
+  "note": "ventana"
+ },
+ {
+  "t": 34.1,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "flip 3D de escena"
+ },
+ {
+  "t": 34.42,
+  "type": "pop",
+  "gain": 0.8,
+  "note": "chat"
+ },
+ {
+  "t": 36.3,
+  "type": "hit",
+  "gain": 0.9,
+  "note": "absolutamente nada"
+ },
+ {
+  "t": 37.6,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 38.42,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 38.7,
+  "type": "riser",
+  "gain": 0.5,
+  "note": "lattice"
+ },
+ {
+  "t": 38.96,
+  "type": "hit",
+  "gain": 1.0,
+  "note": "conectado"
+ },
+ {
+  "t": 41.5,
+  "type": "hit",
+  "gain": 0.7,
+  "note": "tarjeta"
+ },
+ {
+  "t": 41.5,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "flip 3D de escena"
+ },
+ {
+  "t": 42.38,
+  "type": "click",
+  "gain": 0.7,
+  "note": "fila"
+ },
+ {
+  "t": 43.04,
+  "type": "click",
+  "gain": 0.7,
+  "note": "fila"
+ },
+ {
+  "t": 43.76,
+  "type": "click",
+  "gain": 0.7,
+  "note": "fila"
+ },
+ {
+  "t": 44.36,
+  "type": "click",
+  "gain": 0.7,
+  "note": "fila"
+ },
+ {
+  "t": 45.18,
+  "type": "click",
+  "gain": 0.7,
+  "note": "fila"
+ },
+ {
+  "t": 46.95,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 47.5,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "inteligencia"
+ },
+ {
+  "t": 49.7,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 50.0,
+  "type": "hit",
+  "gain": 0.7,
+  "note": "CRM"
+ },
+ {
+  "t": 50.47,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "corte"
+ },
+ {
+  "t": 51.5,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 52.7,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "corte"
+ },
+ {
+  "t": 53.32,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "látigo"
+ },
+ {
+  "t": 53.76,
+  "type": "hit",
+  "gain": 1.0,
+  "note": "DIAN"
+ },
+ {
+  "t": 55.9,
+  "type": "swish",
+  "gain": 0.6,
+  "note": "Día 3"
+ },
+ {
+  "t": 55.9,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "flip 3D de escena"
+ },
+ {
+  "t": 56.7,
+  "type": "hit",
+  "gain": 0.9,
+  "note": "Día 3 slam"
+ },
+ {
+  "t": 57.9,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 58.53,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "corte"
+ },
+ {
+  "t": 59.8,
+  "type": "pop",
+  "gain": 0.7,
+  "note": "esclavizar"
+ },
+ {
+  "t": 60.1,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ },
+ {
+  "t": 61.3,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "sticker 3D"
+ }
+]

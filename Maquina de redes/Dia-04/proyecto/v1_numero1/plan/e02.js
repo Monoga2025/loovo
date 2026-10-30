@@ -1,0 +1,57 @@
+(function entreno02(T0) {
+  const t2 = gsap.timeline();
+  const sh = (s, t) => t2.set(s, { autoAlpha: 1 }, t), hd = (s, t) => t2.set(s, { autoAlpha: 0 }, t);
+  const ib = (s, t, d = 3 * F, px = 14) => t2.fromTo(s, { autoAlpha: 0, filter: `blur(${px}px)` }, { autoAlpha: 1, filter: "blur(0px)", duration: d, ease: "power2.out", immediateRender: false }, t);
+  const ob = (s, t, d = 3 * F) => t2.to(s, { autoAlpha: 0, filter: "blur(10px)", duration: d, ease: "power1.in" }, t);
+  gsap.set(["#s1", "#s2", "#s3", "#c2", "#c3", "#u1", "#slice", "#gA", "#gB", "#pa", "#pb", "#e2plate", "#plnum", "#no1", "#p1", "#p2", "#p3", "#p4", "#a1", "#a2", "#tphoto"], { autoAlpha: 0 });
+  gsap.set(["#q2", "#q3", "#q4", "#q5"], { autoAlpha: 0 });
+  gsap.set(["#h1", "#h2", "#ph3"], { scaleX: 0 });
+  sh("#s1", 0); hd("#f0", 2 * F);
+  t2.fromTo("#s1in", { scale: 1 }, { scale: 1.035, duration: 0.867, ease: "none" }, 0);
+  t2.to("#h1", { scaleX: 1, duration: 0.35, ease: "power3.out" }, 2 * F);
+  t2.to("#h2", { scaleX: 1, duration: 0.35, ease: "power3.out" }, 4 * F);
+  t2.fromTo("#bA", { x: -150, y: -90, opacity: 0, filter: "blur(18px)" }, { x: 0, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 2 * F);
+  t2.fromTo("#bB", { x: 160, y: -60, opacity: 0, filter: "blur(18px)" }, { x: 0, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 3 * F);
+  t2.fromTo("#bC", { y: 170, opacity: 0, filter: "blur(18px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 4 * F);
+  t2.fromTo("#tphoto", { autoAlpha: 0, scale: 0.7 }, { autoAlpha: 1, scale: 1, duration: 0.2, ease: "back.out(1.8)", immediateRender: false }, 0.24);
+  ib("#a1", 0.10); ib("#a2", 0.32);
+  t2.to("#s1in", { filter: "blur(10px) brightness(1.12)", duration: 2 * F, ease: "none" }, 0.80);
+  hd("#s1", 0.867);
+  sh("#s2", 0.867);
+  t2.fromTo("#white", { autoAlpha: 0.85 }, { autoAlpha: 0, duration: 3 * F, ease: "none", immediateRender: false }, 0.867);
+  t2.fromTo("#s2in", { filter: "blur(14px)" }, { filter: "blur(0px)", duration: 3 * F, ease: "none", immediateRender: false }, 0.867);
+  [["#q1", 0.867], ["#q2", 1.033], ["#q3", 1.133], ["#q4", 1.3], ["#q5", 1.4], ["#q1", 1.567], ["#q2", 1.7], ["#q4", 1.8]].forEach(([p, t], i) => {
+    ["#q1", "#q2", "#q3", "#q4", "#q5"].forEach((q) => { if (q !== p) hd(q, t); });
+    sh(p, t); t2.set("#ff", { scale: i % 2 ? 1.04 : 1 }, t);
+  });
+  sh("#pa", 1.133); hd("#pa", 1.3); sh("#pb", 1.4); hd("#pb", 1.567); sh("#pa", 1.8);
+  t2.fromTo("#photos", { scale: 1 }, { scale: 1.03, duration: 1.2, ease: "none" }, 0.867);
+  ib("#c2", 0.88); ob("#c2", 1.36, 2 * F);
+  ib("#c3", 1.40); ib("#u1", 1.60, 3 * F, 16);
+  t2.fromTo("#u1", { scale: 1.25 }, { scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, 1.60);
+  hd("#s2", 2.067);
+  sh("#s3", 2.067);
+  [[2.067, "invert(1) sepia(.7) saturate(1.3)", true, 24], [2.1, "none", false, -36], [2.133, "invert(1) sepia(.7) saturate(1.3)", true, 0],
+   [2.167, "contrast(1.3)", true, 30], [2.2, "none", false, 0], [2.233, "brightness(1.15)", true, -18], [2.267, "none", false, 0]].forEach(([t, f, split, dx]) => {
+    t2.set("#s3in", { filter: f }, t); t2.set(["#gA", "#gB"], { autoAlpha: split ? 0.75 : 0 }, t);
+    t2.set("#gA", { x: split ? 18 : 0 }, t); t2.set("#gB", { x: split ? -18 : 0 }, t);
+    t2.set("#slice", { autoAlpha: dx ? 1 : 0, x: dx }, t); t2.set("#c3", { x: dx ? -dx * 0.6 : 0 }, t);
+  });
+  t2.fromTo("#box", { scale: 1 }, { scale: 1.04, duration: 0.53, ease: "none" }, 2.067);
+  t2.fromTo("#leak", { autoAlpha: 0, x: -260 }, { autoAlpha: 1, x: 120, duration: 3 * F, ease: "power1.in", immediateRender: false }, 2.50);
+  t2.fromTo("#white", { autoAlpha: 0 }, { autoAlpha: 1, duration: 3 * F, ease: "power1.in", immediateRender: false }, 2.50);
+  hd(["#s3", "#c3"], 2.60);
+  t2.set("#leak", { autoAlpha: 0 }, 2.70);
+  t2.to("#white", { autoAlpha: 0, duration: 4 * F, ease: "sine.out" }, 2.70);
+  t2.fromTo("#base", { filter: "blur(6px) brightness(1.08)" }, { filter: "blur(0px) brightness(1)", duration: 5 * F, ease: "sine.out", immediateRender: false }, 2.66);
+  sh("#shade", 2.62);
+  const cd = (s, a, b) => { ib(s, a, 2 * F, 8); t2.set(s, { autoAlpha: 0 }, b); };
+  cd("#p1", 2.66, 3.30); cd("#p2", 3.32, 4.18); cd("#p3", 4.20, 4.70); cd("#p4", 4.70, 5.36);
+  t2.fromTo("#no1", { autoAlpha: 0, filter: "blur(18px)", y: 24 }, { autoAlpha: 1, filter: "blur(0px)", y: 0, duration: 0.35, ease: "sine.inOut", immediateRender: false }, 4.92);
+  t2.to("#shade", { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" }, 5.36);
+  t2.fromTo("#e2plate", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.34, ease: "sine.inOut", immediateRender: false }, 5.36);
+  t2.to("#no1", { x: 240, y: 620, scale: 1.45, duration: 0.55, ease: "sine.inOut" }, 5.40);
+  ib("#plnum", 5.90, 5 * F, 10);
+  t2.to("#ph3", { scaleX: 1, duration: 0.45, ease: "sine.inOut" }, 5.95);
+  tl.add(t2, T0);
+})(S("C1"));

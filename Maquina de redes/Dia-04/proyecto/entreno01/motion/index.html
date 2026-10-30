@@ -1,0 +1,347 @@
+<!doctype html>
+<!-- entreno01: réplica de ref3 (brutalismo, earnedits) con la frase de Ronaldo. Paleta Loovo premium marfil + oro.
+     Tiempos = línea de tiempo del corte (build/cut.mov). Planos en plan/storyboard.md -->
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>entreno01</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Playfair"; font-style: italic; font-weight: 400; src: url("assets/fonts/playfair-display-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Playfair"; font-style: italic; font-weight: 700; src: url("assets/fonts/playfair-display-latin-700-italic.woff2") format("woff2"); }
+@font-face { font-family: "Playfair"; font-style: normal; font-weight: 800; src: url("assets/fonts/playfair-display-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "InterTight"; font-weight: 500; src: url("assets/fonts/inter-tight-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "InterTight"; font-weight: 700; src: url("assets/fonts/inter-tight-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "InterTight"; font-weight: 800; src: url("assets/fonts/inter-tight-latin-800-normal.woff2") format("woff2"); }
+:root { --marfil:#F7F4EC; --crema:#EDE6D3; --oro:#C9A24B; --oro-s:#8A6A22; --oro-b:#E8CF8A; --carbon:#1C1C1A; --gris:#8E8C86; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:#1C1C1A; font-family:"InterTight", sans-serif; }
+.full { position:absolute; left:0; top:0; width:1080px; height:1920px; }
+.sc { overflow:hidden; }
+.w { display:inline-block; }
+.it { font-family:"Playfair", serif; font-style:italic; font-weight:400; }
+.gold { color:#E8CF8A; text-shadow:0 0 18px rgba(201,162,75,.45), 0 4px 14px rgba(0,0,0,.45); }
+.goldtxt { background:linear-gradient(170deg,#F3E2A8 0%,#E8CF8A 22%,#C9A24B 55%,#8A6A22 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+/* ---------- S1 apertura ---------- */
+#s1 { background:radial-gradient(ellipse at 50% 55%, #2A2824 0%, #1C1C1A 45%, #0D0D0C 100%); z-index:20; }
+#arc { position:absolute; left:-260px; top:-430px; width:1600px; height:1600px; border-radius:50%; border:10px solid #C9A24B; border-left-color:transparent; border-bottom-color:transparent; filter:blur(14px); opacity:.55; }
+#arc2 { position:absolute; left:-160px; top:-330px; width:1400px; height:1400px; border-radius:50%; border:3px solid #E8CF8A; border-left-color:transparent; border-bottom-color:transparent; filter:blur(3px); opacity:.35; }
+#tile { position:absolute; left:297px; top:717px; width:486px; height:486px; }
+.blk { position:absolute; background:linear-gradient(150deg,#E8CF8A 0%,#C9A24B 50%,#8A6A22 100%); box-shadow:0 0 60px rgba(201,162,75,.35); }
+#bA { left:0; top:0; width:243px; height:243px; }
+#bB { left:243px; top:0; width:243px; height:243px; }
+#bC { left:0; top:243px; width:486px; height:243px; }
+#tphoto { position:absolute; left:103px; top:103px; width:280px; height:280px; background:url("assets/img/estatua.jpg") center/cover; border:3px solid #F7F4EC; box-shadow:0 10px 30px rgba(0,0,0,.45); }
+#t1 { position:absolute; left:0; top:375px; width:1080px; text-align:center; font-weight:500; font-size:88px; color:#F7F4EC; letter-spacing:-1px; text-shadow:0 4px 20px rgba(0,0,0,.5); }
+#f0 { z-index:5; background:radial-gradient(circle at 40% 40%, #FFF8E2 0%, #E8CF8A 30%, #C9A24B 55%, #F7F4EC 100%); }
+#f0sq { position:absolute; left:200px; top:640px; width:560px; height:560px; background:#1C1C1A; transform:rotate(-9deg); filter:blur(4px); }
+
+/* ---------- S2 artículo oscuro + fotos ---------- */
+#s2 { z-index:19; background:#EDE6D3; }
+.paper { background:#EDE6D3; }
+.hl { position:absolute; left:70px; top:150px; width:940px; font-weight:800; font-size:62px; line-height:1.05; letter-spacing:-1.5px; color:#1C1C1A; }
+.kick { position:absolute; left:70px; top:110px; font-weight:700; font-size:22px; letter-spacing:4px; color:#8A6A22; }
+.lines { position:absolute; left:70px; width:940px; }
+.lines i { display:block; height:16px; margin-bottom:22px; background:#B9B2A0; border-radius:3px; }
+#art2 { filter:blur(4px) brightness(.78); }
+#photos { position:absolute; left:0; top:630px; width:1080px; height:860px; overflow:hidden; }
+#photos img { position:absolute; left:0; top:0; width:1080px; height:860px; object-fit:cover; }
+.patch { position:absolute; object-fit:cover; box-shadow:0 8px 24px rgba(0,0,0,.4); }
+#vig2 { background:radial-gradient(ellipse at 50% 55%, rgba(0,0,0,0) 30%, rgba(10,8,4,.55) 70%, rgba(10,8,4,.85) 100%); }
+#ff { position:absolute; left:335px; top:883px; width:410px; height:154px; }
+#ff b { position:absolute; width:30px; height:30px; background:#F7F4EC; box-shadow:0 0 12px rgba(0,0,0,.35); }
+#t2 { position:absolute; left:0; top:925px; width:1080px; text-align:center; font-weight:500; font-size:50px; color:#F7F4EC; text-shadow:0 3px 14px rgba(0,0,0,.6); }
+#t2 .it { font-size:62px; }
+
+/* ---------- S3 artículo claro + glitch ---------- */
+#s3 { z-index:18; background:#F7F4EC; }
+#box { position:absolute; left:160px; top:650px; width:760px; height:653px; background:url("assets/img/box.jpg") center/cover; box-shadow:0 30px 60px rgba(60,45,15,.35), 0 4px 10px rgba(0,0,0,.2); }
+.ghost { position:absolute; left:160px; top:650px; width:760px; height:653px; background:url("assets/img/box.jpg") center/cover; mix-blend-mode:multiply; }
+#gA { filter:sepia(1) saturate(4) hue-rotate(-12deg); }
+#gB { filter:grayscale(1) brightness(.6); }
+#slice { position:absolute; left:0; top:0; width:1080px; height:1920px; clip-path:inset(46% 0 40% 0); }
+#vig3 { background:radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 45%, rgba(60,50,30,.28) 100%); }
+#white { z-index:30; background:#FFFDF7; }
+
+/* "número 1" cursiva compartida S2/S3 */
+#it1 { position:absolute; left:0; top:1150px; width:1080px; text-align:center; z-index:25; font-size:128px; color:#F7F4EC; text-shadow:0 6px 26px rgba(0,0,0,.55); white-space:nowrap; }
+
+/* ---------- S4 emblema ---------- */
+#s4 { z-index:17; background:#FFFDF7; }
+#s4dark { background:radial-gradient(ellipse at 50% 35%, #2C2A25 0%, #1C1C1A 50%, #0D0D0C 100%); }
+#s4in { transform-origin:50% 45%; }
+#emb { position:absolute; left:400px; top:280px; width:280px; height:280px; }
+.embc { position:absolute; left:0; top:0; width:280px; height:280px; border-radius:64px; }
+#embM { background:linear-gradient(150deg,#F3E2A8 0%,#C9A24B 50%,#8A6A22 100%); box-shadow:0 18px 50px rgba(201,162,75,.45), inset 0 3px 0 rgba(255,255,255,.5); }
+#embM span { position:absolute; left:0; top:-6px; width:280px; text-align:center; font-family:"Playfair"; font-weight:800; font-size:230px; line-height:280px; color:#1C1C1A; }
+#embR { background:#8A6A22; mix-blend-mode:multiply; opacity:.7; }
+#embC { background:#8E8C86; mix-blend-mode:multiply; opacity:.6; }
+#t4 { position:absolute; left:0; top:800px; width:1080px; text-align:center; font-weight:500; font-size:84px; color:#1C1C1A; }
+#t4 .it { font-size:100px; }
+.cf { position:absolute; }
+.sq { width:34px; height:34px; background:#C9A24B; }
+.ci { width:30px; height:30px; border-radius:50%; background:#F7F4EC; box-shadow:0 0 10px rgba(232,207,138,.6); }
+.st { width:44px; height:44px; background:#E8CF8A; clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%); }
+
+/* ---------- Usuario ---------- */
+#bgU { z-index:1; background:radial-gradient(ellipse at 52% 16%, #FFFDF7 0%, #F7F4EC 30%, #EDE6D3 68%, #CFC4A6 100%); }
+#spot { z-index:1; background:radial-gradient(ellipse at 66% 40%, rgba(255,246,220,.85) 0%, rgba(255,246,220,0) 45%); }
+#behind { position:absolute; left:0; top:190px; width:1080px; text-align:center; z-index:2; font-family:"Playfair"; font-weight:800; font-size:470px; line-height:1; letter-spacing:-12px; white-space:nowrap; }
+#gframe { position:absolute; left:54px; top:54px; width:972px; height:1812px; border:3px solid #C9A24B; z-index:2; box-shadow:inset 0 0 0 12px rgba(201,162,75,.12); }
+#person { position:absolute; left:0; top:330px; width:1080px; height:1590px; z-index:3; transform-origin:50% 100%; filter:drop-shadow(0 30px 40px rgba(60,42,12,.35)); }
+#vigU { z-index:4; background:radial-gradient(ellipse at 50% 42%, rgba(0,0,0,0) 48%, rgba(70,56,28,.30) 85%, rgba(40,32,16,.5) 100%); }
+#line { position:absolute; left:40px; top:1350px; width:1000px; text-align:center; z-index:6; font-weight:700; font-size:70px; letter-spacing:-1px; color:#F7F4EC; text-shadow:0 4px 18px rgba(0,0,0,.55); white-space:nowrap; }
+#line .k { font-weight:800; color:#E8CF8A; }
+.blockw { position:absolute; left:-6px; top:6px; width:62px; height:76px; background:#FFFDF7; }
+#ul { position:absolute; z-index:6; left:0; top:88px; width:100%; height:10px; background:linear-gradient(90deg,#8A6A22,#C9A24B,#E8CF8A); border-radius:5px; transform-origin:0 50%; box-shadow:0 2px 10px rgba(0,0,0,.35); }
+#bar { z-index:28; left:216px; top:1350px; width:648px; height:96px; background:#FFFDF7; position:absolute; }
+
+/* ---------- global ---------- */
+#flash { z-index:40; background:#FFFDF7; }
+#grain { position:absolute; left:-200px; top:-200px; width:1480px; height:2320px; z-index:45; background:url("assets/grano.png"); opacity:.13; mix-blend-mode:overlay; pointer-events:none; }
+#scan { z-index:46; background:repeating-linear-gradient(0deg, rgba(0,0,0,.05) 0px, rgba(0,0,0,.05) 2px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 5px); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="5.867" data-width="1080" data-height="1920">
+
+  <!-- Usuario (debajo de todo; se descubre al ocultar las escenas gráficas) -->
+  <div id="bgU" class="full"></div>
+  <div id="spot" class="full"></div>
+  <div id="gframe"></div>
+  <div id="behind"><span class="goldtxt">Nº1</span></div>
+  <video id="person" class="clip" src="assets/person.webm" data-start="3.067" data-media-start="0.867" data-duration="2.8" data-track-index="1" muted playsinline></video>
+  <div id="vigU" class="full"></div>
+  <div id="line">
+    <span id="l1">
+      <span class="w" id="la1">que&nbsp;</span><span class="w" id="la2">es&nbsp;</span><span class="w" id="la3">el&nbsp;</span><span class="w k" id="la4">número&nbsp;</span><span class="w k" id="la5">1</span>
+    </span>
+    <span id="l2">
+      <span class="w" id="lb1">y&nbsp;</span><span class="w" id="lb2">por&nbsp;</span><span class="w" id="lb3">eso&nbsp;</span><span class="w" id="lb4">es&nbsp;</span><span class="w" id="lb5">el&nbsp;</span><span id="nw" style="position:relative;display:inline-block"><span class="w k" id="lb6">número&nbsp;</span><span class="w k" id="lb7" style="position:relative">1<i class="blockw" id="blk"></i></span><i id="ul"></i></span>
+    </span>
+  </div>
+
+  <!-- S4 emblema -->
+  <div id="s4" class="full sc">
+    <div id="s4dark" class="full"></div>
+    <div id="s4in" class="full">
+      <div class="cf sq" style="left:170px;top:640px"></div>
+      <div class="cf ci" style="left:880px;top:610px"></div>
+      <div class="cf st" style="left:820px;top:1060px"></div>
+      <div class="cf sq" style="left:250px;top:1110px;width:24px;height:24px;background:#E8CF8A"></div>
+      <div class="cf st" style="left:150px;top:300px;width:34px;height:34px"></div>
+      <div class="cf ci" style="left:470px;top:1180px;width:22px;height:22px"></div>
+      <div class="cf sq" style="left:860px;top:330px;width:26px;height:26px"></div>
+      <div class="cf st" style="left:690px;top:690px;width:30px;height:30px;background:#F7F4EC"></div>
+      <div id="emb">
+        <div class="embc" id="embR"></div>
+        <div class="embc" id="embC"></div>
+        <div class="embc" id="embM"><span>1</span></div>
+      </div>
+      <div id="t4"><span class="w" id="c1">No,&nbsp;</span><span class="w" id="c2">él&nbsp;</span><span class="w it gold" id="c3">sabe</span></div>
+    </div>
+  </div>
+
+  <!-- S3 artículo claro -->
+  <div id="s3" class="full sc">
+    <div id="s3in" class="full">
+      <div class="kick">DEPORTES · OPINIÓN</div>
+      <div class="hl">¿Cristiano Ronaldo piensa que es el número 1?</div>
+      <div class="lines" style="top:310px"><i style="width:92%"></i><i style="width:78%"></i><i style="width:85%"></i></div>
+      <div class="lines" style="top:1360px"><i style="width:96%"></i><i style="width:88%"></i><i style="width:93%"></i><i style="width:64%"></i></div>
+      <div class="ghost" id="gA"></div>
+      <div class="ghost" id="gB"></div>
+      <div id="box"></div>
+    </div>
+    <div id="slice"><div id="sliceIn" class="full" style="background:#F7F4EC"><div class="hl">¿Cristiano Ronaldo piensa que es el número 1?</div><div style="position:absolute;left:160px;top:650px;width:760px;height:653px;background:url('assets/img/box.jpg') center/cover;filter:sepia(1) saturate(3)"></div></div></div>
+    <div id="vig3" class="full"></div>
+  </div>
+
+  <!-- S2 artículo oscuro + fotos -->
+  <div id="s2" class="full sc">
+    <div id="s2in" class="full">
+      <div id="art2" class="full paper">
+        <div class="kick">DEPORTES · OPINIÓN</div>
+        <div class="hl">¿Cristiano Ronaldo piensa que es el número 1?</div>
+        <div class="lines" style="top:310px"><i style="width:92%"></i><i style="width:78%"></i><i style="width:85%"></i></div>
+        <div class="lines" style="top:1540px"><i style="width:96%"></i><i style="width:88%"></i><i style="width:93%"></i></div>
+      </div>
+      <div id="photos">
+        <img id="p1" src="assets/img/f1.jpg" alt="" />
+        <img id="p2" src="assets/img/f2.jpg" alt="" />
+        <img id="p3" src="assets/img/f3.jpg" alt="" />
+        <img id="p4" src="assets/img/f4.jpg" alt="" />
+        <img id="p5" src="assets/img/f5.jpg" alt="" />
+      </div>
+      <img id="pa" class="patch" src="assets/img/box.jpg" alt="" style="left:700px;top:560px;width:330px;height:240px" />
+      <img id="pb" class="patch" src="assets/img/estatua.jpg" alt="" style="left:40px;top:1380px;width:300px;height:220px" />
+    </div>
+    <div id="vig2" class="full"></div>
+    <div id="ff"><b style="left:0;top:0"></b><b style="right:0;top:0"></b><b style="left:0;bottom:0"></b><b style="right:0;bottom:0"></b></div>
+    <div id="t2"><span class="w it gold" id="b1">piensa&nbsp;</span><span class="w" id="b2">que&nbsp;</span><span class="w" id="b3">es&nbsp;</span><span class="w" id="b4">el</span></div>
+  </div>
+  <div id="it1" class="it"><span class="w" id="n1">número&nbsp;</span><span class="w gold" id="n2" style="font-weight:700">1</span></div>
+
+  <!-- S1 apertura -->
+  <div id="s1" class="full sc">
+    <div id="s1in" class="full">
+      <div id="arc"></div><div id="arc2"></div>
+      <div id="tile"><div class="blk" id="bA"></div><div class="blk" id="bB"></div><div class="blk" id="bC"></div><div id="tphoto"></div></div>
+      <div id="t1"><span class="w" id="a1">Cristiano&nbsp;</span><span class="w" id="a2">Ronaldo</span></div>
+    </div>
+    <div id="f0" class="full"><div id="f0sq"></div></div>
+  </div>
+
+  <div id="white" class="full"></div>
+  <div id="bar"></div>
+  <div id="flash" class="full"></div>
+  <div id="grain"></div>
+  <div id="scan" class="full"></div>
+</div>
+
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const F = 1 / 30;
+const show = (s, t) => tl.set(s, { autoAlpha: 1 }, t);
+const hide = (s, t) => tl.set(s, { autoAlpha: 0 }, t);
+// palabra: fundido + desenfoque en 3 cuadros (ref: 2-3 cuadros)
+const word = (s, t, d = 0.1) => {
+  tl.set(s, { display: "inline-block" }, t);
+  tl.fromTo(s, { opacity: 0, filter: "blur(12px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out", immediateRender: false }, t);
+};
+const flash = (t, a = 0.85, d = 3 * F) => tl.fromTo("#flash", { opacity: a }, { opacity: 0, duration: d, ease: "none", immediateRender: false }, t);
+
+// estados iniciales
+gsap.set(["#s2", "#s3", "#s4", "#it1", "#white", "#bar", "#s4dark", "#gframe", "#behind", "#ul", "#blk", "#l2", "#slice", "#gA", "#gB", "#embR", "#embC", "#pa", "#pb"], { autoAlpha: 0 });
+gsap.set(["#p2", "#p3", "#p4", "#p5"], { autoAlpha: 0 });
+gsap.set("#flash", { opacity: 0 });
+gsap.set(".w", { display: "none" });
+gsap.set("#tphoto", { autoAlpha: 0, scale: 0.6 });
+gsap.set("#ul", { scaleX: 0 });
+
+// ---------- S1 0.000-0.867 ----------
+hide("#f0", 2 * F);
+tl.fromTo("#s1in", { scale: 1 }, { scale: 1.04, duration: 0.867, ease: "none" }, 0);
+tl.fromTo("#arc", { rotation: -8 }, { rotation: 6, duration: 0.867, ease: "none" }, 0);
+tl.fromTo("#bA", { x: -140, y: -90, opacity: 0, filter: "blur(18px)" }, { x: 0, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 2 * F);
+tl.fromTo("#bB", { x: 150, y: -60, opacity: 0, filter: "blur(18px)" }, { x: 0, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 3 * F);
+tl.fromTo("#bC", { y: 160, opacity: 0, filter: "blur(18px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 4 * F);
+tl.to("#tphoto", { autoAlpha: 1, scale: 1, duration: 0.18, ease: "back.out(2)" }, 0.24);
+word("#a1", 0.10);
+word("#a2", 0.54);
+tl.fromTo("#a2", { color: "#C9A24B" }, { color: "#F7F4EC", duration: 0.25, immediateRender: false }, 0.64);
+// ráfaga de salida (3 cuadros)
+tl.to("#s1in", { filter: "blur(10px) brightness(1.8)", duration: 2 * F, ease: "none" }, 0.80);
+hide("#s1", 0.867);
+
+// ---------- S2 0.867-2.067 ----------
+show("#s2", 0.867);
+flash(0.867, 0.9);
+tl.fromTo("#s2in", { filter: "blur(14px)" }, { filter: "blur(0px)", duration: 3 * F, ease: "none", immediateRender: false }, 0.867);
+// fotos que cambian cada 2-5 cuadros
+const seq = [["#p1", 0.867], ["#p2", 1.033], ["#p3", 1.133], ["#p4", 1.3], ["#p5", 1.4], ["#p1", 1.567], ["#p2", 1.7], ["#p4", 1.8]];
+seq.forEach(([p, t], i) => {
+  ["#p1", "#p2", "#p3", "#p4", "#p5"].forEach((q) => { if (q !== p) hide(q, t); });
+  show(p, t);
+  tl.set("#ff", { scale: i % 2 ? 1.12 : 1 }, t);
+});
+show("#pa", 1.133); hide("#pa", 1.3); show("#pb", 1.4); hide("#pb", 1.567); show("#pa", 1.8);
+tl.fromTo("#photos", { scale: 1 }, { scale: 1.03, duration: 1.2, ease: "none" }, 0.867);
+word("#b1", 0.86); word("#b2", 1.16); word("#b3", 1.28); word("#b4", 1.40);
+tl.to("#t2", { opacity: 0, filter: "blur(8px)", duration: 0.12 }, 1.52);
+tl.to("#ff", { opacity: 0, duration: 0.1 }, 1.62);
+// "número 1" en cursiva (ref: "this year")
+show("#it1", 1.5);
+word("#n1", 1.50); word("#n2", 1.70);
+hide("#s2", 2.067);
+
+// ---------- S3 2.067-2.633 (glitch 2.067-2.267) ----------
+show("#s3", 2.067);
+const g = [
+  [2.067, { filter: "invert(1) sepia(.9) saturate(1.6)" }, true, 24],
+  [2.1, { filter: "none" }, false, -36],
+  [2.133, { filter: "invert(1) sepia(.9) saturate(1.6)" }, true, 0],
+  [2.167, { filter: "contrast(1.4)" }, true, 30],
+  [2.2, { filter: "none" }, false, 0],
+  [2.233, { filter: "brightness(1.3)" }, true, -18],
+  [2.267, { filter: "none" }, false, 0],
+];
+g.forEach(([t, f, split, dx]) => {
+  tl.set("#s3in", f, t);
+  tl.set(["#gA", "#gB"], { autoAlpha: split ? 0.75 : 0 }, t);
+  tl.set("#gA", { x: split ? 18 : 0 }, t);
+  tl.set("#gB", { x: split ? -18 : 0 }, t);
+  tl.set("#slice", { autoAlpha: dx ? 1 : 0, x: dx }, t);
+  tl.set("#it1", { x: dx ? -dx * 0.6 : 0 }, t);
+});
+tl.fromTo("#box", { scale: 1 }, { scale: 1.03, duration: 0.57, ease: "none" }, 2.067);
+tl.fromTo("#white", { autoAlpha: 0 }, { autoAlpha: 1, duration: 4 * F, ease: "none", immediateRender: false }, 2.5);
+hide("#it1", 2.633);
+hide("#s3", 2.633);
+
+// ---------- S4 2.633-3.067 (blanco -> carbón 2.800) ----------
+show("#s4", 2.633);
+hide("#white", 2.633);
+tl.fromTo("#emb", { scale: 1.45, opacity: 0, filter: "blur(10px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.22, ease: "back.out(2.2)" }, 2.633);
+show(["#embR", "#embC"], 2.633);
+tl.fromTo("#embR", { x: 16, y: -6 }, { x: 0, y: 0, duration: 0.3, ease: "steps(5)" }, 2.633);
+tl.fromTo("#embC", { x: -16, y: 6 }, { x: 0, y: 0, duration: 0.3, ease: "steps(5)" }, 2.633);
+hide(["#embR", "#embC"], 2.95);
+tl.from(".cf", { scale: 0, opacity: 0, duration: 0.18, stagger: 0.015, ease: "back.out(3)" }, 2.65);
+tl.to(".cf", { y: "-=40", rotation: 35, duration: 0.42, ease: "none" }, 2.65);
+word("#c1", 2.62);
+tl.fromTo("#t4", { color: "#1C1C1A" }, { color: "#F7F4EC", duration: 0.01, immediateRender: false }, 2.8);
+show("#s4dark", 2.8);
+flash(2.8, 0.6, 2 * F);
+word("#c2", 2.82);
+word("#c3", 2.94);
+tl.fromTo("#s4in", { scale: 1 }, { scale: 1.10, duration: 0.25, ease: "expo.out", immediateRender: false }, 2.817);
+hide("#s4", 3.067);
+
+// ---------- Usuario 3.067-5.867 ----------
+// S5 3.067-3.767 plano medio + "Nº1" detrás
+gsap.set("#person", { scale: 1.1 });
+tl.fromTo("#person", { scale: 1.1 }, { scale: 1.16, duration: 0.69, ease: "none" }, 3.067);
+tl.fromTo("#behind", { autoAlpha: 0, scale: 0.86, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.25, ease: "back.out(1.6)", immediateRender: false }, 3.167);
+word("#la1", 3.08); word("#la2", 3.32); word("#la3", 3.46); word("#la4", 3.54);
+// S6 3.767-4.533 primer plano, marco dorado
+hide("#behind", 3.767);
+show("#gframe", 3.767);
+tl.set("#person", { scale: 1.6, x: -154, y: 34, transformOrigin: "694px 786px" }, 3.767);
+tl.to("#person", { scale: 1.66, duration: 0.766, ease: "none" }, 3.767);
+tl.set("#bgU", { filter: "brightness(.93) sepia(.15)" }, 3.767);
+word("#la5", 3.78);
+tl.set("#l1", { display: "none" }, 4.2); show("#l2", 4.2);
+word("#lb1", 4.2); word("#lb2", 4.26); word("#lb3", 4.34);
+// S7 4.533-5.867 plano medio-corto, cierre marfil
+hide("#gframe", 4.533);
+tl.set("#bgU", { filter: "none" }, 4.533);
+tl.set("#person", { scale: 1.04, x: 0, y: 0, transformOrigin: "50% 100%" }, 4.533);
+tl.to("#person", { scale: 1.11, duration: 1.334, ease: "none" }, 4.533);
+word("#lb4", 4.56); word("#lb5", 4.68); word("#lb6", 4.74);
+// bloque blanco (máscara/cursor de la ref) y luego el "1"
+tl.set("#lb7", { display: "inline-block", opacity: 1 }, 4.867);
+tl.set("#lb7", { color: "rgba(0,0,0,0)" }, 4.867);
+show("#blk", 4.867); hide("#blk", 4.933);
+tl.set("#lb7", { color: "#E8CF8A" }, 4.933);
+tl.fromTo("#lb7", { filter: "blur(10px)" }, { filter: "blur(0px)", duration: 0.1, immediateRender: false }, 4.933);
+// barra blanca de 1 cuadro (ref 5.4)
+show("#bar", 5.1); hide("#bar", 5.133);
+// subrayado dorado y énfasis final
+show("#ul", 5.0);
+tl.to("#ul", { scaleX: 1, duration: 0.3, ease: "power3.out" }, 5.0);
+tl.to(["#lb6", "#lb7"], { y: -4, duration: 0.25, ease: "back.out(3)" }, 5.0);
+
+// ---------- grano animado (cada 2 cuadros) ----------
+for (let i = 0; i < 88; i++) {
+  const t = i * 2 * F;
+  tl.set("#grain", { x: ((i * 73) % 180) - 90, y: ((i * 131) % 180) - 90 }, t);
+}
+tl.set({}, {}, 5.867);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

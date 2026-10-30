@@ -1,0 +1,17 @@
+# PROGRESS
+- [x] estructura + copia input/clip.mp4 + audio/audio.wav (16k mono)
+- [ ] transcripción (scripts/transcribe.py)
+- [x] transcripción medium, 404 palabras -> transcript/words.json + transcript.txt
+- [ ] medidas de audio
+- [x] audio: -15.7 LUFS, TP +0.1 dBFS, Flat 0, Peak count 2, LRA 10.1; audio start_time 0.0675 s
+- [ ] herramientas + tomas
+- [x] herramientas: ffmpeg 9.0.1 OK, Node v24.19 OK, hyperframes 0.8.140 en caché npx OK, rembg+numpy importan (sin -I); FALTA modelo u2net.onnx (~/.u2net vacío: rembg lo descargará en la 1.ª corrida)
+- [x] plan/takes.json (10 tomas, ~39 s) + plan/keywords.json (11 palabras, tiempos de origen)
+- FASE 1 TERMINADA. Retoma: esperar aprobación de Monoga -> Fase 2 desde make_edl.py (plan/takes.json). Desfase contenedor: audio start 0.0675 s (build_cut lo compensa); labios/voz se mide con check_sync tras el corte.
+- Notas: transcripción dice "IVA"->"iba", "adelanta"->"adelante", "un agente"->"una gente"; corregir solo texto en words.json.
+- [x] F2.1 words.json corregido (IVA, un agente, Estatuto Tributario, adelanta) -> transcript/correcciones.md; original en words.orig.json
+- [x] F2.2b build/cut.mp4 39.64 s, check_sync OK (audio 0.000 s, labios +0.005 s) -> qa/sync.log
+- [x] F2.3 color medido (qa/color): cara a*+8..13 b*+6..10 (neutra); zona pared a*-10..-14 b*+19..24 = plantas/ladrillo, no tinte -> solo base Dia1
+- [x] F2.3b build/clean.mp4 (30fps, base Dia1 horneada) + build/voice-cut.wav (48k)
+- [ ] F2.5 recorte EN CURSO: bash build/seg/run_seg.sh (reanudable por toma; hechas en build/seg/done.log; orden t01-t06,t10,t07-t09)
+- [!] F2.4 audio_pro.py NO usable (corre main() al importar; exige out/final_*.mp4 y musica). Voz: build/voice-cut.wav -15.8 LUFS TP -0.4 Flat 0 PeakCount 2 -> build/voice-gain.wav (solo -3 dB, sin limpieza)

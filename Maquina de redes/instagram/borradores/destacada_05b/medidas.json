@@ -1,0 +1,32 @@
+{
+  "archivo": "destacadas\\portadas\\destacada_05_sin_humo.png",
+  "tamano": [
+    1080,
+    1920
+  ],
+  "tamano_fuente": [
+    941,
+    1672
+  ],
+  "centro": [
+    540,
+    960
+  ],
+  "diametro_visible_px": 539.39,
+  "bbox_visible": [
+    307,
+    716,
+    774,
+    1205
+  ],
+  "criterio": "2 × radio máximo de píxeles con diferencia máxima de canal >30/255 contra carbón; incluye volumen y sombras visibles. Halos menores no certificados.",
+  "sha256_anterior": "c34683a7635ddfbc8cec30c8bf420353ddfddd2ec42a622a718557f00ae65546",
+  "sha256_archivo_filigrana": "c34683a7635ddfbc8cec30c8bf420353ddfddd2ec42a622a718557f00ae65546",
+  "sha256_otras_portadas": {
+    "destacada_01_la_serie.png": "a708eda112f6038c79f7fa852257f77547b0d9a98a026253e92dc8a6780f4337",
+    "destacada_02_loovo.png": "404a0ea48c6f343cdd2afc4b9311ee69396321edf02f8b07bddc4168cb77e0ed",
+    "destacada_03_el_editor.png": "97265bd3f8b382fdbb509c4fe953d38c43bd3bbeedf7c2a8a52b28288f224473",
+    "destacada_04_crm_local.png": "968718c08f259b1cb6373c893723c936eef1c10338db10838713d478fa45632e",
+    "destacada_06_modo_demo.png": "e1c28f2898d62f6ff9a4d621c440b570c348b0c1b1feb602dc344edddbd235bf"
+  }
+}

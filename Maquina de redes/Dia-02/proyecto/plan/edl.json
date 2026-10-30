@@ -1,0 +1,198 @@
+{
+ "source": "input/clip.mp4",
+ "target": 65,
+ "tolerance": 10,
+ "max": 80,
+ "clips": [
+  {
+   "id": "t1",
+   "start": 110.28,
+   "end": 113.3,
+   "vs": 110.32,
+   "ve": 113.22,
+   "ws": 110.311,
+   "we": 113.251,
+   "note": "Ayer contraté a alguien no le pago y trabaja hasta las 3 de la mañana"
+  },
+  {
+   "id": "t2",
+   "start": 114.08,
+   "end": 117.11,
+   "vs": 114.12,
+   "ve": 117.03,
+   "ws": 113.751,
+   "we": 117.991,
+   "note": "Hoy es el día número 2 de 42 hasta llegar al evento"
+  },
+  {
+   "id": "t3",
+   "start": 142.37,
+   "end": 145.15,
+   "vs": 142.41,
+   "ve": 145.07,
+   "ws": 142.29,
+   "we": 145.19,
+   "note": "Mostrando cómo construyo mi agencia de inteligencia artificial"
+  },
+  {
+   "id": "t4",
+   "start": 191.94,
+   "end": 193.6,
+   "vs": 191.98,
+   "ve": 193.52,
+   "ws": 191.49,
+   "we": 193.63,
+   "note": "Te voy a mostrar uno de mis dos empleados"
+  },
+  {
+   "id": "t5",
+   "start": 194.14,
+   "end": 195.52,
+   "vs": 194.18,
+   "ve": 195.44,
+   "ws": 194.03,
+   "we": 195.611,
+   "note": "Este edita los videos"
+  },
+  {
+   "id": "t6",
+   "start": 197.76,
+   "end": 199.32,
+   "vs": 197.8,
+   "ve": 199.24,
+   "ws": 197.951,
+   "we": 198.9,
+   "note": "cobra no duerme"
+  },
+  {
+   "id": "t7",
+   "start": 201.73,
+   "end": 205.8,
+   "vs": 201.77,
+   "ve": 205.72,
+   "ws": 201.951,
+   "we": 205.81,
+   "note": "me pasó un video de 7 minutos a un video de 38 segundos con este estilo"
+  },
+  {
+   "id": "t8",
+   "start": 278.57,
+   "end": 282.62,
+   "vs": 278.61,
+   "ve": 282.54,
+   "ws": 278.471,
+   "we": 282.731,
+   "note": "La verdad a este sí lo exploto durante toda la noche Porque me edita los videos mientras estoy durmiendo"
+  },
+  {
+   "id": "t9a",
+   "start": 288.02,
+   "end": 290.29,
+   "vs": 288.06,
+   "ve": 290.21,
+   "ws": 287.631,
+   "we": 290.231,
+   "note": "El segundo también lo sobreexplotó pero"
+  },
+  {
+   "id": "t9b",
+   "start": 292.13,
+   "end": 294.77,
+   "vs": 292.17,
+   "ve": 294.69,
+   "ws": 291.851,
+   "we": 295.311,
+   "note": "Él sí trabaja en el día porque está conectado a mi CRM"
+  },
+  {
+   "id": "t10",
+   "start": 306.14,
+   "end": 310.21,
+   "vs": 306.18,
+   "ve": 310.13,
+   "ws": 305.711,
+   "we": 310.411,
+   "note": "Les voy a mostrar cómo funciona un CRM real con Inteligencia Artificial integrada"
+  },
+  {
+   "id": "t11",
+   "start": 312.07,
+   "end": 318.62,
+   "vs": 312.11,
+   "ve": 318.54,
+   "ws": 312.271,
+   "we": 318.631,
+   "note": "Normalmente los CRM que están vendiendo con Inteligencia Artificial Es un chat pegado dentro de la plataforma que no hace absolutamente nada"
+  },
+  {
+   "id": "t12a",
+   "start": 323.34,
+   "end": 327.61,
+   "vs": 323.38,
+   "ve": 327.53,
+   "ws": 322.87,
+   "we": 327.49,
+   "note": "En cambio este CRM está conectado por dentro de la plataforma"
+  },
+  {
+   "id": "t12b",
+   "start": 329.69,
+   "end": 334.49,
+   "vs": 329.73,
+   "ve": 334.41,
+   "ws": 329.331,
+   "we": 334.391,
+   "note": "Este puede leer cada cliente cada correo Qué hace en qué tapas está cómo le gusta que le hablen"
+  },
+  {
+   "id": "t13",
+   "start": 367.3,
+   "end": 371.54,
+   "vs": 367.34,
+   "ve": 371.46,
+   "ws": 367.05,
+   "we": 371.831,
+   "note": "Es como si hubiera nacido una Inteligencia Artificial Que ya hubiera nacido con un CRM"
+  },
+  {
+   "id": "t14a",
+   "start": 435.61,
+   "end": 437.84,
+   "vs": 435.65,
+   "ve": 437.76,
+   "ws": 435.301,
+   "we": 437.681,
+   "note": "y si un CRM es bueno con inteligencia artificial"
+  },
+  {
+   "id": "t14b",
+   "start": 438.11,
+   "end": 441.21,
+   "vs": 438.15,
+   "ve": 441.13,
+   "ws": 438.261,
+   "we": 441.141,
+   "note": "ahora lo vamos a conectar a la DIAN para que podamos hacer facturas electrónicas"
+  },
+  {
+   "id": "t15",
+   "start": 493.67,
+   "end": 496.39,
+   "vs": 493.71,
+   "ve": 496.31,
+   "ws": 493.421,
+   "we": 496.461,
+   "note": "pero esto lo vamos a ver en el día 3 de momento quiero que me digas"
+  },
+  {
+   "id": "t16",
+   "start": 511.84,
+   "end": 516.4,
+   "vs": 511.88,
+   "ve": 515.57,
+   "ws": 511.641,
+   "we": 515.641,
+   "note": "qué tipo de empleado te gustaría esclavizar durante toda la noche y durante todos los días [cola: sonrisa con la boca cerrada]"
+  }
+ ]
+}

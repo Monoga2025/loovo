@@ -1,0 +1,335 @@
+<!doctype html>
+<!-- Canal · "Por qué monté Odoo en mi agencia". Showreel de motion sobre la marca Loovo (blanco pastel + puntos + dorado suave + carbón).
+     Prompt del usuario para el motion (literal, §0.1 de monoga-adria):
+     "make a dynamic motion graphics video that shows what an incredible motion designer you are, y muestra la persona hablando
+      solo cuando mire la cámara y cuando genere tensión, like it's your showreel for a résumé. go all out."
+     Persona solo en G1b, P1, T1b-T1c (selfie, tensión) y R1; pantalla (odoo.com, Railway) como B-roll 2.5D; el resto es motion.
+     Reglas: border-radius 0, sin recortar su silueta, sin fondos dorados, sin verde, frases >= 84 px, claves >= 118 px, etiquetas >= 48 px. -->
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>Canal odoo</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+/*__CSS__*/
+#sH { z-index:20; } #sE { z-index:21; } #sI { z-index:22; } #sK { z-index:23; } #sQ { z-index:24; } #sL { z-index:25; }
+#sO, #sD, #sY { z-index:28; }
+#hKb { height:240px; } #hKb .tx { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:180px; line-height:230px; width:880px; letter-spacing:0; }
+.ap { position:absolute; width:130px; height:130px; background:#FBF8F1; box-shadow:0 22px 44px -20px rgba(90,74,44,.4); }
+.ap .ico { position:absolute; left:32px; top:32px; width:66px; height:66px; background:#2A2926; }
+.ap.k { background:#2A2926; } .ap.k .ico { background:#E6D6AE; }
+/* E ERP */
+.win { position:absolute; left:140px; width:800px; height:430px; background:#FBF8F1; box-shadow:0 40px 80px -30px rgba(90,74,44,.45), 0 8px 20px rgba(90,74,44,.12); }
+.win .hd { position:absolute; left:0; top:0; width:800px; height:90px; background:#2A2926; }
+.win .hd span { position:absolute; left:34px; top:16px; font-weight:600; font-size:52px; letter-spacing:3px; color:#E6D6AE; }
+.plug { position:absolute; width:120px; height:120px; background:#2A2926; box-shadow:0 18px 36px -14px rgba(42,41,38,.5); }
+.plug .ico { position:absolute; left:30px; top:30px; width:60px; height:60px; background:#E6D6AE; }
+#eKb { height:170px; } #eKb .tx { font-size:118px; line-height:170px; width:920px; letter-spacing:-4px; white-space:nowrap; }
+/* I instalación */
+#iWord { position:absolute; left:0; top:640px; width:1080px; text-align:center; font-weight:600; font-size:250px; line-height:1; letter-spacing:10px; color:#2A2926; text-indent:10px; }
+#iTrack { position:absolute; left:120px; top:960px; width:840px; height:50px; background:#E4DFD4; }
+#iFill { position:absolute; left:0; top:0; width:840px; height:50px; background:#C8B07A; transform-origin:0 50%;
+  background-image:repeating-linear-gradient(-45deg, rgba(255,251,242,.35) 0 14px, rgba(255,251,242,0) 14px 28px); }
+#iPct { position:absolute; left:120px; top:1040px; width:840px; text-align:right; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:120px; color:#A88F57; }
+#iLbl { position:absolute; left:120px; top:1064px; font-weight:600; font-size:56px; letter-spacing:4px; color:#8C887F; }
+/* K kanban */
+.col { position:absolute; top:760px; width:300px; height:700px; background:rgba(228,223,212,.65); }
+.col .hd { position:absolute; left:0; top:0; width:300px; height:96px; background:#2A2926; }
+.col .hd span { position:absolute; left:0; top:20px; width:300px; text-align:center; font-weight:600; font-size:50px; color:#E6D6AE; letter-spacing:1px; }
+.kc { position:absolute; width:260px; height:120px; background:#FBF8F1; box-shadow:0 18px 34px -16px rgba(90,74,44,.45); }
+.kc i { position:absolute; left:22px; height:16px; background:#2A2926; display:block; }
+.kc b { position:absolute; left:0; top:0; width:10px; height:120px; background:#C8B07A; }
+#kKb { height:190px; } #kKb .tx { font-size:140px; line-height:190px; width:700px; letter-spacing:-5px; }
+/* Q pregunta */
+#qBig { position:absolute; left:0; top:640px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:170px; line-height:1.05; color:#2A2926; }
+#qBig b { color:#A88F57; }
+/* L módulos */
+.md { position:absolute; width:470px; height:260px; background:#FBF8F1; box-shadow:0 30px 60px -26px rgba(90,74,44,.42), 0 6px 16px rgba(90,74,44,.12); }
+.md .ib { position:absolute; left:0; top:0; width:160px; height:260px; background:#2A2926; }
+.md .ib .ico { position:absolute; left:35px; top:85px; width:90px; height:90px; background:#E6D6AE; }
+.md .tt { position:absolute; left:185px; top:0; height:260px; width:270px; display:flex; align-items:center; font-weight:600; font-size:62px; line-height:1.05; letter-spacing:-1px; color:#2A2926; }
+#lOne { position:absolute; left:140px; top:880px; width:800px; height:260px; background:#2A2926; box-shadow:0 50px 100px -30px rgba(42,41,38,.6); outline:6px solid #C8B07A; outline-offset:16px; }
+#lOne span { position:absolute; left:0; top:0; width:800px; line-height:260px; text-align:center; font-weight:600; font-size:150px; letter-spacing:12px; color:#FBF8F1; }
+/* D DIAN */
+#dKb { height:220px; } #dKb .tx { font-size:190px; line-height:220px; width:560px; letter-spacing:-4px; }
+/* Y Railway */
+#yStamp { position:absolute; left:250px; top:420px; width:580px; height:180px; border:10px solid #E6D6AE; transform:rotate(-7deg); background:rgba(42,41,38,.55); }
+#yStamp span { position:absolute; left:0; top:22px; width:100%; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:118px; line-height:1; color:#E6D6AE; }
+/* placa */
+#plL { position:absolute; left:0; top:520px; width:1080px; text-align:center; font-weight:600; font-size:230px; line-height:1; letter-spacing:18px; color:#2A2926; text-indent:18px; }
+#plS { position:absolute; left:0; top:860px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:120px; line-height:1.08; color:#A88F57; }
+#plH { left:300px; top:810px; width:480px; }
+#plT { position:absolute; left:0; top:1170px; width:1080px; text-align:center; font-weight:600; font-size:80px; letter-spacing:-1px; color:#8C887F; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__TOTAL__" data-width="1080" data-height="1920">
+
+  <div id="bgD" class="full dots"></div>
+  <video id="base" class="clip full" src="assets/base.mp4" data-start="0" data-duration="__TOTAL__" data-track-index="1" muted playsinline></video>
+  <div id="shade" class="full"></div>
+
+  <!-- H gancho: "organizar" visible desde el cuadro 0 -->
+  <div id="sH" class="full sc"><div id="camH" class="full">
+    <div class="bigdots dots" id="hBg"></div>
+    <div id="hApps" class="full"></div>
+    <div id="hT1" class="ttl dk f90" style="top:150px"></div>
+    <div class="kbw" style="top:620px"><div id="hKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">organizar</div></div></div>
+    <div id="hT2" class="ttl dk f90" style="top:1000px"></div>
+  </div></div>
+
+  <!-- E los mejores ERP -> entre más instala, peor funciona -->
+  <div id="sE" class="full sc"><div id="camE" class="full">
+    <div class="bigdots dots" id="eBg"></div>
+    <div id="eT" class="ttl dk f90" style="top:170px"></div>
+    <div class="win" id="eW3" style="top:700px"><div class="hd"><span>ERP</span></div></div>
+    <div class="win" id="eW2" style="top:660px"><div class="hd"><span>ERP</span></div></div>
+    <div class="win" id="eW1" style="top:620px"><div class="hd"><span>ERP</span></div></div>
+    <div id="ePlugs" class="full"></div>
+    <svg class="lsvg" width="1080" height="1920"><polyline id="eLine" points="150,820 300,800 420,860 560,940 680,1010 800,1150 930,1320" fill="none" stroke="#C8B07A" stroke-width="12" stroke-linejoin="miter"/></svg>
+    <div id="eT2" class="ttl dk f90" style="top:170px"></div>
+    <div class="kbw" style="top:1250px"><div id="eKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">peor funciona</div></div></div>
+  </div></div>
+
+  <!-- I instalar Odoo -->
+  <div id="sI" class="full sc"><div id="camI" class="full">
+    <div class="bigdots dots" id="iBg"></div>
+    <div id="iT" class="ttl dk f90" style="top:300px"></div>
+    <div id="iWord">ODOO</div>
+    <div id="iTrack"><div id="iFill"></div></div>
+    <div id="iLbl">INSTALANDO</div>
+    <div id="iT2" class="ttl dk f90" style="top:1200px"></div>
+  </div></div>
+
+  <!-- K módulo de marketing: vista kanban de guiones -->
+  <div id="sK" class="full sc"><div id="camK" class="full">
+    <div class="bigdots dots" id="kBg"></div>
+    <div id="kT" class="ttl dk f90" style="top:150px"></div>
+    <div class="kbw" style="top:450px"><div id="kKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">kanban</div></div></div>
+    <div class="col" id="kc0" style="left:60px"><div class="hd"><span>Ideas</span></div></div>
+    <div class="col" id="kc1" style="left:390px"><div class="hd"><span>Guiones</span></div></div>
+    <div class="col" id="kc2" style="left:720px"><div class="hd"><span>Grabados</span></div></div>
+    <div id="kCards" class="full"></div>
+  </div></div>
+
+  <!-- Q "¿Saben qué pasa?" -->
+  <div id="sQ" class="full sc"><div id="camQ" class="full">
+    <div class="bigdots dots" id="qBg"></div>
+    <div id="qBig">¿Saben<br>qué <b>pasa?</b></div>
+    <div id="qT" class="ttl dk f90" style="top:1120px"></div>
+  </div></div>
+
+  <!-- O etiqueta sobre odoo.com -->
+  <div id="sO" class="full"><div class="tag" id="oTag" style="left:70px;top:170px">ODOO · <b>UN SOLO SOFTWARE</b></div></div>
+
+  <!-- L módulos -->
+  <div id="sL" class="full sc"><div id="camL" class="full">
+    <div class="bigdots dots" id="lBg"></div>
+    <div class="sub" id="lSub" style="top:170px">en Odoo tenemos</div>
+    <div id="lMods" class="full"></div>
+    <div id="lOne"><span>ODOO</span></div>
+  </div></div>
+
+  <!-- D etiqueta + DIAN sobre la pantalla -->
+  <div id="sD" class="full">
+    <div class="tag" id="dTag" style="left:70px;top:170px">ODOO · <b>CONTABILIDAD</b></div>
+    <div class="kbw" style="top:330px"><div id="dKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">DIAN</div></div></div>
+  </div>
+
+  <!-- Y Railway -->
+  <div id="sY" class="full">
+    <div class="tag" id="yTag" style="left:70px;top:170px">RAILWAY · <b>DESPLIEGUE</b></div>
+    <div id="yStamp"><span>exitoso</span></div>
+  </div>
+
+  <div id="caps" class="full"></div>
+
+  <!-- placa del canal -->
+  <div id="pl" class="full sc dots">
+    <div id="plL">LOOVO</div>
+    <i class="hair" id="plH"></i>
+    <div id="plS">todo en un<br>solo sistema</div>
+    <div id="plT">#Loovo</div>
+  </div>
+
+  <div id="leak" class="full"></div>
+  <div id="white" class="full"></div>
+  <div id="grain"></div>
+</div>
+
+<script>
+//__LIB__
+const ALL = ["#sE", "#sI", "#sK", "#sQ", "#sO", "#sL", "#sD", "#sY", "#pl"];
+gsap.set(ALL, { autoAlpha: 0 }); gsap.set(["#leak", "#white", "#shade"], { autoAlpha: 0 });
+
+// ============ H. GANCHO: "organizar" en el cuadro 0; las apps sueltas se ordenan ============
+gsap.set("#sH", { autoAlpha: 1 });
+keyboxOn("#hKb", 880);
+const HA = ["calculator", "users-three", "package", "shopping-cart", "megaphone", "receipt", "envelope-simple", "kanban", "cash-register", "truck", "chart-bar", "folder"];
+const HP = HA.map((_, i) => [R(30, 920), [R(380, 520), R(900, 1000), R(1250, 1500)][i % 3]]);
+$("#hApps").innerHTML = HA.map((ic, i) => `<div class="ap${i % 4 === 1 ? " k" : ""}" id="ha${i}" style="left:${HP[i][0]}px;top:${HP[i][1]}px"><div class="ico" style="${ICON(ic)}"></div></div>`).join("");
+HA.forEach((_, i) => gsap.set("#ha" + i, { rotation: R(-35, 35), autoAlpha: i < 6 ? 1 : 0 }));
+HA.forEach((_, i) => { if (i >= 6) tl.fromTo("#ha" + i, { autoAlpha: 0, scale: 0.4 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)", immediateRender: false }, 0.1 + (i - 6) * 0.08); });
+HA.forEach((_, i) => tl.to("#ha" + i, { x: R(-30, 30), y: R(-40, 40), rotation: "+=" + R(-25, 25), duration: B.h_org, ease: "sine.inOut" }, 0));
+// al decir "organizar": todo se ordena en una rejilla limpia debajo
+HA.forEach((_, i) => tl.to("#ha" + i, { x: 105 + (i % 6) * 150 - HP[i][0], y: 1300 + Math.floor(i / 6) * 150 - HP[i][1], rotation: 0, duration: 0.55, ease: "expo.inOut" }, B.h_org - 0.1 + i * 0.015));
+T("#hT1", ["^me ^di ^cuenta ^que", "^necesitaba"], "G1a");
+tl.fromTo("#hKb", { scale: 1 }, { scale: 1.1, duration: 3 * F, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, B.h_org - F);
+T("#hT2", ["la información", "de la ~empresa~"], "G1a", { min: B.h_inf - 0.3 });
+tl.fromTo("#camH", { scale: 1.06 }, { scale: 1.0, duration: B.cut1, ease: "sine.out", immediateRender: false }, 0);
+tl.fromTo("#hBg", { y: 0 }, { y: -100, duration: B.cut1, ease: "none", immediateRender: false }, 0);
+tl.to("#camH", { scale: 2.4, filter: "blur(14px)", duration: 0.28, ease: "power4.in", transformOrigin: "540px 740px" }, B.cut1 - 0.28);
+hide("#sH", B.cut1);
+
+// ============ G1b. persona: "no sabía dónde montarlo" ============
+show("#shade", B.cut1);
+card("no sabía dónde|~montarlo~", S("G1b"), B.e_in + 0.05);
+tl.to("#base", { filter: "blur(8px)", scale: 1.15, duration: 4 * F, ease: "power3.in" }, B.e_in - 4 * F);
+hide("#shade", B.e_in);
+
+// ============ E. los mejores ERP -> peor funciona ============
+enterMG("#sE", "#camE", B.e_in, B.p_in);
+tl.set("#base", { filter: "blur(0px)", scale: 1 }, B.e_in + 0.05);
+T("#eT", ["intenté integrarlo", "en los ~mejores~", "*ERP*"], "G2", { min: B.e_in });
+gsap.set(["#eW1", "#eW2", "#eW3"], { autoAlpha: 0 });
+["#eW3", "#eW2", "#eW1"].forEach((w, i) => tl.fromTo(w, { autoAlpha: 0, y: 260, rotationX: -50, transformPerspective: 1800, filter: "blur(12px)" }, { autoAlpha: 1, y: 0, rotationX: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, B.e_mej - 0.2 + i * 0.12));
+tl.to("#eT", { autoAlpha: 0, y: -50, filter: "blur(12px)", duration: 4 * F }, B.e2_in - 4 * F);
+T("#eT2", ["entre más instala", "cosas ~nuevas~"], "G3", { min: B.e2_in });
+// plugins que se amontonan sobre el ERP
+const PI = ["plug", "puzzle", "plus-circle", "plug", "gear", "lightning", "plug", "stack", "gear"];
+$("#ePlugs").innerHTML = PI.map((ic, i) => `<div class="plug" id="pg${i}" style="left:${170 + (i % 5) * 150}px;top:${560 - Math.floor(i / 5) * 140}px"><div class="ico" style="${ICON(["plug", "gear", "lightning", "stack", "plug"][i % 5])}"></div></div>`).join("");
+gsap.set(".plug", { autoAlpha: 0 });
+PI.forEach((_, i) => tl.fromTo("#pg" + i, { autoAlpha: 0, y: -700, rotation: R(-50, 50) }, { autoAlpha: 1, y: 0, rotation: R(-12, 12), duration: 0.35, ease: "power2.in", immediateRender: false }, B.e_ins - 0.1 + i * 0.12));
+PI.forEach((_, i) => shake("#eW1", B.e_ins + 0.25 + i * 0.12, 6, 2));
+gsap.set("#eLine", { autoAlpha: 0 });
+tl.set("#eLine", { autoAlpha: 1 }, B.e_cos); drawLine("#eLine", B.e_cos, B.e_peor - B.e_cos + 0.2, "power1.in");
+tl.to(["#eW1", "#eW2", "#eW3"], { rotation: (i) => [-4, 3, -2][i], y: "+=30", filter: "grayscale(1)", duration: 0.4, ease: "power2.in" }, B.e_peor - 0.2);
+tl.to(".plug", { y: "+=60", rotation: () => R(-40, 40), duration: 0.35, ease: "power2.in", stagger: 0.01 }, B.e_peor - 0.15);
+keybox("#eKb", B.e_peor, 920);
+shake("#camE", B.e_peor + F, 16, 6);
+tl.to("#camE", { scale: 1.06, duration: 0.25, ease: "power3.out", yoyo: true, repeat: 1 }, B.e_fun);
+
+// ============ P1. persona: "fui integrador de Odoo" (destello crema) ============
+destello(B.p_in, ["#sE"]);
+show("#shade", B.p_in);
+card("Como yo manejo|~Odoo~", S("P1"), B.p_porq);
+card("porque yo fui|*integrador* de Odoo", B.p_porq, B.i_in + 0.05);
+tl.to("#base", { scale: 1.3, filter: "blur(10px)", duration: 0.3, ease: "power4.in" }, B.i_in - 0.3);
+hide("#shade", B.i_in);
+
+// ============ I. instalar Odoo ============
+enterMG("#sI", "#camI", B.i_in, B.k_in);
+tl.set("#base", { filter: "blur(0px)", scale: 1 }, B.i_in + 0.05);
+T("#iT", ["vamos a ~instalar~"], "P2", { min: B.i_in });
+gsap.set(["#iWord", "#iTrack", "#iLbl"], { autoAlpha: 0 }); gsap.set("#iFill", { scaleX: 0 });
+const iw = $("#iWord"); iw.innerHTML = [..."ODOO"].map((c) => `<span class="ch" style="display:inline-block">${c}</span>`).join("");
+gsap.set("#iWord", { autoAlpha: 1 }); gsap.set("#iWord .ch", { autoAlpha: 0 });
+tl.fromTo("#iWord .ch", { autoAlpha: 0, y: 140, rotationX: -90, transformPerspective: 1200 }, { autoAlpha: 1, y: 0, rotationX: 0, duration: 0.4, ease: "expo.out", stagger: 0.06, immediateRender: false }, B.i_odoo - 0.2);
+inBlur(["#iTrack", "#iLbl"], B.i_ins - 0.1);
+tl.to("#iFill", { scaleX: 0.68, duration: B.k_in - B.i_ins - 0.2, ease: "power2.out" }, B.i_ins);
+T("#iT2", ["para la ~agencia~"], "P2", { min: B.i_ag - 0.5 });
+
+// ============ K. módulo de marketing: kanban de guiones ============
+whip("#camI", "#sI", "#sK", "#camK", B.k_in, 0, 900, B.q_in);
+T("#kT", ["el módulo de", "~marketing~"], ["P3a", "P3b"], { min: B.k_in });
+keybox("#kKb", B.k_kan, 700);
+gsap.set(".col", { autoAlpha: 0 });
+[0, 1, 2].forEach((i) => tl.fromTo("#kc" + i, { autoAlpha: 0, y: 300, filter: "blur(12px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, B.k_kan - 0.25 + i * 0.1));
+const KC = [[0, 0], [0, 1], [0, 2], [0, 3], [1, 0], [2, 0]];
+$("#kCards").innerHTML = KC.map(([c, r], i) => `<div class="kc" id="kk${i}" style="left:${80 + c * 330}px;top:${880 + r * 140}px"><b></b><i style="top:30px;width:${R(140, 210)}px"></i><i style="top:66px;width:${R(90, 170)}px;background:#8C887F"></i></div>`).join("");
+gsap.set(".kc", { autoAlpha: 0 });
+KC.forEach((_, i) => tl.fromTo("#kk" + i, { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "back.out(1.6)", immediateRender: false }, B.k_kan + 0.25 + i * 0.07));
+// al decir "organizar" y "guiones": las tarjetas cruzan de columna
+tl.to("#kk1", { x: 330, y: 140, rotation: 3, duration: 0.5, ease: "expo.inOut" }, B.k_org - 0.1);
+tl.to("#kk2", { x: 330, y: 140, duration: 0.5, ease: "expo.inOut" }, B.k_org + 0.15);
+tl.to("#kk4", { x: 330, y: 420 - 0, duration: 0.5, ease: "expo.inOut" }, B.k_gui - 0.3);
+tl.to(".kc b", { backgroundColor: "#A88F57", duration: 3 * F, stagger: 0.05 }, B.k_gui);
+tl.to("#kT", { autoAlpha: 0, y: -40, filter: "blur(10px)", duration: 4 * F }, B.k_kan - 0.6);
+const KT2 = document.createElement("div"); KT2.className = "ttl dk f90"; KT2.id = "kT2"; KT2.style.top = "150px"; $("#camK").appendChild(KT2);
+T("#kT2", ["para organizar", "los ~guiones~"], "P3b", { min: B.k_org - 0.4 });
+tl.to("#kKb", { autoAlpha: 0, duration: 3 * F }, B.k_org - 0.4);
+
+// ============ Q. "¿Saben qué pasa?" ============
+whip("#camK", "#sK", "#sQ", "#camQ", B.q_in, 1000, 0, B.cut2);
+gsap.set("#qBig", { autoAlpha: 0 });
+tl.fromTo("#qBig", { autoAlpha: 0, scale: 1.5, filter: "blur(20px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, B.q_in + 0.1);
+shake("#camQ", B.q_pasa, 10, 4);
+tl.to("#qBig", { y: -260, scale: 0.8, duration: 0.4, ease: "expo.inOut" }, B.q_norm - 0.3);
+T("#qT", ["normalmente", "la gente ~dice:~"], "T1a", { min: B.q_norm - 0.3 });
+tl.to("#camQ", { scale: 1.5, filter: "blur(14px)", duration: 0.28, ease: "power4.in" }, B.cut2 - 0.28);
+hide("#sQ", B.cut2);
+
+// ============ T1. persona en selfie (tensión): un sistema para cada cosa ============
+show("#shade", B.cut2);
+card("tengo un *CRM*|para mis clientes", S("T1b"), S("T1c"));
+card("un módulo de|*contabilidad*,", S("T1c"), B.t_inv - 0.25);
+card("otro de|~inventario~...", B.t_inv - 0.25, B.o_in + 0.05);
+
+// ============ O. pantalla: odoo.com "un solo software" (2.5D) ============
+tl.fromTo("#base", { filter: "blur(16px)" }, { filter: "blur(0px)", duration: 0.35, ease: "expo.out", immediateRender: false }, B.o_in + 0.25);
+basePanel(B.o_in + 0.6, 1.0, { s: 0.82, ry: -8, rx: 5, y: -20 });
+show("#sO", B.o_in + 0.25); inBlur("#oTag", B.o_in + 0.45);
+card("En ~Odoo~ se puede|manejar|*absolutamente todo*", S("T2"), B.l_in + 0.05);
+baseOut(B.l_in, 0.3, 1.5);
+hide(["#sO", "#shade"], B.l_in);
+
+// ============ L. módulos que van llegando -> un solo sistema ============
+enterMG("#sL", "#camL", B.l_in, B.d_in);
+inBlur("#lSub", B.l_in + 0.1);
+const LM = [["calculator", "Contabi-<br>lidad", B.l_con], ["cash-register", "Punto<br>de venta", B.l_pv], ["chart-line-up", "Ventas", B.l_ven], ["shopping-cart", "Compras", B.l_com]];
+$("#lMods").innerHTML = LM.map(([ic, tx], i) => `<div class="md" id="lm${i}" style="left:${55 + (i % 2) * 500}px;top:${420 + Math.floor(i / 2) * 330}px"><div class="ib"><div class="ico" style="${ICON(ic)}"></div></div><div class="tt">${tx}</div></div>`).join("");
+gsap.set(".md", { autoAlpha: 0 }); gsap.set("#lOne", { autoAlpha: 0 });
+LM.forEach(([, , t], i) => tl.fromTo("#lm" + i, { autoAlpha: 0, x: i % 2 ? 600 : -600, rotationY: i % 2 ? 60 : -60, transformPerspective: 1600, filter: "blur(16px)" }, { autoAlpha: 1, x: 0, rotationY: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, t - 0.15));
+tl.to("#camL", { y: -60, duration: B.d_in - B.l_in, ease: "sine.inOut" }, B.l_in);
+// todo converge en un bloque
+LM.forEach((_, i) => tl.to("#lm" + i, { x: 540 - (55 + (i % 2) * 500) - 235, y: 1010 - (420 + Math.floor(i / 2) * 330) - 130, scale: 0.3, autoAlpha: 0, duration: 0.4, ease: "power3.in" }, B.d_in - 0.75 + i * 0.02));
+tl.fromTo("#lOne", { autoAlpha: 0, scale: 0.4 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)", immediateRender: false }, B.d_in - 0.4);
+tl.to("#camL", { scale: 1.8, filter: "blur(14px)", duration: 0.25, ease: "power4.in", transformOrigin: "540px 1010px" }, B.d_in - 0.25);
+hide("#sL", B.d_in);
+
+// ============ D. pantalla: contabilidad compatible con la DIAN ============
+show("#shade", B.d_in); baseIn(B.d_in, 0.5);
+show("#sD", B.d_in); inBlur("#dTag", B.d_in + 0.2);
+gsap.set("#dKb", { autoAlpha: 0 });
+card("De las cosas más|*interesantes*", S("D1"), B.d_con - 0.3);
+card("tiene contabilidad|compatible con|la ~DIAN~", B.d_con - 0.3, B.d_tie);
+card("tiene integración|con la *DIAN*", B.d_tie, B.r_in + 0.05);
+tl.set("#dKb", { autoAlpha: 1 }, B.d_dian2 - 0.25); keybox("#dKb", B.d_dian2, 560);
+shake("#sD", B.d_dian2 + F, 10, 4);
+baseOut(B.r_in, 0.3, 1.5);
+hide(["#sD", "#shade"], B.r_in);
+
+// ============ R1. persona: montando Odoo dentro de Railway ============
+destello(B.r_in);
+show("#shade", B.r_in); tl.set("#base", { scale: 1, filter: "blur(0px)" }, B.r_in);
+card("Estamos montando|~Odoo~ dentro|de *Railway*", S("R1"), B.y_in + 0.05);
+tl.to("#base", { scale: 1.35, filter: "blur(10px)", duration: 0.3, ease: "power4.in" }, B.y_in - 0.3);
+
+// ============ Y. pantalla Railway: despliegue exitoso ============
+baseIn(B.y_in, 0.5);
+show("#sY", B.y_in); inBlur("#yTag", B.y_in + 0.15);
+gsap.set("#yStamp", { autoAlpha: 0 });
+card("Revisamos el|*despliegue*", S("R2"), B.y_exi - 0.25);
+card("sale ~exitoso~", B.y_exi - 0.25, B.pl);
+tl.fromTo("#yStamp", { autoAlpha: 0, scale: 2.6, rotation: -24 }, { autoAlpha: 1, scale: 1, rotation: -7, duration: 4 * F, ease: "power4.in", immediateRender: false }, B.y_exi - 4 * F);
+shake("#sY", B.y_exi, 12, 5);
+tl.to("#base", { scale: 1.4, filter: "blur(8px)", duration: 0.45, ease: "power4.in" }, B.pl - 0.45);
+
+// ============ placa del canal ============
+destello(B.pl, ["#sY", "#shade"]);
+show("#pl", B.pl);
+gsap.set(["#plL", "#plS", "#plT"], { autoAlpha: 0 }); gsap.set("#plH", { scaleX: 0 });
+tl.fromTo("#plL", { autoAlpha: 0, y: 30, scale: 1.12, filter: "blur(14px)" }, { autoAlpha: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 10 * F, ease: "power2.out", immediateRender: false }, B.pl + 0.10);
+tl.to("#plH", { scaleX: 1, duration: 0.45, ease: "sine.inOut" }, B.pl + 0.35);
+tl.fromTo("#plS", { autoAlpha: 0, scale: 0.7, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 9 * F, ease: "power2.out", immediateRender: false }, B.pl + 0.45);
+inBlur("#plT", B.pl + 0.8, 6 * F, 10);
+tl.fromTo("#pl", { scale: 1 }, { scale: 1.03, duration: D.total - B.pl, ease: "sine.out", immediateRender: false }, B.pl);
+
+const NG = Math.ceil(D.total / (2 * F));
+for (let i = 0; i < NG; i++) tl.set("#grain", { x: ((i * 73) % 180) - 90, y: ((i * 131) % 180) - 90 }, i * 2 * F);
+tl.set({}, {}, D.total);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

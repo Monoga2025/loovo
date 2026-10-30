@@ -1,0 +1,33 @@
+Actua como un disenador grafico senior especializado en portadas (covers) de TikTok para marcas personales de emprendedores. Entregame la portada FINAL, lista para publicar, con todo el texto ya incluido y perfecto. Usa tu herramienta de generacion de imagenes; no escribas bytes ni base64 a mano.
+
+CONTEXTO
+- Serie de videos "Dia X de 42" de la empresa Loovo. Este es el Dia 1.
+- El creador tiene 42 dias para transformar su empresa antes de un evento con mas de 2.000 empresarios. Audiencia: empresarios y emprendedores de Latinoamerica.
+- Objetivo de la portada: que alguien que ve la cuadricula del perfil o el feed pare y entienda en 1 segundo que es un reto con plazo, y quiera ver el video.
+
+MATERIAL ADJUNTO
+1) referencia.png: foto real del creador. Conserva su cara, peinado, edad y rasgos EXACTAMENTE. No lo embellezcas ni cambies su identidad.
+2) codex_02.png: arte de fondo que ya aprobamos como direccion de estilo (fondo negro, resplandor rojo, aro de luz rojo tipo iris, retícula sutil). Mantén ese lenguaje visual y mejora lo que haga falta.
+
+TEXTO EXACTO (en espanol, con tildes; revisalo letra por letra, sin errores ni letras inventadas)
+- Titular principal: "42 DÍAS"
+- Linea secundaria: "PARA CAMBIAR LOOVO"
+- Etiqueta pequena tipo pastilla: "DÍA 1 DE 42"
+No agregues ningun otro texto, numero, logo ni marca de agua.
+
+DIRECCION DE DISENO
+- Paleta: negro puro, rojo #E3120B y blanco. Nada mas.
+- Tipografia: sans-serif condensada y muy pesada tipo Impact o Anton, todo en mayusculas, con trazo/sombra sutil para legibilidad.
+- Jerarquia: "42 DÍAS" es lo mas grande y se lee incluso en miniatura de 150 px de ancho. "PARA CAMBIAR LOOVO" en blanco, mas pequena. La pastilla roja con texto blanco arriba.
+- El texto NUNCA tapa la cara, los ojos ni la boca. La cara ocupa el tercio superior-medio; el texto va sobre el pecho o en la zona oscura inferior, con contraste alto.
+- Que se sienta premium y tecnologica, de marca personal seria, no de anuncio barato. Sin emojis.
+
+FORMATO Y ZONAS SEGURAS (TikTok)
+- 1080x1920 px vertical 9:16.
+- La interfaz de TikTok tapa: 270 px arriba, 480 px abajo, 120 px a la derecha y 65 px a la izquierda. Todo texto importante debe quedar dentro del area libre.
+- En el perfil la portada se recorta a 3:4 centrado (aprox. y entre 240 y 1680 px): el mensaje principal debe verse completo en ese recorte.
+
+ENTREGA
+- Genera 3 variantes con distinta jerarquia o composicion (por ejemplo: A titular grande sobre el pecho, B titular arriba y cara abajo, C aro mas grande y texto centrado).
+- Revisa cada imagen con tu herramienta de vista: si hay una letra mal escrita, texto cortado o cara alterada, regenera esa variante.
+- Guardalas en la carpeta de trabajo actual como portada_final_A.png, portada_final_B.png y portada_final_C.png. Si no puedes guardarlas ahi, dime la ruta exacta de las originales. Reporta que variante recomiendas y por que, en dos lineas.

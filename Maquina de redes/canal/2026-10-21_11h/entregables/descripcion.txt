@@ -1,0 +1,3 @@
+¿Cómo manejas 10 o 20 clientes sin volverte loco? Estoy construyendo 3 sistemas para contadores: 1) una IA que pide por WhatsApp los documentos que faltan, 2) un aviso de vencimientos de todos tus clientes, 3) informes mensuales que se arman solos. Tú solo revisas, corriges y envías. Comenta 1, 2 o 3: ¿cuál te quita más trabajo?
+
+#contadores #contabilidad #inteligenciaartificial #automatizacion

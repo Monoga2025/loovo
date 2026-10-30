@@ -1,0 +1,25 @@
+Eres director de arte senior y diseñador de personajes de marca. Usa tu herramienta de generación de imágenes (image generation). No escribas base64 a mano ni dibujes con código: genera las imágenes con la herramienta y guárdalas en esta carpeta.
+
+CONTEXTO
+- "IA MONOGA" es la marca personal de un joven emprendedor colombiano dueño de Loovo, una agencia de inteligencia artificial. Publica la serie de TikTok/Reels "Día X de 42" rumbo a un evento de negocios (Luque Business Summit, Bucaramanga). Público: empresarios.
+- Busca una MASCOTA de marca reconocible. Adjunto dos referencias: (1) la portada que él editó (robot negro con cara-pantalla y ojos verdes a su lado, titular "EMPLEADO (NO LE PAGO)"); (2) una foto de su cara. Úsalas solo como referencia de estilo y del parecido de la persona.
+- Prohibido el color rojo en cualquier elemento (lo asocia con peligro).
+
+QUÉ HACER
+Genera 5 imágenes, UNA por concepto de abajo. Cada imagen es un "brand board" vertical (formato 2:3 o 9:16, alta calidad), fondo y paleta del concepto, con esta composición:
+- Arriba (60 %): la mascota grande, render del estilo indicado, en pose expresiva.
+- Una tira de 3 o 4 expresiones/poses pequeñas de la mascota.
+- Muestras de color: círculos o rectángulos con su código hex escrito debajo, exactamente como se indica.
+- Muestra tipográfica: el nombre de la tipografía y una línea de ejemplo escrita con ese estilo: titular "EMPLEADO" y apoyo "no le pago".
+- Abajo: 3 mini fotogramas verticales (9:16) que muestren el estilo de edición del video, uno de ellos con la persona de la foto junto a la mascota (como una portada de TikTok).
+- El nombre de la mascota bien grande y legible.
+Escribe el texto exactamente como está, con tildes. Poco texto, grande y nítido. Look profesional de estudio de branding (Behance), nada barato.
+
+Guarda cada imagen como concepto_NN.png (NN = número del concepto) en la carpeta actual. Al final lista los archivos guardados.
+
+CONCEPTOS
+Concepto 01: MONO-1 · "No duerme, no cobra." Es el robot de su portada hecho oficial: cuerpo negro mate redondeado tipo robot de Pixar, cabeza-pantalla negra con ojos en arco y sonrisa de una línea en lima brillante, y una antena corta que termina en un punto lima con anillo azul (el "foco", firma de la marca). Líneas de luz azul en el cuerpo. Render 3D. Paleta: #0B0B0F carbón, #C6FF3D lima, #2F5BFF azul eléctrico, #F4F2EE hueso. Tipografía: Space Grotesk Bold + Instrument Serif Italic. Edición: la cara-pantalla reacciona (cargando, check, guiño), glitch azul entre cortes, subtítulo con caja lima inclinada.
+Concepto 02: CERO · "Sueldo: $0. Turno: 24/7." El mismo robot de su portada, fiel a ella: negro mate, ojos y sonrisa verde señal brillante, líneas de luz verdes, y un carné colgado que dice "EMPLEADO #1 · $0". Render 3D. Paleta: #050806 negro, #3DFF8A verde señal, #FFFFFF blanco, #8C8C99 gris. Tipografía: Anton (condensada pesada, como su portada) + Inter. Edición: cortes secos, resplandor verde de fondo, titular blanco gigante.
+Concepto 03: FOCO · "La idea que viaja por cada video." Una esfera lima brillante con anillo azul y dos ojos de píxel, sin cuerpo; mostrar su evolución en 4 pasos: día 1 solo un punto, día 10 con ojos, día 25 con bracitos, día 42 personaje completo. Render 3D brillante. Paleta: #C6FF3D lima, #2F5BFF azul, #0B0B0F carbón, #F4F2EE hueso. Tipografía: Space Grotesk Bold + Instrument Serif Italic. Edición: el foco salta entre cortes como transición y subraya las palabras clave.
+Concepto 04: EMME · "El logo que te mira." Una letra M geométrica muy gruesa con esquinas redondeadas que es a la vez logo y mascota: dos ojos en los picos, punto lima con anillo azul al centro, patitas cortas. Estilo 2D plano neo-brutalista con sombra dura desplazada. Mostrar el logotipo "IA MONOGA" usando la M como inicial. Paleta: #C6FF3D lima, #2F5BFF azul, #0B0B0F carbón, #F4F2EE hueso. Tipografía: Unbounded ExtraBold + Space Grotesk. Edición: la M se transforma en flecha y en check, rebotes con exageración.
+Concepto 05: OBRERA · "Trabaja de noche, carga 50 veces su peso." Hormiga robot inspirada en la hormiga de Santander (Colombia): tres esferas, abdomen grande con un panel de luz lima, ojos lima grandes, antenas azules, metal oscuro. Juguete de vinilo de diseño, brillante. Carga un ícono de documento más grande que ella. Paleta: #0B0B0F carbón, #C6FF3D lima, #2F5BFF azul, #B07A45 cobre, #F4F2EE hueso. Tipografía: Clash Display + Instrument Serif Italic. Edición: stop-motion de juguete, una fila de hormigas lleva las palabras al subtítulo.

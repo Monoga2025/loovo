@@ -1,0 +1,45 @@
+{
+  "destacadas": [
+    "La serie",
+    "Loovo",
+    "El editor",
+    "CRM local",
+    "Sin humo",
+    "Modo demo"
+  ],
+  "posts": [
+    [
+      "42 días",
+      "imagen única",
+      [
+        "42 DÍAS",
+        "para mostrar Loovo",
+        "Día 1: 7 de octubre · Día 42: 17 de noviembre"
+      ],
+      "Un anillo incompleto abstracto, azul, un foco lima; amplio espacio superior para titular.",
+      "42 días para mostrar Loovo paso a paso. Este es el archivo de la serie. #42DiasLoovo #Loovo"
+    ],
+    [
+      "El editor",
+      "carrusel",
+      [
+        "UN EDITOR CON IA",
+        "Editó el Día 1.",
+        "7 min 37 s de grabación → 38 s de video."
+      ],
+      "Dos bloques abstractos de distinta longitud, sin cifras IA; texto compuesto después.",
+      "Un editor con IA ya editó el Día 1. ¿Qué parte de tu proceso revisarías primero? #42DiasLoovo #Loovo"
+    ],
+    [
+      "Loovo existe",
+      "carrusel",
+      [
+        "LOOVO YA EXISTE",
+        "Es una agencia de inteligencia artificial.",
+        "Esta serie muestra su construcción paso a paso."
+      ],
+      "Nodo azul con un foco lima, ilustración conceptual sin edificios o equipo inventado.",
+      "Loovo ya existe. Quiero mostrar cómo lo construimos, paso a paso. #42DiasLoovo #Loovo"
+    ]
+  ]
+}

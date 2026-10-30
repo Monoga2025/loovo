@@ -1,0 +1,25 @@
+Eres director de arte senior y diseñador de personajes de marca. Usa tu herramienta de generación de imágenes (image generation). No escribas base64 a mano ni dibujes con código: genera las imágenes con la herramienta y guárdalas en esta carpeta.
+
+CONTEXTO
+- "IA MONOGA" es la marca personal de un joven emprendedor colombiano dueño de Loovo, una agencia de inteligencia artificial. Publica la serie de TikTok/Reels "Día X de 42" rumbo a un evento de negocios (Luque Business Summit, Bucaramanga). Público: empresarios.
+- Busca una MASCOTA de marca reconocible. Adjunto dos referencias: (1) la portada que él editó (robot negro con cara-pantalla y ojos verdes a su lado, titular "EMPLEADO (NO LE PAGO)"); (2) una foto de su cara. Úsalas solo como referencia de estilo y del parecido de la persona.
+- Prohibido el color rojo en cualquier elemento (lo asocia con peligro).
+
+QUÉ HACER
+Genera 5 imágenes, UNA por concepto de abajo. Cada imagen es un "brand board" vertical (formato 2:3 o 9:16, alta calidad), fondo y paleta del concepto, con esta composición:
+- Arriba (60 %): la mascota grande, render del estilo indicado, en pose expresiva.
+- Una tira de 3 o 4 expresiones/poses pequeñas de la mascota.
+- Muestras de color: círculos o rectángulos con su código hex escrito debajo, exactamente como se indica.
+- Muestra tipográfica: el nombre de la tipografía y una línea de ejemplo escrita con ese estilo: titular "EMPLEADO" y apoyo "no le pago".
+- Abajo: 3 mini fotogramas verticales (9:16) que muestren el estilo de edición del video, uno de ellos con la persona de la foto junto a la mascota (como una portada de TikTok).
+- El nombre de la mascota bien grande y legible.
+Escribe el texto exactamente como está, con tildes. Poco texto, grande y nítido. Look profesional de estudio de branding (Behance), nada barato.
+
+Guarda cada imagen como concepto_NN.png (NN = número del concepto) en la carpeta actual. Al final lista los archivos guardados.
+
+CONCEPTOS
+Concepto 06: MONO (mico-bot) · Robot tierno con orejas de mico (mono): cabeza redonda negra mate, orejas laterales azules, cara-pantalla con ojos y sonrisa lima, mejillas lila suaves. Estilo peluche/vinilo 3D muy adorable, pensado para stickers, pines y peluche. Paleta: #0B0B0F carbón, #2F5BFF azul, #C6FF3D lima, #9B8CFF lila, #F4F2EE hueso. Tipografía: Unbounded ExtraBold + Instrument Serif Italic. Edición: rebotes suaves, zooms cálidos, saluda con la mano al cierre.
+Concepto 07: CARGA · Robot rectangular azul con una batería de 42 segmentos en el pecho; hoy está llena en 2 de 42 segmentos (lima). Cara-pantalla pequeña con ojos lima. Render 3D. Paleta: #2F5BFF azul, #C6FF3D lima, #0B0B0F carbón, #F4F2EE hueso. Tipografía: Big Shoulders Display Black + Instrument Serif Italic. Edición: barra de progreso "2/42" fija arriba en cada video, contador grande.
+Concepto 08: LA NÓMINA · Cartas coleccionables de empleados de IA estilo álbum: tres cartas con el mismo robot negro de cara-pantalla lima y distinto accesorio: "#001 EDITOR" (claqueta), "#002 CRM" (agenda), "#003 PRÓXIMAMENTE" (silueta). Cartas holográficas con borde azul. Paleta: #0B0B0F carbón, #C6FF3D lima, #2F5BFF azul, #F4F2EE hueso. Tipografía: Space Grotesk Bold + Space Mono. Edición: al final de cada video la carta del día se revela con un giro 3D.
+Concepto 09: TINTO · Taza de tinto colombiano con cara, hecha en plastilina (claymation), ojos de botón y mejillas; el vapor sale pixelado en lima. El nivel del café es su batería. Escritorio de plastilina con un portátil. Paleta: #F4F2EE hueso, #0B0B0F carbón, #C6FF3D lima, #2F5BFF azul, #6B4A2B café. Tipografía: Fraunces Black + DM Sans. Edición: stop-motion de plastilina a 12 fps, el vapor escribe las palabras.
+Concepto 10: GLITCHY · Un cursor de mouse convertido en fantasma (un Clippy moderno): flecha de cursor con la base ondulada, de vidrio esmerilado con luz interna y borde degradado de azul a lima, ojos de dos píxeles y boca "_" que parpadea. Flota y deja anillos de clic. Paleta: #0B0B0F carbón, #2F5BFF azul, #C6FF3D lima, #8B7CFF violeta, #F4F2EE hueso. Tipografía: Unbounded Bold + JetBrains Mono. Edición: glitch RGB azul/lima, efecto de tecleo "> trabajando…".

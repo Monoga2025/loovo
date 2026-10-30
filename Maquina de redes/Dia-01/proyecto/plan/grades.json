@@ -1,0 +1,5 @@
+[
+ {"label":"A Crema calido","grading":{"adjust":{"exposure":0.12,"contrast":0.22,"blacks":-0.3,"whites":0.2,"highlights":-0.05,"temperature":0.2,"tint":0.03,"saturation":-0.05},"wheels":{"highlights":{"hue":38,"amount":0.07,"level":0},"shadows":{"hue":20,"amount":0.04,"level":0}},"details":{"vignette":0.22}}},
+ {"label":"B Editorial contraste","grading":{"adjust":{"exposure":-0.05,"contrast":0.35,"blacks":-0.4,"whites":0.1,"temperature":0.14,"saturation":-0.15},"curves":{"master":[[0,0],[0.25,0.19],[0.75,0.83],[1,1]]},"details":{"vignette":0.38,"grain":0.12}}},
+ {"label":"C Suave calido","grading":{"adjust":{"exposure":0.18,"contrast":0.1,"blacks":-0.15,"whites":0.15,"temperature":0.24,"tint":0.02},"details":{"vignette":0.15}}}
+]

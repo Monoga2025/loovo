@@ -1,0 +1,104 @@
+{
+ "source": "input/clip.mp4",
+ "target": 65,
+ "tolerance": 10,
+ "max": 80,
+ "takes": [
+  {
+   "id": "t1",
+   "start": 110.291,
+   "end": 113.291,
+   "note": "gancho"
+  },
+  {
+   "id": "t2",
+   "start": 113.791,
+   "end": 117.991,
+   "note": ""
+  },
+  {
+   "id": "t3",
+   "start": 142.29,
+   "end": 145.19,
+   "note": ""
+  },
+  {
+   "id": "t4",
+   "start": 191.49,
+   "end": 193.59,
+   "note": ""
+  },
+  {
+   "id": "t5",
+   "start": 193.99,
+   "end": 195.59,
+   "note": ""
+  },
+  {
+   "id": "t6",
+   "start": 197.891,
+   "end": 199.19,
+   "note": ""
+  },
+  {
+   "id": "t7",
+   "start": 201.891,
+   "end": 205.79,
+   "note": "dato: Día 1 en pantalla"
+  },
+  {
+   "id": "t8",
+   "start": 278.49,
+   "end": 282.691,
+   "note": ""
+  },
+  {
+   "id": "t9",
+   "start": 287.591,
+   "end": 295.291,
+   "note": "junta quitando pausa"
+  },
+  {
+   "id": "t10",
+   "start": 305.691,
+   "end": 310.391,
+   "note": ""
+  },
+  {
+   "id": "t11",
+   "start": 312.291,
+   "end": 318.591,
+   "note": "idea central"
+  },
+  {
+   "id": "t12",
+   "start": 322.891,
+   "end": 334.391,
+   "note": "mira de lado; termina antes de 'puede cerrar ventas'"
+  },
+  {
+   "id": "t13",
+   "start": 367.091,
+   "end": 371.791,
+   "note": "remate"
+  },
+  {
+   "id": "t14",
+   "start": 435.301,
+   "end": 441.101,
+   "note": "DIAN futuro"
+  },
+  {
+   "id": "t15",
+   "start": 493.401,
+   "end": 496.501,
+   "note": "cierre a"
+  },
+  {
+   "id": "t16",
+   "start": 511.641,
+   "end": 515.601,
+   "note": "cierre b"
+  }
+ ]
+}

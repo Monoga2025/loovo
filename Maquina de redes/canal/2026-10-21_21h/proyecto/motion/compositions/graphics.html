@@ -1,0 +1,154 @@
+<template id="graphics-template">
+  <div data-composition-id="graphics" data-width="1080" data-height="1920" data-duration="39.64">
+    <!-- Subtítulos cinéticos (estilo Día 1, graphics.html) -->
+    <div id="caps"></div>
+    <style>
+      [data-composition-id="graphics"] { --red: #e3120b; font-family: "Inter", sans-serif; }
+      /* Subtítulos */
+      #caps { position: absolute; inset: 0; z-index: 5; }
+      .cap {
+        position: absolute; left: 100px; width: 880px; top: 1170px; text-align: center;
+        visibility: hidden; line-height: 1.08;
+      }
+      .cap .w {
+        display: inline-block; margin: 0 0.12em; color: #151515;
+        font-size: 74px; font-weight: 700; letter-spacing: -0.03em;
+        text-shadow: 0 0 22px rgba(255, 255, 255, 0.95), 0 0 6px rgba(255, 255, 255, 0.9);
+      }
+      .cap .w.kw {
+        color: var(--red); font-size: 104px; font-weight: 900;
+        text-shadow: 0 0 22px rgba(255, 255, 255, 0.95), 0 0 8px rgba(255, 255, 255, 0.9);
+      }
+      .cap .uline {
+        position: absolute; left: 160px; right: 160px; bottom: -14px; height: 12px;
+        background: var(--red); border-radius: 6px; transform: scaleX(0); transform-origin: 0 50%;
+      }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      // Subtítulos: texto de transcript/words.json; tiempos en el corte (build/clean.mp4); 1 = palabra clave
+      const CAPS = [
+        {"a": 0.04, "b": 0.84, "w": [["¿ustedes", 0.04], ["qué", 0.38], ["hacen", 0.48], ["cuando", 0.62]]},
+        {"a": 0.84, "b": 1.6, "w": [["un", 0.84], ["cliente", 1.08], ["les", 1.4]]},
+        {"a": 1.6, "b": 2.08, "w": [["escribe", 1.6], ["a", 1.72], ["las", 1.8], ["9", 1.94, 1]]},
+        {"a": 2.08, "b": 2.56, "w": [["de", 2.08], ["la", 2.28], ["noche", 2.36]]},
+        {"a": 2.56, "b": 3.69, "w": [["por", 2.56], ["algo", 2.8], ["de", 2.98], ["retención?", 3.1]]},
+        {"a": 3.73, "b": 4.26, "w": [["¿En", 3.73], ["cuánto", 3.81], ["se", 3.96], ["demoran", 4.04]]},
+        {"a": 4.26, "b": 5.2, "w": [["tener", 4.26], ["esa", 4.48], ["respuesta?", 4.72, 1]]},
+        {"a": 5.24, "b": 5.66, "w": [["a", 5.24], ["las", 5.32], ["9", 5.42], ["de", 5.54]]},
+        {"a": 5.66, "b": 6.08, "w": [["la", 5.66], ["noche", 5.74], ["ya", 5.92]]},
+        {"a": 6.08, "b": 7.58, "w": [["puedes", 6.08], ["estar", 6.26], ["acostado,", 6.54]]},
+        {"a": 7.58, "b": 8.85, "w": [["con", 7.58], ["pijama,", 7.84, 1]]},
+        {"a": 8.94, "b": 9.28, "w": [["Porque", 8.94], ["en", 9.02], ["realidad", 9.1]]},
+        {"a": 9.28, "b": 9.78, "w": [["no", 9.28], ["te", 9.5], ["van", 9.6], ["a", 9.68]]},
+        {"a": 9.78, "b": 10.4, "w": [["dejar", 9.78], ["por", 9.92], ["la", 10.12]]},
+        {"a": 10.4, "b": 10.66, "w": [["IA,", 10.4, 1]]},
+        {"a": 10.66, "b": 11.0, "w": [["te", 10.66], ["van", 10.74], ["a", 10.82], ["dejar", 10.9]]},
+        {"a": 11.0, "b": 11.64, "w": [["por", 11.0], ["el", 11.14], ["contador", 11.26]]},
+        {"a": 11.64, "b": 12.98, "w": [["que", 11.64], ["contestó", 11.78], ["primero", 12.16, 1]]},
+        {"a": 13.02, "b": 13.46, "w": [["Y", 13.02], ["casi", 13.12], ["siempre", 13.26]]},
+        {"a": 13.46, "b": 13.86, "w": [["es", 13.46], ["la", 13.58], ["misma", 13.68]]},
+        {"a": 13.86, "b": 14.56, "w": [["pregunta,", 13.86]]},
+        {"a": 14.56, "b": 15.8, "w": [["¿qué", 14.56], ["retención,", 14.76, 1]]},
+        {"a": 15.8, "b": 16.58, "w": [["qué", 15.8], ["IVA,", 15.98]]},
+        {"a": 16.58, "b": 17.82, "w": [["qué", 16.58], ["cuándo", 16.66], ["vence?", 16.9, 1]]},
+        {"a": 17.86, "b": 18.46, "w": [["pero", 17.86], ["tú", 17.94], ["ya", 18.3]]},
+        {"a": 18.46, "b": 19.36, "w": [["le", 18.46], ["respondiste", 18.54], ["y", 19.14]]},
+        {"a": 19.36, "b": 20.38, "w": [["te", 19.36], ["siguen", 19.48], ["preguntando", 19.88]]},
+        {"a": 20.38, "b": 20.71, "w": [["igual", 20.38, 1]]},
+        {"a": 20.75, "b": 21.28, "w": [["Con", 20.75], ["mi", 20.83], ["compañero", 20.91]]},
+        {"a": 21.28, "b": 22.12, "w": [["de", 21.28], ["trabajo", 21.44], ["estamos", 21.8]]},
+        {"a": 22.12, "b": 23.22, "w": [["probando", 22.12], ["a", 22.71], ["un", 22.79], ["agente", 22.87]]},
+        {"a": 23.22, "b": 23.78, "w": [["que", 23.22], ["se", 23.5], ["basa", 23.6]]},
+        {"a": 23.78, "b": 24.34, "w": [["en", 23.78], ["el", 23.9], ["Estatuto", 24.02, 1]]},
+        {"a": 24.34, "b": 25.64, "w": [["Tributario", 24.34], ["y", 25.04]]},
+        {"a": 25.64, "b": 26.65, "w": [["adelanta", 25.64], ["a", 26.01], ["tu", 26.09], ["respuesta", 26.17]]},
+        {"a": 26.69, "b": 27.38, "w": [["No", 26.69], ["es", 26.77], ["un", 26.85], ["chatbot", 26.93]]},
+        {"a": 27.38, "b": 28.54, "w": [["que", 27.38], ["sólo", 27.56], ["responde", 27.72]]},
+        {"a": 28.54, "b": 29.08, "w": [["y", 28.54], ["se", 28.76], ["le", 28.84], ["envía", 28.92]]},
+        {"a": 29.08, "b": 29.78, "w": [["al", 29.08], ["cliente", 29.22]]},
+        {"a": 29.82, "b": 31.2, "w": [["No", 29.82], ["reemplaza", 30.16], ["tu", 30.46], ["criterio", 30.6, 1]]},
+        {"a": 31.2, "b": 31.74, "w": [["y", 31.2], ["tú", 31.36], ["puedes", 31.48]]},
+        {"a": 31.74, "b": 33.04, "w": [["revisar", 31.74], ["el", 32.42], ["mensaje", 32.52]]},
+        {"a": 33.04, "b": 33.72, "w": [["antes", 33.04], ["de", 33.36], ["que", 33.54], ["se", 33.62]]},
+        {"a": 33.72, "b": 34.24, "w": [["le", 33.72], ["pueda", 33.82], ["enviar", 33.98]]},
+        {"a": 34.24, "b": 34.74, "w": [["al", 34.24], ["cliente", 34.34]]},
+        {"a": 34.78, "b": 35.34, "w": [["Quiero", 34.78], ["saber", 34.92], ["cuál", 35.14]]},
+        {"a": 35.34, "b": 35.96, "w": [["es", 35.34], ["la", 35.48], ["pregunta", 35.58]]},
+        {"a": 35.96, "b": 37.24, "w": [["que", 35.96], ["más", 36.6], ["te", 36.78], ["escriben", 36.94]]},
+        {"a": 37.24, "b": 38.04, "w": [["tus", 37.24], ["clientes", 37.38], ["a", 37.86], ["las", 37.96]]},
+        {"a": 38.04, "b": 38.73, "w": [["9", 38.04], ["de", 38.16], ["la", 38.26], ["noche,", 38.34]]},
+        {"a": 38.73, "b": 39.12, "w": [["déjalo", 38.73], ["acá", 38.84], ["en", 38.96], ["los", 39.04]]},
+        {"a": 39.12, "b": 39.64, "w": [["comentarios", 39.12, 1]]},
+      ];
+      const capsEl = document.getElementById("caps");
+      CAPS.forEach((c, i) => {
+        const d = document.createElement("div");
+        d.className = "cap";
+        d.id = "cap" + i;
+        c.w.forEach(([txt, , kw], j) => {
+          const s = document.createElement("span");
+          s.className = "w" + (kw ? " kw" : "");
+          s.id = `cap${i}w${j}`;
+          s.textContent = txt;
+          d.appendChild(s);
+        });
+        if (c.u) {
+          const u = document.createElement("div");
+          u.className = "uline";
+          u.id = `cap${i}u`;
+          d.appendChild(u);
+        }
+        capsEl.appendChild(d);
+      });
+
+      const MAP_OLD = [0, 39.637];
+      const MAP_NEW = [0, 39.637];
+      const T = (t) => {
+        let i = 1;
+        while (i < MAP_OLD.length - 1 && t > MAP_OLD[i]) i++;
+        const [a, b, c, d] = [MAP_OLD[i - 1], MAP_OLD[i], MAP_NEW[i - 1], MAP_NEW[i]];
+        return c + ((t - a) * (d - c)) / (b - a);
+      };
+      const root = gsap.timeline({ paused: true });
+      const tl = {
+        to: (s, v, p) => root.to(s, v, T(p)),
+        fromTo: (s, a, b, p) => root.fromTo(s, a, b, T(p)),
+        set: (s, v, p) => root.set(s, v, T(p)),
+      };
+      const show = (sel, t) => tl.set(sel, { visibility: "visible" }, t);
+      const hide = (sel, t) => tl.set(sel, { visibility: "hidden" }, t);
+      const blurIn = (sel, t, extra = {}) =>
+        tl.fromTo(sel, { opacity: 0, y: 26, scale: 0.92, filter: "blur(14px)" },
+          { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 0.32, ease: "power3.out", ...extra }, t);
+
+      // Subtítulos: palabra a palabra con blur-in; la frase sale hacia arriba
+      CAPS.forEach((c, i) => {
+        show("#cap" + i, c.a);
+        c.w.forEach(([, t, kw], j) => {
+          const sel = `#cap${i}w${j}`;
+          if (kw) tl.fromTo(sel, { opacity: 0, scale: 1.45, filter: "blur(12px)" },
+            { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.3, ease: "back.out(2)" }, t);
+          else blurIn(sel, t, { duration: 0.24 });
+        });
+        if (c.u) tl.to(`#cap${i}u`, { scaleX: 1, duration: 0.3, ease: "power3.out" }, c.u);
+        if (c.g) {
+          // glitch RGB en "totalmente diferente"
+          const g = [
+            "4px 0 0 #00e5ff, -4px 0 0 #e3120b", "-9px 2px 0 #00e5ff, 8px -2px 0 #e3120b",
+            "6px -3px 0 #00e5ff, -6px 3px 0 #e3120b", "0 0 22px rgba(255,255,255,0.95)",
+          ];
+          [0, 0.06, 0.12, 0.2, 0.44, 0.5, 0.58].forEach((dt, k) =>
+            tl.set(`#cap${i} .w`, { textShadow: g[k % 4], x: k % 2 ? -6 : 6 }, c.a + dt));
+          tl.set(`#cap${i} .w`, { textShadow: g[3], x: 0 }, c.a + 0.66);
+        }
+        tl.to("#cap" + i, { opacity: 0, y: -24, filter: "blur(8px)", duration: 0.14, ease: "power2.in" }, c.b - 0.14);
+        hide("#cap" + i, c.b);
+      });
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["graphics"] = root;
+    </script>
+  </div>
+</template>

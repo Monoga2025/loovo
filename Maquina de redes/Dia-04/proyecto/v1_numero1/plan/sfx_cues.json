@@ -1,0 +1,592 @@
+[
+{
+"t": 0.0,
+"type": "whoosh",
+"gain": 0.14
+},
+{
+"t": 0.72,
+"type": "riser",
+"gain": 0.1
+},
+{
+"t": 0.99,
+"type": "hit",
+"gain": 0.4
+},
+{
+"t": 1.37,
+"type": "swish",
+"gain": 0.24
+},
+{
+"t": 2.827,
+"type": "click",
+"gain": 0.14
+},
+{
+"t": 2.21,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 2.33,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 2.45,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 3.31,
+"type": "swish",
+"gain": 0.24
+},
+{
+"t": 4.237,
+"type": "hit",
+"gain": 0.42
+},
+{
+"t": 6.22,
+"type": "whoosh",
+"gain": 0.1
+},
+{
+"t": 9.36,
+"type": "hit",
+"gain": 0.45
+},
+{
+"t": 9.43,
+"type": "whoosh",
+"gain": 0.2
+},
+{
+"t": 10.16,
+"type": "swish",
+"gain": 0.3
+},
+{
+"t": 10.227,
+"type": "hit",
+"gain": 0.25
+},
+{
+"t": 10.393,
+"type": "click",
+"gain": 0.12
+},
+{
+"t": 10.493,
+"type": "click",
+"gain": 0.12
+},
+{
+"t": 10.66,
+"type": "click",
+"gain": 0.12
+},
+{
+"t": 10.76,
+"type": "click",
+"gain": 0.12
+},
+{
+"t": 10.927,
+"type": "click",
+"gain": 0.12
+},
+{
+"t": 11.06,
+"type": "click",
+"gain": 0.12
+},
+{
+"t": 11.16,
+"type": "click",
+"gain": 0.12
+},
+{
+"t": 11.427,
+"type": "glitch",
+"gain": 0.35
+},
+{
+"t": 11.527,
+"type": "glitch",
+"gain": 0.2
+},
+{
+"t": 11.78,
+"type": "whoosh",
+"gain": 0.28
+},
+{
+"t": 14.76,
+"type": "ding",
+"gain": 0.16
+},
+{
+"t": 15.7,
+"type": "hiw",
+"gain": 0.45
+},
+{
+"t": 16.08,
+"type": "riser",
+"gain": 0.08
+},
+{
+"t": 17.57,
+"type": "hit",
+"gain": 0.28
+},
+{
+"t": 18.71,
+"type": "swish",
+"gain": 0.2
+},
+{
+"t": 20.257,
+"type": "click",
+"gain": 0.14
+},
+{
+"t": 23.19,
+"type": "swish",
+"gain": 0.24
+},
+{
+"t": 26.56,
+"type": "whoosh",
+"gain": 0.12
+},
+{
+"t": 27.31,
+"type": "click",
+"gain": 0.07
+},
+{
+"t": 27.463,
+"type": "click",
+"gain": 0.07
+},
+{
+"t": 27.617,
+"type": "click",
+"gain": 0.07
+},
+{
+"t": 27.77,
+"type": "click",
+"gain": 0.07
+},
+{
+"t": 27.923,
+"type": "click",
+"gain": 0.07
+},
+{
+"t": 28.077,
+"type": "click",
+"gain": 0.07
+},
+{
+"t": 28.23,
+"type": "click",
+"gain": 0.07
+},
+{
+"t": 28.383,
+"type": "click",
+"gain": 0.07
+},
+{
+"t": 28.537,
+"type": "click",
+"gain": 0.07
+},
+{
+"t": 28.69,
+"type": "click",
+"gain": 0.07
+},
+{
+"t": 29.167,
+"type": "mixkit",
+"gain": 0.42
+},
+{
+"t": 30.09,
+"type": "swish",
+"gain": 0.2
+},
+{
+"t": 34.62,
+"type": "scramble",
+"gain": 0.1
+},
+{
+"t": 34.94,
+"type": "hit",
+"gain": 0.42
+},
+{
+"t": 35.43,
+"type": "swish",
+"gain": 0.24
+},
+{
+"t": 37.17,
+"type": "swish",
+"gain": 0.13
+},
+{
+"t": 37.84,
+"type": "click",
+"gain": 0.11
+},
+{
+"t": 40.36,
+"type": "swish",
+"gain": 0.13
+},
+{
+"t": 41.03,
+"type": "click",
+"gain": 0.11
+},
+{
+"t": 43.15,
+"type": "swish",
+"gain": 0.13
+},
+{
+"t": 43.82,
+"type": "click",
+"gain": 0.11
+},
+{
+"t": 45.3,
+"type": "swish",
+"gain": 0.13
+},
+{
+"t": 45.97,
+"type": "click",
+"gain": 0.11
+},
+{
+"t": 46.66,
+"type": "swish",
+"gain": 0.13
+},
+{
+"t": 47.33,
+"type": "click",
+"gain": 0.11
+},
+{
+"t": 49.72,
+"type": "swish",
+"gain": 0.13
+},
+{
+"t": 50.39,
+"type": "click",
+"gain": 0.11
+},
+{
+"t": 50.75,
+"type": "whoosh",
+"gain": 0.12
+},
+{
+"t": 51.2,
+"type": "whoosh",
+"gain": 0.1
+},
+{
+"t": 53.13,
+"type": "hit",
+"gain": 0.22
+},
+{
+"t": 53.82,
+"type": "glitch",
+"gain": 0.14
+},
+{
+"t": 53.9,
+"type": "hit",
+"gain": 0.18
+},
+{
+"t": 56.09,
+"type": "swish",
+"gain": 0.2
+},
+{
+"t": 58.51,
+"type": "scramble",
+"gain": 0.16
+},
+{
+"t": 58.53,
+"type": "whoosh",
+"gain": 0.12
+},
+{
+"t": 59.75,
+"type": "swish",
+"gain": 0.16
+},
+{
+"t": 62.54,
+"type": "whoosh",
+"gain": 0.1
+},
+{
+"t": 64.66,
+"type": "swish",
+"gain": 0.2
+},
+{
+"t": 65.65,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 65.74,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 65.83,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 65.92,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 66.01,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 66.1,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 66.19,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 66.3,
+"type": "swish",
+"gain": 0.1
+},
+{
+"t": 68.5,
+"type": "riser",
+"gain": 0.1
+},
+{
+"t": 68.76,
+"type": "ding",
+"gain": 0.11
+},
+{
+"t": 68.77,
+"type": "hit",
+"gain": 0.16
+},
+{
+"t": 69.14,
+"type": "swish",
+"gain": 0.24
+},
+{
+"t": 72.27,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 72.38,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 72.49,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 72.6,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 72.71,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 72.82,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 72.93,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 73.04,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 73.15,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 73.26,
+"type": "pop",
+"gain": 0.06
+},
+{
+"t": 74.3,
+"type": "hit",
+"gain": 0.26
+},
+{
+"t": 74.86,
+"type": "click",
+"gain": 0.16
+},
+{
+"t": 75.69,
+"type": "whoosh",
+"gain": 0.18
+},
+{
+"t": 75.55,
+"type": "swish",
+"gain": 0.24
+},
+{
+"t": 76.7,
+"type": "swish",
+"gain": 0.1
+},
+{
+"t": 77.6,
+"type": "swish",
+"gain": 0.1
+},
+{
+"t": 79.23,
+"type": "swish",
+"gain": 0.1
+},
+{
+"t": 80.19,
+"type": "whoosh",
+"gain": 0.12
+},
+{
+"t": 80.54,
+"type": "click",
+"gain": 0.05
+},
+{
+"t": 80.81,
+"type": "click",
+"gain": 0.05
+},
+{
+"t": 81.081,
+"type": "click",
+"gain": 0.05
+},
+{
+"t": 81.351,
+"type": "click",
+"gain": 0.05
+},
+{
+"t": 81.622,
+"type": "click",
+"gain": 0.05
+},
+{
+"t": 81.892,
+"type": "click",
+"gain": 0.05
+},
+{
+"t": 82.163,
+"type": "click",
+"gain": 0.05
+},
+{
+"t": 82.433,
+"type": "click",
+"gain": 0.05
+},
+{
+"t": 82.8,
+"type": "mixkit",
+"gain": 0.42
+},
+{
+"t": 85.427,
+"type": "whoosh",
+"gain": 0.14
+},
+{
+"t": 86.67,
+"type": "click",
+"gain": 0.08
+},
+{
+"t": 86.74,
+"type": "click",
+"gain": 0.08
+},
+{
+"t": 86.81,
+"type": "click",
+"gain": 0.08
+},
+{
+"t": 86.88,
+"type": "click",
+"gain": 0.08
+},
+{
+"t": 87.28,
+"type": "ding",
+"gain": 0.1
+},
+{
+"t": 87.97,
+"type": "hiw",
+"gain": 0.35
+},
+{
+"t": 88.55,
+"type": "ding",
+"gain": 0.09
+}
+]

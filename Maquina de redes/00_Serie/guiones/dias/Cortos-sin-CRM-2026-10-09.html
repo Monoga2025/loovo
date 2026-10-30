@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3 Shorts sin CRM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F2EE; --panel:#FFFFFF; --ink:#0B0B0F; --muted:#5E5E6B; --line:#DAD7D0;
+  --blue:#2F5BFF; --lime:#C6FF3D; --limeink:#0B0B0F; --chip:#E9EDFF; --warn:#FFF3C4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B0B0F; --panel:#15151C; --ink:#F4F2EE; --muted:#9C9CAA; --line:#2A2A35;
+    --blue:#7C98FF; --chip:#1D2440; --warn:#3A3414;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B0B0F; --panel:#15151C; --ink:#F4F2EE; --muted:#9C9CAA; --line:#2A2A35;
+  --blue:#7C98FF; --chip:#1D2440; --warn:#3A3414;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 16px/1.55 "Space Grotesk",system-ui,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:32px 16px 72px}
+header{margin-bottom:28px}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+h1{font-weight:700;font-size:clamp(30px,6vw,44px);line-height:1.1;margin:6px 0 10px}
+h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}
+.lead{color:var(--muted);margin:0}
+.rule{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:10px;padding:12px 14px;margin:18px 0 0;font-size:15px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:2}
+.tabs button{font:inherit;font-weight:700;cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:9px 14px;border-radius:999px}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tabs button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+section.short{display:none}
+section.short.on{display:block}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:16px}
+h2{font-weight:700;font-size:24px;margin:0 0 4px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}
+.chip{background:var(--chip);color:var(--blue);font-size:13px;font-weight:700;padding:3px 10px;border-radius:999px}
+h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.why{color:var(--muted);margin:12px 0 0}
+.hook{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line)}
+.hook:first-of-type{border-top:0}
+.hook b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--lime);color:var(--limeink);display:grid;place-items:center;font-size:14px}
+.hook q{font-family:"Instrument Serif",serif;font-style:italic;font-size:22px;line-height:1.3;quotes:"“" "”"}
+ol.points{margin:0;padding-left:22px}
+ol.points li{margin:0 0 10px}
+ol.points li::marker{color:var(--blue);font-weight:700}
+.lit{border-left:3px solid var(--lime);padding-left:12px;margin:8px 0;font-family:"Instrument Serif",serif;font-style:italic;font-size:20px}
+.lit small{display:block;font-family:"Space Grotesk",sans-serif;font-style:normal;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.dato{background:var(--warn);padding:1px 6px;border-radius:5px;font-weight:700;white-space:nowrap}
+.no{font-size:14px;color:var(--muted)}
+.score{width:100%;border-collapse:collapse;font-size:15px}
+.score th,.score td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+.score th{border-top:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.n{font-weight:700;white-space:nowrap}
+@media (max-width:520px){.score .col-hide{display:none}}
+button.copy{font:inherit;font-size:13px;font-weight:700;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:8px;padding:4px 9px;margin-left:auto}
+.hook button.copy{margin-left:auto;flex:none}
+footer{color:var(--muted);font-size:14px;margin-top:24px}
+@media print{.tabs,button.copy{display:none}section.short{display:block;page-break-after:always}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">Loovo · Día 3 de 42 · 9 oct 2026</div>
+  <h1>3 shorts <em>sin CRM</em></h1>
+  <p class="lead">Graba de frente a cámara, en una tanda de unos 15 min. El gancho y el remate van literales; lo demás lo dices con tus palabras.</p>
+  <div class="rule">Solo se afirma lo ✅ de <code>hechos.md</code>. Lo que está resaltado como <span class="dato">[DATO]</span> lo pones tú; si no lo sabes, esa línea no se graba.</div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Shorts">
+  <button role="tab" aria-selected="true" data-t="s1">1 · Rechacé el guion</button>
+  <button role="tab" aria-selected="false" data-t="s2">2 · Dueño y estudiante</button>
+  <button role="tab" aria-selected="false" data-t="s3">3 · Mi empleado #001</button>
+  <button role="tab" aria-selected="false" data-t="aut">Autocrítica</button>
+</nav>
+
+<!-- SHORT 1 -->
+<section class="short on" id="s1">
+  <div class="card">
+    <h2>Rechacé el guion de la IA</h2>
+    <div class="meta"><span class="chip">Estructura B</span><span class="chip">30–40 s</span><span class="chip">26/30</span></div>
+    <p class="why">Sale de algo que pasó: los guiones de ChatGPT y de Claude se rechazaron dos veces por genéricos. Es el origen de cómo grabas ahora (EV-39 del banco).</p>
+  </div>
+  <div class="card">
+    <h3>Ganchos · elige uno (literal)</h3>
+    <div class="hook"><b>A</b><q>Le pedí a la IA un guion para este video. Lo rechacé.</q></div>
+    <div class="hook"><b>B</b><q>Dos guiones de IA. Dos veces los rechacé.</q></div>
+    <div class="hook"><b>C</b><q>Una IA me escribió mi propio guion y no me reconocí.</q></div>
+  </div>
+  <div class="card">
+    <h3>Puntos · con tus palabras</h3>
+    <ol class="points">
+      <li><b>Qué pasó:</b> le pediste el guion a ChatGPT y a Claude. Ancla opcional: «Sonaban a cualquiera, menos a mí.»</li>
+      <li><b>Pero:</b> te puso palabras que tú no dices. «Literalmente» y «el caso es que» salieron de ChatGPT, no de tu grabación. Di la que más te molestó: <span class="dato">[DATO]</span></li>
+      <li><b>Por lo tanto:</b> ahora el guion tiene el gancho y el cierre, y el resto lo dices con tus palabras.</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h3>Cierre</h3>
+    <div class="lit"><small>Remate · elige o di el tuyo</small>Una IA me puso «literalmente» en la boca. Yo no digo «literalmente».</div>
+    <div class="lit"><small>Puente</small>Mañana les muestro lo que sí le dejo hacer a mi empleado.</div>
+    <p><b>TikTok:</b> ¿Qué palabra nunca dirías en un video? Una sola.<br><b>Reels:</b> Mándaselo al que escribe todo con ChatGPT.</p>
+  </div>
+</section>
+
+<!-- SHORT 2 -->
+<section class="short" id="s2">
+  <div class="card">
+    <h2>Dueño y estudiante</h2>
+    <div class="meta"><span class="chip">Estructura B</span><span class="chip">30–40 s</span><span class="chip">23/30</span></div>
+    <p class="why">Detrás de cámaras del Día 3, sin tocar el CRM. Muestra a la persona. Antes de grabar, confirma que quieres decir en cámara que estudias.</p>
+  </div>
+  <div class="card">
+    <h3>Ganchos · elige uno (literal)</h3>
+    <div class="hook"><b>A</b><q>Tengo una empresa de IA y una materia de SolidWorks. Hoy me pidieron las dos.</q></div>
+    <div class="hook"><b>B</b><q>Faltan 39 días para el evento y hoy me tocó entregar una pieza de SolidWorks.</q></div>
+    <div class="hook"><b>C</b><q>La universidad no pregunta si tienes una empresa. Pide la pieza.</q></div>
+  </div>
+  <div class="card">
+    <h3>Puntos · con tus palabras</h3>
+    <ol class="points">
+      <li><b>La pieza:</b> qué era y cuánto creías que ibas a tardar. <span class="dato">[DATO: pieza, estimado]</span></li>
+      <li><b>Pero:</b> dónde te trancaste y cuánto tardó de verdad. <span class="dato">[DATO: tiempo real, parte difícil]</span></li>
+      <li><b>Por lo tanto:</b> cómo lo resolviste, o qué quedó a medias (sirve igual).</li>
+      <li><b>Lo que significa:</b> un día no alcanza para la empresa y la carrera por separado.</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h3>Cierre</h3>
+    <div class="lit"><small>Remate · elige o di el tuyo</small>La pieza tiene cotas. Mi empresa, todavía no.</div>
+    <div class="lit"><small>Puente</small>Mañana vuelvo a la empresa.</div>
+    <p><b>TikTok:</b> ¿Estudias y trabajas a la vez? Sí o no.<br><b>Reels:</b> Mándaselo al que estudia y trabaja a la vez.</p>
+    <p class="no"><b>No mostrar:</b> portal de la universidad, nombre del profesor, código estudiantil.</p>
+  </div>
+</section>
+
+<!-- SHORT 3 -->
+<section class="short" id="s3">
+  <div class="card">
+    <h2>Mi empleado número uno</h2>
+    <div class="meta"><span class="chip">Estructura C</span><span class="chip">40–50 s</span><span class="chip">25/30</span></div>
+    <p class="why">Muestra a #001, el editor de IA (✅ trabaja), sin vender nada y sin cifras inventadas. Combina EV-06 y EV-29 del banco.</p>
+  </div>
+  <div class="card">
+    <h3>Ganchos · elige uno (literal)</h3>
+    <div class="hook"><b>A</b><q>Mi empleado número uno trabaja de noche y no pide horas extra.</q></div>
+    <div class="hook"><b>B</b><q>Grabé siete minutos y mi empleado de IA los dejó en 38 segundos.</q></div>
+    <div class="hook"><b>C</b><q>Mi editor de IA no cobra. Pero igual me toca revisarlo.</q></div>
+  </div>
+  <div class="card">
+    <h3>Puntos · con tus palabras</h3>
+    <ol class="points">
+      <li><b>El flujo:</b> grabas, él edita. Dato real del Día 1: de 7 min 37 s de grabación a 38 s.</li>
+      <li><b>Pero:</b> lo que todavía le corriges. Pasó de verdad: la música tapaba la voz y el video del Día 2 terminó con la cara a mitad de palabra. Di cuál te dio más rabia: <span class="dato">[DATO]</span></li>
+      <li><b>Por lo tanto:</b> el Día 2 va por la versión 10 y sigue sin cobrar.</li>
+      <li><b>Límite honesto:</b> lo que nunca le dejarías decidir. El guion, la toma y el tono son tuyos.</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h3>Cierre</h3>
+    <div class="lit"><small>Remate · elige o di el tuyo</small>No cobra. Pero igual hay que revisarlo, como a todos.</div>
+    <div class="lit"><small>Puente</small>Mañana les enseño qué le pido que haga.</div>
+    <p><b>TikTok:</b> ¿Qué le dejarías editar a un empleado que no cobra? Una palabra.<br><b>Reels:</b> Mándaselo al que todavía edita a mano.</p>
+    <p class="no"><b>Sello en pantalla (lo pone el editor):</b> NÓMINA: 3 · HORAS DEVUELTAS: MIDIENDO · SUELDO TOTAL: $0</p>
+  </div>
+</section>
+
+<!-- AUTOCRITICA -->
+<section class="short" id="aut">
+  <div class="card">
+    <h2>Autocrítica</h2>
+    <p class="why">Rúbrica de 15 criterios (0–2 cada uno). Aprueba con 22 de 30.</p>
+    <table class="score">
+      <tr><th>Short</th><th>Nota</th><th>Lo que baja la nota</th></tr>
+      <tr><td>1 · Rechacé el guion</td><td class="n">26/30</td><td>Falta tu dato: la palabra que más te molestó.</td></tr>
+      <tr><td>2 · Dueño y estudiante</td><td class="n">23/30</td><td>Especificidad y recompensa dependen de la pieza (no la sé). «En juego» es débil sin fecha de entrega.</td></tr>
+      <tr><td>3 · Mi empleado #001</td><td class="n">25/30</td><td>El remate es seco, pero no sé si te hace gracia. «Horas devueltas» sigue en «midiendo».</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h3>Voz</h3>
+    <p>Suenan a ti: «Faltan 39 días…» y el remate de «no cobra».<br>
+    Pueden no sonarte (son mías, más pulidas que tu registro): «La pieza tiene cotas. Mi empresa, todavía no» y «Sonaban a cualquiera, menos a mí». Di las tuyas.</p>
+    <h3>Se reescribió</h3>
+    <p>Se quitó «explotar» y «esclavizar» del humor del Short 3. No hay cifras de la investigación ni «la IA te va a quitar el trabajo».</p>
+    <h3>No verificado</h3>
+    <p>Cómo suena en voz alta · lo de la pieza de SolidWorks y su fecha · que quieras decir en cámara que estudias.</p>
+  </div>
+</section>
+
+<footer>Fuente: <code>00_Serie/guiones/dias/Cortos-sin-CRM-2026-10-09.md</code></footer>
+</div>
+
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tabs button');
+  function show(id){
+    tabs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.t===id)});
+    document.querySelectorAll('section.short').forEach(function(s){s.classList.toggle('on',s.id===id)});
+    try{localStorage.setItem('cortos-tab',id)}catch(e){}
+    window.scrollTo({top:0});
+  }
+  tabs.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.t)})});
+  var saved=null;
+  try{saved=localStorage.getItem('cortos-tab')}catch(e){}
+  if(saved&&document.getElementById(saved))show(saved);
+})();
+</script>
+</body>
+</html>

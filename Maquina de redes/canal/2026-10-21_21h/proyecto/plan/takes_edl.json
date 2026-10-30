@@ -1,0 +1,68 @@
+{
+ "source": "input/clip.mp4",
+ "target": 39.08,
+ "tolerance": 2,
+ "max": 45,
+ "takes": [
+  {
+   "start": 21.94,
+   "end": 25.4,
+   "note": "¿Ustedes qué hacen cuando un cliente les escribe a las 9 de la noche por algo de retención? (gancho)",
+   "id": "t01"
+  },
+  {
+   "start": 25.82,
+   "end": 27.2,
+   "note": "¿En cuánto se demoran en tener esa respuesta?",
+   "id": "t02"
+  },
+  {
+   "start": 28.72,
+   "end": 31.7,
+   "note": "A las 9 de la noche ya puedes estar acostado, con pijama",
+   "id": "t03"
+  },
+  {
+   "start": 49.34,
+   "end": 53.6,
+   "note": "Porque en realidad no te van a dejar por la IA, te van a dejar por el contador que contestó primero",
+   "id": "t04"
+  },
+  {
+   "start": 83.48,
+   "end": 88.4,
+   "note": "Y casi siempre es la misma pregunta: ¿qué retención, qué IVA, cuándo vence?",
+   "id": "t05"
+  },
+  {
+   "start": 90.0,
+   "end": 92.9,
+   "note": "Pero tú ya le respondiste y te siguen preguntando igual",
+   "id": "t06"
+  },
+  {
+   "start": 113.4,
+   "end": 119.4,
+   "note": "Con mi compañero de trabajo estamos probando un agente que se basa en el Estatuto Tributario y adelanta tu respuesta",
+   "id": "t07"
+  },
+  {
+   "start": 119.64,
+   "end": 122.9,
+   "note": "No es un chatbot que solo responde y se le envía al cliente",
+   "id": "t08"
+  },
+  {
+   "start": 123.28,
+   "end": 128.2,
+   "note": "No reemplaza tu criterio y tú puedes revisar el mensaje antes de que se le pueda enviar al cliente",
+   "id": "t09"
+  },
+  {
+   "start": 180.1,
+   "end": 185.1,
+   "note": "Quiero saber cuál es la pregunta que más te escriben tus clientes a las 9 de la noche, déjalo acá en los comentarios (cierre)",
+   "id": "t10"
+  }
+ ]
+}

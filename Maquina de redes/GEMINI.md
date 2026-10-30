@@ -1,0 +1,30 @@
+# GEMINI.md · Maquina de redes (espejo de CLAUDE.md; si chocan, manda CLAUDE.md)
+
+Serie "Día X de 42" (TikTok/IG) hasta el Luque Business Summit (17-19 nov 2026; Día 1 = 7 oct) + videos de nicho con CTA por comentario (`D1`/`D2`/`D3`). El usuario es el dueño y quien sale en cámara. Estado de campañas: `../SHARED_STATE.md`.
+
+## Mapa de archivos clave
+- `00_Serie/estado.md` (estado y decisiones), `relevo.md` (últimas 5 entradas), `hechos.md` (lo afirmable), `voz-y-estilo.md`, `aprendizajes.md`, `banco-frases.md`, `marcador.md`.
+- `00_Serie/guiones/` (plan-42, paquetes por día), `00_Serie/portadas/prompt-maestro.md`, `00_Serie/recursos/`, `00_Serie/marca/`.
+- `Dia-XX/`: `brief.md`, `caption.md`, `crudo/` (una sola copia), `proyecto/`, `entregables/`. Nicho en curso: `Dia-08/proyecto/contadores_ia/`.
+- `odd/plans/` y `odd/tasks/` (campañas y tareas), `qa/snapshots/` (verificación). Comando: `python .claude/skills/monoga-serie/scripts/dia.py estado N`.
+- Prohibido escanear recursivo: `Dia-01..04`, `build/`, `node_modules`, `.git`, `dist`, `__pycache__`.
+
+## Skills activas
+`monoga-serie` (día, hechos, portada, caption) → `monoga-guionista` (guion de grabación) → `monoga-adria` (estilo visual y voz) → `monoga-editor` (ffmpeg, Whisper, HyperFrames). Léelas antes de actuar. Copias en `.gemini/skills/` y `.agents/skills/`; si cambias una, resincroniza y corre `gentle-ai skill-registry refresh`.
+
+## Reglas duras
+1. El guion lo dice y lo aprueba el usuario: gancho y cierre literales, el resto en puntos. Nunca un texto completo para leer. Él manda sobre tomas, tono y titulares.
+2. Solo se afirma lo ✅ de `hechos.md`; 🟡 = "estamos probando"; ⏳ = "próximamente".
+3. Solo la voz del usuario en el video (se mide, no se adivina). Voces de personajes IA = ficción rotulada.
+4. Sin datos de clientes reales en pantalla; CRM solo en modo demo. No modifiques el repo `monoga-os`.
+5. Nada de claves en chat ni archivos (`OPENAI_API_KEY` en entorno). Si el usuario pega una, que la revoque.
+6. No borres ni muevas archivos del usuario sin que lo pida.
+7. Temas de IA y del canal, nada motivacional. Máx. 3 publicaciones al día.
+8. Estilo: blanco pastel `#F6F4EF` + dorado `#C8B07A` + carbón `#2A2926`; voz −17,6 LUFS; sin bordes redondos ni recortar la silueta.
+9. Motion/edición HyperFrames con el modelo más capaz; transcribir, medir y mezclar con el más barato.
+10. Remotos (SSH, sesiones ajenas): solo con autorización explícita.
+11. Antes de "listo": `qa/snapshots/` y reporta qué se midió y qué no (no oyes ni ves el celular).
+12. Al cerrar un hito: entrada en `relevo.md`, `estado.md` si cambió algo, `../SHARED_STATE.md` si cambió una campaña, `mem_save` (project `loovo`).
+
+Responde en español, directo. Termina con lista de problemas (uno por línea, con su arreglo).
+

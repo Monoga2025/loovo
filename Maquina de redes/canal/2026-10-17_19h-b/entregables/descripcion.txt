@@ -1,0 +1,11 @@
+Todavía estamos en 2026.
+Pasa de contador manual a uno de los pocos que usa la IA como herramienta.
+
+3 sistemas para destacar como contador:
+1. Un agente de IA entrenado con el Estatuto Tributario y los conceptos de la DIAN que responde dudas de exógena y retención en segundos, citando el artículo exacto.
+2. Un extractor que recibe fotos borrosas y PDFs y te devuelve una tabla limpia en Excel con NIT, CUFE e impuestos, lista para subir a Siigo o Alegra.
+3. Un conciliador bancario automático que cruza tus extractos contra tu libro contable y te marca hasta el 4x1000.
+
+Comenta D1, D2 o D3 y te paso el sistema. ¿Cuál te ahorraría más horas?
+
+#Contadores #ContadorPublico #InteligenciaArtificial #DIAN #Automatizacion #Loovo

@@ -1,0 +1,541 @@
+<!doctype html>
+<!-- Día 7 "ventas con IA" · showreel de motion sobre la marca Loovo (blanco pastel + puntos + dorado suave + carbón).
+     Generado por scripts/build_html.py (EDL + palabras + beats). Reglas: border-radius 0, sin recortar su silueta,
+     sin fondos dorados, sin verde, frases >= 80 px. La persona solo sale cuando mira a cámara (B1-B3b); el resto es motion. -->
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>Dia 7 ventas IA</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Playfair"; font-style: italic; font-weight: 700; src: url("assets/fonts/playfair-display-latin-700-italic.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 500; src: url("assets/fonts/montserrat-500.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-600.woff2") format("woff2"); }
+* { box-sizing:border-box; margin:0; padding:0; border-radius:0 !important; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:#F6F4EF; font-family:"Montserrat", sans-serif; }
+.full { position:absolute; left:0; top:0; width:1080px; height:1920px; }
+.sc { overflow:hidden; }
+.dots { background-color:#F6F4EF; background-image:radial-gradient(circle at 12px 12px, rgba(170,165,156,.42) 0, rgba(170,165,156,.42) 1.1px, rgba(170,165,156,0) 1.6px); background-size:24px 24px; }
+.bigdots { position:absolute; left:-240px; top:-240px; width:1560px; height:2400px; }
+.hair { position:absolute; height:3px; background:#C8B07A; transform-origin:0 50%; }
+.w { display:inline-block; white-space:pre; }
+.ico { -webkit-mask-position:center; -webkit-mask-size:contain; -webkit-mask-repeat:no-repeat; mask-position:center; mask-size:contain; mask-repeat:no-repeat; }
+.shadow { box-shadow:0 34px 70px -26px rgba(90,74,44,.36), 0 8px 22px rgba(90,74,44,.10); }
+.ttl { position:absolute; left:0; width:1080px; text-align:center; white-space:nowrap; font-weight:600; letter-spacing:-2px; }
+.ttl .ln { display:block; }
+.ttl .s { font-family:"Playfair"; font-style:italic; font-weight:700; letter-spacing:0; }
+.dk { color:#2A2926; } .dk .s, .dk .k { color:#A88F57; } .dk .g { color:#8C887F; }
+.lt { color:#FBF8F1; text-shadow:0 2px 8px rgba(20,16,10,.40), 0 10px 34px rgba(20,16,10,.38); } .lt .s, .lt .k { color:#E6D6AE; }
+.f90 { font-size:90px; line-height:1.12; } .f100 { font-size:100px; line-height:1.12; } .f110 { font-size:110px; line-height:1.1; }
+.f90 .s { font-size:140px; line-height:1.05; } .f100 .s { font-size:160px; line-height:1.04; } .f110 .s { font-size:180px; line-height:1.02; }
+.sub { position:absolute; left:0; width:1080px; text-align:center; font-weight:500; font-size:60px; letter-spacing:6px; color:#8C887F; text-transform:uppercase; }
+.prt { position:absolute; width:18px; height:18px; }
+/* persona */
+#base { z-index:1; }
+#shade { z-index:9; background:linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(30,24,16,.24) 66%, rgba(30,24,16,.26) 76%, rgba(0,0,0,0) 88%); }
+#caps { z-index:10; }
+.cap { position:absolute; left:0; bottom:500px; width:1080px; text-align:center; white-space:nowrap; font-weight:600; font-size:86px; line-height:1.08;
+  letter-spacing:-1px; color:#FBF8F1; text-shadow:0 2px 6px rgba(20,16,10,.38), 0 6px 26px rgba(20,16,10,.38); }
+.cap .ln { display:block; } .cap .k { color:#E6D6AE; }
+.cap .s { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:140px; line-height:1; color:#E6D6AE; letter-spacing:0; }
+/* caja clave */
+.kb { position:relative; display:inline-block; vertical-align:middle; }
+.kb .bg { position:absolute; left:0; top:0; height:100%; width:0; background:#2A2926; box-shadow:0 30px 60px -26px rgba(42,41,38,.45); }
+.kb .cur { position:absolute; left:0; top:0; width:12px; height:100%; background:#C8B07A; }
+.kb .tx { position:relative; display:inline-block; text-align:center; font-weight:600; color:#E6D6AE; letter-spacing:-3px; }
+.kbw { position:absolute; left:0; width:1080px; text-align:center; }
+/* A gancho */
+#sA { z-index:20; }
+.pan { position:absolute; left:0; top:0; width:1080px; height:1920px; overflow:hidden; }
+.tile { position:absolute; width:200px; height:200px; background:#FBF8F1; box-shadow:0 26px 50px -22px rgba(90,74,44,.38), 0 5px 14px rgba(90,74,44,.10); }
+.tile.k { background:#2A2926; }
+.tile .ico { position:absolute; left:55px; top:55px; width:90px; height:90px; background:#2A2926; }
+.tile.k .ico { background:#E6D6AE; }
+#aZero { position:absolute; left:0; top:1130px; width:1080px; text-align:center; font-weight:600; font-size:84px; color:#8C887F; letter-spacing:-1px; }
+#aZero b { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:220px; color:#A88F57; vertical-align:-40px; margin-left:20px; }
+#aKb { height:210px; } #aKb .tx { font-size:170px; line-height:210px; width:600px; }
+/* R repos */
+#sR { z-index:21; }
+.card { position:absolute; left:70px; width:940px; height:250px; background:#FBF8F1; }
+.card .ib { position:absolute; left:0; top:0; width:250px; height:250px; background:#2A2926; }
+.card .ib .ico { position:absolute; left:65px; top:65px; width:120px; height:120px; background:#E6D6AE; }
+.card .tt { position:absolute; left:290px; top:34px; font-weight:600; font-size:86px; line-height:92px; letter-spacing:-2px; color:#2A2926; white-space:nowrap; }
+.card .nn { position:absolute; left:292px; top:150px; font-weight:500; font-size:56px; letter-spacing:4px; color:#8C887F; }
+.card .ck { position:absolute; right:40px; top:150px; width:70px; height:70px; background:#A88F57; }
+#rTwo { position:absolute; right:60px; top:150px; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:520px; line-height:1; color:rgba(200,176,122,.20); }
+/* F embudo */
+#sF { z-index:22; }
+.bar { position:absolute; height:132px; background:#FBF8F1; transform-origin:50% 50%; }
+.bar .ib { position:absolute; left:0; top:0; width:132px; height:132px; background:#2A2926; }
+.bar .ib .ico { position:absolute; left:30px; top:30px; width:72px; height:72px; background:#E6D6AE; }
+.bar .tt { position:absolute; left:160px; top:22px; font-weight:600; font-size:84px; line-height:88px; letter-spacing:-2px; color:#2A2926; white-space:nowrap; }
+#fDrop { position:absolute; left:516px; top:420px; width:48px; height:48px; background:#C8B07A; box-shadow:0 0 0 12px rgba(200,176,122,.25); }
+#fKb { height:180px; } #fKb .tx { font-size:150px; line-height:180px; width:560px; }
+/* V ventas */
+#sV { z-index:23; }
+#vKb { height:250px; } #vKb .tx { font-size:210px; line-height:250px; width:900px; letter-spacing:-6px; }
+#vSvg { position:absolute; left:0; top:0; }
+/* G agentes */
+#sG { z-index:24; }
+.ag { position:absolute; width:210px; height:210px; background:#2A2926; box-shadow:0 30px 56px -24px rgba(42,41,38,.5); }
+.ag .ico { position:absolute; left:50px; top:40px; width:110px; height:110px; background:#E6D6AE; }
+.ag i { position:absolute; left:30px; bottom:22px; width:150px; height:10px; background:#C8B07A; transform-origin:0 50%; }
+#gB2b { position:absolute; left:0; top:640px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:380px; line-height:1; color:#A88F57;
+  text-shadow:0 4px 6px rgba(60,48,26,.14), 0 26px 60px rgba(90,74,44,.28); }
+/* K carné */
+#sK { z-index:25; }
+#kDoc { position:absolute; left:90px; top:520px; width:900px; height:640px; background:#FBF8F1; }
+#kDoc .hd { position:absolute; left:0; top:0; width:900px; height:110px; background:#2A2926; }
+#kDoc .hd span { position:absolute; left:40px; top:22px; font-weight:600; font-size:60px; color:#E6D6AE; letter-spacing:-1px; }
+.ln2 { position:absolute; left:60px; height:26px; background:#2A2926; transform-origin:0 50%; }
+.ln2.g { background:#C8B07A; }
+#kCur { position:absolute; width:14px; height:60px; background:#C8B07A; }
+#kCard { position:absolute; left:60px; top:600px; width:960px; height:760px; background:#FBF8F1; transform-origin:50% 50%; }
+#kCard .hd { position:absolute; left:0; top:0; width:960px; height:120px; background:#2A2926; }
+#kCard .hd span { position:absolute; left:44px; top:28px; font-weight:600; font-size:58px; letter-spacing:5px; color:#E6D6AE; }
+#kCard .ph { position:absolute; left:44px; top:164px; width:340px; height:408px; background:url("assets/img/foto.jpg") center/cover; box-shadow:0 20px 40px -20px rgba(42,41,38,.5); }
+#kCard .ph i { position:absolute; left:-10px; top:-10px; right:-10px; bottom:-10px; border:3px solid #C8B07A; }
+#kCard .nm { position:absolute; left:424px; top:170px; font-weight:600; font-size:84px; line-height:92px; letter-spacing:-2px; color:#2A2926; }
+#kCard .nm b { font-family:"Playfair"; font-style:italic; font-weight:700; color:#A88F57; font-size:110px; }
+#kCard .rl { position:absolute; left:424px; top:440px; font-weight:500; font-size:56px; letter-spacing:3px; color:#8C887F; }
+#kCard .st { position:absolute; left:0; top:620px; width:960px; height:140px; background:#2A2926; }
+#kCard .st span { position:absolute; left:0; top:28px; width:960px; text-align:center; font-weight:600; font-size:80px; letter-spacing:-3px; color:#E6D6AE; }
+#kCard .st i { position:absolute; left:0; top:0; height:8px; width:960px; background:#C8B07A; transform-origin:0 50%; }
+#kStamp { position:absolute; left:500px; top:1010px; width:420px; height:150px; border:8px solid #A88F57; transform:rotate(-8deg); }
+#kStamp span { position:absolute; left:0; top:18px; width:100%; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:92px; line-height:1; color:#A88F57; }
+.node { position:absolute; width:170px; height:170px; background:#2A2926; box-shadow:0 30px 56px -24px rgba(42,41,38,.5); }
+.node .ico { position:absolute; left:40px; top:40px; width:90px; height:90px; background:#E6D6AE; }
+.node.o { outline:6px solid #C8B07A; outline-offset:10px; }
+.lsvg { position:absolute; left:0; top:0; }
+/* T entrenamiento */
+#sT { z-index:26; }
+#tTrack { position:absolute; left:110px; top:860px; width:860px; height:56px; background:#E4DFD4; }
+#tFill { position:absolute; left:0; top:0; height:56px; width:860px; background:#C8B07A; transform-origin:0 50%;
+  background-image:repeating-linear-gradient(-45deg, rgba(255,251,242,.35) 0 14px, rgba(255,251,242,0) 14px 28px); }
+#tTick { position:absolute; left:110px; top:940px; width:860px; height:30px;
+  background:repeating-linear-gradient(90deg, rgba(140,136,127,.7) 0 3px, transparent 3px 43px); }
+#tKb { height:180px; } #tKb .tx { font-size:140px; line-height:180px; width:860px; letter-spacing:-5px; }
+#kKb { height:170px; } #kKb .tx { font-size:130px; line-height:170px; width:800px; letter-spacing:-5px; }
+/* placa */
+#pl { z-index:35; }
+#pldia { position:absolute; left:0; top:600px; width:1080px; text-align:center; font-weight:600; font-size:230px; line-height:1; letter-spacing:-8px; color:#2A2926; }
+#plde { position:absolute; left:0; top:860px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:170px; line-height:1; color:#A88F57; }
+#plhair { left:300px; top:1080px; width:480px; }
+#pltag { position:absolute; left:0; top:1120px; width:1080px; text-align:center; font-weight:600; font-size:80px; letter-spacing:-2px; color:#8C887F; }
+#plrow { position:absolute; left:250px; top:410px; width:580px; height:140px; }
+#plrow b { position:absolute; width:30px; height:30px; border:2px solid rgba(140,136,127,.6); }
+#leak { z-index:40; background:radial-gradient(ellipse 70% 60% at 18% 40%, rgba(255,251,242,1) 0%, rgba(240,226,190,.85) 35%, rgba(214,194,147,0) 75%); mix-blend-mode:screen; }
+#white { z-index:41; background:#FFFBF2; }
+#grain { position:absolute; left:-200px; top:-200px; width:1480px; height:2320px; z-index:45; background:url("assets/grano.png"); opacity:.05; mix-blend-mode:multiply; pointer-events:none; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__TOTAL__" data-width="1080" data-height="1920">
+
+  <video id="base" class="clip full" src="assets/base.mp4" data-start="3.4" data-duration="10.1" data-track-index="1" muted playsinline></video>
+  <div id="shade" class="full"></div>
+  <div id="caps" class="full"></div>
+
+  <!-- A gancho -->
+  <div id="sA" class="full sc"><div id="camA" class="full">
+    <div class="bigdots dots" id="aBg"></div>
+    <div id="aP1" class="pan">
+      <div id="a1t" class="ttl dk f90" style="top:260px"></div>
+      <div id="a2t" class="ttl dk f110" style="top:250px"></div>
+      <div id="aTiles" class="full"></div>
+      <div id="aZero">ventas: <b>0</b></div>
+      <div id="a3t" class="ttl dk f110" style="top:250px"></div>
+      <div class="kbw" style="top:560px"><div id="aKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">nada.</div></div></div>
+      <div id="aPrt" class="full"></div>
+    </div>
+  </div></div>
+
+  <!-- R repos -->
+  <div id="sR" class="full sc"><div id="camR" class="full">
+    <div class="bigdots dots" id="rBg"></div>
+    <div id="rTwo">2</div>
+    <div id="rT" class="ttl dk f100" style="top:300px"></div>
+    <div class="card shadow" id="rC1" style="top:760px"><div class="ib"><div class="ico" style="mask-image:url(assets/icons/git-branch-fill.svg);-webkit-mask-image:url(assets/icons/git-branch-fill.svg)"></div></div>
+      <div class="tt">Marketing Skills</div><div class="nn">REPO 01</div><div class="ck ico" style="mask-image:url(assets/icons/seal-check-fill.svg);-webkit-mask-image:url(assets/icons/seal-check-fill.svg)"></div></div>
+    <div class="card shadow" id="rC2" style="top:1070px"><div class="ib"><div class="ico" style="mask-image:url(assets/icons/git-branch-fill.svg);-webkit-mask-image:url(assets/icons/git-branch-fill.svg)"></div></div>
+      <div class="tt">Agency Agents</div><div class="nn">REPO 02</div><div class="ck ico" style="mask-image:url(assets/icons/seal-check-fill.svg);-webkit-mask-image:url(assets/icons/seal-check-fill.svg)"></div></div>
+    <i class="hair" id="rH" style="left:70px;top:1360px;width:940px"></i>
+  </div></div>
+
+  <!-- F embudo -->
+  <div id="sF" class="full sc"><div id="camF" class="full">
+    <div class="bigdots dots" id="fBg"></div>
+    <div class="sub" style="top:200px" id="fSub">REPO 01</div>
+    <div id="fT" class="ttl dk f100" style="top:280px"><span class="ln">Marketing <span class="s">Skills</span></span></div>
+    <div id="fBars" class="full"></div>
+    <div id="fDrop"></div>
+    <div id="fT2" class="ttl dk f90" style="top:1170px"></div>
+    <div class="kbw" style="top:1290px"><div id="fKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">ventas</div></div></div>
+  </div></div>
+
+  <!-- V ventas -->
+  <div id="sV" class="full sc"><div id="camV" class="full">
+    <div class="bigdots dots" id="vBg"></div>
+    <svg id="vSvg" width="1080" height="1920"><polyline id="vLine" fill="none" stroke="#C8B07A" stroke-width="10" stroke-linejoin="miter"
+      points="90,1380 250,1330 380,1350 520,1220 650,1240 790,1060 920,980 1000,880"/></svg>
+    <div id="vT" class="ttl dk f100" style="top:430px"></div>
+    <div class="kbw" style="top:780px"><div id="vKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">VENTAS</div></div></div>
+    <i class="hair" id="vH1" style="left:90px;top:1080px;width:900px"></i>
+    <div id="vPrt" class="full"></div>
+  </div></div>
+
+  <!-- G agency agents -->
+  <div id="sG" class="full sc"><div id="camG" class="full">
+    <div class="bigdots dots" id="gBg"></div>
+    <div class="sub" style="top:200px" id="gSub">REPO 02</div>
+    <div id="gT" class="ttl dk f100" style="top:280px"></div>
+    <div id="gGrid" class="full"></div>
+    <div id="gT2" class="ttl dk f90" style="top:1230px"></div>
+    <div id="gSv" class="ttl dk f90" style="top:470px"></div>
+    <div id="gB2b">B2B</div>
+    <div id="gT3" class="ttl dk f90" style="top:1110px"></div>
+  </div></div>
+
+  <!-- K carné / Nómina Viva -->
+  <div id="sK" class="full sc"><div id="camK" class="full">
+    <div class="bigdots dots" id="kBg"></div>
+    <div id="kT" class="ttl dk f100" style="top:250px"></div>
+    <div id="kDoc" class="shadow"><div class="hd"><span>prompt.md</span></div><div id="kLines"></div><div id="kCur"></div></div>
+    <div id="kT2" class="ttl dk f100" style="top:220px"></div>
+    <div id="kWrap" class="full">
+      <svg class="lsvg" id="kSvg" width="1080" height="1920"></svg>
+      <div id="kNodes" class="full"></div>
+      <div id="kCard" class="shadow">
+        <div class="hd"><span>LA NÓMINA VIVA · LOOVO</span></div>
+        <div class="ph"><i></i></div>
+        <div class="nm">Empleado<br>de <b>ventas</b></div>
+        <div class="st"><i></i><span>EN ENTRENAMIENTO</span></div>
+      </div>
+      <div id="kStamp"><span>como yo</span></div>
+      <div class="kbw" style="top:900px"><div id="kKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">orquestador</div></div></div>
+    </div>
+    <div id="kT3" class="ttl dk f90" style="top:1318px"></div>
+  </div></div>
+
+  <!-- T entrenamiento -->
+  <div id="sT" class="full sc"><div id="camT" class="full">
+    <div class="bigdots dots" id="tBg"></div>
+    <div id="tP1" class="pan">
+      <div id="tT" class="ttl dk f100" style="top:380px"></div>
+      <div id="tTrack"><div id="tFill"></div></div><div id="tTick"></div>
+      <div id="tT2" class="ttl dk f90" style="top:1060px"></div>
+    </div>
+    <div id="tP2" class="pan">
+      <div id="tT3" class="ttl dk f90" style="top:200px"></div>
+      <svg class="lsvg" id="tSvg" width="1080" height="1920"></svg>
+      <div id="tNodes" class="full"></div>
+      <div class="kbw" style="top:480px"><div id="tKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">orquestador</div></div></div>
+      <div id="tT4" class="ttl dk f90" style="top:1190px"></div>
+    </div>
+  </div></div>
+
+  <!-- placa -->
+  <div id="pl" class="full sc dots">
+    <div id="plrow"></div>
+    <div id="pldia">DÍA 7</div>
+    <div id="plde">de 42</div>
+    <i class="hair" id="plhair"></i>
+    <div id="pltag">#42DiasLoovo</div>
+  </div>
+
+  <div id="leak" class="full"></div>
+  <div id="white" class="full"></div>
+  <div id="grain"></div>
+</div>
+
+<script>
+const DIA = 7, DE = 42;
+const D = __DATA__;
+const B = D.B;
+const S = (id) => D.edl[id].start, EN = (id) => D.edl[id].end;
+const F = 1 / 30, LEAD = 2 * F;
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const $ = (s) => document.querySelector(s);
+const show = (s, t) => tl.set(s, { autoAlpha: 1 }, t);
+const hide = (s, t) => tl.set(s, { autoAlpha: 0 }, t);
+const inBlur = (s, t, d = 4 * F, px = 14) => tl.fromTo(s, { autoAlpha: 0, filter: `blur(${px}px)` }, { autoAlpha: 1, filter: "blur(0px)", duration: d, ease: "power2.out", immediateRender: false }, t);
+const outUp = (s, t, d = 4 * F) => tl.to(s, { autoAlpha: 0, y: "-=50", filter: "blur(12px)", duration: d, ease: "power1.in" }, t);
+const esc = (x) => x.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const norm = (x) => x.toLowerCase().normalize("NFD").replace(/\p{Mn}/gu, "").replace(/[^a-z0-9]/g, "");
+let seed = 7; const rnd = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+const R = (a, b) => a + (b - a) * rnd();
+function at(id, w, n = 0) { const h = D.words[id].filter((x) => x[0] === norm(w)); return h[Math.min(n, h.length - 1)][1]; }
+const ICON = (n) => `mask-image:url(assets/icons/${n}-fill.svg);-webkit-mask-image:url(assets/icons/${n}-fill.svg)`;
+
+// título cinético: palabras en su sitio; entran a su tiempo (voz - 2 cuadros). ~x~ serif dorada, *x* clave, ^ visible en cuadro 0
+function T(sel, lines, segs, o = {}) {
+  const el = $(sel); const seq = [].concat(...[].concat(segs).map((s) => D.words[s])); let cur = Math.max(0, seq.findIndex((x) => x[1] >= (o.min || 0) - 0.3)), last = o.min || 0;
+  const toks = []; let mode = "";
+  el.innerHTML = lines.map((ln) => '<span class="ln">' + ln.split(" ").map((raw) => {
+    let t = raw, open = mode, vis0 = false, forced = null;
+    if (t.startsWith("^")) { vis0 = true; t = t.slice(1); }
+    if (t.startsWith("~")) { mode = "s"; open = "s"; t = t.slice(1); } else if (t.startsWith("*")) { mode = "k"; open = "k"; t = t.slice(1); }
+    let close = false; if (t.endsWith("~") || t.endsWith("*")) { close = true; t = t.slice(0, -1); }
+    const m = t.match(/^(.*)@([\d.]+)$/); if (m) { t = m[1]; forced = +m[2]; }
+    const cls = open; if (close) mode = "";
+    let when = forced;
+    if (when === null) { const n = norm(t); for (let j = cur; j < Math.min(seq.length, cur + 8); j++) if (seq[j][0] === n) { when = seq[j][1]; cur = j + 1; break; } }
+    if (when === null) when = last + 0.08;
+    last = when; toks.push({ when, cls, vis0 });
+    return `<span class="w${cls ? " " + cls : ""}">${esc(t)}</span>`;
+  }).join(" ") + "</span>").join("");
+  el.querySelectorAll(".w").forEach((sp, i) => {
+    const k = toks[i]; if (k.vis0) { gsap.set(sp, { autoAlpha: 1 }); return; }
+    gsap.set(sp, { autoAlpha: 0 }); const serif = k.cls === "s";
+    tl.fromTo(sp, { autoAlpha: 0, y: 26, filter: "blur(10px)", scale: serif ? 0.6 : 1 },
+      { autoAlpha: 1, y: 0, filter: "blur(0px)", scale: 1, duration: (serif ? 7 : 5) * F, ease: "power2.out", immediateRender: false }, Math.max(o.min || 0, k.when - LEAD));
+  });
+  return toks;
+}
+const rich = (t) => t.split("|").map((ln) => '<span class="ln">' + esc(ln).replace(/~([^~]+)~/g, '<span class="s">$1</span>').replace(/\*([^*]+)\*/g, '<span class="k">$1</span>') + "</span>").join("");
+let capN = 0;
+function card(text, t0, t1) {
+  const el = document.createElement("div"); el.className = "cap"; el.innerHTML = rich(text); $("#caps").appendChild(el);
+  gsap.set(el, { autoAlpha: 0 });
+  tl.fromTo(el, { autoAlpha: 0, filter: "blur(8px)" }, { autoAlpha: 1, filter: "blur(0px)", duration: 2 * F, ease: "power2.out", immediateRender: false }, t0 - LEAD);
+  tl.set(el, { autoAlpha: 0 }, t1 - LEAD);
+}
+function keybox(sel, KT, wpx) {
+  const kb = $(sel), bg = kb.querySelector(".bg"), cur = kb.querySelector(".cur"), tx = kb.querySelector(".tx");
+  gsap.set(cur, { autoAlpha: 0 }); gsap.set(tx, { clipPath: "inset(0 100% 0 0)" });
+  tl.set(cur, { autoAlpha: 1 }, KT - 6 * F);
+  tl.fromTo(bg, { width: 0 }, { width: wpx, duration: 5 * F, ease: "power3.out", immediateRender: false }, KT - 4 * F);
+  tl.fromTo(cur, { x: 0 }, { x: wpx - 12, duration: 5 * F, ease: "power3.out", immediateRender: false }, KT - 4 * F);
+  tl.fromTo(tx, { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 5 * F, ease: "power2.out", immediateRender: false }, KT - 3 * F);
+  tl.to(cur, { autoAlpha: 0, duration: 2 * F }, KT + 8 * F);
+}
+function shake(sel, t, amp = 14, n = 5) { for (let i = 0; i < n; i++) { const a = amp * (1 - i / n); tl.set(sel, { x: (i % 2 ? -1 : 1) * a, y: (i % 3 - 1) * a * 0.6 }, t + i * F); } tl.set(sel, { x: 0, y: 0 }, t + n * F); }
+function enterMG(scene, cam, t, until) {
+  show(scene, t);
+  tl.fromTo(cam, { scale: 4, filter: "blur(18px)" }, { scale: 1.05, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, t);
+  tl.to(cam, { scale: 1.0, duration: Math.max(0.3, until - t - 0.5), ease: "sine.inOut" }, t + 0.5);
+}
+function whip(fromCam, fromScene, toScene, toCam, t, dx, dy, until) {
+  tl.to(fromCam, { x: -dx * 0.5, y: -dy * 0.5, filter: "blur(22px)", duration: 4 * F, ease: "power3.in" }, t - 4 * F);
+  hide(fromScene, t); show(toScene, t);
+  tl.fromTo(toCam, { x: dx * 0.6, y: dy * 0.6, filter: "blur(24px)", scale: 1.04 }, { x: 0, y: 0, filter: "blur(0px)", scale: 1.04, duration: 9 * F, ease: "expo.out", immediateRender: false }, t);
+  if (until) tl.to(toCam, { scale: 1.0, duration: until - t - 9 * F, ease: "sine.inOut" }, t + 9 * F);
+}
+function destello(Tp, hideList) {
+  tl.fromTo("#leak", { autoAlpha: 0, x: -260 }, { autoAlpha: 1, x: 120, duration: 3 * F, ease: "power1.in", immediateRender: false }, Tp - 3 * F);
+  tl.fromTo("#white", { autoAlpha: 0 }, { autoAlpha: 1, duration: 3 * F, ease: "power1.in", immediateRender: false }, Tp - 3 * F);
+  if (hideList) hide(hideList, Tp);
+  tl.set("#leak", { autoAlpha: 0 }, Tp + 3 * F);
+  tl.to("#white", { autoAlpha: 0, duration: 4 * F, ease: "sine.out" }, Tp + 3 * F);
+}
+function burst(cont, cx, cy, n, t, spread = 520) {
+  const c = $(cont);
+  for (let i = 0; i < n; i++) {
+    const d = document.createElement("div"); d.className = "prt"; const s = R(10, 26);
+    d.style.cssText = `left:${cx}px;top:${cy}px;width:${s}px;height:${s}px;background:${["#C8B07A", "#2A2926", "#A88F57", "#E6D6AE"][i % 4]}`; c.appendChild(d);
+    const a = (i / n) * Math.PI * 2 + R(-0.2, 0.2), r = R(0.45, 1) * spread;
+    gsap.set(d, { autoAlpha: 0 });
+    tl.fromTo(d, { autoAlpha: 1, x: 0, y: 0, rotation: 0, filter: "blur(4px)" }, { x: Math.cos(a) * r, y: Math.sin(a) * r, rotation: R(-180, 180), filter: "blur(0px)", duration: 0.7, ease: "expo.out", immediateRender: false }, t);
+    tl.to(d, { autoAlpha: 0, duration: 0.3 }, t + R(0.45, 0.8));
+  }
+}
+// árbol orquestador -> subagentes (líneas SVG que se dibujan)
+function tree(svgSel, nodesSel, top, x0, y0, ys, icons, t, step = 0.09) {
+  const svg = $(svgSel), nodes = $(nodesSel); const n = icons.length, xs = icons.map((_, i) => 110 + 85 + i * ((1080 - 220 - 170) / (n - 1)));
+  let s = "", h = "";
+  xs.forEach((x, i) => { s += `<polyline id="${svgSel.slice(1)}l${i}" points="${x0},${y0} ${x0},${(y0 + ys) / 2} ${x},${(y0 + ys) / 2} ${x},${ys}" fill="none" stroke="#C8B07A" stroke-width="6" stroke-linejoin="miter"/>`;
+    h += `<div class="node" id="${nodesSel.slice(1)}n${i}" style="left:${x - 85}px;top:${ys}px"><div class="ico" style="${ICON(icons[i])}"></div></div>`; });
+  svg.innerHTML = s; nodes.insertAdjacentHTML("beforeend", h);
+  xs.forEach((x, i) => {
+    const pl = $(`#${svgSel.slice(1)}l${i}`), L = pl.getTotalLength();
+    gsap.set(pl, { strokeDasharray: L, strokeDashoffset: L });
+    tl.to(pl, { strokeDashoffset: 0, duration: 0.4, ease: "power2.inOut" }, t + i * step);
+    const nd = `#${nodesSel.slice(1)}n${i}`; gsap.set(nd, { autoAlpha: 0 });
+    tl.fromTo(nd, { autoAlpha: 0, scale: 0.3, filter: "blur(8px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.35, ease: "back.out(1.6)", immediateRender: false }, t + 0.28 + i * step);
+  });
+}
+const ALLSC = ["#sR", "#sF", "#sV", "#sG", "#sK", "#sT", "#pl"];
+gsap.set(ALLSC, { autoAlpha: 0 }); gsap.set(["#leak", "#white", "#shade"], { autoAlpha: 0 });
+
+// ============ A. GANCHO 0 -> cut1 ============
+gsap.set("#sA", { autoAlpha: 1 });
+T("#a1t", ["^Normalmente lo que", "me pasa es que"], "A");
+tl.fromTo("#aBg", { x: 0, y: 0 }, { x: -40, y: -90, duration: B.cut1, ease: "none", immediateRender: false }, 0);
+tl.fromTo("#camA", { scale: 1.06 }, { scale: 1.0, duration: B.a_yo, ease: "sine.out", immediateRender: false }, 0);
+outUp("#a1t", B.a_yo - 5 * F);
+T("#a2t", ["yo ~construyo~", "un montón de cosas"], "A", { min: B.a_yo - 3 * F });
+const AIC = ["robot", "database", "chart-line-up", "film-slate", "cpu", "chats", "wrench", "brain", "megaphone", "lightning", "pen-nib", "rocket-launch"];
+$("#aTiles").innerHTML = AIC.map((n, i) => `<div class="tile${i % 3 === 1 ? " k" : ""}" id="at${i}" style="left:${104 + (i % 4) * 224}px;top:${640 + Math.floor(i / 4) * 224}px"><div class="ico" style="${ICON(n)}"></div></div>`).join("");
+gsap.set(".tile", { autoAlpha: 0 }); gsap.set("#aZero", { autoAlpha: 0 });
+AIC.forEach((_, i) => {
+  const t = B.a_yo + 0.12 + i * ((B.a_pero - B.a_yo - 0.35) / 11);
+  tl.fromTo("#at" + i, { autoAlpha: 0, y: -260, rotation: R(-30, 30), scale: 0.6, filter: "blur(10px)" }, { autoAlpha: 1, y: 0, rotation: 0, scale: 1, filter: "blur(0px)", duration: 0.32, ease: "expo.out", immediateRender: false }, t);
+});
+// "pero no vendo nada": todo se apaga, aparece ventas: 0 y la caja "nada."
+tl.to("#a2t", { autoAlpha: 0, y: -40, filter: "blur(12px)", duration: 3 * F }, B.a_pero - 3 * F);
+shake("#camA", B.a_pero, 14, 5);
+tl.to(".tile", { autoAlpha: 0.16, y: "+=40", filter: "grayscale(1) blur(2px)", duration: 0.25, ease: "power2.out", stagger: 0.01 }, B.a_pero);
+T("#a3t", ["pero no vendo"], "A", { min: B.a_pero - 2 * F });
+keybox("#aKb", B.a_nada, 600);
+tl.fromTo("#aZero", { autoAlpha: 0, scale: 1.4, filter: "blur(12px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 5 * F, ease: "power3.out", immediateRender: false }, B.a_nada + 2 * F);
+tl.to("#camA", { scale: 1.05, duration: B.cut1 - B.a_pero, ease: "power2.in" }, B.a_pero);
+hide("#sA", B.cut1);
+
+// ============ PERSONA cut1 -> mg1 (mira a cámara) ============
+show("#shade", B.cut1);
+card("Mientras estoy en la|*universidad*", S("B1"), S("B2") - 0.04);
+card("yo utilizo ~Codex~", S("B2"), at("B2", "dentro"));
+card("dentro de la|*máquina virtual*", at("B2", "dentro"), at("B2", "y"));
+card("y adelanto|bastantes cosas", at("B2", "y"), EN("B2") + 0.12);
+card("Hoy estuve|investigando", S("B3a"), at("B3b", "sobre"));
+card("sobre embudos|~B2B~", at("B3b", "sobre"), B.mg1);
+tl.to("#base", { filter: "blur(6px)", duration: 4 * F, ease: "power3.in" }, B.mg1 - 4 * F);
+hide(["#shade", "#base"], B.mg1);
+
+// ============ R. dos repositorios ============
+enterMG("#sR", "#camR", B.mg1, B.f_in);
+T("#rT", ["encontré estos", "~dos~ repositorios"], "B4", { min: B.mg1 });
+gsap.set(["#rC1", "#rC2"], { autoAlpha: 0 }); gsap.set("#rH", { scaleX: 0 }); gsap.set(".card .ck", { autoAlpha: 0 }); gsap.set("#rTwo", { autoAlpha: 0 });
+tl.fromTo("#rTwo", { autoAlpha: 0, scale: 1.6, filter: "blur(20px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, B.r_dos - 2 * F);
+tl.fromTo("#rC1", { autoAlpha: 0, x: 700, filter: "blur(20px)" }, { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, B.r_dos);
+tl.fromTo("#rC2", { autoAlpha: 0, x: -700, filter: "blur(20px)" }, { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, B.r_dos + 0.14);
+tl.to("#rH", { scaleX: 1, duration: 0.4, ease: "power3.out" }, B.r_buenos);
+tl.fromTo(".card .ck", { autoAlpha: 0, scale: 2.2, rotation: -30 }, { autoAlpha: 1, scale: 1, rotation: 0, duration: 4 * F, ease: "power4.in", stagger: 0.1, immediateRender: false }, B.r_buenos);
+tl.fromTo("#rBg", { y: 0 }, { y: -80, duration: B.f_in - B.mg1, ease: "none", immediateRender: false }, B.mg1);
+// empuje hacia la tarjeta 1 -> embudo
+tl.to("#camR", { scale: 2.4, x: 600, y: 300, filter: "blur(10px)", duration: 0.32, ease: "power4.in", transformOrigin: "300px 885px" }, B.f_in - 0.32);
+hide("#sR", B.f_in);
+
+// ============ F. embudo de Marketing Skills ============
+show("#sF", B.f_in);
+tl.fromTo("#camF", { scale: 1.5, filter: "blur(20px)" }, { scale: 1.03, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, B.f_in);
+tl.to("#camF", { scale: 1.0, duration: B.v_in - B.f_in - 0.5, ease: "sine.inOut" }, B.f_in + 0.5);
+inBlur("#fSub", B.f_in + 0.05); inBlur("#fT", B.f_in + 0.08);
+const FB = [["cliente", "magnifying-glass", 940], ["información", "database", 860], ["copy", "pen-nib", 780], ["CRO", "chart-line-up", 700], ["correos", "envelope-simple", 620]];
+$("#fBars").innerHTML = FB.map(([tx, ic, w], i) => `<div class="bar shadow" id="fb${i}" style="left:${(1080 - w) / 2}px;top:${470 + i * 150}px;width:${w}px"><div class="ib"><div class="ico" style="${ICON(ic)}"></div></div><div class="tt">${tx}</div></div>`).join("");
+gsap.set(".bar", { autoAlpha: 0 }); gsap.set("#fDrop", { autoAlpha: 0 });
+FB.forEach((_, i) => tl.fromTo("#fb" + i, { autoAlpha: 0, x: i % 2 ? -500 : 500, filter: "blur(18px)" }, { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, B.f_items[i] - 0.10));
+// se vuelve embudo: las barras se estrechan en cuña y cae la gota dorada
+FB.forEach((_, i) => tl.to("#fb" + i, { scaleX: 1 - i * 0.07, duration: 0.35, ease: "power3.inOut" }, B.f_emb - 0.25 + i * 0.03));
+T("#fT2", ["un ~embudo~ de"], "C2b", { min: B.f_emb - 0.35 });
+tl.fromTo("#fDrop", { autoAlpha: 1, y: 0, scale: 0.4 }, { y: 760, scale: 1, duration: 0.5, ease: "power2.in", immediateRender: false }, B.f_emb - 0.15);
+tl.to("#fDrop", { autoAlpha: 0, duration: 2 * F }, B.f_emb + 0.35);
+keybox("#fKb", B.f_ven, 560);
+FB.forEach((_, i) => tl.to("#fb" + i + " .ib", { backgroundColor: "#A88F57", duration: 2 * F }, B.f_emb - 0.05 + i * 0.06));
+
+// ============ V. lo más importante: VENTAS ============
+whip("#camF", "#sF", "#sV", "#camV", B.v_in, 0, 900, B.g_in);
+T("#vT", ["Porque lo ~más~", "*importante* de una", "empresa es"], "C3a", { min: B.v_in });
+gsap.set("#vH1", { scaleX: 0 });
+const vl = $("#vLine"), VL = vl.getTotalLength(); gsap.set(vl, { strokeDasharray: VL, strokeDashoffset: VL, autoAlpha: 0.0 });
+tl.to("#vT", { y: -130, scale: 0.86, duration: 0.25, ease: "power3.out" }, B.v_ven - 0.30);
+keybox("#vKb", B.v_ven, 900);
+shake("#camV", B.v_ven + 2 * F, 16, 6);
+burst("#vPrt", 540, 905, 22, B.v_ven + F, 620);
+tl.to("#vH1", { scaleX: 1, duration: 0.5, ease: "power3.out" }, B.v_ven + 0.1);
+tl.set(vl, { autoAlpha: 0.9 }, B.v_ven + 0.1);
+tl.to(vl, { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut" }, B.v_ven + 0.1);
+tl.to("#vBg", { y: -60, duration: B.g_in - B.v_in, ease: "none" }, B.v_in);
+
+// ============ G. Agency Agents ============
+whip("#camV", "#sV", "#sG", "#camG", B.g_in, 1000, 0, B.k_in);
+T("#gT", ["Y el otro:"], "D1", { min: B.g_in });
+inBlur("#gSub", B.g_in + 0.1);
+tl.to("#gT", { autoAlpha: 0, y: -40, filter: "blur(10px)", duration: 3 * F }, B.g_name - 5 * F);
+const gName = document.createElement("div"); gName.className = "ttl dk f100"; gName.id = "gName"; gName.style.top = "280px"; gName.innerHTML = '<span class="ln">Agency <span class="s">Agents</span></span>'; $("#camG").appendChild(gName);
+tl.fromTo("#gName", { autoAlpha: 0, scale: 1.3, filter: "blur(16px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 6 * F, ease: "power3.out", immediateRender: false }, B.g_name - 2 * F);
+gsap.set("#gName", { autoAlpha: 0 });
+$("#gGrid").innerHTML = Array.from({ length: 9 }, (_, i) => `<div class="ag" id="ga${i}" style="left:${150 + (i % 3) * 270}px;top:${540 + Math.floor(i / 3) * 230}px"><div class="ico" style="${ICON("robot")}"></div><i></i></div>`).join("");
+gsap.set(".ag", { autoAlpha: 0 }); gsap.set(".ag i", { scaleX: 0 });
+for (let i = 0; i < 9; i++) tl.fromTo("#ga" + i, { autoAlpha: 0, scale: 0.2, rotation: R(-40, 40), filter: "blur(10px)" }, { autoAlpha: 1, scale: 1, rotation: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, B.g_tiles - 0.05 + ((i % 3) + Math.floor(i / 3)) * 0.06);
+T("#gT2", ["capacitados", "para ~vender~"], "D2", { min: B.g_cap - 0.2 });
+for (let i = 0; i < 9; i++) tl.to(`#ga${i} i`, { scaleX: 1, duration: 0.5, ease: "power2.out" }, B.g_cap + i * 0.05);
+// B2B: la cuadrícula sube y se encoge; B2B gigante
+tl.to(["#gGrid", "#gT2", "#gName", "#gSub"], { autoAlpha: 0, y: -200, filter: "blur(16px)", duration: 5 * F, ease: "power3.in" }, B.g_b2b - 5 * F);
+T("#gSv", ["servicio"], "D3", { min: B.g_b2b - 0.1 });
+gsap.set("#gB2b", { autoAlpha: 0 });
+tl.fromTo("#gB2b", { autoAlpha: 0, scale: 2.4, filter: "blur(24px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, B.g_b2b + 0.12);
+shake("#camG", B.g_b2b + 0.2, 10, 4);
+T("#gT3", ["lo que nosotros", "estamos ~vendiendo~"], "D3", { min: B.g_b2b + 0.3 });
+
+// ============ K. prompts -> carné del empleado de ventas (La Nómina Viva) ============
+whip("#camG", "#sG", "#sK", "#camK", B.k_in, 0, -900, B.pl);
+T("#kT", ["le metí varios", "*prompts*"], "D4a", { min: B.k_in });
+gsap.set("#kDoc", { autoAlpha: 0 });
+tl.fromTo("#kDoc", { autoAlpha: 0, y: 200, filter: "blur(16px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, B.k_in + 0.1);
+const KL = [[600, 0], [740, 0], [420, 1], [680, 0], [520, 0], [760, 1], [380, 0]];
+$("#kLines").innerHTML = KL.map(([w, g], i) => `<i class="ln2${g ? " g" : ""}" id="kl${i}" style="top:${160 + i * 64}px;width:${w}px"></i>`).join("");
+gsap.set(".ln2", { scaleX: 0 });
+const kt0 = B.k_in + 0.3, kdt = (B.k_card - 0.3 - kt0) / KL.length;
+KL.forEach((_, i) => tl.to("#kl" + i, { scaleX: 1, duration: kdt * 0.9, ease: "none" }, kt0 + i * kdt));
+KL.forEach((x, i) => tl.set("#kCur", { left: 60 + x[0] + 10, top: 143 + i * 64 }, kt0 + (i + 0.9) * kdt));
+gsap.set("#kCur", { left: 70, top: 143 });
+// carné
+tl.to("#kT", { autoAlpha: 0, y: -40, filter: "blur(10px)", duration: 4 * F }, B.k_card - 4 * F);
+tl.to("#kDoc", { y: -900, rotation: -6, filter: "blur(18px)", duration: 0.3, ease: "power3.in" }, B.k_card - 0.2);
+hide("#kDoc", B.k_card + 0.12);
+T("#kT2", ["que actúe", "como si fuera ~yo~"], "D4b", { min: B.k_card });
+gsap.set(["#kCard", "#kStamp"], { autoAlpha: 0 }); gsap.set("#kCard .st i", { scaleX: 0 });
+tl.fromTo("#kCard", { autoAlpha: 0, rotationY: -80, scale: 0.8, filter: "blur(10px)", transformPerspective: 1600 }, { autoAlpha: 1, rotationY: 0, scale: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out", immediateRender: false }, B.k_card + 0.05);
+tl.to("#kCard .st i", { scaleX: 1, duration: 0.9, ease: "power2.inOut" }, B.k_card + 0.5);
+tl.fromTo("#kStamp", { autoAlpha: 0, scale: 2.4, rotation: -26 }, { autoAlpha: 1, scale: 1, rotation: -8, duration: 4 * F, ease: "power4.in", immediateRender: false }, B.k_yo - 4 * F);
+shake("#camK", B.k_yo, 14, 5);
+// orquestador: el carné se va arriba y salen sus agentes
+tl.to("#kT2", { autoAlpha: 0, y: -40, filter: "blur(10px)", duration: 4 * F }, B.o_in - 2 * F);
+tl.to("#kStamp", { autoAlpha: 0, duration: 3 * F }, B.o_in - 2 * F);
+tl.to("#kCard", { scale: 0.5, y: -330, duration: 0.6, ease: "expo.inOut" }, B.o_in - 0.1);
+T("#kT3", ["y sus ~agentes~"], "D5", { min: B.o_ag - 0.6 });
+const KN = document.createElement("div"); KN.className = "ttl dk f90"; KN.id = "kOrq"; KN.style.top = "250px"; KN.innerHTML = '<span class="ln">va a trabajar como</span>'; $("#camK").appendChild(KN);
+gsap.set("#kOrq", { autoAlpha: 0 }); inBlur("#kOrq", B.o_in + 0.1);
+keybox("#kKb", B.o_orq, 800);
+tree("#kSvg", "#kNodes", 0, 540, 1070, 1130, ["magnifying-glass", "chats", "pen-nib", "envelope-simple"], B.o_orq + 0.25);
+tl.to("#kNodes", { y: 0, duration: 0.01 }, B.o_orq);
+tl.to(["#kWrap", "#kT3", "#kOrq"], { autoAlpha: 0, y: -120, filter: "blur(16px)", duration: 5 * F, ease: "power3.in" }, B.t_in - 5 * F);
+
+// ============ T. entrenamiento ============
+hide("#sK", B.t_in); show("#sT", B.t_in);
+tl.fromTo("#camT", { y: 900, filter: "blur(24px)" }, { y: 0, filter: "blur(0px)", duration: 9 * F, ease: "expo.out", immediateRender: false }, B.t_in);
+gsap.set("#tP2", { autoAlpha: 0 });
+T("#tT", ["Ahorita lo estoy", "~entrenando~"], "E1", { min: B.t_in });
+gsap.set("#tFill", { scaleX: 0 }); gsap.set(["#tTrack", "#tTick"], { autoAlpha: 0 });
+inBlur(["#tTrack", "#tTick"], B.t_in + 0.25);
+tl.to("#tFill", { scaleX: 0.36, duration: B.t2_in - B.t_in - 0.5, ease: "power1.inOut" }, B.t_in + 0.4);
+for (let i = 0; i < 10; i++) tl.to("#tFill", { opacity: i % 2 ? 1 : 0.7, duration: 0.15 }, B.t_ent + i * 0.25);
+T("#tT2", ["para que haga", "un buen *prompt*"], "E2", { min: S("E2") - 0.1 });
+// panel 2: el árbol del orquestador
+tl.to("#tP1", { y: -900, filter: "blur(24px)", duration: 5 * F, ease: "power3.in" }, B.t2_in - 5 * F);
+hide("#tP1", B.t2_in); show("#tP2", B.t2_in);
+tl.fromTo("#tP2", { y: 900, filter: "blur(26px)" }, { y: 0, filter: "blur(0px)", duration: 10 * F, ease: "expo.out", immediateRender: false }, B.t2_in);
+T("#tT3", ["y me cree un buen", "*subagente,*"], "E3", { min: B.t2_in });
+keybox("#tKb", B.t_orq, 860);
+const TN = document.createElement("div"); TN.className = "node o"; TN.id = "tRoot"; TN.style.cssText = "left:455px;top:700px"; TN.innerHTML = `<div class="ico" style="${ICON("robot")}"></div>`; $("#tNodes").appendChild(TN);
+gsap.set("#tRoot", { autoAlpha: 0 });
+tl.fromTo("#tRoot", { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)", immediateRender: false }, B.t_orq + 0.15);
+tree("#tSvg", "#tNodes", 0, 540, 880, 990, ["magnifying-glass", "chats", "pen-nib", "envelope-simple"], B.t_orq + 0.6, 0.1);
+T("#tT4", ["con unos buenos", "~subagentes~"], "E3", { min: at("E3", "con") - 0.1 });
+tl.to("#camT", { scale: 1.06, duration: B.pl - B.t2_in, ease: "sine.inOut" }, B.t2_in);
+tl.to("#camT", { scale: 1.7, filter: "blur(6px)", duration: 0.5, ease: "power4.in", transformOrigin: "540px 785px" }, B.pl - 0.5);
+tl.to("#tT3", { autoAlpha: 0.0, duration: 0.01 }, B.pl);
+
+// ============ placa final ============
+destello(B.pl, ["#sT"]);
+show("#pl", B.pl);
+$("#plrow").innerHTML = Array.from({ length: 42 }, (_, i) => `<b style="left:${(i % 14) * 41}px;top:${Math.floor(i / 14) * 41}px;${i < DIA - 1 ? "background:#2A2926;border-color:#2A2926" : i === DIA - 1 ? "background:#C8B07A;border-color:#A88F57" : ""}"></b>`).join("");
+document.getElementById("pldia").textContent = "DÍA " + DIA; document.getElementById("plde").textContent = "de " + DE;
+gsap.set(["#pldia", "#plde", "#pltag", "#plrow"], { autoAlpha: 0 }); gsap.set("#plhair", { scaleX: 0 });
+tl.fromTo("#pldia", { autoAlpha: 0, y: 30, filter: "blur(14px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 8 * F, ease: "power2.out", immediateRender: false }, B.pl + 0.12);
+tl.fromTo("#plde", { autoAlpha: 0, scale: 0.6, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 9 * F, ease: "power2.out", immediateRender: false }, B.pl + 0.32);
+tl.to("#plhair", { scaleX: 1, duration: 0.45, ease: "sine.inOut" }, B.pl + 0.5);
+inBlur("#pltag", B.pl + 0.65, 6 * F, 10);
+inBlur("#plrow", B.pl + 0.8, 6 * F, 8);
+tl.fromTo("#pl", { scale: 1 }, { scale: 1.03, duration: D.total - B.pl, ease: "sine.out", immediateRender: false }, B.pl);
+
+const NG = Math.ceil(D.total / (2 * F));
+for (let i = 0; i < NG; i++) tl.set("#grain", { x: ((i * 73) % 180) - 90, y: ((i * 131) % 180) - 90 }, i * 2 * F);
+tl.set({}, {}, D.total);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

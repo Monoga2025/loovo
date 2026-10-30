@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, height=1920">
+<title>Corte 2 full motion</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-600.ttf") format("truetype"); }
+@font-face { font-family: "Playfair Display"; font-weight: 700; font-style: italic; src: url("assets/fonts/playfair-display-latin-700-italic.ttf") format("truetype"); }
+* { box-sizing: border-box; margin: 0; padding: 0; border-radius: 0 !important; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #F6F4EF; font-family: "Montserrat", sans-serif; font-weight: 600; }
+.scene { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; visibility: hidden; }
+.pastel { background: #F6F4EF; }
+.carbon { background: #2A2926; }
+.dots { position: absolute; left: -120px; top: -120px; width: 1320px; height: 2160px;
+  background: radial-gradient(circle at 12px 12px, rgba(170,165,156,.42) 0 1.1px, transparent 1.6px) 0 0/24px 24px; }
+.carbon .dots { background: radial-gradient(circle at 12px 12px, rgba(251,248,241,.13) 0 1.1px, transparent 1.6px) 0 0/24px 24px; }
+.cam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.abs { position: absolute; }
+.w { display: inline-block; white-space: nowrap; }
+.title { position: absolute; left: 0; width: 1080px; text-align: center; color: #2A2926; font-size: 100px; line-height: 1.12; white-space: nowrap; }
+.carbon .title { color: #FBF8F1; }
+.serif { font-family: "Playfair Display", serif; font-style: italic; font-weight: 700; }
+.lbl { position: absolute; font-family: "Playfair Display", serif; font-style: italic; font-weight: 700; font-size: 80px; color: #A88F57; white-space: nowrap; }
+.carbon .lbl { color: #E6D6AE; }
+/* caja de palabra clave: carbón + cursor dorado (crema sobre carbón) */
+.kbox { position: absolute; height: 168px; white-space: nowrap; }
+.kbox .bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #2A2926; box-shadow: 0 34px 70px -24px rgba(90,74,44,.34); }
+.kbox .tx { position: relative; padding: 0 44px; line-height: 168px; font-family: "Playfair Display", serif; font-style: italic; font-weight: 700; font-size: 132px; color: #E6D6AE; }
+.kbox .cov { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #2A2926; }
+.kbox .cw { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.kbox .cur { position: absolute; top: 18px; left: -12px; width: 12px; height: 132px; background: #C8B07A; }
+.kbox.light .bg, .kbox.light .cov { background: #FBF8F1; }
+.kbox.light .tx { color: #2A2926; }
+.kbox .strike { position: absolute; left: 30px; top: 86px; height: 10px; width: calc(100% - 60px); background: #C8B07A; }
+.tile { position: absolute; background: #2A2926; box-shadow: 0 34px 70px -24px rgba(90,74,44,.40); }
+.tile.light { background: #FBF8F1; box-shadow: 0 30px 60px -24px rgba(90,74,44,.30); }
+.ico { position: absolute; left: 22%; top: 22%; width: 56%; height: 56%; background: #E6D6AE;
+  -webkit-mask: var(--i) center/contain no-repeat; mask: var(--i) center/contain no-repeat; }
+.tile.light .ico { background: #2A2926; }
+.goldico { background: #C8B07A; }
+.frame { position: absolute; background: #141312; box-shadow: 0 40px 80px -30px rgba(20,16,10,.55); }
+.frame .bar { position: absolute; left: 0; top: 0; width: 100%; height: 34px; background: #3A3834; }
+.frame .bar i { position: absolute; top: 12px; width: 10px; height: 10px; background: #8C887F; }
+.frame video { position: absolute; }
+svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.dot { position: absolute; width: 34px; height: 34px; background: #C8B07A; border-radius: 50% !important; box-shadow: 0 0 24px rgba(200,176,122,.8); }
+.chip { position: absolute; width: 70px; height: 70px; border: 5px solid #E6D6AE; background: rgba(230,214,174,.10); }
+#caps { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; z-index: 50; pointer-events: none; }
+.cap { position: absolute; left: 70px; width: 890px; top: 1300px; text-align: center; font-size: 78px; line-height: 1.12; color: #2A2926; visibility: hidden;
+  text-shadow: 0 2px 10px rgba(246,244,239,.9); }
+.cap.dk { color: #FBF8F1; text-shadow: 0 2px 6px rgba(20,16,10,.5), 0 6px 26px rgba(20,16,10,.38); }
+.cap b { font-weight: 600; color: #A88F57; }
+.cap.dk b { color: #E6D6AE; }
+#grain { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; z-index: 60; background: url("assets/grano.png"); mix-blend-mode: multiply; opacity: .05; pointer-events: none; }
+#flash { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; z-index: 70; background: #FFFBF2; opacity: 0; pointer-events: none; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1080" data-height="1920">
+
+<!-- Inserts reales de pantalla (sin claves ni datos de terceros): hijos directos de la raíz -->
+<video id="v_head" class="clip" src="assets/ins_head.mp4" data-start="6.10" data-duration="2.52" data-track-index="2" muted playsinline style="position:absolute;left:-2000px;top:0;width:980px;height:140px;z-index:20"></video>
+<video id="v_side" class="clip" src="assets/ins_side.mp4" data-start="12.40" data-duration="4.80" data-track-index="3" muted playsinline style="position:absolute;left:-2000px;top:0;width:624px;height:432px;z-index:20"></video>
+<video id="v_sub" class="clip" src="assets/ins_sub.mp4" data-start="26.30" data-duration="2.15" data-track-index="4" muted playsinline style="position:absolute;left:-2000px;top:0;width:900px;height:64px;z-index:20"></video>
+<video id="v_tok" class="clip" src="assets/ins_tok.mp4" data-start="26.30" data-duration="2.15" data-track-index="5" muted playsinline style="position:absolute;left:-2000px;top:0;width:430px;height:82px;z-index:20"></video>
+
+<!-- S1 gancho + S2 flujo n8n -->
+<div id="s1" class="scene pastel"><div class="dots"></div><div class="cam" id="c1">
+  <div id="hook" class="abs" style="left:0;top:560px;width:1080px;height:420px">
+    <div class="title" style="top:0"><span class="w" id="h1">¿Qué</span> <span class="w" id="h2">pasa</span> <span class="w" id="h3">con</span></div>
+    <div class="kbox" id="kn8n" style="left:540px;top:150px"><div class="bg"></div><div class="tx" style="font-family:Montserrat;font-style:normal;font-weight:600;font-size:140px;padding:0 70px">n8n?</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  </div>
+  <svg width="1080" height="1920" id="sv2">
+    <line id="flowline" x1="200" y1="935" x2="840" y2="935" stroke="#C8B07A" stroke-width="8" stroke-dasharray="640" stroke-dashoffset="640"/>
+    <path id="looparc" d="M840,850 C840,520 200,520 200,850" fill="none" stroke="#C8B07A" stroke-width="8" stroke-dasharray="1150" stroke-dashoffset="1150"/>
+    <path id="loophead" d="M180,820 L200,856 L222,818" fill="none" stroke="#C8B07A" stroke-width="8" opacity="0"/>
+  </svg>
+  <div class="tile" id="n1" style="left:125px;top:860px;width:150px;height:150px"><div class="ico" style="--i:url(assets/ico/play-fill.svg)"></div></div>
+  <div class="tile light" id="n2" style="left:338px;top:860px;width:150px;height:150px"><div class="ico" style="--i:url(assets/ico/cpu-fill.svg)"></div></div>
+  <div class="tile light" id="n3" style="left:552px;top:860px;width:150px;height:150px"><div class="ico" style="--i:url(assets/ico/database-fill.svg)"></div></div>
+  <div class="tile light" id="n4" style="left:765px;top:860px;width:150px;height:150px"><div class="ico" style="--i:url(assets/ico/stop-fill.svg)"></div></div>
+  <div class="dot" id="dot2" style="left:183px;top:918px"></div>
+  <div class="lbl" id="l_ini" style="left:110px;top:1040px">inicia</div>
+  <div class="lbl" id="l_ter" style="left:690px;top:1040px">termina</div>
+  <div class="tile" id="noloop" style="left:450px;top:540px;width:180px;height:180px"><div class="ico goldico" style="--i:url(assets/ico/prohibit-fill.svg)"></div></div>
+  <div class="kbox light" id="kloop" style="left:540px;top:330px"><div class="bg"></div><div class="tx">loop</div><div class="cov"></div><div class="cw"><div class="cur"></div></div><div class="strike" id="stloop"></div></div>
+</div></div>
+
+<!-- S3 Claude Code (carbón) -->
+<div id="s3" class="scene carbon"><div class="dots"></div><div class="cam" id="c3">
+  <div class="title" id="t_cc" style="top:520px;font-size:124px"><span class="w" id="cc1">Claude</span> <span class="w" id="cc2">Code</span></div>
+  <div class="abs" id="ccline" style="left:250px;top:680px;width:580px;height:10px;background:#C8B07A"></div>
+</div>
+  <div class="frame" id="f_head" style="left:40px;top:800px;width:1000px;height:204px"><div class="bar"><i style="left:14px"></i><i style="left:32px"></i><i style="left:50px"></i></div></div>
+</div>
+
+<!-- S4 agentes con subagentes -->
+<div id="s4" class="scene pastel"><div class="dots"></div><div class="cam" id="c4">
+  <div class="title" style="top:320px;font-size:96px"><span class="w" id="q1">¿Qué</span> <span class="w" id="q2">tiene</span></div>
+  <div class="title" style="top:430px;font-size:96px"><span class="w" id="q3">Claude</span> <span class="w" id="q4">Code?</span></div>
+  <svg width="1080" height="1920">
+    <line class="l4" x1="540" y1="840" x2="250" y2="1000" stroke="#C8B07A" stroke-width="7" stroke-dasharray="340" stroke-dashoffset="340"/>
+    <line class="l4" x1="540" y1="840" x2="540" y2="1000" stroke="#C8B07A" stroke-width="7" stroke-dasharray="340" stroke-dashoffset="340"/>
+    <line class="l4" x1="540" y1="840" x2="830" y2="1000" stroke="#C8B07A" stroke-width="7" stroke-dasharray="340" stroke-dashoffset="340"/>
+  </svg>
+  <div class="tile" id="ag" style="left:430px;top:620px;width:220px;height:220px"><div class="ico" style="--i:url(assets/ico/robot-fill.svg)"></div></div>
+  <div class="tile light sa4" style="left:180px;top:1000px;width:140px;height:140px"><div class="ico" style="--i:url(assets/ico/robot-fill.svg)"></div></div>
+  <div class="tile light sa4" style="left:470px;top:1000px;width:140px;height:140px"><div class="ico" style="--i:url(assets/ico/robot-fill.svg)"></div></div>
+  <div class="tile light sa4" style="left:760px;top:1000px;width:140px;height:140px"><div class="ico" style="--i:url(assets/ico/robot-fill.svg)"></div></div>
+</div></div>
+
+<!-- S5 problema (carbón) -->
+<div id="s5" class="scene carbon"><div class="dots"></div><div class="cam" id="c5">
+  <div class="kbox light" id="kprob" style="left:540px;top:300px"><div class="bg"></div><div class="tx">problemas</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <div class="kbox light" id="kctx" style="left:540px;top:300px"><div class="bg"></div><div class="tx">contexto</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <svg width="1080" height="1920">
+    <line class="l5" x1="540" y1="660" x2="300" y2="760" stroke="#C8B07A" stroke-width="6" stroke-dasharray="14 14"/>
+    <line class="l5" x1="540" y1="660" x2="540" y2="760" stroke="#C8B07A" stroke-width="6" stroke-dasharray="14 14"/>
+    <line class="l5" x1="540" y1="660" x2="780" y2="760" stroke="#C8B07A" stroke-width="6" stroke-dasharray="14 14"/>
+  </svg>
+  <div class="abs" id="qbox" style="left:450px;top:480px;width:180px;height:180px;border:6px dashed #C8B07A"><div class="ico goldico" style="--i:url(assets/ico/question-bold.svg)"></div></div>
+  <div class="lbl" id="l_orq" style="left:0;width:1080px;text-align:center;top:664px;font-size:72px">orquestador principal</div>
+</div>
+  <div class="frame" id="f_side" style="left:228px;top:760px;width:624px;height:466px"><div class="bar"><i style="left:14px"></i><i style="left:32px"></i><i style="left:50px"></i></div></div>
+</div>
+
+<!-- S6 ¿Qué se hace? -> solucionar -->
+<div id="s6" class="scene pastel"><div class="dots"></div><div class="cam" id="c6">
+  <div class="title" style="top:560px"><span class="w" id="p1">¿Qué</span> <span class="w" id="p2">se</span> <span class="w" id="p3">hace</span></div>
+  <div class="title" style="top:680px"><span class="w" id="p4">en</span> <span class="w" id="p5">ese</span> <span class="w" id="p6">caso?</span></div>
+  <div class="title" style="top:880px;font-size:64px;color:#8C887F"><span class="w" id="p7">y es lo que acabo de</span></div>
+  <div class="kbox" id="ksol" style="left:540px;top:990px"><div class="bg"></div><div class="tx">solucionar</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+</div></div>
+
+<!-- S7-S10 orquestador y subagentes -->
+<div id="s7" class="scene pastel"><div class="dots"></div><div class="cam" id="c7">
+  <svg width="1080" height="1920">
+    <line class="l7" id="l7a" x1="540" y1="800" x2="230" y2="1000" stroke="#C8B07A" stroke-width="7" stroke-dasharray="370" stroke-dashoffset="370"/>
+    <line class="l7" id="l7b" x1="540" y1="800" x2="540" y2="1000" stroke="#C8B07A" stroke-width="7" stroke-dasharray="370" stroke-dashoffset="370"/>
+    <line class="l7" id="l7c" x1="540" y1="800" x2="850" y2="1000" stroke="#C8B07A" stroke-width="7" stroke-dasharray="370" stroke-dashoffset="370"/>
+  </svg>
+  <div class="lbl" id="l_ap" style="left:0;width:1080px;text-align:center;top:440px">agente principal</div>
+  <div class="abs" id="ring" style="left:400px;top:540px;width:280px;height:280px;border:6px solid #C8B07A"></div>
+  <div class="tile" id="orq" style="left:420px;top:560px;width:240px;height:240px"><div class="ico" style="--i:url(assets/ico/robot-fill.svg)"></div></div>
+  <div class="tile light" id="chk" style="left:610px;top:520px;width:96px;height:96px;background:#C8B07A"><div class="ico" style="background:#2A2926;--i:url(assets/ico/check-bold.svg)"></div></div>
+  <div class="tile light sa7" id="sa1" style="left:150px;top:1000px;width:160px;height:160px"><div class="ico" style="--i:url(assets/ico/robot-fill.svg)"></div></div>
+  <div class="tile light sa7" id="sa2" style="left:460px;top:1000px;width:160px;height:160px"><div class="ico" style="--i:url(assets/ico/robot-fill.svg)"></div></div>
+  <div class="tile light sa7" id="sa3" style="left:770px;top:1000px;width:160px;height:160px"><div class="ico" style="--i:url(assets/ico/robot-fill.svg)"></div></div>
+  <div class="dot pd" id="pd1" style="left:523px;top:783px"></div>
+  <div class="dot pd" id="pd2" style="left:523px;top:783px"></div>
+  <div class="dot pd" id="pd3" style="left:523px;top:783px"></div>
+  <div class="lbl" id="l_sub" style="left:0;width:1080px;text-align:center;top:1170px">subagentes</div>
+  <div class="abs" id="ul_sub" style="left:330px;top:1272px;width:420px;height:8px;background:#C8B07A"></div>
+  <div class="tile light" id="doc" style="left:180px;top:1030px;width:100px;height:100px"><div class="ico" style="--i:url(assets/ico/file-text-fill.svg)"></div></div>
+  <div class="tile" id="fold" style="left:300px;top:1180px;width:130px;height:130px"><div class="ico" style="--i:url(assets/ico/folder-simple-fill.svg)"></div></div>
+  <div class="tile light fl" style="left:330px;top:1200px;width:84px;height:84px"><div class="ico" style="--i:url(assets/ico/file-text-fill.svg)"></div></div>
+  <div class="tile light fl" style="left:330px;top:1200px;width:84px;height:84px"><div class="ico" style="--i:url(assets/ico/file-text-fill.svg)"></div></div>
+  <div class="tile light fl" style="left:330px;top:1200px;width:84px;height:84px"><div class="ico" style="--i:url(assets/ico/file-text-fill.svg)"></div></div>
+  <div class="tile" id="mag" style="left:480px;top:620px;width:120px;height:120px"><div class="ico" style="--i:url(assets/ico/magnifying-glass-fill.svg)"></div></div>
+  <div class="abs" id="stop" style="left:250px;top:1080px;width:230px;height:230px"><div class="ico goldico" style="left:0;top:0;width:100%;height:100%;--i:url(assets/ico/prohibit-fill.svg)"></div></div>
+  <div class="lbl" id="l_arch" style="left:610px;top:1190px">archivos</div>
+  <div class="abs" id="st_arch" style="left:606px;top:1240px;width:330px;height:9px;background:#C8B07A"></div>
+</div>
+  <div class="frame" id="f_sub" style="left:60px;top:296px;width:960px;height:110px"><div class="bar"><i style="left:14px"></i><i style="left:32px"></i><i style="left:50px"></i></div></div>
+  <div class="frame" id="f_tok" style="left:560px;top:416px;width:460px;height:120px"><div class="bar"><i style="left:14px"></i><i style="left:32px"></i><i style="left:50px"></i></div></div>
+  <div class="kbox" id="ktxt" style="left:540px;top:300px"><div class="bg"></div><div class="tx">texto</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+</div>
+
+<!-- S11 tokens (carbón) -->
+<div id="s11" class="scene carbon"><div class="dots"></div><div class="cam" id="c11">
+  <div id="chips"></div>
+  <div class="kbox light" id="ktok" style="left:540px;top:330px"><div class="bg"></div><div class="tx">tokens</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+  <div class="lbl" id="l_ah" style="left:0;width:1080px;text-align:center;top:520px">ahorra</div>
+</div></div>
+
+<!-- S12 flujo más rápido -->
+<div id="s12" class="scene pastel"><div class="dots"></div><div class="cam" id="c12">
+  <svg width="1080" height="1920"><circle id="orb" cx="540" cy="930" r="290" fill="none" stroke="#C8B07A" stroke-width="8" stroke-dasharray="1823" stroke-dashoffset="1823" transform="rotate(-90 540 930)"/></svg>
+  <div class="tile" style="left:475px;top:575px;width:130px;height:130px" id="m1"><div class="ico" style="--i:url(assets/ico/play-fill.svg)"></div></div>
+  <div class="tile light" style="left:765px;top:865px;width:130px;height:130px" id="m2"><div class="ico" style="--i:url(assets/ico/cpu-fill.svg)"></div></div>
+  <div class="tile light" style="left:475px;top:1155px;width:130px;height:130px" id="m3"><div class="ico" style="--i:url(assets/ico/database-fill.svg)"></div></div>
+  <div class="tile light" style="left:185px;top:865px;width:130px;height:130px" id="m4"><div class="ico" style="--i:url(assets/ico/arrows-clockwise-bold.svg)"></div></div>
+  <div class="abs" id="orbit" style="left:540px;top:930px;width:0;height:0"><div class="dot" style="left:-17px;top:-307px"></div><div class="dot" style="left:-17px;top:273px;opacity:.55"></div></div>
+  <div class="abs" id="bolt" style="left:450px;top:840px;width:180px;height:180px"><div class="ico goldico" style="left:0;top:0;width:100%;height:100%;--i:url(assets/ico/lightning-fill.svg)"></div></div>
+  <div class="kbox" id="krap" style="left:540px;top:330px"><div class="bg"></div><div class="tx">más rápido</div><div class="cov"></div><div class="cw"><div class="cur"></div></div></div>
+</div></div>
+
+<div id="caps"></div>
+<div id="grain"></div>
+<div id="flash"></div>
+</div>
+
+<script>
+const WORDS = __WORDS__;
+const DUR = __DUR__;
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+window.__timelines["main"] = tl;
+const F = 1 / 30;
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+// ---------- escenas (corte duro entre ideas) ----------
+const SC = [["#s1", 0, 5.95], ["#s3", 5.95, 8.62], ["#s4", 8.62, 11.45], ["#s5", 11.45, 17.20],
+            ["#s6", 17.20, 20.15], ["#s7", 20.15, 36.95], ["#s11", 36.95, 38.72], ["#s12", 38.72, DUR + 0.1]];
+gsap.set(".scene", { visibility: "hidden" });
+gsap.set("#s1", { visibility: "visible" });
+SC.forEach(([id, a, b]) => { if (a > 0) tl.set(id, { visibility: "visible" }, a); tl.set(id, { visibility: "hidden" }, b); });
+$$(".cam").forEach((c) => gsap.set(c, { transformPerspective: 1600, transformOrigin: "50% 50%" }));
+$$(".dots").forEach((d) => gsap.set(d, { x: 0, y: 0 }));
+SC.forEach(([id, a, b]) => tl.fromTo(id + " .dots", { x: 0, y: 0 }, { x: -60, y: -40, duration: Math.min(b, DUR) - a, ease: "none", immediateRender: false }, a));
+
+// ---------- helpers ----------
+const wordIn = (el, t, d = 0.14) => gsap.set(el, { autoAlpha: 0 }) && tl.fromTo(el, { autoAlpha: 0, y: 26, filter: "blur(10px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: d, ease: "power2.out", immediateRender: false }, t - 2 * F);
+const pop = (el, t, from = 0.4) => gsap.set(el, { autoAlpha: 0 }) && tl.fromTo(el, { autoAlpha: 0, scale: from, filter: "blur(8px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.26, ease: "back.out(1.6)", immediateRender: false }, t);
+const out = (el, t, d = 0.18) => tl.to(el, { autoAlpha: 0, duration: d, ease: "power2.in" }, t);
+const draw = (el, t, d = 0.4) => tl.to(el, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+function kbox(id, t) {           // cursor 6 cuadros antes; caja crece 5 cuadros; texto se revela de izq. a der.
+  const k = $(id);
+  gsap.set(k, { autoAlpha: 0 });
+  gsap.set(k.querySelector(".bg"), { scaleX: 0, transformOrigin: "0% 50%" });
+  gsap.set(k.querySelector(".cov"), { scaleX: 1, transformOrigin: "100% 50%" });
+  gsap.set(k, { xPercent: -50 });
+  const c = k.querySelector(".cur"); const cw = k.querySelector(".cw"); gsap.set(cw, { xPercent: 0 }); gsap.set(c, { x: 12 });
+  const st = k.querySelector(".strike"); if (st) gsap.set(st, { scaleX: 0, transformOrigin: "0% 50%" });
+  const hid = [k.querySelector(".tx"), k.querySelector(".cov")]; gsap.set(hid, { autoAlpha: 0 });
+  k.querySelector(".cov").style.background = k.closest(".scene").classList.contains("carbon") ? "#2A2926" : "#F6F4EF";   // tapa = fondo de la escena: la caja crece de verdad
+  tl.set(k, { autoAlpha: 1 }, t - 6 * F);
+  tl.set(hid, { autoAlpha: 1 }, t - 2 * F);
+  tl.to(k.querySelector(".bg"), { scaleX: 1, duration: 5 * F, ease: "power3.out" }, t - 2 * F);
+  tl.to(k.querySelector(".cov"), { scaleX: 0, duration: 5 * F, ease: "power3.out" }, t - 2 * F);
+  tl.to(cw, { xPercent: 100, duration: 5 * F, ease: "power3.out" }, t - 2 * F);
+  tl.to(c, { x: 0, duration: 5 * F, ease: "power3.out" }, t - 2 * F);
+  tl.to(c, { autoAlpha: 0, duration: 0.01, repeat: 5, yoyo: true, ease: "none" }, t + 0.2);
+  tl.fromTo(k, { scale: 1.08 }, { scale: 1, duration: 0.4, ease: "expo.out", immediateRender: false }, t - 2 * F);
+}
+const flash = (t) => { tl.to("#flash", { opacity: 1, duration: 3 * F, ease: "power2.in" }, t - 3 * F); tl.to("#flash", { opacity: 0, duration: 4 * F, ease: "sine.out" }, t + 3 * F); };
+
+// ---------- S1 gancho: primera palabra visible en el cuadro 0 ----------
+gsap.set("#c1", { scale: 1.12 });
+tl.to("#c1", { scale: 1.0, duration: 1.2, ease: "power2.out" }, 0);
+tl.fromTo("#h2, #h3", { y: 0 }, { y: -14, duration: 0.1, yoyo: true, repeat: 1, stagger: 0.21, immediateRender: false }, 0.17);
+kbox("#kn8n", 0.43);
+// el gancho sube y se convierte en cabecera del flujo
+tl.to("#hook", { y: -300, scale: 0.62, duration: 0.5, ease: "expo.inOut" }, 1.12);
+tl.to("#hook .title", { autoAlpha: 0, duration: 0.25 }, 1.12);
+["#n1", "#n2", "#n3", "#n4"].forEach((n, i) => pop(n, 1.30 + i * 0.07));
+draw("#flowline", 1.45, 0.5);
+gsap.set("#dot2, #l_ini, #l_ter, #noloop, #loophead", { autoAlpha: 0 });
+wordIn("#l_ini", 1.92, 0.2);
+tl.to("#n1", { scale: 1.15, duration: 0.12, yoyo: true, repeat: 1 }, 1.92);
+tl.set("#dot2", { autoAlpha: 1 }, 2.30);
+tl.to("#dot2", { x: 640, duration: 0.74, ease: "power1.inOut" }, 2.33);
+tl.to("#n4", { backgroundColor: "#2A2926", duration: 0.1 }, 3.04);
+tl.to("#n4 .ico", { backgroundColor: "#E6D6AE", duration: 0.1 }, 3.04);
+wordIn("#l_ter", 2.78, 0.2);
+tl.to("#n4", { scale: 1.15, duration: 0.12, yoyo: true, repeat: 1 }, 3.04);
+// cámara 2.5D sobre el flujo
+tl.fromTo("#c1", { rotationX: 0, y: 0 }, { rotationX: 16, y: 60, duration: 2.0, ease: "sine.inOut", immediateRender: false }, 1.3);
+// "una vez termine": el flujo se apaga
+tl.to("#n1, #n2, #n3, #flowline, #dot2", { opacity: 0.35, duration: 0.4 }, 3.65);
+// "no se puede meter dentro de un loop"
+tl.to("#hook", { autoAlpha: 0, duration: 0.2 }, 4.10);
+draw("#looparc", 4.46, 0.75);
+tl.set("#loophead", { autoAlpha: 1 }, 5.15);
+pop("#noloop", 4.95, 0.3);
+tl.to("#looparc, #loophead", { stroke: "#8C887F", duration: 0.2 }, 5.0);
+kbox("#kloop", 5.55);
+tl.to("#stloop", { scaleX: 1, duration: 0.25, ease: "power3.out" }, 5.72);
+[0, 1, 2, 3, 4].forEach((i) => tl.to("#c1", { x: [14, -11, 8, -5, 0][i], duration: 0.04, ease: "none" }, 4.98 + i * 0.04));
+tl.to("#c1", { rotationX: 6, y: 0, duration: 1.0, ease: "sine.inOut" }, 4.1);
+// zoom-through hacia S3
+tl.to("#c1", { scale: 3.2, filter: "blur(14px)", duration: 0.32, ease: "power4.in" }, 5.63);
+
+// ---------- S3 Claude Code (carbón) con insert real ----------
+tl.fromTo("#c3", { scale: 1.45, filter: "blur(12px)" }, { scale: 1.0, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, 5.95);
+tl.to("#c3", { scale: 1.06, duration: 2.1, ease: "sine.inOut" }, 6.45);
+gsap.set("#cc1, #cc2", { autoAlpha: 0 });
+gsap.set("#ccline", { scaleX: 0, transformOrigin: "0% 50%" });
+tl.fromTo("#f_head", { x: 160, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.7, ease: "expo.out", immediateRender: false }, 6.15);
+tl.set("#v_head", { left: 50, top: 846 }, 6.15);
+tl.fromTo("#v_head", { opacity: 0, x: 160 }, { opacity: 1, x: 0, duration: 0.7, ease: "expo.out", immediateRender: false }, 6.15);
+wordIn("#cc1", 7.92, 0.18); wordIn("#cc2", 8.15, 0.18);
+tl.to("#ccline", { scaleX: 1, duration: 0.3, ease: "power3.out" }, 8.10);
+flash(8.62);
+
+// ---------- S4 agentes con subagentes ----------
+gsap.set("#q1, #q2, #q3, #q4, #ag, .sa4", { autoAlpha: 0 });
+tl.fromTo("#c4", { scale: 1.08 }, { scale: 1.0, duration: 2.8, ease: "sine.out", immediateRender: false }, 8.62);
+wordIn("#q1", 8.69); wordIn("#q2", 8.96); wordIn("#q3", 9.18); wordIn("#q4", 9.37);
+pop("#ag", 9.90, 0.3);
+$$(".l4").forEach((l, i) => draw(l, 10.55 + i * 0.06, 0.3));
+$$(".sa4").forEach((s, i) => tl.fromTo(s, { autoAlpha: 0, y: -160, scale: 0.5 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.35, ease: "back.out(1.7)", immediateRender: false }, 10.65 + i * 0.08));
+// flip 3D de salida
+tl.to("#c4", { rotationY: -80, transformOrigin: "100% 50%", duration: 0.2, ease: "power3.in" }, 11.25);
+
+// ---------- S5 problema (carbón) ----------
+tl.fromTo("#c5", { rotationY: 80, transformOrigin: "0% 50%" }, { rotationY: 0, duration: 0.45, ease: "expo.out", immediateRender: false }, 11.45);
+gsap.set("#qbox, #l_orq, #f_side, .l5", { autoAlpha: 0 });
+kbox("#kprob", 12.14);
+tl.fromTo("#f_side", { autoAlpha: 0, y: 80 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: "expo.out", immediateRender: false }, 12.45);
+tl.set("#v_side", { left: 228, top: 794 }, 12.45);
+tl.fromTo("#v_side", { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out", immediateRender: false }, 12.45);
+tl.to("#f_side, #v_side", { y: -24, duration: 3.5, ease: "sine.inOut" }, 13.1);
+pop("#qbox", 13.58, 0.5);
+wordIn("#l_orq", 13.58, 0.2);
+tl.to("#qbox", { rotation: 4, duration: 0.18, yoyo: true, repeat: 5, ease: "sine.inOut" }, 14.0);
+out("#kprob", 15.30, 0.15);
+kbox("#kctx", 15.55);
+tl.to("#l_orq", { autoAlpha: 0, duration: 0.15 }, 15.4);
+$$(".l5").forEach((l, i) => { tl.set(l, { autoAlpha: 1 }, 15.6 + i * 0.08); [0.12, 0.2, 0.3, 0.42].forEach((d, k) => tl.set(l, { autoAlpha: k % 2 ? 1 : 0.15 }, 15.75 + d + i * 0.05)); tl.set(l, { autoAlpha: 0 }, 16.55 + i * 0.05); });
+tl.to("#v_side, #f_side", { filter: "brightness(0.55)", duration: 0.3 }, 16.43);
+tl.to("#c5", { scale: 1.06, duration: 5.7, ease: "sine.inOut" }, 11.9);
+// (17,20: invert flash + glitch en post)
+
+// ---------- S6 ¿Qué se hace? -> solucionar ----------
+gsap.set("#p1, #p2, #p3, #p4, #p5, #p6, #p7", { autoAlpha: 0 });
+tl.fromTo("#c6", { scale: 1.0 }, { scale: 1.07, duration: 2.8, ease: "sine.inOut", immediateRender: false }, 17.2);
+wordIn("#p1", 17.32); wordIn("#p2", 17.51); wordIn("#p3", 17.70); wordIn("#p4", 17.80); wordIn("#p5", 18.03); wordIn("#p6", 18.19);
+wordIn("#p7", 18.76, 0.2);
+tl.to("#p1, #p2, #p3, #p4, #p5, #p6", { color: "#8C887F", duration: 0.3 }, 18.7);
+kbox("#ksol", 19.57);
+tl.to("#c6", { scale: 0.72, filter: "blur(6px)", duration: 4 * F, ease: "power2.in" }, 20.15 - 4 * F);
+
+// ---------- S7 orquestador (aterriza a escala 4 con blur 18 -> 1,05 expo.out) ----------
+gsap.set("#orq, #l_ap, #ring, #chk, .sa7, .pd, #l_sub, #doc, #fold, .fl, #mag, #stop, #l_arch, #f_sub, #f_tok, #ktxt", { autoAlpha: 0 });
+gsap.set("#ul_sub, #st_arch", { scaleX: 0, transformOrigin: "0% 50%" });
+tl.fromTo("#c7", { scale: 4, filter: "blur(18px)", rotationX: 22 }, { scale: 1.05, filter: "blur(0px)", rotationX: 14, duration: 0.5, ease: "expo.out", immediateRender: false }, 20.15);
+tl.to("#c7", { scale: 1.0, rotationX: 6, duration: 5.6, ease: "sine.inOut" }, 20.65);
+pop("#orq", 21.02, 0.3);
+wordIn("#l_ap", 21.46, 0.2);
+$$(".l7").forEach((l, i) => draw(l, 23.18 + i * 0.1, 0.35));
+$$(".sa7").forEach((s, i) => tl.fromTo(s, { autoAlpha: 0, x: [390, 80, -230][i], y: -320, scale: 0.4 }, { autoAlpha: 1, x: 0, y: 0, scale: 1, duration: 0.45, ease: "expo.out", immediateRender: false }, 23.18 + i * 0.12));
+wordIn("#l_sub", 23.61, 0.2);
+tl.to("#ul_sub", { scaleX: 1, duration: 0.35, ease: "power3.out" }, 25.10);
+tl.to("#ul_sub", { y: 14, duration: 0.18, yoyo: true, repeat: 3, ease: "sine.inOut" }, 25.45);
+// "desde acá puede ingresar a los subagentes" + insert real del subagente trabajando
+out("#l_ap", 26.20, 0.15);
+tl.fromTo("#ring", { autoAlpha: 1, scale: 0.85 }, { autoAlpha: 0, scale: 1.5, duration: 0.6, ease: "power2.out", immediateRender: false }, 26.42);
+["#pd1", "#pd2", "#pd3"].forEach((d, i) => { tl.set(d, { autoAlpha: 1 }, 26.70); tl.to(d, { x: [-310, 0, 310][i], y: 217, duration: 0.5, ease: "power2.in" }, 26.70); tl.set(d, { autoAlpha: 0 }, 27.22); });
+$$(".sa7").forEach((s, i) => { tl.to(s, { backgroundColor: "#2A2926", duration: 0.08 }, 27.22); tl.to(s.querySelector(".ico"), { backgroundColor: "#E6D6AE", duration: 0.08 }, 27.22); tl.to(s, { scale: 1.12, duration: 0.12, yoyo: true, repeat: 1 }, 27.22); });
+tl.fromTo("#f_sub", { autoAlpha: 0, y: -40 }, { autoAlpha: 1, y: 0, duration: 0.35, ease: "expo.out", immediateRender: false }, 26.30);
+tl.set("#v_sub", { left: 90, top: 334 }, 26.30);
+tl.fromTo("#v_sub", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out", immediateRender: false }, 26.30);
+tl.fromTo("#f_tok", { autoAlpha: 0, x: 60 }, { autoAlpha: 1, x: 0, duration: 0.35, ease: "expo.out", immediateRender: false }, 26.55);
+tl.set("#v_tok", { left: 575, top: 452 }, 26.55);
+tl.fromTo("#v_tok", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out", immediateRender: false }, 26.55);
+out("#f_sub, #f_tok", 28.30, 0.15);
+tl.to("#v_sub, #v_tok", { opacity: 0, duration: 0.15 }, 28.30);
+// "el subagente le envía una respuesta en formato de texto al agente orquestador"
+tl.to("#c7", { scale: 1.3, x: 403, y: -156, rotationX: 0, duration: 0.55, ease: "expo.inOut" }, 28.40);
+out("#l_sub", 28.40, 0.2); out("#ul_sub", 28.40, 0.2);
+tl.to("#sa2, #sa3, #l7b, #l7c", { opacity: 0.35, duration: 0.3 }, 28.5);
+pop("#doc", 29.33, 0.3);
+tl.to("#doc", { x: 310, y: -380, rotation: 8, duration: 2.0, ease: "power2.inOut" }, 29.73);
+tl.to("#c7", { x: 0, y: 60, scale: 1.15, duration: 2.0, ease: "power2.inOut" }, 29.73);
+kbox("#ktxt", 31.23);
+out("#ktxt", 32.55, 0.15);
+tl.to("#doc", { scale: 0, autoAlpha: 0, duration: 0.2, ease: "power2.in" }, 31.80);
+tl.to("#orq", { scale: 1.12, duration: 0.12, yoyo: true, repeat: 1 }, 31.99);
+pop("#chk", 31.99, 0.2);
+// "sin que el agente orquestador tenga que revisar los archivos del subagente"
+tl.to("#c7", { x: 0, y: -60, scale: 1.0, duration: 0.6, ease: "expo.inOut" }, 32.60);
+tl.to("#sa2, #sa3, #l7b, #l7c", { opacity: 1, duration: 0.3 }, 32.7);
+pop("#fold", 33.30, 0.4);
+$$(".fl").forEach((f, i) => tl.fromTo(f, { autoAlpha: 0, x: 0, y: 0, rotation: 0 }, { autoAlpha: 1, x: 120 + i * 70, y: -10 - i * 30, rotation: 6 + i * 6, duration: 0.35, ease: "back.out(1.5)", immediateRender: false }, 33.60 + i * 0.08));
+pop("#mag", 34.51, 0.4);
+tl.to("#mag", { x: -150, y: 520, duration: 0.6, ease: "power2.inOut" }, 34.84);
+pop("#stop", 35.45, 1.6);
+[0, 1, 2, 3].forEach((i) => tl.to("#c7", { x: [12, -9, 6, 0][i], duration: 0.04, ease: "none" }, 35.5 + i * 0.04));
+tl.to("#mag", { opacity: 0.35, duration: 0.15 }, 35.5);
+wordIn("#l_arch", 35.55, 0.2);
+tl.to("#st_arch", { autoAlpha: 1, scaleX: 1, duration: 0.3, ease: "power3.out" }, 35.95);
+tl.to("#c7", { scale: 1.06, duration: 0.6, ease: "sine.inOut" }, 36.3);
+// (36,95: invert flash + glitch en post)
+
+// ---------- S11 tokens (carbón) ----------
+const chips = $("#chips"); const CH = [];
+for (let r = 0; r < 7; r++) for (let c = 0; c < 6; c++) { const d = document.createElement("div"); d.className = "chip"; d.style.left = (290 + c * 84) + "px"; d.style.top = (660 + r * 84) + "px"; chips.appendChild(d); CH.push({ d, r, c }); }
+CH.forEach(({ d, r, c }) => tl.fromTo(d, { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.2, ease: "back.out(2)", immediateRender: false }, 36.97 + (6 - r) * 0.03 + c * 0.01));
+CH.filter(({ r }) => r < 6).forEach(({ d, r, c }) => tl.to(d, { y: 900, rotation: (c - 2.5) * 14, autoAlpha: 0, duration: 0.45, ease: "power3.in" }, 37.70 + (5 - r) * 0.035 + c * 0.012));
+CH.filter(({ r }) => r === 6).forEach(({ d }) => tl.to(d, { backgroundColor: "#C8B07A", duration: 0.15 }, 38.25));
+gsap.set("#l_ah", { autoAlpha: 0 });
+wordIn("#l_ah", 37.70, 0.2);
+out("#l_ah", 38.10, 0.12);
+kbox("#ktok", 38.29);
+tl.fromTo("#c11", { scale: 1.12 }, { scale: 1.0, duration: 1.75, ease: "power2.out", immediateRender: false }, 36.95);
+
+// ---------- S12 flujo más rápido (destello crema) ----------
+flash(38.72);
+gsap.set("#m1, #m2, #m3, #m4, #bolt", { autoAlpha: 0 });
+["#m1", "#m2", "#m3", "#m4"].forEach((m, i) => pop(m, 38.80 + i * 0.07));
+tl.to("#orb", { strokeDashoffset: 0, duration: 0.8, ease: "power2.inOut" }, 39.0);
+gsap.set("#orbit", { rotation: 0, autoAlpha: 0 });
+tl.set("#orbit", { autoAlpha: 1 }, 39.5);
+tl.to("#orbit", { rotation: 1440, duration: DUR - 39.5, ease: "power2.in" }, 39.5);
+pop("#bolt", 40.32, 0.3);
+kbox("#krap", 40.49);
+tl.fromTo("#c12", { scale: 1.1, rotationX: 14 }, { scale: 1.0, rotationX: 0, duration: DUR - 38.72, ease: "power2.out", immediateRender: false }, 38.72);
+
+// ---------- subtítulos: tarjetas de 2-4 palabras, enteras al onset - 2 cuadros ----------
+const DARK = [[5.95, 8.62], [11.45, 17.2], [36.95, 38.72]];
+const HIDE = [[0, 1.25], [8.62, 9.6], [17.2, 20.15]];   // donde el título ya dice lo mismo
+const KEYS = new Set(["n8n", "loop", "Claude", "Code", "claude", "code", "agentes", "subagentes", "problemas", "orquestador", "principal", "contexto", "solucionar", "texto", "archivos", "tokens", "rápido", "termina", "inicia"]);
+const clean = (w) => w.replace(/[¿?,.]/g, "");
+const groups = []; let g = [];
+WORDS.forEach((w, i) => { g.push(w); const n = WORDS[i + 1]; const end = /[,?.]$/.test(w[0]) || g.length >= 3 || (n && n[1] - w[2] > 0.35) || (n && (g.map((x) => x[0]).join(" ") + " " + n[0]).length > 18); if (end || !n) { groups.push(g); g = []; } });
+const caps = $("#caps");
+groups.forEach((gr, i) => {
+  const t0 = gr[0][1] - 2 * F; const nx = groups[i + 1]; let t1 = Math.min(nx ? nx[0][1] - 2 * F : DUR, gr[gr.length - 1][2] + 0.6);
+  SC.forEach(([id, a]) => { if (a > t0 + 0.05 && a < t1) t1 = a; });
+  if (HIDE.some(([a, b]) => t0 >= a - 0.05 && t0 < b)) return;
+  const d = document.createElement("div"); d.className = "cap" + (DARK.some(([a, b]) => t0 >= a && t0 < b) ? " dk" : "");
+  d.innerHTML = gr.map((w) => KEYS.has(clean(w[0])) ? "<b>" + w[0] + "</b>" : w[0]).join(" ");
+  caps.appendChild(d);
+  tl.fromTo(d, { visibility: "visible", autoAlpha: 0, filter: "blur(8px)" }, { autoAlpha: 1, filter: "blur(0px)", duration: 2 * F, ease: "none", immediateRender: false }, t0);
+  tl.set(d, { autoAlpha: 0, visibility: "hidden" }, t1);
+});
+tl.set({}, {}, DUR);
+</script>
+</body>
+</html>

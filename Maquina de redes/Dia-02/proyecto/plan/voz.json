@@ -1,0 +1,758 @@
+{
+ "1": [
+  {
+   "s": 5.28,
+   "e": 5.68,
+   "text": "Empezamos",
+   "f0": 142.0,
+   "f0std": 7.0,
+   "rms": -33.9
+  },
+  {
+   "s": 7.66,
+   "e": 12.0,
+   "text": "Contratea a alguien ayer, no le pago, no trabaja, y no hace nada",
+   "f0": 123.0,
+   "f0std": 19.3,
+   "rms": -18.0
+  },
+  {
+   "s": 18.36,
+   "e": 21.66,
+   "text": "Contratea a alguien, no le pago, y trabaja a las 3 de la mañana",
+   "f0": 92.0,
+   "f0std": 15.5,
+   "rms": -17.7
+  },
+  {
+   "s": 24.74,
+   "e": 26.68,
+   "text": "Suena como chisme, a la gente le va a gustar",
+   "f0": 111.0,
+   "f0std": 17.8,
+   "rms": -21.3
+  },
+  {
+   "s": 26.68,
+   "e": 29.5,
+   "text": "Y creo que es mejor que prenda la luz",
+   "f0": 128.0,
+   "f0std": 12.1,
+   "rms": -19.9
+  },
+  {
+   "s": 30.24,
+   "e": 35.34,
+   "text": "Porque si ellos sienten que es anuncio, lo van a pasar de una vez",
+   "f0": 126.0,
+   "f0std": 20.4,
+   "rms": -21.0
+  },
+  {
+   "s": 36.7,
+   "e": 42.88,
+   "text": "Ayer contratea a alguien, no le pago, y trabaja hasta las 3 de la mañana",
+   "f0": 122.0,
+   "f0std": 23.0,
+   "rms": -18.2
+  },
+  {
+   "s": 47.66,
+   "e": 50.22,
+   "text": "No me gusta que veas la cara",
+   "f0": 148.0,
+   "f0std": 11.4,
+   "rms": -18.9
+  },
+  {
+   "s": 51.68,
+   "e": 52.24,
+   "text": "Dime",
+   "f0": null,
+   "f0std": null,
+   "rms": -24.3
+  },
+  {
+   "s": 55.06,
+   "e": 57.72,
+   "text": "Si, es que es la idea",
+   "f0": 137.0,
+   "f0std": 12.9,
+   "rms": -23.3
+  },
+  {
+   "s": 57.84,
+   "e": 59.3,
+   "text": "Día 2 de 42",
+   "f0": 117.0,
+   "f0std": 10.7,
+   "rms": -17.2
+  },
+  {
+   "s": 61.24,
+   "e": 64.4,
+   "text": "Osea, primero el gancho y después día 2 de 42",
+   "f0": 131.0,
+   "f0std": 24.1,
+   "rms": -18.6
+  },
+  {
+   "s": 67.54,
+   "e": 71.96,
+   "text": "Ayer contratea a alguien, no le pago, ok, tengo que mirar la cámara",
+   "f0": 137.0,
+   "f0std": 20.4,
+   "rms": -19.8
+  },
+  {
+   "s": 72.12,
+   "e": 79.22,
+   "text": "Ayer contratea a alguien, no le pago, y trabaja hasta...",
+   "f0": 135.0,
+   "f0std": 35.0,
+   "rms": -20.2
+  },
+  {
+   "s": 81.16,
+   "e": 85.14,
+   "text": "Ayer contratea a alguien, no trabaja, y no le va a pagar",
+   "f0": 118.0,
+   "f0std": 22.4,
+   "rms": -17.1
+  },
+  {
+   "s": 87.68,
+   "e": 91.8,
+   "text": "Es que estoy pensando en el guion, necesito pensar eso con mi cabeza",
+   "f0": 123.0,
+   "f0std": 42.5,
+   "rms": -21.0
+  },
+  {
+   "s": 96.74,
+   "e": 100.22,
+   "text": "Ayer contratea a alguien, trabaja, y no le pago",
+   "f0": 134.0,
+   "f0std": 26.1,
+   "rms": -16.7
+  },
+  {
+   "s": 103.46,
+   "e": 104.56,
+   "text": "Así es amor",
+   "f0": 150.0,
+   "f0std": 32.9,
+   "rms": -15.3
+  },
+  {
+   "s": 106.98,
+   "e": 108.92,
+   "text": "Ayer contratea a alguien, no le pago",
+   "f0": 133.0,
+   "f0std": 16.8,
+   "rms": -15.1
+  },
+  {
+   "s": 110.22,
+   "e": 113.16,
+   "text": "Ayer contratea a alguien, no le pago, y trabaja hasta las 3 de la mañana",
+   "f0": 121.0,
+   "f0std": 23.4,
+   "rms": -16.4
+  },
+  {
+   "s": 113.66,
+   "e": 117.9,
+   "text": "Hoy es el día número 2 de 42 hasta llegar al evento",
+   "f0": 135.0,
+   "f0std": 21.5,
+   "rms": -17.9
+  },
+  {
+   "s": 117.9,
+   "e": 118.5,
+   "text": "¿Cuál evento?",
+   "f0": 110.0,
+   "f0std": 7.2,
+   "rms": -16.4
+  },
+  {
+   "s": 121.3,
+   "e": 134.52,
+   "text": "Ayer contratea a alguien, lo estoy explotando laboralmente, no le pago, y trabaja hasta las 3 de la mañana",
+   "f0": 120.0,
+   "f0std": 33.4,
+   "rms": -18.8
+  },
+  {
+   "s": 135.66,
+   "e": 136.16,
+   "text": "Sí",
+   "f0": 142.0,
+   "f0std": 4.8,
+   "rms": -26.8
+  },
+  {
+   "s": 138.72,
+   "e": 141.02,
+   "text": "Este es el día número 2 de 42",
+   "f0": 137.0,
+   "f0std": 18.7,
+   "rms": -15.6
+  },
+  {
+   "s": 142.2,
+   "e": 145.1,
+   "text": "Mostrando cómo construyo mi agencia de inteligencia artificial",
+   "f0": 115.0,
+   "f0std": 20.7,
+   "rms": -18.0
+  },
+  {
+   "s": 148.64,
+   "e": 152.72,
+   "text": "Quedó chéverísimo amor",
+   "f0": 117.0,
+   "f0std": 17.0,
+   "rms": -23.3
+  },
+  {
+   "s": 155.52,
+   "e": 159.86,
+   "text": "Hoy te presento a mi primer empleado, no cobra, no duerme, y ya me edito un video",
+   "f0": 128.0,
+   "f0std": 20.8,
+   "rms": -16.8
+  },
+  {
+   "s": 161.88,
+   "e": 163.3,
+   "text": "Así es como creé mi primer empleado",
+   "f0": 125.0,
+   "f0std": 16.4,
+   "rms": -15.9
+  },
+  {
+   "s": 163.3,
+   "e": 163.3,
+   "text": "",
+   "f0": null,
+   "rms": null,
+   "f0std": null
+  },
+  {
+   "s": 163.3,
+   "e": 163.98,
+   "text": "Este edita los videos",
+   "f0": 128.0,
+   "f0std": 23.2,
+   "rms": -18.4
+  },
+  {
+   "s": 163.98,
+   "e": 164.4,
+   "text": "No duerme",
+   "f0": 128.0,
+   "f0std": 25.9,
+   "rms": -16.6
+  },
+  {
+   "s": 164.4,
+   "e": 165.76,
+   "text": "Y ya me edito un video",
+   "f0": 109.0,
+   "f0std": 32.8,
+   "rms": -17.5
+  },
+  {
+   "s": 177.0,
+   "e": 179.14,
+   "text": "Así es como creé mi primer empleado",
+   "f0": 130.0,
+   "f0std": 14.6,
+   "rms": -15.8
+  },
+  {
+   "s": 180.92,
+   "e": 183.2,
+   "text": "Así es como acabo de crear uno de mis dos empleados",
+   "f0": 130.0,
+   "f0std": 18.4,
+   "rms": -15.1
+  },
+  {
+   "s": 183.24,
+   "e": 184.82,
+   "text": "Este edita los videos",
+   "f0": 139.0,
+   "f0std": 16.2,
+   "rms": -17.9
+  },
+  {
+   "s": 186.08,
+   "e": 187.1,
+   "text": "No duerme",
+   "f0": 147.0,
+   "f0std": 25.6,
+   "rms": -15.9
+  },
+  {
+   "s": 191.4,
+   "e": 193.54,
+   "text": "Te voy a mostrar uno de mis dos empleados",
+   "f0": 121.0,
+   "f0std": 17.7,
+   "rms": -17.4
+  },
+  {
+   "s": 193.94,
+   "e": 195.52,
+   "text": "Este edita los videos",
+   "f0": 131.0,
+   "f0std": 11.1,
+   "rms": -15.5
+  },
+  {
+   "s": 197.82,
+   "e": 199.08,
+   "text": "No cobra, no duerme",
+   "f0": 134.0,
+   "f0std": 17.1,
+   "rms": -15.4
+  },
+  {
+   "s": 201.82,
+   "e": 205.72,
+   "text": "Y me pasó un video de 7 minutos a un video de 38 segundos con este estilo",
+   "f0": 114.0,
+   "f0std": 20.4,
+   "rms": -18.1
+  },
+  {
+   "s": 207.56,
+   "e": 209.0,
+   "text": "Ay, no es cierto",
+   "f0": 120.0,
+   "f0std": 21.5,
+   "rms": -19.1
+  },
+  {
+   "s": 212.44,
+   "e": 213.04,
+   "text": "Ok",
+   "f0": null,
+   "f0std": null,
+   "rms": -27.9
+  },
+  {
+   "s": 214.82,
+   "e": 216.82,
+   "text": "Es un empleado que hace...",
+   "f0": null,
+   "f0std": null,
+   "rms": -28.3
+  },
+  {
+   "s": 218.6,
+   "e": 219.74,
+   "text": "¿Cómo es? ¿Cómo es la línea?",
+   "f0": null,
+   "f0std": null,
+   "rms": -28.2
+  },
+  {
+   "s": 221.24,
+   "e": 222.76,
+   "text": "Es que no me gusta esa línea, voy a decir otra",
+   "f0": 133.0,
+   "f0std": 10.8,
+   "rms": -18.8
+  },
+  {
+   "s": 222.76,
+   "e": 225.58,
+   "text": "Por eso, dime cómo me dejo mejorar el video cuando yo lo estoy",
+   "f0": 138.0,
+   "f0std": 2.4,
+   "rms": -30.1
+  },
+  {
+   "s": 227.92,
+   "e": 228.8,
+   "text": "Ok, ok",
+   "f0": null,
+   "f0std": null,
+   "rms": -33.7
+  },
+  {
+   "s": 228.98,
+   "e": 232.2,
+   "text": "Voy a decirle para que lo veas",
+   "f0": 126.0,
+   "f0std": 19.4,
+   "rms": -22.4
+  },
+  {
+   "s": 236.52,
+   "e": 239.3,
+   "text": "Este es uno de los dos empleados que acabo de crear",
+   "f0": 130.0,
+   "f0std": 19.1,
+   "rms": -15.9
+  },
+  {
+   "s": 239.46,
+   "e": 242.66,
+   "text": "Este empleado no duerme, no cobra, y edita videos",
+   "f0": 107.0,
+   "f0std": 23.9,
+   "rms": -15.9
+  },
+  {
+   "s": 242.78,
+   "e": 244.12,
+   "text": "¿Por qué uno de los dos?",
+   "f0": 254.0,
+   "f0std": 3.6,
+   "rms": -27.3
+  },
+  {
+   "s": 244.12,
+   "e": 246.48,
+   "text": "Porque les voy a hablar sobre dos",
+   "f0": 100.0,
+   "f0std": 6.3,
+   "rms": -22.8
+  },
+  {
+   "s": 246.9,
+   "e": 249.94,
+   "text": "Uno que es el que está en el CRM y otro que edita videos",
+   "f0": 105.0,
+   "f0std": 13.8,
+   "rms": -19.4
+  },
+  {
+   "s": 250.8,
+   "e": 255.62,
+   "text": "Les voy a mostrar este empleado que edita, no duerme, no cobra",
+   "f0": 138.0,
+   "f0std": 23.0,
+   "rms": -28.7
+  },
+  {
+   "s": 256.06,
+   "e": 257.14,
+   "text": "¿Eso fue lo que dije?",
+   "f0": 120.0,
+   "f0std": 6.7,
+   "rms": -23.2
+  },
+  {
+   "s": 257.44,
+   "e": 257.78,
+   "text": "Sí",
+   "f0": null,
+   "rms": null,
+   "f0std": null
+  },
+  {
+   "s": 257.78,
+   "e": 258.5,
+   "text": "¿Eso es?",
+   "f0": null,
+   "f0std": null,
+   "rms": -31.3
+  },
+  {
+   "s": 258.68,
+   "e": 262.54,
+   "text": "Sí, y me lo cortaste, toca decirlo otra vez",
+   "f0": 104.0,
+   "f0std": 6.7,
+   "rms": -24.3
+  },
+  {
+   "s": 262.62,
+   "e": 265.04,
+   "text": "Les voy a presentar uno de los dos",
+   "f0": 131.0,
+   "f0std": 20.7,
+   "rms": -16.4
+  },
+  {
+   "s": 267.06,
+   "e": 269.38,
+   "text": "Les voy a presentar uno de los dos empleados que tengo",
+   "f0": 123.0,
+   "f0std": 15.8,
+   "rms": -16.8
+  },
+  {
+   "s": 269.58,
+   "e": 271.86,
+   "text": "Este no cobra, no duerme, y edita los videos",
+   "f0": 118.0,
+   "f0std": 18.4,
+   "rms": -17.9
+  },
+  {
+   "s": 271.86,
+   "e": 273.02,
+   "text": "Mientras yo estoy durmiendo",
+   "f0": 94.0,
+   "f0std": 7.3,
+   "rms": -18.3
+  },
+  {
+   "s": 276.36,
+   "e": 278.38,
+   "text": "Les voy a presentar uno de mis dos empleados",
+   "f0": 151.0,
+   "f0std": 26.6,
+   "rms": -15.2
+  },
+  {
+   "s": 278.38,
+   "e": 280.38,
+   "text": "La verdad, a este sí lo exploto durante toda la noche",
+   "f0": 127.0,
+   "f0std": 13.9,
+   "rms": -17.9
+  },
+  {
+   "s": 280.38,
+   "e": 282.64,
+   "text": "Porque me edita los videos mientras estoy durmiendo",
+   "f0": 104.0,
+   "f0std": 19.1,
+   "rms": -18.9
+  },
+  {
+   "s": 287.54,
+   "e": 290.14,
+   "text": "El segundo también lo sobreexplotó, pero",
+   "f0": 148.0,
+   "f0std": 15.2,
+   "rms": -15.3
+  },
+  {
+   "s": 291.76,
+   "e": 295.22,
+   "text": "Él sí trabaja en el día porque está conectado a mi CRM",
+   "f0": 108.0,
+   "f0std": 17.3,
+   "rms": -18.0
+  },
+  {
+   "s": 305.62,
+   "e": 310.32,
+   "text": "Les voy a mostrar cómo funciona un CRM real con Inteligencia Artificial integrada",
+   "f0": 131.0,
+   "f0std": 21.7,
+   "rms": -17.4
+  },
+  {
+   "s": 312.18,
+   "e": 315.02,
+   "text": "Normalmente los CRM que están vendiendo con Inteligencia Artificial",
+   "f0": 132.0,
+   "f0std": 20.7,
+   "rms": -16.0
+  },
+  {
+   "s": 315.02,
+   "e": 318.54,
+   "text": "Es un chat pegado dentro de la plataforma que no hace absolutamente nada",
+   "f0": 118.0,
+   "f0std": 19.0,
+   "rms": -19.2
+  },
+  {
+   "s": 318.68,
+   "e": 321.88,
+   "text": "Es directamente preguntarle al chat GPT",
+   "f0": 118.0,
+   "f0std": 9.4,
+   "rms": -23.2
+  },
+  {
+   "s": 322.78,
+   "e": 327.4,
+   "text": "En cambio este CRM está conectado por dentro de la plataforma",
+   "f0": 135.0,
+   "f0std": 19.0,
+   "rms": -17.0
+  },
+  {
+   "s": 329.24,
+   "e": 331.74,
+   "text": "Este puede leer cada cliente, cada correo",
+   "f0": 128.0,
+   "f0std": 12.1,
+   "rms": -17.2
+  },
+  {
+   "s": 331.74,
+   "e": 334.3,
+   "text": "Qué hace, en qué tapas está, cómo le gusta que le hablen",
+   "f0": 115.0,
+   "f0std": 10.4,
+   "rms": -16.2
+  },
+  {
+   "s": 334.3,
+   "e": 336.08,
+   "text": "Y puede cerrar ventas",
+   "f0": 108.0,
+   "f0std": 19.4,
+   "rms": -19.3
+  },
+  {
+   "s": 345.48,
+   "e": 349.46,
+   "text": "Es básicamente y literalmente como si una Inteligencia Artificial",
+   "f0": 122.0,
+   "f0std": 17.0,
+   "rms": -17.5
+  },
+  {
+   "s": 349.46,
+   "e": 354.5,
+   "text": "Hubiera creado un CRM y fuera parte de ella",
+   "f0": 118.0,
+   "f0std": 17.5,
+   "rms": -17.3
+  },
+  {
+   "s": 361.74,
+   "e": 362.42,
+   "text": "Es como si...",
+   "f0": 148.0,
+   "f0std": 15.5,
+   "rms": -16.9
+  },
+  {
+   "s": 366.96,
+   "e": 369.28,
+   "text": "Es como si hubiera nacido una Inteligencia Artificial",
+   "f0": 129.0,
+   "f0std": 15.3,
+   "rms": -17.3
+  },
+  {
+   "s": 369.38,
+   "e": 371.74,
+   "text": "Que ya hubiera nacido con un CRM",
+   "f0": 108.0,
+   "f0std": 27.8,
+   "rms": -17.7
+  }
+ ],
+ "2": [
+  {
+   "s": 0.0,
+   "e": 12.2,
+   "text": "...un poquito de escena, acá, yo hablo desde acá, es que es imposible, aquí en el cuarto es imposible cambiarte escena",
+   "f0": 111.0,
+   "f0std": 13.9,
+   "rms": -24.5
+  },
+  {
+   "s": 14.14,
+   "e": 20.12,
+   "text": "lo que hice fue, lo que hice fue descargar un repositorio, lo que hice fue descargar",
+   "f0": 133.0,
+   "f0std": 15.1,
+   "rms": -17.3
+  },
+  {
+   "s": 20.26,
+   "e": 25.52,
+   "text": "este repositorio, integrar la inteligencia artificial, conectarlo a la empresa",
+   "f0": 133.0,
+   "f0std": 17.0,
+   "rms": -18.2
+  },
+  {
+   "s": 34.94,
+   "e": 40.82,
+   "text": "y si un CRM con inteligencia artificial es muy bueno, ahora le vamos a conectar facturación electrónica",
+   "f0": 116.0,
+   "f0std": 20.5,
+   "rms": -16.6
+  },
+  {
+   "s": 41.56,
+   "e": 48.78,
+   "text": "para esto, el día de mañana vamos a entrar, mentiras, esa parte de atrás no va a aparecer",
+   "f0": 128.0,
+   "f0std": 22.2,
+   "rms": -18.3
+  },
+  {
+   "s": 53.6,
+   "e": 59.44,
+   "text": "y si un CRM es bueno con inteligencia artificial, ahora lo vamos a conectar a la DIAN para que podamos hacer facturas electrónicas",
+   "f0": 124.0,
+   "f0std": 17.5,
+   "rms": -16.2
+  },
+  {
+   "s": 66.8,
+   "e": 83.0,
+   "text": "y esto lo vamos a estar, y esto lo vas a ver, esto lo vas a ver, esto lo vamos a dejar para mañana",
+   "f0": 133.0,
+   "f0std": 20.0,
+   "rms": -20.2
+  },
+  {
+   "s": 83.0,
+   "e": 102.08,
+   "text": "entonces, para mañana, no, no, no es cierto, ok, pero esto lo vamos a ver en el día 3",
+   "f0": 123.0,
+   "f0std": 62.2,
+   "rms": -23.0
+  },
+  {
+   "s": 104.18,
+   "e": 110.8,
+   "text": "pero esto lo vamos a ver en el día 3, de momento quiero que me digas en el empleado, aquí en el empleado",
+   "f0": 131.0,
+   "f0std": 19.8,
+   "rms": -16.3
+  },
+  {
+   "s": 111.72,
+   "e": 114.76,
+   "text": "pero esto lo vamos a ver en el día 3, de momento quiero que me digas",
+   "f0": 131.0,
+   "f0std": 17.0,
+   "rms": -16.1
+  },
+  {
+   "s": 116.96,
+   "e": 124.04,
+   "text": "qué tipo de empleado quieres esclavizar para que trabaje 24 7 por ti, ay en tu empresa, de momento",
+   "f0": 130.0,
+   "f0std": 21.0,
+   "rms": -16.7
+  },
+  {
+   "s": 124.04,
+   "e": 129.82,
+   "text": "quiero que me digas en los comentarios, pero esto lo vamos a ver en el día 3, de momento quiero que me",
+   "f0": 134.0,
+   "f0std": 21.0,
+   "rms": -16.5
+  },
+  {
+   "s": 129.82,
+   "e": 133.94,
+   "text": "digas qué tipo de empleado te gustaría esclavizar durante toda la noche y durante todos los días",
+   "f0": 114.0,
+   "f0std": 18.9,
+   "rms": -17.9
+  }
+ ]
+}

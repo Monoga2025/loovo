@@ -1,0 +1,40 @@
+/* ===== entreno02 (bloque 2, aprobado "perfecto") ===== */
+#s1 { z-index:20; } #s1in { transform-origin:50% 55%; }
+#a1 { position:absolute; left:0; top:300px; width:1080px; text-align:center; font-weight:600; font-size:150px; line-height:1; letter-spacing:-4px; color:#2A2926; }
+#a2 { position:absolute; left:0; top:456px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:168px; line-height:1; color:#A88F57; }
+#tile { position:absolute; left:290px; top:820px; width:500px; height:500px; }
+.blk { position:absolute; background:linear-gradient(155deg,#EDE1C2 0%,#D6C293 45%,#C8B07A 100%); box-shadow:0 30px 60px -26px rgba(90,74,44,.35); }
+#bA { left:0; top:0; width:250px; height:250px; }
+#bB { left:250px; top:0; width:250px; height:250px; background:linear-gradient(155deg,#E6D6AE 0%,#C8B07A 100%); }
+#bC { left:0; top:250px; width:500px; height:250px; background:linear-gradient(155deg,#D6C293 0%,#A88F57 100%); }
+#tphoto { left:95px; top:95px; width:310px; height:310px; }
+#h1 { left:90px; top:760px; width:900px; } #h2 { left:90px; top:1380px; width:900px; }
+#f0 { z-index:5; background:#F6F4EF; }
+#f0sq { position:absolute; left:230px; top:660px; width:620px; height:620px; background:#2A2926; transform:rotate(-9deg); filter:blur(5px); }
+#s2 { z-index:19; }
+#photos { position:absolute; left:150px; top:760px; width:780px; height:640px; overflow:hidden; box-shadow:0 40px 80px -30px rgba(90,74,44,.38), 0 8px 24px rgba(90,74,44,.10); }
+#photos img { position:absolute; left:0; top:0; width:780px; height:640px; object-fit:cover; filter:saturate(.82) sepia(.08); }
+#ff { position:absolute; left:120px; top:730px; width:840px; height:700px; }
+#ff b { position:absolute; width:34px; height:34px; background:#C8B07A; }
+#pa { left:760px; top:1330px; width:250px; height:190px; filter:saturate(.8) sepia(.1); }
+#pb { left:70px; top:640px; width:240px; height:180px; filter:saturate(.8) sepia(.1); }
+#c2 { position:absolute; left:0; top:300px; width:1080px; text-align:center; z-index:24; }
+#c2 .k { display:block; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:200px; line-height:1; color:#A88F57; }
+#c2 .r { display:block; margin-top:18px; font-weight:600; font-size:96px; line-height:1; letter-spacing:-2px; color:#2A2926; }
+#c3 { position:absolute; left:0; top:330px; width:1080px; text-align:center; z-index:24; white-space:nowrap; }
+#c3 .n { font-weight:600; font-size:150px; letter-spacing:-4px; color:#2A2926; vertical-align:baseline; }
+#c3 .u { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:270px; line-height:1; color:#A88F57; vertical-align:baseline; display:inline-block; }
+#s3 { z-index:18; }
+#box { left:150px; top:760px; width:780px; height:670px; }
+.ghost { position:absolute; left:150px; top:760px; width:780px; height:670px; object-fit:cover; mix-blend-mode:multiply; }
+#gA { filter:sepia(1) saturate(2.2) hue-rotate(-8deg) brightness(1.05); } #gB { filter:grayscale(1) brightness(.75); }
+#slice { position:absolute; left:0; top:0; width:1080px; height:1920px; clip-path:inset(47% 0 41% 0); }
+#e2cap { position:absolute; left:0; top:1340px; width:1080px; text-align:center; z-index:10; white-space:nowrap;
+  font-weight:600; font-size:86px; line-height:1.1; letter-spacing:-1px; color:#FBF8F1; text-shadow:0 2px 6px rgba(20,16,10,.35), 0 6px 26px rgba(20,16,10,.35); }
+#e2cap .k { color:#E6D6AE; } #e2cap > span { position:absolute; left:0; top:0; width:1080px; }
+#no1 { position:absolute; left:70px; top:250px; width:460px; z-index:13; text-align:left; font-family:"Playfair"; font-style:italic; font-weight:700;
+  font-size:250px; line-height:1; color:#A88F57; white-space:nowrap; transform-origin:50% 50%; text-shadow:0 2px 3px rgba(60,48,26,.18), 0 10px 40px rgba(90,74,44,.28); }
+#no1 sup { font-size:.42em; vertical-align:.95em; margin-left:2px; }
+#e2plate { z-index:12; }
+#plnum { position:absolute; left:0; top:640px; width:1080px; text-align:center; z-index:14; font-weight:600; font-size:96px; letter-spacing:-2px; color:#8C887F; }
+#ph3 { left:240px; top:1290px; width:600px; z-index:14; }

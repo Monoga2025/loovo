@@ -1,0 +1,224 @@
+[
+ {
+  "t": 0.0,
+  "type": "riser",
+  "gain": 0.5,
+  "note": "riser inicial"
+ },
+ {
+  "t": 0.119,
+  "type": "hit",
+  "gain": 1.0,
+  "note": "hit inicial"
+ },
+ {
+  "t": 2.078,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "whoosh 9 PM"
+ },
+ {
+  "t": 2.198,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "pop 9 PM"
+ },
+ {
+  "t": 3.69,
+  "type": "click",
+  "gain": 0.5,
+  "note": "junta 1->2"
+ },
+ {
+  "t": 4.85,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "whoosh RESPUESTA"
+ },
+ {
+  "t": 4.97,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "pop RESPUESTA"
+ },
+ {
+  "t": 5.2,
+  "type": "click",
+  "gain": 0.5,
+  "note": "junta 2->3"
+ },
+ {
+  "t": 6.6,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "swish de transición"
+ },
+ {
+  "t": 7.87,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "whoosh PIJAMA"
+ },
+ {
+  "t": 7.99,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "pop PIJAMA"
+ },
+ {
+  "t": 8.85,
+  "type": "click",
+  "gain": 0.5,
+  "note": "junta 3->4"
+ },
+ {
+  "t": 10.782,
+  "type": "whoosh",
+  "gain": 0.7,
+  "note": "whoosh IA"
+ },
+ {
+  "t": 10.902,
+  "type": "hit",
+  "gain": 1.0,
+  "note": "hit IA"
+ },
+ {
+  "t": 12.662,
+  "type": "whoosh",
+  "gain": 0.7,
+  "note": "whoosh PRIMERO"
+ },
+ {
+  "t": 12.782,
+  "type": "hit",
+  "gain": 1.0,
+  "note": "hit PRIMERO"
+ },
+ {
+  "t": 12.98,
+  "type": "click",
+  "gain": 0.5,
+  "note": "junta 4->5"
+ },
+ {
+  "t": 14.0,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "swish de transición"
+ },
+ {
+  "t": 15.003,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "whoosh RETENCIÃ“N"
+ },
+ {
+  "t": 15.123,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "pop RETENCIÃ“N"
+ },
+ {
+  "t": 17.463,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "whoosh VENCE"
+ },
+ {
+  "t": 17.583,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "pop VENCE"
+ },
+ {
+  "t": 17.82,
+  "type": "click",
+  "gain": 0.5,
+  "note": "junta 5->6"
+ },
+ {
+  "t": 20.228,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "whoosh IGUAL"
+ },
+ {
+  "t": 20.348,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "pop IGUAL"
+ },
+ {
+  "t": 20.71,
+  "type": "click",
+  "gain": 0.5,
+  "note": "junta 6->7"
+ },
+ {
+  "t": 22.5,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "swish de transición"
+ },
+ {
+  "t": 24.251,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "whoosh ESTATUTO"
+ },
+ {
+  "t": 24.371,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "pop ESTATUTO"
+ },
+ {
+  "t": 26.65,
+  "type": "click",
+  "gain": 0.5,
+  "note": "junta 7->8"
+ },
+ {
+  "t": 29.78,
+  "type": "click",
+  "gain": 0.5,
+  "note": "junta 8->9"
+ },
+ {
+  "t": 30.493,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "whoosh CRITERIO"
+ },
+ {
+  "t": 30.613,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "pop CRITERIO"
+ },
+ {
+  "t": 32.0,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "swish de transición"
+ },
+ {
+  "t": 34.74,
+  "type": "click",
+  "gain": 0.5,
+  "note": "junta 9->10"
+ },
+ {
+  "t": 39.137,
+  "type": "whoosh",
+  "gain": 0.7,
+  "note": "whoosh COMENTARIOS"
+ },
+ {
+  "t": 39.257,
+  "type": "hit",
+  "gain": 1.0,
+  "note": "hit COMENTARIOS"
+ }
+]

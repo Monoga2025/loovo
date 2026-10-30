@@ -1,0 +1,326 @@
+<!doctype html>
+<!-- Canal · "Así organizo mi empresa con agentes" (columnas). Showreel de motion sobre la marca Loovo
+     (blanco pastel + puntos + dorado suave + carbón). Prompt del usuario para el motion (literal, §0.1 de monoga-adria):
+     "make a dynamic motion graphics video that shows what an incredible motion designer you are, y muestra la persona hablando
+      solo cuando mire la cámara y cuando genere tensión, like it's your showreel for a résumé. go all out."
+     En esta zona del crudo no mira a cámara: B-roll de su pantalla (cámara 2.5D) + motion. La Nómina Viva: el empleado de ventas
+     sale "EN ENTRENAMIENTO" (🟡) y el editor de video trabajando (✅). Reglas: border-radius 0, sin fondos dorados, sin verde,
+     frases >= 84 px, claves >= 118 px, etiquetas >= 48 px. Generado por _comun/build_html.py. -->
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>Canal columnas</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+/*__CSS__*/
+#sH { z-index:20; } #sO { z-index:21; } #sC { z-index:22; } #sA { z-index:23; } #sK { z-index:24; } #sE { z-index:25; }
+#sT, #sS, #sP { z-index:28; }
+#hKb { height:230px; } #hKb .tx { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:180px; line-height:220px; width:860px; letter-spacing:0; }
+#hDoc { position:absolute; left:150px; top:900px; width:780px; height:520px; background:#FBF8F1; }
+#hDoc .hd { position:absolute; left:0; top:0; width:780px; height:110px; background:#2A2926; }
+#hDoc .hd span { position:absolute; left:40px; top:20px; font-weight:600; font-size:60px; letter-spacing:-1px; color:#FBF8F1; }
+#hDoc .hd b { color:#E6D6AE; font-family:"Playfair"; font-style:italic; }
+.dl { position:absolute; left:50px; height:24px; background:#2A2926; transform-origin:0 50%; display:block; }
+.dl.g { background:#C8B07A; }
+#hCur { position:absolute; width:14px; height:56px; background:#C8B07A; }
+#kCard { position:absolute; left:60px; top:820px; width:960px; height:640px; background:#FBF8F1; transform-origin:50% 50%; }
+#kCard .hd { position:absolute; left:0; top:0; width:960px; height:110px; background:#2A2926; }
+#kCard .hd span { position:absolute; left:40px; top:24px; font-weight:600; font-size:54px; letter-spacing:5px; color:#E6D6AE; }
+#kCard .ph { position:absolute; left:40px; top:150px; width:300px; height:330px; background:url("assets/img/foto.jpg") center/cover; box-shadow:0 20px 40px -20px rgba(42,41,38,.5); }
+#kCard .ph i { position:absolute; left:-10px; top:-10px; right:-10px; bottom:-10px; border:3px solid #C8B07A; }
+#kCard .nm { position:absolute; left:380px; top:160px; font-weight:600; font-size:84px; line-height:92px; letter-spacing:-2px; color:#2A2926; }
+#kCard .nm b { font-family:"Playfair"; font-style:italic; font-weight:700; color:#A88F57; font-size:118px; }
+#kCard .st { position:absolute; left:0; top:520px; width:960px; height:120px; background:#2A2926; }
+#kCard .st span { position:absolute; left:0; top:22px; width:960px; text-align:center; font-weight:600; font-size:70px; letter-spacing:-2px; color:#E6D6AE; }
+#kCard .st i { position:absolute; left:0; top:0; height:8px; width:960px; background:#C8B07A; transform-origin:0 50%; display:block; }
+/* O orquestador */
+.fd { position:absolute; height:120px; background:#FBF8F1; box-shadow:0 22px 44px -20px rgba(90,74,44,.4); white-space:nowrap; }
+.fd .ib { position:absolute; left:0; top:0; width:120px; height:120px; background:#2A2926; }
+.fd .ib .ico { position:absolute; left:28px; top:28px; width:64px; height:64px; background:#E6D6AE; }
+.fd span { position:absolute; left:150px; top:0; line-height:120px; font-weight:600; font-size:64px; letter-spacing:-1px; color:#2A2926; }
+.fd.g .ib { background:#A88F57; }
+#oKb { height:180px; } #oKb .tx { font-size:130px; line-height:180px; width:860px; letter-spacing:-5px; }
+/* C columnas */
+.pil { position:absolute; bottom:470px; width:200px; background:#2A2926; transform-origin:50% 100%; box-shadow:0 40px 80px -30px rgba(42,41,38,.55); }
+.pil b { position:absolute; left:-24px; top:-44px; width:248px; height:44px; background:#C8B07A; display:block; }
+.pil i { position:absolute; left:-24px; bottom:-30px; width:248px; height:30px; background:#2A2926; display:block; }
+.pil .fl { position:absolute; left:20px; top:30px; width:8px; height:calc(100% - 60px); background:rgba(230,214,174,.25); display:block; }
+.pl2 { position:absolute; bottom:410px; width:280px; text-align:center; font-weight:600; font-size:56px; letter-spacing:-1px; color:#2A2926; }
+#cKb { height:220px; } #cKb .tx { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:170px; line-height:210px; width:820px; letter-spacing:0; }
+/* A Claude -> video */
+.tool { position:absolute; left:110px; width:860px; height:240px; background:#FBF8F1; box-shadow:0 40px 80px -30px rgba(90,74,44,.45), 0 8px 20px rgba(90,74,44,.12); }
+.tool .ib { position:absolute; left:0; top:0; width:240px; height:240px; background:#2A2926; }
+.tool .ib .ico { position:absolute; left:60px; top:60px; width:120px; height:120px; background:#E6D6AE; }
+.tool .tt { position:absolute; left:280px; top:30px; font-weight:600; font-size:96px; letter-spacing:-3px; color:#2A2926; }
+.tool .ss { position:absolute; left:282px; top:150px; font-weight:500; font-size:52px; letter-spacing:2px; color:#8C887F; }
+/* K tokens */
+.tk { position:absolute; width:56px; height:56px; background:#C8B07A; box-shadow:0 10px 20px -8px rgba(90,74,44,.5); }
+.tk.k { background:#2A2926; }
+#kmTrack { position:absolute; left:120px; top:1100px; width:840px; height:70px; background:#E4DFD4; }
+#kmFill { position:absolute; left:0; top:0; width:840px; height:70px; background:#2A2926; transform-origin:0 50%; }
+#kmLbl { position:absolute; left:120px; top:1190px; font-weight:600; font-size:52px; letter-spacing:4px; color:#8C887F; }
+#tKb { height:200px; } #tKb .tx { font-size:150px; line-height:200px; width:620px; letter-spacing:-5px; }
+/* E checklist */
+.erow { position:absolute; left:70px; width:940px; height:150px; background:#FBF8F1; box-shadow:0 30px 60px -26px rgba(90,74,44,.40), 0 6px 16px rgba(90,74,44,.12); }
+.erow .ib { position:absolute; left:0; top:0; width:150px; height:150px; background:#2A2926; }
+.erow .ib .ico { position:absolute; left:35px; top:35px; width:80px; height:80px; background:#E6D6AE; }
+.erow .tt { position:absolute; left:180px; top:0; line-height:150px; font-weight:600; font-size:66px; letter-spacing:-2px; color:#2A2926; white-space:nowrap; }
+.erow .tm { position:absolute; right:30px; top:40px; width:70px; height:70px; background:#A88F57; }
+.est { position:absolute; left:250px; font-weight:600; font-size:50px; letter-spacing:3px; color:#FBF8F1; background:#2A2926; padding:12px 26px; white-space:nowrap; }
+.est b { color:#E6D6AE; font-weight:600; }
+/* placa */
+#plL { position:absolute; left:0; top:520px; width:1080px; text-align:center; font-weight:600; font-size:230px; line-height:1; letter-spacing:18px; color:#2A2926; text-indent:18px; }
+#plS { position:absolute; left:0; top:860px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:120px; line-height:1.08; color:#A88F57; }
+#plH { left:300px; top:810px; width:480px; }
+#plT { position:absolute; left:0; top:1170px; width:1080px; text-align:center; font-weight:600; font-size:80px; letter-spacing:-1px; color:#8C887F; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__TOTAL__" data-width="1080" data-height="1920">
+
+  <div id="bgD" class="full dots"></div>
+  <video id="base" class="clip full" src="assets/base.mp4" data-start="0" data-duration="__TOTAL__" data-track-index="1" muted playsinline></video>
+  <div id="shade" class="full"></div>
+
+  <!-- H gancho: "empleado" visible desde el cuadro 0 -->
+  <div id="sH" class="full sc"><div id="camH" class="full">
+    <div class="bigdots dots" id="hBg"></div>
+    <div class="sub" id="hSub" style="top:170px">la nómina viva</div>
+    <div class="kbw" style="top:270px"><div id="hKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">empleado</div></div></div>
+    <div id="hT" class="ttl dk f90" style="top:560px"></div>
+    <div id="hT2" class="ttl dk f90" style="top:560px"></div>
+    <div id="hDoc" class="shadow"><div class="hd"><span>prompt<b>.md</b></span></div><div id="hLines"></div><div id="hCur"></div></div>
+    <div id="kCard" class="shadow">
+      <div class="hd"><span>LOOVO · NÓMINA</span></div>
+      <div class="ph"><i></i></div>
+      <div class="nm">Empleado<br>de <b>ventas</b></div>
+      <div class="st"><i></i><span>EN ENTRENAMIENTO</span></div>
+    </div>
+    <div id="hPrt" class="full"></div>
+  </div></div>
+
+  <!-- T etiqueta sobre el árbol del proyecto -->
+  <div id="sT" class="full"><div class="tag" id="tTag" style="left:70px;top:170px">PROYECTO · <b>ESTRUCTURA</b></div></div>
+
+  <!-- O carpeta de ventas -> orquestador con sus agentes -->
+  <div id="sO" class="full sc"><div id="camO" class="full">
+    <div class="bigdots dots" id="oBg"></div>
+    <div id="oT" class="ttl dk f90" style="top:150px"></div>
+    <div id="oTree" class="full"></div>
+    <svg class="lsvg" id="oLsvg" width="1080" height="1920"></svg>
+    <div id="oT2" class="ttl dk f90" style="top:150px"></div>
+    <div class="kbw" style="top:380px"><div id="oKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">orquestador</div></div></div>
+    <svg class="lsvg" id="oSvg" width="1080" height="1920"></svg>
+    <div id="oNodes" class="full"></div>
+    <div id="oT3" class="ttl dk f90" style="top:1200px"></div>
+  </div></div>
+
+  <!-- C columnas -->
+  <div id="sC" class="full sc"><div id="camC" class="full">
+    <div class="bigdots dots" id="cBg"></div>
+    <div id="cT" class="ttl dk f90" style="top:150px"></div>
+    <div class="kbw" style="top:290px"><div id="cKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">columnas</div></div></div>
+    <div id="cPils" class="full"></div>
+    <div id="cT2" class="ttl dk f90" style="top:150px"></div>
+  </div></div>
+
+  <!-- S etiqueta sobre las subcarpetas -->
+  <div id="sS" class="full"><div class="tag" id="sTag" style="left:70px;top:170px">VENTAS · <b>SUBCARPETAS</b></div></div>
+
+  <!-- A Claude edita videos -->
+  <div id="sA" class="full sc"><div id="camA" class="full">
+    <div class="bigdots dots" id="aBg"></div>
+    <div id="aT" class="ttl dk f90" style="top:200px"></div>
+    <div class="tool" id="aTool" style="top:700px"><div class="ib"><div class="ico" style="mask-image:url(assets/icons/film-slate-fill.svg);-webkit-mask-image:url(assets/icons/film-slate-fill.svg)"></div></div>
+      <div class="tt">Claude</div><div class="ss">EDICIÓN DE VIDEO</div></div>
+    <div id="aT2" class="ttl dk f90" style="top:1060px"></div>
+  </div></div>
+
+  <!-- P etiqueta sobre la terminal -->
+  <div id="sP" class="full"><div class="tag" id="pTag" style="left:70px;top:170px">TERMINAL · <b>Pi</b></div></div>
+
+  <!-- K tokens -->
+  <div id="sK" class="full sc"><div id="camK" class="full">
+    <div class="bigdots dots" id="kBg"></div>
+    <div id="kT" class="ttl dk f90" style="top:200px"></div>
+    <div id="kToks" class="full"></div>
+    <div class="kbw" style="top:780px"><div id="tKb" class="kb"><div class="bg"></div><div class="cur"></div><div class="tx">tokens</div></div></div>
+    <div id="kmTrack"><div id="kmFill"></div></div>
+    <div id="kmLbl">CONSUMO</div>
+  </div></div>
+
+  <!-- E lo que queda esperando -->
+  <div id="sE" class="full sc"><div id="camE" class="full">
+    <div class="bigdots dots" id="eBg"></div>
+    <div id="eT" class="ttl dk f90" style="top:150px"></div>
+    <div id="eRows" class="full"></div>
+  </div></div>
+
+  <div id="caps" class="full"></div>
+
+  <!-- placa del canal -->
+  <div id="pl" class="full sc dots">
+    <div id="plL">LOOVO</div>
+    <i class="hair" id="plH"></i>
+    <div id="plS">una columna<br>por área</div>
+    <div id="plT">#Loovo</div>
+  </div>
+
+  <div id="leak" class="full"></div>
+  <div id="white" class="full"></div>
+  <div id="grain"></div>
+</div>
+
+<script>
+//__LIB__
+const ALL = ["#sT", "#sO", "#sC", "#sS", "#sA", "#sP", "#sK", "#sE", "#pl"];
+gsap.set(ALL, { autoAlpha: 0 }); gsap.set(["#leak", "#white", "#shade"], { autoAlpha: 0 });
+
+// ============ H. GANCHO: "empleado" en el cuadro 0; el prompt se vuelve su carné ============
+gsap.set("#sH", { autoAlpha: 1 });
+keyboxOn("#hKb", 860); gsap.set("#hSub", { autoAlpha: 1 });
+T("#hT", ["^estuve trabajando en", "crear un ~prompt~"], ["K1a", "K1b"]);
+const HL = [[560, 0], [460, 0], [620, 1], [380, 0], [540, 0], [300, 1]];
+$("#hLines").innerHTML = HL.map(([w, g], i) => `<i class="dl${g ? " g" : ""}" id="hl${i}" style="top:${150 + i * 58}px;width:${w}px"></i>`).join("");
+gsap.set(".dl", { scaleX: 0 }); gsap.set("#hl0", { scaleX: 1 });
+const h0 = 0.05, hd = (B.h_emp - 0.4 - h0) / HL.length;
+HL.forEach((_, i) => { if (i) tl.to("#hl" + i, { scaleX: 1, duration: hd * 0.9, ease: "none" }, h0 + i * hd); });
+gsap.set("#hCur", { left: 50 + HL[0][0] + 10, top: 134 });
+HL.forEach((x, i) => tl.set("#hCur", { left: 50 + x[0] + 10, top: 134 + i * 58 }, h0 + (i + 0.9) * hd));
+tl.fromTo("#camH", { scale: 1.05 }, { scale: 1.0, duration: B.cut1, ease: "sine.out", immediateRender: false }, 0);
+tl.fromTo("#hBg", { y: 0 }, { y: -110, duration: B.cut1, ease: "none", immediateRender: false }, 0);
+tl.fromTo("#hKb", { scale: 1 }, { scale: 1.1, duration: 3 * F, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, B.h_emp - F);
+// el documento gira y se vuelve el carné
+tl.to("#hDoc", { rotationY: 90, transformPerspective: 1600, scale: 0.9, duration: 0.22, ease: "power3.in" }, B.h_emp - 0.22);
+hide("#hDoc", B.h_emp);
+gsap.set("#kCard", { autoAlpha: 0 }); gsap.set("#kCard .st i", { scaleX: 0 });
+tl.fromTo("#kCard", { autoAlpha: 0, rotationY: -90, transformPerspective: 1600, scale: 0.9 }, { autoAlpha: 1, rotationY: 0, scale: 1, duration: 0.45, ease: "expo.out", immediateRender: false }, B.h_emp);
+tl.to("#hT", { autoAlpha: 0, y: -40, filter: "blur(10px)", duration: 4 * F }, B.h_enc - 0.5);
+T("#hT2", ["que se va a encargar", "de las ~ventas~"], "K1b", { min: B.h_enc - 0.4 });
+tl.to("#kCard .st i", { scaleX: 1, duration: 1.0, ease: "power2.inOut" }, B.h_emp + 0.4);
+burst("#hPrt", 540, 1140, 22, B.h_ven + F, 560);
+shake("#camH", B.h_ven + 2 * F, 12, 5);
+tl.to("#camH", { scale: 2.2, filter: "blur(14px)", duration: 0.3, ease: "power4.in", transformOrigin: "540px 1140px" }, B.cut1 - 0.3);
+hide("#sH", B.cut1);
+
+// ============ K2a. pantalla: el árbol del proyecto (2.5D) ============
+show("#shade", B.cut1); baseIn(B.cut1, 0.5);
+basePanel(B.t_desde - 0.2, 1.0, { s: 0.82, ry: -9, rx: 5, y: -20 });
+tl.to("#base", { rotationY: 7, x: 20, duration: B.o_in - B.t_desde - 0.8, ease: "sine.inOut" }, B.t_desde + 0.8);
+show("#sT", B.cut1); inBlur("#tTag", B.cut1 + 0.2);
+card("¿Cómo va a quedar|*organizado*?", S("K2a"), B.t_desde);
+card("tengo el proyecto,|los ~agentes~", B.t_desde, B.t_inf - 0.3);
+card("la información|de *Claude*", B.t_inf - 0.3, B.o_in + 0.05);
+baseOut(B.o_in, 0.3, 1.5);
+hide(["#sT", "#shade"], B.o_in);
+
+// ============ O. carpeta de ventas -> orquestador con sus agentes ============
+enterMG("#sO", "#camO", B.o_in, B.c_in);
+T("#oT", ["dentro de la carpeta", "de ~ventas~"], "K2b", { min: B.o_in });
+const FT = [["folder-open", "proyecto/", 90, 560, 0], ["robot", "agentes/", 190, 720, 0], ["folder", "ventas/", 190, 880, 1], ["file-text", "CLAUDE.md", 190, 1040, 0]];
+$("#oTree").innerHTML = FT.map(([ic, tx, x, y, g], i) => `<div class="fd${g ? " g" : ""}" id="of${i}" style="left:${x}px;top:${y}px;width:${tx.length * 40 + 190}px"><div class="ib"><div class="ico" style="${ICON(ic)}"></div></div><span>${tx}</span></div>`).join("");
+$("#oLsvg").innerHTML = FT.slice(1).map((f, i) => `<polyline id="ol${i}" points="150,680 150,${f[3] + 60} ${f[2]},${f[3] + 60}" fill="none" stroke="#C8B07A" stroke-width="6"/>`).join("");
+gsap.set(".fd", { autoAlpha: 0 });
+FT.forEach((_, i) => tl.fromTo("#of" + i, { autoAlpha: 0, x: -300, filter: "blur(12px)" }, { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, B.o_in + 0.1 + i * 0.12));
+FT.slice(1).forEach((_, i) => drawLine("#ol" + i, B.o_in + 0.25 + i * 0.12, 0.35));
+tl.to("#of2", { scale: 1.12, x: 30, duration: 0.3, ease: "back.out(2)" }, B.o_ven - 0.1);
+tl.to("#of2 span", { color: "#A88F57", duration: 3 * F }, B.o_ven - 0.1);
+// el árbol se va y aparece el orquestador
+tl.to(["#oTree", "#oLsvg", "#oT"], { autoAlpha: 0, y: -200, filter: "blur(16px)", duration: 5 * F, ease: "power3.in" }, B.o_sub - 0.15);
+T("#oT2", ["vamos a crear", "el ~subagente~"], "K2b", { min: B.o_sub - 0.3 });
+tl.to("#oT2", { autoAlpha: 0, y: -40, filter: "blur(10px)", duration: 4 * F }, B.o_orq - 0.35);
+keybox("#oKb", B.o_orq, 860);
+const ON = document.createElement("div"); ON.className = "node o"; ON.id = "oRoot"; ON.style.cssText = "left:455px;top:640px"; ON.innerHTML = `<div class="ico" style="${ICON("robot")}"></div>`; $("#oNodes").appendChild(ON);
+gsap.set("#oRoot", { autoAlpha: 0 });
+tl.fromTo("#oRoot", { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)", immediateRender: false }, B.o_orq + 0.1);
+tree("#oSvg", "#oNodes", 540, 810, 920, ["magnifying-glass", "chats", "pen-nib", "envelope-simple"], B.o_orq + 0.4, 0.1);
+T("#oT3", ["con sus diferentes", "~agentes~"], "K2b", { min: B.o_age - 0.6 });
+
+// ============ C. columnas ============
+whip("#camO", "#sO", "#sC", "#camC", B.c_in, 1000, 0, B.cut2);
+T("#cT", ["de cada área,", "yo lo llamo"], "K3a", { min: B.c_in });
+keybox("#cKb", B.c_col, 820);
+const CP = [["Ventas", 90, 700, B.c_ven], ["Marketing", 440, 560, B.c_mkt], ["", 790, 430, B.c_var]];
+$("#cPils").innerHTML = CP.map(([tx, x, h], i) => `<div class="pil" id="cp${i}" style="left:${x}px;height:${h}px"><b></b><i></i><span class="fl"></span></div><div class="pl2" id="cl${i}" style="left:${x - 40}px">${tx}</div>`).join("");
+gsap.set(".pil", { scaleY: 0 }); gsap.set(".pl2", { autoAlpha: 0 });
+CP.forEach(([, , , t], i) => { tl.to("#cp" + i, { scaleY: 1, duration: 0.55, ease: "expo.out" }, t - 0.15); if (CP[i][0]) inBlur("#cl" + i, t, 5 * F); });
+// "varias columnas": la tercera crece y aparece un "+"
+const cpl = $("#cl2"); cpl.innerHTML = "+ áreas"; tl.fromTo("#cl2", { autoAlpha: 0 }, { autoAlpha: 1, duration: 4 * F, immediateRender: false }, B.c_var + 0.15);
+shake("#camC", B.c_col + F, 10, 4);
+tl.to("#cT", { autoAlpha: 0, y: -40, filter: "blur(10px)", duration: 4 * F }, B.c_ven - 0.4);
+tl.to("#cKb", { y: -140, scale: 0.8, duration: 0.4, ease: "expo.inOut" }, B.c_ven - 0.4);
+tl.to("#camC", { scale: 1.5, filter: "blur(14px)", duration: 0.28, ease: "power4.in", transformOrigin: "540px 1100px" }, B.cut2 - 0.28);
+hide("#sC", B.cut2);
+
+// ============ S. pantalla: subcarpetas (2.5D) ============
+show("#shade", B.cut2); baseIn(B.cut2, 0.45);
+basePanel(B.cut2 + 0.7, 1.1, { s: 0.84, ry: 8, rx: 4, y: 10 });
+show("#sS", B.cut2); inBlur("#sTag", B.cut2 + 0.2);
+card("vamos creando|*subcarpetas*", S("K3d"), at("K3d", "dentro"));
+card("dentro del|~proyecto~", at("K3d", "dentro"), B.a_in + 0.05);
+baseOut(B.a_in, 0.3, 1.5);
+hide(["#sS", "#shade"], B.a_in);
+
+// ============ A. Claude edita los videos ============
+enterMG("#sA", "#camA", B.a_in, B.p_in);
+T("#aT", ["la verdad tenía", "pensado usar ~Claude~"], "K4a", { min: B.a_in });
+gsap.set("#aTool", { autoAlpha: 0 }); gsap.set("#aTool .ss", { autoAlpha: 0 });
+tl.fromTo("#aTool", { autoAlpha: 0, x: 700, rotationY: -40, transformPerspective: 1600, filter: "blur(14px)" }, { autoAlpha: 1, x: 0, rotationY: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, B.a_cla - 0.25);
+T("#aT2", ["pero lo estoy usando", "para ~edición de videos~"], "K4a", { min: B.a_edi - 0.8 });
+inBlur("#aTool .ss", B.a_edi - 0.05, 5 * F);
+tl.to("#aTool .ib", { backgroundColor: "#A88F57", duration: 3 * F }, B.a_vid);
+tl.to("#camA", { x: -1000, filter: "blur(22px)", duration: 4 * F, ease: "power3.in" }, B.p_in - 4 * F);
+hide("#sA", B.p_in);
+
+// ============ P. pantalla: la terminal con Pi ============
+show("#shade", B.p_in); baseIn(B.p_in, 0.45);
+show("#sP", B.p_in); inBlur("#pTag", B.p_in + 0.15);
+card("entonces vamos a|utilizar mejor ~Pi~", S("K4b"), B.k_in + 0.05);
+baseOut(B.k_in, 0.25, 1.5);
+hide(["#sP", "#shade"], B.k_in);
+
+// ============ K. optimiza muchísimo los tokens ============
+enterMG("#sK", "#camK", B.k_in, B.e_in);
+T("#kT", ["que optimiza", "~muchísimo~"], "K4c", { min: B.k_in });
+keybox("#tKb", B.k_tok, 620);
+let th = ""; for (let i = 0; i < 24; i++) th += `<div class="tk${i % 4 === 1 ? " k" : ""}" id="tk${i}" style="left:${90 + (i % 12) * 78}px;top:${960 + Math.floor(i / 12) * 70}px"></div>`;
+$("#kToks").innerHTML = th; gsap.set(".tk", { autoAlpha: 0 });
+for (let i = 0; i < 24; i++) tl.fromTo("#tk" + i, { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.2, ease: "back.out(2)", immediateRender: false }, B.k_in + 0.1 + i * 0.012);
+for (let i = 0; i < 24; i++) if (i % 3) tl.to("#tk" + i, { y: -500 - R(0, 300), x: R(-200, 200), rotation: R(-180, 180), autoAlpha: 0, duration: 0.5, ease: "power2.in" }, B.k_opt + (i % 12) * 0.02);
+gsap.set(["#kmTrack", "#kmLbl"], { autoAlpha: 0 });
+inBlur(["#kmTrack", "#kmLbl"], B.k_opt - 0.1);
+tl.fromTo("#kmFill", { scaleX: 0.92 }, { scaleX: 0.28, duration: 0.9, ease: "expo.inOut", immediateRender: false }, B.k_opt);
+tl.to("#kmFill", { backgroundColor: "#C8B07A", duration: 0.3 }, B.k_opt + 0.6);
+
+// ============ E. lo que queda esperando (La Nómina Viva) ============
+whip("#camK", "#sK", "#sE", "#camE", B.e_in, 0, 900, B.pl);
+T("#eT", ["vamos a ~esperar~"], "K5a", { min: B.e_in });
+const ER = [["film-slate", "Agente editor", "EDITANDO <b>LOS VIDEOS</b>", B.e_edi - 0.3], ["robot", "Agente de ventas", "EN <b>ENTRENAMIENTO</b> · LOOP", B.e_ven - 0.3], ["plug", "Integración Odoo", "EN <b>PROCESO</b>", B.e_int - 0.3]];
+$("#eRows").innerHTML = ER.map(([ic, tx, st], i) => `<div class="erow" id="er${i}" style="top:${470 + i * 290}px"><div class="ib"><div class="ico" style="${ICON(ic)}"></div></div><div class="tt">${tx}</div><div class="tm ico" style="${ICON("timer")}"></div></div><div class="est" id="es${i}" style="top:${630 + i * 290}px">${st}</div>`).join("");
+gsap.set([".erow", ".est"], { autoAlpha: 0 });
+ER.forEach(([, , , t], i) => {
+  tl.fromTo("#er" + i, { autoAlpha: 0, x: i % 2 ? -700 : 700, filter: "blur(16px)" }, { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, t);
+  tl.fromTo("#es" + i, { autoAlpha: 0, y: -30 }, { autoAlpha: 1, y: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, t + 0.3);
+  tl.fromTo(`#er${i} .tm`, { rotation: 0 }, { rotation: 360, duration: 1.2, ease: "none", repeat: 2, immediateRender: false }, t + 0.3);
+});
+tl.to("#er1 .ib", { backgroundColor: "#A88F57", duration: 3 * F, yoyo: true, repeat: 3 }, B.e_loop - 0.2);
+tl.to("#camE", { scale: 1.6, filter: "blur(12px)", duration: 0.45, ease: "power4.in", transformOrigin: "540px 900px" }, B.pl - 0.45);
+
+// ============ placa del canal ============
+destello(B.pl, ["#sE"]);
+show("#pl", B.pl);
+gsap.set(["#plL", "#plS", "#plT"], { autoAlpha: 0 }); gsap.set("#plH", { scaleX: 0 });
+tl.fromTo("#plL", { autoAlpha: 0, y: 30, scale: 1.12, filter: "blur(14px)" }, { autoAlpha: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 10 * F, ease: "power2.out", immediateRender: false }, B.pl + 0.10);
+tl.to("#plH", { scaleX: 1, duration: 0.45, ease: "sine.inOut" }, B.pl + 0.35);
+tl.fromTo("#plS", { autoAlpha: 0, scale: 0.7, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 9 * F, ease: "power2.out", immediateRender: false }, B.pl + 0.45);
+inBlur("#plT", B.pl + 0.8, 6 * F, 10);
+tl.fromTo("#pl", { scale: 1 }, { scale: 1.03, duration: D.total - B.pl, ease: "sine.out", immediateRender: false }, B.pl);
+
+const NG = Math.ceil(D.total / (2 * F));
+for (let i = 0; i < NG; i++) tl.set("#grain", { x: ((i * 73) % 180) - 90, y: ((i * 131) % 180) - 90 }, i * 2 * F);
+tl.set({}, {}, D.total);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

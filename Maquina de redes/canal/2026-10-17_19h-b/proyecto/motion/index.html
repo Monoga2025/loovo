@@ -1,0 +1,489 @@
+<!doctype html>
+<!-- Canal 2026-10-17 19h-b · "3 sistemas para contadores" · estilo Adrià sobre la marca Loovo (blanco pastel + dorado + carbón).
+     Generado por build_html.py: tiempos de plan/edl.json y plan/words_on.json. Reglas: border-radius 0, sin recortar silueta,
+     sin fondos dorados, sin verde/lima/rojo, texto >= 80 px. Invert flash (9,50 y 35,72 s) se aplica en post (post_fx2.py). -->
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>Tres sistemas contador</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family:"Playfair"; font-style:italic; font-weight:700; src:url("assets/fonts/playfair-display-latin-700-italic.ttf") format("truetype"); }
+@font-face { font-family:"Montserrat"; font-weight:600; src:url("assets/fonts/montserrat-600.ttf") format("truetype"); }
+* { box-sizing:border-box; margin:0; padding:0; border-radius:0 !important; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:#F6F4EF; font-family:"Montserrat", sans-serif; font-weight:600; }
+.full { position:absolute; left:0; top:0; width:1080px; height:1920px; }
+.sc { overflow:hidden; }
+.dots { background-color:#F6F4EF; background-image:radial-gradient(circle at 12px 12px, rgba(170,165,156,.42) 0, rgba(170,165,156,.42) 1.1px, rgba(170,165,156,0) 1.6px); background-size:24px 24px; }
+.w { display:inline-block; white-space:pre; }
+.ln { display:block; }
+.hair { position:absolute; height:3px; background:#C8B07A; transform-origin:0 50%; }
+.ico { -webkit-mask-size:contain; -webkit-mask-repeat:no-repeat; -webkit-mask-position:center; mask-size:contain; mask-repeat:no-repeat; mask-position:center; }
+.sh { box-shadow:0 34px 70px -24px rgba(90,74,44,.34), 0 8px 22px rgba(90,74,44,.10); }
+
+/* persona */
+#base { z-index:1; }
+#shade { z-index:9; background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(30,24,16,.22) 68%, rgba(30,24,16,.24) 77%, rgba(0,0,0,0) 88%); }
+#caps { z-index:10; }
+.cap { position:absolute; left:0; bottom:500px; width:1080px; text-align:center; white-space:nowrap; font-size:86px; line-height:1.08; letter-spacing:-1px;
+  color:#FBF8F1; text-shadow:0 2px 6px rgba(20,16,10,.38), 0 6px 26px rgba(20,16,10,.38); }
+.cap .k { color:#E6D6AE; }
+.cap .s { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:150px; line-height:1; color:#E6D6AE; letter-spacing:0; }
+.kin { position:absolute; z-index:11; color:#FBF8F1; letter-spacing:-2px; white-space:nowrap; text-shadow:0 2px 8px rgba(20,16,10,.40), 0 10px 34px rgba(20,16,10,.38); }
+.kin .s { font-family:"Playfair"; font-style:italic; font-weight:700; color:#E6D6AE; letter-spacing:0; }
+#gk1 { left:0; width:1080px; text-align:center; top:1000px; font-size:92px; line-height:1.1; }
+#gk1 .s { font-size:230px; line-height:1.0; }
+
+/* motion graphics comunes */
+.mg { z-index:30; }
+.mgcam { transform-origin:50% 50%; }
+.bgd { position:absolute; left:-160px; top:-160px; width:1400px; height:2240px; }
+.persp { position:absolute; left:0; top:0; width:1080px; height:1920px; perspective:1700px; perspective-origin:50% 55%; }
+.world { position:absolute; left:0; top:0; width:1080px; height:1920px; transform-style:preserve-3d; }
+.lay { position:absolute; left:0; top:0; width:1080px; height:1920px; transform-style:preserve-3d; }
+.tx { position:absolute; left:84px; top:250px; color:#2A2926; font-size:84px; line-height:102px; letter-spacing:-2px; white-space:nowrap; z-index:5; }
+.tx .g { color:#8C887F; }
+.tx .s { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:150px; line-height:150px; color:#A88F57; letter-spacing:0; }
+.kb { position:relative; display:inline-block; vertical-align:-40px; height:160px; margin-left:12px; }
+.kb .bg { position:absolute; left:0; top:0; height:160px; width:0; background:#2A2926; box-shadow:0 30px 60px -26px rgba(42,41,38,.45); }
+.kb .cu { position:absolute; left:0; top:0; width:12px; height:160px; background:#C8B07A; }
+.kb .t { position:relative; display:inline-block; text-align:center; font-size:118px; line-height:160px; letter-spacing:-3px; color:#E6D6AE; padding:0 34px; }
+.kb .x { position:absolute; left:20px; top:76px; height:9px; background:#C8B07A; transform-origin:0 50%; }
+.box { position:absolute; }
+.box.c { background:#2A2926; } .box.l { background:#FBF8F1; }
+.box .ico { position:absolute; }
+.box.c .ico { background:#E6D6AE; } .box.l .ico { background:#2A2926; }
+.lbl { position:absolute; left:0; width:100%; text-align:center; font-size:80px; letter-spacing:-1.5px; white-space:nowrap; }
+.box.c .lbl { color:#FBF8F1; } .box.l .lbl { color:#2A2926; }
+.ghost { position:absolute; font-family:"Playfair"; font-style:italic; font-weight:700; color:rgba(168,143,87,.16); line-height:1; white-space:nowrap; }
+.bar { position:absolute; height:22px; background:#D9D4C8; }
+.bar.d { background:#5A5850; }
+
+/* escena A: manual -> pocos contadores con IA */
+#gridA { position:absolute; left:120px; top:1010px; width:840px; height:700px; }
+#gridA .p { position:absolute; width:120px; height:120px; background:#FBF8F1; }
+#gridA .p .ico { position:absolute; left:28px; top:28px; width:64px; height:64px; background:#8C887F; }
+#gridA .p.on { background:#2A2926; } #gridA .p.on .ico { background:#E6D6AE; }
+.paper { position:absolute; width:300px; height:390px; background:#FBF8F1; }
+.paper .bar { left:40px; }
+
+/* tabla del extractor */
+#tbl { position:absolute; left:50px; top:1000px; width:980px; }
+#tbl .hd { position:absolute; left:0; top:0; height:130px; background:#2A2926; }
+#tbl .hc { position:absolute; top:0; height:130px; line-height:130px; text-align:center; color:#E6D6AE; font-size:80px; letter-spacing:-1.5px; white-space:nowrap; }
+#tbl .rw { position:absolute; left:0; width:980px; height:96px; background:#FBF8F1; border-bottom:2px solid #E4DFD3; }
+#tbl .rw .bar { top:37px; }
+
+/* conciliador */
+.colh { position:absolute; top:880px; width:420px; height:130px; line-height:130px; text-align:center; font-size:80px; letter-spacing:-2px; white-space:nowrap; }
+.cell { position:absolute; width:420px; height:88px; background:#FBF8F1; }
+.cell .bar { top:33px; left:40px; }
+#mark { position:absolute; left:66px; width:948px; height:112px; border:8px solid #C8B07A; }
+
+/* chat del agente */
+.bub { position:absolute; padding:0 46px; height:150px; line-height:150px; font-size:86px; letter-spacing:-1.5px; white-space:nowrap; }
+.bub.l { background:#FBF8F1; color:#2A2926; } .bub.c { background:#2A2926; color:#FBF8F1; }
+.bub .s { font-family:"Playfair"; font-style:italic; font-weight:700; color:#E6D6AE; font-size:110px; }
+
+/* CTA */
+#cta { position:absolute; left:84px; top:1040px; z-index:11; }
+#cta .r { position:relative; display:block; height:132px; white-space:nowrap; color:#FBF8F1; font-size:84px; line-height:132px; letter-spacing:-1.5px;
+  text-shadow:0 2px 6px rgba(20,16,10,.45), 0 8px 28px rgba(20,16,10,.45); }
+#cta .d { display:inline-block; width:180px; height:116px; line-height:116px; margin-right:30px; vertical-align:middle; text-align:center; background:#2A2926; color:#E6D6AE;
+  font-size:84px; letter-spacing:-2px; text-shadow:none; box-shadow:0 24px 50px -20px rgba(0,0,0,.55); }
+
+/* placa final */
+#pl { z-index:35; }
+#plA { position:absolute; left:0; top:700px; width:1080px; text-align:center; font-size:110px; letter-spacing:-3px; color:#2A2926; }
+#plB { position:absolute; left:0; top:860px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:170px; line-height:1; color:#A88F57; white-space:nowrap; }
+#plH { left:300px; top:1090px; width:480px; }
+
+/* destello / grano */
+#leak { z-index:40; background:radial-gradient(ellipse 70% 60% at 18% 40%, rgba(255,251,242,1) 0%, rgba(240,226,190,.85) 35%, rgba(214,194,147,0) 75%); mix-blend-mode:screen; }
+#white { z-index:41; background:#FFFBF2; }
+#grain { position:absolute; left:-200px; top:-200px; width:1480px; height:2320px; z-index:45; background:url("assets/grano.png"); opacity:.05; mix-blend-mode:multiply; pointer-events:none; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="60.95" data-width="1080" data-height="1920">
+  <video id="base" class="clip full" src="assets/base.mp4" data-start="0" data-duration="60.95" data-track-index="1" muted playsinline></video>
+  <div id="shade" class="full"></div>
+  <div id="caps" class="full"></div>
+  <div id="gk1" class="kin"></div>
+  <div id="cta"></div>
+
+  <!-- A: contador manual -> pocos con IA -->
+  <div id="mgA" class="mg full sc"><div class="mgcam full" id="camA">
+    <div class="bgd dots" id="bgA"></div>
+    <div class="persp"><div class="world" id="wA">
+      <div class="lay" id="papers"></div>
+      <div class="lay" id="gridL"><div id="gridA"></div></div>
+    </div></div>
+    <div class="tx" id="txA1"></div><div class="tx" id="txA2"></div>
+  </div></div>
+
+  <!-- 1: agente IA -->
+  <div id="mg1" class="mg full sc"><div class="mgcam full" id="cam1">
+    <div class="bgd dots" id="bg1"></div>
+    <div class="persp"><div class="world" id="w1">
+      <div class="lay" id="l1far"><div class="ghost" id="g01" style="left:60px;top:560px;font-size:900px">01</div></div>
+      <div class="lay" id="l1mid"></div>
+      <div class="lay" id="l1near"></div>
+    </div></div>
+    <div class="tx" id="tx1a"></div><div class="tx" id="tx1b"></div><div class="tx" id="tx1c"></div><div class="tx" id="tx1d"></div><div class="tx" id="tx1e"></div>
+  </div></div>
+
+  <!-- 2: extractor -->
+  <div id="mg2" class="mg full sc"><div class="mgcam full" id="cam2">
+    <div class="bgd dots" id="bg2"></div>
+    <div class="persp"><div class="world" id="w2">
+      <div class="lay" id="l2far"><div class="ghost" style="left:80px;top:600px;font-size:900px">02</div></div>
+      <div class="lay" id="l2mid"></div>
+      <div class="lay" id="l2near"><div id="tbl"></div></div>
+    </div></div>
+    <div class="tx" id="tx2a"></div><div class="tx" id="tx2b"></div><div class="tx" id="tx2c"></div>
+  </div></div>
+
+  <!-- 3: conciliador -->
+  <div id="mg3" class="mg full sc"><div class="mgcam full" id="cam3">
+    <div class="bgd dots" id="bg3"></div>
+    <div class="persp"><div class="world" id="w3">
+      <div class="lay" id="l3far"><div class="ghost" style="left:80px;top:600px;font-size:900px">03</div></div>
+      <div class="lay" id="l3mid"></div>
+      <div class="lay" id="l3near"></div>
+    </div></div>
+    <div class="tx" id="tx3a"></div><div class="tx" id="tx3b"></div><div class="tx" id="tx3c"></div>
+  </div></div>
+
+  <div id="pl" class="full dots">
+    <div id="plA">Comenta</div>
+    <div id="plB">D1 · D2 · D3</div>
+    <i class="hair" id="plH"></i>
+  </div>
+  <div id="leak" class="full"></div>
+  <div id="white" class="full"></div>
+  <div id="grain"></div>
+</div>
+
+<script>
+const D = {"words": [["Mira,", 0.06, 0.22], ["todavía", 0.28, 0.56], ["estamos", 0.61, 0.78], ["en", 0.84, 1.02], ["2026", 0.99, 1.62], ["y", 1.5, 1.82], ["te", 1.83, 1.9], ["voy", 1.97, 2.02], ["a", 2.13, 2.04], ["mostrar", 2.18, 2.26], ["cómo", 2.29, 2.46], ["vas", 2.61, 2.68], ["a", 2.71, 2.78], ["pasar", 2.85, 2.96], ["de", 3.11, 3.1], ["ser", 3.16, 3.2], ["un", 3.3, 3.52], ["contador", 3.52, 3.84], ["que", 3.95, 4.08], ["hace", 4.13, 4.24], ["todo", 4.3, 4.46], ["de", 4.61, 4.62], ["forma", 4.73, 4.84], ["manual", 4.99, 5.16], ["a", 5.28, 5.64], ["ser", 5.54, 5.82], ["uno", 5.7, 6.0], ["de", 6.05, 6.08], ["los", 6.14, 6.32], ["pocos", 6.26, 6.6], ["contadores", 6.75, 7.12], ["que", 7.22, 7.4], ["utiliza", 7.34, 7.6], ["la", 7.55, 7.82], ["Inteligencia", 7.78, 8.14], ["Artificial", 8.21, 8.54], ["como", 8.62, 8.82], ["herramienta.", 8.86, 9.5], ["Así", 9.59, 9.76], ["que", 9.59, 9.9], ["te", 9.89, 10.0], ["van", 10.05, 10.14], ["tres", 10.18, 10.38], ["sistemas", 10.37, 10.76], ["que", 10.87, 11.0], ["puedes", 11.0, 11.18], ["utilizar", 11.25, 11.7], ["para", 11.76, 12.58], ["destacar", 12.67, 13.06], ["como", 13.05, 13.24], ["contador.", 13.39, 13.92], ["Número", 14.0, 14.17], ["uno,", 14.17, 14.34], ["Un", 15.32, 15.48], ["agente", 15.52, 15.76], ["de", 15.67, 15.82], ["Inteligencia", 15.87, 16.26], ["Artificial", 16.32, 16.7], ["entrenado", 16.83, 17.28], ["con", 17.28, 17.5], ["el", 17.58, 17.74], ["Estatuto", 17.86, 18.16], ["Tributario", 18.16, 18.78], ["y", 18.82, 19.14], ["los", 19.03, 19.42], ["conceptos", 19.51, 19.86], ["de", 19.85, 20.0], ["la", 19.9, 20.12], ["DIAN", 20.11, 20.64], ["que", 20.77, 20.86], ["te", 20.89, 21.1], ["responde", 21.16, 21.4], ["dudas", 21.31, 21.62], ["de", 21.62, 21.78], ["exógena", 21.8, 22.2], ["y", 22.21, 22.4], ["retención", 22.46, 22.88], ["en", 22.9, 23.14], ["tres", 23.11, 23.3], ["segundos", 23.3, 23.7], ["citando", 23.8, 24.18], ["el", 24.13, 24.38], ["artículo", 24.41, 24.68], ["exacto.", 24.77, 25.34], ["Sistema", 25.39, 25.64], ["número", 25.64, 25.89], ["dos,", 25.89, 26.14], ["Un", 26.69, 26.84], ["extractor", 26.69, 27.28], ["que", 27.29, 27.48], ["recibe", 27.56, 27.7], ["fotos", 27.78, 28.08], ["borrosas,", 28.08, 28.7], ["PDFs", 28.71, 29.7], ["y", 29.64, 29.84], ["te", 29.81, 29.96], ["las", 30.06, 30.12], ["devuelve", 30.18, 30.48], ["en", 30.57, 30.62], ["tabla", 30.74, 30.94], ["limpia", 30.92, 31.32], ["Excel", 31.48, 31.64], ["con", 31.72, 31.98], ["NIT,", 32.12, 32.24], ["CUFE", 32.54, 32.68], ["e", 32.79, 33.0], ["impuestos,", 33.04, 33.62], ["lista", 33.73, 34.08], ["para", 34.04, 34.24], ["subir", 34.28, 34.46], ["a", 34.43, 34.68], ["Siigo", 34.63, 34.92], ["o", 34.97, 35.16], ["Alegra.", 35.13, 35.66], ["Y", 35.78, 35.98], ["por", 35.98, 36.19], ["último,", 36.19, 36.39], ["sistema", 36.39, 36.59], ["número", 36.59, 36.8], ["tres,", 36.8, 37.0], ["Un", 37.78, 38.06], ["conciliador", 37.94, 38.58], ["bancario", 38.59, 39.12], ["automático", 39.23, 40.0], ["que", 40.06, 40.26], ["cruza", 40.22, 40.48], ["tus", 40.53, 40.78], ["extractos", 40.89, 42.04], ["contra", 42.15, 42.5], ["tu", 42.58, 42.72], ["libro", 42.76, 43.02], ["contable", 43.04, 43.6], ["en", 43.65, 43.9], ["segundos", 43.86, 44.3], ["y", 44.39, 44.5], ["te", 44.51, 44.68], ["marca", 44.81, 44.88], ["en", 45.02, 45.08], ["rojo", 45.16, 45.5], ["hasta", 45.44, 45.8], ["el", 45.7, 46.02], ["4x1000.", 45.95, 46.68], ["Si", 47.03, 47.1], ["lo", 47.03, 47.3], ["quieren", 47.28, 47.46], ["usar,", 47.56, 47.96], ["quiero", 48.13, 48.28], ["que", 48.4, 48.46], ["comenten", 48.46, 48.82], ["D1", 48.87, 49.48], ["para", 49.62, 49.82], ["que", 49.83, 49.96], ["les", 50.0, 50.04], ["demos", 50.1, 50.2], ["el", 50.22, 50.44], ["primer", 50.37, 50.66], ["sistema.", 50.67, 51.1], ["Comentan", 51.16, 52.06], ["D2", 52.04, 52.82], ["para", 52.72, 53.44], ["darles", 53.41, 53.78], ["el", 53.9, 53.94], ["segundo", 54.09, 54.18], ["sistema", 54.33, 54.62], ["y", 54.7, 55.22], ["comentan", 55.13, 55.68], ["D3", 55.67, 56.14], ["para", 56.17, 56.38], ["darles", 56.26, 56.68], ["los", 56.81, 56.88], ["tres", 56.99, 57.0], ["sistemas.", 57.15, 57.48], ["Los", 57.96, 58.16], ["amo", 57.96, 58.4], ["muchachos,", 58.53, 59.18], ["adiós.", 59.2, 59.92]], "total": 60.95};
+const F = 1 / 30, LEAD = 2 * F;
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const $ = (s) => document.querySelector(s);
+const show = (s, t) => tl.set(s, { autoAlpha: 1 }, t), hide = (s, t) => tl.set(s, { autoAlpha: 0 }, t);
+const esc = (x) => x.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const norm = (x) => x.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9x]/g, "");
+// onset de la palabra 'q' (n-ésima aparición desde 'after')
+function at(q, after = 0) {
+  const k = D.words.find((w) => w[1] >= after - 0.05 && norm(w[0]) === norm(q));
+  if (!k) throw new Error("palabra no encontrada: " + q + " @" + after);
+  return k[1];
+}
+const ease = { o: "power3.out", e: "expo.out" };
+function rich(t) {
+  return t.split("|").map((ln) => '<span class="ln">' + esc(ln).replace(/~([^~]+)~/g, '<span class="s">$1</span>').replace(/\*([^*]+)\*/g, '<span class="k">$1</span>') + "</span>").join("");
+}
+// ---------- subtítulos por tarjeta ----------
+let capN = 0;
+function card(text, t0, t1) {
+  const el = document.createElement("div"); el.className = "cap"; el.id = "cap" + capN++; el.innerHTML = rich(text);
+  $("#caps").appendChild(el); gsap.set(el, { autoAlpha: 0 });
+  tl.fromTo(el, { autoAlpha: 0, filter: "blur(8px)", y: 10 }, { autoAlpha: 1, filter: "blur(0px)", y: 0, duration: 2 * F, ease: "power2.out", immediateRender: false }, t0 - LEAD);
+  tl.set(el, { autoAlpha: 0 }, t1 - LEAD);
+  return el;
+}
+// ---------- texto palabra por palabra: lines = [[ [texto, t, clase] ... ] ...] ----------
+function words(box, lines) {
+  const el = $(box);
+  el.innerHTML = lines.map((ln) => '<span class="ln">' + ln.map(([t, , c]) => `<span class="w${c ? " " + c : ""}">${esc(t)}</span>`).join(" ") + "</span>").join("");
+  const sp = el.querySelectorAll(".w"); let k = 0;
+  lines.forEach((ln) => ln.forEach(([t, a, c]) => {
+    const s = sp[k++]; const serif = (c || "").includes("s");
+    if (a <= 0.001) return;
+    gsap.set(s, { autoAlpha: 0 });
+    tl.fromTo(s, { autoAlpha: 0, y: 22, filter: "blur(10px)", scale: serif ? 0.6 : 1 },
+      { autoAlpha: 1, y: 0, filter: "blur(0px)", scale: 1, duration: (serif ? 7 : 5) * F, ease: "power2.out", immediateRender: false }, Math.max(0, a - LEAD));
+  }));
+  return el;
+}
+// ---------- caja de palabra clave (cursor dorado -> caja crece -> texto se revela) ----------
+let kbN = 0;
+function kbox(box, before, text, KT, strike, wdt) {
+  const id = "kb" + kbN++;
+  const el = $(box); const ln = document.createElement("span"); ln.className = "ln";
+  ln.innerHTML = (before ? `<span class="w">${esc(before)}</span>` : "") + `<span class="kb" id="${id}"><span class="bg"></span><span class="t">${esc(text)}</span><span class="cu"></span>${strike ? '<i class="x"></i>' : ""}</span>`;
+  el.appendChild(ln);
+  const k = "#" + id; $(k + " .t").style.width = wdt + "px";
+  gsap.set(k, { autoAlpha: 0 }); gsap.set(k + " .cu", { autoAlpha: 0 }); gsap.set(k + " .t", { clipPath: "inset(0 100% 0 0)" });
+  if (strike) gsap.set(k + " .x", { scaleX: 0, width: wdt - 40 });
+  show(k, KT - 6 * F); tl.set(k + " .cu", { autoAlpha: 1 }, KT - 6 * F);
+  tl.fromTo(k + " .bg", { width: 0 }, { width: wdt, duration: 5 * F, ease: "power3.out", immediateRender: false }, KT - 4 * F);
+  tl.fromTo(k + " .cu", { x: 0 }, { x: wdt - 12, duration: 5 * F, ease: "power3.out", immediateRender: false }, KT - 4 * F);
+  tl.fromTo(k + " .t", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 5 * F, ease: "power2.out", immediateRender: false }, KT - 3 * F);
+  tl.set(k + " .cu", { autoAlpha: 0 }, KT + 6 * F);
+  if (strike) tl.to(k + " .x", { scaleX: 1, duration: 0.2, ease: "power2.out" }, KT + 0.2);
+  if (before) { const b = ln.querySelector(".w"); gsap.set(b, { autoAlpha: 0 }); tl.fromTo(b, { autoAlpha: 0, y: 22, filter: "blur(10px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 5 * F, ease: "power2.out", immediateRender: false }, before === "" ? KT : KT - 10 * F); }
+  return k;
+}
+const pop = (s, t, from = {}) => (gsap.set(s, { autoAlpha: 0 }), tl.fromTo(s, Object.assign({ autoAlpha: 0, scale: 0.6, y: -40, filter: "blur(12px)" }, from),
+  { autoAlpha: 1, scale: 1, y: 0, x: 0, rotation: 0, filter: "blur(0px)", duration: 7 * F, ease: "power3.out", immediateRender: false }, t - LEAD));
+const fadeOut = (s, t, d = 4 * F) => tl.to(s, { autoAlpha: 0, y: -30, filter: "blur(12px)", duration: d, ease: "power1.in" }, t);
+function boxHTML(id, cls, x, y, w, h, ico, isz, lbl, extra = "") {
+  const ic = ico ? `<div class="ico" style="left:${(w - isz) / 2}px;top:${lbl ? h * 0.18 : (h - isz) / 2}px;width:${isz}px;height:${isz}px;-webkit-mask-image:url(assets/ico/${ico}.svg);mask-image:url(assets/ico/${ico}.svg)"></div>` : "";
+  const lb = lbl ? `<div class="lbl" style="top:${h - 120}px">${lbl}</div>` : "";
+  return `<div class="box ${cls} sh" id="${id}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;${extra}">${ic}${lb}</div>`;
+}
+// entrada de un motion graphic: escala 4 + blur 18 -> 1,05 expo.out 0,5 s, luego deriva
+function enterMG(mg, cam, T0, T1) {
+  gsap.set(mg, { autoAlpha: 0 }); show(mg, T0);
+  tl.fromTo(cam, { scale: 4, filter: "blur(18px)" }, { scale: 1.05, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, T0);
+  tl.to(cam, { scale: 1.0, duration: T1 - T0 - 0.5, ease: "sine.inOut" }, T0 + 0.5);
+}
+function destello(T, hideList) {
+  tl.fromTo("#leak", { autoAlpha: 0, x: -260 }, { autoAlpha: 1, x: 120, duration: 3 * F, ease: "power1.in", immediateRender: false }, T - 3 * F);
+  tl.fromTo("#white", { autoAlpha: 0 }, { autoAlpha: 1, duration: 3 * F, ease: "power1.in", immediateRender: false }, T - 3 * F);
+  hide(hideList, T);
+  tl.set("#leak", { autoAlpha: 0 }, T + 3 * F);
+  tl.to("#white", { autoAlpha: 0, duration: 4 * F, ease: "sine.out" }, T + 3 * F);
+  tl.fromTo("#base", { filter: "blur(6px) brightness(1.08)" }, { filter: "blur(0px) brightness(1)", duration: 5 * F, ease: "sine.out", immediateRender: false }, T + 2 * F);
+}
+gsap.set(["#leak", "#white", "#pl"], { autoAlpha: 0 });
+const CUTA = 9.50, CUT2 = 35.72;            // invert flash (post): el gráfico se oculta en este cuadro
+const MGA = 3.27, MG1 = 13.95, MG1E = 25.33, MG2 = 26.62, MG3 = 37.72, MG3E = 46.92, PL = 59.95;
+
+// =============== 1. GANCHO (persona): título cinético, la primera palabra ya visible en el cuadro 0 ===============
+words("#gk1", [[["Mira,", 0]], [["todavía", at("todavía")], ["estamos", at("estamos")], ["en", at("en")]], [["2026", at("2026"), "s"]]]);
+show("#shade", 0);
+tl.fromTo("#gk1 .s", { scale: 1.0 }, { scale: 1.06, duration: 0.6, ease: "sine.inOut", immediateRender: false }, at("2026") + 0.25);
+fadeOut("#gk1", at("y", 1.3) - 3 * F);
+card("y te voy a mostrar", at("y", 1.3), at("cómo", 2));
+card("cómo vas a *pasar*", at("cómo", 2), MGA + 0.05);
+hide("#shade", MGA);
+
+// =============== 2. MG A: contador manual -> uno de los pocos con IA ===============
+enterMG("#mgA", "#camA", MGA, CUTA);
+gsap.set("#wA", { rotationX: 16, rotationY: -12, z: -40 });
+tl.to("#wA", { rotationX: 8, rotationY: 6, z: 0, duration: 2.6, ease: "sine.inOut" }, MGA);
+tl.to("#bgA", { x: 30, y: 14, duration: CUTA - MGA, ease: "sine.inOut" }, MGA);
+words("#txA1", [[["de ser un", at("un", 3.2)]], [["contador", at("contador", 3.4)]], [["que hace todo", at("que", 3.8)]]]);
+kbox("#txA1", "de forma", "manual", at("manual", 4.8), true, 500);
+// papeles que caen uno por palabra (trabajo manual)
+const PAP = [[110, 1040, -9], [400, 1000, 4], [690, 1060, 11], [230, 1260, 6], [560, 1240, -7], [380, 1440, 2]];
+$("#papers").innerHTML = PAP.map(([x, y, r], i) => `<div class="paper sh" id="pp${i}" style="left:${x}px;top:${y}px;transform:translateZ(${20 + i * 18}px) rotate(${r}deg)">` +
+  [60, 110, 160, 210, 260, 310].map((b, j) => `<i class="bar${j === 0 ? " d" : ""}" style="top:${b}px;width:${j === 0 ? 150 : 220 - (j * 37) % 90}px"></i>`).join("") + "</div>").join("");
+const papT = [at("contador", 3.4), at("que", 3.8), at("hace", 3.9), at("todo", 4.1), at("de", 4.4), at("forma", 4.5)];
+PAP.forEach((p, i) => { gsap.set("#pp" + i, { autoAlpha: 0 }); tl.fromTo("#pp" + i, { autoAlpha: 0, y: -260, filter: "blur(10px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 7 * F, ease: "power3.out", immediateRender: false }, papT[i] - LEAD); });
+// cambio de idea: barrido de cámara (whip) al panel de los pocos contadores
+const A2 = at("ser", 5.3);
+tl.to(["#txA1"], { x: -1100, filter: "blur(16px)", duration: 6 * F, ease: "power3.in" }, A2 - 6 * F);
+tl.to("#papers", { x: -1300, rotationY: -25, duration: 6 * F, ease: "power3.in" }, A2 - 6 * F);
+hide(["#txA1", "#papers"], A2);
+words("#txA2", [[["a ser uno de los", at("ser", 5.3)]], [["pocos", at("pocos", 6), "s"], ["contadores", at("contadores", 6.3)]], [["que utiliza la", at("que", 7)]],
+  [["inteligencia", at("inteligencia", 7.5)]], [["artificial como", at("artificial", 8)]]]);
+kbox("#txA2", "", "herramienta", at("herramienta", 8.5), false, 880);
+tl.fromTo("#txA2", { x: 900, filter: "blur(14px)" }, { x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, A2 - 2 * F);
+gsap.set("#txA2", { autoAlpha: 0 }); show("#txA2", A2 - 2 * F);
+// rejilla de 30 contadores: solo 3 se encienden en "pocos"
+const G = []; for (let r = 0; r < 5; r++) for (let c = 0; c < 6; c++) G.push([c * 144, r * 144]);
+const ON = [8, 15, 22];
+$("#gridA").innerHTML = G.map(([x, y], i) => `<div class="p sh" id="gp${i}" style="left:${x}px;top:${y}px"><div class="ico" style="-webkit-mask-image:url(assets/ico/user-fill.svg);mask-image:url(assets/ico/user-fill.svg)"></div></div>`).join("");
+gsap.set("#gridL", { autoAlpha: 0 }); show("#gridL", A2);
+tl.fromTo("#gridL", { x: 1100, rotationY: 30 }, { x: 0, rotationY: 0, duration: 0.55, ease: "expo.out", immediateRender: false }, A2);
+G.forEach((g, i) => tl.fromTo("#gp" + i, { autoAlpha: 0, scale: 0.4 }, { autoAlpha: 1, scale: 1, duration: 5 * F, ease: "power3.out", immediateRender: false }, A2 + 0.1 + ((i * 7) % 30) * 0.012));
+const PO = at("pocos", 6);
+G.forEach((g, i) => { if (!ON.includes(i)) tl.to("#gp" + i, { opacity: 0.22, duration: 0.3, ease: "sine.inOut" }, PO); });
+ON.forEach((i, k) => { tl.set("#gp" + i, { attr: { class: "p sh on" } }, PO + k * 3 * F); tl.fromTo("#gp" + i, { scale: 1.25 }, { scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, PO + k * 3 * F); });
+tl.to("#wA", { rotationX: 18, rotationY: -8, z: 60, duration: CUTA - PO, ease: "sine.inOut" }, PO);
+hide("#mgA", CUTA);
+
+// =============== 3. "tres sistemas" (persona) ===============
+show("#shade", CUTA);
+card("Así que te van", at("así", 9.4), at("tres", 9.9));
+card("~tres~ sistemas", at("tres", 9.9), at("que", 10.6));
+card("que puedes utilizar", at("que", 10.6), at("para", 11.5));
+card("para ~destacar~", at("para", 11.5), at("como", 12.9));
+const ult = card("como *contador.*", at("como", 12.9), MG1 + 0.1);
+tl.to(ult, { scale: 1.35, filter: "blur(6px)", duration: 0.5, ease: "power4.in", transformOrigin: "50% 80%" }, MG1 - 0.45);
+tl.to("#base", { filter: "blur(4px)", duration: 6 * F, ease: "power2.in" }, MG1 - 6 * F);
+hide("#shade", MG1);
+
+// =============== 4. MG 1: agente de IA (cámara 2.5D) ===============
+gsap.set("#mg1", { autoAlpha: 0 });
+tl.fromTo("#mg1", { autoAlpha: 0 }, { autoAlpha: 1, duration: 4 * F, ease: "sine.inOut", immediateRender: false }, MG1 - 2 * F);
+tl.fromTo("#cam1", { scale: 1.3, filter: "blur(10px)" }, { scale: 1.0, filter: "blur(0px)", duration: 0.6, ease: "expo.out", immediateRender: false }, MG1 - 2 * F);
+tl.set("#base", { filter: "blur(0px)" }, MG1 + 0.2);
+gsap.set("#w1", { rotationX: 10, rotationY: 14, z: -80 });
+words("#tx1a", [[["Número", at("número", 13.8)]], [["uno,", at("uno", 13.9), "s"]]]);
+tl.fromTo("#g01", { scale: 0.7, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.6, ease: "expo.out", immediateRender: false }, MG1);
+const N1 = at("un", 15);
+fadeOut("#tx1a", N1 - 4 * F);
+words("#tx1b", [[["un agente de", N1]], [["inteligencia", at("inteligencia", 15.5)]], [["artificial", at("artificial", 16)]], [["entrenado con", at("entrenado", 16.5)]]]);
+$("#l1mid").innerHTML = boxHTML("rob", "c", 360, 820, 360, 360, "robot-fill", 200, "") +
+  boxHTML("bkA", "l", 70, 1270, 460, 280, "", 0, "") + boxHTML("bkB", "c", 560, 1270, 450, 280, "", 0, "") +
+  '<i class="hair" id="hA" style="left:300px;top:1268px;width:130px;transform:rotate(-40deg)"></i><i class="hair" id="hB" style="left:780px;top:1268px;width:130px;transform:rotate(-140deg)"></i>';
+$("#bkA").innerHTML = '<div class="lbl" style="top:40px;font-size:80px;color:#2A2926">Estatuto</div><div class="lbl" style="top:140px;font-family:Playfair;font-style:italic;font-size:84px;color:#A88F57">Tributario</div>';
+$("#bkB").innerHTML = '<div class="lbl" style="top:40px;font-size:80px;color:#FBF8F1">Conceptos</div><div class="lbl" style="top:140px;font-family:Playfair;font-style:italic;font-size:96px;color:#E6D6AE">DIAN</div>';
+pop("#rob", at("agente", 15.3), { rotation: -8 });
+tl.to("#rob", { y: -14, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 3 }, at("agente", 15.3) + 0.3);
+tl.to("#w1", { rotationX: 4, rotationY: 6, z: 0, duration: 3.4, ease: "sine.inOut" }, MG1);
+// libros: la cámara baja hacia ellos (2.5D)
+const ET = at("estatuto", 17.6), CO = at("conceptos", 19.2), DI = at("dian", 19.8);
+fadeOut("#tx1b", ET - 4 * F);
+words("#tx1c", [[["el", at("el", 17.4)], ["Estatuto", ET, "s"]], [["Tributario", at("tributario", 18)]], [["y los conceptos", at("y", 18.6)]], [["de la", at("de", 19.7)], ["DIAN", DI, "s"]]]);
+pop("#bkA", ET, { y: 160, rotation: 6 }); pop("#bkB", CO, { y: 160, rotation: -6 });
+gsap.set(["#hA", "#hB"], { scaleX: 0 });
+tl.to("#hA", { scaleX: 1, duration: 0.4, ease: "power2.out" }, ET + 0.3); tl.to("#hB", { scaleX: 1, duration: 0.4, ease: "power2.out" }, CO + 0.3);
+tl.to("#w1", { rotationX: -14, rotationY: -6, z: 80, duration: 0.9, ease: "expo.out" }, ET - 0.1);
+tl.to("#bg1", { y: -90, duration: 0.9, ease: "expo.out" }, ET - 0.1);
+tl.to("#w1", { rotationX: -8, rotationY: 8, duration: DI - ET + 0.6, ease: "sine.inOut" }, ET + 0.8);
+// chat: dudas de exógena y retención -> 3 segundos -> artículo exacto
+const QT = at("que", 20.5), EX = at("exógena", 21.5), RE = at("retención", 22.2), TS = at("tres", 22.9), SE = at("segundos", 23.1), CI = at("citando", 23.6), EA = at("exacto", 24.5);
+fadeOut("#tx1c", QT - 4 * F);
+tl.to(["#rob", "#bkA", "#bkB", "#hA", "#hB", "#g01"], { autoAlpha: 0, x: -700, filter: "blur(14px)", duration: 6 * F, ease: "power3.in" }, QT - 6 * F);
+words("#tx1d", [[["que te responde", QT]], [["dudas de", at("dudas", 21.2)]]]);
+$("#l1near").innerHTML = '<div class="bub l sh" id="q1" style="left:110px;top:770px">¿exógena?</div>' +
+  '<div class="bub l sh" id="q2" style="left:330px;top:935px">¿retención?</div>' +
+  boxHTML("tmr", "c", 90, 1105, 900, 230, "timer-fill", 130, "", "") +
+  boxHTML("ans", "l", 380, 1375, 320, 320, "file-text-fill", 180, "");
+$("#tmr").innerHTML += '<div style="position:absolute;left:220px;top:0;height:230px;line-height:230px;font-size:84px;color:#FBF8F1;white-space:nowrap">en <span style="font-family:Playfair;font-style:italic;font-size:170px;color:#E6D6AE" id="tnum">3</span> segundos</div>';
+$("#tmr .ico").style.left = "50px";
+pop("#q1", EX, { x: -200, rotation: -4 }); pop("#q2", RE, { x: 200, rotation: 4 });
+pop("#tmr", TS, { y: 120 });
+tl.fromTo("#tnum", { scale: 1.6, filter: "blur(8px)" }, { scale: 1, filter: "blur(0px)", duration: 0.3, ease: "back.out(2)", immediateRender: false }, TS);
+tl.fromTo("#tmr .ico", { rotation: -40 }, { rotation: 0, duration: 0.5, ease: "back.out(2)", immediateRender: false }, TS);
+pop("#ans", CI, { y: 160 });
+tl.set("#w1", { rotationX: 12, rotationY: -14, y: 0, z: -60 }, QT - 2 * F);
+tl.to("#w1", { rotationX: 2, rotationY: 6, z: 40, duration: MG1E - QT, ease: "sine.inOut" }, QT);
+tl.fromTo("#l1near", { y: 0 }, { y: -40, duration: MG1E - QT, ease: "sine.inOut", immediateRender: false }, QT);
+fadeOut("#tx1d", CI - 4 * F);
+words("#tx1e", [[["citando el", CI]], [["artículo", at("artículo", 24), "s"]]]);
+kbox("#tx1e", "", "exacto", EA, false, 480);
+tl.to(["#q1", "#q2"], { opacity: 0.35, duration: 0.3 }, CI);
+destello(MG1E, ["#mg1"]);
+show("#shade", MG1E);
+
+// =============== 5. "Sistema número dos" (persona) ===============
+card("Sistema número", at("sistema", 25.2), at("dos", 25.7));
+card("~dos,~", at("dos", 25.7), MG2 + 0.05);
+hide("#shade", MG2);
+
+// =============== 6. MG 2: extractor ===============
+enterMG("#mg2", "#cam2", MG2, CUT2);
+gsap.set("#w2", { rotationX: 14, rotationY: 16, z: -60 });
+tl.to("#w2", { rotationX: 6, rotationY: -6, z: 0, duration: 3.0, ease: "sine.inOut" }, MG2);
+tl.to("#bg2", { x: -30, y: 18, duration: CUT2 - MG2, ease: "sine.inOut" }, MG2);
+words("#tx2a", [[["Un", at("un", 26.5)], ["extractor", at("extractor", 26.6), "s"]], [["que recibe", at("que", 27.1)]], [["fotos borrosas,", at("fotos", 27.6)]], [["PDFs", at("pdfs", 28.5)]]]);
+// foto borrosa (recibo) + PDF
+$("#l2mid").innerHTML = '<div class="paper sh" id="ph" style="left:150px;top:1090px;width:380px;height:480px;transform:translateZ(60px) rotate(-7deg)"><div id="phin" style="position:absolute;inset:0;filter:blur(7px)">' +
+  [50, 110, 160, 210, 260, 320, 380].map((b, j) => `<i class="bar${j % 3 ? "" : " d"}" style="top:${b}px;width:${280 - (j * 53) % 140}px"></i>`).join("") + "</div></div>" +
+  boxHTML("pdf", "c", 590, 1060, 340, 440, "file-text-fill", 190, "PDF", "transform:translateZ(120px) rotate(6deg)") +
+  '<i class="hair" id="scan" style="left:100px;top:1060px;width:880px;height:8px;box-shadow:0 0 30px 6px rgba(200,176,122,.55)"></i>';
+pop("#ph", at("fotos", 27.6), { x: -300, rotation: -20 });
+pop("#pdf", at("pdfs", 28.5), { x: 300, rotation: 20 });
+gsap.set("#scan", { autoAlpha: 0 });
+const DV = at("devuelve", 30), TB = at("tabla", 30.5), EXL = at("excel", 31.2);
+fadeOut("#tx2a", at("y", 29.4) - 4 * F);
+show("#scan", at("y", 29.4)); tl.fromTo("#scan", { y: 0 }, { y: 520, duration: 0.7, ease: "sine.inOut", immediateRender: false }, at("y", 29.4));
+tl.to("#phin", { filter: "blur(0px)", duration: 0.5, ease: "sine.out" }, at("y", 29.4) + 0.2);
+tl.to(["#ph", "#pdf", "#scan"], { autoAlpha: 0, scale: 0.3, y: -120, filter: "blur(10px)", duration: 6 * F, ease: "power3.in" }, TB - 6 * F);
+words("#tx2b", [[["y te las devuelve", at("y", 29.4)]], [["en tabla limpia", TB]]]);
+kbox("#tx2b", "", "Excel", EXL, false, 420);
+// tabla: encabezados NIT / CUFE / Impuestos al decirlos
+const TBH = [["NIT", 0, 220, at("nit", 31.9)], ["CUFE", 220, 270, at("cufe", 32.3)], ["Impuestos", 490, 490, at("impuestos", 32.7)]];
+$("#tbl").innerHTML = '<div class="hd sh" id="thd" style="width:980px"></div>' + TBH.map(([t, x, w], i) => `<div class="hc" id="th${i}" style="left:${x}px;width:${w}px">${t}</div>`).join("") +
+  [0, 1, 2, 3, 4].map((r) => `<div class="rw" id="tr${r}" style="top:${130 + r * 98}px"><i class="bar" style="left:40px;width:140px"></i><i class="bar" style="left:260px;width:190px"></i><i class="bar" style="left:560px;width:${220 + (r * 37) % 120}px"></i></div>`).join("");
+gsap.set("#tbl", { autoAlpha: 0 }); show("#tbl", TB - 2 * F);
+tl.fromTo("#thd", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.35, ease: "power3.out", immediateRender: false }, TB - 2 * F);
+[0, 1, 2, 3, 4].forEach((r) => tl.fromTo("#tr" + r, { autoAlpha: 0, x: -80 }, { autoAlpha: 1, x: 0, duration: 5 * F, ease: "power3.out", immediateRender: false }, TB + 0.1 + r * 0.09));
+TBH.forEach(([, , , t], i) => { gsap.set("#th" + i, { autoAlpha: 0 }); tl.fromTo("#th" + i, { autoAlpha: 0, y: 30, filter: "blur(8px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 5 * F, ease: "power2.out", immediateRender: false }, t - LEAD); });
+tl.to("#w2", { rotationX: -10, rotationY: 10, y: -120, z: 50, duration: 0.9, ease: "expo.out" }, TB - 0.1);
+// lista para subir a Siigo o Alegra
+const LI = at("lista", 33.5), SI = at("siigo", 34.4), AL = at("alegra", 34.9);
+fadeOut("#tx2b", LI - 4 * F);
+words("#tx2c", [[["lista para subir a", LI]], [["Siigo", SI, "s"], ["o", at("o", 34.8)], ["Alegra.", AL, "s"]]]);
+tl.to("#tbl", { scale: 0.72, y: -300, x: -10, duration: 0.6, ease: "expo.out" }, LI);
+tl.to("#tr0, #tr1, #tr2, #tr3, #tr4", { backgroundColor: "#F3EBD8", duration: 0.3, stagger: 0.05 }, LI + 0.1);
+tl.to("#w2", { rotationX: 6, rotationY: -8, y: 0, z: 0, duration: CUT2 - LI, ease: "sine.inOut" }, LI);
+hide("#mg2", CUT2);
+
+// =============== 7. "Y por último, sistema número tres" (persona) ===============
+show("#shade", CUT2);
+card("Y por *último,*", at("y", 35.6), at("sistema", 36.2));
+card("sistema número ~tres,~", at("sistema", 36.2), MG3 + 0.05);
+hide("#shade", MG3);
+
+// =============== 8. MG 3: conciliador bancario ===============
+enterMG("#mg3", "#cam3", MG3, MG3E);
+gsap.set("#w3", { rotationX: 16, rotationY: -14, z: -60 });
+tl.to("#w3", { rotationX: 8, rotationY: 4, z: 0, duration: 2.4, ease: "sine.inOut" }, MG3);
+tl.to("#bg3", { x: 24, y: -20, duration: MG3E - MG3, ease: "sine.inOut" }, MG3);
+words("#tx3a", [[["un", at("un", 37.6)], ["conciliador", at("conciliador", 37.8), "s"]], [["bancario", at("bancario", 38.4)]]]);
+kbox("#tx3a", "", "automático", at("automático", 39), false, 820);
+$("#l3mid").innerHTML = boxHTML("cyc", "c", 330, 1080, 420, 420, "arrows-clockwise-bold", 220, "");
+pop("#cyc", at("conciliador", 37.8), { rotation: -90 });
+tl.to("#cyc .ico", { rotation: 360, duration: 1.6, ease: "power2.inOut" }, at("bancario", 38.4));
+const CR = at("cruza", 40), XT = at("extractos", 40.5), LB = at("libro", 42.5), SG = at("segundos", 43.6), MK = at("marca", 44.6), RJ = at("rojo", 45), MX = at("4x1000", 45.7);
+fadeOut("#tx3a", CR - 4 * F);
+tl.to("#cyc", { autoAlpha: 0, scale: 0.4, y: -200, filter: "blur(12px)", duration: 6 * F, ease: "power3.in" }, CR - 6 * F);
+words("#tx3b", [[["que cruza tus", CR]], [["extractos", XT, "s"], ["contra", at("contra", 41.9)]], [["tu libro contable", at("tu", 42.4)]]]);
+// columnas: extractos vs libro contable, filas que se cruzan con líneas doradas
+const RW = [0, 1, 2, 3, 4, 5];
+$("#l3near").innerHTML = '<div class="colh l box sh" id="chL" style="left:66px;background:#FBF8F1;color:#2A2926">Extractos</div>' +
+  '<div class="colh c box sh" id="chR" style="left:594px;background:#2A2926;color:#E6D6AE">Libro</div>' +
+  RW.map((r) => `<div class="cell sh" id="cL${r}" style="left:66px;top:${1050 + r * 104}px"><i class="bar" style="width:${200 + (r * 41) % 120}px"></i></div>` +
+    `<div class="cell sh" id="cR${r}" style="left:594px;top:${1050 + ((r * 4 + 1) % 6) * 104}px"><i class="bar" style="width:${200 + (r * 41) % 120}px"></i></div>`).join("") +
+  RW.map((r) => { const y1 = 1050 + r * 104 + 44, y2 = 1050 + ((r * 4 + 1) % 6) * 104 + 44, dx = 108, dy = y2 - y1;
+    return `<i class="hair" id="ln${r}" style="left:486px;top:${y1}px;width:${Math.hypot(dx, dy)}px;transform:rotate(${Math.atan2(dy, dx) * 180 / Math.PI}deg)"></i>`; }).join("") +
+  '<div id="mark" style="top:1050px"></div>';
+pop("#chL", XT, { x: -200 }); pop("#chR", LB, { x: 200 });
+gsap.set(RW.flatMap((r) => ["#cL" + r, "#cR" + r]), { autoAlpha: 0 });
+RW.forEach((r) => { tl.fromTo("#cL" + r, { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 4 * F, ease: "power3.out", immediateRender: false }, XT + 0.15 + r * 0.07);
+  tl.fromTo("#cR" + r, { autoAlpha: 0, x: 60 }, { autoAlpha: 1, x: 0, duration: 4 * F, ease: "power3.out", immediateRender: false }, LB + 0.1 + r * 0.07); });
+RW.forEach((r) => { gsap.set("#ln" + r, { scaleX: 0 }); tl.to("#ln" + r, { scaleX: 1, duration: 0.18, ease: "power2.out" }, SG - 0.2 + r * 0.09); });
+tl.to("#w3", { rotationX: -12, rotationY: 8, z: 60, duration: 0.9, ease: "expo.out" }, XT - 0.1);
+fadeOut("#tx3b", at("en", 43.5) - 4 * F);
+words("#tx3c", [[["en", at("en", 43.5)], ["segundos", SG, "s"]], [["y te marca en", at("y", 44.2)], ["rojo", RJ]], [["hasta el", at("hasta", 45.3)]]]);
+kbox("#tx3c", "", "4x1000", MX, false, 520);
+// fila marcada (en dorado: la marca no usa rojo)
+const MR = 3;
+gsap.set("#mark", { autoAlpha: 0, y: MR * 104 - 12 });
+tl.fromTo("#mark", { autoAlpha: 0, scale: 1.25 }, { autoAlpha: 1, scale: 1, duration: 5 * F, ease: "power3.out", immediateRender: false }, MK - LEAD);
+[0, 1, 2, 3].forEach((k) => tl.to("#mark", { x: k % 2 ? 8 : -8, duration: 2 * F, ease: "none" }, RJ + k * 2 * F));
+tl.to("#mark", { x: 0, duration: 2 * F }, RJ + 8 * F);
+tl.to(["#cL" + MR], { backgroundColor: "#F1E6CC", duration: 0.2 }, MK);
+tl.to("#w3", { rotationX: 4, rotationY: -6, z: 120, duration: MG3E - MK, ease: "sine.inOut" }, MK);
+destello(MG3E, ["#mg3"]);
+show("#shade", MG3E);
+
+// =============== 9. CTA: comenten D1 / D2 / D3 (persona) ===============
+card("Si lo quieren *usar,*", at("si", 46.8), at("quiero", 47.9));
+card("quiero que *comenten*", at("quiero", 47.9), at("d1", 48.6));
+const D1 = at("d1", 48.6), D2 = at("d2", 51.8), D3 = at("d3", 55.4);
+$("#cta").innerHTML = '<span class="r" id="cr1"><span class="d">D1</span>primer sistema</span><span class="r" id="cr2"><span class="d">D2</span>segundo sistema</span><span class="r" id="cr3"><span class="d">D3</span>los tres</span>';
+gsap.set(["#cr1", "#cr2", "#cr3"], { autoAlpha: 0 });
+[["#cr1", D1], ["#cr2", D2], ["#cr3", D3]].forEach(([s, t]) => {
+  tl.fromTo(s, { autoAlpha: 0, x: -60, filter: "blur(10px)" }, { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 5 * F, ease: "power3.out", immediateRender: false }, t - LEAD);
+  tl.fromTo(s + " .d", { scale: 1.5 }, { scale: 1, duration: 0.3, ease: "back.out(2.2)", immediateRender: false }, t - LEAD);
+});
+const LA = at("los", 57.8);
+tl.to("#cta", { autoAlpha: 0, filter: "blur(12px)", duration: 4 * F, ease: "power1.in" }, LA - 4 * F);
+
+// =============== 10. Cierre ===============
+card("Los amo, *muchachos,*", LA, at("adiós", 59));
+card("adiós.", at("adiós", 59), PL + 0.1);
+tl.to("#shade", { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" }, PL);
+tl.fromTo("#pl", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, ease: "sine.inOut", immediateRender: false }, PL);
+gsap.set(["#plA", "#plB"], { autoAlpha: 0 }); gsap.set("#plH", { scaleX: 0 });
+tl.fromTo("#plA", { autoAlpha: 0, y: 30, filter: "blur(14px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 8 * F, ease: "power2.out", immediateRender: false }, PL + 0.2);
+tl.fromTo("#plB", { autoAlpha: 0, scale: 0.6, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 9 * F, ease: "power2.out", immediateRender: false }, PL + 0.35);
+tl.to("#plH", { scaleX: 1, duration: 0.45, ease: "sine.inOut" }, PL + 0.5);
+
+// grano de papel cada 2 cuadros
+for (let i = 0; i < Math.ceil(D.total / (2 * F)); i++) tl.set("#grain", { x: ((i * 73) % 180) - 90, y: ((i * 131) % 180) - 90 }, i * 2 * F);
+tl.set({}, {}, D.total);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

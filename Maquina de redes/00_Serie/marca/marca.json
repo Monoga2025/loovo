@@ -1,0 +1,14 @@
+{
+ "nombre": "IA MONOGA",
+ "direccion": "A · Eléctrico",
+ "colores": {"oscuro": "#0B0B0F", "primario": "#2F5BFF", "acento": "#C6FF3D", "claro": "#F4F2EE", "gris": "#8C8C99"},
+ "uso_color": "Fondo oscuro o la propia toma. Azul eléctrico = estructura (chips, líneas, paneles). Lima = la palabra clave y el punto de foco (máximo un elemento lima a la vez). Hueso = texto secundario y fondos claros. Nunca rojo.",
+ "fuentes": {
+  "titular": {"familia": "Space Grotesk", "peso": 700, "archivos": ["fonts/space-grotesk-latin-700-normal.woff2"], "licencia": "OFL"},
+  "texto": {"familia": "Space Grotesk", "peso": 500, "archivos": ["fonts/space-grotesk-latin-500-normal.woff2"], "licencia": "OFL"},
+  "acento": {"familia": "Instrument Serif", "estilo": "italic", "archivos": ["fonts/instrument-serif-latin-400-italic.woff2"], "licencia": "OFL"}
+ },
+ "recortar": ["celular", "portatil"],
+ "descartar": ["astronauta", "busto_marmol", "taza_cafe", "reloj_arena", "luna", "mano_celular"],
+ "iconos": ["robot-fill", "brain-fill", "alarm-fill", "calendar-check-fill", "calendar-star-fill", "film-slate-fill", "fire-fill", "moon-stars-fill", "bed-fill", "lightning-fill", "sun-fill", "address-book-fill", "cpu-fill", "chat-circle-dots-fill", "plugs-connected-fill", "lightbulb-fill", "chats-circle-fill", "link-fill", "timer-fill", "sparkle-fill", "receipt-fill", "currency-dollar-fill", "prohibit-fill", "user-fill", "envelope-simple-fill", "magnifying-glass-fill", "compass-fill", "chats-fill", "rocket-launch-fill", "chart-line-up-fill", "hand-pointing-fill", "cursor-click-fill", "database-fill", "graph-fill", "scissors-fill", "video-camera-fill", "trophy-fill", "handshake-fill", "storefront-fill", "infinity-fill"]
+}

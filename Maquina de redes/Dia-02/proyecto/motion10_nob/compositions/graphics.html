@@ -1,0 +1,407 @@
+<template id="graphics-template">
+  <!-- IA MONOGA · dirección A "Eléctrico": carbón #0B0B0F, azul #2F5BFF, lima #C6FF3D, hueso #F4F2EE.
+       Space Grotesk (titular/clave) + Instrument Serif cursiva (conectores). Lima = foco, nunca más de uno a la vez. -->
+  <div data-composition-id="graphics" data-width="1080" data-height="1920" data-duration="63.100000">
+    <div id="caps"></div>
+
+    <!-- S_day · Hoy es el día número 2 de 42 (3.10–5.05) -->
+    <div id="sday" class="scene dk">
+      <div class="aura"></div><div class="grain"></div>
+      <div id="sday-hoy" class="ln se hu" style="top: 400px; font-size: 84px">hoy es el</div>
+      <div id="sday-dia" class="ln sg hu" style="top: 500px; font-size: 330px">DÍA <span class="li">2</span></div>
+      <div id="sday-de" class="ln se hu" style="top: 860px; font-size: 104px">de 42</div>
+      <div id="segs"></div>
+    </div>
+
+    <!-- S_emp · este edita los videos · no cobra · no duerme (10.55–13.45) -->
+    <div id="semp" class="scene dk">
+      <div class="aura"></div><div class="grain"></div>
+      <img class="bill" id="bill1" src="assets/foto/billete_1957_duo.png" style="left:-140px;top:1250px;width:560px">
+      <img class="bill" id="bill2" src="assets/foto/billete_1957_duo.png" style="left:700px;top:180px;width:440px">
+      <div id="ed">
+        <div id="ed-bar"><i></i><i></i><i></i><b>editor</b></div>
+        <div id="ed-view"><div id="ed-play"></div></div>
+        <div class="trk" style="top:330px"><span style="left:2%;width:30%" class="c-b"></span><span style="left:34%;width:22%" class="c-b"></span><span style="left:58%;width:38%" class="c-b"></span></div>
+        <div class="trk" style="top:380px"><span style="left:8%;width:18%" class="c-l"></span><span style="left:40%;width:12%" class="c-l"></span><span style="left:70%;width:20%" class="c-l"></span></div>
+        <div class="trk" style="top:430px"><span style="left:0%;width:96%" class="c-h"></span></div>
+        <div id="ed-head"></div>
+      </div>
+      <div id="semp-a" class="ln hu" style="top: 820px"><span class="se" style="font-size:76px">este edita los</span> <span class="sg" style="font-size:96px">VIDEOS</span></div>
+      <div id="semp-b" class="chip" style="top: 990px"><i class="ic" style="--i:url(assets/ico/currency-dollar-fill.svg)"></i><span class="se">no</span> <b>COBRA</b></div>
+      <div id="semp-c" class="chip" style="top: 1140px"><i class="ic" style="--i:url(assets/ico/moon-stars-fill.svg)"></i><span class="se">no</span> <b>DUERME</b></div>
+    </div>
+
+    <!-- S_7 · un video de 7 minutos a uno de 38 segundos (14.45–16.8): barra proporcional real (457 s -> 38 s) -->
+    <div id="s7" class="scene lt">
+      <div class="grain"></div>
+      <div id="s7-pre" class="ln se ca" style="top: 420px; font-size: 80px">un video de</div>
+      <div id="s7-7" class="ln sg ca" style="top: 510px; font-size: 190px">7 MINUTOS</div>
+      <div id="s7-track"><div id="s7-bar"></div></div>
+      <div id="s7-a" class="ln se ca" style="top: 860px; font-size: 76px">a uno de</div>
+      <div id="s7-38" class="ln sg ca" style="top: 1000px; font-size: 300px"><span class="hl">38</span></div>
+      <div id="s7-seg" class="ln sg ca" style="top: 1330px; font-size: 90px">SEGUNDOS</div>
+    </div>
+
+    <!-- S_chat · un chat pegado que no hace absolutamente nada (34.10–37.10) -->
+    <div id="schat" class="scene dk">
+      <div class="aura"></div><div class="grain"></div>
+      <div id="ph">
+        <img src="assets/foto/celular_corte.png" id="ph-img">
+        <div id="ph-scr">
+          <div id="ph-top"><b>CRM</b><i></i></div>
+          <div class="gl" style="width:80%"></div><div class="gl" style="width:62%"></div><div class="gl" style="width:72%"></div>
+          <div class="gl" style="width:50%"></div><div class="gl" style="width:66%"></div>
+          <div id="ph-chat"><i class="ic" style="--i:url(assets/ico/chat-circle-dots-fill.svg)"></i>chat</div>
+        </div>
+      </div>
+      <div id="schat-a" class="ln se hu" style="top: 1220px; font-size: 84px">no hace</div>
+      <div id="schat-b" class="ln sg" style="top: 1320px; font-size: 92px"><span class="hl">ABSOLUTAMENTE NADA</span></div>
+    </div>
+
+    <!-- S_conn · este CRM está conectado por dentro de la plataforma (38.65–41.45): red de nodos -->
+    <div id="sconn" class="scene dk">
+      <div class="aura"></div><div class="grain"></div>
+      <div id="sconn-a" class="ln se hu" style="top: 300px; font-size: 76px">este CRM está</div>
+      <div id="sconn-b" class="ln sg" style="top: 380px; font-size: 150px"><span class="hl">CONECTADO</span></div>
+      <svg class="full" viewBox="0 0 1080 1920" id="net"></svg>
+      <div id="nodes"></div>
+      <div id="sconn-c" class="ln se hu" style="top: 1255px; font-size: 104px">por dentro</div>
+      <div id="sconn-d" class="ln se gr" style="top: 1375px; font-size: 64px">de la plataforma</div>
+    </div>
+
+    <!-- S_card · puede leer… (41.50–46.25) -->
+    <div id="scard" class="scene lt">
+      <div class="grain"></div>
+      <div id="card-title" class="ln ca" style="top: 300px"><span class="se" style="font-size:96px">puede</span> <span class="sg" style="font-size:150px">LEER</span></div>
+      <div id="rows"></div>
+    </div>
+
+    <!-- S_dian · conectar a la DIAN para hacer facturas electrónicas (53.55–55.75) -->
+    <div id="sdian" class="scene dk">
+      <div class="aura"></div><div class="grain"></div>
+      <div id="inv">
+        <div id="inv-h"><i class="ic" style="--i:url(assets/ico/receipt-fill.svg)"></i><b>FACTURA</b></div>
+        <div class="gl d" style="width:70%"></div><div class="gl d" style="width:52%"></div><div class="gl d" style="width:64%"></div>
+        <div id="inv-t"><span></span><b></b></div>
+      </div>
+      <div id="sdian-a" class="ln se hu" style="top: 900px; font-size: 80px">conectar a la</div>
+      <div id="sdian-b" class="ln sg li" style="top: 980px; font-size: 300px">DIAN</div>
+      <div id="sdian-c" class="ln se hu" style="top: 1300px; font-size: 80px">facturas electrónicas</div>
+    </div>
+
+    <!-- S_d3 · esto lo vamos a ver en el día 3 (55.90–57.40) -->
+    <div id="sd3" class="scene lt">
+      <div class="grain"></div>
+      <div id="sd3-a" class="ln se ca" style="top: 520px; font-size: 80px">esto lo vamos a ver en el</div>
+      <div id="sd3-b" class="ln sg ca" style="top: 620px; font-size: 360px">DÍA <span class="bl">3</span></div>
+    </div>
+
+    <style>
+      @font-face { font-family: "SG"; font-weight: 700; src: url("assets/fonts/space-grotesk-latin-700-normal.woff2") format("woff2"); }
+      @font-face { font-family: "SG"; font-weight: 500; src: url("assets/fonts/space-grotesk-latin-500-normal.woff2") format("woff2"); }
+      @font-face { font-family: "IS"; font-style: italic; font-weight: 400; src: url("assets/fonts/instrument-serif-latin-400-italic.woff2") format("woff2"); }
+      [data-composition-id="graphics"] {
+        background: transparent; font-family: "SG", sans-serif; overflow: hidden;
+        --ca: #0B0B0F; --bl: #2F5BFF; --li: #C6FF3D; --hu: #F4F2EE; --gr: #8C8C99;
+      }
+      .scene { position: absolute; inset: 0; z-index: 10; visibility: hidden; overflow: hidden; }
+      .dk { background-color: var(--ca);
+        background-image: linear-gradient(rgba(47,91,255,.10) 2px, transparent 2px), linear-gradient(90deg, rgba(47,91,255,.10) 2px, transparent 2px);
+        background-size: 90px 90px; }
+      .lt { background-color: var(--hu);
+        background-image: linear-gradient(rgba(11,11,15,.05) 2px, transparent 2px), linear-gradient(90deg, rgba(11,11,15,.05) 2px, transparent 2px);
+        background-size: 90px 90px; }
+      .aura { position: absolute; left: -60px; top: 300px; width: 1200px; height: 1200px; background: url("assets/tex/aura.png") center/contain no-repeat; opacity: .55; }
+      .grain { position: absolute; inset: 0; background: url("assets/tex/grano.png"); opacity: .07; mix-blend-mode: overlay; pointer-events: none; }
+      .full { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .ln { position: absolute; left: 0; width: 100%; text-align: center; line-height: 1; white-space: nowrap; }
+      .sg { font-family: "SG", sans-serif; font-weight: 700; letter-spacing: -0.05em; }
+      .se { font-family: "IS", serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+      .hu { color: var(--hu); } .ca { color: var(--ca); } .li { color: var(--li); } .bl { color: var(--bl); } .gr { color: var(--gr); }
+      .hl { background: var(--li); color: var(--ca); padding: 0 .16em; border-radius: .14em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+      .ic { display: inline-block; width: 1em; height: 1em; background: currentColor; -webkit-mask: var(--i) center/contain no-repeat; mask: var(--i) center/contain no-repeat; vertical-align: -0.12em; }
+
+      #segs { position: absolute; left: 153px; top: 1000px; width: 774px; display: grid; grid-template-columns: repeat(14, 46px); gap: 10px; }
+      #segs div { height: 46px; border-radius: 12px; border: 3px solid rgba(47,91,255,.7); }
+      #segs div.on { background: var(--li); border-color: var(--li); }
+
+      .bill { position: absolute; opacity: .45; border-radius: 8px; }
+      #ed { position: absolute; left: 110px; top: 250px; width: 860px; height: 500px; border-radius: 26px; background: #14141c;
+        border: 2px solid rgba(47,91,255,.55); box-shadow: 0 40px 80px rgba(0,0,0,.6), 0 0 60px rgba(47,91,255,.25); overflow: hidden; }
+      #ed-bar { height: 56px; display: flex; align-items: center; gap: 10px; padding: 0 22px; background: #1c1c27; }
+      #ed-bar i { width: 14px; height: 14px; border-radius: 50%; background: #3a3a4a; display: block; }
+      #ed-bar b { margin-left: 14px; color: var(--hu); font: 500 26px "SG"; letter-spacing: -0.02em; }
+      #ed-view { position: absolute; left: 22px; top: 76px; width: 816px; height: 230px; border-radius: 14px; background: linear-gradient(135deg,#1b2a6b,#0d0f1f); }
+      #ed-play { position: absolute; left: 50%; top: 50%; width: 0; height: 0; margin: -30px 0 0 -18px; border-left: 52px solid var(--hu); border-top: 30px solid transparent; border-bottom: 30px solid transparent; opacity: .85; }
+      .trk { position: absolute; left: 22px; width: 816px; height: 38px; }
+      .trk span { position: absolute; top: 0; height: 38px; border-radius: 8px; transform-origin: 0 50%; }
+      .c-b { background: var(--bl); } .c-l { background: var(--li); } .c-h { background: rgba(244,242,238,.25); }
+      #ed-head { position: absolute; left: 22px; top: 318px; width: 4px; height: 160px; background: var(--hu); box-shadow: 0 0 14px var(--hu); }
+      .chip { position: absolute; left: 50%; display: flex; align-items: center; gap: 24px; padding: 18px 44px; border-radius: 120px;
+        background: #14141c; border: 3px solid var(--bl); color: var(--hu); font-size: 110px; line-height: 1; white-space: nowrap; transform: translateX(-50%); }
+      .chip b { font: 700 110px "SG"; letter-spacing: -0.05em; color: var(--li); }
+      .chip .se { font-size: 84px; }
+      .chip .ic { font-size: 96px; color: var(--li); }
+
+      #s7-track { position: absolute; left: 105px; top: 760px; width: 870px; height: 64px; border-radius: 32px; background: rgba(11,11,15,.08); }
+      #s7-bar { position: absolute; left: 0; top: 0; width: 870px; height: 64px; border-radius: 32px; background: var(--bl); transform-origin: 0 50%; }
+
+      #ph { position: absolute; left: 330px; top: 180px; width: 420px; height: 938px; }
+      #ph-img { position: absolute; inset: 0; width: 420px; height: 938px; filter: drop-shadow(0 40px 60px rgba(0,0,0,.7)); }
+      #ph-scr { position: absolute; left: 16px; top: 26px; width: 388px; height: 770px; border-radius: 36px; background: #f4f2ee; overflow: hidden; padding: 70px 30px 0; }
+      #ph-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+      #ph-top b { font: 700 40px "SG"; color: var(--ca); letter-spacing: -0.04em; }
+      #ph-top i { width: 44px; height: 44px; border-radius: 50%; background: var(--bl); display: block; }
+      .gl { height: 22px; border-radius: 11px; background: rgba(11,11,15,.1); margin-bottom: 22px; }
+      .gl.d { background: rgba(244,242,238,.16); }
+      #ph-chat { position: absolute; right: 22px; bottom: 30px; display: flex; align-items: center; gap: 12px; padding: 16px 26px; border-radius: 40px;
+        background: var(--ca); color: var(--hu); font: 700 40px "SG"; letter-spacing: -0.03em; box-shadow: 0 16px 30px rgba(0,0,0,.3); }
+      #ph-chat .ic { font-size: 44px; color: var(--li); }
+
+      .node { position: absolute; width: 150px; height: 150px; margin: -75px 0 0 -75px; border-radius: 30%; background: #14141c;
+        border: 3px solid var(--bl); display: flex; align-items: center; justify-content: center; color: var(--hu); box-shadow: 0 20px 40px rgba(0,0,0,.5); }
+      .node .ic { font-size: 74px; }
+      .node.core { width: 230px; height: 230px; margin: -115px 0 0 -115px; background: var(--li); border-color: var(--li); color: var(--ca);
+        box-shadow: 0 0 80px rgba(198,255,61,.45), 0 0 0 10px rgba(47,91,255,.35); }
+      .node.core .ic { font-size: 120px; }
+      #net line { stroke: var(--bl); stroke-width: 6; stroke-linecap: round; }
+
+      #rows { position: absolute; left: 110px; top: 560px; width: 860px; }
+      .row { position: relative; display: flex; align-items: center; gap: 28px; height: 150px; margin-bottom: 22px; padding: 0 34px; border-radius: 34px;
+        background: #fff; box-shadow: 0 18px 40px rgba(11,11,15,.12); font: 500 42px "SG"; letter-spacing: -0.03em; color: var(--ca); white-space: nowrap; }
+      .row .t { width: 96px; height: 96px; border-radius: 28%; background: var(--bl); color: var(--hu); display: flex; align-items: center; justify-content: center; flex: none; }
+      .row .t .ic { font-size: 54px; }
+      .row .ok { position: absolute; right: 34px; width: 62px; height: 62px; border-radius: 50%; background: var(--li); color: var(--ca); display: flex; align-items: center; justify-content: center; }
+      .row .ok .ic { font-size: 40px; }
+
+      #inv { position: absolute; left: 250px; top: 230px; width: 580px; height: 600px; border-radius: 30px; background: #14141c; border: 2px solid rgba(47,91,255,.6);
+        padding: 46px 46px 0; box-shadow: 0 40px 80px rgba(0,0,0,.6); }
+      #inv-h { display: flex; align-items: center; gap: 18px; color: var(--li); margin-bottom: 44px; }
+      #inv-h .ic { font-size: 70px; } #inv-h b { font: 700 54px "SG"; letter-spacing: -0.03em; color: var(--hu); }
+      #inv-t { position: absolute; left: 46px; right: 46px; bottom: 50px; display: flex; justify-content: space-between; align-items: center; }
+      #inv-t span { width: 40%; height: 26px; border-radius: 13px; background: rgba(244,242,238,.25); }
+      #inv-t b { width: 34%; height: 54px; border-radius: 16px; background: var(--li); }
+
+      #caps { position: absolute; inset: 0; z-index: 5; }
+      .cap { position: absolute; left: 70px; width: 940px; top: 1170px; text-align: center; visibility: hidden; line-height: 1.12; }
+      .cap .w { display: inline-block; margin: 0 0.12em; color: #fff; font-family: "IS", serif; font-style: italic; font-size: 82px;
+        text-shadow: 0 0 22px rgba(0,0,0,.85), 0 2px 8px rgba(0,0,0,.7); }
+      .cap .w.kw { font-family: "SG", sans-serif; font-style: normal; font-weight: 700; font-size: 96px; letter-spacing: -0.05em; text-transform: uppercase;
+        color: var(--ca); background: var(--li); padding: 0 .16em; border-radius: .16em; text-shadow: none; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      /*CAPS*/
+      const CAPS = [
+        {"a": 0.0, "b": 0.82, "w": [["ayer", 0.0], ["contraté", 0.3], ["a", 0.7]]},
+        {"a": 0.82, "b": 1.06, "w": [["alguien", 0.82]]},
+        {"a": 1.06, "b": 1.6, "w": [["no", 1.06], ["le", 1.22], ["pago", 1.36, 1]]},
+        {"a": 1.6, "b": 2.22, "w": [["y", 1.6], ["trabaja", 1.82, 1], ["hasta", 2.06]]},
+        {"a": 2.22, "b": 2.64, "w": [["las", 2.22], ["3", 2.4], ["de", 2.56]]},
+        {"a": 2.64, "b": 3.18, "w": [["la", 2.64], ["mañana", 2.8, 1]]},
+        {"a": 5.12, "b": 5.88, "w": [["hasta", 5.12], ["llegar", 5.48], ["al", 5.72]]},
+        {"a": 5.88, "b": 6.14, "w": [["evento", 5.88, 1]]},
+        {"a": 6.14, "b": 7.6, "w": [["mostrando", 6.14], ["cómo", 6.64], ["construyo", 7.04]]},
+        {"a": 7.6, "b": 8.18, "w": [["mi", 7.6], ["agencia", 7.78, 1], ["de", 8.04]]},
+        {"a": 8.18, "b": 8.96, "w": [["inteligencia", 8.18], ["artificial", 8.46]]},
+        {"a": 8.96, "b": 9.06, "w": [["te", 8.96], ["voy", 9.0], ["a", 9.06]]},
+        {"a": 9.06, "b": 9.74, "w": [["mostrar", 9.06], ["uno", 9.46], ["de", 9.72]]},
+        {"a": 9.74, "b": 10.76, "w": [["mis", 9.74], ["dos", 9.94], ["empleados", 10.1]]},
+        {"a": 13.7, "b": 14.2, "w": [["me", 13.7], ["pasó", 13.96], ["un", 14.06]]},
+        {"a": 14.2, "b": 14.5, "w": [["video", 14.2], ["de", 14.32]]},
+        {"a": 16.82, "b": 17.7, "w": [["con", 16.82], ["este", 17.12], ["estilo", 17.32]]},
+        {"a": 17.7, "b": 18.12, "w": [["la", 17.7], ["verdad", 17.78], ["a", 17.98]]},
+        {"a": 18.12, "b": 18.42, "w": [["este", 18.12], ["sí", 18.18], ["lo", 18.24]]},
+        {"a": 18.42, "b": 19.18, "w": [["exploto", 18.42, 1], ["durante", 18.72], ["toda", 19.0]]},
+        {"a": 19.18, "b": 19.9, "w": [["la", 19.18], ["noche", 19.34], ["porque", 19.56]]},
+        {"a": 19.9, "b": 20.38, "w": [["me", 19.9], ["edita", 20.08], ["los", 20.22]]},
+        {"a": 20.38, "b": 21.24, "w": [["videos", 20.38], ["mientras", 20.66], ["estoy", 21.0]]},
+        {"a": 21.24, "b": 21.7, "w": [["durmiendo", 21.24, 1]]},
+        {"a": 21.7, "b": 22.42, "w": [["el", 21.7], ["segundo", 21.9], ["también", 22.14]]},
+        {"a": 22.42, "b": 23.44, "w": [["lo", 22.42], ["sobreexplotó", 22.64, 1]]},
+        {"a": 23.44, "b": 24.22, "w": [["pero", 23.44], ["él", 23.86], ["sí", 24.12]]},
+        {"a": 24.22, "b": 24.66, "w": [["trabaja", 24.22, 1], ["en", 24.46], ["el", 24.56]]},
+        {"a": 24.66, "b": 25.26, "w": [["día", 24.66], ["porque", 24.82], ["está", 25.08]]},
+        {"a": 25.26, "b": 26.06, "w": [["conectado", 25.26], ["a", 25.76], ["mi", 25.9]]},
+        {"a": 26.06, "b": 26.5, "w": [["CRM", 26.06, 1]]},
+        {"a": 26.5, "b": 26.94, "w": [["les", 26.5], ["voy", 26.72], ["a", 26.9]]},
+        {"a": 26.94, "b": 27.9, "w": [["mostrar", 26.94], ["cómo", 27.3], ["funciona", 27.58]]},
+        {"a": 27.9, "b": 28.98, "w": [["un", 27.9], ["CRM", 28.16, 1], ["real", 28.58, 1]]},
+        {"a": 28.98, "b": 30.0, "w": [["con", 28.98], ["inteligencia", 29.26], ["artificial", 29.66]]},
+        {"a": 30.0, "b": 31.06, "w": [["integrada", 30.0, 1]]},
+        {"a": 31.06, "b": 32.2, "w": [["normalmente", 31.06], ["los", 31.5], ["CRMs", 31.7]]},
+        {"a": 32.2, "b": 32.8, "w": [["que", 32.2], ["están", 32.32], ["vendiendo", 32.48]]},
+        {"a": 32.8, "b": 33.76, "w": [["con", 32.8], ["inteligencia", 32.96], ["artificial", 33.3]]},
+        {"a": 33.76, "b": 34.14, "w": [["es", 33.76]]},
+        {"a": 37.26, "b": 37.94, "w": [["en", 37.26], ["cambio", 37.4], ["este", 37.64]]},
+        {"a": 37.94, "b": 38.7, "w": [["CRM", 37.94, 1]]},
+        {"a": 46.32, "b": 46.76, "w": [["es", 46.32], ["como", 46.46], ["si", 46.62]]},
+        {"a": 46.76, "b": 47.5, "w": [["hubiera", 46.76], ["nacido", 46.96, 1], ["una", 47.28]]},
+        {"a": 47.5, "b": 48.94, "w": [["inteligencia", 47.5], ["artificial", 47.88], ["que", 48.48]]},
+        {"a": 48.94, "b": 49.66, "w": [["ya", 48.94], ["hubiera", 49.08], ["nacido", 49.3, 1]]},
+        {"a": 49.66, "b": 50.52, "w": [["con", 49.66], ["un", 49.84], ["CRM", 50.0, 1]]},
+        {"a": 50.52, "b": 50.96, "w": [["y", 50.52], ["si", 50.64], ["un", 50.78]]},
+        {"a": 50.96, "b": 51.64, "w": [["CRM", 50.96, 1], ["es", 51.36], ["bueno", 51.52, 1]]},
+        {"a": 51.64, "b": 52.62, "w": [["con", 51.64], ["inteligencia", 51.8], ["artificial", 52.14]]},
+        {"a": 52.62, "b": 53.2, "w": [["ahora", 52.62], ["lo", 52.92], ["vamos", 53.06]]},
+        {"a": 53.2, "b": 53.56, "w": [["a", 53.2], ["conectar", 53.34]]},
+        {"a": 55.78, "b": 56.04, "w": [["pero", 55.78]]},
+        {"a": 57.46, "b": 57.98, "w": [["de", 57.46], ["momento", 57.58], ["quiero", 57.8]]},
+        {"a": 57.98, "b": 58.56, "w": [["que", 57.98], ["me", 58.12], ["digas", 58.26]]},
+        {"a": 58.56, "b": 59.14, "w": [["qué", 58.56], ["tipo", 58.74], ["de", 58.98]]},
+        {"a": 59.14, "b": 59.8, "w": [["empleado", 59.14, 1], ["te", 59.34], ["gustaría", 59.5]]},
+        {"a": 59.8, "b": 60.92, "w": [["esclavizar", 59.8, 1], ["durante", 60.36], ["toda", 60.78]]},
+        {"a": 60.92, "b": 61.72, "w": [["la", 60.92], ["noche", 61.08], ["y", 61.34]]},
+        {"a": 61.72, "b": 62.24, "w": [["durante", 61.72], ["todos", 61.88], ["los", 62.08]]},
+        {"a": 62.24, "b": 62.7, "w": [["días", 62.24]]},
+      ];
+      /*END CAPS*/
+
+      const capsEl = document.getElementById("caps");
+      CAPS.forEach((c, i) => {
+        const d = document.createElement("div");
+        d.className = "cap"; d.id = "cap" + i;
+        c.w.forEach(([txt, , kw], j) => {
+          const s = document.createElement("span");
+          s.className = "w" + (kw ? " kw" : ""); s.id = `cap${i}w${j}`; s.textContent = txt;
+          d.appendChild(s);
+        });
+        capsEl.appendChild(d);
+      });
+      // 42 casillas
+      const segs = document.getElementById("segs");
+      for (let i = 0; i < 42; i++) { const s = document.createElement("div"); s.id = "seg" + i; segs.appendChild(s); }
+      // red de nodos (escena conectado)
+      const ICO = (n) => `<i class="ic" style="--i:url(assets/ico/${n}.svg)"></i>`;
+      const C = { x: 540, y: 860 }, NODES = [["user-fill", 0], ["envelope-simple-fill", 60], ["chats-fill", 120], ["database-fill", 180], ["address-book-fill", 240], ["chart-line-up-fill", 300]];
+      const nodesEl = document.getElementById("nodes"), net = document.getElementById("net");
+      const core = document.createElement("div"); core.className = "node core"; core.id = "ncore"; core.style.left = C.x + "px"; core.style.top = C.y + "px"; core.innerHTML = ICO("cpu-fill"); nodesEl.appendChild(core);
+      NODES.forEach(([ic, deg], i) => {
+        const a = (deg - 90) * Math.PI / 180, x = C.x + 330 * Math.cos(a), y = C.y + 280 * Math.sin(a);
+        const n = document.createElement("div"); n.className = "node"; n.id = "n" + i; n.style.left = x + "px"; n.style.top = y + "px"; n.innerHTML = ICO(ic); nodesEl.appendChild(n);
+        const l = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        l.setAttribute("x1", C.x); l.setAttribute("y1", C.y); l.setAttribute("x2", x); l.setAttribute("y2", y); l.setAttribute("pathLength", "1");
+        l.setAttribute("stroke-dasharray", "1"); l.setAttribute("stroke-dashoffset", "1"); l.id = "l" + i; net.appendChild(l);
+      });
+      // filas "puede leer"
+      const ROWS = [["user-fill", "cada cliente"], ["envelope-simple-fill", "cada correo"], ["magnifying-glass-fill", "qué hace"], ["compass-fill", "en qué etapas está"], ["chats-fill", "cómo le gusta que le hablen"]];
+      document.getElementById("rows").innerHTML = ROWS.map(([ic, tx], i) =>
+        `<div class="row" id="r${i}"><div class="t">${ICO(ic)}</div>${tx}<div class="ok">${ICO("check-bold")}</div></div>`).join("");
+
+      gsap.set(".bill", { opacity: 0 });
+      gsap.set("#s7-bar", { scaleX: 1 });
+      const tl = gsap.timeline({ paused: true });
+      const show = (s, t) => tl.set(s, { visibility: "visible" }, t);
+      const hide = (s, t) => tl.set(s, { visibility: "hidden" }, t);
+      const blurIn = (s, t, x = {}) => tl.fromTo(s, { opacity: 0, y: 30, filter: "blur(14px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.34, ease: "power3.out", immediateRender: false, ...x }, t);
+      const slam = (s, t, from = 1.5) => tl.fromTo(s, { opacity: 0, scale: from, filter: "blur(10px)" },
+        { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.34, ease: "expo.out", immediateRender: false }, t);
+      const rise = (s, t) => tl.fromTo(s, { opacity: 0, rotationX: -75, y: 60, transformPerspective: 1200, transformOrigin: "50% 100%" },
+        { opacity: 1, rotationX: 0, y: 0, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, t);
+      // transiciones 3D de escena: entra girando sobre el eje Y desde la izquierda, sale hacia la derecha
+      const flipIn = (s, t) => tl.fromTo(s, { rotationY: -85, transformPerspective: 1400, transformOrigin: "0% 50%", opacity: 0 },
+        { rotationY: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false }, t - 0.04);
+      const flipOut = (s, t) => tl.to(s, { rotationY: 85, transformPerspective: 1400, transformOrigin: "100% 50%", opacity: 0, duration: 0.3, ease: "power3.in" }, t);
+      // persiana lima: barras que barren la pantalla al entrar
+      const zoomIn = (s, t) => tl.fromTo(s, { scale: 1.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.32, ease: "expo.out", immediateRender: false }, t);
+      const zoomOut = (s, t) => tl.to(s, { scale: 0.85, opacity: 0, filter: "blur(10px)", duration: 0.28, ease: "power3.in" }, t);
+
+      // Subtítulos
+      CAPS.forEach((c, i) => {
+        show("#cap" + i, c.a);
+        c.w.forEach(([, t, kw], j) => {
+          const s = `#cap${i}w${j}`;
+          if (kw) tl.fromTo(s, { opacity: 0, scale: 0.4, rotation: -6 },
+            { opacity: 1, scale: 1, rotation: -2, duration: 0.32, ease: "back.out(2.6)", immediateRender: false }, t);
+          else blurIn(s, t, { duration: 0.24 });
+        });
+        tl.to("#cap" + i, { opacity: 0, y: -24, filter: "blur(8px)", duration: 0.14, ease: "power2.in" }, c.b - 0.14);
+        hide("#cap" + i, c.b);
+      });
+
+      // ---- S_day 3.10–5.05
+      show("#sday", 3.1); flipIn("#sday", 3.12);
+      blurIn("#sday-hoy", 3.14);
+      slam("#sday-dia", 3.42, 1.6);
+      blurIn("#sday-de", 4.12);
+      tl.fromTo("#segs div", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2)", stagger: { each: 0.01 }, immediateRender: false }, 4.15);
+      tl.set("#seg0", { className: "on" }, 4.5); tl.set("#seg1", { className: "on" }, 4.68);
+      tl.fromTo("#seg0, #seg1", { scale: 1.5 }, { scale: 1, duration: 0.3, ease: "back.out(3)", stagger: 0.18, immediateRender: false }, 4.5);
+      flipOut("#sday", 4.75); hide("#sday", 5.05);
+
+      // ---- S_emp 10.55–13.45
+      show("#semp", 10.55); zoomIn("#semp", 10.55);
+      tl.fromTo("#bill1, #bill2", { opacity: 0, rotation: -20, y: 80 }, { opacity: 0.45, rotation: -8, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.15, immediateRender: false }, 10.7);
+      tl.to("#bill1", { y: -120, rotation: 6, duration: 2.6, ease: "none" }, 11.3); tl.to("#bill2", { y: 140, rotation: -18, duration: 2.6, ease: "none" }, 11.3);
+      tl.fromTo("#ed", { rotationX: 55, rotationY: -20, y: 120, opacity: 0, transformPerspective: 1300 },
+        { rotationX: 8, rotationY: -6, y: 0, opacity: 1, duration: 0.7, ease: "back.out(1.4)", immediateRender: false }, 10.6);
+      tl.to("#ed", { rotationX: 2, rotationY: 6, duration: 2.2, ease: "sine.inOut" }, 11.3);
+      tl.fromTo(".trk span", { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.out", stagger: 0.05, immediateRender: false }, 10.8);
+      tl.fromTo("#ed-head", { x: 0 }, { x: 812, duration: 2.4, ease: "none", immediateRender: false }, 10.9);
+      blurIn("#semp-a", 10.75);
+      tl.fromTo("#semp-b", { opacity: 0, xPercent: -50, x: -500 }, { opacity: 1, xPercent: -50, x: 0, duration: 0.45, ease: "back.out(1.6)", immediateRender: false }, 12.0);
+      tl.fromTo("#semp-c", { opacity: 0, xPercent: -50, x: 500 }, { opacity: 1, xPercent: -50, x: 0, duration: 0.45, ease: "back.out(1.6)", immediateRender: false }, 12.66);
+      zoomOut("#semp", 13.17); hide("#semp", 13.45);
+
+      // ---- S_7 14.45–16.8: la barra azul de 7 min 37 s se encoge a 38 s (proporción real 38/457) y se vuelve lima
+      show("#s7", 14.45); flipIn("#s7", 14.47);
+      blurIn("#s7-pre", 14.5); slam("#s7-7", 14.55, 1.3);
+      tl.fromTo("#s7-bar", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.out", immediateRender: false }, 14.6);
+      tl.to("#s7-bar", { scaleX: 38 / 457, backgroundColor: "#C6FF3D", duration: 0.75, ease: "expo.inOut" }, 15.15);
+      tl.to("#s7-7", { opacity: 0.25, duration: 0.3 }, 15.4);
+      blurIn("#s7-a", 15.5);
+      slam("#s7-38", 15.9, 1.8);
+      blurIn("#s7-seg", 16.35);
+      flipOut("#s7", 16.5); hide("#s7", 16.8);
+
+      // ---- S_chat 34.10–37.10
+      show("#schat", 34.1); flipIn("#schat", 34.12);
+      tl.fromTo("#ph", { y: 500, rotationY: -40, rotationX: 20, transformPerspective: 1200, opacity: 0 },
+        { y: 0, rotationY: -12, rotationX: 6, opacity: 1, duration: 0.75, ease: "back.out(1.3)", immediateRender: false }, 34.12);
+      tl.to("#ph", { rotationY: 12, rotationX: 2, duration: 2.5, ease: "sine.inOut" }, 34.9);
+      tl.fromTo("#ph-scr .gl", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.3, stagger: 0.06, ease: "power3.out", immediateRender: false }, 34.5);
+      tl.fromTo("#ph-chat", { scale: 0, transformOrigin: "100% 100%" }, { scale: 1, duration: 0.45, ease: "back.out(2.4)", immediateRender: false }, 34.42);
+      tl.to("#ph-chat", { y: -10, duration: 0.35, yoyo: true, repeat: 3, ease: "sine.inOut" }, 34.95);
+      blurIn("#schat-a", 36.1); rise("#schat-b", 36.3);
+      flipOut("#schat", 36.8); hide("#schat", 37.1);
+
+      // ---- S_conn 38.65–41.45: la IA en el centro y las líneas se dibujan hacia cada dato
+      show("#sconn", 38.65); zoomIn("#sconn", 38.65);
+      blurIn("#sconn-a", 38.7); rise("#sconn-b", 38.96);
+      tl.fromTo("#ncore", { scale: 0, rotationY: 180, transformPerspective: 800 }, { scale: 1, rotationY: 0, duration: 0.6, ease: "back.out(1.8)", immediateRender: false }, 39.0);
+      NODES.forEach((_, i) => {
+        tl.fromTo("#l" + i, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.35, ease: "power2.out", immediateRender: false }, 39.25 + i * 0.12);
+        tl.fromTo("#n" + i, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.2)", immediateRender: false }, 39.45 + i * 0.12);
+      });
+      tl.to("#ncore", { scale: 1.08, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 40.2);
+      blurIn("#sconn-c", 39.9); blurIn("#sconn-d", 40.8);
+      zoomOut("#sconn", 41.17); hide("#sconn", 41.45);
+
+      // ---- S_card 41.50–46.25: cada fila sube en 3D cuando la nombra y se marca con el check lima
+      show("#scard", 41.5); flipIn("#scard", 41.52);
+      blurIn("#card-title", 41.6);
+      [42.38, 43.04, 43.76, 44.36, 45.18].forEach((t, i) => {
+        rise("#r" + i, t);
+        tl.fromTo(`#r${i} .ok`, { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(3)", immediateRender: false }, t + 0.3);
+      });
+      flipOut("#scard", 45.95); hide("#scard", 46.25);
+
+      // ---- S_dian 53.55–55.75
+      show("#sdian", 53.55); zoomIn("#sdian", 53.55);
+      tl.fromTo("#inv", { rotationY: 70, rotationX: 10, opacity: 0, transformPerspective: 1200 }, { rotationY: -14, rotationX: 6, opacity: 1, duration: 0.7, ease: "back.out(1.4)", immediateRender: false }, 53.6);
+      tl.to("#inv", { rotationY: 12, duration: 1.4, ease: "sine.inOut" }, 54.3);
+      blurIn("#sdian-a", 53.62); slam("#sdian-b", 53.76, 1.7); blurIn("#sdian-c", 54.7);
+      zoomOut("#sdian", 55.47); hide("#sdian", 55.75);
+
+      // ---- S_d3 55.90–57.40
+      show("#sd3", 55.9); flipIn("#sd3", 55.92);
+      blurIn("#sd3-a", 55.95); slam("#sd3-b", 56.7, 1.6);
+      flipOut("#sd3", 57.1); hide("#sd3", 57.4);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["graphics"] = tl;
+    </script>
+  </div>
+</template>

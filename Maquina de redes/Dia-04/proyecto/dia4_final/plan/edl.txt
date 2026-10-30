@@ -1,0 +1,21 @@
+G      0.00-  4.18  B    27.44-   31.62  persona + título cinético
+C1     4.33-  6.51  B    37.72-   39.90  gráfico entreno02 (Cristiano)
+C2     6.51-  9.85  B    40.10-   43.44  persona + Nº1
+CP     9.85- 10.63  -     0.00-    0.78  placa Nº1 (silencio)
+T1    10.63- 13.31  B    80.94-   83.62  persona
+T2    13.31- 24.55  B    87.46-   98.70  persona + lista fracasos (quitado: agencia de IA 84,1-87,4)
+T3    24.55- 26.55  B   107.92-  109.92  persona (quitado: imágenes y criptomonedas 98,7-107,9)
+A1    26.55- 34.95  A   218.56-  226.96  persona cámara A
+Q2    34.95- 40.11  A  1255.14- 1260.30  cita 1 Esencialismo (2.º intento)
+Q1    40.41- 45.11  A  1262.14- 1266.84  cita 2 Esencialismo
+GI1   45.36- 48.72  B   258.30-  261.66  2.5D biblioteca (busto)
+GI2   48.72- 50.10  B   266.62-  268.00  2.5D biblioteca (sala); quitada pausa de 5 s
+GI3   50.10- 51.74  B   269.10-  270.74  2.5D biblioteca (sala); pausa 1,6 s -> 0,6 s
+PR1   51.99- 55.11  B   293.62-  296.74  persona → zoom-out radial
+PR2   55.11- 59.67  B   306.40-  310.96  motion graphic (quitado: agente consultor / mensajes 296,7-306,4)
+PR3   60.12- 61.92  B   311.70-  313.50  invert flash → persona
+CV    61.92- 71.38  B   154.80-  164.26  persona
+CI1   71.38- 77.18  B   643.52-  649.32  persona
+CI2   77.18- 83.26  B   707.56-  713.64  persona
+PL    83.26- 85.66  -     0.00-    2.40  placa DÍA 5 DE 42
+total 85.66

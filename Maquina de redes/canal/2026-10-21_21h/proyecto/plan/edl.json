@@ -1,0 +1,108 @@
+{
+ "source": "input/clip.mp4",
+ "target": 39.08,
+ "tolerance": 2,
+ "max": 45,
+ "clips": [
+  {
+   "id": "t01",
+   "start": 21.88,
+   "end": 25.57,
+   "vs": 21.92,
+   "ve": 25.49,
+   "ws": 21.94,
+   "we": 25.08,
+   "note": "¿ustedes qué hacen cuando un cliente les escribe a las 9 de la noche por algo de"
+  },
+  {
+   "id": "t02",
+   "start": 25.83,
+   "end": 27.34,
+   "vs": 25.87,
+   "ve": 27.26,
+   "ws": 25.82,
+   "we": 26.96,
+   "note": "¿En cuánto se demoran tener esa"
+  },
+  {
+   "id": "t03",
+   "start": 28.54,
+   "end": 32.19,
+   "vs": 28.58,
+   "ve": 32.11,
+   "ws": 28.72,
+   "we": 31.34,
+   "note": "a las 9 de la noche ya puedes estar acostado, con"
+  },
+  {
+   "id": "t04",
+   "start": 49.77,
+   "end": 53.9,
+   "vs": 49.81,
+   "ve": 53.82,
+   "ws": 49.34,
+   "we": 53.2,
+   "note": "Porque en realidad no te van a dejar por la IA, te van a dejar por el contador que contestó"
+  },
+  {
+   "id": "t05",
+   "start": 83.78,
+   "end": 88.62,
+   "vs": 83.82,
+   "ve": 88.54,
+   "ws": 83.48,
+   "we": 88.04,
+   "note": "Y casi siempre es la misma pregunta, ¿qué retención, qué IVA, qué cuándo"
+  },
+  {
+   "id": "t06",
+   "start": 89.87,
+   "end": 92.76,
+   "vs": 89.91,
+   "ve": 92.68,
+   "ws": 90.0,
+   "we": 92.8,
+   "note": "pero tú ya le respondiste y te siguen preguntando igual"
+  },
+  {
+   "id": "t07",
+   "start": 113.52,
+   "end": 119.46,
+   "vs": 113.56,
+   "ve": 119.38,
+   "ws": 113.4,
+   "we": 119.04,
+   "note": "Con mi compañero de trabajo estamos probando a un agente que se basa en el Estatuto Tributario y adelanta a tu"
+  },
+  {
+   "id": "t08",
+   "start": 119.96,
+   "end": 123.09,
+   "vs": 120.0,
+   "ve": 123.01,
+   "ws": 119.64,
+   "we": 122.68,
+   "note": "No es un chatbot que sólo responde y se le envía al"
+  },
+  {
+   "id": "t09",
+   "start": 123.2,
+   "end": 128.16,
+   "vs": 123.24,
+   "ve": 128.08,
+   "ws": 123.28,
+   "we": 128.1,
+   "note": "No reemplaza tu criterio y tú puedes revisar el mensaje antes de que se le pueda enviar al cliente"
+  },
+  {
+   "id": "t10",
+   "start": 180.25,
+   "end": 185.15,
+   "vs": 180.29,
+   "ve": 185.07,
+   "ws": 180.1,
+   "we": 185.16,
+   "note": "Quiero saber cuál es la pregunta que más te escriben tus clientes a las 9 de la noche, déjalo acá en los comentarios"
+  }
+ ]
+}

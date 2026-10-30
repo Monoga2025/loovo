@@ -1,0 +1,476 @@
+<template id="graphics-template">
+  <div data-composition-id="graphics" data-width="1080" data-height="1920" data-duration="38.06">
+
+    <!-- ============ Subtítulos cinéticos (sobre la cabeza hablando) ============ -->
+    <div id="caps"></div>
+
+    <!-- ============ S1 · Gancho: Tengo 42 días (FS negro) ============ -->
+    <div id="s1" class="scene dark">
+      <div class="glow"></div>
+      <div id="s1-tengo" class="t-white t-mid" style="top: 560px">Tengo</div>
+      <div id="odo" style="top: 680px">
+        <div class="dcol"><div id="d-tens" class="dstrip">
+          <div>0</div><div>1</div><div>2</div><div>3</div><div>4</div>
+        </div></div>
+        <div class="dcol"><div id="d-ones" class="dstrip">
+          <div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+          <div>7</div><div>8</div><div>9</div><div>0</div><div>1</div><div>2</div>
+        </div></div>
+      </div>
+      <div id="s1-dias" class="t-white t-big" style="top: 1150px">días</div>
+      <div id="s1-para" class="t-gray t-small" style="top: 1300px">para meter mi empresa</div>
+    </div>
+
+    <!-- ============ S3 · muy lejos de ser la empresa que tengo en mi cabeza (FS crema) ============ -->
+    <div id="s3" class="scene cream">
+      <svg class="full" viewBox="0 0 1080 1920">
+        <path id="s3-arc" d="M240,1330 C240,1000 520,820 790,830" pathLength="1"
+              fill="none" stroke="#CFCAC2" stroke-width="44" stroke-linecap="round"
+              stroke-dasharray="1" stroke-dashoffset="1" />
+      </svg>
+      <div id="s3-dot"></div>
+      <div id="s3-hoy" class="t-dark" style="left: 120px; top: 1395px; width: 240px; font-size: 46px; font-weight: 800">Loovo hoy</div>
+      <div id="s3-lejos" class="t-gray">muy lejos</div>
+      <div id="s3-idea"><span class="emoji">💡</span></div>
+      <div id="s3-l1" class="t-dark t-mid" style="top: 300px">de ser la empresa</div>
+      <div id="s3-l2" class="t-dark t-mid" style="top: 385px">que tengo en mi</div>
+      <div id="s3-l3" class="t-red t-huge" style="top: 455px">cabeza</div>
+    </div>
+
+    <!-- ============ S4 · mostrar cómo montamos toda la empresa (FS negro) ============ -->
+    <div id="s4" class="scene dark">
+      <div class="glow low"></div>
+      <div id="lattice"></div>
+      <div id="s4-l1" class="t-white t-mid" style="top: 650px">mostrar</div>
+      <div id="s4-l2" class="t-white" style="top: 750px; font-size: 112px; font-weight: 800">cómo montamos</div>
+      <div id="s4-l3" class="t-gray t-mid" style="top: 930px">toda la</div>
+      <div id="s4-l4" class="t-red t-huge glowtxt" style="top: 1000px">empresa</div>
+    </div>
+
+    <!-- ============ S5 · Vas a ver… (FS crema, tarjeta con chincheta) ============ -->
+    <div id="s5" class="scene cream">
+      <svg class="full" viewBox="0 0 1080 1920">
+        <path id="s5-arc" d="M-80,420 C420,380 980,760 900,1250 C860,1520 520,1700 300,2050" pathLength="1"
+              fill="none" stroke="#CFCAC2" stroke-width="70" stroke-linecap="round"
+              stroke-dasharray="1" stroke-dashoffset="1" />
+      </svg>
+      <div id="card">
+        <div id="pin"></div>
+        <div id="card-title">Vas a ver</div>
+        <div id="card-rule"></div>
+        <div class="row" id="r1"><span class="ico">📦</span>Los servicios</div>
+        <div class="row" id="r2"><span class="ico">🧩</span>Cómo los armamos</div>
+        <div class="row" id="r3"><span class="ico">🛠️</span>Cómo los construimos</div>
+        <div class="row" id="r4"><span class="ico">🧭</span>Qué decisiones tomamos</div>
+        <div class="row bad" id="r5"><span class="ico">⚠️</span>Y qué sale mal</div>
+      </div>
+    </div>
+
+    <!-- ============ S7 · con inteligencia artificial … paso a paso (FS negro) ============ -->
+    <div id="s7" class="scene dark">
+      <div class="glow"></div>
+      <div id="s7-group">
+        <div id="s7-con" class="t-gray t-mid" style="top: 640px">con</div>
+        <div id="s7-ia" class="t-white" style="top: 730px; font-size: 124px; font-weight: 800">
+          <span class="scr" id="sc0">#7$q&amp;@x!k%2z</span>
+          <span class="scr" id="sc1">i9t&amp;l1g#nc?a</span>
+          <span class="scr" id="sc2">int$l!ge%c1a</span>
+          <span class="scr" id="sc3">intel#gen&amp;ia</span>
+          <span class="scr" id="sc4">inteligenc!a</span>
+          <span class="scr" id="sc5">inteligencia</span>
+        </div>
+        <div id="s7-art" class="t-red glowtxt" style="top: 880px; font-size: 156px; font-weight: 900">artificial</div>
+      </div>
+      <div id="s7-mostrar" class="t-gray t-small" style="top: 880px">y les voy a mostrar cómo lo hacemos</div>
+      <div id="s7-paso" class="t-red glowtxt" style="top: 975px; font-size: 112px; font-weight: 900">paso a paso</div>
+      <div id="stairs">
+        <div class="step" id="st1" style="height: 110px"></div>
+        <div class="step" id="st2" style="height: 200px"></div>
+        <div class="step red" id="st3" style="height: 290px"></div>
+      </div>
+    </div>
+
+    <!-- ============ S8 · Este va a ser el Día 1 de 42 (FS crema) ============ -->
+    <div id="s8" class="scene cream">
+      <div id="s8-este" class="t-gray t-mid" style="top: 520px">Este va a ser el</div>
+      <div id="s8-dia" class="t-dark" style="top: 610px; font-size: 270px; font-weight: 900; letter-spacing: -0.04em">
+        <span id="s8-d">Día</span> <span id="s8-1" class="red">1</span>
+      </div>
+      <div id="s8-de" class="t-dark" style="top: 920px; font-size: 92px; font-weight: 700">de 42</div>
+      <div id="segs"></div>
+    </div>
+
+    <!-- ============ Transiciones ============ -->
+    <div id="wipe-red"></div>
+    <div id="iris-end"></div>
+
+    <style>
+      @font-face { font-family: "Emoji"; src: local("Segoe UI Emoji"); }
+      [data-composition-id="graphics"] {
+        background: transparent; font-family: "Inter", sans-serif; overflow: hidden;
+        --red: #e3120b; --cream: #f2eee8; --dark: #141414; --gray: #8a8784;
+      }
+      .scene { position: absolute; inset: 0; z-index: 10; visibility: hidden; overflow: hidden; }
+      .dark { background: #070707; }
+      .cream {
+        background-color: var(--cream);
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.035) 2px, transparent 2px),
+          linear-gradient(90deg, rgba(0, 0, 0, 0.035) 2px, transparent 2px);
+        background-size: 72px 72px;
+      }
+      .full { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .glow {
+        position: absolute; left: 50%; top: 46%; width: 1300px; height: 1300px;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba(227, 18, 11, 0.28) 0%, rgba(227, 18, 11, 0.08) 38%, transparent 66%);
+      }
+      .glow.low { top: 62%; }
+      .emoji { font-family: "Emoji", sans-serif; }
+      #s1 { visibility: visible; }
+      #odo { opacity: 0; }
+
+      /* Tipografía de la referencia: pequeña neutra + palabra clave roja grande */
+      .t-white, .t-gray, .t-dark, .t-red {
+        position: absolute; left: 0; width: 100%; text-align: center;
+        letter-spacing: -0.03em; line-height: 1;
+      }
+      .t-white { color: #ffffff; }
+      .t-gray { color: var(--gray); font-weight: 500; }
+      .t-dark { color: var(--dark); }
+      .t-red { color: var(--red); font-weight: 900; }
+      .red { color: var(--red); }
+      .t-small { font-size: 50px; font-weight: 500; }
+      .t-mid { font-size: 68px; font-weight: 600; }
+      .t-big { font-size: 130px; font-weight: 800; }
+      .t-huge { font-size: 180px; letter-spacing: -0.045em; }
+      .glowtxt { text-shadow: 0 0 40px rgba(227, 18, 11, 0.75), 0 0 90px rgba(227, 18, 11, 0.45); }
+
+      /* Odómetro */
+      /* el glow va en el contenedor (drop-shadow tras el recorte), no en los dígitos */
+      #odo {
+        position: absolute; left: 0; width: 100%; height: 430px; display: flex; justify-content: center; gap: 0;
+        filter: drop-shadow(0 0 30px rgba(227, 18, 11, 0.75)) drop-shadow(0 0 70px rgba(227, 18, 11, 0.45));
+      }
+      .dcol { width: 300px; height: 430px; overflow: hidden; }
+      .dstrip div {
+        height: 430px; line-height: 430px; text-align: center;
+        font-size: 470px; font-weight: 900; letter-spacing: -0.06em; color: var(--red);
+      }
+
+      /* S3 */
+      #s3-dot {
+        position: absolute; left: 205px; top: 1295px; width: 70px; height: 70px; border-radius: 50%;
+        background: var(--dark); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+      }
+      #s3-lejos {
+        position: absolute; left: 330px; top: 1010px; width: 400px; text-align: center;
+        font-size: 54px; font-weight: 600; font-style: italic; transform: rotate(-34deg);
+      }
+      #s3-idea {
+        position: absolute; left: 660px; top: 700px; width: 260px; height: 260px; border-radius: 50%;
+        background: #ffffff; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18), 0 0 0 10px rgba(227, 18, 11, 0.15);
+        display: flex; align-items: center; justify-content: center; font-size: 150px;
+      }
+
+      /* S4 retícula */
+      #lattice {
+        position: absolute; left: 50%; top: 50%; width: 900px; height: 1300px;
+        transform: translate(-50%, -50%);
+        display: grid; grid-template-columns: repeat(7, 1fr); gap: 18px; opacity: 0.9;
+      }
+      #lattice div { border: 2px solid #232323; border-radius: 14px; background: #0e0e0e; }
+
+      /* S5 tarjeta */
+      #card {
+        position: absolute; left: 150px; top: 400px; width: 780px; height: 770px;
+        background: linear-gradient(180deg, #9d9b98, #8b8986); border-radius: 8px;
+        box-shadow: 0 40px 70px rgba(0, 0, 0, 0.28); transform-origin: 50% 0%;
+        padding: 70px 60px 0;
+      }
+      #pin {
+        position: absolute; left: 50%; top: -26px; width: 52px; height: 52px; margin-left: -26px;
+        border-radius: 50%; background: radial-gradient(circle at 35% 30%, #ff6a5c, #c40d06 70%);
+        box-shadow: 0 8px 14px rgba(0, 0, 0, 0.35);
+      }
+      #card-title { color: #fff; font-size: 88px; font-weight: 800; letter-spacing: -0.03em; }
+      #card-rule { height: 6px; background: rgba(255, 255, 255, 0.85); margin: 26px 0 34px; transform-origin: 0 50%; }
+      .row {
+        display: flex; align-items: center; gap: 20px; color: #fff; white-space: nowrap;
+        font-size: 45px; font-weight: 600; letter-spacing: -0.02em; height: 96px;
+      }
+      .row .ico { font-family: "Emoji", sans-serif; font-size: 44px; width: 58px; text-align: center; }
+      .row.bad {
+        background: var(--red); border-radius: 14px; padding: 0 22px; margin: 14px -22px 0;
+        font-weight: 800; box-shadow: 0 14px 30px rgba(227, 18, 11, 0.45);
+      }
+
+      /* S7 */
+      #s7-group { position: absolute; inset: 0; }
+      #s7-ia { height: 140px; }
+      .scr { position: absolute; left: 0; width: 100%; text-align: center; visibility: hidden; }
+      #stairs {
+        position: absolute; left: 340px; top: 1130px; width: 580px; height: 290px;
+        display: flex; align-items: flex-end; gap: 20px;
+      }
+      .step { flex: 1; background: #f4f4f4; border-radius: 12px; transform-origin: 50% 100%; }
+      .step.red { background: var(--red); box-shadow: 0 0 50px rgba(227, 18, 11, 0.6); }
+
+      /* S8 segmentos */
+      #segs {
+        position: absolute; left: 153px; top: 1100px; width: 774px;
+        display: grid; grid-template-columns: repeat(14, 46px); gap: 10px;
+      }
+      #segs div { height: 46px; border-radius: 10px; background: #dcd7cf; }
+
+      /* Subtítulos */
+      #caps { position: absolute; inset: 0; z-index: 5; }
+      .cap {
+        position: absolute; left: 100px; width: 880px; top: 1170px; text-align: center;
+        visibility: hidden; line-height: 1.08;
+      }
+      .cap .w {
+        display: inline-block; margin: 0 0.12em; color: #151515;
+        font-size: 74px; font-weight: 700; letter-spacing: -0.03em;
+        text-shadow: 0 0 22px rgba(255, 255, 255, 0.95), 0 0 6px rgba(255, 255, 255, 0.9);
+      }
+      .cap .w.kw {
+        color: var(--red); font-size: 104px; font-weight: 900;
+        text-shadow: 0 0 22px rgba(255, 255, 255, 0.95), 0 0 8px rgba(255, 255, 255, 0.9);
+      }
+      .cap .uline {
+        position: absolute; left: 160px; right: 160px; bottom: -14px; height: 12px;
+        background: var(--red); border-radius: 6px; transform: scaleX(0); transform-origin: 0 50%;
+      }
+
+      /* Transiciones */
+      #wipe-red {
+        position: absolute; left: 50%; top: 50%; width: 2600px; height: 2600px; margin: -1300px 0 0 -1300px;
+        border-radius: 50%; background: var(--red); z-index: 30;
+      }
+      #iris-end {
+        position: absolute; left: 540px; top: 760px; width: 2800px; height: 2800px;
+        border-radius: 50%; transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 3000px #070707; z-index: 40; visibility: hidden;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      // ---------- Datos: subtítulos (tiempos de build/words_out.json; * = palabra clave) ----------
+      const CAPS = [
+        { a: 1.86, b: 2.5, w: [["en", 2.0], ["un", 2.13], ["evento", 2.21]] },
+        { a: 2.5, b: 3.03, w: [["con", 2.5], ["más", 2.74], ["de", 2.9]] },
+        { a: 3.03, b: 3.86, w: [["2.000", 3.03, 1], ["empresarios", 3.28]] },
+        { a: 3.93, b: 4.32, w: [["En", 3.93], ["este", 4.01], ["momento", 4.13]] },
+        { a: 4.32, b: 5.01, w: [["no", 4.32], ["tengo", 4.52], ["ni", 4.72, 1], ["idea", 4.86, 1]] },
+        { a: 5.01, b: 5.62, w: [["cuánto", 5.01], ["puede", 5.33], ["llegar", 5.47]] },
+        { a: 5.62, b: 6.31, w: [["a", 5.62], ["cambiar", 5.74], ["Loovo", 5.94, 1]] },
+        { a: 6.31, b: 7.18, w: [["durante", 6.31], ["este", 6.53], ["tiempo", 6.83, 1]] },
+        { a: 7.24, b: 8.12, w: [["Loovo", 7.24, 1], ["ya", 7.62], ["existe", 7.77]] },
+        { a: 10.3, b: 10.97, w: [["Así", 10.3], ["que", 10.45], ["decidí", 10.63, 1]] },
+        { a: 10.97, b: 11.53, w: [["hacer", 10.97], ["algo", 11.13], ["que", 11.39]] },
+        { a: 11.53, b: 12.4, u: 12.0, w: [["normalmente", 11.53], ["no", 11.85, 1], ["se", 12.17, 1], ["hace", 12.29, 1]] },
+        { a: 20.7, b: 21.6, w: [["Así", 20.7], ["que", 21.02], ["la", 21.38], ["meta", 21.49, 1]] },
+        { a: 21.6, b: 22.2, w: [["que", 21.6], ["va", 21.75], ["a", 21.86], ["construir", 21.97]] },
+        { a: 22.2, b: 23.16, w: [["desde", 22.2], ["el", 22.57], ["día", 22.72], ["de", 22.86], ["hoy", 22.97, 1]] },
+        { a: 23.16, b: 24.31, w: [["es", 23.16], ["trabajar", 23.72], ["el", 24.0], ["Loovo", 24.18, 1]] },
+        { a: 24.31, b: 25.17, w: [["para", 24.31], ["mostrar", 24.55], ["una", 24.77], ["empresa", 24.95]] },
+        { a: 25.17, b: 26.08, g: 1, w: [["totalmente", 25.17, 1], ["diferente", 25.61, 1]] },
+        { a: 26.15, b: 27.1, w: [["Voy", 26.15], ["a", 26.41], ["llegar", 26.53], ["a", 26.73], ["tener", 26.89]] },
+        { a: 27.1, b: 27.98, w: [["los", 27.1], ["mejores", 27.34, 1], ["servicios", 27.6]] },
+        { a: 27.98, b: 28.3, w: [["del", 27.98], ["evento", 28.12, 1]] },
+        { a: 34.9, b: 35.21, w: [["Y", 34.9], ["quiero", 34.95], ["que", 35.07]] },
+        { a: 35.21, b: 36.01, w: [["me", 35.21], ["acompañen", 35.29, 1]] },
+        { a: 36.01, b: 36.86, w: [["a", 36.01], ["ver", 36.15], ["qué", 36.31], ["tan", 36.48], ["lejos", 36.66, 1]] },
+        { a: 36.86, b: 37.38, w: [["puedo", 36.86], ["llevar", 37.06]] },
+        { a: 37.38, b: 38.13, w: [["esta", 37.38], ["empresa", 37.75, 1]] },
+      ];
+
+      // ---------- Construcción del DOM (determinista) ----------
+      const capsEl = document.getElementById("caps");
+      CAPS.forEach((c, i) => {
+        const d = document.createElement("div");
+        d.className = "cap";
+        d.id = "cap" + i;
+        c.w.forEach(([txt, , kw], j) => {
+          const s = document.createElement("span");
+          s.className = "w" + (kw ? " kw" : "");
+          s.id = `cap${i}w${j}`;
+          s.textContent = txt;
+          d.appendChild(s);
+        });
+        if (c.u) {
+          const u = document.createElement("div");
+          u.className = "uline";
+          u.id = `cap${i}u`;
+          d.appendChild(u);
+        }
+        capsEl.appendChild(d);
+      });
+      const lat = document.getElementById("lattice");
+      for (let i = 0; i < 70; i++) lat.appendChild(document.createElement("div"));
+      const segs = document.getElementById("segs");
+      for (let i = 0; i < 42; i++) {
+        const s = document.createElement("div");
+        if (i === 0) s.id = "seg0";
+        segs.appendChild(s);
+      }
+
+      // ---------- Timeline ----------
+      gsap.set("#wipe-red", { scale: 0 });
+      // Los tiempos de abajo se escribieron sobre el corte anterior; T() los
+      // lleva al corte actual (bordes ajustados a fotograma, plan/timemap.json).
+      const MAP_OLD = [0, 3.89, 7.2, 10.21, 14.78, 18.68, 20.61, 26.11, 32.53, 34.69, 38.14];
+      const MAP_NEW = [0, 3.857, 7.178, 10.178, 14.749, 18.634, 20.557, 26.057, 32.48, 34.634, 38.057];
+      const T = (t) => {
+        let i = 1;
+        while (i < MAP_OLD.length - 1 && t > MAP_OLD[i]) i++;
+        const [a, b, c, d] = [MAP_OLD[i - 1], MAP_OLD[i], MAP_NEW[i - 1], MAP_NEW[i]];
+        return c + ((t - a) * (d - c)) / (b - a);
+      };
+      const root = gsap.timeline({ paused: true });
+      const tl = {
+        to: (s, v, p) => root.to(s, v, T(p)),
+        fromTo: (s, a, b, p) => root.fromTo(s, a, b, T(p)),
+        set: (s, v, p) => root.set(s, v, T(p)),
+      };
+      const show = (sel, t) => tl.set(sel, { visibility: "visible" }, t);
+      const hide = (sel, t) => tl.set(sel, { visibility: "hidden" }, t);
+      const blurIn = (sel, t, extra = {}) =>
+        tl.fromTo(sel, { opacity: 0, y: 26, scale: 0.92, filter: "blur(14px)" },
+          { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 0.32, ease: "power3.out", ...extra }, t);
+      const slam = (sel, t, from = 1.5) =>
+        tl.fromTo(sel, { opacity: 0, scale: from, filter: "blur(10px)" },
+          { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.34, ease: "expo.out" }, t);
+
+      // Subtítulos: palabra a palabra con blur-in; la frase sale hacia arriba
+      CAPS.forEach((c, i) => {
+        show("#cap" + i, c.a);
+        c.w.forEach(([, t, kw], j) => {
+          const sel = `#cap${i}w${j}`;
+          if (kw) tl.fromTo(sel, { opacity: 0, scale: 1.45, filter: "blur(12px)" },
+            { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.3, ease: "back.out(2)" }, t);
+          else blurIn(sel, t, { duration: 0.24 });
+        });
+        if (c.u) tl.to(`#cap${i}u`, { scaleX: 1, duration: 0.3, ease: "power3.out" }, c.u);
+        if (c.g) {
+          // glitch RGB en "totalmente diferente"
+          const g = [
+            "4px 0 0 #00e5ff, -4px 0 0 #e3120b", "-9px 2px 0 #00e5ff, 8px -2px 0 #e3120b",
+            "6px -3px 0 #00e5ff, -6px 3px 0 #e3120b", "0 0 22px rgba(255,255,255,0.95)",
+          ];
+          [0, 0.06, 0.12, 0.2, 0.44, 0.5, 0.58].forEach((dt, k) =>
+            tl.set(`#cap${i} .w`, { textShadow: g[k % 4], x: k % 2 ? -6 : 6 }, c.a + dt));
+          tl.set(`#cap${i} .w`, { textShadow: g[3], x: 0 }, c.a + 0.66);
+        }
+        tl.to("#cap" + i, { opacity: 0, y: -24, filter: "blur(8px)", duration: 0.14, ease: "power2.in" }, c.b - 0.14);
+        hide("#cap" + i, c.b);
+      });
+
+      // ---------- S1 · Gancho 0–1.85 ----------
+      gsap.set("#s1", { clipPath: "circle(150% at 50% 42%)" });
+      blurIn("#s1-tengo", 0, { duration: 0.2 });
+      tl.fromTo("#odo", { opacity: 0, scale: 1.3 },
+        { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, 0.1);
+      tl.to("#d-tens", { y: -4 * 430, duration: 0.6, ease: "power4.out" }, 0.1);
+      tl.to("#d-ones", { y: -12 * 430, duration: 0.7, ease: "power4.out" }, 0.1);
+      tl.fromTo("#s1-dias", { opacity: 0, x: 260, filter: "blur(14px)" },
+        { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 0.8);
+      blurIn("#s1-para", 1.12);
+      tl.to("#s1 .glow", { scale: 1.25, opacity: 0.6, duration: 0.25, yoyo: true, repeat: 1 }, 0.42);
+      tl.to("#s1", { clipPath: "circle(0% at 50% 42%)", duration: 0.3, ease: "power3.in" }, 1.55);
+      hide("#s1", 1.86);
+
+      // ---------- S3 · cabeza 8.28–10.21 ----------
+      show("#s3", 8.28);
+      tl.fromTo("#s3", { opacity: 0 }, { opacity: 1, duration: 0.08 }, 8.26);
+      tl.fromTo("#s3-dot", { scale: 0 }, { scale: 1, duration: 0.35, ease: "back.out(2.5)" }, 8.3);
+      blurIn("#s3-hoy", 8.34);
+      tl.fromTo("#s3-arc", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.95, ease: "power2.inOut" }, 8.32);
+      blurIn("#s3-lejos", 8.62, { scale: 1 });
+      tl.fromTo("#s3-lejos", { rotation: -34 }, { rotation: -34, duration: 0.01 }, 8.62);
+      tl.fromTo("#s3-idea", { scale: 0, rotation: -25 },
+        { scale: 1, rotation: 0, duration: 0.55, ease: "back.out(2.2)" }, 9.22);
+      blurIn("#s3-l1", 9.07);
+      blurIn("#s3-l2", 9.47);
+      slam("#s3-l3", 9.92, 1.7);
+      tl.to("#s3-idea", { y: -24, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.out" }, 9.92);
+      tl.fromTo("#s3", { scale: 1.06 }, { scale: 1.0, duration: 1.9, ease: "none", immediateRender: false }, 8.28);
+      hide("#s3", 10.21);
+
+      // ---------- S4 · montamos 12.60–14.84 ----------
+      show("#s4", 12.6);
+      tl.fromTo("#lattice div", { scale: 0, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.6)",
+          stagger: { each: 0.012, from: "center", grid: [10, 7] } }, 12.62);
+      blurIn("#s4-l1", 12.68);
+      tl.fromTo("#s4-l2", { opacity: 0, scaleX: 1.6, filter: "blur(10px)" },
+        { opacity: 1, scaleX: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 13.04);
+      blurIn("#s4-l3", 13.96);
+      slam("#s4-l4", 14.44, 1.6);
+      tl.fromTo("#s4", { scale: 1.0 }, { scale: 1.07, duration: 2.2, ease: "none" }, 12.6);
+      // círculo rojo: negro -> crema
+      tl.fromTo("#wipe-red", { scale: 0 }, { scale: 1, duration: 0.22, ease: "power3.in" }, 14.62);
+      hide("#s4", 14.84);
+      show("#s5", 14.84);
+      tl.to("#wipe-red", { scale: 0, duration: 0.24, ease: "power3.out" }, 14.84);
+
+      // ---------- S5 · tarjeta 14.84–20.61 ----------
+      tl.fromTo("#s5-arc", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: "power2.out" }, 14.84);
+      tl.fromTo("#card", { y: -1300, rotation: -14 }, { y: 0, rotation: 0, duration: 0.7, ease: "back.out(1.2)" }, 14.86);
+      tl.fromTo("#card-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.out" }, 15.3);
+      ["#r1", "#r2", "#r3", "#r4"].forEach((r, k) =>
+        tl.fromTo(r, { opacity: 0, x: -50, filter: "blur(10px)" },
+          { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.3, ease: "power3.out" }, [15.53, 16.98, 17.77, 18.86][k]));
+      // balanceo suave del cartel colgado
+      [[15.6, 1.6], [16.6, -1.4], [17.6, 1.2], [18.6, -1.2]].forEach(([t, r]) =>
+        tl.to("#card", { rotation: r, duration: 1.0, ease: "sine.inOut" }, t));
+      tl.fromTo("#r5", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2.5)" }, 20.01);
+      [4, -3.5, 3, -2, 1, 0].forEach((r, k) => tl.to("#card", { rotation: r, duration: 0.045 }, 20.03 + k * 0.05));
+      tl.fromTo("#s5", { scale: 1.0 }, { scale: 1.05, duration: 5.6, ease: "none" }, 14.84);
+      tl.to("#card", { y: 1500, rotation: 18, duration: 0.24, ease: "power3.in" }, 20.37);
+      hide("#s5", 20.61);
+
+      // ---------- S7 · inteligencia artificial 28.40–32.53 ----------
+      show("#s7", 28.4);
+      tl.fromTo("#s7", { opacity: 0 }, { opacity: 1, duration: 0.08 }, 28.38);
+      blurIn("#s7-con", 28.45);
+      ["#sc0", "#sc1", "#sc2", "#sc3", "#sc4", "#sc5"].forEach((s, k, arr) => {
+        tl.set(s, { visibility: "visible" }, 29.39 + k * 0.06);
+        if (k < arr.length - 1) tl.set(s, { visibility: "hidden" }, 29.39 + (k + 1) * 0.06);
+      });
+      slam("#s7-art", 29.81, 1.7);
+      tl.to("#s7 .glow", { scale: 1.3, duration: 0.3, yoyo: true, repeat: 1, ease: "power2.out" }, 29.81);
+      tl.to("#s7-group", { y: -330, scale: 0.78, duration: 0.5, ease: "power3.inOut" }, 30.5);
+      blurIn("#s7-mostrar", 30.72);
+      slam("#s7-paso", 31.91, 1.5);
+      ["#st1", "#st2", "#st3"].forEach((s, k) =>
+        tl.fromTo(s, { scaleY: 0 }, { scaleY: 1, duration: 0.3, ease: "back.out(2)" }, [31.91, 32.17, 32.29][k]));
+      hide("#s7", 32.53);
+      // los hijos con visibility:visible ignoran el hidden del padre
+      tl.set(".scr", { visibility: "hidden" }, 32.53);
+
+      // ---------- S8 · Día 1 de 42 32.53–34.80 ----------
+      show("#s8", 32.53);
+      tl.set("#s8", { clipPath: "circle(150% at 50% 42%)" }, 32.53);
+      blurIn("#s8-este", 32.57);
+      slam("#s8-d", 33.55, 1.4);
+      tl.fromTo("#s8-1", { opacity: 0, scale: 2.4, rotation: -20 },
+        { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(2.4)" }, 33.73);
+      blurIn("#s8-de", 33.95);
+      tl.fromTo("#segs div", { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(2)", stagger: 0.008 }, 33.98);
+      tl.to("#seg0", { backgroundColor: "#e3120b", scale: 1.35, duration: 0.16, ease: "power2.out" }, 34.18);
+      tl.to("#seg0", { scale: 1, duration: 0.2, ease: "back.out(3)" }, 34.34);
+      tl.to("#s8", { clipPath: "circle(0% at 50% 42%)", duration: 0.28, ease: "power3.in" }, 34.5);
+      hide("#s8", 34.8);
+
+      // ---------- Cierre en iris (loop con el inicio negro) ----------
+      show("#iris-end", 37.55);
+      tl.fromTo("#iris-end", { width: 2800, height: 2800 }, { width: 0, height: 0, duration: 0.55, ease: "power3.in" }, 37.55);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["graphics"] = root;
+    </script>
+  </div>
+</template>

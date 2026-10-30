@@ -1,0 +1,138 @@
+{
+ "source": "input/clip.mp4",
+ "target": 58,
+ "tolerance": 10,
+ "max": 75,
+ "clips": [
+  {
+   "id": "t1",
+   "start": 17.34,
+   "end": 24.23,
+   "vs": 17.36,
+   "ve": 24.04,
+   "ws": 17.36,
+   "we": 24.04,
+   "note": "Día número 3 de 42 El día de hoy salí cansadísimo de la universidad Porque la universidad me tiene hasta el cuello"
+  },
+  {
+   "id": "t2",
+   "start": 24.63,
+   "end": 27.34,
+   "vs": 24.72,
+   "ve": 27.36,
+   "ws": 24.72,
+   "we": 27.36,
+   "note": "Entonces no pudimos adelantar tantas cosas"
+  },
+  {
+   "id": "t3a",
+   "start": 35.84,
+   "end": 38.08,
+   "vs": 36.0,
+   "ve": 38.0,
+   "ws": 36.0,
+   "we": 38.0,
+   "note": "Pues queda pendiente"
+  },
+  {
+   "id": "t3b",
+   "start": 39.07,
+   "end": 46.18,
+   "vs": 39.22,
+   "ve": 46.0,
+   "ws": 39.22,
+   "we": 46.0,
+   "note": "Terminar el CRM con la Inteligencia Artificial Queremos integrarle un módulo de facturación electrónica con la DIAN"
+  },
+  {
+   "id": "t4a",
+   "start": 47.14,
+   "end": 52.44,
+   "vs": 47.26,
+   "ve": 52.4,
+   "ws": 47.26,
+   "we": 52.4,
+   "note": "Y en realidad mientras estaba en la universidad estuvo mejorando la skill de la edición de videos"
+  },
+  {
+   "id": "t4b",
+   "start": 54.11,
+   "end": 59.75,
+   "vs": 54.1,
+   "ve": 59.54,
+   "ws": 54.1,
+   "we": 59.54,
+   "note": "Y los tres videos que se van a sacar se van a manejar con la skill Entonces se van a sacar tres videos de seguido"
+  },
+  {
+   "id": "t5a",
+   "start": 64.31,
+   "end": 65.14,
+   "vs": 64.38,
+   "ve": 64.94,
+   "ws": 64.38,
+   "we": 64.94,
+   "note": "Errores"
+  },
+  {
+   "id": "t5b",
+   "start": 66.0,
+   "end": 70.39,
+   "vs": 66.08,
+   "ve": 70.3,
+   "ws": 66.08,
+   "we": 70.3,
+   "note": "El consumo de la Inteligencia Artificial está pesadísimo Estamos trabajando con Claude, con Opus"
+  },
+  {
+   "id": "t5c",
+   "start": 70.92,
+   "end": 73.46,
+   "vs": 71.02,
+   "ve": 73.3,
+   "ws": 71.02,
+   "we": 73.3,
+   "note": "Y está bastante pesado"
+  },
+  {
+   "id": "t6a",
+   "start": 77.49,
+   "end": 83.9,
+   "vs": 77.48,
+   "ve": 83.76,
+   "ws": 77.48,
+   "we": 83.76,
+   "note": "Estoy trabajando en un arnés que ya después se los voy a mostrar Para ahorrar tokens Y es bastante eficiente"
+  },
+  {
+   "id": "t6b",
+   "start": 84.28,
+   "end": 91.77,
+   "vs": 84.34,
+   "ve": 91.76,
+   "ws": 84.34,
+   "we": 91.76,
+   "note": "Básicamente con eso vamos a montar todos los servicios que tenemos Porque yo ya tengo los proyectos guardados Tengo más o menos 12 proyectos que se van a estar montando"
+  },
+  {
+   "id": "t6c",
+   "start": 92.27,
+   "end": 94.32,
+   "vs": 92.36,
+   "ve": 94.34,
+   "ws": 92.36,
+   "we": 94.34,
+   "note": "Sino que los vamos a terminar y completar"
+  },
+  {
+   "id": "t7",
+   "start": 96.51,
+   "end": 97.91,
+   "vs": 96.62,
+   "ve": 97.9,
+   "ws": 96.62,
+   "we": 97.9,
+   "note": "Para mostrar en la feria"
+  }
+ ]
+}

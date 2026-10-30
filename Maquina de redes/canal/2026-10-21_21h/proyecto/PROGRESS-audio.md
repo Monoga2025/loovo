@@ -1,0 +1,11 @@
+# PROGRESS-audio (B1)
+- [x] 0. Leídas reglas, spec, scripts del Día 1. Próximo: paso 1 (bordes de tomas).
+- [x] 1. Bordes medidos (audio/step1_joints.txt, joints.json; juntas = suma acumulada de plan/edl.json). Próximo: paso 2 (voz limpia A/B).
+- [x] 2. Elegida A (B: piso -7.6 dB pero habla -2.27 dB y TP +11 dBFS -> descartada). audio/voice_clean.wav = A -3 dB. Medidas en step2_measure.txt. Próximo: paso 3 música.
+- [x] 3. music.wav hecha con make_epic_b1.py (copia con 5 constantes cambiadas, ver make_epic_b1.diff). Próximo: paso 4 sfx.
+- [x] 4. sfx.json (37 cues: whoosh 11, pop 8, hit 4, click 9, swish 4, riser 1) + sfx.wav con make_sfx.py del Día 1 sin cambios. (Nota: sfx.json en UTF-8.) Próximo: paso 5 mezcla.
+- [x] 5. final_mix.wav hecha (duck con máscara por envolvente, loudnorm 2 pasadas). Próximo: paso 6 REPORT.md.
+- [x] 5b. loudnorm acorta 0.06 s (39.58); mix_ln.wav + apad -> final_mix.wav 39.64. Próximo: REPORT.md.
+- [x] 6. REPORT.md escrito. FIN B1.
+- [ ] 7. CORRECCIÓN padre: regenerar cues de palabras clave con cut_t nuevo, sfx.wav, remezcla, REPORT.
+- [x] 7. Corrección aplicada: 22 cues regenerados, final_mix I -14.6, TP -2.9, 39.64 s. REPORT actualizado.

@@ -1,0 +1,9 @@
+Contadores: ¿qué hacen cuando un cliente les escribe a las 9 de la noche por algo de retención? ¿En cuánto se demoran en tener esa respuesta?
+
+Un cliente no te deja por la IA: te deja por el contador que contestó primero.
+
+Con un compañero estamos probando un agente basado en el Estatuto Tributario que adelanta la respuesta. No es un chatbot que solo responde y envía, y no reemplaza tu criterio: tú revisas el mensaje antes de enviarlo. Todavía está en pruebas.
+
+¿Cuál es la pregunta que más te escriben tus clientes? Déjala en los comentarios 👇
+
+#contadores #contabilidad #contadorpublico #impuestos #inteligenciaartificial #Colombia

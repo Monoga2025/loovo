@@ -1,0 +1,938 @@
+<!doctype html>
+<!-- Día 4 v1 "número 1" · showreel de motion sobre la marca Loovo (blanco pastel + puntos + dorado suave + carbón).
+     Generado por scripts/build_html.py: tiempos de plan/edl.json + plan/words_tl.json; beats con sonido en D.B (los mismos que scripts/sfx.py).
+     Reglas: border-radius 0 en todo, sin recortar su silueta, sin fondos dorados, sin verde/lima, texto >= 80 px.
+     La persona solo sale cuando mira a cámara o genera tensión; el resto es motion. -->
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>Dia 4 v1 numero 1</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Playfair"; font-style: italic; font-weight: 400; src: url("assets/fonts/playfair-display-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Playfair"; font-style: italic; font-weight: 700; src: url("assets/fonts/playfair-display-latin-700-italic.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 500; src: url("assets/fonts/montserrat-500.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-600.woff2") format("woff2"); }
+* { box-sizing:border-box; margin:0; padding:0; border-radius:0 !important; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:#F6F4EF; font-family:"Montserrat", sans-serif; }
+.full { position:absolute; left:0; top:0; width:1080px; height:1920px; }
+.sc { overflow:hidden; }
+.dots { background-color:#F6F4EF; background-image:radial-gradient(circle at 12px 12px, rgba(170,165,156,.42) 0, rgba(170,165,156,.42) 1.1px, rgba(170,165,156,0) 1.6px); background-size:24px 24px; }
+.bigdots { position:absolute; left:-240px; top:-240px; width:1560px; height:2400px; }
+.it { font-family:"Playfair", serif; font-style:italic; }
+.ph { position:absolute; object-fit:cover; box-shadow:0 34px 70px -24px rgba(90,74,44,.34), 0 8px 22px rgba(90,74,44,.10); }
+.hair { position:absolute; height:2px; background:#C8B07A; transform-origin:0 50%; }
+.w { display:inline-block; white-space:pre; }
+.ico { -webkit-mask-position:center; -webkit-mask-size:contain; -webkit-mask-repeat:no-repeat; mask-position:center; mask-size:contain; mask-repeat:no-repeat; }
+.shadow { box-shadow:0 34px 70px -26px rgba(90,74,44,.36), 0 8px 22px rgba(90,74,44,.10); }
+
+/* ===== entreno02 (bloque 2, aprobado "perfecto") ===== */
+#s1 { z-index:20; } #s1in { transform-origin:50% 55%; }
+#a1 { position:absolute; left:0; top:300px; width:1080px; text-align:center; font-weight:600; font-size:150px; line-height:1; letter-spacing:-4px; color:#2A2926; }
+#a2 { position:absolute; left:0; top:456px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:168px; line-height:1; color:#A88F57; }
+#tile { position:absolute; left:290px; top:820px; width:500px; height:500px; }
+.blk { position:absolute; background:linear-gradient(155deg,#EDE1C2 0%,#D6C293 45%,#C8B07A 100%); box-shadow:0 30px 60px -26px rgba(90,74,44,.35); }
+#bA { left:0; top:0; width:250px; height:250px; }
+#bB { left:250px; top:0; width:250px; height:250px; background:linear-gradient(155deg,#E6D6AE 0%,#C8B07A 100%); }
+#bC { left:0; top:250px; width:500px; height:250px; background:linear-gradient(155deg,#D6C293 0%,#A88F57 100%); }
+#tphoto { left:95px; top:95px; width:310px; height:310px; }
+#h1 { left:90px; top:760px; width:900px; } #h2 { left:90px; top:1380px; width:900px; }
+#f0 { z-index:5; background:#F6F4EF; }
+#f0sq { position:absolute; left:230px; top:660px; width:620px; height:620px; background:#2A2926; transform:rotate(-9deg); filter:blur(5px); }
+#s2 { z-index:19; }
+#photos { position:absolute; left:150px; top:760px; width:780px; height:640px; overflow:hidden; box-shadow:0 40px 80px -30px rgba(90,74,44,.38), 0 8px 24px rgba(90,74,44,.10); }
+#photos img { position:absolute; left:0; top:0; width:780px; height:640px; object-fit:cover; filter:saturate(.82) sepia(.08); }
+#ff { position:absolute; left:120px; top:730px; width:840px; height:700px; }
+#ff b { position:absolute; width:34px; height:34px; background:#C8B07A; }
+#pa { left:760px; top:1330px; width:250px; height:190px; filter:saturate(.8) sepia(.1); }
+#pb { left:70px; top:640px; width:240px; height:180px; filter:saturate(.8) sepia(.1); }
+#c2 { position:absolute; left:0; top:300px; width:1080px; text-align:center; z-index:24; }
+#c2 .k { display:block; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:200px; line-height:1; color:#A88F57; }
+#c2 .r { display:block; margin-top:18px; font-weight:600; font-size:96px; line-height:1; letter-spacing:-2px; color:#2A2926; }
+#c3 { position:absolute; left:0; top:330px; width:1080px; text-align:center; z-index:24; white-space:nowrap; }
+#c3 .n { font-weight:600; font-size:150px; letter-spacing:-4px; color:#2A2926; vertical-align:baseline; }
+#c3 .u { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:270px; line-height:1; color:#A88F57; vertical-align:baseline; display:inline-block; }
+#s3 { z-index:18; }
+#box { left:150px; top:760px; width:780px; height:670px; }
+.ghost { position:absolute; left:150px; top:760px; width:780px; height:670px; object-fit:cover; mix-blend-mode:multiply; }
+#gA { filter:sepia(1) saturate(2.2) hue-rotate(-8deg) brightness(1.05); } #gB { filter:grayscale(1) brightness(.75); }
+#slice { position:absolute; left:0; top:0; width:1080px; height:1920px; clip-path:inset(47% 0 41% 0); }
+#e2cap { position:absolute; left:0; top:1340px; width:1080px; text-align:center; z-index:10; white-space:nowrap;
+  font-weight:600; font-size:86px; line-height:1.1; letter-spacing:-1px; color:#FBF8F1; text-shadow:0 2px 6px rgba(20,16,10,.35), 0 6px 26px rgba(20,16,10,.35); }
+#e2cap .k { color:#E6D6AE; } #e2cap > span { position:absolute; left:0; top:0; width:1080px; }
+#no1 { position:absolute; left:70px; top:250px; width:460px; z-index:13; text-align:left; font-family:"Playfair"; font-style:italic; font-weight:700;
+  font-size:250px; line-height:1; color:#A88F57; white-space:nowrap; transform-origin:50% 50%; text-shadow:0 2px 3px rgba(60,48,26,.18), 0 10px 40px rgba(90,74,44,.28); }
+#no1 sup { font-size:.42em; vertical-align:.95em; margin-left:2px; }
+#e2plate { z-index:12; }
+#plnum { position:absolute; left:0; top:640px; width:1080px; text-align:center; z-index:14; font-weight:600; font-size:96px; letter-spacing:-2px; color:#8C887F; }
+#ph3 { left:240px; top:1290px; width:600px; z-index:14; }
+
+
+/* ===== títulos (pastel = .dk, sobre video = .lt) ===== */
+.ttl { position:absolute; left:0; width:1080px; text-align:center; white-space:nowrap; font-weight:600; letter-spacing:-2px; }
+.ttl.left { text-align:left; left:84px; width:960px; }
+.ttl .ln { display:block; }
+.ttl .s { font-family:"Playfair"; font-style:italic; font-weight:700; letter-spacing:0; }
+.dk { color:#2A2926; } .dk .s { color:#A88F57; } .dk .k { color:#A88F57; } .dk .g { color:#8C887F; }
+.lt { color:#FBF8F1; text-shadow:0 2px 8px rgba(20,16,10,.40), 0 10px 34px rgba(20,16,10,.38); } .lt .s, .lt .k { color:#E6D6AE; }
+.f90 { font-size:90px; line-height:1.12; } .f100 { font-size:100px; line-height:1.12; } .f110 { font-size:110px; line-height:1.1; }
+.f90 .s { font-size:150px; line-height:1.05; } .f100 .s { font-size:170px; line-height:1.04; } .f110 .s { font-size:200px; line-height:1.02; }
+
+/* ===== persona: sombra inferior y subtítulos ===== */
+#base { z-index:1; }
+#shade { z-index:9; background:linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(30,24,16,.22) 66%, rgba(30,24,16,.24) 76%, rgba(0,0,0,0) 88%); }
+#caps { z-index:10; }
+.cap { position:absolute; left:0; bottom:500px; width:1080px; text-align:center; white-space:nowrap; font-weight:600; font-size:86px; line-height:1.08;
+  letter-spacing:-1px; color:#FBF8F1; text-shadow:0 2px 6px rgba(20,16,10,.38), 0 6px 26px rgba(20,16,10,.38); }
+.cap .ln { display:block; }
+.cap .k { color:#E6D6AE; }
+.cap .s { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:150px; line-height:1; color:#E6D6AE; letter-spacing:0; }
+.cap .x { position:relative; }
+.cap .x i { position:absolute; left:-4%; top:52%; width:108%; height:8px; background:#C8B07A; transform-origin:0 50%; }
+#gk1, #gk2 { top:1000px; z-index:11; }
+
+/* ===== caja de palabra clave (Adrià 5:28): carbón + cursor dorado ===== */
+.kb { position:relative; display:inline-block; vertical-align:middle; }
+.kb .bg { position:absolute; left:0; top:0; height:100%; width:0; background:#2A2926; box-shadow:0 30px 60px -26px rgba(42,41,38,.45); }
+.kb .cur { position:absolute; left:0; top:0; width:12px; height:100%; background:#C8B07A; }
+.kb .tx { position:relative; display:inline-block; text-align:center; font-weight:600; color:#E6D6AE; letter-spacing:-3px; }
+
+/* ===== A: gancho ===== */
+#sA { z-index:26; }
+.pan { position:absolute; left:0; top:0; width:1080px; height:1920px; overflow:hidden; }
+#a1n { position:absolute; left:0; top:600px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:560px; line-height:1;
+  color:#A88F57; text-shadow:0 4px 6px rgba(60,48,26,.16), 0 30px 70px rgba(90,74,44,.30); }
+#a1n sup { font-size:.40em; vertical-align:1.05em; margin-left:4px; }
+#a1sq { position:absolute; left:250px; top:640px; width:580px; height:580px; border:3px solid #C8B07A; }
+#a1sq2 { position:absolute; left:300px; top:690px; width:480px; height:480px; border:2px solid rgba(140,136,127,.45); }
+#a1h1 { left:84px; top:560px; width:912px; } #a1h2 { left:84px; top:1330px; width:912px; }
+.prt { position:absolute; width:18px; height:18px; }
+#a2kb { height:200px; } #a2kb .tx { font-size:160px; line-height:200px; width:560px; }
+.pod { position:absolute; bottom:0; width:230px; transform-origin:50% 100%; }
+#a3seal { position:absolute; left:600px; top:1190px; width:330px; height:330px; border:8px solid #C8B07A; transform:rotate(-9deg); }
+#a3seal span { position:absolute; left:0; top:40px; width:100%; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:190px; line-height:1; color:#A88F57; }
+#a3seal i { position:absolute; left:20px; top:20px; right:20px; bottom:20px; border:2px solid rgba(200,176,122,.6); }
+
+/* ===== C: ranking ===== */
+#sC { z-index:27; }
+.row { position:absolute; left:0; width:1080px; height:200px; }
+.row .n { position:absolute; left:84px; top:20px; width:200px; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:130px; line-height:1; color:#8C887F; }
+.row .b { position:absolute; left:300px; top:46px; height:110px; background:#FBF8F1; transform-origin:0 50%; }
+.row.one .n { color:#A88F57; font-size:140px; top:14px; }
+.row.one .b { left:390px; max-width:606px; background:linear-gradient(155deg,#EDE1C2 0%,#D6C293 45%,#C8B07A 100%); }
+#cKkb { height:210px; } #cKkb .tx { font-size:160px; line-height:210px; width:640px; }
+.fr { position:absolute; width:34px; height:34px; background:#C8B07A; }
+
+/* ===== D: desde pequeño ===== */
+#sD { z-index:28; }
+#ruler { position:absolute; left:0; top:760px; width:4200px; height:90px;
+  background:repeating-linear-gradient(90deg, rgba(140,136,127,.75) 0 3px, transparent 3px 40px) 0 50px/100% 40px no-repeat,
+             repeating-linear-gradient(90deg, #2A2926 0 4px, transparent 4px 200px) 0 0/100% 90px no-repeat; }
+#rmark { position:absolute; left:522px; top:700px; width:36px; height:36px; background:#C8B07A; }
+#rline { position:absolute; left:538px; top:736px; width:4px; height:150px; background:#C8B07A; }
+#rbase { left:0; top:850px; width:1080px; background:#8C887F; height:2px; }
+.tile { position:absolute; width:200px; height:200px; background:#FBF8F1; }
+.tile .ico { position:absolute; left:52px; top:52px; width:96px; height:96px; background:#2A2926; }
+.tile .st { position:absolute; left:0; top:0; width:200px; height:200px; background:#2A2926; }
+.tile .st span { position:absolute; left:0; top:44px; width:200px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:100px; line-height:1; color:#E6D6AE; }
+
+/* ===== F: fracasos ===== */
+#sF { z-index:29; }
+#fbig { position:absolute; left:0; top:930px; width:1080px; text-align:center; white-space:nowrap; font-weight:600; font-size:172px; line-height:1; letter-spacing:-6px; color:#2A2926; }
+#fbig span { display:inline-block; }
+#fbh { left:120px; top:1130px; width:840px; height:6px; }
+#fhd { position:absolute; left:84px; top:250px; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:104px; line-height:1; color:#A88F57; transform-origin:0 70%; }
+#fcnt { position:absolute; right:84px; top:216px; width:260px; height:200px; overflow:hidden; text-align:right; }
+#fcnt span { position:absolute; right:0; top:10px; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:170px; line-height:1; color:#2A2926; }
+#fhair { left:84px; top:430px; width:912px; }
+.card { position:absolute; left:60px; width:960px; height:260px; background:#FBF8F1; }
+.card .ib { position:absolute; left:0; top:0; width:260px; height:260px; background:#2A2926; }
+.card .ib .ico { position:absolute; left:60px; top:60px; width:140px; height:140px; background:#E6D6AE; }
+.card .tt { position:absolute; left:300px; top:40px; font-weight:600; font-size:84px; line-height:90px; letter-spacing:-2px; color:#2A2926; white-space:nowrap; }
+.card .tt span { display:block; }
+.card .x { position:absolute; left:292px; height:9px; background:#C8B07A; transform-origin:0 50%; }
+
+/* ===== P: Nº1 que se rompe sobre la persona ===== */
+.pno { position:absolute; left:0; top:830px; width:1080px; z-index:11; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:360px; line-height:1;
+  color:#E6D6AE; text-shadow:0 3px 8px rgba(20,16,10,.35), 0 18px 50px rgba(20,16,10,.35); }
+.pno sup { font-size:.40em; vertical-align:1.05em; }
+#pnoL { clip-path:polygon(0 0, 52% 0, 47% 38%, 53% 61%, 46% 100%, 0 100%); }
+#pnoR { clip-path:polygon(52% 0, 100% 0, 100% 100%, 46% 100%, 53% 61%, 47% 38%); }
+
+/* ===== R1: caos -> orden ===== */
+#sR1 { z-index:30; }
+.sq { position:absolute; left:0; top:0; width:120px; height:120px; }
+.sq.c { background:#FBF8F1; box-shadow:0 24px 44px -20px rgba(90,74,44,.38), 0 5px 14px rgba(90,74,44,.10); }
+.sq.k { background:#2A2926; box-shadow:0 24px 44px -20px rgba(42,41,38,.45); }
+.sq.o { border:5px solid #C8B07A; }
+
+/* ===== R3: habilidades -> fruto ===== */
+#sR3 { z-index:31; }
+.node { position:absolute; width:150px; height:150px; background:#2A2926; box-shadow:0 30px 56px -24px rgba(42,41,38,.5); }
+.node .ico { position:absolute; left:35px; top:35px; width:80px; height:80px; background:#E6D6AE; }
+#r3svg { position:absolute; left:0; top:0; }
+#r3mk { position:absolute; left:917px; top:787px; width:46px; height:46px; background:#C8B07A; box-shadow:0 0 0 10px rgba(200,176,122,.25); }
+#r3fr { position:absolute; left:0; top:560px; width:1000px; text-align:right; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:210px; line-height:1; color:#A88F57; }
+
+/* ===== R4: suerte ===== */
+#sR4 { z-index:32; }
+.tag { position:absolute; padding:10px 26px 16px; background:#2A2926; color:#FBF8F1; font-weight:600; font-size:80px; line-height:1.05; letter-spacing:-2px; white-space:nowrap;
+  box-shadow:0 26px 50px -24px rgba(42,41,38,.5); }
+.tag i { position:absolute; left:14px; right:14px; top:50%; height:7px; background:#C8B07A; transform-origin:0 50%; }
+#r4big { position:absolute; left:0; top:860px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:250px; line-height:1.1; color:#A88F57;
+  text-shadow:0 4px 6px rgba(60,48,26,.14), 0 26px 60px rgba(90,74,44,.28); }
+#r4x { left:170px; top:1015px; width:740px; height:16px; z-index:2; }
+
+/* ===== R5: esfuerzo ===== */
+#sR5 { z-index:33; }
+.erow { position:absolute; left:84px; width:912px; }
+.erow .tk { position:absolute; left:0; width:912px; height:14px; background:#E4DFD4; }
+.erow .fl { position:absolute; left:0; width:912px; height:14px; background:#C8B07A; transform-origin:0 50%; }
+.lay { position:absolute; left:84px; width:912px; height:12px; transform-origin:50% 50%; }
+
+/* ===== Z: 42 días ===== */
+#sZ { z-index:34; }
+.cell { position:absolute; width:112px; height:112px; border:3px solid rgba(140,136,127,.55); }
+.cell.p { background:#2A2926; border-color:#2A2926; }
+.cell.h { background:linear-gradient(155deg,#EDE1C2 0%,#D6C293 45%,#C8B07A 100%); border-color:#A88F57; }
+.cell b { position:absolute; left:0; top:12px; width:100%; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:80px; line-height:1; color:#2A2926; }
+
+/* ===== placa final ===== */
+#pl { z-index:35; }
+#pldia { position:absolute; left:0; top:640px; width:1080px; text-align:center; font-weight:600; font-size:230px; line-height:1; letter-spacing:-8px; color:#2A2926; }
+#plde { position:absolute; left:0; top:900px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:170px; line-height:1; color:#A88F57; }
+#plhair { left:300px; top:1120px; width:480px; }
+#pltag { position:absolute; left:0; top:1170px; width:1080px; text-align:center; font-weight:600; font-size:64px; letter-spacing:-1px; color:#8C887F; }
+#plrow { position:absolute; left:258px; top:470px; width:564px; height:40px; }
+#plrow b { position:absolute; top:0; width:30px; height:30px; border:2px solid rgba(140,136,127,.6); }
+
+/* ===== destello crema / grano ===== */
+#leak { z-index:40; background:radial-gradient(ellipse 70% 60% at 18% 40%, rgba(255,251,242,1) 0%, rgba(240,226,190,.85) 35%, rgba(214,194,147,0) 75%); mix-blend-mode:screen; }
+#white { z-index:41; background:#FFFBF2; }
+#grain { position:absolute; left:-200px; top:-200px; width:1480px; height:2320px; z-index:45; background:url("assets/grano.png"); opacity:.05; mix-blend-mode:multiply; pointer-events:none; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="90.75" data-width="1080" data-height="1920">
+
+  <video id="base" class="clip full" src="assets/base.mp4" data-start="0" data-duration="90.75" data-track-index="1" muted playsinline></video>
+  <div id="shade" class="full"></div>
+  <div id="caps" class="full"></div>
+  <div id="gk1" class="ttl lt f100"></div>
+  <div id="gk2" class="ttl lt f100"></div>
+  <div id="pnoL" class="pno">N<sup>º</sup>1</div>
+  <div id="pnoR" class="pno">N<sup>º</sup>1</div>
+
+  <!-- B: entreno02 (aprobado "perfecto") -->
+  <!-- bloque 2: entreno02 -->
+  <div id="e2cap">
+    <span id="p1">No, él <span class="k">sabe</span></span>
+    <span id="p2">es el <span class="k">número 1</span></span>
+    <span id="p3">y por eso es</span>
+    <span id="p4">el <span class="k">número 1</span></span>
+  </div>
+  <div id="e2plate" class="full dots"></div>
+  <div id="plnum">el número</div>
+  <i class="hair" id="ph3"></i>
+  <div id="no1">N<sup>º</sup>1</div>
+  <div id="s3" class="full sc dots">
+    <div id="s3in" class="full">
+      <img class="ghost" id="gA" src="assets/img/box.jpg" alt="" />
+      <img class="ghost" id="gB" src="assets/img/box.jpg" alt="" />
+      <img class="ph" id="box" src="assets/img/box.jpg" alt="" />
+    </div>
+    <div id="slice"><div class="full dots"><img class="ph" src="assets/img/box.jpg" alt="" style="left:150px;top:760px;width:780px;height:670px;filter:sepia(1) saturate(1.6)" /></div></div>
+  </div>
+  <div id="s2" class="full sc dots">
+    <div id="s2in" class="full">
+      <div id="photos">
+        <img id="q1" src="assets/img/f1.jpg" alt="" /><img id="q2" src="assets/img/f2.jpg" alt="" /><img id="q3" src="assets/img/f3.jpg" alt="" />
+        <img id="q4" src="assets/img/f4.jpg" alt="" /><img id="q5" src="assets/img/f5.jpg" alt="" />
+      </div>
+      <img id="pa" class="ph" src="assets/img/box.jpg" alt="" />
+      <img id="pb" class="ph" src="assets/img/f2.jpg" alt="" />
+    </div>
+    <div id="ff"><b style="left:0;top:0"></b><b style="right:0;top:0"></b><b style="left:0;bottom:0"></b><b style="right:0;bottom:0"></b></div>
+  </div>
+  <div id="c2"><span class="k">¿piensa</span><span class="r">que es el</span></div>
+  <div id="c3"><span class="n">número&nbsp;</span><span class="u" id="u1">1?</span></div>
+  <div id="s1" class="full sc dots">
+    <div id="s1in" class="full">
+      <i class="hair" id="h1"></i><i class="hair" id="h2"></i>
+      <div id="tile"><div class="blk" id="bA"></div><div class="blk" id="bB"></div><div class="blk" id="bC"></div><img class="ph" id="tphoto" src="assets/img/f1.jpg" alt="" /></div>
+      <div id="a1">Cristiano</div>
+      <div id="a2">Ronaldo</div>
+    </div>
+    <div id="f0" class="full"><div id="f0sq"></div></div>
+  </div>
+
+
+  <!-- A: gancho -->
+  <div id="sA" class="full sc">
+    <div id="camA" class="full">
+      <div id="a1p" class="pan">
+        <div class="bigdots dots" id="a1bg"></div>
+        <div id="a1sq2"></div><div id="a1sq"></div>
+        <i class="hair" id="a1h1"></i><i class="hair" id="a1h2"></i>
+        <div id="a1n">N<sup>º</sup>1</div>
+        <div id="a1prt" class="full"></div>
+        <div id="a1t" class="ttl dk f110" style="top:300px"></div>
+      </div>
+      <div id="a2p" class="pan">
+        <div class="bigdots dots" id="a2bg"></div>
+        <div id="a2t" class="ttl dk f110" style="top:430px"></div>
+        <div id="a2k" class="ttl dk f110" style="top:600px"><span class="w" id="a2el">el&nbsp;</span><span class="kb" id="a2kb"><span class="bg"></span><span class="tx">mejor,</span><span class="cur"></span></span></div>
+        <div id="pods" style="position:absolute;left:0;top:0;width:1080px;height:1420px">
+          <div class="pod shadow" id="pod2" style="left:165px;height:250px;background:#2A2926"></div>
+          <div class="pod shadow" id="pod1" style="left:425px;height:420px;background:#FBF8F1"><span class="it" style="position:absolute;left:0;top:40px;width:230px;text-align:center;font-weight:700;font-size:170px;line-height:1;color:#A88F57">1</span></div>
+          <div class="pod" id="pod3" style="left:685px;height:170px;border:4px solid #C8B07A"></div>
+        </div>
+        <i class="hair" id="a2h" style="left:84px;top:1420px;width:912px"></i>
+      </div>
+      <div id="a3p" class="pan">
+        <div class="bigdots dots" id="a3bg"></div>
+        <div id="a3t" class="ttl dk f110" style="top:380px"></div>
+        <div id="a3seal"><i></i><span>Nº1</span></div>
+        <div id="a3b" class="ttl dk f100 left" style="top:830px"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C: los mejores del mundo -->
+  <div id="sC" class="full sc">
+    <div id="camC" class="full">
+      <div class="bigdots dots" id="cbg"></div>
+      <div id="rank" style="position:absolute;left:0;top:0;width:1080px;height:3000px"></div>
+    </div>
+    <div id="chead" class="full" style="height:600px;background:linear-gradient(180deg,#F6F4EF 0,#F6F4EF 86%,rgba(246,244,239,0) 100%)"></div>
+    <div id="cT" class="ttl dk f90" style="top:250px"></div>
+    <div id="cT2" class="ttl dk f100" style="top:830px"></div>
+    <div id="cK" class="full">
+      <div class="fr" style="left:84px;top:330px"></div><div class="fr" style="right:84px;top:330px"></div>
+      <div class="fr" style="left:84px;bottom:470px"></div><div class="fr" style="right:84px;bottom:470px"></div>
+      <div id="cK1" class="ttl dk f100" style="top:420px"></div>
+      <div id="cK2" class="ttl dk f100" style="top:800px"><span class="w" id="cKy">y&nbsp;</span><span class="kb" id="cKkb"><span class="bg"></span><span class="tx">se creen</span><span class="cur"></span></span></div>
+      <i class="hair" id="cKh" style="left:240px;top:1060px;width:600px"></i>
+      <div id="cK3" class="ttl dk f90" style="top:1110px"></div>
+    </div>
+  </div>
+
+  <!-- D: desde pequeño -->
+  <div id="sD" class="full sc">
+    <div id="camD" class="full">
+      <div class="bigdots dots" id="dbg"></div>
+      <div id="dP1" class="full">
+        <div id="ruler"></div><i class="hair" id="rbase"></i><div id="rline"></div><div id="rmark"></div>
+        <div id="d1" class="ttl dk f100" style="top:300px"></div>
+        <div id="d2" class="ttl dk f90" style="top:960px"></div>
+      </div>
+      <div id="gridcam" class="full"><div id="grid"></div></div>
+      <div id="d3" class="ttl dk f90" style="top:250px"></div>
+      <div id="d4" class="ttl dk f90" style="top:250px"></div>
+    </div>
+  </div>
+
+  <!-- F: fracasos -->
+  <div id="sF" class="full sc">
+    <div id="camF" class="full">
+      <div class="bigdots dots" id="fbg"></div>
+      <div id="fP1" class="full">
+        <div id="f1" class="ttl dk f90" style="top:330px"></div>
+        <div id="f2" class="ttl dk f90" style="top:330px"></div>
+        <div id="fbig"></div><i class="hair" id="fbh"></i>
+      </div>
+      <div id="fP2" class="full">
+        <div id="fcam" class="full"><div id="fcards"></div></div>
+        <div id="fhead" class="full" style="height:470px;background:linear-gradient(180deg,#F6F4EF 0,#F6F4EF 88%,rgba(246,244,239,0) 100%)">
+          <div id="fhd">Fracasé con:</div>
+          <div id="fcnt"></div>
+          <i class="hair" id="fhair"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- R1: organizando -->
+  <div id="sR1" class="full sc">
+    <div id="r1cam" class="full">
+      <div class="bigdots dots" id="r1bg"></div>
+      <div id="r1sq" class="full"></div>
+    </div>
+    <div id="r1a" class="ttl dk f90" style="top:270px"></div>
+    <div id="r1b" class="ttl dk f90" style="top:270px"></div>
+    <div id="r1c" class="ttl dk f90" style="top:270px"></div>
+    <div id="r1d" class="ttl dk f90" style="top:270px"></div>
+  </div>
+
+  <!-- R3: habilidades -> fruto -->
+  <div id="sR3" class="full sc">
+    <div id="r3cam" class="full">
+      <div class="bigdots dots" id="r3bg"></div>
+      <svg id="r3svg" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+      <div id="r3nodes" class="full"></div>
+      <svg id="r3chart" class="full" width="1080" height="1920" viewBox="0 0 1080 1920" style="position:absolute;left:0;top:0">
+        <polyline id="r3pl" points="110,1440 290,1310 430,1360 600,1140 740,1190 940,810" fill="none" stroke="#C8B07A" stroke-width="12" stroke-linejoin="miter" stroke-linecap="butt" />
+      </svg>
+      <div id="r3mk"></div>
+      <div id="r3fr">fruto.</div>
+    </div>
+    <div id="r3a" class="ttl dk f90" style="top:250px"></div>
+    <div id="r3b" class="ttl dk f90" style="top:250px"></div>
+  </div>
+
+  <!-- R4: suerte -->
+  <div id="sR4" class="full sc">
+    <div id="r4cam" class="full">
+      <div class="bigdots dots" id="r4bg"></div>
+      <div id="r4tags" class="full"></div>
+      <div id="r4big">“suerte”</div>
+      <i class="hair" id="r4x"></i>
+    </div>
+    <div id="r4a" class="ttl dk f110" style="top:470px"></div>
+    <div id="r4b" class="ttl dk f100" style="top:300px"></div>
+    <div id="r4c" class="ttl dk f90" style="top:250px"></div>
+  </div>
+
+  <!-- R5: esfuerzo, constancia, años -->
+  <div id="sR5" class="full sc">
+    <div id="r5cam" class="full">
+      <div class="bigdots dots" id="r5bg"></div>
+      <div id="r5rows" class="full">
+        <div class="erow" id="er0" style="top:610px"><div class="ttl dk f90 left" style="left:0;top:0" id="er0t"></div><div class="tk" style="top:190px"></div><div class="fl" style="top:190px"></div></div>
+        <div class="erow" id="er1" style="top:880px"><div class="ttl dk f90 left" style="left:0;top:0" id="er1t"></div><div class="tk" style="top:190px"></div><div class="fl" style="top:190px"></div></div>
+        <div class="erow" id="er2" style="top:1150px"><div class="ttl dk f110 left" style="left:0;top:20px" id="er2t"></div><div class="tk" style="top:190px"></div><div class="fl" style="top:190px"></div></div>
+      </div>
+      <div id="r5lay" class="full"></div>
+    </div>
+    <div id="r5a" class="ttl dk f90" style="top:280px"></div>
+    <div id="r5b" class="ttl dk f90" style="top:280px"></div>
+  </div>
+
+  <!-- Z: todos los días -->
+  <div id="sZ" class="full sc">
+    <div id="zcam" class="full">
+      <div class="bigdots dots" id="zbg"></div>
+      <div id="zgrid" class="full"></div>
+    </div>
+    <div id="z1" class="ttl dk f90" style="top:250px"></div>
+    <div id="z2" class="ttl dk f90" style="top:250px"></div>
+  </div>
+
+  <!-- placa final -->
+  <div id="pl" class="full dots">
+    <div id="plrow"></div>
+    <div id="pldia"></div>
+    <div id="plde"></div>
+    <i class="hair" id="plhair"></i>
+    <div id="pltag">#42DiasLoovo</div>
+  </div>
+
+  <div id="leak" class="full"></div>
+  <div id="white" class="full"></div>
+  <div id="grain"></div>
+</div>
+
+<script>
+// ===== variables fáciles de cambiar =====
+const DIA = 5;            // día por calendario (Día 1 = 7 oct). El 11 oct = Día 5.
+const DE = 42;
+// ===== datos generados (EDL + palabras + beats) =====
+const D = {"edl": {"H1": {"start": 0.0, "end": 1.54}, "H2": {"start": 1.69, "end": 3.49}, "H3": {"start": 3.61, "end": 9.21}, "C1": {"start": 9.36, "end": 11.54}, "C2": {"start": 11.54, "end": 14.88}, "CP": {"start": 14.88, "end": 15.78}, "C3a": {"start": 15.78, "end": 16.72}, "C3b": {"start": 16.84, "end": 18.82}, "C4": {"start": 18.97, "end": 23.34}, "D1": {"start": 23.69, "end": 26.47}, "D2": {"start": 26.62, "end": 28.9}, "D3": {"start": 29.2, "end": 30.54}, "F0a": {"start": 30.99, "end": 32.63}, "F0b": {"start": 32.83, "end": 35.49}, "F1a": {"start": 35.69, "end": 40.09}, "F1b": {"start": 40.09, "end": 42.13}, "F1c": {"start": 42.13, "end": 47.65}, "F1d": {"start": 47.65, "end": 51.05}, "P1": {"start": 51.5, "end": 53.6}, "P2": {"start": 54.7, "end": 56.54}, "R1": {"start": 57.04, "end": 62.72}, "R2": {"start": 62.84, "end": 65.11}, "R3": {"start": 65.21, "end": 68.99}, "R4a": {"start": 69.34, "end": 75.64}, "R4b": {"start": 75.94, "end": 87.8}, "PL": {"start": 88.05, "end": 90.75}}, "words": {"H1": [["por", 0.1], ["querer", 0.25], ["ser", 0.54], ["el", 0.62], ["numero", 1.02], ["uno", 1.18]], "H2": [["por", 1.86], ["querer", 2.13], ["ser", 2.57], ["el", 2.68], ["mejor", 2.96]], "H3": [["lo", 3.72], ["he", 3.95], ["sido", 4.19], ["porque", 4.33], ["si", 5.04], ["yo", 5.3], ["mismo", 5.66], ["no", 6.64], ["creo", 6.9], ["que", 7.28], ["soy", 7.41], ["el", 7.62], ["mejor", 7.8], ["quien", 8.14], ["lo", 8.21], ["va", 8.52], ["a", 8.7], ["creer", 8.76], ["por", 8.82], ["mi", 8.88]], "C1": [["cristiano", 9.53], ["ronaldo", 9.96], ["piensa", 10.33], ["que", 10.64], ["es", 10.75], ["el", 10.88], ["numero", 11.04], ["uno", 11.26]], "C2": [["no", 12.06], ["el", 12.48], ["sabe", 12.59], ["que", 12.78], ["es", 12.88], ["el", 13.15], ["numero", 13.24], ["uno", 13.36], ["y", 13.63], ["por", 13.75], ["eso", 13.95], ["es", 14.11], ["el", 14.32], ["numero", 14.38], ["uno", 14.49]], "C3a": [["y", 15.84], ["los", 16.08], ["que", 16.26], ["llegan", 16.44]], "C3b": [["a", 16.91], ["ser", 17.05], ["los", 17.19], ["mejores", 17.67], ["del", 18.22], ["mundo", 18.63]], "C4": [["es", 19.03], ["porque", 19.16], ["piensan", 19.3], ["y", 20.07], ["se", 20.39], ["creen", 20.49], ["que", 21.24], ["son", 21.44], ["los", 22.29], ["mejores", 22.68], ["del", 22.78], ["mundo", 23.05]], "D1": [["desde", 24.16], ["pequeno", 24.52], ["yo", 24.63], ["tuve", 24.97], ["esa", 25.42], ["habilidad", 25.6], ["de", 26.11]], "D2": [["creerme", 26.71], ["el", 26.94], ["numero", 27.31], ["uno", 27.52], ["en", 27.71], ["absolutamente", 27.8], ["todo", 28.39]], "D3": [["hasta", 29.26], ["que", 29.34], ["creci", 29.94]], "F0a": [["antes", 30.99], ["de", 31.29], ["llegar", 31.41], ["a", 31.71], ["la", 31.79], ["universidad", 32.26]], "F0b": [["en", 32.85], ["realidad", 32.9], ["siento", 33.47], ["que", 33.7], ["tuve", 34.07], ["muchos", 34.56], ["fracasos", 34.94]], "F1a": [["fracase", 35.8], ["con", 36.82], ["la", 37.09], ["agencia", 37.29], ["de", 37.61], ["marketing", 37.8], ["fracase", 38.66]], "F1b": [["con", 40.11], ["la", 40.21], ["empresa", 40.48], ["de", 40.92], ["camaras", 41.0], ["de", 41.31], ["seguridad", 41.42]], "F1c": [["fracase", 42.38], ["con", 42.76], ["la", 43.07], ["reparacion", 43.27], ["de", 43.52], ["celulares", 43.71], ["fracase", 44.55], ["con", 44.95], ["el", 45.32], ["diseno", 45.42], ["de", 45.64], ["logos", 45.81], ["fracase", 46.39], ["con", 46.52], ["la", 46.7], ["edicion", 46.78], ["de", 46.94], ["imagenes", 47.29]], "F1d": [["fracase", 47.8], ["con", 48.75], ["las", 49.84], ["criptomonedas", 50.09]], "P1": [["y", 51.59], ["perdi", 51.74], ["la", 51.9], ["habilidad", 52.29], ["de", 52.48], ["creerme", 52.66], ["el", 52.78], ["numero", 53.18], ["uno", 53.3]], "P2": [["y", 54.81], ["eso", 55.17], ["es", 55.24], ["grave", 55.31], ["es", 55.88], ["muy", 56.22], ["grave", 56.32]], "R1": [["pero", 57.1], ["en", 57.17], ["este", 57.51], ["momento", 57.6], ["estoy", 58.39], ["organizando", 58.56], ["mi", 59.03], ["vida", 59.3], ["estoy", 59.65], ["organizando", 59.8], ["las", 60.35], ["cosas", 60.48], ["y", 60.77], ["yo", 61.38], ["se", 61.78], ["que", 61.89], ["en", 62.05], ["algun", 62.19], ["momento", 62.33]], "R2": [["por", 62.84], ["todo", 63.09], ["lo", 63.42], ["que", 63.48], ["he", 63.72], ["hecho", 63.78], ["por", 64.23], ["todo", 64.37], ["lo", 64.64], ["que", 64.74], ["he", 64.91], ["aprendido", 64.98]], "R3": [["por", 65.21], ["las", 65.3], ["distintas", 65.7], ["habilidades", 66.3], ["que", 66.78], ["tengo", 66.96], ["yo", 67.67], ["se", 68.05], ["que", 68.18], ["esto", 68.29], ["tendra", 68.42], ["fruto", 68.76]], "R4a": [["algun", 69.41], ["dia", 69.55], ["lo", 69.94], ["voy", 70.01], ["a", 70.3], ["lograr", 70.4], ["y", 71.11], ["cuando", 71.25], ["lo", 71.39], ["logre", 71.7], ["todo", 72.27], ["el", 72.6], ["mundo", 72.71], ["va", 72.8], ["a", 72.94], ["decir", 73.07], ["que", 73.26], ["esto", 73.79], ["va", 74.04], ["a", 74.11], ["ser", 74.22], ["suerte", 74.33], ["y", 74.8], ["no", 74.86], ["va", 75.2], ["a", 75.35], ["ser", 75.44], ["suerte", 75.52]], "R4b": [["va", 76.01], ["a", 76.29], ["ser", 76.35], ["demasiado", 76.52], ["esfuerzo", 76.8], ["demasiada", 77.49], ["constancia", 77.7], ["esto", 78.98], ["fueron", 79.16], ["anos", 79.33], ["de", 79.56], ["trabajo", 79.62], ["yo", 80.34], ["estuve", 80.68], ["aprendiendo", 80.84], ["durante", 80.99], ["muchos", 81.29], ["anos", 81.61], ["esto", 81.99], ["yo", 82.9], ["no", 82.99], ["llego", 83.17], ["a", 83.49], ["mi", 83.57], ["casa", 83.65], ["a", 83.91], ["reirme", 84.26], ["o", 84.66], ["a", 84.92], ["hacer", 85.06], ["cualquier", 85.12], ["cosa", 85.2], ["yo", 86.03], ["todos", 86.29], ["los", 86.44], ["dias", 86.67], ["llego", 86.81], ["a", 86.94], ["aprender", 87.09], ["algo", 87.3], ["nuevo", 87.4]]}, "B": {"a_no1": 1.02, "a_w1": 1.59, "a_box": 2.96, "a_w2": 3.53, "a_stamp": 4.27, "a_push": 6.24, "p_h3": 6.52, "e02": 9.36, "c_in": 15.78, "c_land": 17.57, "c_sw": 18.91, "c_box": 20.39, "d_in": 23.34, "d_grid": 26.61, "d_flip0": 27.31, "d_flip1": 28.69, "cut1": 29.2, "f_in": 30.54, "f_big": 34.86, "f_list": 35.63, "f_cards": [37.29, 40.48, 43.27, 45.42, 46.78, 49.84], "f_frac": [35.8, 38.66, 42.38, 44.55, 46.39, 47.8], "f_all": 50.75, "p_in": 51.5, "p_no1": 53.18, "p_crack": 53.9, "r1_in": 56.54, "r1_org1": 58.51, "r1_org2": 59.75, "r2_in": 62.84, "r3_in": 65.11, "r3_nodes": 65.65, "r3_lines": 66.3, "r3_chart": 67.62, "r3_fruto": 68.76, "r4_in": 69.29, "r4_tags": 72.27, "r4_big": 74.33, "r4_no": 74.86, "r4_drop": 75.64, "r5_in": 75.7, "r5_rows": [76.8, 77.7, 79.33], "r5_lay": 80.24, "cut2": 82.833, "z_in": 85.567, "z_days": 86.67, "z_five": 87.28, "pl": 88.05}, "total": 90.75};
+const B = D.B;
+const S = (id) => D.edl[id].start, EN = (id) => D.edl[id].end;
+const F = 1 / 30, LEAD = 2 * F;
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const $ = (s) => document.querySelector(s);
+const show = (s, t) => tl.set(s, { autoAlpha: 1 }, t);
+const hide = (s, t) => tl.set(s, { autoAlpha: 0 }, t);
+const inBlur = (s, t, d = 3 * F, px = 14) => tl.fromTo(s, { autoAlpha: 0, filter: `blur(${px}px)` }, { autoAlpha: 1, filter: "blur(0px)", duration: d, ease: "power2.out", immediateRender: false }, t);
+const outUp = (s, t, d = 4 * F) => tl.to(s, { autoAlpha: 0, y: "-=50", filter: "blur(12px)", duration: d, ease: "power1.in" }, t);
+const esc = (x) => x.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const norm = (x) => x.toLowerCase().normalize("NFD").replace(/\p{Mn}/gu, "").replace(/[^a-z0-9]/g, "");
+// prng determinista
+let seed = 42; const rnd = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+const R = (a, b) => a + (b - a) * rnd();
+// palabra -> tiempo (n-ésima aparición en el tramo)
+function at(id, w, n = 0) { const h = D.words[id].filter((x) => x[0] === norm(w)); return h[Math.min(n, h.length - 1)][1]; }
+
+// ---------- título cinético: palabras en su sitio final; entran a su tiempo (voz - 2 cuadros) con desenfoque + subida ----------
+// lines: ["Desde ~pequeño~", ...]; ~x~ serif dorada, *x* clave; '^' al inicio de una palabra = visible en el cuadro 0; 'palabra@t' fuerza tiempo
+function T(sel, lines, segs, o = {}) {
+  const el = $(sel); const seq = [].concat(...[].concat(segs).map((s) => D.words[s])); let cur = Math.max(0, seq.findIndex((x) => x[1] >= (o.min || 0) - 0.3)), last = o.t0 || 0, first = true;
+  const toks = []; let mode = "";
+  const html = lines.map((ln) => '<span class="ln">' + ln.split(" ").map((raw) => {
+    let t = raw, open = mode, forced = null, vis0 = false;
+    if (t.startsWith("^")) { vis0 = true; t = t.slice(1); }
+    if (t.startsWith("~")) { mode = "s"; open = "s"; t = t.slice(1); } else if (t.startsWith("*")) { mode = "k"; open = "k"; t = t.slice(1); }
+    let close = false;
+    if (t.endsWith("~") || t.endsWith("*")) { close = true; t = t.slice(0, -1); }
+    const m = t.match(/^(.*)@([\d.]+)$/); if (m) { t = m[1]; forced = +m[2]; }
+    const cls = open; if (close) mode = "";
+    let when = forced;
+    if (when === null) {
+      const n = norm(t); const lim = first ? seq.length : Math.min(seq.length, cur + 7);
+      for (let j = cur; j < lim; j++) if (seq[j][0] === n) { when = seq[j][1]; cur = j + 1; break; }
+      if (when === null) when = last + 0.10;
+    }
+    first = false; last = when; toks.push({ when, cls, vis0 });
+    return `<span class="w${cls ? " " + cls : ""}">${esc(t)}</span>`;
+  }).join(" ") + "</span>").join("");
+  el.innerHTML = html;
+  el.querySelectorAll(".w").forEach((sp, i) => {
+    const k = toks[i]; if (k.vis0) { gsap.set(sp, { autoAlpha: 1 }); return; }
+    gsap.set(sp, { autoAlpha: 0 }); const serif = k.cls === "s";
+    tl.fromTo(sp, { autoAlpha: 0, y: 24, filter: "blur(10px)", scale: serif ? 0.6 : 1 },
+      { autoAlpha: 1, y: 0, filter: "blur(0px)", scale: 1, duration: (serif ? 7 : 5) * F, ease: "power2.out", immediateRender: false }, Math.max(o.min || 0, k.when - LEAD));
+  });
+  return toks;
+}
+// subtítulo por tarjeta sobre la persona
+const rich = (t) => t.split("|").map((ln) => '<span class="ln">' + esc(ln).replace(/~([^~]+)~/g, '<span class="s">$1</span>').replace(/\*([^*]+)\*/g, '<span class="k">$1</span>').replace(/_([^_]+)_/g, '<span class="x">$1<i></i></span>') + "</span>").join("");
+let capN = 0;
+function card(text, t0, t1) {
+  const el = document.createElement("div"); el.className = "cap"; el.id = "cap" + capN++; el.innerHTML = rich(text); $("#caps").appendChild(el);
+  gsap.set(el, { autoAlpha: 0 });
+  tl.fromTo(el, { autoAlpha: 0, filter: "blur(8px)" }, { autoAlpha: 1, filter: "blur(0px)", duration: 2 * F, ease: "power2.out", immediateRender: false }, t0 - LEAD);
+  el.querySelectorAll(".x i").forEach((i) => { gsap.set(i, { scaleX: 0 }); tl.to(i, { scaleX: 1, duration: 0.22, ease: "power2.out" }, t0 + 0.35); });
+  tl.set(el, { autoAlpha: 0 }, t1 - LEAD);
+  return el;
+}
+// caja clave: cursor dorado -> caja crece -> texto se revela de izquierda a derecha
+function keybox(sel, KT, wpx) {
+  const kb = $(sel), bg = kb.querySelector(".bg"), cur = kb.querySelector(".cur"), tx = kb.querySelector(".tx");
+  gsap.set(cur, { autoAlpha: 0 }); gsap.set(tx, { clipPath: "inset(0 100% 0 0)" });
+  tl.set(cur, { autoAlpha: 1 }, KT - 6 * F);
+  tl.fromTo(bg, { width: 0 }, { width: wpx, duration: 5 * F, ease: "power3.out", immediateRender: false }, KT - 4 * F);
+  tl.fromTo(cur, { x: 0 }, { x: wpx - 12, duration: 5 * F, ease: "power3.out", immediateRender: false }, KT - 4 * F);
+  tl.fromTo(tx, { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 5 * F, ease: "power2.out", immediateRender: false }, KT - 3 * F);
+  tl.to(cur, { autoAlpha: 0, duration: 2 * F }, KT + 8 * F);
+}
+// temblor de cámara (golpe)
+function shake(sel, t, amp = 14, n = 5) { for (let i = 0; i < n; i++) { const a = amp * (1 - i / n); tl.set(sel, { x: (i % 2 ? -1 : 1) * a, y: (i % 3 - 1) * a * 0.6 }, t + i * F); } tl.set(sel, { x: 0, y: 0 }, t + n * F); }
+// entrada firma (Adrià 5:28): x4 desenfocado -> 1,05 expo.out sin rebote -> deriva
+function enterMG(scene, cam, t, until) {
+  show(scene, t);
+  tl.fromTo(cam, { scale: 4, filter: "blur(18px)" }, { scale: 1.05, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, t);
+  tl.to(cam, { scale: 1.0, duration: Math.max(0.3, until - t - 0.5), ease: "sine.inOut" }, t + 0.5);
+}
+// látigo entre escenas: la saliente se va con desenfoque de movimiento, la entrante llega con expo.out
+function whip(fromCam, toScene, toCam, t, dx, dy) {
+  tl.to(fromCam, { x: -dx * 0.5, y: -dy * 0.5, filter: "blur(22px)", duration: 4 * F, ease: "power3.in" }, t - 4 * F);
+  show(toScene, t);
+  tl.fromTo(toCam, { x: dx * 0.6, y: dy * 0.6, filter: "blur(24px)" }, { x: 0, y: 0, filter: "blur(0px)", duration: 9 * F, ease: "expo.out", immediateRender: false }, t);
+}
+// destello crema hacia la persona (corte en el pico)
+function destello(Tp, hideList) {
+  tl.fromTo("#leak", { autoAlpha: 0, x: -260 }, { autoAlpha: 1, x: 120, duration: 3 * F, ease: "power1.in", immediateRender: false }, Tp - 3 * F);
+  tl.fromTo("#white", { autoAlpha: 0 }, { autoAlpha: 1, duration: 3 * F, ease: "power1.in", immediateRender: false }, Tp - 3 * F);
+  if (hideList) hide(hideList, Tp);
+  tl.set("#leak", { autoAlpha: 0 }, Tp + 3 * F);
+  tl.to("#white", { autoAlpha: 0, duration: 4 * F, ease: "sine.out" }, Tp + 3 * F);
+  tl.fromTo("#base", { filter: "blur(6px) brightness(1.08)" }, { filter: "blur(0px) brightness(1)", duration: 5 * F, ease: "sine.out", immediateRender: false }, Tp + 2 * F);
+}
+// ráfaga de cuadritos
+function burst(cont, cx, cy, n, t, spread = 520) {
+  const c = $(cont);
+  for (let i = 0; i < n; i++) {
+    const d = document.createElement("div"); d.className = "prt"; const s = R(10, 26);
+    d.style.cssText = `left:${cx}px;top:${cy}px;width:${s}px;height:${s}px;background:${["#C8B07A", "#2A2926", "#A88F57", "#E6D6AE"][i % 4]}`; c.appendChild(d);
+    const a = (i / n) * Math.PI * 2 + R(-0.2, 0.2), r = R(0.45, 1) * spread;
+    gsap.set(d, { autoAlpha: 0 });
+    tl.fromTo(d, { autoAlpha: 1, x: 0, y: 0, rotation: 0, filter: "blur(4px)" }, { x: Math.cos(a) * r, y: Math.sin(a) * r, rotation: R(-180, 180), filter: "blur(0px)", duration: 0.7, ease: "expo.out", immediateRender: false }, t);
+    tl.to(d, { autoAlpha: 0, duration: 0.3 }, t + R(0.45, 0.8));
+  }
+}
+const ALLSC = ["#sA", "#sC", "#sD", "#sF", "#sR1", "#sR3", "#sR4", "#sR5", "#sZ", "#pl"];
+gsap.set(ALLSC, { autoAlpha: 0 }); gsap.set(["#leak", "#white", "#shade", "#gk1", "#gk2", "#pnoL", "#pnoR"], { autoAlpha: 0 });
+
+// =====================================================================================
+// A. GANCHO (0 -> p_h3): "Por querer ser el número uno, por querer ser el mejor, lo he sido, porque si yo mismo"
+// =====================================================================================
+gsap.set("#sA", { autoAlpha: 1 }); gsap.set(["#a2p", "#a3p"], { autoAlpha: 0 });
+T("#a1t", ["^Por querer ser"], "H1");
+gsap.set(["#a1h1", "#a1h2"], { scaleX: 0 }); gsap.set("#a1n", { autoAlpha: 0 });
+tl.fromTo("#a1h1", { scaleX: 0.08 }, { scaleX: 1, duration: 0.55, ease: "power3.out", immediateRender: false }, 0);
+tl.fromTo("#a1h2", { scaleX: 0.08 }, { scaleX: 1, duration: 0.55, ease: "power3.out", immediateRender: false }, 0.06);
+tl.fromTo("#a1sq", { rotation: -14, scale: 0.86 }, { rotation: 8, scale: 1.02, duration: B.a_w1, ease: "sine.inOut", immediateRender: false }, 0);
+tl.fromTo("#a1sq2", { rotation: 10, scale: 1.1 }, { rotation: -6, scale: 0.98, duration: B.a_w1, ease: "sine.inOut", immediateRender: false }, 0);
+tl.fromTo("#a1bg", { x: 0, y: 0 }, { x: -30, y: -60, duration: B.a_w1, ease: "none", immediateRender: false }, 0);
+tl.fromTo("#a1n", { autoAlpha: 0, scale: 2.6, filter: "blur(26px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out", immediateRender: false }, B.a_no1 - 3 * F);
+tl.to("#a1n", { scale: 1.05, duration: B.a_w1 - B.a_no1, ease: "sine.out" }, B.a_no1 + 0.4);
+burst("#a1prt", 540, 900, 16, B.a_no1 + F);
+shake("#camA", B.a_no1, 12, 4);
+// látigo vertical -> panel 2
+tl.to("#a1p", { y: -700, filter: "blur(24px)", duration: 5 * F, ease: "power3.in" }, B.a_w1 - 5 * F);
+hide("#a1p", B.a_w1); show("#a2p", B.a_w1);
+tl.fromTo("#a2p", { y: 900, filter: "blur(26px)" }, { y: 0, filter: "blur(0px)", duration: 10 * F, ease: "expo.out", immediateRender: false }, B.a_w1);
+T("#a2t", ["por querer ser"], "H2", { min: B.a_w1 });
+gsap.set("#a2el", { autoAlpha: 0 }); tl.fromTo("#a2el", { autoAlpha: 0, y: 24, filter: "blur(10px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 5 * F, ease: "power2.out", immediateRender: false }, at("H2", "el") - LEAD);
+keybox("#a2kb", B.a_box, 560);
+gsap.set(["#pod1", "#pod2", "#pod3"], { scaleY: 0 }); gsap.set("#a2h", { scaleX: 0 });
+tl.to("#a2h", { scaleX: 1, duration: 0.5, ease: "power3.out" }, B.a_w1 + 0.1);
+tl.to("#pod2", { scaleY: 1, duration: 0.45, ease: "expo.out" }, at("H2", "ser") - 0.05);
+tl.to("#pod3", { scaleY: 1, duration: 0.45, ease: "expo.out" }, at("H2", "ser") + 0.07);
+tl.to("#pod1", { scaleY: 1, duration: 0.6, ease: "expo.out" }, B.a_box - 0.05);
+tl.fromTo("#a2bg", { y: 0 }, { y: -80, duration: B.a_w2 - B.a_w1, ease: "none", immediateRender: false }, B.a_w1);
+tl.to("#pods", { y: -30, duration: B.a_w2 - B.a_w1, ease: "sine.inOut" }, B.a_w1);
+// látigo lateral -> panel 3
+tl.to("#a2p", { x: -640, filter: "blur(24px)", duration: 5 * F, ease: "power3.in" }, B.a_w2 - 5 * F);
+hide("#a2p", B.a_w2); show("#a3p", B.a_w2);
+tl.fromTo("#a3p", { x: 820, filter: "blur(26px)" }, { x: 0, filter: "blur(0px)", duration: 10 * F, ease: "expo.out", immediateRender: false }, B.a_w2);
+T("#a3t", ["~lo he sido.~"], "H3", { min: B.a_w2 });
+gsap.set("#a3seal", { autoAlpha: 0 });
+tl.fromTo("#a3seal", { autoAlpha: 0, scale: 2.3, rotation: -24 }, { autoAlpha: 1, scale: 1, rotation: -9, duration: 4 * F, ease: "power4.in", immediateRender: false }, B.a_stamp - 4 * F);
+shake("#camA", B.a_stamp, 16, 5);
+T("#a3b", ["porque si", "~yo mismo~"], "H3", { min: B.a_w2 });
+tl.fromTo("#a3bg", { x: 0 }, { x: -60, duration: B.p_h3 - B.a_w2, ease: "none", immediateRender: false }, B.a_w2);
+tl.to("#camA", { scale: 1.32, filter: "blur(6px)", duration: B.p_h3 - B.a_push, ease: "power4.in" }, B.a_push);
+// persona: "no creo que soy el mejor, ¿quién lo va a creer por mí?"
+destello(B.p_h3, "#sA");
+show("#shade", B.p_h3); show(["#gk1", "#gk2"], B.p_h3);
+T("#gk1", ["no creo que soy", "~el mejor,~"], "H3", { min: B.p_h3 });
+tl.to("#gk1", { autoAlpha: 0, y: -40, filter: "blur(12px)", duration: 4 * F, ease: "power1.in" }, at("H3", "quién") - LEAD - 4 * F);
+T("#gk2", ["¿quién lo va", "a creer", "~por mí?~"], "H3", { min: B.p_h3 });
+hide(["#gk2", "#shade"], S("C1"));
+
+// =====================================================================================
+// B. "¿Cristiano Ronaldo piensa que es el número 1? No, él sabe…" -> entreno02 aprobado, tal cual
+// =====================================================================================
+(function entreno02(T0) {
+  const t2 = gsap.timeline();
+  const sh = (s, t) => t2.set(s, { autoAlpha: 1 }, t), hd = (s, t) => t2.set(s, { autoAlpha: 0 }, t);
+  const ib = (s, t, d = 3 * F, px = 14) => t2.fromTo(s, { autoAlpha: 0, filter: `blur(${px}px)` }, { autoAlpha: 1, filter: "blur(0px)", duration: d, ease: "power2.out", immediateRender: false }, t);
+  const ob = (s, t, d = 3 * F) => t2.to(s, { autoAlpha: 0, filter: "blur(10px)", duration: d, ease: "power1.in" }, t);
+  gsap.set(["#s1", "#s2", "#s3", "#c2", "#c3", "#u1", "#slice", "#gA", "#gB", "#pa", "#pb", "#e2plate", "#plnum", "#no1", "#p1", "#p2", "#p3", "#p4", "#a1", "#a2", "#tphoto"], { autoAlpha: 0 });
+  gsap.set(["#q2", "#q3", "#q4", "#q5"], { autoAlpha: 0 });
+  gsap.set(["#h1", "#h2", "#ph3"], { scaleX: 0 });
+  sh("#s1", 0); hd("#f0", 2 * F);
+  t2.fromTo("#s1in", { scale: 1 }, { scale: 1.035, duration: 0.867, ease: "none" }, 0);
+  t2.to("#h1", { scaleX: 1, duration: 0.35, ease: "power3.out" }, 2 * F);
+  t2.to("#h2", { scaleX: 1, duration: 0.35, ease: "power3.out" }, 4 * F);
+  t2.fromTo("#bA", { x: -150, y: -90, opacity: 0, filter: "blur(18px)" }, { x: 0, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 2 * F);
+  t2.fromTo("#bB", { x: 160, y: -60, opacity: 0, filter: "blur(18px)" }, { x: 0, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 3 * F);
+  t2.fromTo("#bC", { y: 170, opacity: 0, filter: "blur(18px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 4 * F);
+  t2.fromTo("#tphoto", { autoAlpha: 0, scale: 0.7 }, { autoAlpha: 1, scale: 1, duration: 0.2, ease: "back.out(1.8)", immediateRender: false }, 0.24);
+  ib("#a1", 0.10); ib("#a2", 0.32);
+  t2.to("#s1in", { filter: "blur(10px) brightness(1.12)", duration: 2 * F, ease: "none" }, 0.80);
+  hd("#s1", 0.867);
+  sh("#s2", 0.867);
+  t2.fromTo("#white", { autoAlpha: 0.85 }, { autoAlpha: 0, duration: 3 * F, ease: "none", immediateRender: false }, 0.867);
+  t2.fromTo("#s2in", { filter: "blur(14px)" }, { filter: "blur(0px)", duration: 3 * F, ease: "none", immediateRender: false }, 0.867);
+  [["#q1", 0.867], ["#q2", 1.033], ["#q3", 1.133], ["#q4", 1.3], ["#q5", 1.4], ["#q1", 1.567], ["#q2", 1.7], ["#q4", 1.8]].forEach(([p, t], i) => {
+    ["#q1", "#q2", "#q3", "#q4", "#q5"].forEach((q) => { if (q !== p) hd(q, t); });
+    sh(p, t); t2.set("#ff", { scale: i % 2 ? 1.04 : 1 }, t);
+  });
+  sh("#pa", 1.133); hd("#pa", 1.3); sh("#pb", 1.4); hd("#pb", 1.567); sh("#pa", 1.8);
+  t2.fromTo("#photos", { scale: 1 }, { scale: 1.03, duration: 1.2, ease: "none" }, 0.867);
+  ib("#c2", 0.88); ob("#c2", 1.36, 2 * F);
+  ib("#c3", 1.40); ib("#u1", 1.60, 3 * F, 16);
+  t2.fromTo("#u1", { scale: 1.25 }, { scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, 1.60);
+  hd("#s2", 2.067);
+  sh("#s3", 2.067);
+  [[2.067, "invert(1) sepia(.7) saturate(1.3)", true, 24], [2.1, "none", false, -36], [2.133, "invert(1) sepia(.7) saturate(1.3)", true, 0],
+   [2.167, "contrast(1.3)", true, 30], [2.2, "none", false, 0], [2.233, "brightness(1.15)", true, -18], [2.267, "none", false, 0]].forEach(([t, f, split, dx]) => {
+    t2.set("#s3in", { filter: f }, t); t2.set(["#gA", "#gB"], { autoAlpha: split ? 0.75 : 0 }, t);
+    t2.set("#gA", { x: split ? 18 : 0 }, t); t2.set("#gB", { x: split ? -18 : 0 }, t);
+    t2.set("#slice", { autoAlpha: dx ? 1 : 0, x: dx }, t); t2.set("#c3", { x: dx ? -dx * 0.6 : 0 }, t);
+  });
+  t2.fromTo("#box", { scale: 1 }, { scale: 1.04, duration: 0.53, ease: "none" }, 2.067);
+  t2.fromTo("#leak", { autoAlpha: 0, x: -260 }, { autoAlpha: 1, x: 120, duration: 3 * F, ease: "power1.in", immediateRender: false }, 2.50);
+  t2.fromTo("#white", { autoAlpha: 0 }, { autoAlpha: 1, duration: 3 * F, ease: "power1.in", immediateRender: false }, 2.50);
+  hd(["#s3", "#c3"], 2.60);
+  t2.set("#leak", { autoAlpha: 0 }, 2.70);
+  t2.to("#white", { autoAlpha: 0, duration: 4 * F, ease: "sine.out" }, 2.70);
+  t2.fromTo("#base", { filter: "blur(6px) brightness(1.08)" }, { filter: "blur(0px) brightness(1)", duration: 5 * F, ease: "sine.out", immediateRender: false }, 2.66);
+  sh("#shade", 2.62);
+  const cd = (s, a, b) => { ib(s, a, 2 * F, 8); t2.set(s, { autoAlpha: 0 }, b); };
+  cd("#p1", 2.66, 3.30); cd("#p2", 3.32, 4.18); cd("#p3", 4.20, 4.70); cd("#p4", 4.70, 5.36);
+  t2.fromTo("#no1", { autoAlpha: 0, filter: "blur(18px)", y: 24 }, { autoAlpha: 1, filter: "blur(0px)", y: 0, duration: 0.35, ease: "sine.inOut", immediateRender: false }, 4.92);
+  t2.to("#shade", { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" }, 5.36);
+  t2.fromTo("#e2plate", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.34, ease: "sine.inOut", immediateRender: false }, 5.36);
+  t2.to("#no1", { x: 240, y: 620, scale: 1.45, duration: 0.55, ease: "sine.inOut" }, 5.40);
+  ib("#plnum", 5.90, 5 * F, 10);
+  t2.to("#ph3", { scaleX: 1, duration: 0.45, ease: "sine.inOut" }, 5.95);
+  tl.add(t2, T0);
+})(S("C1"));
+
+
+// =====================================================================================
+// C. "Y los que llegan a ser los mejores del mundo es porque piensan y se creen que son los mejores del mundo."
+// =====================================================================================
+tl.to(["#e2plate", "#plnum", "#no1", "#ph3"], { scale: 1.5, filter: "blur(10px)", duration: 6 * F, ease: "power3.in" }, B.c_in - 6 * F);
+hide(["#e2plate", "#plnum", "#no1", "#ph3", "#shade"], B.c_in);
+show("#sC", B.c_in);
+tl.fromTo("#camC", { scale: 1.6, filter: "blur(14px)" }, { scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, B.c_in);
+$("#rank").innerHTML = Array.from({ length: 10 }, (_, k) => { const r = k + 1;
+  return `<div class="row${r === 1 ? " one" : ""}" style="top:${560 + k * 230}px"><div class="n">${r === 1 ? "Nº1" : r}</div><div class="b${r === 1 ? "" : " shadow"}" style="width:${r === 1 ? 696 : 640 - k * 40}px"></div></div>`; }).join("");
+tl.fromTo("#rank", { y: -1150 }, { y: 0, duration: B.c_land - B.c_in, ease: "power3.inOut", immediateRender: false }, B.c_in);
+tl.fromTo("#rank", { filter: "blur(0px)" }, { filter: "blur(7px)", duration: (B.c_land - B.c_in) / 2, ease: "power2.in", immediateRender: false }, B.c_in);
+tl.to("#rank", { filter: "blur(0px)", duration: (B.c_land - B.c_in) / 2, ease: "power2.out" }, (B.c_in + B.c_land) / 2);
+tl.fromTo("#cbg", { y: -200 }, { y: 0, duration: B.c_land - B.c_in, ease: "power3.inOut", immediateRender: false }, B.c_in);
+T("#cT", ["Y los que llegan", "a ser los"], ["C3a", "C3b"], { min: B.c_in });
+// aterrizaje en Nº1: el resto se apaga, la barra dorada se estira
+tl.to(".row:not(.one)", { opacity: 0.22, filter: "blur(3px)", duration: 0.35, ease: "sine.inOut" }, B.c_land + 0.05);
+tl.fromTo(".row.one .b", { scaleX: 0.5 }, { scaleX: 1, duration: 0.5, ease: "expo.out", immediateRender: false }, B.c_land);
+shake("#camC", B.c_land + 0.02, 8, 4);
+T("#cT2", ["~mejores~", "del mundo"], "C3b", { min: B.c_land });
+tl.to("#camC", { scale: 1.06, duration: B.c_sw - B.c_land, ease: "sine.inOut" }, B.c_land);
+// cambio a la caja clave
+gsap.set("#cK", { autoAlpha: 0 }); gsap.set(".fr", { scale: 0 });
+tl.to(["#cT", "#cT2"], { autoAlpha: 0, y: -60, filter: "blur(14px)", duration: 4 * F, ease: "power2.in" }, B.c_sw - 4 * F);
+tl.to("#rank", { y: 900, autoAlpha: 0, filter: "blur(18px)", duration: 6 * F, ease: "power3.in" }, B.c_sw - 4 * F);
+hide("#chead", B.c_sw);
+show("#cK", B.c_sw);
+tl.to(".fr", { scale: 1, duration: 0.35, ease: "expo.out", stagger: 0.04 }, B.c_sw);
+T("#cK1", ["es porque", "~piensan~"], "C4", { min: B.c_sw });
+gsap.set("#cKy", { autoAlpha: 0 });
+tl.fromTo("#cKy", { autoAlpha: 0, y: 24, filter: "blur(10px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 5 * F, ease: "power2.out", immediateRender: false }, at("C4", "y") - LEAD);
+keybox("#cKkb", B.c_box, 640);
+gsap.set("#cKh", { scaleX: 0 }); tl.to("#cKh", { scaleX: 1, duration: 0.45, ease: "power3.out" }, B.c_box + 0.15);
+T("#cK3", ["que son *los mejores*", "del mundo."], "C4", { min: B.c_sw });
+tl.fromTo("#cK", { scale: 1 }, { scale: 1.05, duration: B.d_in - B.c_sw, ease: "sine.inOut", immediateRender: false }, B.c_sw);
+
+// =====================================================================================
+// D. "Desde pequeño yo tuve esa habilidad de creerme el número uno en absolutamente todo," -> invert flash
+// =====================================================================================
+whip("#camC", "#sD", "#camD", B.d_in, 0, 1200);
+hide("#sC", B.d_in);
+T("#d1", ["Desde ~pequeño~"], "D1", { min: B.d_in });
+T("#d2", ["yo tuve esa", "~habilidad~ de"], "D1", { min: B.d_in });
+gsap.set(["#rmark", "#rline"], { scaleY: 0 }); gsap.set("#rbase", { scaleX: 0 });
+tl.to("#rbase", { scaleX: 1, duration: 0.5, ease: "power3.out" }, B.d_in + 0.05);
+tl.to(["#rline", "#rmark"], { scaleY: 1, duration: 0.3, ease: "expo.out", transformOrigin: "50% 100%" }, B.d_in + 0.25);
+tl.fromTo("#ruler", { x: 0 }, { x: -2600, duration: B.d_grid - B.d_in + 0.2, ease: "power2.inOut", immediateRender: false }, B.d_in);
+// rejilla de "todo": 4 x 5 baldosas con iconos que se voltean a Nº1
+const DIC = ["trophy", "lightbulb", "rocket-launch", "brain", "fire", "lightning", "sparkle", "chart-line-up", "compass", "film-slate",
+             "cpu", "chats", "magnifying-glass", "pen-nib", "image", "megaphone", "device-mobile", "timer", "crown", "user"];
+$("#grid").innerHTML = DIC.map((n, i) => `<div class="tile shadow" id="t${i}" style="left:${101 + (i % 4) * 226}px;top:${570 + Math.floor(i / 4) * 226}px"><div class="ico" style="-webkit-mask-image:url(assets/icons/${n}-fill.svg);mask-image:url(assets/icons/${n}-fill.svg)"></div><div class="st"><span>Nº1</span></div></div>`).join("");
+gsap.set("#gridcam", { autoAlpha: 0 }); gsap.set(".tile .st", { autoAlpha: 0 }); gsap.set(".tile", { autoAlpha: 0 });
+tl.to("#dP1", { autoAlpha: 0, y: -260, filter: "blur(16px)", duration: 5 * F, ease: "power2.in" }, B.d_grid - 5 * F);
+show("#gridcam", B.d_grid);
+tl.fromTo("#gridcam", { scale: 1.45, y: 120 }, { scale: 0.9, y: 40, duration: B.cut1 - B.d_grid, ease: "power2.inOut", immediateRender: false }, B.d_grid);
+DIC.forEach((_, i) => { const c = i % 4 - 1.5, r = Math.floor(i / 4) - 2, d = Math.hypot(c, r);
+  tl.fromTo("#t" + i, { autoAlpha: 0, scale: 0.5, filter: "blur(10px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.35, ease: "expo.out", immediateRender: false }, B.d_grid + d * 0.05); });
+const flipT = (i) => B.d_flip0 + (B.d_flip1 - B.d_flip0) * i / (DIC.length - 1);
+const ford = DIC.map((_, i) => i).sort((a, b) => ((a * 7) % 20) - ((b * 7) % 20));
+ford.forEach((ti, k) => { const t = flipT(k);
+  tl.to("#t" + ti, { scaleX: 0, duration: 2 * F, ease: "power2.in" }, t - 2 * F);
+  tl.set(`#t${ti} .st`, { autoAlpha: 1 }, t);
+  tl.to("#t" + ti, { scaleX: 1, duration: 3 * F, ease: "power2.out" }, t); });
+T("#d3", ["creerme", "~el número uno~"], "D2", { min: B.d_grid });
+tl.to("#d3", { autoAlpha: 0, filter: "blur(12px)", y: -40, duration: 3 * F }, at("D2", "en") - LEAD - 3 * F);
+T("#d4", ["en absolutamente", "~todo,~"], "D2", { min: at("D2", "en") - 0.2 });
+// salida: invert flash + glitch (post) en B.cut1
+hide("#sD", B.cut1);
+show("#shade", B.cut1);
+card("hasta que", at("D3", "hasta"), at("D3", "crecí"));
+card("~crecí.~", at("D3", "crecí"), EN("D3"));
+hide("#shade", B.f_in);
+
+// =====================================================================================
+// F. "antes de llegar a la universidad, en realidad siento que tuve muchos fracasos. Fracasé con…"
+// =====================================================================================
+enterMG("#sF", "#camF", B.f_in, B.f_list);
+gsap.set("#fP2", { autoAlpha: 0 });
+T("#f1", ["antes de llegar a la", "~universidad,~"], "F0a", { min: B.f_in + 0.1 });
+outUp("#f1", at("F0b", "realidad") - 0.3);
+T("#f2", ["en realidad siento", "que tuve ~muchos~"], "F0b", { min: at("F0b", "realidad") - 0.2 });
+$("#fbig").innerHTML = "FRACASOS".split("").map((c) => `<span>${c}</span>`).join("");
+gsap.set("#fbig span", { autoAlpha: 0 }); gsap.set("#fbh", { scaleX: 0 });
+tl.fromTo("#fbig span", { autoAlpha: 0, y: -260, filter: "blur(16px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.32, ease: "power4.in", stagger: 0.035, immediateRender: false }, B.f_big - 0.24);
+shake("#camF", B.f_big + 0.1, 16, 5);
+tl.to("#fbh", { scaleX: 1, duration: 0.5, ease: "power3.out" }, B.f_big + 0.12);
+tl.fromTo("#fbg", { y: 0 }, { y: -90, duration: B.f_list - B.f_in, ease: "none", immediateRender: false }, B.f_in);
+// la lista
+tl.to("#fP1", { y: -1100, filter: "blur(20px)", duration: 6 * F, ease: "power3.in" }, B.f_list - 6 * F);
+hide("#fP1", B.f_list); show("#fP2", B.f_list);
+tl.fromTo("#fP2", { y: 1000, filter: "blur(22px)" }, { y: 0, filter: "blur(0px)", duration: 10 * F, ease: "expo.out", immediateRender: false }, B.f_list);
+const FC = [["megaphone", "Agencia de", "marketing"], ["security-camera", "Cámaras de", "seguridad"], ["device-mobile", "Reparación", "de celulares"],
+            ["pen-nib", "Diseño", "de logos"], ["image", "Edición", "de imágenes"], ["currency-btc", "Cripto-", "monedas"]];
+const XW = [600, 470, 470, 330, 440, 340];
+$("#fcards").innerHTML = FC.map(([ic, a, b], i) => `<div class="card shadow" id="fc${i}" style="top:${510 + i * 290}px"><div class="ib"><div class="ico" style="-webkit-mask-image:url(assets/icons/${ic}-fill.svg);mask-image:url(assets/icons/${ic}-fill.svg)"></div></div><div class="tt"><span>${a}</span><span>${b}</span></div><i class="x" style="top:88px;width:${a.length * 47 + 20}px"></i><i class="x" style="top:178px;width:${b.length * 47 + 20}px"></i></div>`).join("");
+$("#fcnt").innerHTML = ["00", "01", "02", "03", "04", "05", "06"].map((n, i) => `<span id="fn${i}">${n}</span>`).join("");
+gsap.set(".card", { autoAlpha: 0 }); gsap.set(".card .x", { scaleX: 0 }); gsap.set("#fcnt span", { yPercent: 110 }); gsap.set("#fn0", { yPercent: 0 });
+gsap.set("#fhair", { scaleX: 0 }); tl.to("#fhair", { scaleX: 1, duration: 0.5, ease: "power3.out" }, B.f_list + 0.15);
+B.f_frac.forEach((t) => tl.fromTo("#fhd", { scale: 1.09 }, { scale: 1, duration: 0.35, ease: "power3.out", immediateRender: false }, t - F));
+B.f_cards.forEach((t, i) => {
+  tl.fromTo("#fc" + i, { autoAlpha: 0, x: 1000, filter: "blur(20px)" }, { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.42, ease: "expo.out", immediateRender: false }, t - 3 * F);
+  tl.to(`#fc${i} .x`, { scaleX: 1, duration: 0.22, ease: "power2.out", stagger: 0.1 }, t + 0.55);
+  tl.to(`#fc${i} .tt`, { color: "#8C887F", duration: 0.25 }, t + 0.6);
+  tl.to(`#fc${i} .ib`, { backgroundColor: "#8C887F", duration: 0.25 }, t + 0.6);
+  tl.to("#fn" + i, { yPercent: -140, duration: 0.3, ease: "power3.inOut" }, t - 3 * F);
+  tl.fromTo("#fn" + (i + 1), { yPercent: 110 }, { yPercent: 0, duration: 0.3, ease: "power3.inOut", immediateRender: false }, t - 3 * F);
+  const cy = Math.min(0, 1180 - (510 + i * 290));
+  if (i) tl.to("#fcam", { y: cy, duration: 0.6, ease: "power3.inOut" }, t - 0.25);
+});
+tl.to("#fcam", { scale: 0.6, y: 164, duration: 0.55, ease: "power3.inOut", transformOrigin: "540px 0px" }, B.f_all);
+tl.to("#fhead", { autoAlpha: 0, duration: 0.25 }, B.f_all);
+
+// =====================================================================================
+// P. TENSIÓN (persona): "y perdí la habilidad de creerme el número uno" … silencio … "y eso es grave, es muy grave"
+// =====================================================================================
+destello(B.p_in, "#sF");
+show("#shade", B.p_in);
+card("y perdí la habilidad", at("P1", "y"), at("P1", "de"));
+card("de creerme", at("P1", "de"), at("P1", "el"));
+show(["#pnoL", "#pnoR"], B.p_no1 - 3 * F);
+tl.fromTo(["#pnoL", "#pnoR"], { autoAlpha: 0, scale: 1.6, filter: "blur(20px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, B.p_no1 - 3 * F);
+tl.to("#pnoL", { x: -90, y: 520, rotation: -16, filter: "blur(6px)", autoAlpha: 0, duration: 1.0, ease: "power2.in" }, B.p_crack);
+tl.to("#pnoR", { x: 110, y: 600, rotation: 19, filter: "blur(6px)", autoAlpha: 0, duration: 1.05, ease: "power2.in" }, B.p_crack + 0.05);
+shake(["#pnoL", "#pnoR"], B.p_crack - 0.08, 10, 3);
+card("y eso es grave,", at("P2", "y"), at("P2", "es", 1));
+card("es ~muy grave~", at("P2", "es", 1), EN("P2"));
+hide("#shade", B.r1_in);
+
+// =====================================================================================
+// R1. "Pero en este momento estoy organizando mi vida, estoy organizando las cosas, y yo sé que en algún momento,"
+// =====================================================================================
+enterMG("#sR1", "#r1cam", B.r1_in, B.r1_org1);
+const NQ = 36, GX = 115, GY = 640, CS = 146;
+const types = Array.from({ length: NQ }, (_, i) => (i < 18 ? "c" : i < 30 ? "k" : "o"));
+$("#r1sq").innerHTML = types.map((ty, i) => `<div class="sq ${ty}" id="q${i}"></div>`).join("");
+const cellOf = (k) => [GX + (k % 6) * CS, GY + Math.floor(k / 6) * CS];
+const shuffled = Array.from({ length: NQ }, (_, i) => i).sort(() => rnd() - 0.5);
+const sorted = Array.from({ length: NQ }, (_, i) => i);   // c: filas 0-2, k: filas 3-4, o: fila 5
+types.forEach((ty, i) => {
+  const x0 = R(-60, 1020), y0 = R(520, 1700), r0 = R(-70, 70), s0 = R(0.5, 1.6);
+  gsap.set("#q" + i, { x: x0, y: y0, rotation: r0, scale: s0 });
+  tl.to("#q" + i, { x: x0 + R(-90, 90), y: y0 + R(-60, 60), rotation: r0 + R(-40, 40), duration: B.r1_org1 - B.r1_in, ease: "none" }, B.r1_in);
+  const [gx, gy] = cellOf(shuffled[i]); const dc = Math.hypot(shuffled[i] % 6 - 2.5, Math.floor(shuffled[i] / 6) - 2.5);
+  tl.to("#q" + i, { x: gx, y: gy, rotation: 0, scale: 1, duration: 0.6, ease: "expo.out" }, B.r1_org1 + dc * 0.035);
+  const [sx, sy] = cellOf(sorted[i]);
+  tl.to("#q" + i, { x: sx, y: sy, duration: 0.55, ease: "power3.inOut" }, B.r1_org2 + (i % 6) * 0.025);
+});
+T("#r1a", ["Pero en", "~este momento~"], "R1", { min: B.r1_in + 0.05 });
+outUp("#r1a", B.r1_org1 - 0.12);
+T("#r1b", ["estoy organizando", "~mi vida,~"], "R1", { min: B.r1_org1 - 0.1 });
+outUp("#r1b", B.r1_org2 - 0.12);
+T("#r1c", ["estoy organizando", "~las cosas~"], "R1", { min: B.r1_org2 - 0.1 });
+outUp("#r1c", at("R1", "y") - 0.15);
+T("#r1d", ["y yo sé que en", "~algún momento,~"], "R1", { min: at("R1", "y") - 0.1 });
+tl.fromTo("#r1bg", { y: 0 }, { y: -100, duration: B.r2_in - B.r1_in, ease: "none", immediateRender: false }, B.r1_in);
+tl.to("#r1cam", { scale: 3.4, filter: "blur(6px)", duration: 0.75, ease: "power4.in", transformOrigin: "50% 55%" }, B.r2_in - 0.75);
+destello(B.r2_in, "#sR1");
+show("#shade", B.r2_in);
+card("por todo lo que|he hecho,", at("R2", "por", 0), at("R2", "por", 1));
+card("por todo lo que|*he aprendido,*", at("R2", "por", 1), EN("R2"));
+hide("#shade", B.r3_in);
+
+// =====================================================================================
+// R3. "por las distintas habilidades que tengo, yo sé que esto tendrá fruto."
+// =====================================================================================
+enterMG("#sR3", "#r3cam", B.r3_in, B.r4_in);
+const NODES = [[180, 760, "pen-nib"], [470, 700, "film-slate"], [780, 790, "cpu"], [320, 1010, "megaphone"], [640, 1060, "image"], [150, 1270, "chart-line-up"], [860, 1240, "brain"]];
+const LINKS = [[0, 1], [1, 2], [0, 3], [1, 4], [3, 4], [2, 4], [3, 5], [4, 6], [1, 3], [2, 6]];
+$("#r3nodes").innerHTML = NODES.map(([x, y, ic], i) => `<div class="node" id="nd${i}" style="left:${x}px;top:${y}px"><div class="ico" style="-webkit-mask-image:url(assets/icons/${ic}-fill.svg);mask-image:url(assets/icons/${ic}-fill.svg)"></div></div>`).join("");
+$("#r3svg").innerHTML = LINKS.map(([a, b], i) => { const [x1, y1] = NODES[a], [x2, y2] = NODES[b]; const L = Math.hypot(x2 - x1, y2 - y1);
+  return `<line id="ln${i}" x1="${x1 + 75}" y1="${y1 + 75}" x2="${x2 + 75}" y2="${y2 + 75}" stroke="#C8B07A" stroke-width="5" stroke-dasharray="${L}" stroke-dashoffset="${L}" />`; }).join("");
+gsap.set(".node", { autoAlpha: 0 });
+NODES.forEach((_, i) => tl.fromTo("#nd" + i, { autoAlpha: 0, scale: 0.4, filter: "blur(10px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out", immediateRender: false }, B.r3_nodes + i * 0.09));
+LINKS.forEach((_, i) => tl.to("#ln" + i, { attr: { "stroke-dashoffset": 0 }, duration: 0.45, ease: "power2.inOut" }, B.r3_lines + i * 0.05));
+tl.to("#r3nodes", { y: -20, duration: B.r4_in - B.r3_in, ease: "sine.inOut" }, B.r3_in);
+T("#r3a", ["por las distintas", "~habilidades~", "que tengo,"], "R3", { min: B.r3_in + 0.05 });
+outUp("#r3a", B.r3_chart - 0.1);
+tl.to(["#r3nodes", "#r3svg"], { opacity: 0.22, filter: "blur(3px)", duration: 0.35 }, B.r3_chart - 0.1);
+T("#r3b", ["yo sé que esto", "tendrá"], "R3", { min: B.r3_chart - 0.1 });
+const PL = $("#r3pl"); const plLen = 1290; gsap.set(PL, { attr: { "stroke-dasharray": plLen, "stroke-dashoffset": plLen } });
+tl.to(PL, { attr: { "stroke-dashoffset": 0 }, duration: B.r3_fruto - B.r3_chart, ease: "power2.inOut" }, B.r3_chart);
+gsap.set(["#r3mk", "#r3fr"], { autoAlpha: 0 });
+tl.fromTo("#r3mk", { autoAlpha: 0, scale: 3 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "expo.out", immediateRender: false }, B.r3_fruto - F);
+tl.fromTo("#r3fr", { autoAlpha: 0, scale: 0.6, filter: "blur(14px)", y: 30 }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", y: 0, duration: 8 * F, ease: "power2.out", immediateRender: false, transformOrigin: "100% 100%" }, B.r3_fruto - LEAD);
+burst("#r3cam", 940, 810, 12, B.r3_fruto, 300);
+
+// =====================================================================================
+// R4. "algún día lo voy a lograr, y cuando lo logre, todo el mundo va a decir que esto va a ser suerte, y no va a ser suerte,"
+// =====================================================================================
+whip("#r3cam", "#sR4", "#r4cam", B.r4_in, 1100, 0);
+hide("#sR3", B.r4_in);
+T("#r4a", ["algún día", "lo voy a", "~lograr,~"], "R4a", { min: B.r4_in });
+tl.fromTo("#r4a", { scale: 1 }, { scale: 1.08, duration: at("R4a", "y") - B.r4_in, ease: "sine.inOut", immediateRender: false }, B.r4_in);
+outUp("#r4a", at("R4a", "y") - 0.15);
+T("#r4b", ["y cuando", "~lo logre,~"], "R4a", { min: at("R4a", "y") - 0.12 });
+outUp("#r4b", B.r4_tags - 0.15);
+T("#r4c", ["todo el mundo", "va a decir que"], "R4a", { min: B.r4_tags - 0.12 });
+const TAGS = [[80, 600, -6], [560, 590, 5], [330, 735, 3], [740, 745, -8], [60, 1220, 7], [640, 1210, -5], [330, 1340, -3], [720, 1360, 6], [110, 1470, 4], [520, 1490, -4]];
+$("#r4tags").innerHTML = TAGS.map(([x, y, r], i) => `<div class="tag" id="tg${i}" style="left:${x}px;top:${y}px;transform:rotate(${r}deg)">suerte<i></i></div>`).join("");
+gsap.set(".tag", { autoAlpha: 0 }); gsap.set(".tag i", { scaleX: 0 }); gsap.set(["#r4big"], { autoAlpha: 0 }); gsap.set("#r4x", { scaleX: 0 });
+TAGS.forEach(([, , r], i) => tl.fromTo("#tg" + i, { autoAlpha: 0, scale: 0.3, rotation: r * 3, filter: "blur(8px)" }, { autoAlpha: 1, scale: 1, rotation: r, filter: "blur(0px)", duration: 0.32, ease: "expo.out", immediateRender: false }, B.r4_tags + i * 0.11));
+tl.fromTo("#r4big", { autoAlpha: 0, scale: 0.55, filter: "blur(18px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 8 * F, ease: "power2.out", immediateRender: false }, B.r4_big - LEAD);
+tl.to(".tag", { opacity: 0.55, duration: 0.2 }, B.r4_big);
+tl.to("#r4x", { scaleX: 1, duration: 0.24, ease: "power2.out" }, B.r4_no);
+TAGS.forEach((_, i) => tl.to(`#tg${i} i`, { scaleX: 1, duration: 0.18, ease: "power2.out" }, B.r4_no + 0.05 + i * 0.03));
+TAGS.forEach(([, , r], i) => tl.to("#tg" + i, { y: 1300, rotation: r * 7, filter: "blur(6px)", duration: 0.6, ease: "power2.in" }, B.r4_drop + (i % 5) * 0.03));
+tl.to(["#r4big", "#r4x"], { scale: 1.25, autoAlpha: 0, filter: "blur(16px)", duration: 0.35, ease: "power2.in" }, B.r4_drop + 0.05);
+tl.to("#r4cam", { scale: 1.05, duration: B.r5_in - B.r4_in, ease: "sine.inOut" }, B.r4_in);
+
+// =====================================================================================
+// R5. "va a ser demasiado esfuerzo, demasiada constancia, esto fueron años de trabajo. Yo estuve aprendiendo durante muchos años esto,"
+// =====================================================================================
+whip("#r4cam", "#sR5", "#r5cam", B.r5_in, 0, 1200);
+hide(["#sR4", "#r4c"], B.r5_in);
+T("#r5a", ["va a ser", "~demasiado~"], "R4b", { min: B.r5_in });
+T("#er0t", ["~esfuerzo,~"], "R4b", { min: B.r5_in });
+T("#er1t", ["~constancia,~"], "R4b", { min: B.r5_in });
+T("#er2t", ["años de trabajo,"], "R4b", { min: B.r5_in });
+gsap.set(".erow .fl", { scaleX: 0 }); gsap.set(".erow .tk", { scaleX: 0 });
+B.r5_rows.forEach((t, i) => {
+  tl.to(`#er${i} .tk`, { scaleX: 1, duration: 0.4, ease: "power3.out", transformOrigin: "0 50%" }, t - 0.2);
+  tl.fromTo(`#er${i} .fl`, { scaleX: 0 }, { scaleX: 1, duration: 1.1, ease: "power2.out", immediateRender: false }, t);
+});
+tl.fromTo("#r5rows", { y: 0 }, { y: -30, duration: B.r5_lay - B.r5_in, ease: "sine.inOut", immediateRender: false }, B.r5_in);
+tl.to(["#r5rows", "#r5a"], { y: -900, autoAlpha: 0, filter: "blur(18px)", duration: 6 * F, ease: "power3.in" }, B.r5_lay - 4 * F);
+T("#r5b", ["yo estuve", "~aprendiendo~", "durante muchos años"], "R4b", { min: B.r5_lay });
+// capas que se apilan: años acumulándose
+const NL = 34; const lc = ["#2A2926", "#C8B07A", "#FBF8F1"];
+$("#r5lay").innerHTML = Array.from({ length: NL }, (_, i) => `<div class="lay${i % 3 === 2 ? " shadow" : ""}" id="ly${i}" style="top:${1430 - i * 22}px;background:${lc[i % 3]};width:${912 - (i % 4) * 30}px;left:${84 + (i % 4) * 15}px"></div>`).join("");
+gsap.set(".lay", { autoAlpha: 0 });
+const layEnd = B.cut2 - 0.15;
+Array.from({ length: NL }).forEach((_, i) => tl.fromTo("#ly" + i, { autoAlpha: 0, y: -300, scaleX: 0.6 }, { autoAlpha: 1, y: 0, scaleX: 1, duration: 0.3, ease: "power3.out", immediateRender: false },
+  B.r5_lay + 0.25 + (layEnd - B.r5_lay - 0.55) * Math.pow(i / (NL - 1), 0.8)));
+tl.to("#r5cam", { scale: 1.06, duration: B.cut2 - B.r5_lay, ease: "sine.inOut" }, B.r5_lay);
+// salida: invert flash 2 + glitch (post) en B.cut2 -> persona: "yo no llego a mi casa a reírme o a hacer cualquier cosa,"
+hide("#sR5", B.cut2);
+show("#shade", B.cut2);
+card("yo no llego|a mi casa", at("R4b", "yo", 1), at("R4b", "a", 2));
+card("a ~reírme~", at("R4b", "a", 2), at("R4b", "o"));
+card("o a hacer|cualquier cosa,", at("R4b", "o"), B.z_in);
+tl.to("#base", { scale: 0.86, filter: "blur(8px)", duration: 4 * F, ease: "power3.in" }, B.z_in - 4 * F);
+hide("#shade", B.z_in);
+
+// =====================================================================================
+// Z. "yo todos los días llego a aprender algo nuevo." -> 42 días -> placa
+// =====================================================================================
+enterMG("#sZ", "#zcam", B.z_in, B.pl);
+$("#zgrid").innerHTML = Array.from({ length: 42 }, (_, i) => `<div class="cell" id="cl${i}" style="left:${100 + (i % 7) * 128}px;top:${650 + Math.floor(i / 7) * 128}px">${i === DIA - 1 ? "<b>" + DIA + "</b>" : ""}</div>`).join("");
+gsap.set(".cell", { autoAlpha: 0 }); gsap.set(`#cl${DIA - 1} b`, { autoAlpha: 0 });
+Array.from({ length: 42 }).forEach((_, i) => tl.fromTo("#cl" + i, { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "expo.out", immediateRender: false }, B.z_in + 0.15 + ((i % 7) + Math.floor(i / 7)) * 0.04));
+for (let i = 0; i < DIA - 1; i++) tl.set("#cl" + i, { backgroundColor: "#2A2926", borderColor: "#2A2926" }, B.z_days + i * 0.07);
+tl.set(`#cl${DIA - 1}`, { backgroundImage: "linear-gradient(155deg,#EDE1C2 0%,#D6C293 45%,#C8B07A 100%)", borderColor: "#A88F57" }, B.z_five);
+tl.fromTo(`#cl${DIA - 1}`, { scale: 1.5 }, { scale: 1, duration: 0.45, ease: "expo.out", immediateRender: false }, B.z_five);
+tl.to(`#cl${DIA - 1} b`, { autoAlpha: 1, duration: 3 * F }, B.z_five);
+T("#z1", ["todos los ~días~"], "R4b", { min: B.z_in + 0.05 });
+outUp("#z1", at("R4b", "llego", 1) - 0.12);
+T("#z2", ["llego a aprender", "~algo nuevo.~"], "R4b", { min: at("R4b", "llego", 1) - 0.1 });
+tl.to("#zcam", { scale: 2.6, filter: "blur(4px)", duration: 0.55, ease: "power4.in", transformOrigin: `${100 + (DIA - 1) * 128 + 56}px ${650 + 56}px` }, B.pl - 0.55);
+// placa final
+destello(B.pl, ["#sZ", "#z1", "#z2"]);
+show("#pl", B.pl);
+document.getElementById("pldia").textContent = "DÍA " + DIA;
+document.getElementById("plde").textContent = "de " + DE;
+$("#plrow").innerHTML = Array.from({ length: 14 }, (_, i) => `<b style="left:${i * 41}px;${i < DIA - 1 ? "background:#2A2926;border-color:#2A2926" : i === DIA - 1 ? "background:#C8B07A;border-color:#A88F57" : ""}"></b>`).join("");
+gsap.set(["#pldia", "#plde", "#pltag", "#plrow"], { autoAlpha: 0 }); gsap.set("#plhair", { scaleX: 0 });
+tl.fromTo("#pldia", { autoAlpha: 0, y: 30, filter: "blur(14px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 8 * F, ease: "power2.out", immediateRender: false }, B.pl + 0.12);
+tl.fromTo("#plde", { autoAlpha: 0, scale: 0.6, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 9 * F, ease: "power2.out", immediateRender: false }, B.pl + 0.32);
+tl.to("#plhair", { scaleX: 1, duration: 0.45, ease: "sine.inOut" }, B.pl + 0.5);
+inBlur("#pltag", B.pl + 0.65, 6 * F, 10);
+inBlur("#plrow", B.pl + 0.8, 6 * F, 8);
+tl.fromTo("#pl", { scale: 1 }, { scale: 1.03, duration: D.total - B.pl, ease: "sine.out", immediateRender: false }, B.pl);
+
+// ---------- grano de papel (cada 2 cuadros) ----------
+const NG = Math.ceil(D.total / (2 * F));
+for (let i = 0; i < NG; i++) tl.set("#grain", { x: ((i * 73) % 180) - 90, y: ((i * 131) % 180) - 90 }, i * 2 * F);
+tl.set({}, {}, D.total);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

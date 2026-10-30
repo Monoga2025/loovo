@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\<user>\Desktop\Loovo-42\Dia-07\proyecto\canal_cerebro\scripts\tr_medium.py", line 6, in <module>
+    m = WhisperModel("medium", device="cpu", compute_type="int8")
+  File "C:\Users\<user>\AppData\Roaming\Python\Python314\site-packages\faster_whisper\transcribe.py", line 689, in __init__
+    self.model = ctranslate2.models.Whisper(
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model_path,
+        ^^^^^^^^^^^
+    ...<6 lines>...
+        **model_kwargs,
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+RuntimeError: mkl_malloc: failed to allocate memory

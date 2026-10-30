@@ -1,0 +1,4 @@
+TOTAL_REAL=62.25s  CLIPS=19
+AVISO: t5: empieza con 'Este' (revisar)
+AVISO: t7: empieza con 'Y' (revisar)
+RESULTADO: OK

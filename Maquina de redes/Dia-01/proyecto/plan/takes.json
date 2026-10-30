@@ -1,0 +1,17 @@
+{
+  "source": "input/clip.mp4",
+  "target": 35,
+  "tolerance": 4,
+  "max": 45,
+  "takes": [
+    { "id": "t1", "start": 37.54, "end": 41.50, "note": "gancho: Tengo 42 días para meter mi empresa en un evento con más de dos mil empresarios." },
+    { "id": "t2", "start": 56.98, "end": 60.26, "note": "(y) en este momento no tengo ni idea cuánto puede llegar a cambiar Loovo durante este tiempo." },
+    { "id": "t3", "start": 80.74, "end": 83.80, "note": "Loovo ya existe, pero está muy lejos de ser la empresa que tengo en mi cabeza." },
+    { "id": "t4", "start": 149.36, "end": 153.82, "note": "Así que decidí hacer algo que normalmente no se hace y es mostrar cómo montamos toda la empresa." },
+    { "id": "t5", "start": 188.44, "end": 194.72, "note": "Vas a ver los servicios que vamos sacando, cómo los armamos, cómo los construimos, qué decisiones tomamos y qué sale mal." },
+    { "id": "t6", "start": 313.70, "end": 319.66, "note": "Así que la meta (va de un tirón, no se puede separar) que va a construir desde el día de hoy es trabajar el Loovo para mostrar una empresa totalmente diferente." },
+    { "id": "t7", "start": 329.82, "end": 336.08, "note": "Voy a llegar a tener los mejores servicios del evento con inteligencia artificial y les voy a mostrar cómo lo hacemos paso a paso." },
+    { "id": "t8", "start": 435.90, "end": 438.30, "note": "Este va a ser el día 1 de 42. (la toma de 370.76 era la voz de otra persona)" },
+    { "id": "t9", "start": 451.92, "end": 455.24, "note": "Y quiero que me acompañen a ver qué tan lejos puedo llevar esta empresa." }
+  ]
+}

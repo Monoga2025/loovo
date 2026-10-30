@@ -1,0 +1,66 @@
+<template id="overlays-template">
+  <!-- Mosaicos de marca (lima con icono carbón y anillo azul) y el billete en duotono, a la izquierda de la cara. -->
+  <div data-composition-id="overlays" data-width="1080" data-height="1920" data-duration="56.600000">
+    <div id="stk-layer"></div>
+    <style>
+      [data-composition-id="overlays"] { background: transparent; overflow: hidden; }
+      .stk { position: absolute; left: 76px; visibility: hidden; }
+      .stk .tile { position: absolute; inset: 0; border-radius: 30%; background: #C6FF3D; color: #0B0B0F; display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 24px 44px rgba(0,0,0,.5), 0 0 0 7px rgba(47,91,255,.95); }
+      .stk .tile.alt { background: #0B0B0F; color: #C6FF3D; box-shadow: 0 24px 44px rgba(0,0,0,.5), 0 0 0 5px rgba(198,255,61,.9); }
+      .stk .ic { width: 56%; height: 56%; background: currentColor; -webkit-mask: var(--i) center/contain no-repeat; mask: var(--i) center/contain no-repeat; }
+      .stk img.bill { width: 100%; display: block; border-radius: 8px; filter: drop-shadow(0 22px 26px rgba(0,0,0,.55)); }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      // i = icono Phosphor (assets/ico/<i>.svg); alt = mosaico oscuro con icono lima (alterna para no saturar de lima)
+      const STK = [
+        { t0: 3.81, t1: 4.95, i: "bed-fill", y: 1120, s: 150, r: -8 },
+        { t0: 5.77, t1: 6.80, i: "alarm-fill", y: 1120, s: 150, r: 8, alt: 1 },
+        { t0: 13.49, t1: 14.55, i: "cpu-fill", y: 1120, s: 150, r: -8, alt: 1 },
+        { t0: 15.61, t1: 16.15, i: "plugs-connected-fill", y: 1120, s: 150, r: 8 },
+        { t0: 19.90, t1: 21.25, i: "lightbulb-fill", y: 1120, s: 150, r: -8, alt: 1 },
+        { t0: 25.23, t1: 26.50, i: "film-slate-fill", y: 1120, s: 150, r: 8 },
+        { t0: 39.45, t1: 40.35, i: "sparkle-fill", y: 1120, s: 150, r: -8, alt: 1 },
+        { t0: 45.09, t1: 46.65, i: "rocket-launch-fill", y: 1120, s: 150, r: 8 },
+        { t0: 47.71, t1: 48.85, i: "database-fill", y: 1120, s: 150, r: -8, alt: 1 },
+        { t0: 52.67, t1: 53.65, i: "check-bold", y: 1120, s: 150, r: 8 },
+        { t0: 53.90, t1: 54.95, i: "storefront-fill", y: 1120, s: 150, r: -8, alt: 1 },
+      ];
+      const layer = document.getElementById("stk-layer");
+      STK.forEach((k, i) => {
+        const d = document.createElement("div");
+        d.className = "stk"; d.id = "stk" + i;
+        const w = k.bill ? k.w : k.s;
+        d.style.width = w + "px"; d.style.top = k.y + "px";
+        if (k.right) d.style.left = (1080 - 140 - w) + "px"; // del lado contrario a la boca
+        if (k.bill) {
+          d.style.height = Math.round(w * 0.42) + "px";
+          d.innerHTML = `<img class="bill" id="stkimg${i}" src="assets/foto/billete_1957_duo.png">`;
+        } else {
+          d.style.height = k.s + "px";
+          d.innerHTML = `<div class="tile${k.alt ? " alt" : ""}" id="stkimg${i}"><i class="ic" style="--i:url(assets/ico/${k.i}.svg)"></i></div>`;
+        }
+        layer.appendChild(d);
+      });
+      const tl = gsap.timeline({ paused: true });
+      STK.forEach((k, i) => {
+        const w = "#stk" + i, m = "#stkimg" + i;
+        tl.set(w, { visibility: "visible" }, k.t0);
+        tl.fromTo(w, { scale: 0, y: 40, opacity: 0, rotation: k.r * 3 },
+          { scale: 1, y: 0, opacity: 1, rotation: k.r, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, k.t0);
+        tl.fromTo(m, { rotationY: 170, transformPerspective: 700 }, { rotationY: 0, transformPerspective: 700, duration: 0.6, ease: "power3.out", immediateRender: false }, k.t0);
+        const a = k.t0 + 0.55, b = k.t1 - 0.25;
+        if (b > a) {
+          tl.to(w, { y: -16, rotation: k.r - 5, duration: b - a, ease: "sine.inOut" }, a);
+          tl.to(m, { rotationY: -16, transformPerspective: 700, duration: b - a, ease: "sine.inOut" }, a);
+        }
+        tl.to(w, { scale: 0, opacity: 0, duration: 0.22, ease: "power2.in" }, k.t1 - 0.22);
+        tl.to(m, { rotationY: -140, transformPerspective: 700, duration: 0.22, ease: "power2.in" }, k.t1 - 0.22);
+        tl.set(w, { visibility: "hidden" }, k.t1);
+      });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["overlays"] = tl;
+    </script>
+  </div>
+</template>

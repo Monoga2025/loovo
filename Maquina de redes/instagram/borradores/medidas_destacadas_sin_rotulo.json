@@ -1,0 +1,119 @@
+{
+  "criterio": "Corrección SOLO de destacadas, sin red ni generación. No ejecuta componer.py.\nDiámetro visible = 2 * radio máximo respecto al centro (540,960), píxeles\ncuya diferencia máxima de canal respecto al carbón supera 30/255.\nIncluye objetos neutros, no solo color. Halos inferiores al umbral no certificados.\n",
+  "centro": [
+    540,
+    960
+  ],
+  "circulo_diametro_px": 660,
+  "advertencia": "660 px es una decisión propia, NO un recorte real de Instagram verificado.",
+  "portadas": [
+    {
+      "archivo": "destacada_01_la_serie.png",
+      "tamano": [
+        1080,
+        1920
+      ],
+      "diametro_visible_px": 539.96,
+      "bbox_visible": [
+        272,
+        691,
+        809,
+        1229
+      ],
+      "radio_maximo_px": 269.98,
+      "margen_circulo_px": 60.02,
+      "escala_uniforme": 0.6889094594124895,
+      "sha256_anterior": "078ff44d040da9b7b53bb00066c4dd6fc083ddd28c1d445aafc98029a9df3859"
+    },
+    {
+      "archivo": "destacada_02_loovo.png",
+      "tamano": [
+        1080,
+        1920
+      ],
+      "diametro_visible_px": 540.57,
+      "bbox_visible": [
+        272,
+        703,
+        808,
+        1217
+      ],
+      "radio_maximo_px": 270.28,
+      "margen_circulo_px": 59.72,
+      "escala_uniforme": 0.7848663107489259,
+      "sha256_anterior": "9bff3ef33cdd862630c8ee59c8c691babec3feac33d9b9407aed2fd54a1120b5"
+    },
+    {
+      "archivo": "destacada_03_el_editor.png",
+      "tamano": [
+        1080,
+        1920
+      ],
+      "diametro_visible_px": 540.45,
+      "bbox_visible": [
+        276,
+        691,
+        804,
+        1230
+      ],
+      "radio_maximo_px": 270.22,
+      "margen_circulo_px": 59.78,
+      "escala_uniforme": 0.6520550370916377,
+      "sha256_anterior": "a18594e81f64d3a43f6217d5fa59629474210ffc32665bd3dfe585814ffc6011"
+    },
+    {
+      "archivo": "destacada_04_crm_local.png",
+      "tamano": [
+        1080,
+        1920
+      ],
+      "diametro_visible_px": 540.63,
+      "bbox_visible": [
+        293,
+        698,
+        787,
+        1223
+      ],
+      "radio_maximo_px": 270.31,
+      "margen_circulo_px": 59.69,
+      "escala_uniforme": 0.7694923577765049,
+      "sha256_anterior": "b5dabe44cbb2c15d69bf94d24e7711f7f2cc7b16d3ff26c8e098d52bb8281a9c"
+    },
+    {
+      "archivo": "destacada_05_sin_humo.png",
+      "tamano": [
+        1080,
+        1920
+      ],
+      "diametro_visible_px": 540.24,
+      "bbox_visible": [
+        283,
+        690,
+        797,
+        1230
+      ],
+      "radio_maximo_px": 270.12,
+      "margen_circulo_px": 59.88,
+      "escala_uniforme": 0.6051621599432567,
+      "sha256_anterior": "186e696aa64bfc1acd99f5b7470777a66d66d8de1dbc5b876e414407955b14ed"
+    },
+    {
+      "archivo": "destacada_06_modo_demo.png",
+      "tamano": [
+        1080,
+        1920
+      ],
+      "diametro_visible_px": 539.64,
+      "bbox_visible": [
+        271,
+        718,
+        810,
+        1203
+      ],
+      "radio_maximo_px": 269.82,
+      "margen_circulo_px": 60.18,
+      "escala_uniforme": 0.6687405215041274,
+      "sha256_anterior": "bd42528cbce917bef93c08036184c959c03b414ea774744110375e3a7e43adaa"
+    }
+  ]
+}

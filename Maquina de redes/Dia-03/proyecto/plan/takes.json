@@ -1,0 +1,50 @@
+{
+ "source": "input/clip.mp4",
+ "target": 58,
+ "tolerance": 10,
+ "max": 75,
+ "takes": [
+  {
+   "id": "t1",
+   "start": 17.36,
+   "end": 24.04,
+   "note": "gancho"
+  },
+  {
+   "id": "t2",
+   "start": 24.72,
+   "end": 27.36,
+   "note": "no pudimos adelantar (ella al borde: tapar con escena)"
+  },
+  {
+   "id": "t3",
+   "start": 36.0,
+   "end": 46.0,
+   "note": "pendiente CRM + DIAN"
+  },
+  {
+   "id": "t4",
+   "start": 47.26,
+   "end": 59.54,
+   "note": "skill y tres videos"
+  },
+  {
+   "id": "t5",
+   "start": 64.38,
+   "end": 73.3,
+   "note": "errores: consumo IA"
+  },
+  {
+   "id": "t6",
+   "start": 77.48,
+   "end": 94.34,
+   "note": "arnés, 12 proyectos, feria"
+  },
+  {
+   "id": "t7",
+   "start": 96.62,
+   "end": 97.9,
+   "note": "para mostrar en la feria (sin el 'para' repetido)"
+  }
+ ]
+}

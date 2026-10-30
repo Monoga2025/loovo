@@ -1,0 +1,30 @@
+ENTREGA: VIDEO FINAL SOLO AUDIO PC
+=====================================
+
+ARCHIVO: Dia-04/entregables/Dia4_final_tiktok_audioPC.mp4 (85.66 s, 120 MB)
+
+VERIFICACION POR CORRELACION CRUZADA (GCC-PHAT):
+- CAMARA 10-45-16.mp4: fuente confirmada (q=31-149)
+- CAMARA 11-41-25.mp4: rechazada (q=40-130)
+- PANTALLA 11-41-25.mp4: rechazada (q=41-714)
+
+PISTAS DE AUDIO (ffprobe):
+- CAMARA 10-45-16: AAC 48kHz 2ch (canal 1 = micrófono)
+- Todas las cámaras: mismo formato
+
+RECONSTRUCCION AUDIO:
+- Pista voz_pc_only.wav: 18 tramos desde CAMARA 10-45-16, offsets EDL
+- HPF 70 Hz aplicado, fundidos 12 ms en cortes
+- Celular: 0% (antes 15%)
+
+NORMALIZACION (loudnorm iterativo):
+- I=-17.8 LUFS (target -17.6, error 0.2) ✓
+- LRA=8.6 LU (target 4.5, obtenido sin compresor agresivo) 
+- TP=-2.4 dBTP (target -2.0, error 0.4)
+
+NO VERIFICABLE (sin audicion):
+- Desfase audio-video real
+- Eco/flanging
+- Calidad subjetiva vs versión anterior
+
+SCRIPT: audio_solo_pc.py (verificación y construcción)

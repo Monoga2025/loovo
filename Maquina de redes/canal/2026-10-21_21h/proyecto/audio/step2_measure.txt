@@ -1,0 +1,4 @@
+../build/voice-cut.wav {'floor_p5': -42.11, 'speech': -18.07, 'n_speech': 359, 'n': 396, 'LUFS': '-15.8', 'TP': '-0.4'}
+voice_A.wav {'floor_p5': -42.73, 'speech': -18.12, 'n_speech': 361, 'n': 396, 'LUFS': '-15.8', 'TP': '-0.4'}
+voice_B.wav {'floor_p5': -49.69, 'speech': -20.34, 'n_speech': 333, 'n': 396, 'LUFS': '-17.8', 'TP': '11.0'}
+voice_clean.wav {'floor_p5': -45.73, 'speech': -20.96, 'n_speech': 348, 'n': 396, 'LUFS': '-18.8', 'TP': '-3.4'}
