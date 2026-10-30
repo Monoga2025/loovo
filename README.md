@@ -4,6 +4,12 @@
 
 Loovo sells AI sales automation to aesthetic and dental clinics in Colombia (Bucaramanga and Medellin), plus new niches such as accountants. This repository is the whole working tree of the company: the CRM, the n8n flows, the sales pipeline, the content machine, and the agent rules used to run it as a one-person operation. Client and lead data is replaced with fictional placeholders; raw footage, audio, databases and secrets are not included.
 
+## Screenshots
+
+![Omni Sales CRM: unified inbox across WhatsApp, Instagram, Messenger and web chat, with lifecycle stages and AI-assisted replies. Demo data is fictional.](docs/screenshots/crm-inbox.png)
+
+*Omni Sales CRM: unified inbox across WhatsApp, Instagram, Messenger and web chat, with lifecycle stages and AI-assisted replies. Demo data is fictional.*
+
 ## The problem
 
 A clinic loses most of its leads in the first hours. A patient writes on Instagram or WhatsApp at 9 pm, nobody answers until the next morning, and the patient books somewhere else. Generic chatbots make it worse because they invent prices and promises.
