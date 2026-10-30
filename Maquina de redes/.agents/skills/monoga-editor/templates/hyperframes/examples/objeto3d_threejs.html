@@ -1,0 +1,126 @@
+<template id="objeto3d-template">
+  <!-- Objeto 3D real con luz (Three.js + modelo CC0 de Poly Haven) en marca IA MONOGA.
+       Patrón del registro de HyperFrames (three-orbiting-cards): nada de requestAnimationFrame libre;
+       la timeline de GSAP mueve un objeto de estado y su onUpdate llama a render(). Así cada fotograma
+       buscado sale igual. Modelo: alarm_clock_01 (Poly Haven, CC0). -->
+  <div data-composition-id="objeto3d" data-width="1080" data-height="1920" data-duration="6">
+    <style>
+      @font-face { font-family: "SG"; font-weight: 700; src: url("assets/fonts/space-grotesk-latin-700-normal.woff2") format("woff2"); }
+      @font-face { font-family: "IS"; font-style: italic; font-weight: 400; src: url("assets/fonts/instrument-serif-latin-400-italic.woff2") format("woff2"); }
+      [data-composition-id="objeto3d"] { background: #0B0B0F; overflow: hidden; }
+      .o3-grid { position: absolute; inset: -90px; background-image:
+          linear-gradient(rgba(47,91,255,.22) 2px, transparent 2px), linear-gradient(90deg, rgba(47,91,255,.22) 2px, transparent 2px);
+        background-size: 90px 90px; }
+      #o3aura { position: absolute; width: 1400px; left: -160px; top: 420px; opacity: .55; }
+      #o3canvas { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .o3h { position: absolute; left: 0; width: 100%; text-align: center; font-family: "SG", sans-serif; font-weight: 700;
+        letter-spacing: -0.05em; line-height: .88; white-space: nowrap; }
+      .o3s { position: absolute; left: 0; width: 100%; text-align: center; font-family: "IS", serif; font-style: italic; white-space: nowrap; }
+    </style>
+    <div class="o3-grid"></div>
+    <img id="o3aura" src="assets/tex/aura.png">
+    <!-- Palabra DETRÁS del objeto: el canvas va encima con fondo transparente -->
+    <div class="o3h" id="o3back" style="top:560px;font-size:330px;color:#2F5BFF">7 MIN</div>
+    <canvas id="o3canvas" width="1080" height="1920"></canvas>
+    <div class="o3s" id="o3s" style="top:1500px;font-size:96px;color:#F4F2EE">no duerme</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      // Estado que la timeline anima. render3d() lo lee; lo define el módulo cuando el modelo cargó.
+      window.__o3 = { giro: 0, sube: 0, aguja: 0, explota: 0, zoom: 0 };
+      const r3 = () => window.__o3render && window.__o3render();
+      const tl = gsap.timeline({ paused: true });
+      gsap.set("#o3back", { opacity: 0, y: 80 });
+      gsap.set("#o3s", { opacity: 0, y: 30 });
+      tl.to(window.__o3, { sube: 1, duration: 0.9, ease: "expo.out", onUpdate: r3 }, 0);
+      tl.to(window.__o3, { giro: 1, duration: 6, ease: "none", onUpdate: r3 }, 0);
+      tl.to(window.__o3, { aguja: 1, duration: 2.2, ease: "power2.inOut", onUpdate: r3 }, 0.8);
+      tl.to(window.__o3, { explota: 1, duration: 0.8, ease: "expo.out", onUpdate: r3 }, 3.0);
+      tl.to(window.__o3, { explota: 0, duration: 0.45, ease: "power3.in", onUpdate: r3 }, 4.6);
+      tl.to(window.__o3, { zoom: 1, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out", onUpdate: r3 }, 5.05);
+      tl.to("#o3back", { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 0.4);
+      tl.to("#o3s", { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 1.0);
+      // seek() suprime los onUpdate: se envuelve render() de la timeline para redibujar el 3D en cada busqueda.
+      const tlRender = tl.render.bind(tl);
+      tl.render = function (...args) { const r = tlRender(...args); r3(); return r; };
+      window.__timelines = window.__timelines || {};
+      window.__timelines["objeto3d"] = tl;
+    </script>
+    <script type="module">
+      import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.184.0/+esm";
+      import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/loaders/GLTFLoader.js/+esm";
+      import { RoomEnvironment } from "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/environments/RoomEnvironment.js/+esm";
+
+      const canvas = document.getElementById("o3canvas");
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: true });
+      renderer.setPixelRatio(1);
+      renderer.setSize(1080, 1920, false);
+      renderer.setClearColor(0x000000, 0);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(28, 1080 / 1920, 0.01, 50);
+      camera.position.set(0, 0, 1.0);
+      // Sin mapa de entorno los metales PBR salen negros
+      scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), 0.04).texture;
+      scene.environmentIntensity = 0.6;
+
+      // Luz de marca: clave blanca cálida, contra azul eléctrico, relleno lima suave
+      scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+      const key = new THREE.DirectionalLight(0xfff4e6, 3.2); key.position.set(1.2, 1.6, 2); scene.add(key);
+      const rim = new THREE.DirectionalLight(0x2f5bff, 5.0); rim.position.set(-2, 0.6, -1.5); scene.add(rim);
+      const fill = new THREE.DirectionalLight(0xc6ff3d, 0.9); fill.position.set(1.5, -1.2, 1); scene.add(fill);
+
+      const pivot = new THREE.Group(); scene.add(pivot);
+      const parts = [];
+      new GLTFLoader().load("assets/3d/alarm_clock_01/alarm_clock_01_1k.gltf", (g) => {
+        const root = g.scene;
+        // Centrar y escalar a una altura fija
+        const box = new THREE.Box3().setFromObject(root);
+        const size = box.getSize(new THREE.Vector3()), center = box.getCenter(new THREE.Vector3());
+        root.position.sub(center);
+        const holder = new THREE.Group(); holder.add(root);
+        holder.scale.setScalar(0.21 / size.y);
+        pivot.add(holder);
+        const body = root.getObjectByName("alarm_clock_01");
+        // Marca: nada de rojo. El segundero (rojo en la textura) pasa a lima; el vidrio, casi transparente.
+        root.traverse((m) => {
+          if (!m.isMesh) return;
+          const mats = Array.isArray(m.material) ? m.material : [m.material];
+          mats.forEach((mt) => { if (/Glass/i.test(mt.name)) { mt.transparent = true; mt.opacity = 0.12; mt.depthWrite = false; } });
+        });
+        const sec = root.getObjectByName("second_hand");
+        sec.material = new THREE.MeshStandardMaterial({ color: 0xc6ff3d, emissive: 0x4a6a00, metalness: 0.2, roughness: 0.4 });
+        // Normal de la cara del reloj (eje X local del cuerpo) para girar y separar las agujas
+        const normal = new THREE.Vector3(1, 0, 0).applyQuaternion(body.quaternion).normalize();
+        ["houd_hand", "minute_hand", "second_hand"].forEach((n, i) => {
+          const o = root.getObjectByName(n);
+          const c = new THREE.Box3().setFromObject(o).getCenter(new THREE.Vector3()).sub(root.position);
+          const sign = Math.sign(c.dot(normal)) || 1;
+          parts.push({ o, q0: o.quaternion.clone(), p0: o.position.clone(), dir: normal.clone().multiplyScalar(sign), k: i + 1,
+                       vueltas: [0.5, 6, 36][i] });
+        });
+        parts.push({ o: body, q0: body.quaternion.clone(), p0: body.position.clone(), dir: normal.clone().multiplyScalar(-1), k: 0.6, vueltas: 0 });
+        window.__o3render = render;
+        render();
+      });
+
+      const qa = new THREE.Quaternion();
+      function render() {
+        const s = window.__o3;
+        pivot.position.y = -0.55 + s.sube * 0.55 - 0.02;
+        pivot.rotation.y = -1.25 + s.sube * 0.75 + s.giro * 0.55;
+        pivot.rotation.x = 0.12 + Math.sin(s.giro * Math.PI) * 0.06;
+        pivot.rotation.z = -0.12 + s.sube * 0.08;
+        for (const p of parts) {
+          qa.setFromAxisAngle(p.dir, -p.vueltas * s.aguja * Math.PI * 2);
+          p.o.quaternion.copy(qa).multiply(p.q0);
+          p.o.position.copy(p.p0).addScaledVector(p.dir, s.explota * 0.012 * p.k);
+        }
+        camera.position.z = 1.0 - s.zoom * 0.08;
+        renderer.render(scene, camera);
+      }
+    </script>
+  </div>
+</template>

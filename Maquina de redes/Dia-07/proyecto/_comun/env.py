@@ -1,6 +1,6 @@
 """Envolvente RMS 20 ms del crudo (../_scan/cel48.wav). Uso: env.py t0 t1 [t0 t1 ...]"""
 import sys, numpy as np, soundfile as sf
-f = sf.SoundFile("C:/Users/Monoga/Desktop/Loovo-42/Dia-07/proyecto/_scan/cel48.wav"); sr = f.samplerate
+f = sf.SoundFile("C:/Users/you/Desktop/Loovo-42/Dia-07/proyecto/_scan/cel48.wav"); sr = f.samplerate
 a = sys.argv[1:]
 for i in range(0, len(a), 2):
     t0, t1 = float(a[i]), float(a[i+1]); f.seek(int(t0*sr)); x = f.read(int((t1-t0)*sr))

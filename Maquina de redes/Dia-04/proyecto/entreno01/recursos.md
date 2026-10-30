@@ -8,7 +8,7 @@
 | f4.jpg | File:Cristiano_Ronaldo_0895.jpg | YantsImages | CC BY-SA 4.0 |
 | f5.jpg | File:1_cristiano_ronaldo_2016.jpg | Chensiyuan | CC BY-SA 4.0 |
 | estatua.jpg (virada a dorado) | File:Cristiano-ronaldo-2491446_960_720.jpg | Pauline_17 (Pixabay) | CC0 |
-| Fuentes | @creator/playfair-display, @creator/inter-tight | — | OFL 1.1 |
+| Fuentes | @fontsource/playfair-display, @fontsource/inter-tight | — | OFL 1.1 |
 | grano.png | 00_Serie/recursos/texturas | propio | — |
 | SFX | scripts/make_sfx.py (generados por código) | propio | libre |
 

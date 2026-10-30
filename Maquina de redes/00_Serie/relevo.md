@@ -48,7 +48,7 @@ Formato:
 - Pendiente: que el usuario escuche v8 y ajuste (`--under`, objetivo LUFS).
 
 ## 2026-10-08 · editor (ronda 5)
-- Hice: v9. Emojis reemplazados por iconos Phosphor (MIT) en mosaicos y un billete de dominio público tintado de rojo; tipografía nueva (Anton oblicua + Montserrat 300 cursiva, Anton descargada de @creator, OFL); punto rojo recurrente que cruza todas las escenas y cierra en bucle; audio v8. Lo aprendido de claudevideo.org, motionpromptgallery.com e iart.ai quedó en `monoga-editor/references/motion-nivel-pro.md`.
+- Hice: v9. Emojis reemplazados por iconos Phosphor (MIT) en mosaicos y un billete de dominio público tintado de rojo; tipografía nueva (Anton oblicua + Montserrat 300 cursiva, Anton descargada de @fontsource, OFL); punto rojo recurrente que cruza todas las escenas y cierra en bucle; audio v8. Lo aprendido de claudevideo.org, motionpromptgallery.com e iart.ai quedó en `monoga-editor/references/motion-nivel-pro.md`.
 - Pendiente: pantalla real del CRM (datos demo), objetos fotorrealistas recortados, Three.js; el usuario elige portada A/B y escucha el audio.
 
 ## 2026-10-09 · editor (ronda 6, Opus)
@@ -66,7 +66,7 @@ Formato:
 - Pendiente: el usuario elige dirección. ⚠ El "Luque Business Summit" no aparece en fuentes públicas: confirmar con el organizador antes de nombrarlo de nuevo.
 
 ## 2026-10-09 15:30 · orquestador (estudio OBS)
-- Hice: OBS 32.2.2 configurado para grabar cámara y pantalla por separado con el plugin Branch Output (ya instalado). Al pulsar "Iniciar grabación" salen 3 archivos en `C:\Users\<user>\Videos`: `CAMARA_*.mp4` (1280x720, máximo de la webcam integrada, NVENC CQP 18), `PANTALLA_*.mp4` (1920x1080, CQP 20) y `AAAA-MM-DD hh-mm-ss.mp4` (respaldo compuesto con la cámara en la esquina; pista 1 micrófono, pista 2 audio del escritorio). Los tres llevan la voz del micrófono: el editor los sincroniza por audio. Todo a 30 fps, Hybrid MP4 (no se corrompe si se cae). Supresión de ruido RNNoise en el micrófono. Websocket encendido en el puerto 4455 (con contraseña). Prueba de 12 s: 0 fotogramas perdidos por el codificador, 16/1333 de render (1,2 %), CPU 4 %. Prueba borrada.
+- Hice: OBS 32.2.2 configurado para grabar cámara y pantalla por separado con el plugin Branch Output (ya instalado). Al pulsar "Iniciar grabación" salen 3 archivos en `C:\Users\you\Videos`: `CAMARA_*.mp4` (1280x720, máximo de la webcam integrada, NVENC CQP 18), `PANTALLA_*.mp4` (1920x1080, CQP 20) y `AAAA-MM-DD hh-mm-ss.mp4` (respaldo compuesto con la cámara en la esquina; pista 1 micrófono, pista 2 audio del escritorio). Los tres llevan la voz del micrófono: el editor los sincroniza por audio. Todo a 30 fps, Hybrid MP4 (no se corrompe si se cae). Supresión de ruido RNNoise en el micrófono. Websocket encendido en el puerto 4455 (con contraseña). Prueba de 12 s: 0 fotogramas perdidos por el codificador, 16/1333 de render (1,2 %), CPU 4 %. Prueba borrada.
 - Archivos tocados: `%APPDATA%\obs-studio\basic\` (perfil y escena) y `plugin_config\obs-websocket\config.json`. Copia previa en `%APPDATA%\obs-studio-backup-20261009-152354`.
 - Pendiente: probar con voz real (no se midió el nivel hablando); la skill `monoga-editor` aún no tiene un flujo para YouTube horizontal (pantalla + cámara).
 - Problemas: la webcam da 720p; recortada a 9:16 queda en 405x720 (se verá blanda en TikTok). Solo quedan 24,5 GB libres en C: (unas 3 h de grabación).
@@ -135,7 +135,7 @@ Formato:
 - Hice: `GEMINI.md` y `AGENTS.md` reescritos como espejo de `CLAUDE.md` con ODD y el flujo serie→guionista→adria→editor; las 4 skills copiadas a `.gemini/skills/` y `.agents/skills/` (94 archivos c/u, sin `__pycache__`); `.atl/skill-registry.md` refrescado. Paquete en `Dia-08/proyecto/contadores_ia/` (brief, caption, `plan/`: guion, higgsfield, edición HyperFrames, sfx, portada, revisión de hechos).
 - Corregí el plan anterior (`odd/plans/campana-contadores-01.md`): quitó cifras no medidas, bancos/Siigo/Alegra y el guion hablado completo.
 - Archivos tocados: esta carpeta y este relevo. No toqué estado.md ni hechos.md (propuestas en `plan/revision_hechos.md`).
-- Problemas: los 3 sistemas no están en `hechos.md`; el logo de Tiendas D1 es marca ajena; una colaboradora en cámara choca con la regla 3; falta el crudo, el hook de Higgsfield y la portada.
+- Problemas: los 3 sistemas no están en `hechos.md`; el logo de Tiendas D1 es marca ajena; Carolina en cámara choca con la regla 3; falta el crudo, el hook de Higgsfield y la portada.
 
 ## 2026-10-17 · worker-redes (Claude Opus) · Canal 17h, corte 2 full motion
 - Hice: `canal/2026-10-17_17h/entregables/corte2_fullmotion_9x16.mp4` (41,95 s, 9:16, cero cuadros de cámara, voz del crudo + inserts de pantalla + motion HyperFrames). I -17,6 LUFS, música 7 dB bajo la voz, 97 SFX a -15 dB, 2 invert flash.

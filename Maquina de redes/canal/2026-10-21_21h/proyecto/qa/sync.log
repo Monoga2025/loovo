@@ -1,0 +1,14 @@
+desfase audio/video en la fuente: +0.0675s (debe compensarse en build_cut)
+clip   audio vs diseño   labios vs voz
+t01    -0.000s          +0.005s 
+t02    -0.000s          +0.005s 
+t03    +0.000s          +0.005s 
+t04    -0.000s          +0.005s 
+t05    -0.000s          +0.005s 
+t06    -0.000s          +0.005s 
+t07    -0.000s          +0.005s 
+t08    -0.000s          +0.005s 
+t09    -0.000s          +0.005s 
+t10    -0.000s          +0.005s 
+RESULTADO: OK
+DONE

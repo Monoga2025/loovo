@@ -4,7 +4,7 @@ Objetivo: editar el crudo nuevo con los mismos métodos del Día 1. Entrega en `
 
 ## Specs
 
-S1. Pedido de Monoga, textual: «mira editaras este video como si fuera el video del dia 1 con los mimos metodos y todo creo que hay una skill sobr eeso metodica». Confirmación: «Perfecto intestemoslo asi» (skill `monoga-editor` con los números de `receta-dia1`). Crudo: `C:\Users\<user>\Downloads\VID20261021162958.mp4` (no se modifica ni se mueve).
+S1. Pedido de Monoga, textual: «mira editaras este video como si fuera el video del dia 1 con los mimos metodos y todo creo que hay una skill sobr eeso metodica». Confirmación: «Perfecto intestemoslo asi» (skill `monoga-editor` con los números de `receta-dia1`). Crudo: `C:\Users\you\Downloads\VID20261021162958.mp4` (no se modifica ni se mueve).
 
 S2. Método: pipeline de `monoga-editor`. Los números de `receta-dia1` valen, **excepto el zoom alterno 1,0/1,12, que Monoga rechazó**. El zoom real del Día 1 está en `Dia-01/proyecto/motion/index.html:75-122` (`land`, `push`, `punch`, `whip`, `shake` con GSAP). Prohibido: `monoga-videos`, `monoga-adria`, skills o repos externos.
 

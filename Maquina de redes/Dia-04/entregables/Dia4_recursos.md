@@ -9,7 +9,7 @@
 | SFX invert flash | Mixkit "Cinematic sci fi glitch" (id 1022), recortado a 0,30 s | Mixkit | Mixkit Free License (comercial, sin atribución) — página individual NO verificada |
 | Resto de SFX | sintetizados por código (`scripts/sfx.py`) | propio | libre |
 | Iconos (motion graphic) | Phosphor Icons (film-slate, robot, cpu, chart-line-up, chats, database) | Phosphor | MIT |
-| Fuentes | Montserrat, Playfair Display (@creator) | — | OFL 1.1 |
+| Fuentes | Montserrat, Playfair Display (@fontsource) | — | OFL 1.1 |
 | Citas | *Esencialismo*, Greg McKeown — 2 frases cortas leídas por él (cita breve con atribución en pantalla) | — | derecho de cita |
 | LUT | `adria_look_75.cube` (propia, ajustada a la referencia) | propio | — |
 

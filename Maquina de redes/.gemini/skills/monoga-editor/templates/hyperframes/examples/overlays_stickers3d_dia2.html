@@ -1,0 +1,82 @@
+<template id="overlays-template">
+  <!--
+    Stickers 3D (Fluent Emoji 3D, MIT) sobre la cabeza hablando, en los costados de la cara.
+    Entrada con giro 3D + pop, flotación suave y salida con giro. Un sticker por idea.
+  -->
+  <div data-composition-id="overlays" data-width="1080" data-height="1920" data-duration="63.1">
+    <div id="stk-layer"></div>
+
+    <style>
+      [data-composition-id="overlays"] { background: transparent; overflow: hidden; }
+      #stk-layer { position: absolute; inset: 0; }
+      .stk { position: absolute; visibility: hidden; filter: drop-shadow(0 20px 22px rgba(0,0,0,.5)) drop-shadow(0 0 26px rgba(227,18,11,.28)); }
+      .stk img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      // side: L (x 70) o R (x 770). y = arriba del sticker. size en px. e = emoji (assets/emoji/<e>.png).
+      // Tiempos en la línea del corte. Fuera de ojos y boca; la cara ocupa x 380–780 (hasta 330–850 con el zoom).
+      const STK = [
+        { t0: 1.30, t1: 2.35, e: "1f4b8", side: "L", y: 440, s: 210, r: 12 },   // no le pago
+        { t0: 2.42, t1: 3.06, e: "23f0",  side: "L", y: 560, s: 210, r: -10 },  // las 3 de la mañana
+        { t0: 5.80, t1: 6.60, e: "1f3af", side: "L", y: 480, s: 210, r: 8 },    // hasta llegar al evento
+        { t0: 7.76, t1: 8.95, e: "1f916", side: "L", y: 360, s: 210, r: -8 },   // agencia de inteligencia artificial
+        { t0: 8.30, t1: 9.40, e: "1f9e0", side: "L", y: 640, s: 210, r: 10 },   // inteligencia artificial
+        { t0: 17.20, t1: 18.20, e: "1f3ac", side: "L", y: 500, s: 210, r: -8 }, // con este estilo
+        { t0: 18.40, t1: 19.60, e: "1f525", side: "L", y: 420, s: 210, r: -8 }, // lo exploto
+        { t0: 19.45, t1: 20.60, e: "1f319", side: "L", y: 640, s: 210, r: 12 }, // toda la noche
+        { t0: 21.20, t1: 21.95, e: "1f634", side: "L", y: 520, s: 210, r: -8 }, // durmiendo
+        { t0: 22.80, t1: 23.60, e: "1f4a5", side: "L", y: 420, s: 210, r: 10 }, // sobreexplotó
+        { t0: 24.30, t1: 25.40, e: "1f4bc", side: "L", y: 560, s: 210, r: -6 }, // trabaja en el día
+        { t0: 26.00, t1: 26.50, e: "1f4bb", side: "L", y: 480, s: 210, r: 8 },  // mi CRM
+        { t0: 28.20, t1: 29.30, e: "1f4bb", side: "L", y: 420, s: 210, r: -8 }, // CRM real
+        { t0: 29.25, t1: 30.95, e: "1f9e0", side: "L", y: 640, s: 210, r: 10 }, // inteligencia artificial integrada
+        { t0: 31.75, t1: 33.20, e: "1f4b8", side: "L", y: 520, s: 210, r: -10 },// CRMs que están vendiendo con IA
+        { t0: 37.60, t1: 38.60, e: "1f50c", side: "L", y: 480, s: 210, r: -12 },// este CRM
+        { t0: 46.95, t1: 48.40, e: "1f916", side: "L", y: 520, s: 210, r: -8 }, // nacido una inteligencia artificial
+        { t0: 49.70, t1: 50.45, e: "1f4bb", side: "L", y: 420, s: 210, r: 8 },  // con un CRM
+        { t0: 51.50, t1: 52.60, e: "1f4a1", side: "L", y: 540, s: 210, r: -6 }, // es bueno con IA
+        { t0: 57.90, t1: 58.75, e: "1f4ac", side: "L", y: 480, s: 210, r: 8 },  // quiero que me digas
+        { t0: 59.80, t1: 60.70, e: "26d3",  side: "L", y: 380, s: 210, r: -8 }, // esclavizar
+        { t0: 60.10, t1: 61.20, e: "1f608", side: "L", y: 640, s: 210, r: 10 }, // esclavizar
+        { t0: 61.30, t1: 62.30, e: "1f319", side: "L", y: 520, s: 210, r: -10 },// toda la noche
+      ];
+
+      const layer = document.getElementById("stk-layer");
+      STK.forEach((k, i) => {
+        const d = document.createElement("div");
+        d.className = "stk"; d.id = "stk" + i;
+        d.style.width = d.style.height = k.s + "px";
+        d.style.left = (k.side === "L" ? 62 : 960 - k.s - 10) + "px";
+        d.style.top = k.y + "px";
+        const im = document.createElement("img");
+        im.src = `assets/emoji/${k.e}.png`; im.id = "stkimg" + i;
+        d.appendChild(im);
+        layer.appendChild(d);
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      STK.forEach((k, i) => {
+        const w = "#stk" + i, m = "#stkimg" + i;
+        const dir = k.side === "L" ? -1 : 1;
+        tl.set(w, { visibility: "visible" }, k.t0);
+        tl.fromTo(w, { scale: 0, y: 40, opacity: 0, rotation: k.r * 3 },
+          { scale: 1, y: 0, opacity: 1, rotation: k.r, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, k.t0);
+        tl.fromTo(m, { rotationY: dir * -170, transformPerspective: 700 },
+          { rotationY: 0, transformPerspective: 700, duration: 0.6, ease: "power3.out", immediateRender: false }, k.t0);
+        const idle0 = k.t0 + 0.55, idle1 = k.t1 - 0.25;
+        if (idle1 > idle0) {
+          tl.to(w, { y: -16, rotation: k.r - 5, duration: Math.max(idle1 - idle0, 0.2), ease: "sine.inOut" }, idle0);
+          tl.to(m, { rotationY: dir * 18, transformPerspective: 700, duration: Math.max(idle1 - idle0, 0.2), ease: "sine.inOut" }, idle0);
+        }
+        tl.to(w, { scale: 0, opacity: 0, duration: 0.22, ease: "power2.in" }, k.t1 - 0.22);
+        tl.to(m, { rotationY: dir * 140, transformPerspective: 700, duration: 0.22, ease: "power2.in" }, k.t1 - 0.22);
+        tl.set(w, { visibility: "hidden" }, k.t1);
+      });
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["overlays"] = tl;
+    </script>
+  </div>
+</template>

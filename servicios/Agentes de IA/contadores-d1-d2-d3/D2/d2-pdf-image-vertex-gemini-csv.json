@@ -310,7 +310,7 @@
 "color": 4,
 "width": 248.11715481171547,
 "height": 432.7364016736402,
-"content": "## Get PDF or image\nYou need to create a new folder inside Google Drive for uploading your PDF and images.\n\nOnce you create a folder, you need to add your Google cloud user by going to Share -> Add user. The user email should be like: <service-account>@<project>.iam.gserviceaccount.com"
+"content": "## Get PDF or image\nYou need to create a new folder inside Google Drive for uploading your PDF and images.\n\nOnce you create a folder, you need to add your Google cloud user by going to Share -> Add user. The user email should be like: contacto003@example.com"
 },
 "typeVersion": 1
 },

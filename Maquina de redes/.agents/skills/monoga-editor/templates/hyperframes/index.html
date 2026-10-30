@@ -1,0 +1,87 @@
+<!doctype html>
+<!--
+  Plantilla raíz (Modo C: footage + motion). Orden de capas, de atrás a delante:
+    0 #base       footage con el color ya horneado (ffmpeg), con zoom
+    1 behind      palabras gigantes DETRÁS del hablante
+    2 #person     silueta con alfa (solo si la máquina aguanta; si no, plan B de 3 renders)
+    3 overlays    stickers/chips/trazos DELANTE del hablante
+    4 graphics    subtítulos cinéticos + escenas a pantalla completa
+    5 #pip        recuadro del hablante durante escenas FS largas
+  Los marcadores LAYER los usa scripts/make_variants.py para el plan B.
+  Reemplaza __DUR__ por la duración del corte (ffprobe) y los tiempos de zoom.
+-->
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Short</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=block" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #070707; font-family: "Inter", sans-serif; }
+      /* transform-origin a la altura de la cara (medir en un fotograma) */
+      #base, #person { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 42%; }
+      #base { z-index: 0; }
+      #person { z-index: 2; }
+      #pip {
+        position: absolute; left: 75px; top: 1170px; width: 240px; height: 240px; border-radius: 50%;
+        object-fit: cover; object-position: 50% 32%; border: 7px solid #fff;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35); z-index: 5; opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1080" data-height="1920">
+      <!-- Footage sin audio: la mezcla (voz + música + SFX) se hace con ffmpeg -->
+      <video id="base" class="clip" src="assets/base_graded.mp4" data-start="0" data-duration="__DUR__"
+             data-track-index="0" muted playsinline></video>
+      <!-- LAYER:behind -->
+      <div id="behind" data-composition-id="behind" data-composition-src="compositions/behind.html"
+           data-start="0" data-duration="__DUR__" data-track-index="1" data-width="1080" data-height="1920"
+           style="position: absolute; inset: 0; z-index: 1"></div>
+      <!-- /LAYER:behind -->
+      <!-- LAYER:person -->
+      <video id="person" class="clip" src="assets/person.webm" data-start="0" data-duration="__DUR__"
+             data-track-index="2" muted playsinline></video>
+      <!-- /LAYER:person -->
+      <!-- LAYER:front -->
+      <div id="overlays" data-composition-id="overlays" data-composition-src="compositions/overlays.html"
+           data-start="0" data-duration="__DUR__" data-track-index="3" data-width="1080" data-height="1920"
+           style="position: absolute; inset: 0; z-index: 3"></div>
+      <div id="graphics" data-composition-id="graphics" data-composition-src="compositions/graphics.html"
+           data-start="0" data-duration="__DUR__" data-track-index="4" data-width="1080" data-height="1920"
+           style="position: absolute; inset: 0; z-index: 4"></div>
+      <video id="pip" class="clip" src="assets/pip_graded.mp4" data-start="0" data-duration="__DUR__"
+             data-track-index="5" muted playsinline></video>
+      <!-- /LAYER:front -->
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // Zoom de tendencia: push lento continuo + punch-in expo en palabras clave
+      // + zoom látigo con desenfoque en transiciones + temblor en impactos.
+      // Siempre ambos: fondo y silueta, para que el recorte coincida.
+      const V = "#base, #person";
+      const land = (t, from) => tl.fromTo(V, { scale: from, filter: "blur(10px)" },
+        { scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, t);
+      const push = (t0, t1, to) => tl.to(V, { scale: to, duration: t1 - t0, ease: "none" }, t0);
+      const punch = (t, to) => tl.to(V, { scale: to, duration: 0.38, ease: "expo.out" }, t);
+      const whip = (t) => tl.to(V, { scale: "+=0.55", filter: "blur(16px)", duration: 0.22, ease: "power3.in" }, t);
+      const shake = (t, a) => [a, -a * 0.8, a * 0.6, -a * 0.4, a * 0.2, 0]
+        .forEach((x, i) => tl.to(V, { x, duration: 0.04, ease: "none" }, t + i * 0.04));
+      // Estados iniciales con gsap.set (un tl.set en t=0 NO pinta el fotograma 0)
+      gsap.set(V, { scale: 1, x: 0, filter: "blur(0px)" });
+      gsap.set("#pip", { opacity: 0, scale: 0 });
+
+      // EJEMPLO (borrar y escribir desde plan/storyboard.md + build/words_out.json):
+      // push(0, 3.8, 1.07); punch(4.7, 1.17); shake(5.9, 10); whip(8.0); land(10.2, 1.3);
+      // tl.fromTo("#pip", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.8)" }, 15.1);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

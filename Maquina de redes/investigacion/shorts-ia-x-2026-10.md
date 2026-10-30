@@ -17,13 +17,13 @@ Leyenda: **[V]** verificado con fuente de plataforma o prensa · **[SP]** afirma
 |---|---|---|---|
 | 1 | **Diseñar cada video para ser enviado por DM** ("envíaselo a tu socio/contador"). Mosseri (Instagram) señala "sends per reach" como señal clave, sobre todo para llegar a no seguidores. | Mosseri, enero 2025, vía Search Engine Journal y onlinemarketing.de | [V] señal; [SP] el "3–5x más peso que un like" que repiten blogs |
 | 2 | **Usar Trial Reels en Instagram** para probar ganchos con no seguidores antes de mostrarlos a la base. | onlinemarketing.de (cobertura de Mosseri) | [V] la función existe y se muestra primero a no seguidores |
-| 3 | **Sacar cortes de un video largo** (1 grabación → muchos clips) en lugar de grabar cada short aparte. | @creator, 2026-09-01, https://x.com/liambraus/status/2094863190442254816 ; @DesobedienteD, 2026-05-06, https://x.com/DesobedienteD/status/2051816460104675684 | [SP] cifras ("millones de views", "miles de euros"); el método es estándar |
-| 4 | **Al cortar con IA, no pedir "los mejores momentos"**: el modelo corta el razonamiento a la mitad; hay que pedir clips que se entiendan solos (con planteamiento y cierre). | @creator, 2026-10-18, https://x.com/condzxyz/status/2111636638866837688 | [I] razonable; no medido |
+| 3 | **Sacar cortes de un video largo** (1 grabación → muchos clips) en lugar de grabar cada short aparte. | @liambraus, 2026-09-01, https://x.com/liambraus/status/2094863190442254816 ; @DesobedienteD, 2026-05-06, https://x.com/DesobedienteD/status/2051816460104675684 | [SP] cifras ("millones de views", "miles de euros"); el método es estándar |
+| 4 | **Al cortar con IA, no pedir "los mejores momentos"**: el modelo corta el razonamiento a la mitad; hay que pedir clips que se entiendan solos (con planteamiento y cierre). | @condzxyz, 2026-10-18, https://x.com/condzxyz/status/2111636638866837688 | [I] razonable; no medido |
 | 5 | **Partir de un formato que ya funciona** (transcribir un video viral del nicho → reescribir con IA → producir). Para Loovo: modelar estructura, no copiar contenido. | @BIGMayrr, 2026-09-22, https://x.com/BIGMayrr/status/2102194296984334432 | [SP] "$69k/mes" sin prueba |
-| 6 | **Gancho de "alerta + historia de un tercero + pasos numerados con flechas"** ("Esto es una locura… un X logró Y… así funciona: →"). Es el patrón dominante de la muestra. | @creator 2026-10-19 (L1479, V190975), @creator, @He1s_Sammy, etc. | [V] que se usa y tiene alcance en X; [I] en Loovo sólo en versión honesta (caso real) |
+| 6 | **Gancho de "alerta + historia de un tercero + pasos numerados con flechas"** ("Esto es una locura… un X logró Y… así funciona: →"). Es el patrón dominante de la muestra. | @hurricodes 2026-10-19 (L1479, V190975), @eng_khairallah1, @He1s_Sammy, etc. | [V] que se usa y tiene alcance en X; [I] en Loovo sólo en versión honesta (caso real) |
 | 7 | **Optimizar para retención real en YouTube Shorts**, no para el contador: desde el 31-mar-2025 cuenta una vista con cada reproducción o repetición; la monetización sigue usando "engaged views". | TechCrunch 2025-03-26 | [V] |
 | 8 | **Motion graphics generados con IA** (tipografía dinámica, datos animados) para subir valor de producción sin editor. | @MindBodyIsLife, 2026-02-10, https://x.com/MindBodyIsLife/status/2021186923893531004 (promo de Pollo Motion) | [SP] promoción comercial |
-| 9 | **Volumen con plantilla** (300+ anuncios/día, agentes que producen en lote). Aplica a TikTok Shop, no a marca personal B2B. | @creator, 2026-01-16, https://x.com/maverickecom/status/2012213182811508824 | [SP] |
+| 9 | **Volumen con plantilla** (300+ anuncios/día, agentes que producen en lote). Aplica a TikTok Shop, no a marca personal B2B. | @maverickecom, 2026-01-16, https://x.com/maverickecom/status/2012213182811508824 | [SP] |
 | 10 | **Personaje/avatar IA consistente** para cuentas sin cara. | @AiwithYasir, 2026-05-22, https://x.com/AiwithYasir/status/2057880347086594178 ; @0xAIlabs, 2026-07-22 | [SP]; ver (e): no recomendable para Loovo |
 
 Orden de impacto: [I] criterio propio (señal verificada > método replicable > hype).
@@ -32,16 +32,16 @@ Orden de impacto: [I] criterio propio (señal verificada > método replicable > 
 
 | Herramienta | Para qué | Mencionada por | Nota |
 |---|---|---|---|
-| MoneyPrinterTurbo (GitHub harry0703) | Tema → guion → short HD automático (faceless) | @He1s_Sammy 2026-10-15, @creator 2026-09-29 | [V] licencia MIT, ~112–115k estrellas (ossinsight, ago-2026). Calidad genérica |
-| Veo 3 (Google) | Generar escenas de video | @creator | Video generativo, B-roll |
-| Nano Banana (Gemini imagen) | Imágenes / fotogramas de producto | @creator, @IA_Quijote | Portadas, B-roll estático |
+| MoneyPrinterTurbo (GitHub harry0703) | Tema → guion → short HD automático (faceless) | @He1s_Sammy 2026-10-15, @thegreatest_sv 2026-09-29 | [V] licencia MIT, ~112–115k estrellas (ossinsight, ago-2026). Calidad genérica |
+| Veo 3 (Google) | Generar escenas de video | @maverickecom | Video generativo, B-roll |
+| Nano Banana (Gemini imagen) | Imágenes / fotogramas de producto | @maverickecom, @IA_Quijote | Portadas, B-roll estático |
 | Gemini 3.5 Flash | Guion / iteración rápida | @AiwithYasir | [SP] |
 | APOB AI | Avatar/influencer IA consistente | @AiwithYasir | Promo |
-| Manus | Agente que orquesta producción | @creator | [SP] |
-| Fastmoss | Datos de productos virales en TikTok Shop | @creator | No aplica a Loovo |
+| Manus | Agente que orquesta producción | @maverickecom | [SP] |
+| Fastmoss | Datos de productos virales en TikTok Shop | @maverickecom | No aplica a Loovo |
 | n8n | Flujo idea → publicación | @JulianGoldieSEO 2025-08-24 | Loovo ya usa n8n |
 | Pollo Motion (Pollo AI) | Motion graphics desde texto | @MindBodyIsLife | Promo, no probado |
-| Claude / ChatGPT / Gemini | Elegir cortes desde transcripción, guiones | @creator, @RegalosDigitals | |
+| Claude / ChatGPT / Gemini | Elegir cortes desde transcripción, guiones | @condzxyz, @RegalosDigitals | |
 | "Swaggi AI" y similares | Repost automático de canales ajenos a TikTok/IG/Shorts | @BIGMayrr y clones | **Riesgo**: reutilizar contenido ajeno viola políticas de originalidad; no usar |
 
 No apareció en la muestra (se buscó, la corrida falló): HeyGen, Submagic, Captions. Sin datos de X sobre ellos en este informe.

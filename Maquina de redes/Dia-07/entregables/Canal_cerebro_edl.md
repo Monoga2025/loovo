@@ -1,6 +1,6 @@
 # Canal · Le hice un cerebro a mi empresa · EDL
 
-Crudo (solo lectura, no se movió): C:/Users/Monoga/Desktop/VID_20261013_110529.mp4 (celular, rotación -90 → 1080x1920, 30 fps).
+Crudo (solo lectura, no se movió): C:/Users/you/Desktop/VID_20261013_110529.mp4 (celular, rotación -90 → 1080x1920, 30 fps).
 Línea final 52.43 s, 9:16 1080x1920, 30 fps, H.264 CRF 18 + AAC 320k 48 kHz.
 Audio: solo el del celular (ese día no hubo mic del PC): HPF 70 Hz + afftdn 6 dB + compresor 2:1, fundidos 12 ms; voz a -17,6 LUFS; música bajo la voz con ducking.
 

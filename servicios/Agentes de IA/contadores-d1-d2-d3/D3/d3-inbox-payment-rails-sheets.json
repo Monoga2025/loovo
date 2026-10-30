@@ -39,7 +39,7 @@
         "operation": "getAll",
         "simple": true,
         "filters": {
-          "q": "={{ 'after:' + $('Set window').first().json.WINDOW_AFTER + ' (from:paypal.com OR from:paypal.nl OR from:service@paypal.nl) (betaling OR receipt OR ontvangstbewijs OR \"automatische betaling\" OR payment)' }}"
+          "q": "={{ 'after:' + $('Set window').first().json.WINDOW_AFTER + ' (from:paypal.com OR from:paypal.nl OR from:contacto004@example.com) (betaling OR receipt OR ontvangstbewijs OR \"automatische betaling\" OR payment)' }}"
         },
         "options": {
           "downloadAttachments": false,

@@ -3,7 +3,7 @@ Audio: SOLO el celular (hoy no hay mic del PC). Tiempos en reloj del crudo (regi
 Bordes ajustados a la envolvente (scripts/env.py) y verificados transcribiendo cada pieza (scripts/chk.py).
 gap = silencio antes del tramo (s). cam = True si la persona se ve (mira a cámara)."""
 import json
-SRC = "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4"; R = 1095.0
+SRC = "C:/Users/you/Desktop/VID_20261013_110529.mp4"; R = 1095.0
 S = [  # id, t0, t1 (región), gap, cam, bloque, texto
  ("A",  61.18, 64.50, 0.00, False, "1 gancho",   "Normalmente lo que me pasa es que yo construyo un montón de cosas, pero no vendo nada."),
  ("B1",  9.64, 10.88, 0.55, True,  "2 contexto", "Mientras estoy en la universidad,"),

@@ -1,6 +1,6 @@
 # Maquina de redes · índice
 
-Contenido orgánico de Loovo: serie "Día X de 42" (TikTok/IG, Día 1 = 7 oct, hasta el Luque Business Summit del 17-19 nov 2026) y videos de nicho con CTA por comentario (`D1`/`D2`/`D3`). El usuario es el dueño y quien sale en cámara; una colaboradora aparece cuando él lo indica. Estado de campañas: `../SHARED_STATE.md`. Reglas generales: `../AGENTS.md`.
+Contenido orgánico de Loovo: serie "Día X de 42" (TikTok/IG, Día 1 = 7 oct, hasta el Luque Business Summit del 17-19 nov 2026) y videos de nicho con CTA por comentario (`D1`/`D2`/`D3`). El usuario es el dueño y quien sale en cámara; Carolina aparece cuando él lo indica. Estado de campañas: `../SHARED_STATE.md`. Reglas generales: `../AGENTS.md`.
 
 ## Trabaja según la tarea (lee SOLO el archivo de tu área)
 | Tarea | Área | Lee | Agente Pi (solo con razón nombrada) |
@@ -21,7 +21,7 @@ Si una tarea mezcla las dos, se separan: primero el guion, luego la edición. So
 
 ## Reglas comunes (valen para las dos áreas)
 1. Solo se afirma lo ✅ de `00_Serie/hechos.md`; 🟡 = "estamos probando"; ⏳ = "próximamente". Un sistema que no existe nunca se muestra como demo real.
-2. Solo la voz del usuario (o de una colaboradora, si él lo indica) en el video; se mide, no se adivina. Voces de personajes IA = ficción rotulada.
+2. Solo la voz del usuario (o de Carolina, si él lo indica) en el video; se mide, no se adivina. Voces de personajes IA = ficción rotulada.
 3. Sin datos de clientes reales en pantalla; CRM solo en modo demo. No modifiques el repo `monoga-os`.
 4. Nada de claves en chat ni archivos (`OPENAI_API_KEY` solo en el entorno). Si el usuario pega una, que la revoque.
 5. No borres ni muevas archivos del usuario sin que lo pida.

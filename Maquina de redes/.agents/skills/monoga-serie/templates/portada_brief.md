@@ -1,0 +1,30 @@
+Actua como un disenador grafico senior especializado en portadas (covers) de TikTok para marcas personales de emprendedores. Entregame la portada FINAL, lista para publicar, con todo el texto ya incluido y perfecto. Usa tu herramienta de generacion de imagenes; no escribas bytes ni base64 a mano.
+
+CONTEXTO
+- Serie de videos "Dia X de 42" de la empresa Loovo. Este es el Dia {{DIA}}.
+- {{CONTEXTO}}
+- Audiencia: empresarios y emprendedores de Latinoamerica.
+- Objetivo: que alguien que ve la cuadricula del perfil pare y entienda en 1 segundo de que va, y quiera ver el video.
+
+MATERIAL ADJUNTO
+- referencia.png: foto real del creador. Conserva su cara, peinado, edad y rasgos EXACTAMENTE. No lo embellezcas ni cambies su identidad.
+
+TEXTO EXACTO (en espanol, con tildes; revisalo letra por letra, sin errores ni letras inventadas)
+{{TEXTOS}}
+No agregues ningun otro texto, numero, logo ni marca de agua.
+
+DIRECCION DE DISENO: MINIMALISTA
+- Mucho espacio negativo. Un solo fondo liso (negro puro o casi negro), sin retícula, sin aros de luz, sin resplandores de neon, sin particulas, sin degradados llamativos.
+- Paleta: negro, blanco y UN solo acento rojo #E3120B, usado en un detalle pequeno (un punto, una linea fina o una palabra). Nada mas.
+- Tipografia: sans-serif limpia y pesada en mayusculas para el numero o titular, y una linea secundaria mucho mas pequena y ligera. Sin sombras ni contornos exagerados.
+- Maximo 3 elementos de texto. El titular se lee incluso en una miniatura de 150 px de ancho.
+- El creador se ve limpio y natural, bien iluminado, recortado del fondo original, mirando a camara, de pecho hacia arriba. El texto NUNCA tapa la cara, los ojos ni la boca.
+- Sensacion: premium, sobria, marca personal seria. Sin emojis ni adornos.
+
+FORMATO
+- Formato vertical 3:4, {{ANCHO}}x{{ALTO}} px. Es el recorte de la cuadricula del perfil de TikTok, asi que todo el contenido importante debe quedar dentro, con margenes de al menos 60 px.
+
+ENTREGA
+- Genera {{VARIANTES}} variantes con distinta composicion (por ejemplo: A texto arriba y cara abajo; B cara a un lado y texto al otro).
+- Revisa cada imagen con tu herramienta de vista: si hay una letra mal escrita, texto cortado o cara alterada, regenera esa variante.
+- Guardalas en la carpeta de trabajo actual como {{NOMBRES}}. Si no puedes guardarlas ahi, dime la ruta exacta de las originales. Reporta que variante recomiendas y por que, en dos lineas.

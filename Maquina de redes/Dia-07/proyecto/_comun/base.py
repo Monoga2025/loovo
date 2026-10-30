@@ -6,7 +6,7 @@ movimiento por submuestreo), look 'cam' (LUT Adrià 75 %) o 'scr' (pantalla: ver
 Desenfoques de privacidad en plan/edl.json -> 'blur': [{t0, t1 (s del crudo), r: [x0,y0,x1,y1] en 1080x1920 del crudo}]
 (pixelado 1/28 + gauss 18 px, aplicado ANTES del reencuadre). Ejecutar en la carpeta del proyecto."""
 import json, subprocess, numpy as np, cv2, sys
-SRC = "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4"; LUT = "assets_src/adria_look_75.cube"
+SRC = "C:/Users/you/Desktop/VID_20261013_110529.mp4"; LUT = "assets_src/adria_look_75.cube"
 W, H, FPS = 1080, 1920, 30
 E = json.load(open("plan/edl.json", encoding="utf-8")); segs = [s for s in E["segs"] if s.get("view")]
 BL = E.get("blur", [])

@@ -1,6 +1,6 @@
 """Centro de la cara (Haar, mediana de 7 cuadros) en un rango del crudo. Uso: faces.py a-b [a-b ...]"""
 import sys, subprocess, numpy as np, cv2
-SRC = "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4"
+SRC = "C:/Users/you/Desktop/VID_20261013_110529.mp4"
 cc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 for r in sys.argv[1:]:
     a, b = map(float, r.split("-")); pts = []

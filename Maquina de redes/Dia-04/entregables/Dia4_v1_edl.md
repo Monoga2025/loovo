@@ -46,7 +46,7 @@ Duración total: 90.75 s a 30 fps.
 | Recurso | Uso | Licencia |
 |---|---|---|
 | Fotos de Cristiano Ronaldo (f1–f5, box.jpg) de entreno01/02 | bloque entreno02 (9,4–15,8 s) | f1/box: Anish Morarji, f2: Austin Osuide (CC BY 2.0); f3/f4: YantsImages, f5: Chensiyuan (CC BY-SA 4.0), vía Wikimedia Commons. **Atribución obligatoria en el texto del post.** |
-| Iconos Phosphor (fill): megaphone, security-camera, device-mobile, pen-nib, image, currency-btc, crown, trophy, etc. | fichas, baldosas, red de habilidades | MIT (phosphoricons.com; @creator-icons/core 2.1.1 vía unpkg) |
+| Iconos Phosphor (fill): megaphone, security-camera, device-mobile, pen-nib, image, currency-btc, crown, trophy, etc. | fichas, baldosas, red de habilidades | MIT (phosphoricons.com; @phosphor-icons/core 2.1.1 vía unpkg) |
 | Glitch Mixkit 1022 "Cinematic sci fi glitch" (recortado 0,30 s) | 2 invert flash | Mixkit Sound Effects Free License (sin atribución). Confirmar en el listado antes de publicar. |
 | SFX sintéticos (whoosh, hit, pop, click, swish, riser, scramble, ding, glitch) | todo el resto | propios, generados por código (`scripts/make_sfx_lib.py`, `scripts/sfx.py`) |
 | Montserrat 500/600, Playfair Display 400/700 cursiva | tipografía | SIL OFL |

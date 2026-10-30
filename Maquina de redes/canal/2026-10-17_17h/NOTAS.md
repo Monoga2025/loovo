@@ -1,6 +1,6 @@
 # Canal 2026-10-17 17h (fuera de la serie "Día X de 42")
 
-Crudo: copias en `crudo/` (originales intactos en `C:\Users\<user>\Videos\17-10 17h\`). CAMARA 1280x720 y PANTALLA 1920x1080, 149,6 s, misma voz (micrófono del PC) en ambos.
+Crudo: copias en `crudo/` (originales intactos en `C:\Users\you\Videos\17-10 17h\`). CAMARA 1280x720 y PANTALLA 1920x1080, 149,6 s, misma voz (micrófono del PC) en ambos.
 
 ## Contenido (transcripción Whisper medium, 384 palabras, ok)
 Explica por qué pasó de n8n (flujo que inicia y termina, sin loop) a Claude Code con un agente orquestador y subagentes; el problema de organizar carpetas/terminales; la solución (un agente principal que recibe respuestas de texto de los subagentes sin revisar sus archivos); cierra con Gentle AI, Engram y ODD. En pantalla: diagrama n8n (0-45 s), explorador de archivos, terminales de Claude Code.

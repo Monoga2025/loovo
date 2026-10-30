@@ -4,7 +4,7 @@ Reglas aplicadas: literal solo gancho y cierre (≈35 % del texto); resto en pun
 
 ## Quién habla
 - Gancho 0–4 s: **reportera generada con IA** (personaje de ficción, rotulada "SIMULACIÓN IA"). No es una persona real.
-- 4–45 s: **el usuario**. una colaboradora solo si el usuario lo decide: la regla 3 de `CLAUDE.md` pide solo la voz del usuario, así que por defecto graba él.
+- 4–45 s: **el usuario**. Carolina solo si el usuario lo decide: la regla 3 de `CLAUDE.md` pide solo la voz del usuario, así que por defecto graba él.
 
 ## 0–4 s · GANCHO (literal, voz de la reportera)
 > "Última hora: más de treinta mil contadores quedarán desempleados en Colombia en 2030."

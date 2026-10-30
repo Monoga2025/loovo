@@ -17,7 +17,7 @@ Estas son las propuestas de los otros tres equipos y la tuya. Ahora eres crític
 - **Trabajo real que ya hay que hacer:** Probar de punta a punta el agente del CRM con contactos ficticios: consultar información, intentar una acción y verificar qué quedó guardado. Registrar errores y decidir si entra en la oferta o sigue experimental.
 - **Qué se documenta y cómo:** Una prueba y su resultado, incluyendo el fallo si ocurre. Clip de 45–75 segundos para TikTok e Instagram; carné y tablero de errores de La Nómina Viva como rótulos, sin otra voz. **Extra: 2 minutos.**
 - **Gancho ejemplo:** “🟡 Tengo un agente en el CRM, pero todavía no lo he probado de punta a punta.”
-- **Por qué funcionaría:** Mostrar agentes trabajando fue una pista fuerte del scraper: @creator obtuvo 153.100 vistas con 3.677 seguidores. No demuestra causalidad, pero respalda probar este formato.
+- **Por qué funcionaría:** Mostrar agentes trabajando fue una pista fuerte del scraper: @lautaropuebla.ai obtuvo 153.100 vistas con 3.677 seguidores. No demuestra causalidad, pero respalda probar este formato.
 - **Riesgo o dato que falta:** `[DATO]` Fiabilidad, permisos y condiciones de uso del backend experimental: usuario y responsable técnico. Una prueba exitosa no basta para prometer autonomía.
 
 ### B3. DIAN: entra o sale
@@ -41,7 +41,7 @@ Estas son las propuestas de los otros tres equipos y la tuya. Ahora eres crític
 - **Trabajo real que ya hay que hacer:** Calcular implementación, alojamiento, consumo de modelos si aplica, soporte y mantenimiento. Separar cobro inicial, recurrente y costos variables; definir límites antes de fijar el precio.
 - **Qué se documenta y cómo:** La hoja de costos sin información sensible. Short de 45–60 segundos para TikTok e Instagram. Si aún no hay precio aprobado, mostrar qué falta para decidirlo, no una cifra tentativa como tarifa. **Extra: 3 minutos.**
 - **Gancho ejemplo:** “Todavía no tengo precios definidos para los servicios de Loovo.”
-- **Por qué funcionaría:** @creator obtuvo 119.800 vistas con 4.987 seguidores hablando de cuánto cobraba su agencia. Es una pista para mostrar precios **cuando existan**, no para inventarlos.
+- **Por qué funcionaría:** @aldanaajose obtuvo 119.800 vistas con 4.987 seguidores hablando de cuánto cobraba su agencia. Es una pista para mostrar precios **cuando existan**, no para inventarlos.
 - **Riesgo o dato que falta:** `[DATO]` Costos, horas de entrega, margen y tratamiento tributario: usuario, proveedores y contador.
 
 ### B6. Antes de construir más

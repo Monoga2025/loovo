@@ -5,7 +5,7 @@
   {
    "id": "A",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1156.18,
    "t1": 1159.5,
    "r0": 61.18,
@@ -20,7 +20,7 @@
   {
    "id": "B1",
    "cam": true,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1104.64,
    "t1": 1105.88,
    "r0": 9.64,
@@ -35,7 +35,7 @@
   {
    "id": "B2",
    "cam": true,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1106.3,
    "t1": 1111.42,
    "r0": 11.3,
@@ -50,7 +50,7 @@
   {
    "id": "B3a",
    "cam": true,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1113.84,
    "t1": 1114.58,
    "r0": 18.84,
@@ -65,7 +65,7 @@
   {
    "id": "B3b",
    "cam": true,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1115.62,
    "t1": 1117.48,
    "r0": 20.62,
@@ -80,7 +80,7 @@
   {
    "id": "B4",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1119.06,
    "t1": 1121.14,
    "r0": 24.06,
@@ -95,7 +95,7 @@
   {
    "id": "C2a",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1142.88,
    "t1": 1145.66,
    "r0": 47.88,
@@ -110,7 +110,7 @@
   {
    "id": "C2c",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1147.02,
    "t1": 1147.62,
    "r0": 52.02,
@@ -125,7 +125,7 @@
   {
    "id": "C2b",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1148.86,
    "t1": 1150.24,
    "r0": 53.86,
@@ -140,7 +140,7 @@
   {
    "id": "C3a",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1151.22,
    "t1": 1154.04,
    "r0": 56.22,
@@ -155,7 +155,7 @@
   {
    "id": "C3b",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1155.02,
    "t1": 1155.48,
    "r0": 60.02,
@@ -170,7 +170,7 @@
   {
    "id": "D1",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1163.5,
    "t1": 1166.58,
    "r0": 68.5,
@@ -185,7 +185,7 @@
   {
    "id": "D2",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1168.54,
    "t1": 1171.5,
    "r0": 73.54,
@@ -200,7 +200,7 @@
   {
    "id": "D3",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1172.8,
    "t1": 1175.0,
    "r0": 77.8,
@@ -215,7 +215,7 @@
   {
    "id": "D4a",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1178.6,
    "t1": 1179.42,
    "r0": 83.6,
@@ -230,7 +230,7 @@
   {
    "id": "D4b",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1180.8,
    "t1": 1182.36,
    "r0": 85.8,
@@ -245,7 +245,7 @@
   {
    "id": "D5",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1190.36,
    "t1": 1193.4,
    "r0": 95.36,
@@ -260,7 +260,7 @@
   {
    "id": "E1",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1309.58,
    "t1": 1310.86,
    "r0": 214.58,
@@ -275,7 +275,7 @@
   {
    "id": "E2",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1311.06,
    "t1": 1312.44,
    "r0": 216.06,
@@ -290,7 +290,7 @@
   {
    "id": "E3",
    "cam": false,
-   "src": "C:/Users/Monoga/Desktop/VID_20261013_110529.mp4",
+   "src": "C:/Users/you/Desktop/VID_20261013_110529.mp4",
    "t0": 1312.7,
    "t1": 1317.46,
    "r0": 217.7,

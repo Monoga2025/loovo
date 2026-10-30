@@ -1,0 +1,355 @@
+[
+ {
+  "t": 0.0,
+  "type": "riser",
+  "gain": 0.5,
+  "note": "entra el gancho",
+  "t_old": 0.0
+ },
+ {
+  "t": 0.119,
+  "type": "hit",
+  "gain": 1.0,
+  "note": "odómetro 42",
+  "t_old": 0.12
+ },
+ {
+  "t": 0.793,
+  "type": "whoosh",
+  "gain": 0.6,
+  "note": "días",
+  "t_old": 0.8
+ },
+ {
+  "t": 1.537,
+  "type": "whoosh",
+  "gain": 0.8,
+  "note": "iris cierra",
+  "t_old": 1.55
+ },
+ {
+  "t": 2.191,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "EVENTO detrás",
+  "t_old": 2.21
+ },
+ {
+  "t": 3.004,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "2.000",
+  "t_old": 3.03
+ },
+ {
+  "t": 4.69,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "punch ni idea",
+  "t_old": 4.72
+ },
+ {
+  "t": 5.914,
+  "type": "click",
+  "gain": 0.5,
+  "note": "Lobo",
+  "t_old": 5.94
+ },
+ {
+  "t": 7.597,
+  "type": "click",
+  "gain": 0.5,
+  "note": "chip ya existe",
+  "t_old": 7.62
+ },
+ {
+  "t": 8.015,
+  "type": "whoosh",
+  "gain": 0.9,
+  "note": "látigo a S3",
+  "t_old": 8.04
+ },
+ {
+  "t": 8.274,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "punto Lobo hoy",
+  "t_old": 8.3
+ },
+ {
+  "t": 8.294,
+  "type": "swish",
+  "gain": 0.6,
+  "note": "arco se dibuja",
+  "t_old": 8.32
+ },
+ {
+  "t": 9.191,
+  "type": "pop",
+  "gain": 0.7,
+  "note": "bombilla",
+  "t_old": 9.22
+ },
+ {
+  "t": 9.889,
+  "type": "hit",
+  "gain": 0.7,
+  "note": "cabeza",
+  "t_old": 9.92
+ },
+ {
+  "t": 10.158,
+  "type": "whoosh",
+  "gain": 0.7,
+  "note": "vuelta al video",
+  "t_old": 10.19
+ },
+ {
+  "t": 10.598,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "DECIDÍ detrás",
+  "t_old": 10.63
+ },
+ {
+  "t": 11.818,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "punch no se hace",
+  "t_old": 11.85
+ },
+ {
+  "t": 12.328,
+  "type": "whoosh",
+  "gain": 0.9,
+  "note": "látigo a S4",
+  "t_old": 12.36
+ },
+ {
+  "t": 12.589,
+  "type": "click",
+  "gain": 0.5,
+  "note": "retícula",
+  "t_old": 12.62
+ },
+ {
+  "t": 13.009,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "cómo montamos",
+  "t_old": 13.04
+ },
+ {
+  "t": 14.409,
+  "type": "hit",
+  "gain": 0.9,
+  "note": "empresa",
+  "t_old": 14.44
+ },
+ {
+  "t": 14.569,
+  "type": "whoosh",
+  "gain": 0.9,
+  "note": "círculo rojo",
+  "t_old": 14.6
+ },
+ {
+  "t": 14.869,
+  "type": "whoosh",
+  "gain": 0.5,
+  "note": "cae la tarjeta",
+  "t_old": 14.9
+ },
+ {
+  "t": 15.496,
+  "type": "click",
+  "gain": 0.6,
+  "note": "ítem 1",
+  "t_old": 15.53
+ },
+ {
+  "t": 16.941,
+  "type": "click",
+  "gain": 0.6,
+  "note": "ítem 2",
+  "t_old": 16.98
+ },
+ {
+  "t": 17.727,
+  "type": "click",
+  "gain": 0.6,
+  "note": "ítem 3",
+  "t_old": 17.77
+ },
+ {
+  "t": 18.813,
+  "type": "click",
+  "gain": 0.6,
+  "note": "ítem 4",
+  "t_old": 18.86
+ },
+ {
+  "t": 19.959,
+  "type": "glitch",
+  "gain": 0.8,
+  "note": "qué sale mal",
+  "t_old": 20.01
+ },
+ {
+  "t": 20.308,
+  "type": "whoosh",
+  "gain": 0.8,
+  "note": "sale la tarjeta",
+  "t_old": 20.36
+ },
+ {
+  "t": 21.437,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "diana meta",
+  "t_old": 21.49
+ },
+ {
+  "t": 22.917,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "punch hoy",
+  "t_old": 22.97
+ },
+ {
+  "t": 24.127,
+  "type": "swish",
+  "gain": 0.5,
+  "note": "LOOVO detrás",
+  "t_old": 24.18
+ },
+ {
+  "t": 25.117,
+  "type": "glitch",
+  "gain": 0.8,
+  "note": "totalmente diferente",
+  "t_old": 25.17
+ },
+ {
+  "t": 27.288,
+  "type": "pop",
+  "gain": 0.6,
+  "note": "punch mejores",
+  "t_old": 27.34
+ },
+ {
+  "t": 28.068,
+  "type": "click",
+  "gain": 0.5,
+  "note": "chip evento",
+  "t_old": 28.12
+ },
+ {
+  "t": 28.108,
+  "type": "whoosh",
+  "gain": 0.9,
+  "note": "látigo a S7",
+  "t_old": 28.16
+ },
+ {
+  "t": 29.339,
+  "type": "scramble",
+  "gain": 0.6,
+  "note": "inteligencia",
+  "t_old": 29.39
+ },
+ {
+  "t": 29.759,
+  "type": "hit",
+  "gain": 0.9,
+  "note": "artificial",
+  "t_old": 29.81
+ },
+ {
+  "t": 31.86,
+  "type": "step",
+  "gain": 0.6,
+  "pitch": 1.0,
+  "note": "escalón 1",
+  "t_old": 31.91
+ },
+ {
+  "t": 32.12,
+  "type": "step",
+  "gain": 0.6,
+  "pitch": 1.26,
+  "note": "escalón 2",
+  "t_old": 32.17
+ },
+ {
+  "t": 32.24,
+  "type": "step",
+  "gain": 0.7,
+  "pitch": 1.5,
+  "note": "escalón 3",
+  "t_old": 32.29
+ },
+ {
+  "t": 32.48,
+  "type": "click",
+  "gain": 0.5,
+  "note": "corte a crema",
+  "t_old": 32.53
+ },
+ {
+  "t": 33.497,
+  "type": "hit",
+  "gain": 0.8,
+  "note": "Día",
+  "t_old": 33.55
+ },
+ {
+  "t": 34.125,
+  "type": "ding",
+  "gain": 0.6,
+  "note": "primer segmento",
+  "t_old": 34.18
+ },
+ {
+  "t": 34.425,
+  "type": "whoosh",
+  "gain": 0.8,
+  "note": "iris abre",
+  "t_old": 34.48
+ },
+ {
+  "t": 34.892,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "chip Día 1/42",
+  "t_old": 34.95
+ },
+ {
+  "t": 35.229,
+  "type": "pop",
+  "gain": 0.4,
+  "note": "acompañen",
+  "t_old": 35.29
+ },
+ {
+  "t": 36.589,
+  "type": "swish",
+  "gain": 0.6,
+  "note": "trayectoria lejos",
+  "t_old": 36.66
+ },
+ {
+  "t": 37.124,
+  "type": "pop",
+  "gain": 0.5,
+  "note": "punto final trayectoria",
+  "t_old": 37.2
+ },
+ {
+  "t": 37.472,
+  "type": "whoosh",
+  "gain": 0.8,
+  "note": "iris de cierre",
+  "t_old": 37.55
+ }
+]

@@ -1,0 +1,43 @@
+
+◆  Rendering motion → C:\Users\you\Desktop\Loovo\Maquina de redes\canal\2026-10-21_21h\proyecto\out\video_silent_raw.mp4
+   30fps · standard · 2 workers
+   GPU: browser GPU (auto-detect)
+
+[?25l│
+◒  Checking browser[1G[J◐  Checking browser[1G[J◓  Checking browser[1G[J◇  Browser: cache
+[?25h[INFO] [Render] Pipeline started {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","platform":"win32","arch":"x64","nodeVersion":"v24.19.0","fps":{"num":30,"den":1},"format":"mp4","quality":"standard","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeout":900000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"pipeline","status":"checkpoint","elapsedMs":9,"message":"started","format":"mp4","quality":"standard","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeoutMs":900000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":2}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"compile","status":"start","elapsedMs":11,"needsAlpha":false}
+  █░░░░░░░░░░░░░░░░░░░░░░░░  5%  Compiling composition
+@hf-progress {"code":"compile","pct":5}
+[INFO] [Compiler] Fetched 11 font face(s) for "Inter" from Google Fonts (cached to C:\Users\you\.cache\hyperframes\fonts\inter)
+[INFO] [Compiler] Injected deterministic @font-face rules for 1 requested font families
+[INFO] [Compiler] Inlined CDN script: https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js
+[INFO] Compiled composition metadata {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","entryFile":"index.html","staticDuration":39.64,"width":1080,"height":1920,"videoCount":2,"audioCount":0,"renderModeHints":{"recommendScreenshot":false,"reasons":[]}}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"compile","status":"end","elapsedMs":1152,"durationMs":1141,"needsAlpha":false}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"compile","status":"checkpoint","elapsedMs":1154,"message":"composition metadata resolved","width":1080,"height":1920,"videoCount":2,"audioCount":0,"imageCount":0,"deviceScaleFactor":1,"forceScreenshot":false,"compositionHash":"6ba4f7ff753e2107"}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"browser_probe","status":"start","elapsedMs":1154,"forceScreenshot":false,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"browser_probe","status":"end","elapsedMs":1426,"durationMs":272,"forceScreenshot":false,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"browser_probe","status":"checkpoint","elapsedMs":1427,"message":"duration resolved","durationSeconds":39.64,"totalFrames":1190,"compositionHash":"6ba4f7ff753e2107","beginFrameStalled":false}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"video_extract","status":"start","elapsedMs":1428,"videoCount":2}
+[INFO] Probing video color spaces... {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","videoCount":2}
+  ██░░░░░░░░░░░░░░░░░░░░░░░  10%  Extracting video frames
+@hf-progress {"code":"extract_video","pct":10}
+[INFO] Extracting frames from video 1/2 {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","sourceType":"local"}
+[INFO] Extracting frames from video 2/2 {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","sourceType":"local"}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"video_extract","status":"checkpoint","elapsedMs":31439,"message":"stage still running","videoCount":2,"heartbeatIndex":1,"stageElapsedMs":30011}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"video_extract","status":"checkpoint","elapsedMs":61444,"message":"stage still running","videoCount":2,"heartbeatIndex":2,"stageElapsedMs":60016}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"video_extract","status":"checkpoint","elapsedMs":122838,"message":"stage still running","videoCount":2,"heartbeatIndex":3,"stageElapsedMs":121410}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"video_extract","status":"checkpoint","elapsedMs":248442,"message":"stage still running","videoCount":2,"heartbeatIndex":4,"stageElapsedMs":247014}
+[WARN] Video extraction produced typed source failures {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","mode":"enforce","code":"VIDEO_EXTRACTION_FAILED","retryable":true,"failures":[{"kind":"ffmpeg_timeout","count":1}]}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"video_extract","status":"end","elapsedMs":308960,"durationMs":307532,"videoCount":2}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"video_extract","status":"checkpoint","elapsedMs":308965,"message":"frames resolved","videoCount":2,"extractedVideoCount":1,"totalFramesExtracted":1189,"maxFramesPerVideo":1189,"avgFramesPerExtractedVideo":1189,"vfrPreflightCount":0,"vfrPreflightMs":0,"cacheHits":0,"cacheMisses":2,"transientRetries":0,"minVideoFrameCoverageRatio":0,"authoredTimedClipCount":5}
+[INFO] [Render:trace] {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","phase":"Extracting video frames","status":"error","elapsedMs":308975,"durationMs":0,"message":"Video extraction failed for 1 source(s) [VIDEO_EXTRACTION_FAILED; ffmpeg_timeout=1]"}
+  ██░░░░░░░░░░░░░░░░░░░░░░░  10%  Failed: Video extraction failed for 1 source(s) [VIDEO_EXTRACTION_FAILED; ffmpeg_timeout=1]
+[INFO] [Render] Failure summary {"renderJobId":"df2276e7-e89c-47b0-984d-3f537df9154f","failedStage":"Extracting video frames","error":"Video extraction failed for 1 source(s) [VIDEO_EXTRACTION_FAILED; ffmpeg_timeout=1]","elapsedMs":308976,"stageTimings":{"compileOnlyMs":1115,"browserProbeMs":271,"compileMs":1416,"videoExtractMs":307532},"isTimeout":false,"workers":2,"protocolTimeout":900000,"observedFailedPhase":"Extracting video frames","observedLastPhase":"Extracting video frames","observedLastStatus":"error","browserDiagnostics":{"total":0,"errors":0,"pageErrors":0,"requestFailed":0,"httpErrors":0,"navigationStarts":0,"navigationFailures":0,"consoleErrors":0,"consoleWarnings":0},"extraction":{"videoCount":2,"extractedVideoCount":1,"totalFramesExtracted":1189,"maxFramesPerVideo":1189,"avgFramesPerExtractedVideo":1189,"vfrProbeMs":0,"vfrPreflightMs":0,"vfrPreflightCount":0,"cacheHits":0,"cacheMisses":2,"transientRetries":0,"minVideoFrameCoverageRatio":0,"authoredTimedClipCount":5},"browserConsoleErrors":[]}
+
+✗  Render failed
+
+   Video extraction failed for 1 source(s) [VIDEO_EXTRACTION_FAILED; ffmpeg_timeout=1]
+   Try --docker for containerized rendering
+

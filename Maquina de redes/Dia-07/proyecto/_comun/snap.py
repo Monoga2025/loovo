@@ -7,7 +7,7 @@ def _load():
         try: return WhisperModel(n, device='cpu', compute_type='int8', cpu_threads=2)
         except RuntimeError as e: print('whisper', n, 'sin memoria:', e)
     raise SystemExit('sin memoria para whisper')
-f = sf.SoundFile("C:/Users/Monoga/Desktop/Loovo-42/Dia-07/proyecto/_scan/cel48.wav"); sr = f.samplerate
+f = sf.SoundFile("C:/Users/you/Desktop/Loovo-42/Dia-07/proyecto/_scan/cel48.wav"); sr = f.samplerate
 def rd(t0, t1): f.seek(int(t0*sr)); return f.read(int((t1-t0)*sr))
 def env(t0, t1, h=0.01):
     x = rd(t0, t1); n = int(h*sr); k = len(x)//n

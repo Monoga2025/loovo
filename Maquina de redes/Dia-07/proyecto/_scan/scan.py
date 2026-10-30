@@ -1,5 +1,5 @@
 import sys, subprocess, numpy as np, cv2
-SRC="C:/Users/Monoga/Desktop/VID_20261013_110529.mp4"
+SRC="C:/Users/you/Desktop/VID_20261013_110529.mp4"
 out=sys.argv[1]; a,b,st=map(float,sys.argv[2:5])
 ts=np.arange(a,b,st); ims=[]
 for t in ts:

@@ -20,11 +20,11 @@ El usuario manda sobre tomas, tono y titulares; él aprueba el guion.
 7. **Estructura 50-65 s:** gancho con pregunta (0-9 s) → la idea en una frase (9-18 s) → un sistema por toma → regreso a cámara con pregunta y CTA.
 8. **Formato de entrega por tomas:** TOMA n, tiempo, indicación de cámara entre paréntesis, texto completo entre comillas. Una sola persona; no memorizar palabra por palabra.
 9. **Cifras:** lo que no sea del usuario se marca `[DATO]` o se quita; una cifra de ficción (p. ej. "30.000") va rotulada como ficción.
-10. **Voces:** el usuario o una colaboradora (si él lo indica). Personajes IA = ficción rotulada.
+10. **Voces:** el usuario o Carolina (si él lo indica). Personajes IA = ficción rotulada.
 11. **Mide lo comercial:** demos pedidas, leads calificados y ventas, no solo vistas.
 
 ## Entrega (siempre en Odoo, nunca suelto)
-- Los guiones van al proyecto **Guiones** de Odoo (`<internal-host>`), columna "Guion listo", descripción en HTML (el Markdown se convierte; Odoo no lo lee). Etiquetas: nicho, quién habla (Daniel/una colaboradora), "Solo motion" si aplica.
+- Los guiones van al proyecto **Guiones** de Odoo (`odoo.grupomonoga.com`), columna "Guion listo", descripción en HTML (el Markdown se convierte; Odoo no lo lee). Etiquetas: nicho, quién habla (Daniel/Carolina), "Solo motion" si aplica.
 - Credenciales: salen del CLI de Railway (servicio Odoo), nunca se imprimen ni se guardan. Subir a Odoo es trabajo remoto: requiere autorización explícita.
 - Copia de respaldo en Markdown en `../odd/<campaña>/`.
 

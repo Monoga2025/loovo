@@ -1,6 +1,6 @@
 # Día 7 · ventas con IA · EDL (pendiente de render)
 
-Crudo (solo lectura): C:\Users\<user>\Desktop\VID_20261013_110529.mp4 (rotación -90 → 1080x1920, 120 fps → 30 fps). Línea final 52,74 s, 9:16 1080x1920.
+Crudo (solo lectura): C:\Users\you\Desktop\VID_20261013_110529.mp4 (rotación -90 → 1080x1920, 120 fps → 30 fps). Línea final 52,74 s, 9:16 1080x1920.
 Audio: solo el celular (hoy no hay mic del PC). HPF 70 Hz + afftdn 6 dB + compresor 2:1, fundidos 12 ms.
 Persona solo en B1–B3b (3,40–13,50 s, mira a cámara); el resto es motion (el crudo en esos tramos es la pantalla del portátil: no se usa).
 

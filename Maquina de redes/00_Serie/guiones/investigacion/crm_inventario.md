@@ -4,8 +4,8 @@ Fecha de la investigación: 2026-10-09. Solo lectura. No se ejecutó nada, no se
 Marcas: **[HECHO]** lo vi en código/docs; **[SUPUESTO]** lo deduzco y no lo verifiqué.
 
 Rutas base:
-- Repo: `C:\Users\<user>\Desktop\Monoga OS\trabajo\monoga\proyectos\monoga-os` (rama `monoga-event-crm`, 16 commits en total, 13 son de Monoga del 2026-10-05 al 06).
-- Docs del sprint: `C:\Users\<user>\Desktop\Monoga OS\docs\` (sobre todo `MORNING_BRIEF.md`, `overnight-2026-10-06\QA_REPORT.md`, `SALES_KIT.md`, `NEXT_ACTIONS_DANIEL.md`).
+- Repo: `C:\Users\you\Desktop\Monoga OS\trabajo\monoga\proyectos\monoga-os` (rama `monoga-event-crm`, 16 commits en total, 13 son de Monoga del 2026-10-05 al 06).
+- Docs del sprint: `C:\Users\you\Desktop\Monoga OS\docs\` (sobre todo `MORNING_BRIEF.md`, `overnight-2026-10-06\QA_REPORT.md`, `SALES_KIT.md`, `NEXT_ACTIONS_DANIEL.md`).
 
 ## 0. Hallazgo que cambia lo que se puede decir en cámara
 
@@ -13,14 +13,14 @@ Rutas base:
 2. **El "agente" de la página Capturar lead NO es un LLM: es un motor de reglas con expresiones regulares** (`apps/app/lib/lead-intake.ts`, 744 líneas). Lo confirman `MORNING_BRIEF.md` sección C ("hoy es un motor de reglas") y `QA_REPORT.md`. El agente LLM real existe en `apps/agent` pero es el de investigación/enriquecimiento heredado del fork, y localmente está apagado.
 3. **Nada de WhatsApp, DIAN/factura electrónica, cotizaciones ni cartera existe en el código** [HECHO: grep sin resultados en `apps/`, `packages/` fuera de textos de ejemplo del seed y la UI]. Solo hay un campo manual "Payment status".
 4. **No está desplegado.** Todo corre en `127.0.0.1`. No hay ninguna referencia a Railway en el repo del CRM (Railway aparece solo en el `HANDOFF.md` de Jarvis/Telegram, otro proyecto) [HECHO].
-5. El CRM remoto antiguo "Twenty" (`<internal-host>`) sigue existiendo y hay que exportarlo antes de apagarlo (`NEXT_ACTIONS_DANIEL.md` sección 2).
+5. El CRM remoto antiguo "Twenty" (`crm.grupomonoga.com`) sigue existiendo y hay que exportarlo antes de apagarlo (`NEXT_ACTIONS_DANIEL.md` sección 2).
 
 ## 1. Qué es el CRM en 5 líneas
 
 1. Monorepo con Bun 1.3.12 + Turborepo; Node >= 22; base PostgreSQL con Prisma [HECHO: `package.json`, `packages/db`].
 2. Tres apps: `apps/app` (Next.js, la interfaz), `apps/api` (NestJS + tRPC, puerto 3101) y `apps/agent` (framework "eve" de Vercel, el agente de investigación y los agentes personalizados). Paquetes: `auth` (Better Auth), `db`, `env`, `telemetry`, `ui`, `validation`, `typescript-config`.
 3. Corre en local: PostgreSQL + API en 127.0.0.1:3101 + App en 127.0.0.1:3100. Dos formas de encender: `tools\monoga\start.ps1` (real) o `start.ps1 -Demo` (datos sintéticos); y `Desktop\CRM.bat` (menú Encender/Apagar).
-4. **Ojo, `CRM.bat` difiere del runbook**: usa Postgres portable en `C:\Users\<user>\crm-pg` (sin Docker), puerto de la app 3000, abre `/api/dev-login`, pregunta si inicia el agente (~2 GB de RAM) y NO tiene modo demo. El runbook (`docs/monoga-local-runbook.md`) usa Docker, puerto 3100 y dice que el 3000 pertenece a otro proceso. Hay que decidir cuál es el oficial antes de grabar [HECHO: `CRM.bat`, runbook].
+4. **Ojo, `CRM.bat` difiere del runbook**: usa Postgres portable en `C:\Users\you\crm-pg` (sin Docker), puerto de la app 3000, abre `/api/dev-login`, pregunta si inicia el agente (~2 GB de RAM) y NO tiene modo demo. El runbook (`docs/monoga-local-runbook.md`) usa Docker, puerto 3100 y dice que el 3000 pertenece a otro proceso. Hay que decidir cuál es el oficial antes de grabar [HECHO: `CRM.bat`, runbook].
 5. Modelo del agente: por defecto `zai/glm-5.2-fast` vía AI Gateway; en desarrollo se puede usar ChatGPT/Codex con `AGENT_USE_CODEX=1` (archivo `apps/agent/agent/lib/codex-model.ts`, aún sin commit). `git status` del repo muestra cambios sin commit en `agent.ts`, `package.json`, `turbo.json`, `bun.lock`, `.env.example` [HECHO].
 
 ## 2. Tabla de funciones
@@ -65,7 +65,7 @@ De `MORNING_BRIEF.md`, `NEXT_ACTIONS_DANIEL.md`, `QA_REPORT.md`, `docs/`:
 
 - Cobrar OENYX: pedir razón social/NIT/dirección/correo, emitir factura electrónica, marcar "Payment confirmed". Falta definir qué proveedor de factura electrónica usa Monoga.
 - Corregir la fecha de cierre de OENYX en la ficha ("Closed 5 de oct" es la fecha de carga, produce "win rate 100% / ciclo 0 días").
-- Exportar los prospectos del CRM Twenty remoto (`<internal-host>`) y decidir un solo sistema (el local).
+- Exportar los prospectos del CRM Twenty remoto (`crm.grupomonoga.com`) y decidir un solo sistema (el local).
 - Ensayar la demo dos veces con `start.ps1 -Demo`; fijar precio del piloto (hipótesis 1,5 a 2,5 M COP; operación 0,6 a 1,2 M COP/mes).
 - Corregir la web: quitar "En producción", "100%", "<1.5 s", "99.98%", "40%" (`WEBSITE_CLAIMS_FIX.md`).
 - Confirmar con el organizador si hay stand/contacto con asistentes; revisión corta de Habeas Data.

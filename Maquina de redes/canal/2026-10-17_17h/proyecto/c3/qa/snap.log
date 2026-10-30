@@ -1,0 +1,13 @@
+◆  Capturing 6 frames at [7s, 14.5s, 27s, 37.5s, 39.5s, 41.5s] from motion
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (Intel)" renderer="ANGLE (Intel, Intel(R) UHD Graphics (0x0000468B) Direct3D11 vs_5_0 ps_5_0, D3D11)")
+
+   Fonts: 2 loaded
+
+◇  6 snapshots saved to snapshots/
+   snapshots\frame-00-at-7s.png
+   snapshots\frame-01-at-14.5s.png
+   snapshots\frame-02-at-27s.png
+   snapshots\frame-03-at-37.5s.png
+   snapshots\frame-04-at-39.5s.png
+   snapshots\frame-05-at-41.5s.png
+   contact-sheet.jpg (grid view for AI review)

@@ -1,24 +1,38 @@
-# Loovo-42
+# Maquina de redes
 
-Serie "Día X de 42" hacia el Luque Business Summit (Bucaramanga, 17 a 19 de noviembre de 2026). El Día 1 es el 7 de octubre y el Día 42 es el 17 de noviembre.
+The content machine of Loovo: a daily video series, channel cuts, Instagram posts and the tooling that turns raw recordings into publishable short-form video. The founder records, writes the script, and the agents help edit, caption and track results.
 
-## Atajo
-Di "haz el día N" en Claude Code. La skill `monoga-serie` (comando `dia`) recorre todos los pasos de abajo y te muestra el estado con `python .claude/skills/monoga-serie/scripts/dia.py estado N`.
+## The series: "Loovo-42"
 
-## Un día, paso a paso
-1. **Bitácora:** pídele a Claude la bitácora del día (qué cambió en el CRM y qué tareas se cerraron).
-2. **Guion:** lo escribes tú. Claude lo revisa contra `00_Serie/hechos.md` y `00_Serie/voz-y-estilo.md`.
-3. **Grabar:** pon el video original en `Dia-XX/crudo/`. Una sola copia.
-4. **Editar:** skill `monoga-editor`, dentro de `Dia-XX/proyecto/`. Los finales van a `Dia-XX/entregables/`.
-5. **Portada y texto:** skill `monoga-serie`, comandos `portada` (Codex, minimalista 3:4) y `caption`.
-6. **Publicar** y marcar `Publicado: sí` en `Dia-XX/resultados.md`.
-7. **A las 24 h:** pega las cifras en `resultados.md` y pide el comando `resultados`.
-8. **Limpiar:** el comando `limpiar` borra lo pesado del proyecto (pide confirmar).
+A "Day X of 42" series that runs toward the Luque Business Summit (Bucaramanga, 17 to 19 November 2026). Day 1 is 7 October 2026 and Day 42 is 17 November 2026. Each day has its own folder and a fixed workflow: brief, script, record, edit, cover and caption, publish, then record 24-hour results.
 
-## Carpetas
-- `00_Serie/`: voz, hechos, marcador, aprendizajes, recursos.
-- `Dia-XX/`: `brief.md`, `guion.md`, `caption.md`, `resultados.md`, `crudo/`, `proyecto/`, `entregables/`.
-- `.claude/skills/`: `monoga-editor` y `monoga-serie`. Abre Claude Code desde esta carpeta para que las cargue.
+## Folders
 
-## Espacio
-Cada día crudo pesa más de 1 GB. Con 42 días no cabe en el disco C (42 GB libres al empezar). Archiva `crudo/` en un disco externo o en la nube cada pocos días, y limpia `proyecto/` al publicar.
+| Folder | What it is | README |
+|---|---|---|
+| `00_Serie/` | Series bible: facts that may be claimed on air, voice and style, scoreboard, lessons, scripts and brand assets. | [README](00_Serie/README.md) |
+| `Dia-01/` to `Dia-08/` | One folder per series day (Days 5 and 6 are not present). Each holds a brief, script, caption, results and project files. | [README](Dia-01/README.md) |
+| `canal/` | Longer channel recordings, one folder per session, with cuts and audio work. | [README](canal/README.md) |
+| `edicion/` | Editing and delivery rules. | [README](edicion/README.md) |
+| `guiones/` | Script-writing rules for niche videos and the series. | [README](guiones/README.md) |
+| `instagram/` | Instagram posts, highlights, drafts and the compose scripts. | [README](instagram/README.md) |
+| `investigacion/` | Research notes. | [README](investigacion/README.md) |
+| `odd/` | Campaign plans and tasks for this content work. | [README](odd/README.md) |
+| `qa/` | Visual QA snapshots. | [README](qa/README.md) |
+
+## Flow for one day
+
+1. Write the brief and read the facts in `00_Serie/hechos.md`.
+2. Record the raw clip into `Dia-XX/crudo/`.
+3. Edit inside `Dia-XX/proyecto/`; finished files go to `Dia-XX/entregables/`.
+4. Make the cover and the caption.
+5. Publish and record the 24-hour results in `resultados.md`.
+
+## Connections
+
+- `Maquina de redes/` produces the videos that point to `../servicios/omni-sales-crm/` and to the landing pages in `../landings/`.
+- Claims made on air must match `00_Serie/hechos.md`; anything not verified is presented as "coming soon", not as done.
+
+## Not included
+
+Raw footage, rendered videos, audio stems and any file over 20 MB are excluded from this repository. Agent runtime folders (`.claude`, `.agents`, `.gemini`) are excluded too.

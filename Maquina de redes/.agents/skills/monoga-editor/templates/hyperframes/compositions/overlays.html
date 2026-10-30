@@ -1,0 +1,59 @@
+<template id="overlays-template">
+  <!--
+    Motion DELANTE del hablante mientras habla: stickers (emoji en círculo blanco
+    con aro rojo), chips (píldora blanca), signos, destellos, barras de glitch y
+    trayectorias SVG. Reglas aprendidas:
+    - A los lados de la cara (x < 330 o x > 750) y fuera de la franja de
+      subtítulos (y 1170–1300). Nada cruza ojos ni boca (las barras de glitch también).
+    - Cada pop lleva su SFX en plan/sfx.json.
+    - Texto de chips: literal o dato dado por el usuario.
+  -->
+  <div data-composition-id="overlays" data-width="1080" data-height="1920" data-duration="__DUR__">
+    <!-- EJEMPLOS: duplica, cambia id/posición/emoji/texto -->
+    <div class="sticker" id="s1" style="left: 800px; top: 650px"><span class="e">🏆</span></div>
+    <div class="ring" id="r1" style="left: 800px; top: 650px"></div>
+    <div class="chip" id="c1" style="left: 80px; top: 820px"><span class="e">📍</span>Día 1 / 42</div>
+    <div class="q" id="q1" style="left: 850px; top: 470px">?</div>
+
+    <style>
+      [data-composition-id="overlays"] { background: transparent; font-family: "Inter", sans-serif; overflow: hidden; }
+      /* En Windows, emoji del sistema: hace falta declararlo o el linter falla */
+      @font-face { font-family: "Emoji"; src: local("Segoe UI Emoji"); }
+      .e { font-family: "Emoji", sans-serif; }
+      .q { position: absolute; font-size: 150px; font-weight: 900; color: #e3120b; visibility: hidden;
+           text-shadow: 0 10px 30px rgba(227, 18, 11, 0.35), 0 0 2px #fff; }
+      .chip { position: absolute; display: flex; align-items: center; gap: 14px; visibility: hidden;
+              padding: 18px 30px; background: #fff; border-radius: 999px; white-space: nowrap;
+              font-size: 46px; font-weight: 800; color: #141414; letter-spacing: -0.02em;
+              box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22); }
+      .sticker { position: absolute; width: 190px; height: 190px; border-radius: 50%; visibility: hidden;
+                 background: #fff; display: flex; align-items: center; justify-content: center; font-size: 110px;
+                 box-shadow: 0 20px 44px rgba(0, 0, 0, 0.25), 0 0 0 8px rgba(227, 18, 11, 0.9); }
+      .ring { position: absolute; width: 190px; height: 190px; border-radius: 50%; visibility: hidden; border: 8px solid #e3120b; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      // entrada con spring + giro, flotado suave, salida rápida
+      const pop = (sel, a, b, rot = 0) => {
+        tl.set(sel, { visibility: "visible" }, a);
+        tl.fromTo(sel, { opacity: 0, scale: 0, rotation: rot - 25 },
+          { opacity: 1, scale: 1, rotation: rot, duration: 0.45, ease: "back.out(2.4)" }, a);
+        tl.to(sel, { y: -18, duration: Math.max(b - a - 0.65, 0.1), ease: "sine.inOut" }, a + 0.45);
+        tl.to(sel, { opacity: 0, scale: 0.6, duration: 0.16, ease: "power2.in" }, b - 0.16);
+        tl.set(sel, { visibility: "hidden" }, b);
+      };
+      const ring = (sel, t) => {
+        tl.set(sel, { visibility: "visible" }, t);
+        tl.fromTo(sel, { opacity: 1, scale: 0.6 }, { opacity: 0, scale: 1.9, duration: 0.55, ease: "power2.out" }, t);
+        tl.set(sel, { visibility: "hidden" }, t + 0.56);
+      };
+      // EJEMPLOS (tiempos de build/words_out.json):
+      pop("#s1", 2.0, 3.0, -8); ring("#r1", 2.05);
+      pop("#c1", 3.2, 4.8, -3);
+      pop("#q1", 5.0, 6.0, 10);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["overlays"] = tl;
+    </script>
+  </div>
+</template>

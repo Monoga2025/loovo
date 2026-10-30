@@ -1,0 +1,76 @@
+# Loovo · reglas del agente (fuente única)
+
+Pi carga este archivo directamente. Claude Code lo carga a través de `CLAUDE.md` (`@AGENTS.md`). Si una regla cambia, se cambia aquí y en ningún otro lugar.
+
+Loovo vende automatización de ventas con IA a clínicas estéticas y odontológicas (Bucaramanga y Medellín) y a nichos nuevos (contadores). El usuario es Monoga, dueño y quien sale en cámara.
+
+## Arranque de cada sesión
+
+1. Lee `HANDOFF.md` (relevo de sesión) y `SHARED_STATE.md` (tablero entre módulos).
+2. Memoria: llama a `mem_current_project`. Si no devuelve `loovo`, pasa `project: "loovo"` de forma explícita en toda llamada `mem_*`. Usa `mem_context` y `mem_search` antes de explorar.
+3. Pi solo carga el `AGENTS.md` del directorio de trabajo y de sus carpetas padre. Antes de tocar un módulo, lee su `AGENTS.md` y su `MEMORY.md` si existe. Para trabajo de un solo módulo, abre la sesión dentro de ese módulo.
+
+## Mapa
+
+| Módulo | Reglas | Skills | Agente Pi (solo con razón nombrada) |
+|---|---|---|---|
+| `ventas/` | `ventas/AGENTS.md` | skills de venta por fase (ver el módulo) | `loovo-ventas` |
+| `Maquina de redes/guiones/` | `Maquina de redes/guiones/AGENTS.md` | `monoga-guionista`, `monoga-serie` | `loovo-guiones` |
+| `Maquina de redes/edicion/` | `Maquina de redes/edicion/AGENTS.md` | `monoga-editor`, `monoga-adria` | `loovo-edicion` |
+| `landings/` | `landings/AGENTS.md` | `b2b-web-director` | — |
+| `servicios/` (CRM, flujos n8n) | `servicios/AGENTS.md` | `work-unit-commits`, `chained-pr` | `loovo-sistemas`, `loovo-scout` |
+| `clientes-activos/` | `clientes-activos/AGENTS.md` | `monoga-project-os` | — (trabajo directo) |
+
+Los agentes de Pi viven en `.pi/agents/`; los comandos `/retomar`, `/cerrar` y `/scout-n8n`, en `.pi/prompts/`.
+
+## Forma de trabajo (ODD)
+
+- **Autoriza primero.** Investigar, explicar, comparar o proponer es solo lectura. Solo se edita cuando el usuario pide el cambio.
+- **Orquestador puro (decisión de Monoga, 2026-10-21).** La sesión principal NO ejecuta trabajo: lanza el subagente correcto con `subagent_run` (en paralelo si hay varios), responde en una línea ("listo, X y Y están trabajando") y queda libre para el siguiente mensaje del usuario. Solo responde ella misma preguntas cortas, estado y decisiones. Cada subagente devuelve un resumen de máx. 10 líneas; la sesión principal no pega salidas largas ni narra pasos.
+- **Agente por tarea:** ventas → `loovo-ventas`; guiones → `loovo-guiones`; video/motion → `loovo-edicion`; sistemas/n8n → `loovo-sistemas`; búsqueda → `loovo-scout`; verificación → `loovo-verify`. Pásales `AGENTS.md` y `MEMORY.md` del módulo, la tarea y su `## Allowed edit surfaces`.
+- **Razones de delegación que aún se nombran en una línea (lista previa de Gentle, ya no limita):**
+  1. *Mapeo:* entender exige más de un lote de 3 lecturas o más de ~5 consultas seguidas → `gentle-ai-explore`; búsqueda en GitHub o plantillas n8n → `loovo-scout`.
+  2. *Escritores paralelos:* dos o más unidades independientes con superficies de edición disjuntas (por ejemplo, guion y landing) → un agente por unidad, cada uno con su sección `## Allowed edit surfaces`.
+  3. *Backstop de contexto:* la sesión supera ~150k tokens → delega la siguiente unidad acotada.
+  4. *Verificador independiente:* cambio de riesgo alto (datos persistidos, secretos, contratos, envíos, despliegue) → `loovo-verify`.
+  5. *Regla de modelo de Loovo:* guiones y motion los hace el modelo más capaz. Si la sesión no corre con ese modelo, delega a `loovo-guiones` o `loovo-edicion`.
+- **Tarea grande** (no se puede retomar con el pedido y el diff): crea `odd/tasks/<feature>.md` dentro del módulo y su espejo en Engram con el tema `odd/<feature>/tasks`.
+- **Prueba primero:** cuando exista una prueba ejecutable, observa el fallo antes de implementar.
+- Cierra cada cambio de código con `Risk: item N (motivo)` o `Risk: none`.
+
+## Reglas de negocio (no negociables)
+
+1. Los envíos son manuales: la IA solo redacta, con UNA excepción (decisión de Monoga, 2026-10-21): la IA puede responder sola a doctores que ya escribieron a Loovo (desde el Toque 2), hablando como Loovo, sin inventar datos ni precios y sin hacerse pasar por paciente. Los chats del paciente incógnito "Daniel" no se continúan con IA. Nunca se inician llamadas. Horario de la Ley 2300: lunes a viernes de 7:00 a 19:00 y sábados de 8:00 a 15:00; nunca domingos ni festivos.
+2. Nada se declara listo (🟢) sin probarlo de punta a punta por el canal real. Lo parcial es 🟡 y dice qué falta.
+3. Nunca se envía un marcador (`[LINK_…]`, `{{campo}}`) a un cliente. Si falta un dato, el caso pasa a un humano.
+4. Los datos de clientes nunca van en `servicios/` ni en `landings/`.
+5. Guiones y motion con el modelo más capaz. Transcribir y medir, con el más barato.
+6. Entregable de video = `.mp4` + `portada.png` + `descripcion.txt` en la carpeta `entregables/`.
+7. Los secretos viven solo en variables de entorno o de Railway; nunca en chat, archivos ni salida de comandos. Si el usuario pega una clave, pídele que la revoque.
+8. No borres ni muevas archivos entre módulos sin confirmación. No escanees `node_modules`, `.git`, `dist`, `build`, `.next` ni `.venv`.
+9. Trabajo remoto (Railway, SSH, Odoo, n8n) solo con autorización explícita de destino, operación y credencial.
+10. Verifica licencia y documentación antes de recomendar una arquitectura o una dependencia externa.
+
+## Handoff y memoria
+
+| Dónde | Qué guarda | Cuándo se actualiza |
+|---|---|---|
+| `SHARED_STATE.md` | Estado de cada módulo y campaña (máx. 15 líneas por sección) | Al iniciar una tarea ("en curso") y al cerrarla (estado, archivos clave, pendientes, próximo paso) |
+| `HANDOFF.md` | Relevo de la sesión: hecho, pendiente, reglas aprendidas | Al cerrar la sesión |
+| `MEMORY.md` (raíz y por módulo) | Decisiones y aprendizajes estables | Cuando una decisión o un aprendizaje se vuelve regla |
+| Engram (`project: "loovo"`) | Índice de búsqueda de respaldo | Al momento de una decisión, un bugfix, un descubrimiento, una convención o un cambio de configuración; al publicar una pieza de campaña; `mem_session_summary` al cerrar |
+
+En Engram no se guardan secretos ni datos personales de leads. Para cerrar la sesión usa `/cerrar`.
+
+## Modelos
+
+| Trabajo | Pi (proveedor actual `openai-codex`) | Claude Code |
+|---|---|---|
+| Orquestación e implementación | modelo por defecto de la sesión | Sonnet |
+| Exploración, scout, transcribir y medir | `openai-codex/gpt-5.6-luna` · `low` | Haiku |
+| Guiones y motion | `openai-codex/gpt-6.1-sol` · `high` | Opus |
+| Verificación de riesgo alto | `openai-codex/gpt-6.1-sol` · `high` | Opus o Sonnet |
+
+## Usuario y estilo
+
+Conversación en español (Colombia). Documentos de negocio en español neutro profesional; código e identificadores en inglés. Respuestas cortas y una pregunta a la vez. Commits convencionales sin atribución de IA; ni commit ni push sin que el usuario lo pida.

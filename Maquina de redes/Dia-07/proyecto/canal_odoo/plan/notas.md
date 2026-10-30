@@ -11,5 +11,5 @@ Gancho ("organizar" visible en el cuadro 0; 12 apps sueltas que se ordenan en re
 
 ## Privacidad (revisado cuadro a cuadro en los planos de pantalla)
 - odoo.com (sitio público de Odoo): solo marketing y apps. El tablero de contabilidad de ejemplo con montos y facturas aparece desde el crudo ~553,4 s → desenfoque fuerte de la mitad inferior por regla (son datos demo del sitio, pero el brief pide tapar facturas y montos).
-- Railway: proyecto propio (dominio <internal-host>, sin variables, claves ni tokens a la vista en el tramo usado 675,4–678,2 s).
+- Railway: proyecto propio (dominio odoo.grupomonoga.com, sin variables, claves ni tokens a la vista en el tramo usado 675,4–678,2 s).
 - No aparece ninguna otra persona en los planos usados.

@@ -13,6 +13,6 @@
 ## Riesgos que el usuario debe aprobar
 1. **Logo de Tiendas D1:** es una marca registrada ajena usada como chiste. En una cuenta comercial puede reclamarse. Plan B en `edicion_hyperframes.md`.
 2. **Noticiero falso:** sin logo de canal real y con rótulo "SIMULACIÓN IA" para que no circule como noticia verdadera.
-3. **una colaboradora en cámara:** contradice la regla 3 de `CLAUDE.md` (solo la voz del usuario). Se grabó en el plan solo con el usuario.
+3. **Carolina en cámara:** contradice la regla 3 de `CLAUDE.md` (solo la voz del usuario). Se grabó en el plan solo con el usuario.
 4. **Colores rojo y del logo D1** rompen la paleta de `monoga-adria`; están acotados a 4 s y 1,5 s.
 5. **Tema:** es IA aplicada a un nicho, no motivacional: cumple la regla 8 de `monoga-adria`.

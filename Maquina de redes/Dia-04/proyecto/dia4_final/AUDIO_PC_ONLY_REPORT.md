@@ -119,7 +119,7 @@ ffmpeg -i Dia4_final_tiktok.mp4 -i final_pc_only.wav \
 
 ## 7. Video final PC-only
 
-**Ubicación:** `C:\Users\<user>\Desktop\Loovo-42\Dia-04\entregables\Dia4_final_tiktok_audioPC.mp4`
+**Ubicación:** `C:\Users\you\Desktop\Loovo-42\Dia-04\entregables\Dia4_final_tiktok_audioPC.mp4`
 
 | Propiedad | Valor |
 |-----------|-------|

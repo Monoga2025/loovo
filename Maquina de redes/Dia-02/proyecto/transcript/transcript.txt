@@ -1,0 +1,95 @@
+## clip1
+[5.3-5.7] Empezamos
+[7.7-12.0] Contratea a alguien ayer, no le pago, no trabaja, y no hace nada
+[18.4-21.7] Contratea a alguien, no le pago, y trabaja a las 3 de la mañana
+[24.7-26.7] Suena como chisme, a la gente le va a gustar
+[26.7-29.5] Y creo que es mejor que prenda la luz
+[30.2-35.3] Porque si ellos sienten que es anuncio, lo van a pasar de una vez
+[36.7-42.9] Ayer contratea a alguien, no le pago, y trabaja hasta las 3 de la mañana
+[47.7-50.2] No me gusta que veas la cara
+[51.7-52.2] Dime
+[55.1-57.7] Si, es que es la idea
+[57.8-59.3] Día 2 de 42
+[61.2-64.4] Osea, primero el gancho y después día 2 de 42
+[67.5-72.0] Ayer contratea a alguien, no le pago, ok, tengo que mirar la cámara
+[72.1-79.2] Ayer contratea a alguien, no le pago, y trabaja hasta...
+[81.2-85.1] Ayer contratea a alguien, no trabaja, y no le va a pagar
+[87.7-91.8] Es que estoy pensando en el guion, necesito pensar eso con mi cabeza
+[96.7-100.2] Ayer contratea a alguien, trabaja, y no le pago
+[103.5-104.6] Así es amor
+[107.0-108.9] Ayer contratea a alguien, no le pago
+[110.2-113.2] Ayer contratea a alguien, no le pago, y trabaja hasta las 3 de la mañana
+[113.7-117.9] Hoy es el día número 2 de 42 hasta llegar al evento
+[117.9-118.5] ¿Cuál evento?
+[121.3-134.5] Ayer contratea a alguien, lo estoy explotando laboralmente, no le pago, y trabaja hasta las 3 de la mañana
+[135.7-136.2] Sí
+[138.7-141.0] Este es el día número 2 de 42
+[142.2-145.1] Mostrando cómo construyo mi agencia de inteligencia artificial
+[148.6-152.7] Quedó chéverísimo amor
+[155.5-159.9] Hoy te presento a mi primer empleado, no cobra, no duerme, y ya me edito un video
+[161.9-163.3] Así es como creé mi primer empleado
+[163.3-164.0] Este edita los videos
+[164.0-164.4] No duerme
+[164.4-165.8] Y ya me edito un video
+[177.0-179.1] Así es como creé mi primer empleado
+[180.9-183.2] Así es como acabo de crear uno de mis dos empleados
+[183.2-184.8] Este edita los videos
+[186.1-187.1] No duerme
+[191.4-193.5] Te voy a mostrar uno de mis dos empleados
+[193.9-195.5] Este edita los videos
+[197.8-199.1] No cobra, no duerme
+[201.8-205.7] Y me pasó un video de 7 minutos a un video de 38 segundos con este estilo
+[207.6-209.0] Ay, no es cierto
+[212.4-213.0] Ok
+[214.8-216.8] Es un empleado que hace...
+[218.6-219.7] ¿Cómo es? ¿Cómo es la línea?
+[221.2-222.8] Es que no me gusta esa línea, voy a decir otra
+[222.8-225.6] Por eso, dime cómo me dejo mejorar el video cuando yo lo estoy
+[227.9-228.8] Ok, ok
+[229.0-232.2] Voy a decirle para que lo veas
+[236.5-239.3] Este es uno de los dos empleados que acabo de crear
+[239.5-242.7] Este empleado no duerme, no cobra, y edita videos
+[242.8-244.1] ¿Por qué uno de los dos?
+[244.1-246.5] Porque les voy a hablar sobre dos
+[246.9-249.9] Uno que es el que está en el CRM y otro que edita videos
+[250.8-255.6] Les voy a mostrar este empleado que edita, no duerme, no cobra
+[256.1-257.1] ¿Eso fue lo que dije?
+[257.4-257.8] Sí
+[257.8-258.5] ¿Eso es?
+[258.7-262.5] Sí, y me lo cortaste, toca decirlo otra vez
+[262.6-265.0] Les voy a presentar uno de los dos
+[267.1-269.4] Les voy a presentar uno de los dos empleados que tengo
+[269.6-271.9] Este no cobra, no duerme, y edita los videos
+[271.9-273.0] Mientras yo estoy durmiendo
+[276.4-278.4] Les voy a presentar uno de mis dos empleados
+[278.4-280.4] La verdad, a este sí lo exploto durante toda la noche
+[280.4-282.6] Porque me edita los videos mientras estoy durmiendo
+[287.5-290.1] El segundo también lo sobreexplotó, pero
+[291.8-295.2] Él sí trabaja en el día porque está conectado a mi CRM
+[305.6-310.3] Les voy a mostrar cómo funciona un CRM real con Inteligencia Artificial integrada
+[312.2-315.0] Normalmente los CRM que están vendiendo con Inteligencia Artificial
+[315.0-318.5] Es un chat pegado dentro de la plataforma que no hace absolutamente nada
+[318.7-321.9] Es directamente preguntarle al chat GPT
+[322.8-327.4] En cambio este CRM está conectado por dentro de la plataforma
+[329.2-331.7] Este puede leer cada cliente, cada correo
+[331.7-334.3] Qué hace, en qué tapas está, cómo le gusta que le hablen
+[334.3-336.1] Y puede cerrar ventas
+[345.5-349.5] Es básicamente y literalmente como si una Inteligencia Artificial
+[349.5-354.5] Hubiera creado un CRM y fuera parte de ella
+[361.7-362.4] Es como si...
+[367.0-369.3] Es como si hubiera nacido una Inteligencia Artificial
+[369.4-371.7] Que ya hubiera nacido con un CRM
+## clip2
+[0.0-12.2] ...un poquito de escena, acá, yo hablo desde acá, es que es imposible, aquí en el cuarto es imposible cambiarte escena
+[14.1-20.1] lo que hice fue, lo que hice fue descargar un repositorio, lo que hice fue descargar
+[20.3-25.5] este repositorio, integrar la inteligencia artificial, conectarlo a la empresa
+[34.9-40.8] y si un CRM con inteligencia artificial es muy bueno, ahora le vamos a conectar facturación electrónica
+[41.6-48.8] para esto, el día de mañana vamos a entrar, mentiras, esa parte de atrás no va a aparecer
+[53.6-59.4] y si un CRM es bueno con inteligencia artificial, ahora lo vamos a conectar a la DIAN para que podamos hacer facturas electrónicas
+[66.8-83.0] y esto lo vamos a estar, y esto lo vas a ver, esto lo vas a ver, esto lo vamos a dejar para mañana
+[83.0-102.1] entonces, para mañana, no, no, no es cierto, ok, pero esto lo vamos a ver en el día 3
+[104.2-110.8] pero esto lo vamos a ver en el día 3, de momento quiero que me digas en el empleado, aquí en el empleado
+[111.7-114.8] pero esto lo vamos a ver en el día 3, de momento quiero que me digas
+[117.0-124.0] qué tipo de empleado quieres esclavizar para que trabaje 24 7 por ti, ay en tu empresa, de momento
+[124.0-129.8] quiero que me digas en los comentarios, pero esto lo vamos a ver en el día 3, de momento quiero que me
+[129.8-133.9] digas qué tipo de empleado te gustaría esclavizar durante toda la noche y durante todos los días

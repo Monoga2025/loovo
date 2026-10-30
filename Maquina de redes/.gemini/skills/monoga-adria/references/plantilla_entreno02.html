@@ -1,0 +1,257 @@
+<!doctype html>
+<!-- entreno02: gancho brutal (0-2,6 s) sobre blanco pastel con puntos + persona real a pantalla completa estilo Adrià Solà.
+     Tiempos = línea de tiempo del corte (cand1 0,42-2,60 + 2,80-6,14) + placa final hasta 6,30 s.
+     Palabras medidas con la envolvente de audio/voz_cut.wav (ver plan/storyboard.md). border-radius 0 en todo. -->
+<html lang="es" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>entreno02</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Playfair"; font-style: italic; font-weight: 400; src: url("assets/fonts/playfair-display-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Playfair"; font-style: italic; font-weight: 700; src: url("assets/fonts/playfair-display-latin-700-italic.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 500; src: url("assets/fonts/montserrat-500.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-600.woff2") format("woff2"); }
+:root {
+  --pastel:#F6F4EF; --dot:rgba(207,203,195,.35); --oro:#C8B07A; --oro-s:#A88F57; --oro-b:#E6D6AE;
+  --carbon:#2A2926; --gris:#8C887F; --crema:#FFFBF2;
+}
+* { box-sizing:border-box; margin:0; padding:0; border-radius:0 !important; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:#F6F4EF; font-family:"Montserrat", sans-serif; }
+.full { position:absolute; left:0; top:0; width:1080px; height:1920px; }
+.sc { overflow:hidden; }
+/* blanco pastel con cuadrícula de puntos de 2 px cada 24 px */
+.dots { background-color:#F6F4EF; background-image:radial-gradient(circle at 12px 12px, rgba(170,165,156,.42) 0, rgba(170,165,156,.42) 1.1px, rgba(170,165,156,0) 1.6px); background-size:24px 24px; }
+.it { font-family:"Playfair", serif; font-style:italic; }
+.ph { position:absolute; object-fit:cover; box-shadow:0 34px 70px -24px rgba(90,74,44,.34), 0 8px 22px rgba(90,74,44,.10); }
+.hair { position:absolute; height:2px; background:#C8B07A; transform-origin:0 50%; }
+
+/* ---------- S1 apertura 0-0.867 ---------- */
+#s1 { z-index:20; }
+#s1in { transform-origin:50% 55%; }
+#a1 { position:absolute; left:0; top:300px; width:1080px; text-align:center; font-weight:600; font-size:150px; line-height:1; letter-spacing:-4px; color:#2A2926; }
+#a2 { position:absolute; left:0; top:456px; width:1080px; text-align:center; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:168px; line-height:1; color:#A88F57; }
+#tile { position:absolute; left:290px; top:820px; width:500px; height:500px; }
+.blk { position:absolute; background:linear-gradient(155deg,#EDE1C2 0%,#D6C293 45%,#C8B07A 100%); box-shadow:0 30px 60px -26px rgba(90,74,44,.35); }
+#bA { left:0; top:0; width:250px; height:250px; }
+#bB { left:250px; top:0; width:250px; height:250px; background:linear-gradient(155deg,#E6D6AE 0%,#C8B07A 100%); }
+#bC { left:0; top:250px; width:500px; height:250px; background:linear-gradient(155deg,#D6C293 0%,#A88F57 100%); }
+#tphoto { left:95px; top:95px; width:310px; height:310px; }
+#h1 { left:90px; top:760px; width:900px; }
+#h2 { left:90px; top:1380px; width:900px; }
+#f0 { z-index:5; background:#F6F4EF; }
+#f0sq { position:absolute; left:230px; top:660px; width:620px; height:620px; background:#2A2926; transform:rotate(-9deg); filter:blur(5px); }
+
+/* ---------- S2 ráfaga de fotos 0.867-2.067 ---------- */
+#s2 { z-index:19; }
+#photos { position:absolute; left:150px; top:760px; width:780px; height:640px; overflow:hidden; box-shadow:0 40px 80px -30px rgba(90,74,44,.38), 0 8px 24px rgba(90,74,44,.10); }
+#photos img { position:absolute; left:0; top:0; width:780px; height:640px; object-fit:cover; filter:saturate(.82) sepia(.08); }
+#ff { position:absolute; left:120px; top:730px; width:840px; height:700px; }
+#ff b { position:absolute; width:34px; height:34px; background:#C8B07A; }
+#pa { left:760px; top:1330px; width:250px; height:190px; filter:saturate(.8) sepia(.1); }
+#pb { left:70px; top:640px; width:240px; height:180px; filter:saturate(.8) sepia(.1); }
+/* tarjetas de texto del gancho (zona superior 270-700) */
+#c2 { position:absolute; left:0; top:300px; width:1080px; text-align:center; z-index:24; }
+#c2 .k { display:block; font-family:"Playfair"; font-style:italic; font-weight:700; font-size:200px; line-height:1; color:#A88F57; }
+#c2 .r { display:block; margin-top:18px; font-weight:600; font-size:96px; line-height:1; letter-spacing:-2px; color:#2A2926; }
+#c3 { position:absolute; left:0; top:330px; width:1080px; text-align:center; z-index:24; white-space:nowrap; }
+#c3 .n { font-weight:600; font-size:150px; letter-spacing:-4px; color:#2A2926; vertical-align:baseline; }
+#c3 .u { font-family:"Playfair"; font-style:italic; font-weight:700; font-size:270px; line-height:1; color:#A88F57; vertical-align:baseline; display:inline-block; }
+
+/* ---------- S3 foto grande + glitch 2.067-2.60 ---------- */
+#s3 { z-index:18; }
+#box { left:150px; top:760px; width:780px; height:670px; }
+.ghost { position:absolute; left:150px; top:760px; width:780px; height:670px; object-fit:cover; mix-blend-mode:multiply; }
+#gA { filter:sepia(1) saturate(2.2) hue-rotate(-8deg) brightness(1.05); }
+#gB { filter:grayscale(1) brightness(.75); }
+#slice { position:absolute; left:0; top:0; width:1080px; height:1920px; clip-path:inset(47% 0 41% 0); }
+
+/* ---------- persona (video real a pantalla completa) ---------- */
+#base { z-index:1; }
+#cap { position:absolute; left:0; top:1340px; width:1080px; text-align:center; z-index:10; white-space:nowrap;
+  font-weight:600; font-size:86px; line-height:1.1; letter-spacing:-1px; color:#FBF8F1;
+  text-shadow:0 2px 6px rgba(20,16,10,.35), 0 6px 26px rgba(20,16,10,.35); }
+#cap .k { color:#E6D6AE; }
+#cap > span { position:absolute; left:0; top:0; width:1080px; }
+#shade { z-index:9; background:linear-gradient(180deg, rgba(0,0,0,0) 62%, rgba(30,24,16,.18) 74%, rgba(30,24,16,.18) 80%, rgba(0,0,0,0) 90%); }
+#no1 { position:absolute; left:70px; top:250px; width:460px; z-index:13; text-align:left; font-family:"Playfair"; font-style:italic; font-weight:700;
+  font-size:250px; line-height:1; color:#A88F57; white-space:nowrap; transform-origin:50% 50%;
+  text-shadow:0 2px 3px rgba(60,48,26,.18), 0 10px 40px rgba(90,74,44,.28); }
+#no1 sup { font-size:.42em; vertical-align:.95em; margin-left:2px; }
+#plate { z-index:12; }
+#plnum { position:absolute; left:0; top:640px; width:1080px; text-align:center; z-index:14; font-weight:600; font-size:96px; letter-spacing:-2px; color:#8C887F; }
+#ph3 { left:240px; top:1290px; width:600px; z-index:14; }
+
+/* ---------- destello crema/dorado ---------- */
+#leak { z-index:40; background:radial-gradient(ellipse 70% 60% at 18% 40%, rgba(255,251,242,1) 0%, rgba(240,226,190,.85) 35%, rgba(214,194,147,.0) 75%); mix-blend-mode:screen; }
+#white { z-index:41; background:#FFFBF2; }
+#grain { position:absolute; left:-200px; top:-200px; width:1480px; height:2320px; z-index:45; background:url("assets/grano.png"); opacity:.06; mix-blend-mode:multiply; pointer-events:none; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="6.3" data-width="1080" data-height="1920">
+
+  <video id="base" class="clip full" src="assets/base.mp4" data-start="0" data-duration="6.3" data-track-index="1" muted playsinline></video>
+  <div id="shade" class="full"></div>
+  <div id="cap">
+    <span id="p1">No, él <span class="k">sabe</span></span>
+    <span id="p2">es el <span class="k">número 1</span></span>
+    <span id="p3">y por eso es</span>
+    <span id="p4">el <span class="k">número 1</span></span>
+  </div>
+
+  <!-- placa final -->
+  <div id="plate" class="full dots"></div>
+  <div id="plnum">el número</div>
+  <i class="hair" id="ph3"></i>
+  <div id="no1">N<sup>º</sup>1</div>
+
+  <!-- S3 -->
+  <div id="s3" class="full sc dots">
+    <div id="s3in" class="full">
+      <img class="ghost" id="gA" src="assets/img/box.jpg" alt="" />
+      <img class="ghost" id="gB" src="assets/img/box.jpg" alt="" />
+      <img class="ph" id="box" src="assets/img/box.jpg" alt="" />
+    </div>
+    <div id="slice"><div class="full dots"><img class="ph" src="assets/img/box.jpg" alt="" style="left:150px;top:760px;width:780px;height:670px;filter:sepia(1) saturate(1.6)" /></div></div>
+  </div>
+
+  <!-- S2 -->
+  <div id="s2" class="full sc dots">
+    <div id="s2in" class="full">
+      <div id="photos">
+        <img id="q1" src="assets/img/f1.jpg" alt="" />
+        <img id="q2" src="assets/img/f2.jpg" alt="" />
+        <img id="q3" src="assets/img/f3.jpg" alt="" />
+        <img id="q4" src="assets/img/f4.jpg" alt="" />
+        <img id="q5" src="assets/img/f5.jpg" alt="" />
+      </div>
+      <img id="pa" class="ph" src="assets/img/box.jpg" alt="" />
+      <img id="pb" class="ph" src="assets/img/f2.jpg" alt="" />
+    </div>
+    <div id="ff"><b style="left:0;top:0"></b><b style="right:0;top:0"></b><b style="left:0;bottom:0"></b><b style="right:0;bottom:0"></b></div>
+  </div>
+  <div id="c2"><span class="k">¿piensa</span><span class="r">que es el</span></div>
+  <div id="c3"><span class="n">número&nbsp;</span><span class="u" id="u1">1?</span></div>
+
+  <!-- S1 -->
+  <div id="s1" class="full sc dots">
+    <div id="s1in" class="full">
+      <i class="hair" id="h1"></i><i class="hair" id="h2"></i>
+      <div id="tile"><div class="blk" id="bA"></div><div class="blk" id="bB"></div><div class="blk" id="bC"></div><img class="ph" id="tphoto" src="assets/img/f1.jpg" alt="" /></div>
+      <div id="a1">Cristiano</div>
+      <div id="a2">Ronaldo</div>
+    </div>
+    <div id="f0" class="full"><div id="f0sq"></div></div>
+  </div>
+
+  <div id="leak" class="full"></div>
+  <div id="white" class="full"></div>
+  <div id="grain"></div>
+</div>
+
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const F = 1 / 30;
+const SINE = "sine.inOut"; // = cubic-bezier(0.37,0,0.63,1)
+const show = (s, t) => tl.set(s, { autoAlpha: 1 }, t);
+const hide = (s, t) => tl.set(s, { autoAlpha: 0 }, t);
+const inBlur = (s, t, d = 3 * F, px = 14) => tl.fromTo(s, { autoAlpha: 0, filter: `blur(${px}px)` }, { autoAlpha: 1, filter: "blur(0px)", duration: d, ease: "power2.out", immediateRender: false }, t);
+const outBlur = (s, t, d = 3 * F) => tl.to(s, { autoAlpha: 0, filter: "blur(10px)", duration: d, ease: "power1.in" }, t);
+
+// estados iniciales
+gsap.set(["#s2", "#s3", "#c2", "#c3", "#u1", "#white", "#leak", "#slice", "#gA", "#gB", "#pa", "#pb", "#plate", "#plnum", "#no1", "#shade",
+          "#p1", "#p2", "#p3", "#p4", "#a1", "#a2", "#tphoto"], { autoAlpha: 0 });
+gsap.set(["#q2", "#q3", "#q4", "#q5"], { autoAlpha: 0 });
+gsap.set(["#h1", "#h2", "#ph3"], { scaleX: 0 });
+
+// ---------- S1 0-0.867: golpe carbón 2 cuadros, bloques dorados, foto, "Cristiano Ronaldo" ----------
+hide("#f0", 2 * F);
+tl.fromTo("#s1in", { scale: 1 }, { scale: 1.035, duration: 0.867, ease: "none" }, 0);
+tl.to("#h1", { scaleX: 1, duration: 0.35, ease: "power3.out" }, 2 * F);
+tl.to("#h2", { scaleX: 1, duration: 0.35, ease: "power3.out" }, 4 * F);
+tl.fromTo("#bA", { x: -150, y: -90, opacity: 0, filter: "blur(18px)" }, { x: 0, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 2 * F);
+tl.fromTo("#bB", { x: 160, y: -60, opacity: 0, filter: "blur(18px)" }, { x: 0, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 3 * F);
+tl.fromTo("#bC", { y: 170, opacity: 0, filter: "blur(18px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 4 * F);
+tl.fromTo("#tphoto", { autoAlpha: 0, scale: 0.7 }, { autoAlpha: 1, scale: 1, duration: 0.2, ease: "back.out(1.8)", immediateRender: false }, 0.24);
+inBlur("#a1", 0.10);   // voz "Cristiano" 0,10
+inBlur("#a2", 0.32);   // voz "Ronaldo" 0,32 -> tarjeta completa 0,42-0,87
+tl.to("#s1in", { filter: "blur(10px) brightness(1.12)", duration: 2 * F, ease: "none" }, 0.80);
+hide("#s1", 0.867);
+
+// ---------- S2 0.867-2.067: ráfaga de fotos con marco de 4 esquinas ----------
+show("#s2", 0.867);
+tl.fromTo("#white", { autoAlpha: 0.85 }, { autoAlpha: 0, duration: 3 * F, ease: "none", immediateRender: false }, 0.867);
+tl.fromTo("#s2in", { filter: "blur(14px)" }, { filter: "blur(0px)", duration: 3 * F, ease: "none", immediateRender: false }, 0.867);
+const seq = [["#q1", 0.867], ["#q2", 1.033], ["#q3", 1.133], ["#q4", 1.3], ["#q5", 1.4], ["#q1", 1.567], ["#q2", 1.7], ["#q4", 1.8]];
+seq.forEach(([p, t], i) => {
+  ["#q1", "#q2", "#q3", "#q4", "#q5"].forEach((q) => { if (q !== p) hide(q, t); });
+  show(p, t);
+  tl.set("#ff", { scale: i % 2 ? 1.04 : 1 }, t);
+});
+show("#pa", 1.133); hide("#pa", 1.3); show("#pb", 1.4); hide("#pb", 1.567); show("#pa", 1.8);
+tl.fromTo("#photos", { scale: 1 }, { scale: 1.03, duration: 1.2, ease: "none" }, 0.867);
+// tarjeta 2: "¿piensa / que es el" 0,88-1,40 (voz "piensa" 0,90; "que es" 1,22)
+inBlur("#c2", 0.88);
+outBlur("#c2", 1.36, 2 * F);
+// tarjeta 3: "número 1?" 1,40-2,60 (voz "número" 1,34; "uno" ~1,62)
+inBlur("#c3", 1.40);
+inBlur("#u1", 1.60, 3 * F, 16);
+tl.fromTo("#u1", { scale: 1.25 }, { scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, 1.60);
+hide("#s2", 2.067);
+
+// ---------- S3 2.067-2.60: foto grande + glitch (6 cuadros) ----------
+show("#s3", 2.067);
+const g = [
+  [2.067, { filter: "invert(1) sepia(.7) saturate(1.3)" }, true, 24],
+  [2.1, { filter: "none" }, false, -36],
+  [2.133, { filter: "invert(1) sepia(.7) saturate(1.3)" }, true, 0],
+  [2.167, { filter: "contrast(1.3)" }, true, 30],
+  [2.2, { filter: "none" }, false, 0],
+  [2.233, { filter: "brightness(1.15)" }, true, -18],
+  [2.267, { filter: "none" }, false, 0],
+];
+g.forEach(([t, f, split, dx]) => {
+  tl.set("#s3in", f, t);
+  tl.set(["#gA", "#gB"], { autoAlpha: split ? 0.75 : 0 }, t);
+  tl.set("#gA", { x: split ? 18 : 0 }, t);
+  tl.set("#gB", { x: split ? -18 : 0 }, t);
+  tl.set("#slice", { autoAlpha: dx ? 1 : 0, x: dx }, t);
+  tl.set("#c3", { x: dx ? -dx * 0.6 : 0 }, t);
+});
+tl.fromTo("#box", { scale: 1 }, { scale: 1.04, duration: 0.53, ease: "none" }, 2.067);
+
+// ---------- destello 2.50-2.83: fuga 3 cuadros -> blanco 3 -> disolución 4; el corte cae en el pico (2.60) ----------
+tl.fromTo("#leak", { autoAlpha: 0, x: -260 }, { autoAlpha: 1, x: 120, duration: 3 * F, ease: "power1.in", immediateRender: false }, 2.50);
+tl.fromTo("#white", { autoAlpha: 0 }, { autoAlpha: 1, duration: 3 * F, ease: "power1.in", immediateRender: false }, 2.50);
+hide(["#s3", "#c3"], 2.60);
+tl.set("#leak", { autoAlpha: 0 }, 2.70);
+tl.to("#white", { autoAlpha: 0, duration: 4 * F, ease: "sine.out" }, 2.70);
+// leve desenfoque de la base al salir del blanco
+tl.fromTo("#base", { filter: "blur(6px) brightness(1.08)" }, { filter: "blur(0px) brightness(1)", duration: 5 * F, ease: "sine.out", immediateRender: false }, 2.66);
+show("#shade", 2.62);
+
+// ---------- subtítulos estilo Adrià (2-4 palabras, >=0,5 s, fundido 2 cuadros) ----------
+const card = (s, a, b) => { inBlur(s, a, 2 * F, 8); tl.set(s, { autoAlpha: 0 }, b); };
+card("#p1", 2.66, 3.30);   // "No, él sabe" voz 2,64-3,25
+card("#p2", 3.32, 4.18);   // "es el número 1" voz 3,32-4,11
+card("#p3", 4.20, 4.70);   // "y por eso es" voz 4,20-4,66
+card("#p4", 4.70, 5.36);   // "el número 1" voz 4,68-5,21
+
+// ---------- Nº1 en la pared (fundido + desenfoque) y placa final ----------
+tl.fromTo("#no1", { autoAlpha: 0, filter: "blur(18px)", y: 24 }, { autoAlpha: 1, filter: "blur(0px)", y: 0, duration: 0.35, ease: SINE, immediateRender: false }, 4.92);
+tl.to("#shade", { autoAlpha: 0, duration: 0.3, ease: SINE }, 5.36);
+tl.fromTo("#plate", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.34, ease: SINE, immediateRender: false }, 5.36);
+tl.to("#no1", { x: 240, y: 620, scale: 1.45, duration: 0.55, ease: SINE }, 5.40);
+inBlur("#plnum", 5.90, 5 * F, 10);
+tl.to("#ph3", { scaleX: 1, duration: 0.45, ease: SINE }, 5.95);
+
+// ---------- grano de papel (cada 2 cuadros) ----------
+for (let i = 0; i < 95; i++) tl.set("#grain", { x: ((i * 73) % 180) - 90, y: ((i * 131) % 180) - 90 }, i * 2 * F);
+tl.set({}, {}, 6.3);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "whatsapp": {
+      "command": "C:\\Users\\you\\AppData\\Roaming\\Python\\Python314\\Scripts\\uv.exe",
+      "args": [
+        "--directory",
+        "C:\\Users\\you\\Desktop\\Loovo\\ventas\\whatsapp-mcp\\whatsapp-mcp-server",
+        "run",
+        "main.py"
+      ],
+      "env": {
+        "WHATSAPP_DB_PATH": "C:\\Users\\you\\Desktop\\Loovo\\ventas\\whatsapp-mcp\\whatsapp-bridge\\store\\messages.db"
+      }
+    }
+  }
+}

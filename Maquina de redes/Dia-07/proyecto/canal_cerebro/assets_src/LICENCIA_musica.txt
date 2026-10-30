@@ -11,5 +11,5 @@ Texto consultado el 2026-10-13 (https://mixkit.co/license/modal/musicFree/):
    platform, including internet-based video on demand services, podcasts and advertisements. You're not allowed to use them
    in CDs or DVDs, video games or tv or radio broadcast. You're also not allowed to remix them (or incorporate in a music-only
    track), claim them as your own or register them on any rights management service."
-  "If you receive a claim, please forward the details to team@mixkit.co for assistance."
+  "If you receive a claim, please forward the details to contacto001@example.com for assistance."
 Sin atribucion obligatoria. Uso: cama bajo la voz (no es un remix ni una pista solo de musica).

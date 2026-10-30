@@ -1,0 +1,55 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1814 >>
+stream
+BT
+/F1 16 Tf 1 0 0 1 40 790 Tm (FACTURA ELECTRONICA DE VENTA - EJEMPLO FICTICIO) Tj
+/F1 10 Tf 1 0 0 1 40 766 Tm (*** DOCUMENTO DE PRUEBA: DATOS INVENTADOS, SIN VALIDEZ FISCAL ***) Tj
+/F1 10 Tf 1 0 0 1 40 748 Tm () Tj
+/F1 11 Tf 1 0 0 1 40 730 Tm (No. FE-1001                               Fecha de emision: 2026-10-05) Tj
+/F1 11 Tf 1 0 0 1 40 711 Tm (Emisor: SERVICIOS CONTABLES DEMO S.A.S. \(ficticia\)) Tj
+/F1 11 Tf 1 0 0 1 40 692 Tm (NIT: 901234567-7) Tj
+/F1 11 Tf 1 0 0 1 40 673 Tm (Direccion: Calle 0 No. 0-00, Ciudad Ejemplo, Colombia) Tj
+/F1 10 Tf 1 0 0 1 40 654 Tm () Tj
+/F1 11 Tf 1 0 0 1 40 636 Tm (Adquirente: CLIENTE DE PRUEBA LTDA \(ficticia\)   NIT: 900000000-0) Tj
+/F1 10 Tf 1 0 0 1 40 617 Tm () Tj
+/F1 11 Tf 1 0 0 1 40 599 Tm (Descripcion                                         Cantidad      Valor) Tj
+/F1 11 Tf 1 0 0 1 40 580 Tm (Honorarios por asesoria contable \(octubre\)            1       1.000.000) Tj
+/F1 10 Tf 1 0 0 1 40 561 Tm () Tj
+/F1 11 Tf 1 0 0 1 40 543 Tm (Subtotal                                                        1.000.000) Tj
+/F1 11 Tf 1 0 0 1 40 524 Tm (IVA 19%                                                           190.000) Tj
+/F1 11 Tf 1 0 0 1 40 505 Tm (Total factura                                                    1.190.000) Tj
+/F1 10 Tf 1 0 0 1 40 486 Tm () Tj
+/F1 11 Tf 1 0 0 1 40 468 Tm (Retefuente \(ejemplo 11%\)                                           110.000) Tj
+/F1 11 Tf 1 0 0 1 40 449 Tm (ReteICA \(ejemplo\)                                                    9.660) Tj
+/F1 10 Tf 1 0 0 1 40 430 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (CUFE: ab12cd34ab12cd34ab12cd34ab12cd34ab12cd34ab12cd34ab12cd34ab12cd34ab12cd34ab12cd34ab12cd34ab12cd34) Tj
+/F1 9 Tf 1 0 0 1 40 395 Tm (Valores y retenciones de ejemplo; no corresponden a ninguna operacion real.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000002106 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2201
+%%EOF

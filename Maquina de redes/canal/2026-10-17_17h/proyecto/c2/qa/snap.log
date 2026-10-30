@@ -1,0 +1,20 @@
+◆  Capturing 13 frames at [0s, 0.9s, 1.6s, 5.8s, 12.6s, 14s, 19.9s, 24s, 30.5s, 31.6s, 36.2s, 38.6s, 41.9s] from motion
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (Intel)" renderer="ANGLE (Intel, Intel(R) UHD Graphics (0x0000468B) Direct3D11 vs_5_0 ps_5_0, D3D11)")
+
+   Fonts: 2 loaded
+
+◇  13 snapshots saved to snapshots/
+   snapshots\frame-00-at-0s.png
+   snapshots\frame-01-at-0.9s.png
+   snapshots\frame-02-at-1.6s.png
+   snapshots\frame-03-at-5.8s.png
+   snapshots\frame-04-at-12.6s.png
+   snapshots\frame-05-at-14s.png
+   snapshots\frame-06-at-19.9s.png
+   snapshots\frame-07-at-24s.png
+   snapshots\frame-08-at-30.5s.png
+   snapshots\frame-09-at-31.6s.png
+   snapshots\frame-10-at-36.2s.png
+   snapshots\frame-11-at-38.6s.png
+   snapshots\frame-12-at-41.9s.png
+   contact-sheet-1..2.jpg (grid view for AI review)

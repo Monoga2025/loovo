@@ -18,5 +18,5 @@
 
 ## Pendiente del usuario
 1. Elegir la frase del gancho (A/B/C) y generar el hook en Higgsfield.
-2. Grabar la toma (audio del PC) siguiendo `guion.md`; decidir si una colaboradora entra.
+2. Grabar la toma (audio del PC) siguiendo `guion.md`; decidir si Carolina entra.
 3. Confirmar qué sistemas existen de verdad para llenar los `[DATO]`.
