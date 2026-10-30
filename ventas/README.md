@@ -16,6 +16,8 @@ All clinic names, doctors, phone numbers and e-mail addresses in this snapshot a
 | `toques_2_3_lote1.md`, `respuestas_2026-10-18.md`, `pendientes_doctores_2026-10-21.md`, `enlaces_fase1_lote1.md` | Outreach logs for the first batch: messages sent, replies received, open follow-ups and links. |
 | `nichos_prospectos_2026-10-21.md`, `plan_ventas_rumbo_2026-10-21.md` | Niche analysis and the sales plan. |
 | `agentes/` | Prompt files for the sales agents. See its README. |
+| `playbooks/` | Consolidated sales playbooks: unified 6-stage funnel, objection matrix, generic agent rules. See its README. |
+| `prospecting/` | Self-contained TypeScript sub-project: SQLite prospect store and synthetic lead generator, with tests. See its README. |
 | `prospectos/` | Prospect lists. See its README. |
 | `evolution-railway/` | Ops script for the hosted CRM. See its README. |
 | `whatsapp-mcp/` | Third-party WhatsApp MCP bridge used for research. See its README. |
