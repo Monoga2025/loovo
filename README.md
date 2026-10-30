@@ -85,6 +85,10 @@ Without any AI key the agent falls back to a rule engine, which is for demos onl
 - Small specs with a task log let agents resume work without re-explaining it.
 - Selling to clinics is mostly operations: timing, tone and handoff rules matter more than the model choice.
 
+## Sales playbooks and prospecting
+
+Consolidated sales material lives under `ventas/`: a unified 6-stage funnel, an objection matrix and generic agent rules in `ventas/playbooks/`, a runnable prospect-store sub-project (synthetic data, with tests) in `ventas/prospecting/`, and agency ideas in `docs/agency-notes.md`.
+
 ## Repository hygiene
 
 Excluded on purpose: `.env` files (except `.env.example`), keys and certificates, databases and session stores, agent runtime folders, `node_modules`/build output, raw video and audio, and files over 20 MB. Client and lead names, doctors, phone numbers, e-mail addresses, the hosting project host name and local user paths were replaced with placeholders. The founder name appears as the brand name.
